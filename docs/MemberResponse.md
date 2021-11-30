@@ -1,0 +1,23 @@
+# MX.Platform.Model.MemberResponse
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**AggregatedAt** | **string** |  | [optional] 
+**ConnectionStatus** | **string** |  | [optional] 
+**Guid** | **string** |  | [optional] 
+**Id** | **string** |  | [optional] 
+**InstitutionCode** | **string** |  | [optional] 
+**IsBeingAggregated** | **bool?** |  | [optional] 
+**IsManagedByUser** | **bool?** |  | [optional] 
+**IsOauth** | **bool?** |  | [optional] 
+**Metadata** | **string** |  | [optional] 
+**Name** | **string** |  | [optional] 
+**OauthWindowUri** | **string** |  | [optional] 
+**SuccessfullyAggregatedAt** | **string** |  | [optional] 
+**UserGuid** | **string** |  | [optional] 
+**UserId** | **string** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
