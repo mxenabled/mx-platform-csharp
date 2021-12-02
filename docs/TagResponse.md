@@ -1,4 +1,4 @@
-# MX.Platform.Model.TagResponse
+# MX.Platform.CSharp.Model.TagResponse
 
 ## Properties
 

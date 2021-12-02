@@ -1,4 +1,4 @@
-# MX.Platform.Model.ConnectWidgetRequest
+# MX.Platform.CSharp.Model.ConnectWidgetRequest
 
 ## Properties
 

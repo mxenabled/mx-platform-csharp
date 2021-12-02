@@ -1,4 +1,4 @@
-# MX.Platform.Model.TransactionRuleResponse
+# MX.Platform.CSharp.Model.TransactionRuleResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# MX.Platform.Model.OAuthWindowResponse
+# MX.Platform.CSharp.Model.OAuthWindowResponse
 
 ## Properties
 

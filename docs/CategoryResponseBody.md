@@ -1,4 +1,4 @@
-# MX.Platform.Model.CategoryResponseBody
+# MX.Platform.CSharp.Model.CategoryResponseBody
 
 ## Properties
 

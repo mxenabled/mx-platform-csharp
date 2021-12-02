@@ -1,4 +1,4 @@
-# MX.Platform.Model.TaggingsResponseBody
+# MX.Platform.CSharp.Model.TaggingsResponseBody
 
 ## Properties
 

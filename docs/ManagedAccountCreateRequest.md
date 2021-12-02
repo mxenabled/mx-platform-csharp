@@ -1,4 +1,4 @@
-# MX.Platform.Model.ManagedAccountCreateRequest
+# MX.Platform.CSharp.Model.ManagedAccountCreateRequest
 
 ## Properties
 

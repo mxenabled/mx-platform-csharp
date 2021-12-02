@@ -1,4 +1,4 @@
-# MX.Platform.Model.AccountNumberResponse
+# MX.Platform.CSharp.Model.AccountNumberResponse
 
 ## Properties
 

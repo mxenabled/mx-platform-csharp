@@ -1,4 +1,4 @@
-# MX.Platform.Model.ChallengeResponse
+# MX.Platform.CSharp.Model.ChallengeResponse
 
 ## Properties
 

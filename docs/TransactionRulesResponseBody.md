@@ -1,4 +1,4 @@
-# MX.Platform.Model.TransactionRulesResponseBody
+# MX.Platform.CSharp.Model.TransactionRulesResponseBody
 
 ## Properties
 

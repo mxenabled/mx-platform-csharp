@@ -1,4 +1,4 @@
-# MX.Platform.Model.MemberCreateRequestBody
+# MX.Platform.CSharp.Model.MemberCreateRequestBody
 
 ## Properties
 

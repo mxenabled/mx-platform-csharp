@@ -1,4 +1,4 @@
-# MX.Platform.Model.HoldingResponseBody
+# MX.Platform.CSharp.Model.HoldingResponseBody
 
 ## Properties
 

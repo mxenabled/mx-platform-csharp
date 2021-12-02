@@ -1,4 +1,4 @@
-# MX.Platform.Model.MemberStatusResponse
+# MX.Platform.CSharp.Model.MemberStatusResponse
 
 ## Properties
 

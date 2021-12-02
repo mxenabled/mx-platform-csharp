@@ -1,4 +1,4 @@
-# MX.Platform.Model.ManagedAccountUpdateRequest
+# MX.Platform.CSharp.Model.ManagedAccountUpdateRequest
 
 ## Properties
 

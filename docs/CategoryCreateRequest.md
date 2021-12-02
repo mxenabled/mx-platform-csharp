@@ -1,4 +1,4 @@
-# MX.Platform.Model.CategoryCreateRequest
+# MX.Platform.CSharp.Model.CategoryCreateRequest
 
 ## Properties
 

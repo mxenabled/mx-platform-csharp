@@ -1,4 +1,4 @@
-# MX.Platform.Model.MerchantsResponseBody
+# MX.Platform.CSharp.Model.MerchantsResponseBody
 
 ## Properties
 

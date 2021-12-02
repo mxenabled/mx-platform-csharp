@@ -1,4 +1,4 @@
-# MX.Platform.Model.ChallengesResponseBody
+# MX.Platform.CSharp.Model.ChallengesResponseBody
 
 ## Properties
 
