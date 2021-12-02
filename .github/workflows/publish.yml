@@ -1,0 +1,19 @@
+name: Publish
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+    - name: Pack release
+      run: dotnet pack --output releases --configuration Release
+    - name: Push to NuGet
+      run: dotnet nuget push releases/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
