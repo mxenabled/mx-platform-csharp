@@ -1,4 +1,4 @@
-# MX.Platform.Model.CredentialsResponseBody
+# MX.Platform.CSharp.Model.CredentialsResponseBody
 
 ## Properties
 

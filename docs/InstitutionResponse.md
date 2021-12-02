@@ -1,4 +1,4 @@
-# MX.Platform.Model.InstitutionResponse
+# MX.Platform.CSharp.Model.InstitutionResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# MX.Platform.Model.ManagedTransactionCreateRequest
+# MX.Platform.CSharp.Model.ManagedTransactionCreateRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# MX.Platform.Model.TagUpdateRequestBody
+# MX.Platform.CSharp.Model.TagUpdateRequestBody
 
 ## Properties
 

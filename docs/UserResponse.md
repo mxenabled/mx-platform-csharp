@@ -1,4 +1,4 @@
-# MX.Platform.Model.UserResponse
+# MX.Platform.CSharp.Model.UserResponse
 
 ## Properties
 

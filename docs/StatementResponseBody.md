@@ -1,4 +1,4 @@
-# MX.Platform.Model.StatementResponseBody
+# MX.Platform.CSharp.Model.StatementResponseBody
 
 ## Properties
 

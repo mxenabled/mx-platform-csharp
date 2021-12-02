@@ -1,4 +1,4 @@
-# MX.Platform.Model.TransactionRuleCreateRequest
+# MX.Platform.CSharp.Model.TransactionRuleCreateRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# MX.Platform.Api.MxPlatformApi
+# MX.Platform.CSharp.Api.MxPlatformApi
 
 All URIs are relative to *https://api.mx.com*
 
@@ -33,7 +33,8 @@ Method | HTTP request | Description
 [**ListAccountNumbersByMember**](MxPlatformApi.md#listaccountnumbersbymember) | **GET** /users/{user_guid}/members/{member_guid}/account_numbers | List account numbers by member
 [**ListAccountOwnersByMember**](MxPlatformApi.md#listaccountownersbymember) | **GET** /users/{user_guid}/members/{member_guid}/account_owners | List account owners by member
 [**ListCategories**](MxPlatformApi.md#listcategories) | **GET** /users/{user_guid}/categories | List categories
-[**ListDefaultCategories**](MxPlatformApi.md#listdefaultcategories) | **GET** /users/{user_guid}/categories/default | List default categories
+[**ListDefaultCategories**](MxPlatformApi.md#listdefaultcategories) | **GET** /categories/default | List default categories
+[**ListDefaultCategoriesByUser**](MxPlatformApi.md#listdefaultcategoriesbyuser) | **GET** /users/{user_guid}/categories/default | List default categories by user
 [**ListFavoriteInstitutions**](MxPlatformApi.md#listfavoriteinstitutions) | **GET** /institutions/favorites | List favorite institutions
 [**ListHoldings**](MxPlatformApi.md#listholdings) | **GET** /users/{user_guid}/holdings | List holdings
 [**ListHoldingsByMember**](MxPlatformApi.md#listholdingsbymember) | **GET** /users/{user_guid}/members/{member_guid}/holdings | List holdings by member
@@ -58,7 +59,8 @@ Method | HTTP request | Description
 [**ListUserAccounts**](MxPlatformApi.md#listuseraccounts) | **GET** /users/{user_guid}/accounts | List accounts
 [**ListUsers**](MxPlatformApi.md#listusers) | **GET** /users | List users
 [**ReadAccount**](MxPlatformApi.md#readaccount) | **GET** /users/{user_guid}/accounts/{account_guid} | Read account
-[**ReadCategory**](MxPlatformApi.md#readcategory) | **GET** /users/{user_guid}/categories/{category_guid} | Read category
+[**ReadCategory**](MxPlatformApi.md#readcategory) | **GET** /users/{user_guid}/categories/{category_guid} | Read a custom category
+[**ReadDefaultCategory**](MxPlatformApi.md#readdefaultcategory) | **GET** /categories/{category_guid} | Read a default category
 [**ReadHolding**](MxPlatformApi.md#readholding) | **GET** /users/{user_guid}/holdings/{holding_guid} | Read holding
 [**ReadInstitution**](MxPlatformApi.md#readinstitution) | **GET** /institutions/{institution_code} | Read institution
 [**ReadManagedAccount**](MxPlatformApi.md#readmanagedaccount) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Read managed account
@@ -104,9 +106,9 @@ Calling this endpoint initiates an aggregation event for the member. This brings
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -181,9 +183,9 @@ This endpoint operates much like the aggregate member endpoint except that it ga
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -258,9 +260,9 @@ Use this endpoint to create a new custom category for a specific `user`.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -335,9 +337,9 @@ Use this endpoint to create a partner-managed account.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -414,9 +416,9 @@ Use this endpoint to create a new partner-managed `member`.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -491,9 +493,9 @@ Use this endpoint to create a new partner-managed `transaction`.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -570,9 +572,9 @@ This endpoint allows you to create a new member. Members are created with the re
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -647,9 +649,9 @@ Use this endpoint to create a new custom tag.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -724,9 +726,9 @@ Use this endpoint to create a new association between a tag and a particular tra
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -801,9 +803,9 @@ Use this endpoint to create a new transaction rule. The newly-created `transacti
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -878,9 +880,9 @@ Call this endpoint to create a new user. The MX Platform API will respond with t
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -953,9 +955,9 @@ Use this endpoint to delete a specific custom category according to its unique G
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1029,9 +1031,9 @@ Use this endpoint to delete a partner-managed account according to its unique GU
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1107,9 +1109,9 @@ Use this endpoint to delete the specified partner-managed `member`. The endpoint
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1183,9 +1185,9 @@ Use this endpoint to delete the specified partner-managed `transaction`. The end
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1261,9 +1263,9 @@ Accessing this endpoint will permanently delete a member.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1337,9 +1339,9 @@ Use this endpoint to permanently delete a specific tag based on its unique GUID.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1413,9 +1415,9 @@ Use this endpoint to delete a tagging according to its unique GUID. If successfu
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1489,9 +1491,9 @@ Use this endpoint to permanently delete a transaction rule based on its unique G
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1565,9 +1567,9 @@ Use this endpoint to delete the specified `user`. The response will have a statu
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1639,9 +1641,9 @@ Use this endpoint to download a specified statement PDF.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1718,9 +1720,9 @@ Use this endpoint to categorize, cleanse, and classify transactions. These trans
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1793,9 +1795,9 @@ Some institutions allow developers to access an extended transaction history wit
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1870,9 +1872,9 @@ Use this endpoint to fetch the statements associated with a particular member.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -1947,9 +1949,9 @@ The identify endpoint begins an identification process for an already-existing m
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2024,9 +2026,9 @@ This endpoint returns a list of account numbers associated with the specified `a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2105,9 +2107,9 @@ This endpoint returns a list of account numbers associated with the specified `m
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2186,9 +2188,9 @@ This endpoint returns an array with information about every account associated w
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2267,9 +2269,9 @@ Use this endpoint to list all categories associated with a `user`, including bot
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2336,23 +2338,100 @@ Name | Type | Description  | Notes
 
 <a name="listdefaultcategories"></a>
 # **ListDefaultCategories**
-> CategoriesResponseBody ListDefaultCategories (string userGuid, int? page = null, int? recordsPerPage = null)
+> CategoriesResponseBody ListDefaultCategories (int? page = null, int? recordsPerPage = null)
 
 List default categories
 
-Use this endpoint to read the attributes of a specific user.
+Use this endpoint to retrieve a list of all the default categories and subcategories offered within the MX Platform API. In other words, each item in the returned list will have its `is_default` field set to `true`. There are currently 119 default categories and subcategories. Both the _list default categories_ and _list default categories by user_ endpoints return the same results. The different routes are provided for convenience.
 
 ### Example
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
     public class ListDefaultCategoriesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // List default categories
+                CategoriesResponseBody result = apiInstance.ListDefaultCategories(page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategories: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**CategoriesResponseBody**](CategoriesResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="listdefaultcategoriesbyuser"></a>
+# **ListDefaultCategoriesByUser**
+> CategoriesResponseBody ListDefaultCategoriesByUser (string userGuid, int? page = null, int? recordsPerPage = null)
+
+List default categories by user
+
+Use this endpoint to retrieve a list of all the default categories and subcategories, scoped by user, offered within the MX Platform API. In other words, each item in the returned list will have its `is_default` field set to `true`. There are currently 119 default categories and subcategories. Both the _list default categories_ and _list default categories by user_ endpoints return the same results. The different routes are provided for convenience.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListDefaultCategoriesByUserExample
     {
         public static void Main()
         {
@@ -2369,13 +2448,13 @@ namespace Example
 
             try
             {
-                // List default categories
-                CategoriesResponseBody result = apiInstance.ListDefaultCategories(userGuid, page, recordsPerPage);
+                // List default categories by user
+                CategoriesResponseBody result = apiInstance.ListDefaultCategoriesByUser(userGuid, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategories: " + e.Message );
+                Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategoriesByUser: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2425,9 +2504,9 @@ This endpoint returns a paginated list containing institutions that have been se
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2502,9 +2581,9 @@ This endpoint returns all holdings associated with the specified `user` across a
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2585,9 +2664,9 @@ This endpoint returns all holdings associated with the specified `member` across
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2670,9 +2749,9 @@ Use this endpoint to see which credentials will be needed to create a member for
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2749,9 +2828,9 @@ This endpoint returns a list of institutions based on the specified search term 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2836,9 +2915,9 @@ Use this endpoint to retrieve a list of all the partner-managed accounts associa
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2917,9 +2996,9 @@ This endpoint returns a list of institutions which can be used to create partner
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -2994,9 +3073,9 @@ This endpoint returns a list of all the partner-managed members associated with 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3073,9 +3152,9 @@ This endpoint returns a list of all the partner-managed transactions associated 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3154,9 +3233,9 @@ Use this endpoint for information on what multi-factor authentication challenges
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3235,9 +3314,9 @@ This endpoint returns an array which contains information on every non-MFA crede
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3316,9 +3395,9 @@ This endpoint returns an array which contains information on every member associ
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3395,9 +3474,9 @@ This endpoint returns a paginated list of all the merchants in the MX system.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3472,9 +3551,9 @@ Use this endpoint to get an array of available statements.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3553,9 +3632,9 @@ Use this endpoint to retrieve a list of all the taggings associated with a speci
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3632,9 +3711,9 @@ Use this endpoint to list all tags associated with the specified `user`. Each us
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3711,9 +3790,9 @@ Use this endpoint to read the attributes of all existing transaction rules belon
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3790,9 +3869,9 @@ Requests to this endpoint return a list of transactions associated with the spec
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3873,9 +3952,9 @@ This endpoint returns a list of the last 90 days of transactions associated with
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -3958,9 +4037,9 @@ Requests to this endpoint return a list of transactions associated with the spec
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4043,9 +4122,9 @@ Use this endpoint to get a list of all transactions associated with a particular
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4128,9 +4207,9 @@ This endpoint returns a list of all the accounts associated with the specified `
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4207,9 +4286,9 @@ Use this endpoint to list every user you've created in the MX Platform API.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4284,9 +4363,9 @@ This endpoint returns the specified `account` resource.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4353,7 +4432,7 @@ Name | Type | Description  | Notes
 # **ReadCategory**
 > CategoryResponseBody ReadCategory (string categoryGuid, string userGuid)
 
-Read category
+Read a custom category
 
 Use this endpoint to read the attributes of either a default category or a custom category.
 
@@ -4361,9 +4440,9 @@ Use this endpoint to read the attributes of either a default category or a custo
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4383,13 +4462,90 @@ namespace Example
 
             try
             {
-                // Read category
+                // Read a custom category
                 CategoryResponseBody result = apiInstance.ReadCategory(categoryGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling MxPlatformApi.ReadCategory: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **categoryGuid** | **string**| The unique id for a &#x60;category&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+
+### Return type
+
+[**CategoryResponseBody**](CategoryResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="readdefaultcategory"></a>
+# **ReadDefaultCategory**
+> CategoryResponseBody ReadDefaultCategory (string categoryGuid, string userGuid)
+
+Read a default category
+
+Use this endpoint to read the attributes of a default category.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadDefaultCategoryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var categoryGuid = CAT-7829f71c-2e8c-afa5-2f55-fa3634b89874;  // string | The unique id for a `category`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+
+            try
+            {
+                // Read a default category
+                CategoryResponseBody result = apiInstance.ReadDefaultCategory(categoryGuid, userGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ReadDefaultCategory: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4438,9 +4594,9 @@ Use this endpoint to read the attributes of a specific `holding`.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4515,9 +4671,9 @@ This endpoint returns information about the institution specified by `institutio
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4590,9 +4746,9 @@ Use this endpoint to read the attributes of a partner-managed account according 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4669,9 +4825,9 @@ This endpoint returns the attributes of the specified partner-managed `member`.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4746,9 +4902,9 @@ Requests to this endpoint will return the attributes of the specified partner-ma
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4825,9 +4981,9 @@ Use this endpoint to read the attributes of a specific member.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4902,9 +5058,9 @@ This endpoint provides the status of the members most recent aggregation event. 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -4979,9 +5135,9 @@ Returns information about a particular merchant, such as a logo, name, and websi
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5054,9 +5210,9 @@ This endpoint returns the specified merchant_location resource.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5129,9 +5285,9 @@ Use this endpoint to read a JSON representation of the statement.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5208,9 +5364,9 @@ Use this endpoint to read the attributes of a particular tag according to its un
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5285,9 +5441,9 @@ Use this endpoint to read the attributes of a `tagging` according to its unique 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5362,9 +5518,9 @@ Requests to this endpoint will return the attributes of the specified `transacti
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5439,9 +5595,9 @@ Use this endpoint to read the attributes of an existing transaction rule based o
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5516,9 +5672,9 @@ Use this endpoint to read the attributes of a specific user.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5591,9 +5747,9 @@ This endpoint will return a URL for an embeddable version of MX Connect.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5668,9 +5824,9 @@ This endpoint will generate an `oauth_window_uri` for the specified `member`.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5751,9 +5907,9 @@ This endpoint allows partners to get a URL by passing the `widget_type` in the r
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5830,9 +5986,9 @@ This endpoint answers the challenges needed when a member has been challenged by
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5909,9 +6065,9 @@ This endpoint allows you to update certain attributes of an `account` resource.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -5990,9 +6146,9 @@ Use this endpoint to update the attributes of a custom category according to its
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6069,9 +6225,9 @@ Use this endpoint to update the attributes of a partner-managed account accordin
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6150,9 +6306,9 @@ Use this endpoint to update the attributes of the specified partner_managed `mem
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6229,9 +6385,9 @@ Use this endpoint to update the attributes of the specified partner_managed `tra
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6310,9 +6466,9 @@ Use this endpoint to update a members attributes. Only the credentials, id, and 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6389,9 +6545,9 @@ Use this endpoint to update the name of a specific tag according to its unique G
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6468,9 +6624,9 @@ Use this endpoint to update a tagging.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6547,9 +6703,9 @@ Use this endpoint to update the `description` of a specific transaction accordin
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6626,9 +6782,9 @@ Use this endpoint to update the attributes of a specific transaction rule based 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6705,9 +6861,9 @@ Use this endpoint to update the attributes of a specific user. The MX Platform A
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {
@@ -6782,9 +6938,9 @@ The verify endpoint begins a verification process for a member.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace Example
 {

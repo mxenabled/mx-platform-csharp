@@ -1,4 +1,4 @@
-# MX.Platform.Model.MemberResumeRequest
+# MX.Platform.CSharp.Model.MemberResumeRequest
 
 ## Properties
 

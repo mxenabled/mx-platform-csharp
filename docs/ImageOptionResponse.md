@@ -1,4 +1,4 @@
-# MX.Platform.Model.ImageOptionResponse
+# MX.Platform.CSharp.Model.ImageOptionResponse
 
 ## Properties
 

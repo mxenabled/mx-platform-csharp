@@ -1,4 +1,4 @@
-# MX.Platform.Model.OptionResponse
+# MX.Platform.CSharp.Model.OptionResponse
 
 ## Properties
 

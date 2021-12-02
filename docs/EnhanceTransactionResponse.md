@@ -1,4 +1,4 @@
-# MX.Platform.Model.EnhanceTransactionResponse
+# MX.Platform.CSharp.Model.EnhanceTransactionResponse
 
 ## Properties
 

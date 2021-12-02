@@ -1,4 +1,4 @@
-# MX.Platform.Model.CredentialRequest
+# MX.Platform.CSharp.Model.CredentialRequest
 
 ## Properties
 

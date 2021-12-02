@@ -1,4 +1,4 @@
-# MX.Platform.Model.MemberResponse
+# MX.Platform.CSharp.Model.MemberResponse
 
 ## Properties
 

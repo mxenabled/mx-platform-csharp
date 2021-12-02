@@ -1,4 +1,4 @@
-# MX.Platform.Model.TaggingCreateRequest
+# MX.Platform.CSharp.Model.TaggingCreateRequest
 
 ## Properties
 

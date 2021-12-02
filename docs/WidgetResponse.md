@@ -1,4 +1,4 @@
-# MX.Platform.Model.WidgetResponse
+# MX.Platform.CSharp.Model.WidgetResponse
 
 ## Properties
 

@@ -25,9 +25,9 @@ Generate the DLL using your preferred tool (e.g. `dotnet build`)
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 ```
 
 ## Getting Started
@@ -38,9 +38,9 @@ Please follow the [installation](#installation) procedure and then run the follo
 
 ```csharp
 using System;
-using MX.Platform.Api;
-using MX.Platform.Client;
-using MX.Platform.Model;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
 
 namespace MyProject
 {

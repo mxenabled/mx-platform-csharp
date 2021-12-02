@@ -1,4 +1,4 @@
-# MX.Platform.Model.PaginationResponse
+# MX.Platform.CSharp.Model.PaginationResponse
 
 ## Properties
 

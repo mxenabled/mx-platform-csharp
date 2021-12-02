@@ -1,4 +1,4 @@
-# MX.Platform.Model.AccountsResponseBody
+# MX.Platform.CSharp.Model.AccountsResponseBody
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# MX.Platform.Model.MemberUpdateRequestBody
+# MX.Platform.CSharp.Model.MemberUpdateRequestBody
 
 ## Properties
 

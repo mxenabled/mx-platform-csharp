@@ -1,4 +1,4 @@
-# MX.Platform.Model.ManagedTransactionUpdateRequestBody
+# MX.Platform.CSharp.Model.ManagedTransactionUpdateRequestBody
 
 ## Properties
 

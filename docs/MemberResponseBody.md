@@ -1,4 +1,4 @@
-# MX.Platform.Model.MemberResponseBody
+# MX.Platform.CSharp.Model.MemberResponseBody
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# MX.Platform.Model.AccountUpdateRequestBody
+# MX.Platform.CSharp.Model.AccountUpdateRequestBody
 
 ## Properties
 
