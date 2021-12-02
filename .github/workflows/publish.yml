@@ -13,8 +13,7 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.1.x'
-    - name: Build and publish to NuGet
-      uses: brandedoutcast/publish-nuget@v2.5.5
-      with:
-          PROJECT_FILE_PATH: src/MX.Platform.CSharp/MX.Platform.CSharp.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+    - name: Pack release
+      run: dotnet pack --output releases --configuration Release
+    - name: Push to NuGet
+      run: dotnet nuget push releases/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
