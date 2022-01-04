@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MX.Platform.CSharp", "src\MX.Platform.CSharp\MX.Platform.CSharp.csproj", "{DCAEACCE-A496-4CEE-97EE-DF527A765F64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MX.Platform.CSharp", "src\MX.Platform.CSharp\MX.Platform.CSharp.csproj", "{44BCC200-FC6A-45D9-854D-8391E79B71CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MX.Platform.CSharp.Test", "src\MX.Platform.CSharp.Test\MX.Platform.CSharp.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DCAEACCE-A496-4CEE-97EE-DF527A765F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCAEACCE-A496-4CEE-97EE-DF527A765F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCAEACCE-A496-4CEE-97EE-DF527A765F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCAEACCE-A496-4CEE-97EE-DF527A765F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BCC200-FC6A-45D9-854D-8391E79B71CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BCC200-FC6A-45D9-854D-8391E79B71CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BCC200-FC6A-45D9-854D-8391E79B71CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BCC200-FC6A-45D9-854D-8391E79B71CC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
