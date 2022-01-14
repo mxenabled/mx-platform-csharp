@@ -113,7 +113,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class EnhanceTransactionsRequest {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -153,8 +153,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(EnhanceTransactionsRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Amount == input.Amount ||
@@ -200,18 +201,28 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                hashCode = (hashCode * 59) + this.Amount.GetHashCode();
                 if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
+                }
                 if (this.ExtendedTransactionType != null)
-                    hashCode = hashCode * 59 + this.ExtendedTransactionType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ExtendedTransactionType.GetHashCode();
+                }
                 if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
                 if (this.Memo != null)
-                    hashCode = hashCode * 59 + this.Memo.GetHashCode();
-                hashCode = hashCode * 59 + this.MerchantCategoryCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Memo.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.MerchantCategoryCode.GetHashCode();
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 return hashCode;
             }
         }

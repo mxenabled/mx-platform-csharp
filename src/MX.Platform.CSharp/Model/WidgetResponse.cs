@@ -68,7 +68,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class WidgetResponse {\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -104,8 +104,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(WidgetResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Type == input.Type ||
@@ -134,11 +135,17 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 if (this.Url != null)
-                    hashCode = hashCode * 59 + this.Url.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Url.GetHashCode();
+                }
                 if (this.UserId != null)
-                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserId.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -52,7 +52,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class StatementResponseBody {\n");
             sb.Append("  Statement: ").Append(Statement).Append("\n");
             sb.Append("}\n");
@@ -86,8 +86,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(StatementResponseBody input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Statement == input.Statement ||
@@ -106,7 +107,9 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Statement != null)
-                    hashCode = hashCode * 59 + this.Statement.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Statement.GetHashCode();
+                }
                 return hashCode;
             }
         }

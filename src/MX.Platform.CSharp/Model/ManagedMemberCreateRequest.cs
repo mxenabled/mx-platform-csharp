@@ -85,7 +85,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ManagedMemberCreateRequest {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
@@ -122,8 +122,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(ManagedMemberCreateRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Id == input.Id ||
@@ -157,13 +158,21 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
                 if (this.InstitutionCode != null)
-                    hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InstitutionCode.GetHashCode();
+                }
                 if (this.Metadata != null)
-                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 return hashCode;
             }
         }

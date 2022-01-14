@@ -61,7 +61,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class TransactionUpdateRequest {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
@@ -95,8 +95,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(TransactionUpdateRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Description == input.Description ||
@@ -115,7 +116,9 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
+                }
                 return hashCode;
             }
         }

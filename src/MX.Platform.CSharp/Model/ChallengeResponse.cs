@@ -100,7 +100,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ChallengeResponse {\n");
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
@@ -140,8 +140,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(ChallengeResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.FieldName == input.FieldName ||
@@ -192,19 +193,33 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.FieldName != null)
-                    hashCode = hashCode * 59 + this.FieldName.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.FieldName.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.ImageData != null)
-                    hashCode = hashCode * 59 + this.ImageData.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ImageData.GetHashCode();
+                }
                 if (this.ImageOptions != null)
-                    hashCode = hashCode * 59 + this.ImageOptions.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ImageOptions.GetHashCode();
+                }
                 if (this.Label != null)
-                    hashCode = hashCode * 59 + this.Label.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Label.GetHashCode();
+                }
                 if (this.Options != null)
-                    hashCode = hashCode * 59 + this.Options.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Options.GetHashCode();
+                }
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 return hashCode;
             }
         }

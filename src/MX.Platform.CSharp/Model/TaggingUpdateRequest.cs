@@ -61,7 +61,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class TaggingUpdateRequest {\n");
             sb.Append("  TagGuid: ").Append(TagGuid).Append("\n");
             sb.Append("}\n");
@@ -95,8 +95,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(TaggingUpdateRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.TagGuid == input.TagGuid ||
@@ -115,7 +116,9 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.TagGuid != null)
-                    hashCode = hashCode * 59 + this.TagGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TagGuid.GetHashCode();
+                }
                 return hashCode;
             }
         }

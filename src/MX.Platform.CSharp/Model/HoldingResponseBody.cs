@@ -52,7 +52,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class HoldingResponseBody {\n");
             sb.Append("  Holding: ").Append(Holding).Append("\n");
             sb.Append("}\n");
@@ -86,8 +86,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(HoldingResponseBody input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Holding == input.Holding ||
@@ -106,7 +107,9 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Holding != null)
-                    hashCode = hashCode * 59 + this.Holding.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Holding.GetHashCode();
+                }
                 return hashCode;
             }
         }

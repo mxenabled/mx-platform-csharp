@@ -108,7 +108,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class CategoryResponse {\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
@@ -149,8 +149,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(CategoryResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CreatedAt == input.CreatedAt ||
@@ -204,21 +205,37 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.CreatedAt != null)
-                    hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CreatedAt.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.IsDefault != null)
-                    hashCode = hashCode * 59 + this.IsDefault.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsDefault.GetHashCode();
+                }
                 if (this.IsIncome != null)
-                    hashCode = hashCode * 59 + this.IsIncome.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsIncome.GetHashCode();
+                }
                 if (this.Metadata != null)
-                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.ParentGuid != null)
-                    hashCode = hashCode * 59 + this.ParentGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ParentGuid.GetHashCode();
+                }
                 if (this.UpdatedAt != null)
-                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UpdatedAt.GetHashCode();
+                }
                 return hashCode;
             }
         }

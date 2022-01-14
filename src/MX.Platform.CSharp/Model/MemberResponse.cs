@@ -156,7 +156,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MemberResponse {\n");
             sb.Append("  AggregatedAt: ").Append(AggregatedAt).Append("\n");
             sb.Append("  ConnectionStatus: ").Append(ConnectionStatus).Append("\n");
@@ -203,8 +203,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(MemberResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AggregatedAt == input.AggregatedAt ||
@@ -288,33 +289,61 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.AggregatedAt != null)
-                    hashCode = hashCode * 59 + this.AggregatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AggregatedAt.GetHashCode();
+                }
                 if (this.ConnectionStatus != null)
-                    hashCode = hashCode * 59 + this.ConnectionStatus.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ConnectionStatus.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
                 if (this.InstitutionCode != null)
-                    hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InstitutionCode.GetHashCode();
+                }
                 if (this.IsBeingAggregated != null)
-                    hashCode = hashCode * 59 + this.IsBeingAggregated.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsBeingAggregated.GetHashCode();
+                }
                 if (this.IsManagedByUser != null)
-                    hashCode = hashCode * 59 + this.IsManagedByUser.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsManagedByUser.GetHashCode();
+                }
                 if (this.IsOauth != null)
-                    hashCode = hashCode * 59 + this.IsOauth.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsOauth.GetHashCode();
+                }
                 if (this.Metadata != null)
-                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.OauthWindowUri != null)
-                    hashCode = hashCode * 59 + this.OauthWindowUri.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OauthWindowUri.GetHashCode();
+                }
                 if (this.SuccessfullyAggregatedAt != null)
-                    hashCode = hashCode * 59 + this.SuccessfullyAggregatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SuccessfullyAggregatedAt.GetHashCode();
+                }
                 if (this.UserGuid != null)
-                    hashCode = hashCode * 59 + this.UserGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserGuid.GetHashCode();
+                }
                 if (this.UserId != null)
-                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserId.GetHashCode();
+                }
                 return hashCode;
             }
         }

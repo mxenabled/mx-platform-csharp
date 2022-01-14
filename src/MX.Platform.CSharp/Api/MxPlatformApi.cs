@@ -4687,11 +4687,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->AggregateMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->AggregateMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -4704,10 +4708,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -4721,11 +4731,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/aggregate", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AggregateMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -4757,11 +4769,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->AggregateMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->AggregateMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -4774,12 +4790,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -4792,13 +4813,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/aggregate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("AggregateMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -4828,11 +4851,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CheckBalances");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CheckBalances");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -4845,10 +4872,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -4862,11 +4895,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/check_balance", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CheckBalances", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -4898,11 +4933,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CheckBalances");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CheckBalances");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -4915,12 +4954,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -4933,13 +4977,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/check_balance", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CheckBalances", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -4969,11 +5015,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateCategory");
+            }
 
             // verify the required parameter 'categoryCreateRequestBody' is set
             if (categoryCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryCreateRequestBody' when calling MxPlatformApi->CreateCategory");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -4987,10 +5037,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = categoryCreateRequestBody;
@@ -5004,11 +5060,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CategoryResponseBody>("/users/{user_guid}/categories", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5040,11 +5098,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateCategory");
+            }
 
             // verify the required parameter 'categoryCreateRequestBody' is set
             if (categoryCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryCreateRequestBody' when calling MxPlatformApi->CreateCategory");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -5058,12 +5120,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = categoryCreateRequestBody;
@@ -5076,13 +5143,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<CategoryResponseBody>("/users/{user_guid}/categories", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5114,15 +5183,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedAccount");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CreateManagedAccount");
+            }
 
             // verify the required parameter 'managedAccountCreateRequestBody' is set
             if (managedAccountCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedAccountCreateRequestBody' when calling MxPlatformApi->CreateManagedAccount");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -5136,10 +5211,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -5154,11 +5235,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<AccountResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateManagedAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5192,15 +5275,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedAccount");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CreateManagedAccount");
+            }
 
             // verify the required parameter 'managedAccountCreateRequestBody' is set
             if (managedAccountCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedAccountCreateRequestBody' when calling MxPlatformApi->CreateManagedAccount");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -5214,12 +5303,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -5233,13 +5327,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<AccountResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateManagedAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5269,11 +5365,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedMember");
+            }
 
             // verify the required parameter 'managedMemberCreateRequestBody' is set
             if (managedMemberCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedMemberCreateRequestBody' when calling MxPlatformApi->CreateManagedMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -5287,10 +5387,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = managedMemberCreateRequestBody;
@@ -5304,11 +5410,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/managed_members", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateManagedMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5340,11 +5448,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedMember");
+            }
 
             // verify the required parameter 'managedMemberCreateRequestBody' is set
             if (managedMemberCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedMemberCreateRequestBody' when calling MxPlatformApi->CreateManagedMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -5358,12 +5470,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = managedMemberCreateRequestBody;
@@ -5376,13 +5493,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/managed_members", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateManagedMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5414,15 +5533,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedTransaction");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CreateManagedTransaction");
+            }
 
             // verify the required parameter 'managedTransactionCreateRequestBody' is set
             if (managedTransactionCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedTransactionCreateRequestBody' when calling MxPlatformApi->CreateManagedTransaction");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -5436,10 +5561,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -5454,11 +5585,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateManagedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5492,15 +5625,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedTransaction");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CreateManagedTransaction");
+            }
 
             // verify the required parameter 'managedTransactionCreateRequestBody' is set
             if (managedTransactionCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedTransactionCreateRequestBody' when calling MxPlatformApi->CreateManagedTransaction");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -5514,12 +5653,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -5533,13 +5677,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateManagedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5569,11 +5715,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateMember");
+            }
 
             // verify the required parameter 'memberCreateRequestBody' is set
             if (memberCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberCreateRequestBody' when calling MxPlatformApi->CreateMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -5587,10 +5737,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = memberCreateRequestBody;
@@ -5604,11 +5760,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5640,11 +5798,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateMember");
+            }
 
             // verify the required parameter 'memberCreateRequestBody' is set
             if (memberCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberCreateRequestBody' when calling MxPlatformApi->CreateMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -5658,12 +5820,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = memberCreateRequestBody;
@@ -5676,13 +5843,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5712,11 +5881,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateTag");
+            }
 
             // verify the required parameter 'tagCreateRequestBody' is set
             if (tagCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagCreateRequestBody' when calling MxPlatformApi->CreateTag");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -5730,10 +5903,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = tagCreateRequestBody;
@@ -5747,11 +5926,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<TagResponseBody>("/users/{user_guid}/tags", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5783,11 +5964,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateTag");
+            }
 
             // verify the required parameter 'tagCreateRequestBody' is set
             if (tagCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagCreateRequestBody' when calling MxPlatformApi->CreateTag");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -5801,12 +5986,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = tagCreateRequestBody;
@@ -5819,13 +6009,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<TagResponseBody>("/users/{user_guid}/tags", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5855,11 +6047,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateTagging");
+            }
 
             // verify the required parameter 'taggingCreateRequestBody' is set
             if (taggingCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingCreateRequestBody' when calling MxPlatformApi->CreateTagging");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -5873,10 +6069,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = taggingCreateRequestBody;
@@ -5890,11 +6092,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<TaggingResponseBody>("/users/{user_guid}/taggings", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateTagging", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5926,11 +6130,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateTagging");
+            }
 
             // verify the required parameter 'taggingCreateRequestBody' is set
             if (taggingCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingCreateRequestBody' when calling MxPlatformApi->CreateTagging");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -5944,12 +6152,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = taggingCreateRequestBody;
@@ -5962,13 +6175,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<TaggingResponseBody>("/users/{user_guid}/taggings", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateTagging", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -5998,11 +6213,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateTransactionRule");
+            }
 
             // verify the required parameter 'transactionRuleCreateRequestBody' is set
             if (transactionRuleCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleCreateRequestBody' when calling MxPlatformApi->CreateTransactionRule");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -6016,10 +6235,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = transactionRuleCreateRequestBody;
@@ -6033,11 +6258,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<TransactionRuleResponseBody>("/users/{user_guid}/transaction_rules", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateTransactionRule", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6069,11 +6296,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateTransactionRule");
+            }
 
             // verify the required parameter 'transactionRuleCreateRequestBody' is set
             if (transactionRuleCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleCreateRequestBody' when calling MxPlatformApi->CreateTransactionRule");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -6087,12 +6318,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = transactionRuleCreateRequestBody;
@@ -6105,13 +6341,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<TransactionRuleResponseBody>("/users/{user_guid}/transaction_rules", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateTransactionRule", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6139,7 +6377,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userCreateRequestBody' is set
             if (userCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userCreateRequestBody' when calling MxPlatformApi->CreateUser");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -6153,10 +6393,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.Data = userCreateRequestBody;
 
@@ -6169,11 +6415,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<UserResponseBody>("/users", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6203,7 +6451,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userCreateRequestBody' is set
             if (userCreateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userCreateRequestBody' when calling MxPlatformApi->CreateUser");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -6217,12 +6467,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.Data = userCreateRequestBody;
 
@@ -6234,13 +6489,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<UserResponseBody>("/users", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6269,11 +6526,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->DeleteCategory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteCategory");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -6282,14 +6543,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6303,11 +6569,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/categories/{category_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6338,11 +6606,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->DeleteCategory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteCategory");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -6352,15 +6624,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6373,13 +6649,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/categories/{category_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6410,15 +6688,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteManagedAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedAccount");
+            }
 
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManagedAccount");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -6427,14 +6711,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6449,11 +6738,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteManagedAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6486,15 +6777,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteManagedAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedAccount");
+            }
 
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManagedAccount");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -6504,15 +6801,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6526,13 +6827,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteManagedAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6561,11 +6864,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteManagedMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -6574,14 +6881,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6595,11 +6907,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/managed_members/{member_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteManagedMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6630,11 +6944,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteManagedMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -6644,15 +6962,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6665,13 +6987,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/managed_members/{member_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteManagedMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6702,15 +7026,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
 
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -6719,14 +7049,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6741,11 +7076,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteManagedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6778,15 +7115,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
 
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -6796,15 +7139,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6818,13 +7165,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteManagedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6853,11 +7202,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -6866,14 +7219,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6887,11 +7245,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/members/{member_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6922,11 +7282,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -6936,15 +7300,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -6957,13 +7325,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/members/{member_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -6992,11 +7362,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'tagGuid' is set
             if (tagGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagGuid' when calling MxPlatformApi->DeleteTag");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteTag");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -7005,14 +7379,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tag_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(tagGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7026,11 +7405,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/tags/{tag_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7061,11 +7442,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'tagGuid' is set
             if (tagGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagGuid' when calling MxPlatformApi->DeleteTag");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteTag");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -7075,15 +7460,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tag_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(tagGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7096,13 +7485,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/tags/{tag_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7131,11 +7522,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'taggingGuid' is set
             if (taggingGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingGuid' when calling MxPlatformApi->DeleteTagging");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteTagging");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -7144,14 +7539,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tagging_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taggingGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7165,11 +7565,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/taggings/{tagging_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteTagging", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7200,11 +7602,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'taggingGuid' is set
             if (taggingGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingGuid' when calling MxPlatformApi->DeleteTagging");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteTagging");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -7214,15 +7620,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tagging_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taggingGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7235,13 +7645,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/taggings/{tagging_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteTagging", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7270,11 +7682,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionRuleGuid' is set
             if (transactionRuleGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleGuid' when calling MxPlatformApi->DeleteTransactionRule");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteTransactionRule");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -7283,14 +7699,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_rule_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionRuleGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7304,11 +7725,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/transaction_rules/{transaction_rule_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteTransactionRule", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7339,11 +7762,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionRuleGuid' is set
             if (transactionRuleGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleGuid' when calling MxPlatformApi->DeleteTransactionRule");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteTransactionRule");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -7353,15 +7780,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_rule_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionRuleGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7374,13 +7805,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/transaction_rules/{transaction_rule_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteTransactionRule", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7407,7 +7840,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteUser");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -7416,14 +7851,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
@@ -7436,11 +7876,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7469,7 +7911,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteUser");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -7479,15 +7923,19 @@ namespace MX.Platform.CSharp.Api
 
             // to determine the Accept header
             string[] _accepts = new string[] {
-                "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
@@ -7499,13 +7947,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7537,15 +7987,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DownloadStatementPDF");
+            }
 
             // verify the required parameter 'statementGuid' is set
             if (statementGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'statementGuid' when calling MxPlatformApi->DownloadStatementPDF");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DownloadStatementPDF");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -7558,10 +8014,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("statement_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(statementGuid)); // path parameter
@@ -7576,11 +8038,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<System.IO.Stream>("/users/{user_guid}/members/{member_guid}/statements/{statement_guid}.pdf", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DownloadStatementPDF", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7614,15 +8078,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DownloadStatementPDF");
+            }
 
             // verify the required parameter 'statementGuid' is set
             if (statementGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'statementGuid' when calling MxPlatformApi->DownloadStatementPDF");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DownloadStatementPDF");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -7635,12 +8105,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+pdf"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("statement_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(statementGuid)); // path parameter
@@ -7654,13 +8129,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<System.IO.Stream>("/users/{user_guid}/members/{member_guid}/statements/{statement_guid}.pdf", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DownloadStatementPDF", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7688,7 +8165,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'enhanceTransactionsRequestBody' is set
             if (enhanceTransactionsRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'enhanceTransactionsRequestBody' when calling MxPlatformApi->EnhanceTransactions");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -7702,10 +8181,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.Data = enhanceTransactionsRequestBody;
 
@@ -7718,11 +8203,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<EnhanceTransactionsResponseBody>("/transactions/enhance", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EnhanceTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7752,7 +8239,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'enhanceTransactionsRequestBody' is set
             if (enhanceTransactionsRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'enhanceTransactionsRequestBody' when calling MxPlatformApi->EnhanceTransactions");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -7766,12 +8255,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.Data = enhanceTransactionsRequestBody;
 
@@ -7783,13 +8277,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<EnhanceTransactionsResponseBody>("/transactions/enhance", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("EnhanceTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7819,11 +8315,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ExtendHistory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ExtendHistory");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -7836,10 +8336,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7853,11 +8359,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/extend_history", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExtendHistory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7889,11 +8397,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ExtendHistory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ExtendHistory");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -7906,12 +8418,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7924,13 +8441,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/extend_history", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExtendHistory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -7960,11 +8479,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->FetchStatements");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->FetchStatements");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -7977,10 +8500,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -7994,11 +8523,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/fetch_statements", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FetchStatements", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8030,11 +8561,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->FetchStatements");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->FetchStatements");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -8047,12 +8582,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8065,13 +8605,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/fetch_statements", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FetchStatements", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8101,11 +8643,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->IdentifyMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->IdentifyMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -8118,10 +8664,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8135,11 +8687,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/identify", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IdentifyMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8171,11 +8725,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->IdentifyMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->IdentifyMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -8188,12 +8746,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8206,13 +8769,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/identify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("IdentifyMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8246,11 +8811,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ListAccountNumbersByAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListAccountNumbersByAccount");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -8263,10 +8832,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8288,11 +8863,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountNumbersResponseBody>("/users/{user_guid}/accounts/{account_guid}/account_numbers", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListAccountNumbersByAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8328,11 +8905,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ListAccountNumbersByAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListAccountNumbersByAccount");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -8345,12 +8926,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8371,13 +8957,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<AccountNumbersResponseBody>("/users/{user_guid}/accounts/{account_guid}/account_numbers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListAccountNumbersByAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8411,11 +8999,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListAccountNumbersByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListAccountNumbersByMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -8428,10 +9020,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8453,11 +9051,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountNumbersResponseBody>("/users/{user_guid}/members/{member_guid}/account_numbers", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListAccountNumbersByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8493,11 +9093,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListAccountNumbersByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListAccountNumbersByMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -8510,12 +9114,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8536,13 +9145,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<AccountNumbersResponseBody>("/users/{user_guid}/members/{member_guid}/account_numbers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListAccountNumbersByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8576,11 +9187,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListAccountOwnersByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListAccountOwnersByMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -8593,10 +9208,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8618,11 +9239,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountOwnersResponseBody>("/users/{user_guid}/members/{member_guid}/account_owners", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListAccountOwnersByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8658,11 +9281,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListAccountOwnersByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListAccountOwnersByMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -8675,12 +9302,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -8701,13 +9333,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<AccountOwnersResponseBody>("/users/{user_guid}/members/{member_guid}/account_owners", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListAccountOwnersByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8739,7 +9373,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListCategories");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -8752,10 +9388,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -8776,11 +9418,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CategoriesResponseBody>("/users/{user_guid}/categories", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListCategories", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8814,7 +9458,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListCategories");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -8827,12 +9473,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -8852,13 +9503,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<CategoriesResponseBody>("/users/{user_guid}/categories", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListCategories", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8897,10 +9550,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -8920,11 +9579,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CategoriesResponseBody>("/categories/default", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListDefaultCategories", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -8965,12 +9626,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -8989,13 +9655,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<CategoriesResponseBody>("/categories/default", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListDefaultCategories", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9027,7 +9695,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListDefaultCategoriesByUser");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -9040,10 +9710,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -9064,11 +9740,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CategoriesResponseBody>("/users/{user_guid}/categories/default", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListDefaultCategoriesByUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9102,7 +9780,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListDefaultCategoriesByUser");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -9115,12 +9795,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -9140,13 +9825,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<CategoriesResponseBody>("/users/{user_guid}/categories/default", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListDefaultCategoriesByUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9185,10 +9872,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -9208,11 +9901,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<InstitutionsResponseBody>("/institutions/favorites", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListFavoriteInstitutions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9253,12 +9948,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -9277,13 +9977,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<InstitutionsResponseBody>("/institutions/favorites", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListFavoriteInstitutions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9319,7 +10021,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListHoldings");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -9332,10 +10036,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (fromDate != null)
@@ -9364,11 +10074,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<HoldingsResponseBody>("/users/{user_guid}/holdings", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListHoldings", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9406,7 +10118,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListHoldings");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -9419,12 +10133,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (fromDate != null)
@@ -9452,13 +10171,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<HoldingsResponseBody>("/users/{user_guid}/holdings", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListHoldings", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9496,11 +10217,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListHoldingsByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListHoldingsByMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -9513,10 +10238,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -9546,11 +10277,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<HoldingsResponseBody>("/users/{user_guid}/members/{member_guid}/holdings", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListHoldingsByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9590,11 +10323,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListHoldingsByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListHoldingsByMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -9607,12 +10344,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -9641,13 +10383,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<HoldingsResponseBody>("/users/{user_guid}/members/{member_guid}/holdings", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListHoldingsByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9679,7 +10423,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'institutionCode' is set
             if (institutionCode == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'institutionCode' when calling MxPlatformApi->ListInstitutionCredentials");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -9692,10 +10438,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("institution_code", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(institutionCode)); // path parameter
             if (page != null)
@@ -9716,11 +10468,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CredentialsResponseBody>("/institutions/{institution_code}/credentials", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListInstitutionCredentials", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9754,7 +10508,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'institutionCode' is set
             if (institutionCode == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'institutionCode' when calling MxPlatformApi->ListInstitutionCredentials");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -9767,12 +10523,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("institution_code", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(institutionCode)); // path parameter
             if (page != null)
@@ -9792,13 +10553,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<CredentialsResponseBody>("/institutions/{institution_code}/credentials", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListInstitutionCredentials", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9847,10 +10610,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (name != null)
             {
@@ -9890,11 +10659,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<InstitutionsResponseBody>("/institutions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListInstitutions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -9945,12 +10716,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (name != null)
             {
@@ -9989,13 +10765,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<InstitutionsResponseBody>("/institutions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListInstitutions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10029,11 +10807,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedAccounts");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListManagedAccounts");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -10046,10 +10828,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -10071,11 +10859,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountsResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedAccounts", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10111,11 +10901,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedAccounts");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListManagedAccounts");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -10128,12 +10922,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -10154,13 +10953,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<AccountsResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedAccounts", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10199,10 +11000,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -10222,11 +11029,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<InstitutionsResponseBody>("/managed_institutions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedInstitutions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10267,12 +11076,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -10291,13 +11105,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<InstitutionsResponseBody>("/managed_institutions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedInstitutions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10329,7 +11145,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedMembers");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -10342,10 +11160,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -10366,11 +11190,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MembersResponseBody>("/users/{user_guid}/managed_members", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedMembers", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10404,7 +11230,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedMembers");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -10417,12 +11245,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -10442,13 +11275,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<MembersResponseBody>("/users/{user_guid}/managed_members", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedMembers", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10482,11 +11317,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedTransactions");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListManagedTransactions");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -10499,10 +11338,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -10524,11 +11369,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionsResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10564,11 +11411,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedTransactions");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListManagedTransactions");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -10581,12 +11432,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -10607,13 +11463,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionsResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10647,11 +11505,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListMemberChallenges");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListMemberChallenges");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -10664,10 +11526,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -10689,11 +11557,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<ChallengesResponseBody>("/users/{user_guid}/members/{member_guid}/challenges", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListMemberChallenges", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10729,11 +11599,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListMemberChallenges");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListMemberChallenges");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -10746,12 +11620,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -10772,13 +11651,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<ChallengesResponseBody>("/users/{user_guid}/members/{member_guid}/challenges", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListMemberChallenges", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10812,11 +11693,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListMemberCredentials");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListMemberCredentials");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -10829,10 +11714,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -10854,11 +11745,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CredentialsResponseBody>("/users/{user_guid}/members/{member_guid}/credentials", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListMemberCredentials", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10894,11 +11787,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListMemberCredentials");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListMemberCredentials");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -10911,12 +11808,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -10937,13 +11839,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<CredentialsResponseBody>("/users/{user_guid}/members/{member_guid}/credentials", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListMemberCredentials", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -10975,7 +11879,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListMembers");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -10988,10 +11894,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -11012,11 +11924,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MembersResponseBody>("/users/{user_guid}/members", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListMembers", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11050,7 +11964,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListMembers");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -11063,12 +11979,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -11088,13 +12009,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<MembersResponseBody>("/users/{user_guid}/members", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListMembers", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11133,10 +12056,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -11156,11 +12085,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MerchantsResponseBody>("/merchants", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListMerchants", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11201,12 +12132,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -11225,13 +12161,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<MerchantsResponseBody>("/merchants", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListMerchants", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11265,11 +12203,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListStatementsByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListStatementsByMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -11282,10 +12224,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -11307,11 +12255,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<StatementsResponseBody>("/users/{user_guid}/members/{member_guid}/statements", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListStatementsByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11347,11 +12297,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListStatementsByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListStatementsByMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -11364,12 +12318,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -11390,13 +12349,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<StatementsResponseBody>("/users/{user_guid}/members/{member_guid}/statements", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListStatementsByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11428,7 +12389,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTaggings");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -11441,10 +12404,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -11465,11 +12434,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TaggingsResponseBody>("/users/{user_guid}/taggings", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTaggings", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11503,7 +12474,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTaggings");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -11516,12 +12489,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -11541,13 +12519,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TaggingsResponseBody>("/users/{user_guid}/taggings", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTaggings", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11579,7 +12559,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTags");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -11592,10 +12574,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -11616,11 +12604,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TagsResponseBody>("/users/{user_guid}/tags", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTags", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11654,7 +12644,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTags");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -11667,12 +12659,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -11692,13 +12689,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TagsResponseBody>("/users/{user_guid}/tags", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTags", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11730,7 +12729,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactionRules");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -11743,10 +12744,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -11767,11 +12774,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionRulesResponseBody>("/users/{user_guid}/transaction_rules", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactionRules", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11805,7 +12814,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactionRules");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -11818,12 +12829,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -11843,13 +12859,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionRulesResponseBody>("/users/{user_guid}/transaction_rules", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactionRules", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11885,7 +12903,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactions");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -11898,10 +12918,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (fromDate != null)
@@ -11930,11 +12956,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionsResponseBody>("/users/{user_guid}/transactions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -11972,7 +13000,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactions");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -11985,12 +13015,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (fromDate != null)
@@ -12018,13 +13053,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionsResponseBody>("/users/{user_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactions", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12062,11 +13099,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ListTransactionsByAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactionsByAccount");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -12079,10 +13120,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -12112,11 +13159,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionsResponseBody>("/users/{user_guid}/accounts/{account_guid}/transactions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactionsByAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12156,11 +13205,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ListTransactionsByAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactionsByAccount");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -12173,12 +13226,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -12207,13 +13265,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionsResponseBody>("/users/{user_guid}/accounts/{account_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactionsByAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12251,11 +13311,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListTransactionsByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactionsByMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -12268,10 +13332,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -12301,11 +13371,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionsResponseBody>("/users/{user_guid}/members/{member_guid}/transactions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactionsByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12345,11 +13417,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListTransactionsByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactionsByMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -12362,12 +13438,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -12396,13 +13477,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionsResponseBody>("/users/{user_guid}/members/{member_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactionsByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12440,11 +13523,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'tagGuid' is set
             if (tagGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagGuid' when calling MxPlatformApi->ListTransactionsByTag");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactionsByTag");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -12457,10 +13544,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tag_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(tagGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -12490,11 +13583,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionsResponseBody>("/users/{user_guid}/tags/{tag_guid}/transactions", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactionsByTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12534,11 +13629,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'tagGuid' is set
             if (tagGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagGuid' when calling MxPlatformApi->ListTransactionsByTag");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTransactionsByTag");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -12551,12 +13650,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tag_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(tagGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -12585,13 +13689,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionsResponseBody>("/users/{user_guid}/tags/{tag_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListTransactionsByTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12623,7 +13729,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListUserAccounts");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -12636,10 +13744,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -12660,11 +13774,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountsResponseBody>("/users/{user_guid}/accounts", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListUserAccounts", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12698,7 +13814,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListUserAccounts");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -12711,12 +13829,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
@@ -12736,13 +13859,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<AccountsResponseBody>("/users/{user_guid}/accounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListUserAccounts", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12781,10 +13906,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -12804,11 +13935,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<UsersResponseBody>("/users", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListUsers", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12849,12 +13982,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             if (page != null)
             {
@@ -12873,13 +14011,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<UsersResponseBody>("/users", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListUsers", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12909,11 +14049,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadAccount");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -12926,10 +14070,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -12943,11 +14093,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountResponseBody>("/users/{user_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -12979,11 +14131,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadAccount");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -12996,12 +14152,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13014,13 +14175,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<AccountResponseBody>("/users/{user_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13050,11 +14213,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->ReadCategory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadCategory");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -13067,10 +14234,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13084,11 +14257,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CategoryResponseBody>("/users/{user_guid}/categories/{category_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13120,11 +14295,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->ReadCategory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadCategory");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -13137,12 +14316,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13155,13 +14339,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<CategoryResponseBody>("/users/{user_guid}/categories/{category_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13191,11 +14377,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->ReadDefaultCategory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadDefaultCategory");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -13208,10 +14398,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13225,11 +14421,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<CategoryResponseBody>("/categories/{category_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadDefaultCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13261,11 +14459,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->ReadDefaultCategory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadDefaultCategory");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -13278,12 +14480,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13296,13 +14503,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<CategoryResponseBody>("/categories/{category_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadDefaultCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13332,11 +14541,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'holdingGuid' is set
             if (holdingGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'holdingGuid' when calling MxPlatformApi->ReadHolding");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadHolding");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -13349,10 +14562,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("holding_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(holdingGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13366,11 +14585,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<HoldingResponseBody>("/users/{user_guid}/holdings/{holding_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadHolding", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13402,11 +14623,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'holdingGuid' is set
             if (holdingGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'holdingGuid' when calling MxPlatformApi->ReadHolding");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadHolding");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -13419,12 +14644,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("holding_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(holdingGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13437,13 +14667,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<HoldingResponseBody>("/users/{user_guid}/holdings/{holding_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadHolding", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13471,7 +14703,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'institutionCode' is set
             if (institutionCode == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'institutionCode' when calling MxPlatformApi->ReadInstitution");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -13484,10 +14718,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("institution_code", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(institutionCode)); // path parameter
 
@@ -13500,11 +14740,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<InstitutionResponseBody>("/institutions/{institution_code}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadInstitution", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13534,7 +14776,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'institutionCode' is set
             if (institutionCode == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'institutionCode' when calling MxPlatformApi->ReadInstitution");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -13547,12 +14791,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("institution_code", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(institutionCode)); // path parameter
 
@@ -13564,13 +14813,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<InstitutionResponseBody>("/institutions/{institution_code}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadInstitution", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13602,15 +14853,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadManagedAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedAccount");
+            }
 
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadManagedAccount");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -13623,10 +14880,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13641,11 +14904,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<AccountResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadManagedAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13679,15 +14944,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadManagedAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedAccount");
+            }
 
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadManagedAccount");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -13700,12 +14971,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13719,13 +14995,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<AccountResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadManagedAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13755,11 +15033,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadManagedMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -13772,10 +15054,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13789,11 +15077,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MemberResponseBody>("/users/{user_guid}/managed_members/{member_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadManagedMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13825,11 +15115,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadManagedMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -13842,12 +15136,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13860,13 +15159,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<MemberResponseBody>("/users/{user_guid}/managed_members/{member_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadManagedMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13898,15 +15199,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
 
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -13919,10 +15226,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -13937,11 +15250,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadManagedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -13975,15 +15290,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
 
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -13996,12 +15317,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14015,13 +15341,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadManagedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14051,11 +15379,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -14068,10 +15400,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14085,11 +15423,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MemberResponseBody>("/users/{user_guid}/members/{member_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14121,11 +15461,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14138,12 +15482,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14156,13 +15505,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14192,11 +15543,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadMemberStatus");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadMemberStatus");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -14209,10 +15564,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14226,11 +15587,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MemberStatusResponseBody>("/users/{user_guid}/members/{member_guid}/status", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMemberStatus", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14262,11 +15625,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadMemberStatus");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadMemberStatus");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14279,12 +15646,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14297,13 +15669,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<MemberStatusResponseBody>("/users/{user_guid}/members/{member_guid}/status", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMemberStatus", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14331,7 +15705,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'merchantGuid' is set
             if (merchantGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'merchantGuid' when calling MxPlatformApi->ReadMerchant");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -14344,10 +15720,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("merchant_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(merchantGuid)); // path parameter
 
@@ -14360,11 +15742,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MerchantResponseBody>("/merchants/{merchant_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMerchant", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14394,7 +15778,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'merchantGuid' is set
             if (merchantGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'merchantGuid' when calling MxPlatformApi->ReadMerchant");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14407,12 +15793,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("merchant_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(merchantGuid)); // path parameter
 
@@ -14424,13 +15815,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<MerchantResponseBody>("/merchants/{merchant_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMerchant", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14458,7 +15851,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'merchantLocationGuid' is set
             if (merchantLocationGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'merchantLocationGuid' when calling MxPlatformApi->ReadMerchantLocation");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -14471,10 +15866,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("merchant_location_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(merchantLocationGuid)); // path parameter
 
@@ -14487,11 +15888,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<MerchantLocationResponseBody>("/merchant_locations/{merchant_location_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMerchantLocation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14521,7 +15924,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'merchantLocationGuid' is set
             if (merchantLocationGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'merchantLocationGuid' when calling MxPlatformApi->ReadMerchantLocation");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14534,12 +15939,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("merchant_location_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(merchantLocationGuid)); // path parameter
 
@@ -14551,13 +15961,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<MerchantLocationResponseBody>("/merchant_locations/{merchant_location_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMerchantLocation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14589,15 +16001,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadStatementByMember");
+            }
 
             // verify the required parameter 'statementGuid' is set
             if (statementGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'statementGuid' when calling MxPlatformApi->ReadStatementByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadStatementByMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -14610,10 +16028,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("statement_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(statementGuid)); // path parameter
@@ -14628,11 +16052,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<StatementResponseBody>("/users/{user_guid}/members/{member_guid}/statements/{statement_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadStatementByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14666,15 +16092,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadStatementByMember");
+            }
 
             // verify the required parameter 'statementGuid' is set
             if (statementGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'statementGuid' when calling MxPlatformApi->ReadStatementByMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadStatementByMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14687,12 +16119,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("statement_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(statementGuid)); // path parameter
@@ -14706,13 +16143,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<StatementResponseBody>("/users/{user_guid}/members/{member_guid}/statements/{statement_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadStatementByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14742,11 +16181,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'tagGuid' is set
             if (tagGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagGuid' when calling MxPlatformApi->ReadTag");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTag");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -14759,10 +16202,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tag_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(tagGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14776,11 +16225,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TagResponseBody>("/users/{user_guid}/tags/{tag_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14812,11 +16263,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'tagGuid' is set
             if (tagGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagGuid' when calling MxPlatformApi->ReadTag");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTag");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14829,12 +16284,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tag_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(tagGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14847,13 +16307,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TagResponseBody>("/users/{user_guid}/tags/{tag_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14883,11 +16345,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'taggingGuid' is set
             if (taggingGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingGuid' when calling MxPlatformApi->ReadTagging");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTagging");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -14900,10 +16366,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tagging_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taggingGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14917,11 +16389,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TaggingResponseBody>("/users/{user_guid}/taggings/{tagging_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTagging", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -14953,11 +16427,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'taggingGuid' is set
             if (taggingGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingGuid' when calling MxPlatformApi->ReadTagging");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTagging");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14970,12 +16448,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tagging_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taggingGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -14988,13 +16471,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TaggingResponseBody>("/users/{user_guid}/taggings/{tagging_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTagging", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15024,11 +16509,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->ReadTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTransaction");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -15041,10 +16530,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -15058,11 +16553,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionResponseBody>("/users/{user_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15094,11 +16591,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->ReadTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTransaction");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -15111,12 +16612,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -15129,13 +16635,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionResponseBody>("/users/{user_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15165,11 +16673,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionRuleGuid' is set
             if (transactionRuleGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleGuid' when calling MxPlatformApi->ReadTransactionRule");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTransactionRule");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -15182,10 +16694,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_rule_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionRuleGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -15199,11 +16717,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<TransactionRuleResponseBody>("/users/{user_guid}/transaction_rules/{transaction_rule_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTransactionRule", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15235,11 +16755,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionRuleGuid' is set
             if (transactionRuleGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleGuid' when calling MxPlatformApi->ReadTransactionRule");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTransactionRule");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -15252,12 +16776,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_rule_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionRuleGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -15270,13 +16799,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionRuleResponseBody>("/users/{user_guid}/transaction_rules/{transaction_rule_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTransactionRule", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15304,7 +16835,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadUser");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -15317,10 +16850,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
@@ -15333,11 +16872,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<UserResponseBody>("/users/{user_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15367,7 +16908,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadUser");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -15380,12 +16923,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
@@ -15397,13 +16945,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<UserResponseBody>("/users/{user_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15433,7 +16983,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->RequestConnectWidgetURL");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -15447,10 +16999,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = connectWidgetRequestBody;
@@ -15464,11 +17022,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ConnectWidgetResponseBody>("/users/{user_guid}/connect_widget_url", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RequestConnectWidgetURL", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15500,7 +17060,9 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->RequestConnectWidgetURL");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -15514,12 +17076,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = connectWidgetRequestBody;
@@ -15532,13 +17099,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<ConnectWidgetResponseBody>("/users/{user_guid}/connect_widget_url", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RequestConnectWidgetURL", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15574,11 +17143,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->RequestOAuthWindowURI");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->RequestOAuthWindowURI");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -15591,10 +17164,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -15620,11 +17199,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Get<OAuthWindowResponseBody>("/users/{user_guid}/members/{member_guid}/oauth_window_uri", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RequestOAuthWindowURI", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15662,11 +17243,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->RequestOAuthWindowURI");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->RequestOAuthWindowURI");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -15679,12 +17264,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -15709,13 +17299,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.GetAsync<OAuthWindowResponseBody>("/users/{user_guid}/members/{member_guid}/oauth_window_uri", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RequestOAuthWindowURI", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15747,11 +17339,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->RequestWidgetURL");
+            }
 
             // verify the required parameter 'widgetRequestBody' is set
             if (widgetRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'widgetRequestBody' when calling MxPlatformApi->RequestWidgetURL");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -15765,10 +17361,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (acceptLanguage != null)
@@ -15786,11 +17388,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<WidgetResponseBody>("/users/{user_guid}/widget_urls", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RequestWidgetURL", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15824,11 +17428,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->RequestWidgetURL");
+            }
 
             // verify the required parameter 'widgetRequestBody' is set
             if (widgetRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'widgetRequestBody' when calling MxPlatformApi->RequestWidgetURL");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -15842,12 +17450,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (acceptLanguage != null)
@@ -15864,13 +17477,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<WidgetResponseBody>("/users/{user_guid}/widget_urls", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RequestWidgetURL", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15902,15 +17517,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ResumeAggregation");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ResumeAggregation");
+            }
 
             // verify the required parameter 'memberResumeRequestBody' is set
             if (memberResumeRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberResumeRequestBody' when calling MxPlatformApi->ResumeAggregation");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -15924,10 +17545,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -15942,11 +17569,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/resume", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResumeAggregation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -15980,15 +17609,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ResumeAggregation");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ResumeAggregation");
+            }
 
             // verify the required parameter 'memberResumeRequestBody' is set
             if (memberResumeRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberResumeRequestBody' when calling MxPlatformApi->ResumeAggregation");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -16002,12 +17637,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16021,13 +17661,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/resume", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ResumeAggregation", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16061,19 +17703,27 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateAccountByMember");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateAccountByMember");
+            }
 
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateAccountByMember");
+            }
 
             // verify the required parameter 'accountUpdateRequestBody' is set
             if (accountUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountUpdateRequestBody' when calling MxPlatformApi->UpdateAccountByMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -16087,10 +17737,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -16106,11 +17762,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<AccountResponseBody>("/users/{user_guid}/members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateAccountByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16146,19 +17804,27 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateAccountByMember");
+            }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateAccountByMember");
+            }
 
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateAccountByMember");
+            }
 
             // verify the required parameter 'accountUpdateRequestBody' is set
             if (accountUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountUpdateRequestBody' when calling MxPlatformApi->UpdateAccountByMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -16172,12 +17838,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
@@ -16192,13 +17863,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<AccountResponseBody>("/users/{user_guid}/members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateAccountByMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16230,15 +17903,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->UpdateCategory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateCategory");
+            }
 
             // verify the required parameter 'categoryUpdateRequestBody' is set
             if (categoryUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryUpdateRequestBody' when calling MxPlatformApi->UpdateCategory");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -16252,10 +17931,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16270,11 +17955,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<CategoryResponseBody>("/users/{user_guid}/categories/{category_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16308,15 +17995,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->UpdateCategory");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateCategory");
+            }
 
             // verify the required parameter 'categoryUpdateRequestBody' is set
             if (categoryUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryUpdateRequestBody' when calling MxPlatformApi->UpdateCategory");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -16330,12 +18023,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16349,13 +18047,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<CategoryResponseBody>("/users/{user_guid}/categories/{category_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateCategory", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16389,19 +18089,27 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateManagedAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedAccount");
+            }
 
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateManagedAccount");
+            }
 
             // verify the required parameter 'managedAccountUpdateRequestBody' is set
             if (managedAccountUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedAccountUpdateRequestBody' when calling MxPlatformApi->UpdateManagedAccount");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -16415,10 +18123,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16434,11 +18148,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<AccountResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateManagedAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16474,19 +18190,27 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateManagedAccount");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedAccount");
+            }
 
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateManagedAccount");
+            }
 
             // verify the required parameter 'managedAccountUpdateRequestBody' is set
             if (managedAccountUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedAccountUpdateRequestBody' when calling MxPlatformApi->UpdateManagedAccount");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -16500,12 +18224,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16520,13 +18249,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<AccountResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateManagedAccount", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16558,15 +18289,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateManagedMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedMember");
+            }
 
             // verify the required parameter 'managedMemberUpdateRequestBody' is set
             if (managedMemberUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedMemberUpdateRequestBody' when calling MxPlatformApi->UpdateManagedMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -16580,10 +18317,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16598,11 +18341,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<MemberResponseBody>("/users/{user_guid}/managed_members/{member_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateManagedMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16636,15 +18381,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateManagedMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedMember");
+            }
 
             // verify the required parameter 'managedMemberUpdateRequestBody' is set
             if (managedMemberUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedMemberUpdateRequestBody' when calling MxPlatformApi->UpdateManagedMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -16658,12 +18409,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16677,13 +18433,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<MemberResponseBody>("/users/{user_guid}/managed_members/{member_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateManagedMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16717,19 +18475,27 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
 
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
 
             // verify the required parameter 'managedTransactionUpdateRequestBody' is set
             if (managedTransactionUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedTransactionUpdateRequestBody' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -16743,10 +18509,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16762,11 +18534,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateManagedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16802,19 +18576,27 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
 
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
 
             // verify the required parameter 'managedTransactionUpdateRequestBody' is set
             if (managedTransactionUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'managedTransactionUpdateRequestBody' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -16828,12 +18610,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16848,13 +18635,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateManagedTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16886,15 +18675,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateMember");
+            }
 
             // verify the required parameter 'memberUpdateRequestBody' is set
             if (memberUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberUpdateRequestBody' when calling MxPlatformApi->UpdateMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -16908,10 +18703,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -16926,11 +18727,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<MemberResponseBody>("/users/{user_guid}/members/{member_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -16964,15 +18767,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateMember");
+            }
 
             // verify the required parameter 'memberUpdateRequestBody' is set
             if (memberUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberUpdateRequestBody' when calling MxPlatformApi->UpdateMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -16986,12 +18795,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17005,13 +18819,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17043,15 +18859,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'tagGuid' is set
             if (tagGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagGuid' when calling MxPlatformApi->UpdateTag");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateTag");
+            }
 
             // verify the required parameter 'tagUpdateRequestBody' is set
             if (tagUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagUpdateRequestBody' when calling MxPlatformApi->UpdateTag");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -17065,10 +18887,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tag_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(tagGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17083,11 +18911,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<TagResponseBody>("/users/{user_guid}/tags/{tag_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17121,15 +18951,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'tagGuid' is set
             if (tagGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagGuid' when calling MxPlatformApi->UpdateTag");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateTag");
+            }
 
             // verify the required parameter 'tagUpdateRequestBody' is set
             if (tagUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'tagUpdateRequestBody' when calling MxPlatformApi->UpdateTag");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17143,12 +18979,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tag_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(tagGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17162,13 +19003,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<TagResponseBody>("/users/{user_guid}/tags/{tag_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateTag", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17200,15 +19043,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'taggingGuid' is set
             if (taggingGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingGuid' when calling MxPlatformApi->UpdateTagging");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateTagging");
+            }
 
             // verify the required parameter 'taggingUpdateRequestBody' is set
             if (taggingUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingUpdateRequestBody' when calling MxPlatformApi->UpdateTagging");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -17222,10 +19071,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tagging_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taggingGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17240,11 +19095,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<TaggingResponseBody>("/users/{user_guid}/taggings/{tagging_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateTagging", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17278,15 +19135,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'taggingGuid' is set
             if (taggingGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingGuid' when calling MxPlatformApi->UpdateTagging");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateTagging");
+            }
 
             // verify the required parameter 'taggingUpdateRequestBody' is set
             if (taggingUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taggingUpdateRequestBody' when calling MxPlatformApi->UpdateTagging");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17300,12 +19163,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("tagging_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taggingGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17319,13 +19187,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<TaggingResponseBody>("/users/{user_guid}/taggings/{tagging_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateTagging", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17357,15 +19227,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UpdateTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateTransaction");
+            }
 
             // verify the required parameter 'transactionUpdateRequestBody' is set
             if (transactionUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionUpdateRequestBody' when calling MxPlatformApi->UpdateTransaction");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -17379,10 +19255,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17397,11 +19279,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<TransactionResponseBody>("/users/{user_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17435,15 +19319,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UpdateTransaction");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateTransaction");
+            }
 
             // verify the required parameter 'transactionUpdateRequestBody' is set
             if (transactionUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionUpdateRequestBody' when calling MxPlatformApi->UpdateTransaction");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17457,12 +19347,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17476,13 +19371,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<TransactionResponseBody>("/users/{user_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateTransaction", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17514,15 +19411,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionRuleGuid' is set
             if (transactionRuleGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleGuid' when calling MxPlatformApi->UpdateTransactionRule");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateTransactionRule");
+            }
 
             // verify the required parameter 'transactionRuleUpdateRequestBody' is set
             if (transactionRuleUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleUpdateRequestBody' when calling MxPlatformApi->UpdateTransactionRule");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -17536,10 +19439,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_rule_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionRuleGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17554,11 +19463,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<TransactionRuleResponseBody>("/users/{user_guid}/transaction_rules/{transaction_rule_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateTransactionRule", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17592,15 +19503,21 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'transactionRuleGuid' is set
             if (transactionRuleGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleGuid' when calling MxPlatformApi->UpdateTransactionRule");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateTransactionRule");
+            }
 
             // verify the required parameter 'transactionRuleUpdateRequestBody' is set
             if (transactionRuleUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionRuleUpdateRequestBody' when calling MxPlatformApi->UpdateTransactionRule");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17614,12 +19531,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("transaction_rule_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionRuleGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17633,13 +19555,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<TransactionRuleResponseBody>("/users/{user_guid}/transaction_rules/{transaction_rule_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateTransactionRule", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17669,11 +19593,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateUser");
+            }
 
             // verify the required parameter 'userUpdateRequestBody' is set
             if (userUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userUpdateRequestBody' when calling MxPlatformApi->UpdateUser");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -17687,10 +19615,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = userUpdateRequestBody;
@@ -17704,11 +19638,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Put<UserResponseBody>("/users/{user_guid}", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17740,11 +19676,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateUser");
+            }
 
             // verify the required parameter 'userUpdateRequestBody' is set
             if (userUpdateRequestBody == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userUpdateRequestBody' when calling MxPlatformApi->UpdateUser");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17758,12 +19698,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = userUpdateRequestBody;
@@ -17776,13 +19721,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PutAsync<UserResponseBody>("/users/{user_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateUser", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17812,11 +19759,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->VerifyMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->VerifyMember");
+            }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -17829,10 +19780,16 @@ namespace MX.Platform.CSharp.Api
             };
 
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17846,11 +19803,13 @@ namespace MX.Platform.CSharp.Api
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/verify", localVarRequestOptions, this.Configuration);
-
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("VerifyMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;
@@ -17882,11 +19841,15 @@ namespace MX.Platform.CSharp.Api
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->VerifyMember");
+            }
 
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
+            {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->VerifyMember");
+            }
 
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17899,12 +19862,17 @@ namespace MX.Platform.CSharp.Api
                 "application/vnd.mx.api.v1+json"
             };
 
-
             var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
 
             var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
@@ -17917,13 +19885,15 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-
             var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/verify", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("VerifyMember", localVarResponse);
-                if (_exception != null) throw _exception;
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
             }
 
             return localVarResponse;

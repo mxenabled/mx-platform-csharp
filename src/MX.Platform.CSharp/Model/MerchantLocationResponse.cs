@@ -140,7 +140,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MerchantLocationResponse {\n");
             sb.Append("  City: ").Append(City).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
@@ -185,8 +185,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(MerchantLocationResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.City == input.City ||
@@ -260,29 +261,53 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.City != null)
-                    hashCode = hashCode * 59 + this.City.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.City.GetHashCode();
+                }
                 if (this.Country != null)
-                    hashCode = hashCode * 59 + this.Country.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Country.GetHashCode();
+                }
                 if (this.CreatedAt != null)
-                    hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CreatedAt.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.Latitude != null)
-                    hashCode = hashCode * 59 + this.Latitude.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Latitude.GetHashCode();
+                }
                 if (this.Longitude != null)
-                    hashCode = hashCode * 59 + this.Longitude.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Longitude.GetHashCode();
+                }
                 if (this.MerchantGuid != null)
-                    hashCode = hashCode * 59 + this.MerchantGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MerchantGuid.GetHashCode();
+                }
                 if (this.PhoneNumber != null)
-                    hashCode = hashCode * 59 + this.PhoneNumber.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PhoneNumber.GetHashCode();
+                }
                 if (this.PostalCode != null)
-                    hashCode = hashCode * 59 + this.PostalCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PostalCode.GetHashCode();
+                }
                 if (this.State != null)
-                    hashCode = hashCode * 59 + this.State.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.State.GetHashCode();
+                }
                 if (this.StreetAddress != null)
-                    hashCode = hashCode * 59 + this.StreetAddress.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.StreetAddress.GetHashCode();
+                }
                 if (this.UpdatedAt != null)
-                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UpdatedAt.GetHashCode();
+                }
                 return hashCode;
             }
         }

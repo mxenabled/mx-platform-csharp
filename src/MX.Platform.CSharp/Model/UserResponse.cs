@@ -84,7 +84,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class UserResponse {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
@@ -122,8 +122,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(UserResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Email == input.Email ||
@@ -162,15 +163,25 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Email != null)
-                    hashCode = hashCode * 59 + this.Email.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Email.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
                 if (this.IsDisabled != null)
-                    hashCode = hashCode * 59 + this.IsDisabled.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsDisabled.GetHashCode();
+                }
                 if (this.Metadata != null)
-                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
                 return hashCode;
             }
         }

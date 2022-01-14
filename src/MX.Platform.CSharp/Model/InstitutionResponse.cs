@@ -124,7 +124,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class InstitutionResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  MediumLogoUrl: ").Append(MediumLogoUrl).Append("\n");
@@ -167,8 +167,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(InstitutionResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Code == input.Code ||
@@ -232,25 +233,45 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Code != null)
-                    hashCode = hashCode * 59 + this.Code.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Code.GetHashCode();
+                }
                 if (this.MediumLogoUrl != null)
-                    hashCode = hashCode * 59 + this.MediumLogoUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MediumLogoUrl.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.SmallLogoUrl != null)
-                    hashCode = hashCode * 59 + this.SmallLogoUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SmallLogoUrl.GetHashCode();
+                }
                 if (this.SupportsAccountIdentification != null)
-                    hashCode = hashCode * 59 + this.SupportsAccountIdentification.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SupportsAccountIdentification.GetHashCode();
+                }
                 if (this.SupportsAccountStatement != null)
-                    hashCode = hashCode * 59 + this.SupportsAccountStatement.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SupportsAccountStatement.GetHashCode();
+                }
                 if (this.SupportsAccountVerification != null)
-                    hashCode = hashCode * 59 + this.SupportsAccountVerification.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SupportsAccountVerification.GetHashCode();
+                }
                 if (this.SupportsOauth != null)
-                    hashCode = hashCode * 59 + this.SupportsOauth.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SupportsOauth.GetHashCode();
+                }
                 if (this.SupportsTransactionHistory != null)
-                    hashCode = hashCode * 59 + this.SupportsTransactionHistory.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SupportsTransactionHistory.GetHashCode();
+                }
                 if (this.Url != null)
-                    hashCode = hashCode * 59 + this.Url.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Url.GetHashCode();
+                }
                 return hashCode;
             }
         }

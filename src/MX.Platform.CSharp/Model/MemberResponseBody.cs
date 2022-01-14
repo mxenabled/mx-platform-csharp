@@ -52,7 +52,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MemberResponseBody {\n");
             sb.Append("  Member: ").Append(Member).Append("\n");
             sb.Append("}\n");
@@ -86,8 +86,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(MemberResponseBody input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Member == input.Member ||
@@ -106,7 +107,9 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Member != null)
-                    hashCode = hashCode * 59 + this.Member.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Member.GetHashCode();
+                }
                 return hashCode;
             }
         }

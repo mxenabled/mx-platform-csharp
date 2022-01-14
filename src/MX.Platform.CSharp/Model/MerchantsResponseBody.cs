@@ -60,7 +60,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MerchantsResponseBody {\n");
             sb.Append("  Merchants: ").Append(Merchants).Append("\n");
             sb.Append("  Pagination: ").Append(Pagination).Append("\n");
@@ -95,8 +95,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(MerchantsResponseBody input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Merchants == input.Merchants ||
@@ -121,9 +122,13 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Merchants != null)
-                    hashCode = hashCode * 59 + this.Merchants.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Merchants.GetHashCode();
+                }
                 if (this.Pagination != null)
-                    hashCode = hashCode * 59 + this.Pagination.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Pagination.GetHashCode();
+                }
                 return hashCode;
             }
         }

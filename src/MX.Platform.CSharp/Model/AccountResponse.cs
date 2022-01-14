@@ -420,7 +420,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AccountResponse {\n");
             sb.Append("  AccountNumber: ").Append(AccountNumber).Append("\n");
             sb.Append("  Apr: ").Append(Apr).Append("\n");
@@ -500,8 +500,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(AccountResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AccountNumber == input.AccountNumber ||
@@ -750,99 +751,193 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.AccountNumber != null)
-                    hashCode = hashCode * 59 + this.AccountNumber.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AccountNumber.GetHashCode();
+                }
                 if (this.Apr != null)
-                    hashCode = hashCode * 59 + this.Apr.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Apr.GetHashCode();
+                }
                 if (this.Apy != null)
-                    hashCode = hashCode * 59 + this.Apy.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Apy.GetHashCode();
+                }
                 if (this.AvailableBalance != null)
-                    hashCode = hashCode * 59 + this.AvailableBalance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AvailableBalance.GetHashCode();
+                }
                 if (this.AvailableCredit != null)
-                    hashCode = hashCode * 59 + this.AvailableCredit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AvailableCredit.GetHashCode();
+                }
                 if (this.Balance != null)
-                    hashCode = hashCode * 59 + this.Balance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Balance.GetHashCode();
+                }
                 if (this.CashBalance != null)
-                    hashCode = hashCode * 59 + this.CashBalance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CashBalance.GetHashCode();
+                }
                 if (this.CashSurrenderValue != null)
-                    hashCode = hashCode * 59 + this.CashSurrenderValue.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CashSurrenderValue.GetHashCode();
+                }
                 if (this.CreatedAt != null)
-                    hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CreatedAt.GetHashCode();
+                }
                 if (this.CreditLimit != null)
-                    hashCode = hashCode * 59 + this.CreditLimit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CreditLimit.GetHashCode();
+                }
                 if (this.CurrencyCode != null)
-                    hashCode = hashCode * 59 + this.CurrencyCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CurrencyCode.GetHashCode();
+                }
                 if (this.DayPaymentIsDue != null)
-                    hashCode = hashCode * 59 + this.DayPaymentIsDue.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DayPaymentIsDue.GetHashCode();
+                }
                 if (this.DeathBenefit != null)
-                    hashCode = hashCode * 59 + this.DeathBenefit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DeathBenefit.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.HoldingsValue != null)
-                    hashCode = hashCode * 59 + this.HoldingsValue.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.HoldingsValue.GetHashCode();
+                }
                 if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
                 if (this.ImportedAt != null)
-                    hashCode = hashCode * 59 + this.ImportedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ImportedAt.GetHashCode();
+                }
                 if (this.InstitutionCode != null)
-                    hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InstitutionCode.GetHashCode();
+                }
                 if (this.InsuredName != null)
-                    hashCode = hashCode * 59 + this.InsuredName.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InsuredName.GetHashCode();
+                }
                 if (this.InterestRate != null)
-                    hashCode = hashCode * 59 + this.InterestRate.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InterestRate.GetHashCode();
+                }
                 if (this.IsClosed != null)
-                    hashCode = hashCode * 59 + this.IsClosed.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsClosed.GetHashCode();
+                }
                 if (this.IsHidden != null)
-                    hashCode = hashCode * 59 + this.IsHidden.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsHidden.GetHashCode();
+                }
                 if (this.LastPayment != null)
-                    hashCode = hashCode * 59 + this.LastPayment.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LastPayment.GetHashCode();
+                }
                 if (this.LastPaymentAt != null)
-                    hashCode = hashCode * 59 + this.LastPaymentAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LastPaymentAt.GetHashCode();
+                }
                 if (this.LoanAmount != null)
-                    hashCode = hashCode * 59 + this.LoanAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LoanAmount.GetHashCode();
+                }
                 if (this.MaturesOn != null)
-                    hashCode = hashCode * 59 + this.MaturesOn.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MaturesOn.GetHashCode();
+                }
                 if (this.MemberGuid != null)
-                    hashCode = hashCode * 59 + this.MemberGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MemberGuid.GetHashCode();
+                }
                 if (this.MemberId != null)
-                    hashCode = hashCode * 59 + this.MemberId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MemberId.GetHashCode();
+                }
                 if (this.MemberIsManagedByUser != null)
-                    hashCode = hashCode * 59 + this.MemberIsManagedByUser.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MemberIsManagedByUser.GetHashCode();
+                }
                 if (this.Metadata != null)
-                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
                 if (this.MinimumBalance != null)
-                    hashCode = hashCode * 59 + this.MinimumBalance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MinimumBalance.GetHashCode();
+                }
                 if (this.MinimumPayment != null)
-                    hashCode = hashCode * 59 + this.MinimumPayment.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MinimumPayment.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.Nickname != null)
-                    hashCode = hashCode * 59 + this.Nickname.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Nickname.GetHashCode();
+                }
                 if (this.OriginalBalance != null)
-                    hashCode = hashCode * 59 + this.OriginalBalance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OriginalBalance.GetHashCode();
+                }
                 if (this.PayOutAmount != null)
-                    hashCode = hashCode * 59 + this.PayOutAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PayOutAmount.GetHashCode();
+                }
                 if (this.PaymentDueAt != null)
-                    hashCode = hashCode * 59 + this.PaymentDueAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PaymentDueAt.GetHashCode();
+                }
                 if (this.PayoffBalance != null)
-                    hashCode = hashCode * 59 + this.PayoffBalance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PayoffBalance.GetHashCode();
+                }
                 if (this.PremiumAmount != null)
-                    hashCode = hashCode * 59 + this.PremiumAmount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PremiumAmount.GetHashCode();
+                }
                 if (this.RoutingNumber != null)
-                    hashCode = hashCode * 59 + this.RoutingNumber.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.RoutingNumber.GetHashCode();
+                }
                 if (this.StartedOn != null)
-                    hashCode = hashCode * 59 + this.StartedOn.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.StartedOn.GetHashCode();
+                }
                 if (this.Subtype != null)
-                    hashCode = hashCode * 59 + this.Subtype.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Subtype.GetHashCode();
+                }
                 if (this.TotalAccountValue != null)
-                    hashCode = hashCode * 59 + this.TotalAccountValue.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TotalAccountValue.GetHashCode();
+                }
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 if (this.UpdatedAt != null)
-                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UpdatedAt.GetHashCode();
+                }
                 if (this.UserGuid != null)
-                    hashCode = hashCode * 59 + this.UserGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserGuid.GetHashCode();
+                }
                 if (this.UserId != null)
-                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserId.GetHashCode();
+                }
                 return hashCode;
             }
         }

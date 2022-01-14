@@ -140,7 +140,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class AccountOwnerResponse {\n");
             sb.Append("  AccountGuid: ").Append(AccountGuid).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
@@ -185,8 +185,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(AccountOwnerResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AccountGuid == input.AccountGuid ||
@@ -260,29 +261,53 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.AccountGuid != null)
-                    hashCode = hashCode * 59 + this.AccountGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AccountGuid.GetHashCode();
+                }
                 if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
+                }
                 if (this.City != null)
-                    hashCode = hashCode * 59 + this.City.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.City.GetHashCode();
+                }
                 if (this.Country != null)
-                    hashCode = hashCode * 59 + this.Country.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Country.GetHashCode();
+                }
                 if (this.Email != null)
-                    hashCode = hashCode * 59 + this.Email.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Email.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.MemberGuid != null)
-                    hashCode = hashCode * 59 + this.MemberGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MemberGuid.GetHashCode();
+                }
                 if (this.OwnerName != null)
-                    hashCode = hashCode * 59 + this.OwnerName.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OwnerName.GetHashCode();
+                }
                 if (this.Phone != null)
-                    hashCode = hashCode * 59 + this.Phone.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Phone.GetHashCode();
+                }
                 if (this.PostalCode != null)
-                    hashCode = hashCode * 59 + this.PostalCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PostalCode.GetHashCode();
+                }
                 if (this.State != null)
-                    hashCode = hashCode * 59 + this.State.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.State.GetHashCode();
+                }
                 if (this.UserGuid != null)
-                    hashCode = hashCode * 59 + this.UserGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserGuid.GetHashCode();
+                }
                 return hashCode;
             }
         }

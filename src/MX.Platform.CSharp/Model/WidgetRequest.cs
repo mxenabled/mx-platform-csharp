@@ -157,7 +157,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class WidgetRequest {\n");
             sb.Append("  ColorScheme: ").Append(ColorScheme).Append("\n");
             sb.Append("  CurrentInstitutionCode: ").Append(CurrentInstitutionCode).Append("\n");
@@ -203,8 +203,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(WidgetRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ColorScheme == input.ColorScheme ||
@@ -277,25 +278,39 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.ColorScheme != null)
-                    hashCode = hashCode * 59 + this.ColorScheme.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ColorScheme.GetHashCode();
+                }
                 if (this.CurrentInstitutionCode != null)
-                    hashCode = hashCode * 59 + this.CurrentInstitutionCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CurrentInstitutionCode.GetHashCode();
+                }
                 if (this.CurrentInstitutionGuid != null)
-                    hashCode = hashCode * 59 + this.CurrentInstitutionGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CurrentInstitutionGuid.GetHashCode();
+                }
                 if (this.CurrentMemberGuid != null)
-                    hashCode = hashCode * 59 + this.CurrentMemberGuid.GetHashCode();
-                hashCode = hashCode * 59 + this.DisableInstitutionSearch.GetHashCode();
-                hashCode = hashCode * 59 + this.IncludeTransactions.GetHashCode();
-                hashCode = hashCode * 59 + this.IsMobileWebview.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CurrentMemberGuid.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.DisableInstitutionSearch.GetHashCode();
+                hashCode = (hashCode * 59) + this.IncludeTransactions.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsMobileWebview.GetHashCode();
                 if (this.Mode != null)
-                    hashCode = hashCode * 59 + this.Mode.GetHashCode();
-                hashCode = hashCode * 59 + this.UiMessageVersion.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Mode.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.UiMessageVersion.GetHashCode();
                 if (this.UiMessageWebviewUrlScheme != null)
-                    hashCode = hashCode * 59 + this.UiMessageWebviewUrlScheme.GetHashCode();
-                hashCode = hashCode * 59 + this.UpdateCredentials.GetHashCode();
-                hashCode = hashCode * 59 + this.WaitForFullAggregation.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UiMessageWebviewUrlScheme.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.UpdateCredentials.GetHashCode();
+                hashCode = (hashCode * 59) + this.WaitForFullAggregation.GetHashCode();
                 if (this.WidgetType != null)
-                    hashCode = hashCode * 59 + this.WidgetType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.WidgetType.GetHashCode();
+                }
                 return hashCode;
             }
         }
