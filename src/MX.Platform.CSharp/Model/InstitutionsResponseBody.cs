@@ -60,7 +60,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class InstitutionsResponseBody {\n");
             sb.Append("  Institutions: ").Append(Institutions).Append("\n");
             sb.Append("  Pagination: ").Append(Pagination).Append("\n");
@@ -95,8 +95,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(InstitutionsResponseBody input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Institutions == input.Institutions ||
@@ -121,9 +122,13 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Institutions != null)
-                    hashCode = hashCode * 59 + this.Institutions.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Institutions.GetHashCode();
+                }
                 if (this.Pagination != null)
-                    hashCode = hashCode * 59 + this.Pagination.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Pagination.GetHashCode();
+                }
                 return hashCode;
             }
         }

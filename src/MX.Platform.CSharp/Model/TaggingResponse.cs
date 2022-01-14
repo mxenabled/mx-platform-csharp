@@ -84,7 +84,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class TaggingResponse {\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  MemberIsManagedByUser: ").Append(MemberIsManagedByUser).Append("\n");
@@ -122,8 +122,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(TaggingResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Guid == input.Guid ||
@@ -162,15 +163,25 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.MemberIsManagedByUser != null)
-                    hashCode = hashCode * 59 + this.MemberIsManagedByUser.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MemberIsManagedByUser.GetHashCode();
+                }
                 if (this.TagGuid != null)
-                    hashCode = hashCode * 59 + this.TagGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TagGuid.GetHashCode();
+                }
                 if (this.TransactionGuid != null)
-                    hashCode = hashCode * 59 + this.TransactionGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactionGuid.GetHashCode();
+                }
                 if (this.UserGuid != null)
-                    hashCode = hashCode * 59 + this.UserGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserGuid.GetHashCode();
+                }
                 return hashCode;
             }
         }

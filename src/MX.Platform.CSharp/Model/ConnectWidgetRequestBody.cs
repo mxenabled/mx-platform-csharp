@@ -52,7 +52,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ConnectWidgetRequestBody {\n");
             sb.Append("  Config: ").Append(Config).Append("\n");
             sb.Append("}\n");
@@ -86,8 +86,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(ConnectWidgetRequestBody input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Config == input.Config ||
@@ -106,7 +107,9 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Config != null)
-                    hashCode = hashCode * 59 + this.Config.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Config.GetHashCode();
+                }
                 return hashCode;
             }
         }

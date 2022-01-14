@@ -388,7 +388,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class TransactionResponse {\n");
             sb.Append("  AccountGuid: ").Append(AccountGuid).Append("\n");
             sb.Append("  AccountId: ").Append(AccountId).Append("\n");
@@ -464,8 +464,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(TransactionResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AccountGuid == input.AccountGuid ||
@@ -694,91 +695,177 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.AccountGuid != null)
-                    hashCode = hashCode * 59 + this.AccountGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AccountGuid.GetHashCode();
+                }
                 if (this.AccountId != null)
-                    hashCode = hashCode * 59 + this.AccountId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AccountId.GetHashCode();
+                }
                 if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Amount.GetHashCode();
+                }
                 if (this.Category != null)
-                    hashCode = hashCode * 59 + this.Category.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Category.GetHashCode();
+                }
                 if (this.CategoryGuid != null)
-                    hashCode = hashCode * 59 + this.CategoryGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CategoryGuid.GetHashCode();
+                }
                 if (this.CheckNumberString != null)
-                    hashCode = hashCode * 59 + this.CheckNumberString.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CheckNumberString.GetHashCode();
+                }
                 if (this.CreatedAt != null)
-                    hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CreatedAt.GetHashCode();
+                }
                 if (this.CurrencyCode != null)
-                    hashCode = hashCode * 59 + this.CurrencyCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CurrencyCode.GetHashCode();
+                }
                 if (this.Date != null)
-                    hashCode = hashCode * 59 + this.Date.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Date.GetHashCode();
+                }
                 if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
+                }
                 if (this.ExtendedTransactionType != null)
-                    hashCode = hashCode * 59 + this.ExtendedTransactionType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ExtendedTransactionType.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
                 if (this.IsBillPay != null)
-                    hashCode = hashCode * 59 + this.IsBillPay.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsBillPay.GetHashCode();
+                }
                 if (this.IsDirectDeposit != null)
-                    hashCode = hashCode * 59 + this.IsDirectDeposit.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsDirectDeposit.GetHashCode();
+                }
                 if (this.IsExpense != null)
-                    hashCode = hashCode * 59 + this.IsExpense.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsExpense.GetHashCode();
+                }
                 if (this.IsFee != null)
-                    hashCode = hashCode * 59 + this.IsFee.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsFee.GetHashCode();
+                }
                 if (this.IsIncome != null)
-                    hashCode = hashCode * 59 + this.IsIncome.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsIncome.GetHashCode();
+                }
                 if (this.IsInternational != null)
-                    hashCode = hashCode * 59 + this.IsInternational.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsInternational.GetHashCode();
+                }
                 if (this.IsOverdraftFee != null)
-                    hashCode = hashCode * 59 + this.IsOverdraftFee.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsOverdraftFee.GetHashCode();
+                }
                 if (this.IsPayrollAdvance != null)
-                    hashCode = hashCode * 59 + this.IsPayrollAdvance.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsPayrollAdvance.GetHashCode();
+                }
                 if (this.IsRecurring != null)
-                    hashCode = hashCode * 59 + this.IsRecurring.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsRecurring.GetHashCode();
+                }
                 if (this.IsSubscription != null)
-                    hashCode = hashCode * 59 + this.IsSubscription.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsSubscription.GetHashCode();
+                }
                 if (this.Latitude != null)
-                    hashCode = hashCode * 59 + this.Latitude.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Latitude.GetHashCode();
+                }
                 if (this.LocalizedDescription != null)
-                    hashCode = hashCode * 59 + this.LocalizedDescription.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LocalizedDescription.GetHashCode();
+                }
                 if (this.LocalizedMemo != null)
-                    hashCode = hashCode * 59 + this.LocalizedMemo.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LocalizedMemo.GetHashCode();
+                }
                 if (this.Longitude != null)
-                    hashCode = hashCode * 59 + this.Longitude.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Longitude.GetHashCode();
+                }
                 if (this.MemberGuid != null)
-                    hashCode = hashCode * 59 + this.MemberGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MemberGuid.GetHashCode();
+                }
                 if (this.MemberIsManagedByUser != null)
-                    hashCode = hashCode * 59 + this.MemberIsManagedByUser.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MemberIsManagedByUser.GetHashCode();
+                }
                 if (this.Memo != null)
-                    hashCode = hashCode * 59 + this.Memo.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Memo.GetHashCode();
+                }
                 if (this.MerchantCategoryCode != null)
-                    hashCode = hashCode * 59 + this.MerchantCategoryCode.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MerchantCategoryCode.GetHashCode();
+                }
                 if (this.MerchantGuid != null)
-                    hashCode = hashCode * 59 + this.MerchantGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MerchantGuid.GetHashCode();
+                }
                 if (this.MerchantLocationGuid != null)
-                    hashCode = hashCode * 59 + this.MerchantLocationGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MerchantLocationGuid.GetHashCode();
+                }
                 if (this.Metadata != null)
-                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
                 if (this.OriginalDescription != null)
-                    hashCode = hashCode * 59 + this.OriginalDescription.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.OriginalDescription.GetHashCode();
+                }
                 if (this.PostedAt != null)
-                    hashCode = hashCode * 59 + this.PostedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.PostedAt.GetHashCode();
+                }
                 if (this.Status != null)
-                    hashCode = hashCode * 59 + this.Status.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Status.GetHashCode();
+                }
                 if (this.TopLevelCategory != null)
-                    hashCode = hashCode * 59 + this.TopLevelCategory.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TopLevelCategory.GetHashCode();
+                }
                 if (this.TransactedAt != null)
-                    hashCode = hashCode * 59 + this.TransactedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.TransactedAt.GetHashCode();
+                }
                 if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
                 if (this.UpdatedAt != null)
-                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UpdatedAt.GetHashCode();
+                }
                 if (this.UserGuid != null)
-                    hashCode = hashCode * 59 + this.UserGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserGuid.GetHashCode();
+                }
                 if (this.UserId != null)
-                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserId.GetHashCode();
+                }
                 return hashCode;
             }
         }

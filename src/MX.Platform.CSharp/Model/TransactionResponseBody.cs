@@ -52,7 +52,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class TransactionResponseBody {\n");
             sb.Append("  Transaction: ").Append(Transaction).Append("\n");
             sb.Append("}\n");
@@ -86,8 +86,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(TransactionResponseBody input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.Transaction == input.Transaction ||
@@ -106,7 +107,9 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.Transaction != null)
-                    hashCode = hashCode * 59 + this.Transaction.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Transaction.GetHashCode();
+                }
                 return hashCode;
             }
         }

@@ -1009,7 +1009,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
@@ -1087,7 +1087,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
@@ -1163,7 +1163,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
@@ -1241,7 +1241,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
@@ -1317,7 +1317,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
@@ -1393,7 +1393,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
@@ -1469,7 +1469,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
@@ -1545,7 +1545,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
@@ -1619,7 +1619,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.mx.api.v1+json
+ - **Accept**: Not defined
 
 
 ### HTTP response details

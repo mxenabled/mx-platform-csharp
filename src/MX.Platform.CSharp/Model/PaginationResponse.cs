@@ -76,7 +76,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class PaginationResponse {\n");
             sb.Append("  CurrentPage: ").Append(CurrentPage).Append("\n");
             sb.Append("  PerPage: ").Append(PerPage).Append("\n");
@@ -113,8 +113,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(PaginationResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CurrentPage == input.CurrentPage ||
@@ -143,10 +144,10 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.CurrentPage.GetHashCode();
-                hashCode = hashCode * 59 + this.PerPage.GetHashCode();
-                hashCode = hashCode * 59 + this.TotalEntries.GetHashCode();
-                hashCode = hashCode * 59 + this.TotalPages.GetHashCode();
+                hashCode = (hashCode * 59) + this.CurrentPage.GetHashCode();
+                hashCode = (hashCode * 59) + this.PerPage.GetHashCode();
+                hashCode = (hashCode * 59) + this.TotalEntries.GetHashCode();
+                hashCode = (hashCode * 59) + this.TotalPages.GetHashCode();
                 return hashCode;
             }
         }

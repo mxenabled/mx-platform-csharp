@@ -52,7 +52,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class WidgetResponseBody {\n");
             sb.Append("  WidgetUrl: ").Append(WidgetUrl).Append("\n");
             sb.Append("}\n");
@@ -86,8 +86,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(WidgetResponseBody input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.WidgetUrl == input.WidgetUrl ||
@@ -106,7 +107,9 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.WidgetUrl != null)
-                    hashCode = hashCode * 59 + this.WidgetUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.WidgetUrl.GetHashCode();
+                }
                 return hashCode;
             }
         }

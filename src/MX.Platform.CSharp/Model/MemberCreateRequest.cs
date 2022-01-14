@@ -113,7 +113,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MemberCreateRequest {\n");
             sb.Append("  BackgroundAggregationIsDisabled: ").Append(BackgroundAggregationIsDisabled).Append("\n");
             sb.Append("  Credentials: ").Append(Credentials).Append("\n");
@@ -153,8 +153,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(MemberCreateRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.BackgroundAggregationIsDisabled == input.BackgroundAggregationIsDisabled ||
@@ -200,17 +201,25 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.BackgroundAggregationIsDisabled.GetHashCode();
+                hashCode = (hashCode * 59) + this.BackgroundAggregationIsDisabled.GetHashCode();
                 if (this.Credentials != null)
-                    hashCode = hashCode * 59 + this.Credentials.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Credentials.GetHashCode();
+                }
                 if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
+                }
                 if (this.InstitutionCode != null)
-                    hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
-                hashCode = hashCode * 59 + this.IsOauth.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.InstitutionCode.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.IsOauth.GetHashCode();
                 if (this.Metadata != null)
-                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
-                hashCode = hashCode * 59 + this.SkipAggregation.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.SkipAggregation.GetHashCode();
                 return hashCode;
             }
         }

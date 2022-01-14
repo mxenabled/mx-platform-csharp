@@ -116,7 +116,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MemberStatusResponse {\n");
             sb.Append("  AggregatedAt: ").Append(AggregatedAt).Append("\n");
             sb.Append("  Challenges: ").Append(Challenges).Append("\n");
@@ -158,8 +158,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(MemberStatusResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AggregatedAt == input.AggregatedAt ||
@@ -219,23 +220,41 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.AggregatedAt != null)
-                    hashCode = hashCode * 59 + this.AggregatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AggregatedAt.GetHashCode();
+                }
                 if (this.Challenges != null)
-                    hashCode = hashCode * 59 + this.Challenges.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Challenges.GetHashCode();
+                }
                 if (this.ConnectionStatus != null)
-                    hashCode = hashCode * 59 + this.ConnectionStatus.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ConnectionStatus.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.HasProcessedAccounts != null)
-                    hashCode = hashCode * 59 + this.HasProcessedAccounts.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.HasProcessedAccounts.GetHashCode();
+                }
                 if (this.HasProcessedTransactions != null)
-                    hashCode = hashCode * 59 + this.HasProcessedTransactions.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.HasProcessedTransactions.GetHashCode();
+                }
                 if (this.IsAuthenticated != null)
-                    hashCode = hashCode * 59 + this.IsAuthenticated.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsAuthenticated.GetHashCode();
+                }
                 if (this.IsBeingAggregated != null)
-                    hashCode = hashCode * 59 + this.IsBeingAggregated.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.IsBeingAggregated.GetHashCode();
+                }
                 if (this.SuccessfullyAggregatedAt != null)
-                    hashCode = hashCode * 59 + this.SuccessfullyAggregatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.SuccessfullyAggregatedAt.GetHashCode();
+                }
                 return hashCode;
             }
         }

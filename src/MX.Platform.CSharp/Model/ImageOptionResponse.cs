@@ -68,7 +68,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ImageOptionResponse {\n");
             sb.Append("  DataUri: ").Append(DataUri).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
@@ -104,8 +104,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(ImageOptionResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.DataUri == input.DataUri ||
@@ -134,11 +135,17 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.DataUri != null)
-                    hashCode = hashCode * 59 + this.DataUri.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DataUri.GetHashCode();
+                }
                 if (this.Label != null)
-                    hashCode = hashCode * 59 + this.Label.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Label.GetHashCode();
+                }
                 if (this.Value != null)
-                    hashCode = hashCode * 59 + this.Value.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
+                }
                 return hashCode;
             }
         }

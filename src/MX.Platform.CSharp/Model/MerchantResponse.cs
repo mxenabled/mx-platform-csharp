@@ -92,7 +92,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class MerchantResponse {\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
@@ -131,8 +131,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(MerchantResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CreatedAt == input.CreatedAt ||
@@ -176,17 +177,29 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.CreatedAt != null)
-                    hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CreatedAt.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.LogoUrl != null)
-                    hashCode = hashCode * 59 + this.LogoUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.LogoUrl.GetHashCode();
+                }
                 if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
                 if (this.UpdatedAt != null)
-                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UpdatedAt.GetHashCode();
+                }
                 if (this.WebsiteUrl != null)
-                    hashCode = hashCode * 59 + this.WebsiteUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.WebsiteUrl.GetHashCode();
+                }
                 return hashCode;
             }
         }

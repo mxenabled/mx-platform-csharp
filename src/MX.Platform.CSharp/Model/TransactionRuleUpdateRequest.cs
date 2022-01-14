@@ -68,7 +68,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class TransactionRuleUpdateRequest {\n");
             sb.Append("  CategoryGuid: ").Append(CategoryGuid).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -104,8 +104,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(TransactionRuleUpdateRequest input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.CategoryGuid == input.CategoryGuid ||
@@ -134,11 +135,17 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.CategoryGuid != null)
-                    hashCode = hashCode * 59 + this.CategoryGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CategoryGuid.GetHashCode();
+                }
                 if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
+                }
                 if (this.MatchDescription != null)
-                    hashCode = hashCode * 59 + this.MatchDescription.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MatchDescription.GetHashCode();
+                }
                 return hashCode;
             }
         }

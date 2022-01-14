@@ -84,7 +84,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class CredentialResponse {\n");
             sb.Append("  DisplayOrder: ").Append(DisplayOrder).Append("\n");
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
@@ -122,8 +122,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(CredentialResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.DisplayOrder == input.DisplayOrder ||
@@ -162,15 +163,25 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.DisplayOrder != null)
-                    hashCode = hashCode * 59 + this.DisplayOrder.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.DisplayOrder.GetHashCode();
+                }
                 if (this.FieldName != null)
-                    hashCode = hashCode * 59 + this.FieldName.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.FieldName.GetHashCode();
+                }
                 if (this.FieldType != null)
-                    hashCode = hashCode * 59 + this.FieldType.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.FieldType.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.Label != null)
-                    hashCode = hashCode * 59 + this.Label.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Label.GetHashCode();
+                }
                 return hashCode;
             }
         }

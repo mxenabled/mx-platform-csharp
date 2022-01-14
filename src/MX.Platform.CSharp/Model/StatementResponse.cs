@@ -108,7 +108,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class StatementResponse {\n");
             sb.Append("  AccountGuid: ").Append(AccountGuid).Append("\n");
             sb.Append("  ContentHash: ").Append(ContentHash).Append("\n");
@@ -149,8 +149,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(StatementResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.AccountGuid == input.AccountGuid ||
@@ -204,21 +205,37 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.AccountGuid != null)
-                    hashCode = hashCode * 59 + this.AccountGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.AccountGuid.GetHashCode();
+                }
                 if (this.ContentHash != null)
-                    hashCode = hashCode * 59 + this.ContentHash.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ContentHash.GetHashCode();
+                }
                 if (this.CreatedAt != null)
-                    hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.CreatedAt.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.MemberGuid != null)
-                    hashCode = hashCode * 59 + this.MemberGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.MemberGuid.GetHashCode();
+                }
                 if (this.UpdatedAt != null)
-                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UpdatedAt.GetHashCode();
+                }
                 if (this.Uri != null)
-                    hashCode = hashCode * 59 + this.Uri.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Uri.GetHashCode();
+                }
                 if (this.UserGuid != null)
-                    hashCode = hashCode * 59 + this.UserGuid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.UserGuid.GetHashCode();
+                }
                 return hashCode;
             }
         }

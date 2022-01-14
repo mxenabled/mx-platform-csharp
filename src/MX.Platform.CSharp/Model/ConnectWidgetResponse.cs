@@ -60,7 +60,7 @@ namespace MX.Platform.CSharp.Model
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.Append("class ConnectWidgetResponse {\n");
             sb.Append("  ConnectWidgetUrl: ").Append(ConnectWidgetUrl).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
@@ -95,8 +95,9 @@ namespace MX.Platform.CSharp.Model
         public bool Equals(ConnectWidgetResponse input)
         {
             if (input == null)
+            {
                 return false;
-
+            }
             return 
                 (
                     this.ConnectWidgetUrl == input.ConnectWidgetUrl ||
@@ -120,9 +121,13 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 if (this.ConnectWidgetUrl != null)
-                    hashCode = hashCode * 59 + this.ConnectWidgetUrl.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.ConnectWidgetUrl.GetHashCode();
+                }
                 if (this.Guid != null)
-                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 return hashCode;
             }
         }
