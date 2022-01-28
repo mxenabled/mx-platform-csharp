@@ -488,6 +488,23 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test ListHoldingsByAccount
+        /// </summary>
+        [Fact]
+        public void ListHoldingsByAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
+            //string userGuid = null;
+            //string fromDate = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //string toDate = null;
+            //var response = instance.ListHoldingsByAccount(accountGuid, userGuid, fromDate, page, recordsPerPage, toDate);
+            //Assert.IsType<HoldingsResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test ListHoldingsByMember
         /// </summary>
         [Fact]

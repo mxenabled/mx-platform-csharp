@@ -37,6 +37,7 @@ Method | HTTP request | Description
 [**ListDefaultCategoriesByUser**](MxPlatformApi.md#listdefaultcategoriesbyuser) | **GET** /users/{user_guid}/categories/default | List default categories by user
 [**ListFavoriteInstitutions**](MxPlatformApi.md#listfavoriteinstitutions) | **GET** /institutions/favorites | List favorite institutions
 [**ListHoldings**](MxPlatformApi.md#listholdings) | **GET** /users/{user_guid}/holdings | List holdings
+[**ListHoldingsByAccount**](MxPlatformApi.md#listholdingsbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/holdings | List holdings by account
 [**ListHoldingsByMember**](MxPlatformApi.md#listholdingsbymember) | **GET** /users/{user_guid}/members/{member_guid}/holdings | List holdings by member
 [**ListInstitutionCredentials**](MxPlatformApi.md#listinstitutioncredentials) | **GET** /institutions/{institution_code}/credentials | List institution credentials
 [**ListInstitutions**](MxPlatformApi.md#listinstitutions) | **GET** /institutions | List institutions
@@ -2626,6 +2627,91 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **fromDate** | **string**| Filter holdings from this date. | [optional] 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+ **toDate** | **string**| Filter holdings to this date. | [optional] 
+
+### Return type
+
+[**HoldingsResponseBody**](HoldingsResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="listholdingsbyaccount"></a>
+# **ListHoldingsByAccount**
+> HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid, string fromDate = null, int? page = null, int? recordsPerPage = null, string toDate = null)
+
+List holdings by account
+
+This endpoint returns all holdings associated with the specified `account`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListHoldingsByAccountExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var accountGuid = ACT-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for the `account`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for the `user`.
+            var fromDate = 2015-09-20;  // string | Filter holdings from this date. (optional) 
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var toDate = 2019-10-20;  // string | Filter holdings to this date. (optional) 
+
+            try
+            {
+                // List holdings by account
+                HoldingsResponseBody result = apiInstance.ListHoldingsByAccount(accountGuid, userGuid, fromDate, page, recordsPerPage, toDate);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListHoldingsByAccount: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountGuid** | **string**| The unique id for the &#x60;account&#x60;. | 
+ **userGuid** | **string**| The unique id for the &#x60;user&#x60;. | 
  **fromDate** | **string**| Filter holdings from this date. | [optional] 
  **page** | **int?**| Specify current page. | [optional] 
  **recordsPerPage** | **int?**| Specify records per page. | [optional] 
