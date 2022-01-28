@@ -812,6 +812,37 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of HoldingsResponseBody</returns>
         ApiResponse<HoldingsResponseBody> ListHoldingsWithHttpInfo(string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string));
         /// <summary>
+        /// List holdings by account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns all holdings associated with the specified &#x60;account&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for the &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for the &#x60;user&#x60;.</param>
+        /// <param name="fromDate">Filter holdings from this date. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="toDate">Filter holdings to this date. (optional)</param>
+        /// <returns>HoldingsResponseBody</returns>
+        HoldingsResponseBody ListHoldingsByAccount(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string));
+
+        /// <summary>
+        /// List holdings by account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns all holdings associated with the specified &#x60;account&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for the &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for the &#x60;user&#x60;.</param>
+        /// <param name="fromDate">Filter holdings from this date. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="toDate">Filter holdings to this date. (optional)</param>
+        /// <returns>ApiResponse of HoldingsResponseBody</returns>
+        ApiResponse<HoldingsResponseBody> ListHoldingsByAccountWithHttpInfo(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string));
+        /// <summary>
         /// List holdings by member
         /// </summary>
         /// <remarks>
@@ -3052,6 +3083,39 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsWithHttpInfoAsync(string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// List holdings by account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns all holdings associated with the specified &#x60;account&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for the &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for the &#x60;user&#x60;.</param>
+        /// <param name="fromDate">Filter holdings from this date. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="toDate">Filter holdings to this date. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of HoldingsResponseBody</returns>
+        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByAccountAsync(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List holdings by account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns all holdings associated with the specified &#x60;account&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for the &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for the &#x60;user&#x60;.</param>
+        /// <param name="fromDate">Filter holdings from this date. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="toDate">Filter holdings to this date. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByAccountWithHttpInfoAsync(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List holdings by member
         /// </summary>
@@ -10176,6 +10240,218 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListHoldings", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List holdings by account This endpoint returns all holdings associated with the specified &#x60;account&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for the &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for the &#x60;user&#x60;.</param>
+        /// <param name="fromDate">Filter holdings from this date. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="toDate">Filter holdings to this date. (optional)</param>
+        /// <returns>HoldingsResponseBody</returns>
+        public HoldingsResponseBody ListHoldingsByAccount(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<HoldingsResponseBody> localVarResponse = ListHoldingsByAccountWithHttpInfo(accountGuid, userGuid, fromDate, page, recordsPerPage, toDate);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List holdings by account This endpoint returns all holdings associated with the specified &#x60;account&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for the &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for the &#x60;user&#x60;.</param>
+        /// <param name="fromDate">Filter holdings from this date. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="toDate">Filter holdings to this date. (optional)</param>
+        /// <returns>ApiResponse of HoldingsResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<HoldingsResponseBody> ListHoldingsByAccountWithHttpInfo(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string))
+        {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ListHoldingsByAccount");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListHoldingsByAccount");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (fromDate != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "from_date", fromDate));
+            }
+            if (page != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
+            }
+            if (recordsPerPage != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "records_per_page", recordsPerPage));
+            }
+            if (toDate != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "to_date", toDate));
+            }
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<HoldingsResponseBody>("/users/{user_guid}/accounts/{account_guid}/holdings", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListHoldingsByAccount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List holdings by account This endpoint returns all holdings associated with the specified &#x60;account&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for the &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for the &#x60;user&#x60;.</param>
+        /// <param name="fromDate">Filter holdings from this date. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="toDate">Filter holdings to this date. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of HoldingsResponseBody</returns>
+        public async System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByAccountAsync(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<HoldingsResponseBody> localVarResponse = await ListHoldingsByAccountWithHttpInfoAsync(accountGuid, userGuid, fromDate, page, recordsPerPage, toDate, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List holdings by account This endpoint returns all holdings associated with the specified &#x60;account&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for the &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for the &#x60;user&#x60;.</param>
+        /// <param name="fromDate">Filter holdings from this date. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="toDate">Filter holdings to this date. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<HoldingsResponseBody>> ListHoldingsByAccountWithHttpInfoAsync(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ListHoldingsByAccount");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListHoldingsByAccount");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (fromDate != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "from_date", fromDate));
+            }
+            if (page != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
+            }
+            if (recordsPerPage != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "records_per_page", recordsPerPage));
+            }
+            if (toDate != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "to_date", toDate));
+            }
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<HoldingsResponseBody>("/users/{user_guid}/accounts/{account_guid}/holdings", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListHoldingsByAccount", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
