@@ -111,7 +111,6 @@ docs/WidgetRequest.md
 docs/WidgetRequestBody.md
 docs/WidgetResponse.md
 docs/WidgetResponseBody.md
-git_push.sh
 src/MX.Platform.CSharp.Test/Api/MxPlatformApiTests.cs
 src/MX.Platform.CSharp.Test/MX.Platform.CSharp.Test.csproj
 src/MX.Platform.CSharp.Test/Model/AccountNumberResponseTests.cs
