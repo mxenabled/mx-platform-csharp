@@ -49,7 +49,7 @@ namespace MyProject
         static void Main(string[] args)
         {
             Configuration config = new Configuration();
-            config.DefaultHeaders = new Dictionary<string, string>;
+            config.DefaultHeaders = new Dictionary<string, string>{{ "Accept", "application/vnd.mx.api.v1+json" }};
 
             // Configure with your Client ID/API Key from https://dashboard.mx.com
             config.Username = "Your Client ID";
