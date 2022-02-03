@@ -48,8 +48,10 @@ namespace MyProject
     {
         static void Main(string[] args)
         {
-            // Configure with your Client ID/API Key from https://dashboard.mx.com
             Configuration config = new Configuration();
+            config.DefaultHeaders = new Dictionary<string, string>;
+
+            // Configure with your Client ID/API Key from https://dashboard.mx.com
             config.Username = "Your Client ID";
             config.Password = "Your API Key";
 
