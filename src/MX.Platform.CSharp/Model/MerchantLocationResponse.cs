@@ -83,7 +83,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
-        [DataMember(Name = "guid", EmitDefaultValue = false)]
+        [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets MerchantGuid
         /// </summary>
-        [DataMember(Name = "merchant_guid", EmitDefaultValue = false)]
+        [DataMember(Name = "merchant_guid", EmitDefaultValue = true)]
         public string MerchantGuid { get; set; }
 
         /// <summary>

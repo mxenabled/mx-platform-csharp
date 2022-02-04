@@ -51,7 +51,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
-        [DataMember(Name = "guid", EmitDefaultValue = false)]
+        [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
@@ -63,19 +63,19 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets TagGuid
         /// </summary>
-        [DataMember(Name = "tag_guid", EmitDefaultValue = false)]
+        [DataMember(Name = "tag_guid", EmitDefaultValue = true)]
         public string TagGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets TransactionGuid
         /// </summary>
-        [DataMember(Name = "transaction_guid", EmitDefaultValue = false)]
+        [DataMember(Name = "transaction_guid", EmitDefaultValue = true)]
         public string TransactionGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
-        [DataMember(Name = "user_guid", EmitDefaultValue = false)]
+        [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
         /// <summary>

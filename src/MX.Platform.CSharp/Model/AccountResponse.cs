@@ -213,7 +213,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
-        [DataMember(Name = "guid", EmitDefaultValue = false)]
+        [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
-        [DataMember(Name = "member_guid", EmitDefaultValue = false)]
+        [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
@@ -405,7 +405,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
-        [DataMember(Name = "user_guid", EmitDefaultValue = false)]
+        [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
         /// <summary>
