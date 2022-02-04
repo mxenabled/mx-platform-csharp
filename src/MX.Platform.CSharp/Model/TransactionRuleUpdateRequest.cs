@@ -53,13 +53,13 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", EmitDefaultValue = true)]
+        [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets MatchDescription
         /// </summary>
-        [DataMember(Name = "match_description", EmitDefaultValue = true)]
+        [DataMember(Name = "match_description", EmitDefaultValue = false)]
         public string MatchDescription { get; set; }
 
         /// <summary>

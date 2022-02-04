@@ -61,7 +61,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
-        [DataMember(Name = "guid", EmitDefaultValue = false)]
+        [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
