@@ -852,8 +852,7 @@ namespace MX.Platform.CSharp.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string categoryGuid = null;
-            //string userGuid = null;
-            //var response = instance.ReadDefaultCategory(categoryGuid, userGuid);
+            //var response = instance.ReadDefaultCategory(categoryGuid);
             //Assert.IsType<CategoryResponseBody>(response);
         }
 

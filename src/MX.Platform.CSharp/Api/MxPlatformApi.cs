@@ -1461,9 +1461,8 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryGuid">The unique id for a &#x60;category&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>CategoryResponseBody</returns>
-        CategoryResponseBody ReadDefaultCategory(string categoryGuid, string userGuid);
+        CategoryResponseBody ReadDefaultCategory(string categoryGuid);
 
         /// <summary>
         /// Read a default category
@@ -1473,9 +1472,8 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryGuid">The unique id for a &#x60;category&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of CategoryResponseBody</returns>
-        ApiResponse<CategoryResponseBody> ReadDefaultCategoryWithHttpInfo(string categoryGuid, string userGuid);
+        ApiResponse<CategoryResponseBody> ReadDefaultCategoryWithHttpInfo(string categoryGuid);
         /// <summary>
         /// Read holding
         /// </summary>
@@ -1827,9 +1825,9 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional)</param>
+        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>ConnectWidgetResponseBody</returns>
-        ConnectWidgetResponseBody RequestConnectWidgetURL(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody));
+        ConnectWidgetResponseBody RequestConnectWidgetURL(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody);
 
         /// <summary>
         /// Request connect widget url
@@ -1839,9 +1837,9 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional)</param>
+        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>ApiResponse of ConnectWidgetResponseBody</returns>
-        ApiResponse<ConnectWidgetResponseBody> RequestConnectWidgetURLWithHttpInfo(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody));
+        ApiResponse<ConnectWidgetResponseBody> RequestConnectWidgetURLWithHttpInfo(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody);
         /// <summary>
         /// Request oauth window uri
         /// </summary>
@@ -3781,10 +3779,9 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryGuid">The unique id for a &#x60;category&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryResponseBody</returns>
-        System.Threading.Tasks.Task<CategoryResponseBody> ReadDefaultCategoryAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryResponseBody> ReadDefaultCategoryAsync(string categoryGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Read a default category
@@ -3794,10 +3791,9 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryGuid">The unique id for a &#x60;category&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryResponseBody>> ReadDefaultCategoryWithHttpInfoAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CategoryResponseBody>> ReadDefaultCategoryWithHttpInfoAsync(string categoryGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Read holding
         /// </summary>
@@ -4179,10 +4175,10 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional)</param>
+        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ConnectWidgetResponseBody</returns>
-        System.Threading.Tasks.Task<ConnectWidgetResponseBody> RequestConnectWidgetURLAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ConnectWidgetResponseBody> RequestConnectWidgetURLAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Request connect widget url
@@ -4192,10 +4188,10 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional)</param>
+        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ConnectWidgetResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConnectWidgetResponseBody>> RequestConnectWidgetURLWithHttpInfoAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ConnectWidgetResponseBody>> RequestConnectWidgetURLWithHttpInfoAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Request oauth window uri
         /// </summary>
@@ -14634,11 +14630,10 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryGuid">The unique id for a &#x60;category&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>CategoryResponseBody</returns>
-        public CategoryResponseBody ReadDefaultCategory(string categoryGuid, string userGuid)
+        public CategoryResponseBody ReadDefaultCategory(string categoryGuid)
         {
-            MX.Platform.CSharp.Client.ApiResponse<CategoryResponseBody> localVarResponse = ReadDefaultCategoryWithHttpInfo(categoryGuid, userGuid);
+            MX.Platform.CSharp.Client.ApiResponse<CategoryResponseBody> localVarResponse = ReadDefaultCategoryWithHttpInfo(categoryGuid);
             return localVarResponse.Data;
         }
 
@@ -14647,20 +14642,13 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryGuid">The unique id for a &#x60;category&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of CategoryResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<CategoryResponseBody> ReadDefaultCategoryWithHttpInfo(string categoryGuid, string userGuid)
+        public MX.Platform.CSharp.Client.ApiResponse<CategoryResponseBody> ReadDefaultCategoryWithHttpInfo(string categoryGuid)
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->ReadDefaultCategory");
-            }
-
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadDefaultCategory");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14686,7 +14674,6 @@ namespace MX.Platform.CSharp.Api
             }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -14714,12 +14701,11 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryGuid">The unique id for a &#x60;category&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CategoryResponseBody</returns>
-        public async System.Threading.Tasks.Task<CategoryResponseBody> ReadDefaultCategoryAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CategoryResponseBody> ReadDefaultCategoryAsync(string categoryGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<CategoryResponseBody> localVarResponse = await ReadDefaultCategoryWithHttpInfoAsync(categoryGuid, userGuid, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<CategoryResponseBody> localVarResponse = await ReadDefaultCategoryWithHttpInfoAsync(categoryGuid, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -14728,21 +14714,14 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="categoryGuid">The unique id for a &#x60;category&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CategoryResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<CategoryResponseBody>> ReadDefaultCategoryWithHttpInfoAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<CategoryResponseBody>> ReadDefaultCategoryWithHttpInfoAsync(string categoryGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'categoryGuid' is set
             if (categoryGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'categoryGuid' when calling MxPlatformApi->ReadDefaultCategory");
-            }
-
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadDefaultCategory");
             }
 
 
@@ -14769,7 +14748,6 @@ namespace MX.Platform.CSharp.Api
             }
 
             localVarRequestOptions.PathParameters.Add("category_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(categoryGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -17240,9 +17218,9 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional)</param>
+        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>ConnectWidgetResponseBody</returns>
-        public ConnectWidgetResponseBody RequestConnectWidgetURL(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody))
+        public ConnectWidgetResponseBody RequestConnectWidgetURL(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody)
         {
             MX.Platform.CSharp.Client.ApiResponse<ConnectWidgetResponseBody> localVarResponse = RequestConnectWidgetURLWithHttpInfo(userGuid, connectWidgetRequestBody);
             return localVarResponse.Data;
@@ -17253,14 +17231,20 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional)</param>
+        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>ApiResponse of ConnectWidgetResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<ConnectWidgetResponseBody> RequestConnectWidgetURLWithHttpInfo(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody))
+        public MX.Platform.CSharp.Client.ApiResponse<ConnectWidgetResponseBody> RequestConnectWidgetURLWithHttpInfo(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->RequestConnectWidgetURL");
+            }
+
+            // verify the required parameter 'connectWidgetRequestBody' is set
+            if (connectWidgetRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'connectWidgetRequestBody' when calling MxPlatformApi->RequestConnectWidgetURL");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17315,10 +17299,10 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional)</param>
+        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ConnectWidgetResponseBody</returns>
-        public async System.Threading.Tasks.Task<ConnectWidgetResponseBody> RequestConnectWidgetURLAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ConnectWidgetResponseBody> RequestConnectWidgetURLAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             MX.Platform.CSharp.Client.ApiResponse<ConnectWidgetResponseBody> localVarResponse = await RequestConnectWidgetURLWithHttpInfoAsync(userGuid, connectWidgetRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -17329,15 +17313,21 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional)</param>
+        /// <param name="connectWidgetRequestBody">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ConnectWidgetResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<ConnectWidgetResponseBody>> RequestConnectWidgetURLWithHttpInfoAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<ConnectWidgetResponseBody>> RequestConnectWidgetURLWithHttpInfoAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->RequestConnectWidgetURL");
+            }
+
+            // verify the required parameter 'connectWidgetRequestBody' is set
+            if (connectWidgetRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'connectWidgetRequestBody' when calling MxPlatformApi->RequestConnectWidgetURL");
             }
 
 
