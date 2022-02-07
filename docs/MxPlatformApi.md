@@ -4593,7 +4593,7 @@ Name | Type | Description  | Notes
 
 <a name="readdefaultcategory"></a>
 # **ReadDefaultCategory**
-> CategoryResponseBody ReadDefaultCategory (string categoryGuid, string userGuid)
+> CategoryResponseBody ReadDefaultCategory (string categoryGuid)
 
 Read a default category
 
@@ -4621,12 +4621,11 @@ namespace Example
 
             var apiInstance = new MxPlatformApi(config);
             var categoryGuid = CAT-7829f71c-2e8c-afa5-2f55-fa3634b89874;  // string | The unique id for a `category`.
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
 
             try
             {
                 // Read a default category
-                CategoryResponseBody result = apiInstance.ReadDefaultCategory(categoryGuid, userGuid);
+                CategoryResponseBody result = apiInstance.ReadDefaultCategory(categoryGuid);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4645,7 +4644,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **categoryGuid** | **string**| The unique id for a &#x60;category&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
 
 ### Return type
 
@@ -5823,7 +5821,7 @@ Name | Type | Description  | Notes
 
 <a name="requestconnectwidgeturl"></a>
 # **RequestConnectWidgetURL**
-> ConnectWidgetResponseBody RequestConnectWidgetURL (string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = null)
+> ConnectWidgetResponseBody RequestConnectWidgetURL (string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody)
 
 Request connect widget url
 
@@ -5851,7 +5849,7 @@ namespace Example
 
             var apiInstance = new MxPlatformApi(config);
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var connectWidgetRequestBody = new ConnectWidgetRequestBody(); // ConnectWidgetRequestBody | Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) (optional) 
+            var connectWidgetRequestBody = new ConnectWidgetRequestBody(); // ConnectWidgetRequestBody | Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)
 
             try
             {
@@ -5875,7 +5873,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **connectWidgetRequestBody** | [**ConnectWidgetRequestBody**](ConnectWidgetRequestBody.md)| Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) | [optional] 
+ **connectWidgetRequestBody** | [**ConnectWidgetRequestBody**](ConnectWidgetRequestBody.md)| Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) | 
 
 ### Return type
 

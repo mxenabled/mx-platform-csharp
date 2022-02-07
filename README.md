@@ -45,42 +45,41 @@ using System.Collections.Generic;
 
 namespace MyProject
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Configuration config = new Configuration();
-            config.DefaultHeaders = new Dictionary<string, string>{{ "Accept", "application/vnd.mx.api.v1+json" }};
+      Configuration config = new Configuration();
+      config.DefaultHeaders = new Dictionary<string, string>{{ "Accept", "application/vnd.mx.api.v1+json" }};
 
-            // Configure with your Client ID/API Key from https://dashboard.mx.com
-            config.Username = "Your Client ID";
-            config.Password = "Your API Key";
+      // Configure with your Client ID/API Key from https://dashboard.mx.com
+      config.Username = "Your Client ID";
+      config.Password = "Your API Key";
 
-            // Configure environment. https://int-api.mx.com for development, https://api.mx.com for production
-            config.BasePath = "https://int-api.mx.com";
+      // Configure environment. https://int-api.mx.com for development, https://api.mx.com for production
+      config.BasePath = "https://int-api.mx.com";
 
-            var apiInstance = new MxPlatformApi(config);
-            var userCreateRequestBody = new UserCreateRequestBody(
-                user: new UserCreateRequest(
-                    metadata: "Creating a user!"
-                )
-            );
+      var apiInstance = new MxPlatformApi(config);
+      var requestBody = new UserCreateRequestBody(
+        user: new UserCreateRequest(
+          metadata: "Creating a user!"
+        )
+      );
 
-            try
-            {
-                UserResponseBody result = apiInstance.CreateUser(userCreateRequestBody);
-                Console.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Console.WriteLine("Exception when calling MxPlatformApi.CreateUser: " + e.Message );
-                Console.WriteLine("Status Code: "+ e.ErrorCode);
-                Console.WriteLine(e.StackTrace);
-            }
-        }
+      try
+      {
+        UserResponseBody result = apiInstance.CreateUser(requestBody);
+        Console.WriteLine(result);
+      }
+      catch (ApiException  e)
+      {
+        Console.WriteLine("Exception when calling MxPlatformApi.CreateUser: " + e.Message );
+        Console.WriteLine("Status Code: "+ e.ErrorCode);
+        Console.WriteLine(e.StackTrace);
+      }
     }
+  }
 }
-
 ```
 
 ## Development
