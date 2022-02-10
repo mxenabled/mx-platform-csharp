@@ -100,10 +100,10 @@ namespace MX.Platform.CSharp.Test.Api
         public void CreateManagedAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userGuid = null;
             //string memberGuid = null;
+            //string userGuid = null;
             //ManagedAccountCreateRequestBody managedAccountCreateRequestBody = null;
-            //var response = instance.CreateManagedAccount(userGuid, memberGuid, managedAccountCreateRequestBody);
+            //var response = instance.CreateManagedAccount(memberGuid, userGuid, managedAccountCreateRequestBody);
             //Assert.IsType<AccountResponseBody>(response);
         }
 
@@ -127,10 +127,11 @@ namespace MX.Platform.CSharp.Test.Api
         public void CreateManagedTransactionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userGuid = null;
+            //string accountGuid = null;
             //string memberGuid = null;
+            //string userGuid = null;
             //ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody = null;
-            //var response = instance.CreateManagedTransaction(userGuid, memberGuid, managedTransactionCreateRequestBody);
+            //var response = instance.CreateManagedTransaction(accountGuid, memberGuid, userGuid, managedTransactionCreateRequestBody);
             //Assert.IsType<TransactionResponseBody>(response);
         }
 
@@ -217,10 +218,10 @@ namespace MX.Platform.CSharp.Test.Api
         public void DeleteManagedAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
             //string memberGuid = null;
             //string userGuid = null;
-            //string accountGuid = null;
-            //instance.DeleteManagedAccount(memberGuid, userGuid, accountGuid);
+            //instance.DeleteManagedAccount(accountGuid, memberGuid, userGuid);
         }
 
         /// <summary>
@@ -242,10 +243,11 @@ namespace MX.Platform.CSharp.Test.Api
         public void DeleteManagedTransactionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
             //string memberGuid = null;
-            //string userGuid = null;
             //string transactionGuid = null;
-            //instance.DeleteManagedTransaction(memberGuid, userGuid, transactionGuid);
+            //string userGuid = null;
+            //instance.DeleteManagedTransaction(accountGuid, memberGuid, transactionGuid, userGuid);
         }
 
         /// <summary>
@@ -560,11 +562,11 @@ namespace MX.Platform.CSharp.Test.Api
         public void ListManagedAccountsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userGuid = null;
             //string memberGuid = null;
+            //string userGuid = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //var response = instance.ListManagedAccounts(userGuid, memberGuid, page, recordsPerPage);
+            //var response = instance.ListManagedAccounts(memberGuid, userGuid, page, recordsPerPage);
             //Assert.IsType<AccountsResponseBody>(response);
         }
 
@@ -602,11 +604,12 @@ namespace MX.Platform.CSharp.Test.Api
         public void ListManagedTransactionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userGuid = null;
+            //string accountGuid = null;
             //string memberGuid = null;
+            //string userGuid = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //var response = instance.ListManagedTransactions(userGuid, memberGuid, page, recordsPerPage);
+            //var response = instance.ListManagedTransactions(accountGuid, memberGuid, userGuid, page, recordsPerPage);
             //Assert.IsType<TransactionsResponseBody>(response);
         }
 
@@ -888,10 +891,10 @@ namespace MX.Platform.CSharp.Test.Api
         public void ReadManagedAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
             //string memberGuid = null;
             //string userGuid = null;
-            //string accountGuid = null;
-            //var response = instance.ReadManagedAccount(memberGuid, userGuid, accountGuid);
+            //var response = instance.ReadManagedAccount(accountGuid, memberGuid, userGuid);
             //Assert.IsType<AccountResponseBody>(response);
         }
 
@@ -915,10 +918,11 @@ namespace MX.Platform.CSharp.Test.Api
         public void ReadManagedTransactionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
             //string memberGuid = null;
-            //string userGuid = null;
             //string transactionGuid = null;
-            //var response = instance.ReadManagedTransaction(memberGuid, userGuid, transactionGuid);
+            //string userGuid = null;
+            //var response = instance.ReadManagedTransaction(accountGuid, memberGuid, transactionGuid, userGuid);
             //Assert.IsType<TransactionResponseBody>(response);
         }
 
@@ -1073,9 +1077,9 @@ namespace MX.Platform.CSharp.Test.Api
             //string memberGuid = null;
             //string userGuid = null;
             //string referralSource = null;
-            //string uiMessageWebviewUrlScheme = null;
             //bool? skipAggregation = null;
-            //var response = instance.RequestOAuthWindowURI(memberGuid, userGuid, referralSource, uiMessageWebviewUrlScheme, skipAggregation);
+            //string uiMessageWebviewUrlScheme = null;
+            //var response = instance.RequestOAuthWindowURI(memberGuid, userGuid, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
             //Assert.IsType<OAuthWindowResponseBody>(response);
         }
 
@@ -1114,11 +1118,11 @@ namespace MX.Platform.CSharp.Test.Api
         public void UpdateAccountByMemberTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string userGuid = null;
-            //string memberGuid = null;
             //string accountGuid = null;
+            //string memberGuid = null;
+            //string userGuid = null;
             //AccountUpdateRequestBody accountUpdateRequestBody = null;
-            //var response = instance.UpdateAccountByMember(userGuid, memberGuid, accountGuid, accountUpdateRequestBody);
+            //var response = instance.UpdateAccountByMember(accountGuid, memberGuid, userGuid, accountUpdateRequestBody);
             //Assert.IsType<AccountResponseBody>(response);
         }
 
@@ -1143,11 +1147,11 @@ namespace MX.Platform.CSharp.Test.Api
         public void UpdateManagedAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
             //string memberGuid = null;
             //string userGuid = null;
-            //string accountGuid = null;
             //ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody = null;
-            //var response = instance.UpdateManagedAccount(memberGuid, userGuid, accountGuid, managedAccountUpdateRequestBody);
+            //var response = instance.UpdateManagedAccount(accountGuid, memberGuid, userGuid, managedAccountUpdateRequestBody);
             //Assert.IsType<AccountResponseBody>(response);
         }
 
@@ -1172,11 +1176,12 @@ namespace MX.Platform.CSharp.Test.Api
         public void UpdateManagedTransactionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
             //string memberGuid = null;
-            //string userGuid = null;
             //string transactionGuid = null;
+            //string userGuid = null;
             //ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody = null;
-            //var response = instance.UpdateManagedTransaction(memberGuid, userGuid, transactionGuid, managedTransactionUpdateRequestBody);
+            //var response = instance.UpdateManagedTransaction(accountGuid, memberGuid, transactionGuid, userGuid, managedTransactionUpdateRequestBody);
             //Assert.IsType<TransactionResponseBody>(response);
         }
 

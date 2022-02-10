@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**CreateCategory**](MxPlatformApi.md#createcategory) | **POST** /users/{user_guid}/categories | Create category
 [**CreateManagedAccount**](MxPlatformApi.md#createmanagedaccount) | **POST** /users/{user_guid}/managed_members/{member_guid}/accounts | Create managed account
 [**CreateManagedMember**](MxPlatformApi.md#createmanagedmember) | **POST** /users/{user_guid}/managed_members | Create managed member
-[**CreateManagedTransaction**](MxPlatformApi.md#createmanagedtransaction) | **POST** /users/{user_guid}/managed_members/{member_guid}/transactions | Create managed transaction
+[**CreateManagedTransaction**](MxPlatformApi.md#createmanagedtransaction) | **POST** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions | Create managed transaction
 [**CreateMember**](MxPlatformApi.md#createmember) | **POST** /users/{user_guid}/members | Create member
 [**CreateTag**](MxPlatformApi.md#createtag) | **POST** /users/{user_guid}/tags | Create tag
 [**CreateTagging**](MxPlatformApi.md#createtagging) | **POST** /users/{user_guid}/taggings | Create tagging
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 [**DeleteCategory**](MxPlatformApi.md#deletecategory) | **DELETE** /users/{user_guid}/categories/{category_guid} | Delete category
 [**DeleteManagedAccount**](MxPlatformApi.md#deletemanagedaccount) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Delete managed account
 [**DeleteManagedMember**](MxPlatformApi.md#deletemanagedmember) | **DELETE** /users/{user_guid}/managed_members/{member_guid} | Delete managed member
-[**DeleteManagedTransaction**](MxPlatformApi.md#deletemanagedtransaction) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid} | Delete managed transaction
+[**DeleteManagedTransaction**](MxPlatformApi.md#deletemanagedtransaction) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Delete managed transaction
 [**DeleteMember**](MxPlatformApi.md#deletemember) | **DELETE** /users/{user_guid}/members/{member_guid} | Delete member
 [**DeleteTag**](MxPlatformApi.md#deletetag) | **DELETE** /users/{user_guid}/tags/{tag_guid} | Delete tag
 [**DeleteTagging**](MxPlatformApi.md#deletetagging) | **DELETE** /users/{user_guid}/taggings/{tagging_guid} | Delete tagging
@@ -44,7 +44,7 @@ Method | HTTP request | Description
 [**ListManagedAccounts**](MxPlatformApi.md#listmanagedaccounts) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts | List managed accounts
 [**ListManagedInstitutions**](MxPlatformApi.md#listmanagedinstitutions) | **GET** /managed_institutions | List managed institutions
 [**ListManagedMembers**](MxPlatformApi.md#listmanagedmembers) | **GET** /users/{user_guid}/managed_members | List managed members
-[**ListManagedTransactions**](MxPlatformApi.md#listmanagedtransactions) | **GET** /users/{user_guid}/managed_members/{member_guid}/transactions | List managed transactions
+[**ListManagedTransactions**](MxPlatformApi.md#listmanagedtransactions) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions | List managed transactions
 [**ListMemberChallenges**](MxPlatformApi.md#listmemberchallenges) | **GET** /users/{user_guid}/members/{member_guid}/challenges | List member challenges
 [**ListMemberCredentials**](MxPlatformApi.md#listmembercredentials) | **GET** /users/{user_guid}/members/{member_guid}/credentials | List member credentials
 [**ListMembers**](MxPlatformApi.md#listmembers) | **GET** /users/{user_guid}/members | List members
@@ -66,7 +66,7 @@ Method | HTTP request | Description
 [**ReadInstitution**](MxPlatformApi.md#readinstitution) | **GET** /institutions/{institution_code} | Read institution
 [**ReadManagedAccount**](MxPlatformApi.md#readmanagedaccount) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Read managed account
 [**ReadManagedMember**](MxPlatformApi.md#readmanagedmember) | **GET** /users/{user_guid}/managed_members/{member_guid} | Read managed member
-[**ReadManagedTransaction**](MxPlatformApi.md#readmanagedtransaction) | **GET** /users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid} | Read managed transaction
+[**ReadManagedTransaction**](MxPlatformApi.md#readmanagedtransaction) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Read managed transaction
 [**ReadMember**](MxPlatformApi.md#readmember) | **GET** /users/{user_guid}/members/{member_guid} | Read member
 [**ReadMemberStatus**](MxPlatformApi.md#readmemberstatus) | **GET** /users/{user_guid}/members/{member_guid}/status | Read member status
 [**ReadMerchant**](MxPlatformApi.md#readmerchant) | **GET** /merchants/{merchant_guid} | Read merchant
@@ -85,7 +85,7 @@ Method | HTTP request | Description
 [**UpdateCategory**](MxPlatformApi.md#updatecategory) | **PUT** /users/{user_guid}/categories/{category_guid} | Update category
 [**UpdateManagedAccount**](MxPlatformApi.md#updatemanagedaccount) | **PUT** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Update managed account
 [**UpdateManagedMember**](MxPlatformApi.md#updatemanagedmember) | **PUT** /users/{user_guid}/managed_members/{member_guid} | Update managed member
-[**UpdateManagedTransaction**](MxPlatformApi.md#updatemanagedtransaction) | **PUT** /users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid} | Update managed transaction
+[**UpdateManagedTransaction**](MxPlatformApi.md#updatemanagedtransaction) | **PUT** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Update managed transaction
 [**UpdateMember**](MxPlatformApi.md#updatemember) | **PUT** /users/{user_guid}/members/{member_guid} | Update member
 [**UpdateTag**](MxPlatformApi.md#updatetag) | **PUT** /users/{user_guid}/tags/{tag_guid} | Update tag
 [**UpdateTagging**](MxPlatformApi.md#updatetagging) | **PUT** /users/{user_guid}/taggings/{tagging_guid} | Update tagging
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 <a name="createmanagedaccount"></a>
 # **CreateManagedAccount**
-> AccountResponseBody CreateManagedAccount (string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody)
+> AccountResponseBody CreateManagedAccount (string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody)
 
 Create managed account
 
@@ -355,14 +355,14 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var managedAccountCreateRequestBody = new ManagedAccountCreateRequestBody(); // ManagedAccountCreateRequestBody | Managed account to be created.
 
             try
             {
                 // Create managed account
-                AccountResponseBody result = apiInstance.CreateManagedAccount(userGuid, memberGuid, managedAccountCreateRequestBody);
+                AccountResponseBody result = apiInstance.CreateManagedAccount(memberGuid, userGuid, managedAccountCreateRequestBody);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -380,8 +380,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **managedAccountCreateRequestBody** | [**ManagedAccountCreateRequestBody**](ManagedAccountCreateRequestBody.md)| Managed account to be created. | 
 
 ### Return type
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 <a name="createmanagedtransaction"></a>
 # **CreateManagedTransaction**
-> TransactionResponseBody CreateManagedTransaction (string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody)
+> TransactionResponseBody CreateManagedTransaction (string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody)
 
 Create managed transaction
 
@@ -511,14 +511,15 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var managedTransactionCreateRequestBody = new ManagedTransactionCreateRequestBody(); // ManagedTransactionCreateRequestBody | Managed transaction to be created.
 
             try
             {
                 // Create managed transaction
-                TransactionResponseBody result = apiInstance.CreateManagedTransaction(userGuid, memberGuid, managedTransactionCreateRequestBody);
+                TransactionResponseBody result = apiInstance.CreateManagedTransaction(accountGuid, memberGuid, userGuid, managedTransactionCreateRequestBody);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -536,8 +537,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **managedTransactionCreateRequestBody** | [**ManagedTransactionCreateRequestBody**](ManagedTransactionCreateRequestBody.md)| Managed transaction to be created. | 
 
 ### Return type
@@ -1022,7 +1024,7 @@ void (empty response body)
 
 <a name="deletemanagedaccount"></a>
 # **DeleteManagedAccount**
-> void DeleteManagedAccount (string memberGuid, string userGuid, string accountGuid)
+> void DeleteManagedAccount (string accountGuid, string memberGuid, string userGuid)
 
 Delete managed account
 
@@ -1049,14 +1051,14 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
 
             try
             {
                 // Delete managed account
-                apiInstance.DeleteManagedAccount(memberGuid, userGuid, accountGuid);
+                apiInstance.DeleteManagedAccount(accountGuid, memberGuid, userGuid);
             }
             catch (ApiException  e)
             {
@@ -1073,9 +1075,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
 
 ### Return type
 
@@ -1176,7 +1178,7 @@ void (empty response body)
 
 <a name="deletemanagedtransaction"></a>
 # **DeleteManagedTransaction**
-> void DeleteManagedTransaction (string memberGuid, string userGuid, string transactionGuid)
+> void DeleteManagedTransaction (string accountGuid, string memberGuid, string transactionGuid, string userGuid)
 
 Delete managed transaction
 
@@ -1203,14 +1205,15 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var transactionGuid = TRN-810828b0-5210-4878-9bd3-f4ce514f90c4;  // string | The unique id for a `transaction`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
 
             try
             {
                 // Delete managed transaction
-                apiInstance.DeleteManagedTransaction(memberGuid, userGuid, transactionGuid);
+                apiInstance.DeleteManagedTransaction(accountGuid, memberGuid, transactionGuid, userGuid);
             }
             catch (ApiException  e)
             {
@@ -1227,9 +1230,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **transactionGuid** | **string**| The unique id for a &#x60;transaction&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
 
 ### Return type
 
@@ -2991,7 +2995,7 @@ Name | Type | Description  | Notes
 
 <a name="listmanagedaccounts"></a>
 # **ListManagedAccounts**
-> AccountsResponseBody ListManagedAccounts (string userGuid, string memberGuid, int? page = null, int? recordsPerPage = null)
+> AccountsResponseBody ListManagedAccounts (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
 List managed accounts
 
@@ -3018,15 +3022,15 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List managed accounts
-                AccountsResponseBody result = apiInstance.ListManagedAccounts(userGuid, memberGuid, page, recordsPerPage);
+                AccountsResponseBody result = apiInstance.ListManagedAccounts(memberGuid, userGuid, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3044,8 +3048,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **page** | **int?**| Specify current page. | [optional] 
  **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
@@ -3228,7 +3232,7 @@ Name | Type | Description  | Notes
 
 <a name="listmanagedtransactions"></a>
 # **ListManagedTransactions**
-> TransactionsResponseBody ListManagedTransactions (string userGuid, string memberGuid, int? page = null, int? recordsPerPage = null)
+> TransactionsResponseBody ListManagedTransactions (string accountGuid, string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
 List managed transactions
 
@@ -3255,15 +3259,16 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List managed transactions
-                TransactionsResponseBody result = apiInstance.ListManagedTransactions(userGuid, memberGuid, page, recordsPerPage);
+                TransactionsResponseBody result = apiInstance.ListManagedTransactions(accountGuid, memberGuid, userGuid, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3281,8 +3286,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **page** | **int?**| Specify current page. | [optional] 
  **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
@@ -4820,7 +4826,7 @@ Name | Type | Description  | Notes
 
 <a name="readmanagedaccount"></a>
 # **ReadManagedAccount**
-> AccountResponseBody ReadManagedAccount (string memberGuid, string userGuid, string accountGuid)
+> AccountResponseBody ReadManagedAccount (string accountGuid, string memberGuid, string userGuid)
 
 Read managed account
 
@@ -4847,14 +4853,14 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
 
             try
             {
                 // Read managed account
-                AccountResponseBody result = apiInstance.ReadManagedAccount(memberGuid, userGuid, accountGuid);
+                AccountResponseBody result = apiInstance.ReadManagedAccount(accountGuid, memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4872,9 +4878,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
 
 ### Return type
 
@@ -4976,7 +4982,7 @@ Name | Type | Description  | Notes
 
 <a name="readmanagedtransaction"></a>
 # **ReadManagedTransaction**
-> TransactionResponseBody ReadManagedTransaction (string memberGuid, string userGuid, string transactionGuid)
+> TransactionResponseBody ReadManagedTransaction (string accountGuid, string memberGuid, string transactionGuid, string userGuid)
 
 Read managed transaction
 
@@ -5003,14 +5009,15 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var transactionGuid = TRN-810828b0-5210-4878-9bd3-f4ce514f90c4;  // string | The unique id for a `transaction`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
 
             try
             {
                 // Read managed transaction
-                TransactionResponseBody result = apiInstance.ReadManagedTransaction(memberGuid, userGuid, transactionGuid);
+                TransactionResponseBody result = apiInstance.ReadManagedTransaction(accountGuid, memberGuid, transactionGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5028,9 +5035,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **transactionGuid** | **string**| The unique id for a &#x60;transaction&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
 
 ### Return type
 
@@ -5898,7 +5906,7 @@ Name | Type | Description  | Notes
 
 <a name="requestoauthwindowuri"></a>
 # **RequestOAuthWindowURI**
-> OAuthWindowResponseBody RequestOAuthWindowURI (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null, bool? skipAggregation = null)
+> OAuthWindowResponseBody RequestOAuthWindowURI (string memberGuid, string userGuid, string referralSource = null, bool? skipAggregation = null, string uiMessageWebviewUrlScheme = null)
 
 Request oauth window uri
 
@@ -5928,13 +5936,13 @@ namespace Example
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var referralSource = APP;  // string | Must be either `BROWSER` or `APP` depending on the implementation. Defaults to `BROWSER`. (optional) 
-            var uiMessageWebviewUrlScheme = mx;  // string | A scheme for routing the user back to the application state they were previously in. (optional) 
             var skipAggregation = false;  // bool? | Setting this parameter to `true` will prevent the member from automatically aggregating after being redirected from the authorization page. (optional) 
+            var uiMessageWebviewUrlScheme = mx;  // string | A scheme for routing the user back to the application state they were previously in. (optional) 
 
             try
             {
                 // Request oauth window uri
-                OAuthWindowResponseBody result = apiInstance.RequestOAuthWindowURI(memberGuid, userGuid, referralSource, uiMessageWebviewUrlScheme, skipAggregation);
+                OAuthWindowResponseBody result = apiInstance.RequestOAuthWindowURI(memberGuid, userGuid, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5955,8 +5963,8 @@ Name | Type | Description  | Notes
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **referralSource** | **string**| Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. | [optional] 
- **uiMessageWebviewUrlScheme** | **string**| A scheme for routing the user back to the application state they were previously in. | [optional] 
  **skipAggregation** | **bool?**| Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. | [optional] 
+ **uiMessageWebviewUrlScheme** | **string**| A scheme for routing the user back to the application state they were previously in. | [optional] 
 
 ### Return type
 
@@ -6139,7 +6147,7 @@ Name | Type | Description  | Notes
 
 <a name="updateaccountbymember"></a>
 # **UpdateAccountByMember**
-> AccountResponseBody UpdateAccountByMember (string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody)
+> AccountResponseBody UpdateAccountByMember (string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody)
 
 Update account by member
 
@@ -6166,15 +6174,15 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
+            var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var accountUpdateRequestBody = new AccountUpdateRequestBody(); // AccountUpdateRequestBody | Account object to be created with optional parameters (is_hidden)
 
             try
             {
                 // Update account by member
-                AccountResponseBody result = apiInstance.UpdateAccountByMember(userGuid, memberGuid, accountGuid, accountUpdateRequestBody);
+                AccountResponseBody result = apiInstance.UpdateAccountByMember(accountGuid, memberGuid, userGuid, accountUpdateRequestBody);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6192,9 +6200,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
  **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
+ **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **accountUpdateRequestBody** | [**AccountUpdateRequestBody**](AccountUpdateRequestBody.md)| Account object to be created with optional parameters (is_hidden) | 
 
 ### Return type
@@ -6299,7 +6307,7 @@ Name | Type | Description  | Notes
 
 <a name="updatemanagedaccount"></a>
 # **UpdateManagedAccount**
-> AccountResponseBody UpdateManagedAccount (string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody)
+> AccountResponseBody UpdateManagedAccount (string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody)
 
 Update managed account
 
@@ -6326,15 +6334,15 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var managedAccountUpdateRequestBody = new ManagedAccountUpdateRequestBody(); // ManagedAccountUpdateRequestBody | Managed account object to be updated (While no single parameter is required, the request body can't be empty)
 
             try
             {
                 // Update managed account
-                AccountResponseBody result = apiInstance.UpdateManagedAccount(memberGuid, userGuid, accountGuid, managedAccountUpdateRequestBody);
+                AccountResponseBody result = apiInstance.UpdateManagedAccount(accountGuid, memberGuid, userGuid, managedAccountUpdateRequestBody);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6352,9 +6360,9 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **managedAccountUpdateRequestBody** | [**ManagedAccountUpdateRequestBody**](ManagedAccountUpdateRequestBody.md)| Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty) | 
 
 ### Return type
@@ -6459,7 +6467,7 @@ Name | Type | Description  | Notes
 
 <a name="updatemanagedtransaction"></a>
 # **UpdateManagedTransaction**
-> TransactionResponseBody UpdateManagedTransaction (string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody)
+> TransactionResponseBody UpdateManagedTransaction (string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody)
 
 Update managed transaction
 
@@ -6486,15 +6494,16 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var transactionGuid = TRN-810828b0-5210-4878-9bd3-f4ce514f90c4;  // string | The unique id for a `transaction`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var managedTransactionUpdateRequestBody = new ManagedTransactionUpdateRequestBody(); // ManagedTransactionUpdateRequestBody | Managed transaction object to be updated (While no single parameter is required, the request body can't be empty)
 
             try
             {
                 // Update managed transaction
-                TransactionResponseBody result = apiInstance.UpdateManagedTransaction(memberGuid, userGuid, transactionGuid, managedTransactionUpdateRequestBody);
+                TransactionResponseBody result = apiInstance.UpdateManagedTransaction(accountGuid, memberGuid, transactionGuid, userGuid, managedTransactionUpdateRequestBody);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6512,9 +6521,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **transactionGuid** | **string**| The unique id for a &#x60;transaction&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **managedTransactionUpdateRequestBody** | [**ManagedTransactionUpdateRequestBody**](ManagedTransactionUpdateRequestBody.md)| Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty) | 
 
 ### Return type

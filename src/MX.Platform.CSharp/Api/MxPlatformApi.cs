@@ -102,11 +102,11 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to create a partner-managed account.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedAccountCreateRequestBody">Managed account to be created.</param>
         /// <returns>AccountResponseBody</returns>
-        AccountResponseBody CreateManagedAccount(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody);
+        AccountResponseBody CreateManagedAccount(string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody);
 
         /// <summary>
         /// Create managed account
@@ -115,11 +115,11 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to create a partner-managed account.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedAccountCreateRequestBody">Managed account to be created.</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
-        ApiResponse<AccountResponseBody> CreateManagedAccountWithHttpInfo(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody);
+        ApiResponse<AccountResponseBody> CreateManagedAccountWithHttpInfo(string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody);
         /// <summary>
         /// Create managed member
         /// </summary>
@@ -150,11 +150,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to create a new partner-managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionCreateRequestBody">Managed transaction to be created.</param>
         /// <returns>TransactionResponseBody</returns>
-        TransactionResponseBody CreateManagedTransaction(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody);
+        TransactionResponseBody CreateManagedTransaction(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody);
 
         /// <summary>
         /// Create managed transaction
@@ -163,11 +164,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to create a new partner-managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionCreateRequestBody">Managed transaction to be created.</param>
         /// <returns>ApiResponse of TransactionResponseBody</returns>
-        ApiResponse<TransactionResponseBody> CreateManagedTransactionWithHttpInfo(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody);
+        ApiResponse<TransactionResponseBody> CreateManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody);
         /// <summary>
         /// Create member
         /// </summary>
@@ -311,11 +313,11 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to delete a partner-managed account according to its unique GUID. If successful, the API will respond with a status of &#x60;204 No Content&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <returns></returns>
-        void DeleteManagedAccount(string memberGuid, string userGuid, string accountGuid);
+        void DeleteManagedAccount(string accountGuid, string memberGuid, string userGuid);
 
         /// <summary>
         /// Delete managed account
@@ -324,11 +326,11 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to delete a partner-managed account according to its unique GUID. If successful, the API will respond with a status of &#x60;204 No Content&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteManagedAccountWithHttpInfo(string memberGuid, string userGuid, string accountGuid);
+        ApiResponse<Object> DeleteManagedAccountWithHttpInfo(string accountGuid, string memberGuid, string userGuid);
         /// <summary>
         /// Delete managed member
         /// </summary>
@@ -359,11 +361,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to delete the specified partner-managed &#x60;transaction&#x60;. The endpoint will respond with a status of &#x60;204 No Content&#x60; without a resource.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns></returns>
-        void DeleteManagedTransaction(string memberGuid, string userGuid, string transactionGuid);
+        void DeleteManagedTransaction(string accountGuid, string memberGuid, string transactionGuid, string userGuid);
 
         /// <summary>
         /// Delete managed transaction
@@ -372,11 +375,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to delete the specified partner-managed &#x60;transaction&#x60;. The endpoint will respond with a status of &#x60;204 No Content&#x60; without a resource.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteManagedTransactionWithHttpInfo(string memberGuid, string userGuid, string transactionGuid);
+        ApiResponse<Object> DeleteManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string transactionGuid, string userGuid);
         /// <summary>
         /// Delete member
         /// </summary>
@@ -938,12 +942,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to retrieve a list of all the partner-managed accounts associated with the given partner-manage member.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>AccountsResponseBody</returns>
-        AccountsResponseBody ListManagedAccounts(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?));
+        AccountsResponseBody ListManagedAccounts(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
 
         /// <summary>
         /// List managed accounts
@@ -952,12 +956,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to retrieve a list of all the partner-managed accounts associated with the given partner-manage member.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of AccountsResponseBody</returns>
-        ApiResponse<AccountsResponseBody> ListManagedAccountsWithHttpInfo(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?));
+        ApiResponse<AccountsResponseBody> ListManagedAccountsWithHttpInfo(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
         /// <summary>
         /// List managed institutions
         /// </summary>
@@ -1013,12 +1017,13 @@ namespace MX.Platform.CSharp.Api
         /// This endpoint returns a list of all the partner-managed transactions associated with the specified &#x60;account&#x60;, scoped through a &#x60;user&#x60; and a &#x60;member&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>TransactionsResponseBody</returns>
-        TransactionsResponseBody ListManagedTransactions(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?));
+        TransactionsResponseBody ListManagedTransactions(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
 
         /// <summary>
         /// List managed transactions
@@ -1027,12 +1032,13 @@ namespace MX.Platform.CSharp.Api
         /// This endpoint returns a list of all the partner-managed transactions associated with the specified &#x60;account&#x60;, scoped through a &#x60;user&#x60; and a &#x60;member&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of TransactionsResponseBody</returns>
-        ApiResponse<TransactionsResponseBody> ListManagedTransactionsWithHttpInfo(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?));
+        ApiResponse<TransactionsResponseBody> ListManagedTransactionsWithHttpInfo(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
         /// <summary>
         /// List member challenges
         /// </summary>
@@ -1525,11 +1531,11 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to read the attributes of a partner-managed account according to its unique guid.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <returns>AccountResponseBody</returns>
-        AccountResponseBody ReadManagedAccount(string memberGuid, string userGuid, string accountGuid);
+        AccountResponseBody ReadManagedAccount(string accountGuid, string memberGuid, string userGuid);
 
         /// <summary>
         /// Read managed account
@@ -1538,11 +1544,11 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to read the attributes of a partner-managed account according to its unique guid.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
-        ApiResponse<AccountResponseBody> ReadManagedAccountWithHttpInfo(string memberGuid, string userGuid, string accountGuid);
+        ApiResponse<AccountResponseBody> ReadManagedAccountWithHttpInfo(string accountGuid, string memberGuid, string userGuid);
         /// <summary>
         /// Read managed member
         /// </summary>
@@ -1573,11 +1579,12 @@ namespace MX.Platform.CSharp.Api
         /// Requests to this endpoint will return the attributes of the specified partner-managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>TransactionResponseBody</returns>
-        TransactionResponseBody ReadManagedTransaction(string memberGuid, string userGuid, string transactionGuid);
+        TransactionResponseBody ReadManagedTransaction(string accountGuid, string memberGuid, string transactionGuid, string userGuid);
 
         /// <summary>
         /// Read managed transaction
@@ -1586,11 +1593,12 @@ namespace MX.Platform.CSharp.Api
         /// Requests to this endpoint will return the attributes of the specified partner-managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of TransactionResponseBody</returns>
-        ApiResponse<TransactionResponseBody> ReadManagedTransactionWithHttpInfo(string memberGuid, string userGuid, string transactionGuid);
+        ApiResponse<TransactionResponseBody> ReadManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string transactionGuid, string userGuid);
         /// <summary>
         /// Read member
         /// </summary>
@@ -1850,10 +1858,10 @@ namespace MX.Platform.CSharp.Api
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <returns>OAuthWindowResponseBody</returns>
-        OAuthWindowResponseBody RequestOAuthWindowURI(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?));
+        OAuthWindowResponseBody RequestOAuthWindowURI(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string));
 
         /// <summary>
         /// Request oauth window uri
@@ -1865,10 +1873,10 @@ namespace MX.Platform.CSharp.Api
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <returns>ApiResponse of OAuthWindowResponseBody</returns>
-        ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?));
+        ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string));
         /// <summary>
         /// Request widget url
         /// </summary>
@@ -1926,12 +1934,12 @@ namespace MX.Platform.CSharp.Api
         /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
         /// <returns>AccountResponseBody</returns>
-        AccountResponseBody UpdateAccountByMember(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody);
+        AccountResponseBody UpdateAccountByMember(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody);
 
         /// <summary>
         /// Update account by member
@@ -1940,12 +1948,12 @@ namespace MX.Platform.CSharp.Api
         /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
-        ApiResponse<AccountResponseBody> UpdateAccountByMemberWithHttpInfo(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody);
+        ApiResponse<AccountResponseBody> UpdateAccountByMemberWithHttpInfo(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody);
         /// <summary>
         /// Update category
         /// </summary>
@@ -1978,12 +1986,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to update the attributes of a partner-managed account according to its unique GUID.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="managedAccountUpdateRequestBody">Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <returns>AccountResponseBody</returns>
-        AccountResponseBody UpdateManagedAccount(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody);
+        AccountResponseBody UpdateManagedAccount(string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody);
 
         /// <summary>
         /// Update managed account
@@ -1992,12 +2000,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to update the attributes of a partner-managed account according to its unique GUID.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="managedAccountUpdateRequestBody">Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
-        ApiResponse<AccountResponseBody> UpdateManagedAccountWithHttpInfo(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody);
+        ApiResponse<AccountResponseBody> UpdateManagedAccountWithHttpInfo(string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody);
         /// <summary>
         /// Update managed member
         /// </summary>
@@ -2030,12 +2038,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to update the attributes of the specified partner_managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionUpdateRequestBody">Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <returns>TransactionResponseBody</returns>
-        TransactionResponseBody UpdateManagedTransaction(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody);
+        TransactionResponseBody UpdateManagedTransaction(string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody);
 
         /// <summary>
         /// Update managed transaction
@@ -2044,12 +2053,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to update the attributes of the specified partner_managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionUpdateRequestBody">Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <returns>ApiResponse of TransactionResponseBody</returns>
-        ApiResponse<TransactionResponseBody> UpdateManagedTransactionWithHttpInfo(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody);
+        ApiResponse<TransactionResponseBody> UpdateManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody);
         /// <summary>
         /// Update member
         /// </summary>
@@ -2312,12 +2322,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to create a partner-managed account.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedAccountCreateRequestBody">Managed account to be created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
-        System.Threading.Tasks.Task<AccountResponseBody> CreateManagedAccountAsync(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> CreateManagedAccountAsync(string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create managed account
@@ -2326,12 +2336,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to create a partner-managed account.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedAccountCreateRequestBody">Managed account to be created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> CreateManagedAccountWithHttpInfoAsync(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> CreateManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create managed member
         /// </summary>
@@ -2364,12 +2374,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to create a new partner-managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionCreateRequestBody">Managed transaction to be created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransactionResponseBody</returns>
-        System.Threading.Tasks.Task<TransactionResponseBody> CreateManagedTransactionAsync(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionResponseBody> CreateManagedTransactionAsync(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Create managed transaction
@@ -2378,12 +2389,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to create a new partner-managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionCreateRequestBody">Managed transaction to be created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> CreateManagedTransactionWithHttpInfoAsync(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> CreateManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Create member
         /// </summary>
@@ -2539,12 +2551,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to delete a partner-managed account according to its unique GUID. If successful, the API will respond with a status of &#x60;204 No Content&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteManagedAccountAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete managed account
@@ -2553,12 +2565,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to delete a partner-managed account according to its unique GUID. If successful, the API will respond with a status of &#x60;204 No Content&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManagedAccountWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete managed member
         /// </summary>
@@ -2591,12 +2603,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to delete the specified partner-managed &#x60;transaction&#x60;. The endpoint will respond with a status of &#x60;204 No Content&#x60; without a resource.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteManagedTransactionAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Delete managed transaction
@@ -2605,12 +2618,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to delete the specified partner-managed &#x60;transaction&#x60;. The endpoint will respond with a status of &#x60;204 No Content&#x60; without a resource.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete member
         /// </summary>
@@ -3216,13 +3230,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to retrieve a list of all the partner-managed accounts associated with the given partner-manage member.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountsResponseBody</returns>
-        System.Threading.Tasks.Task<AccountsResponseBody> ListManagedAccountsAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountsResponseBody> ListManagedAccountsAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List managed accounts
@@ -3231,13 +3245,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to retrieve a list of all the partner-managed accounts associated with the given partner-manage member.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListManagedAccountsWithHttpInfoAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListManagedAccountsWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List managed institutions
         /// </summary>
@@ -3297,13 +3311,14 @@ namespace MX.Platform.CSharp.Api
         /// This endpoint returns a list of all the partner-managed transactions associated with the specified &#x60;account&#x60;, scoped through a &#x60;user&#x60; and a &#x60;member&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransactionsResponseBody</returns>
-        System.Threading.Tasks.Task<TransactionsResponseBody> ListManagedTransactionsAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionsResponseBody> ListManagedTransactionsAsync(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List managed transactions
@@ -3312,13 +3327,14 @@ namespace MX.Platform.CSharp.Api
         /// This endpoint returns a list of all the partner-managed transactions associated with the specified &#x60;account&#x60;, scoped through a &#x60;user&#x60; and a &#x60;member&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransactionsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListManagedTransactionsWithHttpInfoAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListManagedTransactionsWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List member challenges
         /// </summary>
@@ -3849,12 +3865,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to read the attributes of a partner-managed account according to its unique guid.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
-        System.Threading.Tasks.Task<AccountResponseBody> ReadManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> ReadManagedAccountAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Read managed account
@@ -3863,12 +3879,12 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to read the attributes of a partner-managed account according to its unique guid.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> ReadManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> ReadManagedAccountWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Read managed member
         /// </summary>
@@ -3901,12 +3917,13 @@ namespace MX.Platform.CSharp.Api
         /// Requests to this endpoint will return the attributes of the specified partner-managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransactionResponseBody</returns>
-        System.Threading.Tasks.Task<TransactionResponseBody> ReadManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionResponseBody> ReadManagedTransactionAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Read managed transaction
@@ -3915,12 +3932,13 @@ namespace MX.Platform.CSharp.Api
         /// Requests to this endpoint will return the attributes of the specified partner-managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> ReadManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> ReadManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Read member
         /// </summary>
@@ -4202,11 +4220,11 @@ namespace MX.Platform.CSharp.Api
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OAuthWindowResponseBody</returns>
-        System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Request oauth window uri
@@ -4218,11 +4236,11 @@ namespace MX.Platform.CSharp.Api
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OAuthWindowResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Request widget url
         /// </summary>
@@ -4284,13 +4302,13 @@ namespace MX.Platform.CSharp.Api
         /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
-        System.Threading.Tasks.Task<AccountResponseBody> UpdateAccountByMemberAsync(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> UpdateAccountByMemberAsync(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Update account by member
@@ -4299,13 +4317,13 @@ namespace MX.Platform.CSharp.Api
         /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> UpdateAccountByMemberWithHttpInfoAsync(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> UpdateAccountByMemberWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Update category
         /// </summary>
@@ -4340,13 +4358,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to update the attributes of a partner-managed account according to its unique GUID.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="managedAccountUpdateRequestBody">Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
-        System.Threading.Tasks.Task<AccountResponseBody> UpdateManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> UpdateManagedAccountAsync(string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Update managed account
@@ -4355,13 +4373,13 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to update the attributes of a partner-managed account according to its unique GUID.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="managedAccountUpdateRequestBody">Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> UpdateManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> UpdateManagedAccountWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Update managed member
         /// </summary>
@@ -4396,13 +4414,14 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to update the attributes of the specified partner_managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionUpdateRequestBody">Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransactionResponseBody</returns>
-        System.Threading.Tasks.Task<TransactionResponseBody> UpdateManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionResponseBody> UpdateManagedTransactionAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Update managed transaction
@@ -4411,13 +4430,14 @@ namespace MX.Platform.CSharp.Api
         /// Use this endpoint to update the attributes of the specified partner_managed &#x60;transaction&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionUpdateRequestBody">Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> UpdateManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> UpdateManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Update member
         /// </summary>
@@ -5221,13 +5241,13 @@ namespace MX.Platform.CSharp.Api
         /// Create managed account Use this endpoint to create a partner-managed account.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedAccountCreateRequestBody">Managed account to be created.</param>
         /// <returns>AccountResponseBody</returns>
-        public AccountResponseBody CreateManagedAccount(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody)
+        public AccountResponseBody CreateManagedAccount(string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody)
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = CreateManagedAccountWithHttpInfo(userGuid, memberGuid, managedAccountCreateRequestBody);
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = CreateManagedAccountWithHttpInfo(memberGuid, userGuid, managedAccountCreateRequestBody);
             return localVarResponse.Data;
         }
 
@@ -5235,22 +5255,22 @@ namespace MX.Platform.CSharp.Api
         /// Create managed account Use this endpoint to create a partner-managed account.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedAccountCreateRequestBody">Managed account to be created.</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> CreateManagedAccountWithHttpInfo(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody)
+        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> CreateManagedAccountWithHttpInfo(string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody)
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedAccount");
-            }
-
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CreateManagedAccount");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedAccount");
             }
 
             // verify the required parameter 'managedAccountCreateRequestBody' is set
@@ -5282,8 +5302,8 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = managedAccountCreateRequestBody;
 
             // authentication (basicAuth) required
@@ -5311,14 +5331,14 @@ namespace MX.Platform.CSharp.Api
         /// Create managed account Use this endpoint to create a partner-managed account.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedAccountCreateRequestBody">Managed account to be created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
-        public async System.Threading.Tasks.Task<AccountResponseBody> CreateManagedAccountAsync(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountResponseBody> CreateManagedAccountAsync(string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await CreateManagedAccountWithHttpInfoAsync(userGuid, memberGuid, managedAccountCreateRequestBody, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await CreateManagedAccountWithHttpInfoAsync(memberGuid, userGuid, managedAccountCreateRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5326,23 +5346,23 @@ namespace MX.Platform.CSharp.Api
         /// Create managed account Use this endpoint to create a partner-managed account.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedAccountCreateRequestBody">Managed account to be created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> CreateManagedAccountWithHttpInfoAsync(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> CreateManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedAccount");
-            }
-
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CreateManagedAccount");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedAccount");
             }
 
             // verify the required parameter 'managedAccountCreateRequestBody' is set
@@ -5375,8 +5395,8 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = managedAccountCreateRequestBody;
 
             // authentication (basicAuth) required
@@ -5571,13 +5591,14 @@ namespace MX.Platform.CSharp.Api
         /// Create managed transaction Use this endpoint to create a new partner-managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionCreateRequestBody">Managed transaction to be created.</param>
         /// <returns>TransactionResponseBody</returns>
-        public TransactionResponseBody CreateManagedTransaction(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody)
+        public TransactionResponseBody CreateManagedTransaction(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody)
         {
-            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = CreateManagedTransactionWithHttpInfo(userGuid, memberGuid, managedTransactionCreateRequestBody);
+            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = CreateManagedTransactionWithHttpInfo(accountGuid, memberGuid, userGuid, managedTransactionCreateRequestBody);
             return localVarResponse.Data;
         }
 
@@ -5585,22 +5606,29 @@ namespace MX.Platform.CSharp.Api
         /// Create managed transaction Use this endpoint to create a new partner-managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionCreateRequestBody">Managed transaction to be created.</param>
         /// <returns>ApiResponse of TransactionResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> CreateManagedTransactionWithHttpInfo(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody)
+        public MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> CreateManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody)
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedTransaction");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->CreateManagedTransaction");
             }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CreateManagedTransaction");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedTransaction");
             }
 
             // verify the required parameter 'managedTransactionCreateRequestBody' is set
@@ -5632,8 +5660,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = managedTransactionCreateRequestBody;
 
             // authentication (basicAuth) required
@@ -5644,7 +5673,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateManagedTransaction", localVarResponse);
@@ -5661,14 +5690,15 @@ namespace MX.Platform.CSharp.Api
         /// Create managed transaction Use this endpoint to create a new partner-managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionCreateRequestBody">Managed transaction to be created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransactionResponseBody</returns>
-        public async System.Threading.Tasks.Task<TransactionResponseBody> CreateManagedTransactionAsync(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TransactionResponseBody> CreateManagedTransactionAsync(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = await CreateManagedTransactionWithHttpInfoAsync(userGuid, memberGuid, managedTransactionCreateRequestBody, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = await CreateManagedTransactionWithHttpInfoAsync(accountGuid, memberGuid, userGuid, managedTransactionCreateRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5676,23 +5706,30 @@ namespace MX.Platform.CSharp.Api
         /// Create managed transaction Use this endpoint to create a new partner-managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionCreateRequestBody">Managed transaction to be created.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody>> CreateManagedTransactionWithHttpInfoAsync(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody>> CreateManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedTransaction");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->CreateManagedTransaction");
             }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->CreateManagedTransaction");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManagedTransaction");
             }
 
             // verify the required parameter 'managedTransactionCreateRequestBody' is set
@@ -5725,8 +5762,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = managedTransactionCreateRequestBody;
 
             // authentication (basicAuth) required
@@ -5737,7 +5775,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6727,25 +6765,31 @@ namespace MX.Platform.CSharp.Api
         /// Delete managed account Use this endpoint to delete a partner-managed account according to its unique GUID. If successful, the API will respond with a status of &#x60;204 No Content&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <returns></returns>
-        public void DeleteManagedAccount(string memberGuid, string userGuid, string accountGuid)
+        public void DeleteManagedAccount(string accountGuid, string memberGuid, string userGuid)
         {
-            DeleteManagedAccountWithHttpInfo(memberGuid, userGuid, accountGuid);
+            DeleteManagedAccountWithHttpInfo(accountGuid, memberGuid, userGuid);
         }
 
         /// <summary>
         /// Delete managed account Use this endpoint to delete a partner-managed account according to its unique GUID. If successful, the API will respond with a status of &#x60;204 No Content&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<Object> DeleteManagedAccountWithHttpInfo(string memberGuid, string userGuid, string accountGuid)
+        public MX.Platform.CSharp.Client.ApiResponse<Object> DeleteManagedAccountWithHttpInfo(string accountGuid, string memberGuid, string userGuid)
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManagedAccount");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
@@ -6756,12 +6800,6 @@ namespace MX.Platform.CSharp.Api
             if (userGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedAccount");
-            }
-
-            // verify the required parameter 'accountGuid' is set
-            if (accountGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManagedAccount");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -6785,9 +6823,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -6814,27 +6852,33 @@ namespace MX.Platform.CSharp.Api
         /// Delete managed account Use this endpoint to delete a partner-managed account according to its unique GUID. If successful, the API will respond with a status of &#x60;204 No Content&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteManagedAccountAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteManagedAccountWithHttpInfoAsync(memberGuid, userGuid, accountGuid, cancellationToken).ConfigureAwait(false);
+            await DeleteManagedAccountWithHttpInfoAsync(accountGuid, memberGuid, userGuid, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// Delete managed account Use this endpoint to delete a partner-managed account according to its unique GUID. If successful, the API will respond with a status of &#x60;204 No Content&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<Object>> DeleteManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<Object>> DeleteManagedAccountWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManagedAccount");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
@@ -6845,12 +6889,6 @@ namespace MX.Platform.CSharp.Api
             if (userGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedAccount");
-            }
-
-            // verify the required parameter 'accountGuid' is set
-            if (accountGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManagedAccount");
             }
 
 
@@ -6875,9 +6913,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -7065,41 +7103,49 @@ namespace MX.Platform.CSharp.Api
         /// Delete managed transaction Use this endpoint to delete the specified partner-managed &#x60;transaction&#x60;. The endpoint will respond with a status of &#x60;204 No Content&#x60; without a resource.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns></returns>
-        public void DeleteManagedTransaction(string memberGuid, string userGuid, string transactionGuid)
+        public void DeleteManagedTransaction(string accountGuid, string memberGuid, string transactionGuid, string userGuid)
         {
-            DeleteManagedTransactionWithHttpInfo(memberGuid, userGuid, transactionGuid);
+            DeleteManagedTransactionWithHttpInfo(accountGuid, memberGuid, transactionGuid, userGuid);
         }
 
         /// <summary>
         /// Delete managed transaction Use this endpoint to delete the specified partner-managed &#x60;transaction&#x60;. The endpoint will respond with a status of &#x60;204 No Content&#x60; without a resource.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<Object> DeleteManagedTransactionWithHttpInfo(string memberGuid, string userGuid, string transactionGuid)
+        public MX.Platform.CSharp.Client.ApiResponse<Object> DeleteManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string transactionGuid, string userGuid)
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteManagedTransaction");
             }
 
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedTransaction");
-            }
-
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedTransaction");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -7123,9 +7169,10 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -7135,7 +7182,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteManagedTransaction", localVarResponse);
@@ -7152,43 +7199,51 @@ namespace MX.Platform.CSharp.Api
         /// Delete managed transaction Use this endpoint to delete the specified partner-managed &#x60;transaction&#x60;. The endpoint will respond with a status of &#x60;204 No Content&#x60; without a resource.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteManagedTransactionAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteManagedTransactionWithHttpInfoAsync(memberGuid, userGuid, transactionGuid, cancellationToken).ConfigureAwait(false);
+            await DeleteManagedTransactionWithHttpInfoAsync(accountGuid, memberGuid, transactionGuid, userGuid, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// Delete managed transaction Use this endpoint to delete the specified partner-managed &#x60;transaction&#x60;. The endpoint will respond with a status of &#x60;204 No Content&#x60; without a resource.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<Object>> DeleteManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<Object>> DeleteManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DeleteManagedTransaction");
             }
 
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedTransaction");
-            }
-
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->DeleteManagedTransaction");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManagedTransaction");
             }
 
 
@@ -7213,9 +7268,10 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -7225,7 +7281,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -11055,14 +11111,14 @@ namespace MX.Platform.CSharp.Api
         /// List managed accounts Use this endpoint to retrieve a list of all the partner-managed accounts associated with the given partner-manage member.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>AccountsResponseBody</returns>
-        public AccountsResponseBody ListManagedAccounts(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?))
+        public AccountsResponseBody ListManagedAccounts(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = ListManagedAccountsWithHttpInfo(userGuid, memberGuid, page, recordsPerPage);
+            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = ListManagedAccountsWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
             return localVarResponse.Data;
         }
 
@@ -11070,23 +11126,23 @@ namespace MX.Platform.CSharp.Api
         /// List managed accounts Use this endpoint to retrieve a list of all the partner-managed accounts associated with the given partner-manage member.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of AccountsResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> ListManagedAccountsWithHttpInfo(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?))
+        public MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> ListManagedAccountsWithHttpInfo(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?))
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedAccounts");
-            }
-
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListManagedAccounts");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedAccounts");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -11111,8 +11167,8 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
@@ -11147,15 +11203,15 @@ namespace MX.Platform.CSharp.Api
         /// List managed accounts Use this endpoint to retrieve a list of all the partner-managed accounts associated with the given partner-manage member.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountsResponseBody</returns>
-        public async System.Threading.Tasks.Task<AccountsResponseBody> ListManagedAccountsAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountsResponseBody> ListManagedAccountsAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = await ListManagedAccountsWithHttpInfoAsync(userGuid, memberGuid, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = await ListManagedAccountsWithHttpInfoAsync(memberGuid, userGuid, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -11163,24 +11219,24 @@ namespace MX.Platform.CSharp.Api
         /// List managed accounts Use this endpoint to retrieve a list of all the partner-managed accounts associated with the given partner-manage member.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody>> ListManagedAccountsWithHttpInfoAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody>> ListManagedAccountsWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedAccounts");
-            }
-
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListManagedAccounts");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedAccounts");
             }
 
 
@@ -11206,8 +11262,8 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
@@ -11565,14 +11621,15 @@ namespace MX.Platform.CSharp.Api
         /// List managed transactions This endpoint returns a list of all the partner-managed transactions associated with the specified &#x60;account&#x60;, scoped through a &#x60;user&#x60; and a &#x60;member&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>TransactionsResponseBody</returns>
-        public TransactionsResponseBody ListManagedTransactions(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?))
+        public TransactionsResponseBody ListManagedTransactions(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?))
         {
-            MX.Platform.CSharp.Client.ApiResponse<TransactionsResponseBody> localVarResponse = ListManagedTransactionsWithHttpInfo(userGuid, memberGuid, page, recordsPerPage);
+            MX.Platform.CSharp.Client.ApiResponse<TransactionsResponseBody> localVarResponse = ListManagedTransactionsWithHttpInfo(accountGuid, memberGuid, userGuid, page, recordsPerPage);
             return localVarResponse.Data;
         }
 
@@ -11580,23 +11637,30 @@ namespace MX.Platform.CSharp.Api
         /// List managed transactions This endpoint returns a list of all the partner-managed transactions associated with the specified &#x60;account&#x60;, scoped through a &#x60;user&#x60; and a &#x60;member&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of TransactionsResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<TransactionsResponseBody> ListManagedTransactionsWithHttpInfo(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?))
+        public MX.Platform.CSharp.Client.ApiResponse<TransactionsResponseBody> ListManagedTransactionsWithHttpInfo(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?))
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedTransactions");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ListManagedTransactions");
             }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListManagedTransactions");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedTransactions");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -11621,8 +11685,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
@@ -11640,7 +11705,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<TransactionsResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<TransactionsResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ListManagedTransactions", localVarResponse);
@@ -11657,15 +11722,16 @@ namespace MX.Platform.CSharp.Api
         /// List managed transactions This endpoint returns a list of all the partner-managed transactions associated with the specified &#x60;account&#x60;, scoped through a &#x60;user&#x60; and a &#x60;member&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransactionsResponseBody</returns>
-        public async System.Threading.Tasks.Task<TransactionsResponseBody> ListManagedTransactionsAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TransactionsResponseBody> ListManagedTransactionsAsync(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<TransactionsResponseBody> localVarResponse = await ListManagedTransactionsWithHttpInfoAsync(userGuid, memberGuid, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<TransactionsResponseBody> localVarResponse = await ListManagedTransactionsWithHttpInfoAsync(accountGuid, memberGuid, userGuid, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -11673,24 +11739,31 @@ namespace MX.Platform.CSharp.Api
         /// List managed transactions This endpoint returns a list of all the partner-managed transactions associated with the specified &#x60;account&#x60;, scoped through a &#x60;user&#x60; and a &#x60;member&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransactionsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TransactionsResponseBody>> ListManagedTransactionsWithHttpInfoAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TransactionsResponseBody>> ListManagedTransactionsWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedTransactions");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ListManagedTransactions");
             }
 
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListManagedTransactions");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListManagedTransactions");
             }
 
 
@@ -11716,8 +11789,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
@@ -11735,7 +11809,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionsResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionsResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -15085,13 +15159,13 @@ namespace MX.Platform.CSharp.Api
         /// Read managed account Use this endpoint to read the attributes of a partner-managed account according to its unique guid.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <returns>AccountResponseBody</returns>
-        public AccountResponseBody ReadManagedAccount(string memberGuid, string userGuid, string accountGuid)
+        public AccountResponseBody ReadManagedAccount(string accountGuid, string memberGuid, string userGuid)
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = ReadManagedAccountWithHttpInfo(memberGuid, userGuid, accountGuid);
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = ReadManagedAccountWithHttpInfo(accountGuid, memberGuid, userGuid);
             return localVarResponse.Data;
         }
 
@@ -15099,12 +15173,18 @@ namespace MX.Platform.CSharp.Api
         /// Read managed account Use this endpoint to read the attributes of a partner-managed account according to its unique guid.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> ReadManagedAccountWithHttpInfo(string memberGuid, string userGuid, string accountGuid)
+        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> ReadManagedAccountWithHttpInfo(string accountGuid, string memberGuid, string userGuid)
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadManagedAccount");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
@@ -15115,12 +15195,6 @@ namespace MX.Platform.CSharp.Api
             if (userGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedAccount");
-            }
-
-            // verify the required parameter 'accountGuid' is set
-            if (accountGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadManagedAccount");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -15145,9 +15219,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -15174,14 +15248,14 @@ namespace MX.Platform.CSharp.Api
         /// Read managed account Use this endpoint to read the attributes of a partner-managed account according to its unique guid.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
-        public async System.Threading.Tasks.Task<AccountResponseBody> ReadManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountResponseBody> ReadManagedAccountAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await ReadManagedAccountWithHttpInfoAsync(memberGuid, userGuid, accountGuid, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await ReadManagedAccountWithHttpInfoAsync(accountGuid, memberGuid, userGuid, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -15189,13 +15263,19 @@ namespace MX.Platform.CSharp.Api
         /// Read managed account Use this endpoint to read the attributes of a partner-managed account according to its unique guid.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> ReadManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> ReadManagedAccountWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadManagedAccount");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
@@ -15206,12 +15286,6 @@ namespace MX.Platform.CSharp.Api
             if (userGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedAccount");
-            }
-
-            // verify the required parameter 'accountGuid' is set
-            if (accountGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadManagedAccount");
             }
 
 
@@ -15237,9 +15311,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -15431,13 +15505,14 @@ namespace MX.Platform.CSharp.Api
         /// Read managed transaction Requests to this endpoint will return the attributes of the specified partner-managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>TransactionResponseBody</returns>
-        public TransactionResponseBody ReadManagedTransaction(string memberGuid, string userGuid, string transactionGuid)
+        public TransactionResponseBody ReadManagedTransaction(string accountGuid, string memberGuid, string transactionGuid, string userGuid)
         {
-            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = ReadManagedTransactionWithHttpInfo(memberGuid, userGuid, transactionGuid);
+            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = ReadManagedTransactionWithHttpInfo(accountGuid, memberGuid, transactionGuid, userGuid);
             return localVarResponse.Data;
         }
 
@@ -15445,28 +15520,35 @@ namespace MX.Platform.CSharp.Api
         /// Read managed transaction Requests to this endpoint will return the attributes of the specified partner-managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of TransactionResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> ReadManagedTransactionWithHttpInfo(string memberGuid, string userGuid, string transactionGuid)
+        public MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> ReadManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string transactionGuid, string userGuid)
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadManagedTransaction");
             }
 
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedTransaction");
-            }
-
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedTransaction");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -15491,9 +15573,10 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -15503,7 +15586,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadManagedTransaction", localVarResponse);
@@ -15520,14 +15603,15 @@ namespace MX.Platform.CSharp.Api
         /// Read managed transaction Requests to this endpoint will return the attributes of the specified partner-managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransactionResponseBody</returns>
-        public async System.Threading.Tasks.Task<TransactionResponseBody> ReadManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TransactionResponseBody> ReadManagedTransactionAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = await ReadManagedTransactionWithHttpInfoAsync(memberGuid, userGuid, transactionGuid, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = await ReadManagedTransactionWithHttpInfoAsync(accountGuid, memberGuid, transactionGuid, userGuid, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -15535,29 +15619,36 @@ namespace MX.Platform.CSharp.Api
         /// Read managed transaction Requests to this endpoint will return the attributes of the specified partner-managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody>> ReadManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody>> ReadManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadManagedTransaction");
             }
 
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedTransaction");
-            }
-
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->ReadManagedTransaction");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadManagedTransaction");
             }
 
 
@@ -15583,9 +15674,10 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -15595,7 +15687,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -17386,12 +17478,12 @@ namespace MX.Platform.CSharp.Api
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <returns>OAuthWindowResponseBody</returns>
-        public OAuthWindowResponseBody RequestOAuthWindowURI(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?))
+        public OAuthWindowResponseBody RequestOAuthWindowURI(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string))
         {
-            MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> localVarResponse = RequestOAuthWindowURIWithHttpInfo(memberGuid, userGuid, referralSource, uiMessageWebviewUrlScheme, skipAggregation);
+            MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> localVarResponse = RequestOAuthWindowURIWithHttpInfo(memberGuid, userGuid, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
             return localVarResponse.Data;
         }
 
@@ -17402,10 +17494,10 @@ namespace MX.Platform.CSharp.Api
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <returns>ApiResponse of OAuthWindowResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?))
+        public MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string))
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -17447,13 +17539,13 @@ namespace MX.Platform.CSharp.Api
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "referral_source", referralSource));
             }
-            if (uiMessageWebviewUrlScheme != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "ui_message_webview_url_scheme", uiMessageWebviewUrlScheme));
-            }
             if (skipAggregation != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "skip_aggregation", skipAggregation));
+            }
+            if (uiMessageWebviewUrlScheme != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "ui_message_webview_url_scheme", uiMessageWebviewUrlScheme));
             }
 
             // authentication (basicAuth) required
@@ -17484,13 +17576,13 @@ namespace MX.Platform.CSharp.Api
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OAuthWindowResponseBody</returns>
-        public async System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> localVarResponse = await RequestOAuthWindowURIWithHttpInfoAsync(memberGuid, userGuid, referralSource, uiMessageWebviewUrlScheme, skipAggregation, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> localVarResponse = await RequestOAuthWindowURIWithHttpInfoAsync(memberGuid, userGuid, referralSource, skipAggregation, uiMessageWebviewUrlScheme, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -17501,11 +17593,11 @@ namespace MX.Platform.CSharp.Api
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OAuthWindowResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -17548,13 +17640,13 @@ namespace MX.Platform.CSharp.Api
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "referral_source", referralSource));
             }
-            if (uiMessageWebviewUrlScheme != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "ui_message_webview_url_scheme", uiMessageWebviewUrlScheme));
-            }
             if (skipAggregation != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "skip_aggregation", skipAggregation));
+            }
+            if (uiMessageWebviewUrlScheme != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "ui_message_webview_url_scheme", uiMessageWebviewUrlScheme));
             }
 
             // authentication (basicAuth) required
@@ -17945,14 +18037,14 @@ namespace MX.Platform.CSharp.Api
         /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
         /// <returns>AccountResponseBody</returns>
-        public AccountResponseBody UpdateAccountByMember(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody)
+        public AccountResponseBody UpdateAccountByMember(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody)
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = UpdateAccountByMemberWithHttpInfo(userGuid, memberGuid, accountGuid, accountUpdateRequestBody);
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = UpdateAccountByMemberWithHttpInfo(accountGuid, memberGuid, userGuid, accountUpdateRequestBody);
             return localVarResponse.Data;
         }
 
@@ -17960,17 +18052,17 @@ namespace MX.Platform.CSharp.Api
         /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> UpdateAccountByMemberWithHttpInfo(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody)
+        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> UpdateAccountByMemberWithHttpInfo(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody)
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateAccountByMember");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateAccountByMember");
             }
 
             // verify the required parameter 'memberGuid' is set
@@ -17979,10 +18071,10 @@ namespace MX.Platform.CSharp.Api
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateAccountByMember");
             }
 
-            // verify the required parameter 'accountGuid' is set
-            if (accountGuid == null)
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateAccountByMember");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateAccountByMember");
             }
 
             // verify the required parameter 'accountUpdateRequestBody' is set
@@ -18014,9 +18106,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = accountUpdateRequestBody;
 
             // authentication (basicAuth) required
@@ -18044,15 +18136,15 @@ namespace MX.Platform.CSharp.Api
         /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
-        public async System.Threading.Tasks.Task<AccountResponseBody> UpdateAccountByMemberAsync(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountResponseBody> UpdateAccountByMemberAsync(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await UpdateAccountByMemberWithHttpInfoAsync(userGuid, memberGuid, accountGuid, accountUpdateRequestBody, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await UpdateAccountByMemberWithHttpInfoAsync(accountGuid, memberGuid, userGuid, accountUpdateRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -18060,18 +18152,18 @@ namespace MX.Platform.CSharp.Api
         /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> UpdateAccountByMemberWithHttpInfoAsync(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> UpdateAccountByMemberWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateAccountByMember");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateAccountByMember");
             }
 
             // verify the required parameter 'memberGuid' is set
@@ -18080,10 +18172,10 @@ namespace MX.Platform.CSharp.Api
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateAccountByMember");
             }
 
-            // verify the required parameter 'accountGuid' is set
-            if (accountGuid == null)
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateAccountByMember");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateAccountByMember");
             }
 
             // verify the required parameter 'accountUpdateRequestBody' is set
@@ -18116,9 +18208,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = accountUpdateRequestBody;
 
             // authentication (basicAuth) required
@@ -18331,14 +18423,14 @@ namespace MX.Platform.CSharp.Api
         /// Update managed account Use this endpoint to update the attributes of a partner-managed account according to its unique GUID.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="managedAccountUpdateRequestBody">Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <returns>AccountResponseBody</returns>
-        public AccountResponseBody UpdateManagedAccount(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody)
+        public AccountResponseBody UpdateManagedAccount(string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody)
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = UpdateManagedAccountWithHttpInfo(memberGuid, userGuid, accountGuid, managedAccountUpdateRequestBody);
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = UpdateManagedAccountWithHttpInfo(accountGuid, memberGuid, userGuid, managedAccountUpdateRequestBody);
             return localVarResponse.Data;
         }
 
@@ -18346,13 +18438,19 @@ namespace MX.Platform.CSharp.Api
         /// Update managed account Use this endpoint to update the attributes of a partner-managed account according to its unique GUID.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="managedAccountUpdateRequestBody">Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> UpdateManagedAccountWithHttpInfo(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody)
+        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> UpdateManagedAccountWithHttpInfo(string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody)
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateManagedAccount");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
@@ -18363,12 +18461,6 @@ namespace MX.Platform.CSharp.Api
             if (userGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedAccount");
-            }
-
-            // verify the required parameter 'accountGuid' is set
-            if (accountGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateManagedAccount");
             }
 
             // verify the required parameter 'managedAccountUpdateRequestBody' is set
@@ -18400,9 +18492,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.Data = managedAccountUpdateRequestBody;
 
             // authentication (basicAuth) required
@@ -18430,15 +18522,15 @@ namespace MX.Platform.CSharp.Api
         /// Update managed account Use this endpoint to update the attributes of a partner-managed account according to its unique GUID.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="managedAccountUpdateRequestBody">Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
-        public async System.Threading.Tasks.Task<AccountResponseBody> UpdateManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountResponseBody> UpdateManagedAccountAsync(string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await UpdateManagedAccountWithHttpInfoAsync(memberGuid, userGuid, accountGuid, managedAccountUpdateRequestBody, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await UpdateManagedAccountWithHttpInfoAsync(accountGuid, memberGuid, userGuid, managedAccountUpdateRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -18446,14 +18538,20 @@ namespace MX.Platform.CSharp.Api
         /// Update managed account Use this endpoint to update the attributes of a partner-managed account according to its unique GUID.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="managedAccountUpdateRequestBody">Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> UpdateManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> UpdateManagedAccountWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateManagedAccount");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
@@ -18464,12 +18562,6 @@ namespace MX.Platform.CSharp.Api
             if (userGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedAccount");
-            }
-
-            // verify the required parameter 'accountGuid' is set
-            if (accountGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateManagedAccount");
             }
 
             // verify the required parameter 'managedAccountUpdateRequestBody' is set
@@ -18502,9 +18594,9 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.Data = managedAccountUpdateRequestBody;
 
             // authentication (basicAuth) required
@@ -18717,14 +18809,15 @@ namespace MX.Platform.CSharp.Api
         /// Update managed transaction Use this endpoint to update the attributes of the specified partner_managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionUpdateRequestBody">Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <returns>TransactionResponseBody</returns>
-        public TransactionResponseBody UpdateManagedTransaction(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody)
+        public TransactionResponseBody UpdateManagedTransaction(string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody)
         {
-            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = UpdateManagedTransactionWithHttpInfo(memberGuid, userGuid, transactionGuid, managedTransactionUpdateRequestBody);
+            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = UpdateManagedTransactionWithHttpInfo(accountGuid, memberGuid, transactionGuid, userGuid, managedTransactionUpdateRequestBody);
             return localVarResponse.Data;
         }
 
@@ -18732,29 +18825,36 @@ namespace MX.Platform.CSharp.Api
         /// Update managed transaction Use this endpoint to update the attributes of the specified partner_managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionUpdateRequestBody">Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <returns>ApiResponse of TransactionResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> UpdateManagedTransactionWithHttpInfo(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody)
+        public MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> UpdateManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody)
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateManagedTransaction");
             }
 
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedTransaction");
-            }
-
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedTransaction");
             }
 
             // verify the required parameter 'managedTransactionUpdateRequestBody' is set
@@ -18786,9 +18886,10 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = managedTransactionUpdateRequestBody;
 
             // authentication (basicAuth) required
@@ -18799,7 +18900,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Put<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Put<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateManagedTransaction", localVarResponse);
@@ -18816,15 +18917,16 @@ namespace MX.Platform.CSharp.Api
         /// Update managed transaction Use this endpoint to update the attributes of the specified partner_managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionUpdateRequestBody">Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransactionResponseBody</returns>
-        public async System.Threading.Tasks.Task<TransactionResponseBody> UpdateManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TransactionResponseBody> UpdateManagedTransactionAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = await UpdateManagedTransactionWithHttpInfoAsync(memberGuid, userGuid, transactionGuid, managedTransactionUpdateRequestBody, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody> localVarResponse = await UpdateManagedTransactionWithHttpInfoAsync(accountGuid, memberGuid, transactionGuid, userGuid, managedTransactionUpdateRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -18832,30 +18934,37 @@ namespace MX.Platform.CSharp.Api
         /// Update managed transaction Use this endpoint to update the attributes of the specified partner_managed &#x60;transaction&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
-        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="managedTransactionUpdateRequestBody">Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody>> UpdateManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TransactionResponseBody>> UpdateManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
+
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->UpdateManagedTransaction");
             }
 
-            // verify the required parameter 'userGuid' is set
-            if (userGuid == null)
-            {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedTransaction");
-            }
-
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
             {
                 throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UpdateManagedTransaction");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UpdateManagedTransaction");
             }
 
             // verify the required parameter 'managedTransactionUpdateRequestBody' is set
@@ -18888,9 +18997,10 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
-            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
             localVarRequestOptions.Data = managedTransactionUpdateRequestBody;
 
             // authentication (basicAuth) required
@@ -18901,7 +19011,7 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PutAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PutAsync<TransactionResponseBody>("/users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
