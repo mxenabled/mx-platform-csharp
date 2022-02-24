@@ -1084,6 +1084,42 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test RequestPaymentAccount
+        /// </summary>
+        [Fact]
+        public void RequestPaymentAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.RequestPaymentAccount();
+            //Assert.IsType<PaymentAccountResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test RequestPaymentProcessorAuthorizationCode
+        /// </summary>
+        [Fact]
+        public void RequestPaymentProcessorAuthorizationCodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody = null;
+            //var response = instance.RequestPaymentProcessorAuthorizationCode(paymentProcessorAuthorizationCodeRequestBody);
+            //Assert.IsType<PaymentProcessorAuthorizationCodeResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test RequestPaymentProcessorToken
+        /// </summary>
+        [Fact]
+        public void RequestPaymentProcessorTokenTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string code = null;
+            //string grantType = null;
+            //var response = instance.RequestPaymentProcessorToken(code, grantType);
+            //Assert.IsType<PaymentProcessorTokenResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test RequestWidgetURL
         /// </summary>
         [Fact]
