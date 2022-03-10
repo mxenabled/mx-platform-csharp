@@ -39,13 +39,15 @@ namespace MX.Platform.CSharp.Model
         /// <param name="fieldType">fieldType.</param>
         /// <param name="guid">guid.</param>
         /// <param name="label">label.</param>
-        public CredentialResponse(int? displayOrder = default(int?), string fieldName = default(string), string fieldType = default(string), string guid = default(string), string label = default(string))
+        /// <param name="type">type.</param>
+        public CredentialResponse(int? displayOrder = default(int?), string fieldName = default(string), string fieldType = default(string), string guid = default(string), string label = default(string), string type = default(string))
         {
             this.DisplayOrder = displayOrder;
             this.FieldName = fieldName;
             this.FieldType = fieldType;
             this.Guid = guid;
             this.Label = label;
+            this.Type = type;
         }
 
         /// <summary>
@@ -79,6 +81,12 @@ namespace MX.Platform.CSharp.Model
         public string Label { get; set; }
 
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name = "type", EmitDefaultValue = true)]
+        public string Type { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -91,6 +99,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  FieldType: ").Append(FieldType).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +159,11 @@ namespace MX.Platform.CSharp.Model
                     this.Label == input.Label ||
                     (this.Label != null &&
                     this.Label.Equals(input.Label))
+                ) && 
+                (
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
                 );
         }
 
@@ -181,6 +195,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.Label != null)
                 {
                     hashCode = (hashCode * 59) + this.Label.GetHashCode();
+                }
+                if (this.Type != null)
+                {
+                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
                 }
                 return hashCode;
             }

@@ -96,6 +96,14 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Label'
         }
+        /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Fact]
+        public void TypeTest()
+        {
+            // TODO unit test for the property 'Type'
+        }
 
     }
 
