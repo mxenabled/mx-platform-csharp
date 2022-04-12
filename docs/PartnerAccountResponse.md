@@ -1,4 +1,4 @@
-# MX.Platform.CSharp.Model.PaymentAccountResponse
+# MX.Platform.CSharp.Model.PartnerAccountResponse
 
 ## Properties
 

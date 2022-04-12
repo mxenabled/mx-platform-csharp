@@ -1,12 +1,12 @@
-# MX.Platform.CSharp.Model.PaymentProcessorTokenResponseBody
+# MX.Platform.CSharp.Model.PartnerAuthorizationCodeRequest
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccessToken** | **string** |  | [optional] 
-**Scope** | **string** |  | [optional] 
-**TokenType** | **string** |  | [optional] 
+**AccountGuid** | **string** |  | [optional] 
+**MemberGuid** | **string** |  | [optional] 
+**UserGuid** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

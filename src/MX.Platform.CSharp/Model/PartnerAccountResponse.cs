@@ -26,13 +26,13 @@ using OpenAPIDateConverter = MX.Platform.CSharp.Client.OpenAPIDateConverter;
 namespace MX.Platform.CSharp.Model
 {
     /// <summary>
-    /// PaymentAccountResponse
+    /// PartnerAccountResponse
     /// </summary>
-    [DataContract(Name = "PaymentAccountResponse")]
-    public partial class PaymentAccountResponse : IEquatable<PaymentAccountResponse>, IValidatableObject
+    [DataContract(Name = "PartnerAccountResponse")]
+    public partial class PartnerAccountResponse : IEquatable<PartnerAccountResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PaymentAccountResponse" /> class.
+        /// Initializes a new instance of the <see cref="PartnerAccountResponse" /> class.
         /// </summary>
         /// <param name="accountName">accountName.</param>
         /// <param name="accountNumber">accountNumber.</param>
@@ -41,7 +41,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="balance">balance.</param>
         /// <param name="routingNumber">routingNumber.</param>
         /// <param name="transitNumber">transitNumber.</param>
-        public PaymentAccountResponse(string accountName = default(string), string accountNumber = default(string), string accountType = default(string), decimal? availableBalance = default(decimal?), decimal? balance = default(decimal?), string routingNumber = default(string), string transitNumber = default(string))
+        public PartnerAccountResponse(string accountName = default(string), string accountNumber = default(string), string accountType = default(string), decimal? availableBalance = default(decimal?), decimal? balance = default(decimal?), string routingNumber = default(string), string transitNumber = default(string))
         {
             this.AccountName = accountName;
             this.AccountNumber = accountNumber;
@@ -101,7 +101,7 @@ namespace MX.Platform.CSharp.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PaymentAccountResponse {\n");
+            sb.Append("class PartnerAccountResponse {\n");
             sb.Append("  AccountName: ").Append(AccountName).Append("\n");
             sb.Append("  AccountNumber: ").Append(AccountNumber).Append("\n");
             sb.Append("  AccountType: ").Append(AccountType).Append("\n");
@@ -129,15 +129,15 @@ namespace MX.Platform.CSharp.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PaymentAccountResponse);
+            return this.Equals(input as PartnerAccountResponse);
         }
 
         /// <summary>
-        /// Returns true if PaymentAccountResponse instances are equal
+        /// Returns true if PartnerAccountResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of PaymentAccountResponse to be compared</param>
+        /// <param name="input">Instance of PartnerAccountResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PaymentAccountResponse input)
+        public bool Equals(PartnerAccountResponse input)
         {
             if (input == null)
             {

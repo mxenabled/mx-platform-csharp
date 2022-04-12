@@ -79,9 +79,9 @@ Method | HTTP request | Description
 [**ReadUser**](MxPlatformApi.md#readuser) | **GET** /users/{user_guid} | Read user
 [**RequestConnectWidgetURL**](MxPlatformApi.md#requestconnectwidgeturl) | **POST** /users/{user_guid}/connect_widget_url | Request connect widget url
 [**RequestOAuthWindowURI**](MxPlatformApi.md#requestoauthwindowuri) | **GET** /users/{user_guid}/members/{member_guid}/oauth_window_uri | Request oauth window uri
-[**RequestPaymentAccount**](MxPlatformApi.md#requestpaymentaccount) | **GET** /payment_account | Request payment account
-[**RequestPaymentProcessorAuthorizationCode**](MxPlatformApi.md#requestpaymentprocessorauthorizationcode) | **POST** /payment_processor_authorization_code | Request payment processor authorization code
-[**RequestPaymentProcessorToken**](MxPlatformApi.md#requestpaymentprocessortoken) | **POST** /payment_processor_token | Request payment processor token
+[**RequestPartnerAccount**](MxPlatformApi.md#requestpartneraccount) | **GET** /partner_account | Request partner account
+[**RequestPartnerAuthorizationCode**](MxPlatformApi.md#requestpartnerauthorizationcode) | **POST** /partner_authorization_code | Request partner authorization code
+[**RequestPartnerToken**](MxPlatformApi.md#requestpartnertoken) | **POST** /partner_token | Request partner token
 [**RequestWidgetURL**](MxPlatformApi.md#requestwidgeturl) | **POST** /users/{user_guid}/widget_urls | Request widget url
 [**ResumeAggregation**](MxPlatformApi.md#resumeaggregation) | **PUT** /users/{user_guid}/members/{member_guid}/resume | Resume aggregation
 [**UpdateAccountByMember**](MxPlatformApi.md#updateaccountbymember) | **PUT** /users/{user_guid}/members/{member_guid}/accounts/{account_guid} | Update account by member
@@ -5990,13 +5990,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="requestpaymentaccount"></a>
-# **RequestPaymentAccount**
-> PaymentAccountResponseBody RequestPaymentAccount ()
+<a name="requestpartneraccount"></a>
+# **RequestPartnerAccount**
+> PartnerAccountResponseBody RequestPartnerAccount ()
 
-Request payment account
+Request partner account
 
-Use this endpoint to request a payment account.
+Use this endpoint to request a partner account.
 
 ### Example
 ```csharp
@@ -6008,7 +6008,7 @@ using MX.Platform.CSharp.Model;
 
 namespace Example
 {
-    public class RequestPaymentAccountExample
+    public class RequestPartnerAccountExample
     {
         public static void Main()
         {
@@ -6021,13 +6021,13 @@ namespace Example
 
             try
             {
-                // Request payment account
-                PaymentAccountResponseBody result = apiInstance.RequestPaymentAccount();
+                // Request partner account
+                PartnerAccountResponseBody result = apiInstance.RequestPartnerAccount();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.RequestPaymentAccount: " + e.Message );
+                Debug.Print("Exception when calling MxPlatformApi.RequestPartnerAccount: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6041,7 +6041,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PaymentAccountResponseBody**](PaymentAccountResponseBody.md)
+[**PartnerAccountResponseBody**](PartnerAccountResponseBody.md)
 
 ### Authorization
 
@@ -6060,13 +6060,13 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="requestpaymentprocessorauthorizationcode"></a>
-# **RequestPaymentProcessorAuthorizationCode**
-> PaymentProcessorAuthorizationCodeResponseBody RequestPaymentProcessorAuthorizationCode (PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody)
+<a name="requestpartnerauthorizationcode"></a>
+# **RequestPartnerAuthorizationCode**
+> PartnerAuthorizationCodeResponseBody RequestPartnerAuthorizationCode (PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody)
 
-Request payment processor authorization code
+Request partner authorization code
 
-Use this endpoint to request a payment processor authorization code.
+Use this endpoint to request a partner authorization code.
 
 ### Example
 ```csharp
@@ -6078,7 +6078,7 @@ using MX.Platform.CSharp.Model;
 
 namespace Example
 {
-    public class RequestPaymentProcessorAuthorizationCodeExample
+    public class RequestPartnerAuthorizationCodeExample
     {
         public static void Main()
         {
@@ -6089,17 +6089,17 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
-            var paymentProcessorAuthorizationCodeRequestBody = new PaymentProcessorAuthorizationCodeRequestBody(); // PaymentProcessorAuthorizationCodeRequestBody | Payment processor authorization code object containing account_guid, member_guid, and user_guid.
+            var partnerAuthorizationCodeRequestBody = new PartnerAuthorizationCodeRequestBody(); // PartnerAuthorizationCodeRequestBody | Partner authorization code object containing account_guid, member_guid, and user_guid.
 
             try
             {
-                // Request payment processor authorization code
-                PaymentProcessorAuthorizationCodeResponseBody result = apiInstance.RequestPaymentProcessorAuthorizationCode(paymentProcessorAuthorizationCodeRequestBody);
+                // Request partner authorization code
+                PartnerAuthorizationCodeResponseBody result = apiInstance.RequestPartnerAuthorizationCode(partnerAuthorizationCodeRequestBody);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.RequestPaymentProcessorAuthorizationCode: " + e.Message );
+                Debug.Print("Exception when calling MxPlatformApi.RequestPartnerAuthorizationCode: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6112,11 +6112,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **paymentProcessorAuthorizationCodeRequestBody** | [**PaymentProcessorAuthorizationCodeRequestBody**](PaymentProcessorAuthorizationCodeRequestBody.md)| Payment processor authorization code object containing account_guid, member_guid, and user_guid. | 
+ **partnerAuthorizationCodeRequestBody** | [**PartnerAuthorizationCodeRequestBody**](PartnerAuthorizationCodeRequestBody.md)| Partner authorization code object containing account_guid, member_guid, and user_guid. | 
 
 ### Return type
 
-[**PaymentProcessorAuthorizationCodeResponseBody**](PaymentProcessorAuthorizationCodeResponseBody.md)
+[**PartnerAuthorizationCodeResponseBody**](PartnerAuthorizationCodeResponseBody.md)
 
 ### Authorization
 
@@ -6135,13 +6135,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="requestpaymentprocessortoken"></a>
-# **RequestPaymentProcessorToken**
-> PaymentProcessorTokenResponseBody RequestPaymentProcessorToken (string code = null, string grantType = null)
+<a name="requestpartnertoken"></a>
+# **RequestPartnerToken**
+> PartnerTokenResponseBody RequestPartnerToken (string code = null, string grantType = null)
 
-Request payment processor token
+Request partner token
 
-Use this endpoint to request a payment processor token.
+Use this endpoint to request a partner token.
 
 ### Example
 ```csharp
@@ -6153,7 +6153,7 @@ using MX.Platform.CSharp.Model;
 
 namespace Example
 {
-    public class RequestPaymentProcessorTokenExample
+    public class RequestPartnerTokenExample
     {
         public static void Main()
         {
@@ -6164,18 +6164,18 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
-            var code = sN3Ffd1nJg_iwEMuxcEo2Z5taC0RvMilfvYKsnM2XGM;  // string | Code to request processor token. (optional) 
+            var code = sN3Ffd1nJg_iwEMuxcEo2Z5taC0RvMilfvYKsnM2XGM;  // string | Code to request partner token. (optional) 
             var grantType = authorization_code;  // string | Specify grant type. (optional) 
 
             try
             {
-                // Request payment processor token
-                PaymentProcessorTokenResponseBody result = apiInstance.RequestPaymentProcessorToken(code, grantType);
+                // Request partner token
+                PartnerTokenResponseBody result = apiInstance.RequestPartnerToken(code, grantType);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.RequestPaymentProcessorToken: " + e.Message );
+                Debug.Print("Exception when calling MxPlatformApi.RequestPartnerToken: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -6188,12 +6188,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **code** | **string**| Code to request processor token. | [optional] 
+ **code** | **string**| Code to request partner token. | [optional] 
  **grantType** | **string**| Specify grant type. | [optional] 
 
 ### Return type
 
-[**PaymentProcessorTokenResponseBody**](PaymentProcessorTokenResponseBody.md)
+[**PartnerTokenResponseBody**](PartnerTokenResponseBody.md)
 
 ### Authorization
 
