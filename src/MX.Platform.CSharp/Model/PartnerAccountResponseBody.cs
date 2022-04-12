@@ -26,25 +26,25 @@ using OpenAPIDateConverter = MX.Platform.CSharp.Client.OpenAPIDateConverter;
 namespace MX.Platform.CSharp.Model
 {
     /// <summary>
-    /// PaymentProcessorAuthorizationCodeResponseBody
+    /// PartnerAccountResponseBody
     /// </summary>
-    [DataContract(Name = "PaymentProcessorAuthorizationCodeResponseBody")]
-    public partial class PaymentProcessorAuthorizationCodeResponseBody : IEquatable<PaymentProcessorAuthorizationCodeResponseBody>, IValidatableObject
+    [DataContract(Name = "PartnerAccountResponseBody")]
+    public partial class PartnerAccountResponseBody : IEquatable<PartnerAccountResponseBody>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PaymentProcessorAuthorizationCodeResponseBody" /> class.
+        /// Initializes a new instance of the <see cref="PartnerAccountResponseBody" /> class.
         /// </summary>
-        /// <param name="paymentProcessorAuthorizationCode">paymentProcessorAuthorizationCode.</param>
-        public PaymentProcessorAuthorizationCodeResponseBody(PaymentProcessorAuthorizationCodeResponse paymentProcessorAuthorizationCode = default(PaymentProcessorAuthorizationCodeResponse))
+        /// <param name="partnerAccount">partnerAccount.</param>
+        public PartnerAccountResponseBody(PartnerAccountResponse partnerAccount = default(PartnerAccountResponse))
         {
-            this.PaymentProcessorAuthorizationCode = paymentProcessorAuthorizationCode;
+            this.PartnerAccount = partnerAccount;
         }
 
         /// <summary>
-        /// Gets or Sets PaymentProcessorAuthorizationCode
+        /// Gets or Sets PartnerAccount
         /// </summary>
-        [DataMember(Name = "payment_processor_authorization_code", EmitDefaultValue = false)]
-        public PaymentProcessorAuthorizationCodeResponse PaymentProcessorAuthorizationCode { get; set; }
+        [DataMember(Name = "partner_account", EmitDefaultValue = false)]
+        public PartnerAccountResponse PartnerAccount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +53,8 @@ namespace MX.Platform.CSharp.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PaymentProcessorAuthorizationCodeResponseBody {\n");
-            sb.Append("  PaymentProcessorAuthorizationCode: ").Append(PaymentProcessorAuthorizationCode).Append("\n");
+            sb.Append("class PartnerAccountResponseBody {\n");
+            sb.Append("  PartnerAccount: ").Append(PartnerAccount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,15 +75,15 @@ namespace MX.Platform.CSharp.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PaymentProcessorAuthorizationCodeResponseBody);
+            return this.Equals(input as PartnerAccountResponseBody);
         }
 
         /// <summary>
-        /// Returns true if PaymentProcessorAuthorizationCodeResponseBody instances are equal
+        /// Returns true if PartnerAccountResponseBody instances are equal
         /// </summary>
-        /// <param name="input">Instance of PaymentProcessorAuthorizationCodeResponseBody to be compared</param>
+        /// <param name="input">Instance of PartnerAccountResponseBody to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PaymentProcessorAuthorizationCodeResponseBody input)
+        public bool Equals(PartnerAccountResponseBody input)
         {
             if (input == null)
             {
@@ -91,9 +91,9 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.PaymentProcessorAuthorizationCode == input.PaymentProcessorAuthorizationCode ||
-                    (this.PaymentProcessorAuthorizationCode != null &&
-                    this.PaymentProcessorAuthorizationCode.Equals(input.PaymentProcessorAuthorizationCode))
+                    this.PartnerAccount == input.PartnerAccount ||
+                    (this.PartnerAccount != null &&
+                    this.PartnerAccount.Equals(input.PartnerAccount))
                 );
         }
 
@@ -106,9 +106,9 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PaymentProcessorAuthorizationCode != null)
+                if (this.PartnerAccount != null)
                 {
-                    hashCode = (hashCode * 59) + this.PaymentProcessorAuthorizationCode.GetHashCode();
+                    hashCode = (hashCode * 59) + this.PartnerAccount.GetHashCode();
                 }
                 return hashCode;
             }

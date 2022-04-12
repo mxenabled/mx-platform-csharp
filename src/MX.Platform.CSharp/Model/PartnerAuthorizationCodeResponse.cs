@@ -26,25 +26,25 @@ using OpenAPIDateConverter = MX.Platform.CSharp.Client.OpenAPIDateConverter;
 namespace MX.Platform.CSharp.Model
 {
     /// <summary>
-    /// PaymentAccountResponseBody
+    /// PartnerAuthorizationCodeResponse
     /// </summary>
-    [DataContract(Name = "PaymentAccountResponseBody")]
-    public partial class PaymentAccountResponseBody : IEquatable<PaymentAccountResponseBody>, IValidatableObject
+    [DataContract(Name = "PartnerAuthorizationCodeResponse")]
+    public partial class PartnerAuthorizationCodeResponse : IEquatable<PartnerAuthorizationCodeResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PaymentAccountResponseBody" /> class.
+        /// Initializes a new instance of the <see cref="PartnerAuthorizationCodeResponse" /> class.
         /// </summary>
-        /// <param name="paymentAccount">paymentAccount.</param>
-        public PaymentAccountResponseBody(PaymentAccountResponse paymentAccount = default(PaymentAccountResponse))
+        /// <param name="authorizationCode">authorizationCode.</param>
+        public PartnerAuthorizationCodeResponse(string authorizationCode = default(string))
         {
-            this.PaymentAccount = paymentAccount;
+            this.AuthorizationCode = authorizationCode;
         }
 
         /// <summary>
-        /// Gets or Sets PaymentAccount
+        /// Gets or Sets AuthorizationCode
         /// </summary>
-        [DataMember(Name = "payment_account", EmitDefaultValue = false)]
-        public PaymentAccountResponse PaymentAccount { get; set; }
+        [DataMember(Name = "authorization_code", EmitDefaultValue = true)]
+        public string AuthorizationCode { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +53,8 @@ namespace MX.Platform.CSharp.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PaymentAccountResponseBody {\n");
-            sb.Append("  PaymentAccount: ").Append(PaymentAccount).Append("\n");
+            sb.Append("class PartnerAuthorizationCodeResponse {\n");
+            sb.Append("  AuthorizationCode: ").Append(AuthorizationCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,15 +75,15 @@ namespace MX.Platform.CSharp.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PaymentAccountResponseBody);
+            return this.Equals(input as PartnerAuthorizationCodeResponse);
         }
 
         /// <summary>
-        /// Returns true if PaymentAccountResponseBody instances are equal
+        /// Returns true if PartnerAuthorizationCodeResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of PaymentAccountResponseBody to be compared</param>
+        /// <param name="input">Instance of PartnerAuthorizationCodeResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PaymentAccountResponseBody input)
+        public bool Equals(PartnerAuthorizationCodeResponse input)
         {
             if (input == null)
             {
@@ -91,9 +91,9 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.PaymentAccount == input.PaymentAccount ||
-                    (this.PaymentAccount != null &&
-                    this.PaymentAccount.Equals(input.PaymentAccount))
+                    this.AuthorizationCode == input.AuthorizationCode ||
+                    (this.AuthorizationCode != null &&
+                    this.AuthorizationCode.Equals(input.AuthorizationCode))
                 );
         }
 
@@ -106,9 +106,9 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PaymentAccount != null)
+                if (this.AuthorizationCode != null)
                 {
-                    hashCode = (hashCode * 59) + this.PaymentAccount.GetHashCode();
+                    hashCode = (hashCode * 59) + this.AuthorizationCode.GetHashCode();
                 }
                 return hashCode;
             }

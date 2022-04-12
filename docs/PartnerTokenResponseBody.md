@@ -1,10 +1,12 @@
-# MX.Platform.CSharp.Model.PaymentAccountResponseBody
+# MX.Platform.CSharp.Model.PartnerTokenResponseBody
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PaymentAccount** | [**PaymentAccountResponse**](PaymentAccountResponse.md) |  | [optional] 
+**AccessToken** | **string** |  | [optional] 
+**Scope** | **string** |  | [optional] 
+**TokenType** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

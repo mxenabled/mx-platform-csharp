@@ -1084,39 +1084,39 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
-        /// Test RequestPaymentAccount
+        /// Test RequestPartnerAccount
         /// </summary>
         [Fact]
-        public void RequestPaymentAccountTest()
+        public void RequestPartnerAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.RequestPaymentAccount();
-            //Assert.IsType<PaymentAccountResponseBody>(response);
+            //var response = instance.RequestPartnerAccount();
+            //Assert.IsType<PartnerAccountResponseBody>(response);
         }
 
         /// <summary>
-        /// Test RequestPaymentProcessorAuthorizationCode
+        /// Test RequestPartnerAuthorizationCode
         /// </summary>
         [Fact]
-        public void RequestPaymentProcessorAuthorizationCodeTest()
+        public void RequestPartnerAuthorizationCodeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody = null;
-            //var response = instance.RequestPaymentProcessorAuthorizationCode(paymentProcessorAuthorizationCodeRequestBody);
-            //Assert.IsType<PaymentProcessorAuthorizationCodeResponseBody>(response);
+            //PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody = null;
+            //var response = instance.RequestPartnerAuthorizationCode(partnerAuthorizationCodeRequestBody);
+            //Assert.IsType<PartnerAuthorizationCodeResponseBody>(response);
         }
 
         /// <summary>
-        /// Test RequestPaymentProcessorToken
+        /// Test RequestPartnerToken
         /// </summary>
         [Fact]
-        public void RequestPaymentProcessorTokenTest()
+        public void RequestPartnerTokenTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string code = null;
             //string grantType = null;
-            //var response = instance.RequestPaymentProcessorToken(code, grantType);
-            //Assert.IsType<PaymentProcessorTokenResponseBody>(response);
+            //var response = instance.RequestPartnerToken(code, grantType);
+            //Assert.IsType<PartnerTokenResponseBody>(response);
         }
 
         /// <summary>

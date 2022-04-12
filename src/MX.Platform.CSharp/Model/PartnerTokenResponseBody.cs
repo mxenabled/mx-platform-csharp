@@ -26,25 +26,41 @@ using OpenAPIDateConverter = MX.Platform.CSharp.Client.OpenAPIDateConverter;
 namespace MX.Platform.CSharp.Model
 {
     /// <summary>
-    /// PaymentProcessorAuthorizationCodeRequestBody
+    /// PartnerTokenResponseBody
     /// </summary>
-    [DataContract(Name = "PaymentProcessorAuthorizationCodeRequestBody")]
-    public partial class PaymentProcessorAuthorizationCodeRequestBody : IEquatable<PaymentProcessorAuthorizationCodeRequestBody>, IValidatableObject
+    [DataContract(Name = "PartnerTokenResponseBody")]
+    public partial class PartnerTokenResponseBody : IEquatable<PartnerTokenResponseBody>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PaymentProcessorAuthorizationCodeRequestBody" /> class.
+        /// Initializes a new instance of the <see cref="PartnerTokenResponseBody" /> class.
         /// </summary>
-        /// <param name="paymentProcessorAuthorizationCode">paymentProcessorAuthorizationCode.</param>
-        public PaymentProcessorAuthorizationCodeRequestBody(PaymentProcessorAuthorizationCodeRequest paymentProcessorAuthorizationCode = default(PaymentProcessorAuthorizationCodeRequest))
+        /// <param name="accessToken">accessToken.</param>
+        /// <param name="scope">scope.</param>
+        /// <param name="tokenType">tokenType.</param>
+        public PartnerTokenResponseBody(string accessToken = default(string), string scope = default(string), string tokenType = default(string))
         {
-            this.PaymentProcessorAuthorizationCode = paymentProcessorAuthorizationCode;
+            this.AccessToken = accessToken;
+            this.Scope = scope;
+            this.TokenType = tokenType;
         }
 
         /// <summary>
-        /// Gets or Sets PaymentProcessorAuthorizationCode
+        /// Gets or Sets AccessToken
         /// </summary>
-        [DataMember(Name = "payment_processor_authorization_code", EmitDefaultValue = false)]
-        public PaymentProcessorAuthorizationCodeRequest PaymentProcessorAuthorizationCode { get; set; }
+        [DataMember(Name = "access_token", EmitDefaultValue = true)]
+        public string AccessToken { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Scope
+        /// </summary>
+        [DataMember(Name = "scope", EmitDefaultValue = true)]
+        public string Scope { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TokenType
+        /// </summary>
+        [DataMember(Name = "token_type", EmitDefaultValue = true)]
+        public string TokenType { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +69,10 @@ namespace MX.Platform.CSharp.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PaymentProcessorAuthorizationCodeRequestBody {\n");
-            sb.Append("  PaymentProcessorAuthorizationCode: ").Append(PaymentProcessorAuthorizationCode).Append("\n");
+            sb.Append("class PartnerTokenResponseBody {\n");
+            sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
+            sb.Append("  Scope: ").Append(Scope).Append("\n");
+            sb.Append("  TokenType: ").Append(TokenType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,15 +93,15 @@ namespace MX.Platform.CSharp.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PaymentProcessorAuthorizationCodeRequestBody);
+            return this.Equals(input as PartnerTokenResponseBody);
         }
 
         /// <summary>
-        /// Returns true if PaymentProcessorAuthorizationCodeRequestBody instances are equal
+        /// Returns true if PartnerTokenResponseBody instances are equal
         /// </summary>
-        /// <param name="input">Instance of PaymentProcessorAuthorizationCodeRequestBody to be compared</param>
+        /// <param name="input">Instance of PartnerTokenResponseBody to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PaymentProcessorAuthorizationCodeRequestBody input)
+        public bool Equals(PartnerTokenResponseBody input)
         {
             if (input == null)
             {
@@ -91,9 +109,19 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.PaymentProcessorAuthorizationCode == input.PaymentProcessorAuthorizationCode ||
-                    (this.PaymentProcessorAuthorizationCode != null &&
-                    this.PaymentProcessorAuthorizationCode.Equals(input.PaymentProcessorAuthorizationCode))
+                    this.AccessToken == input.AccessToken ||
+                    (this.AccessToken != null &&
+                    this.AccessToken.Equals(input.AccessToken))
+                ) && 
+                (
+                    this.Scope == input.Scope ||
+                    (this.Scope != null &&
+                    this.Scope.Equals(input.Scope))
+                ) && 
+                (
+                    this.TokenType == input.TokenType ||
+                    (this.TokenType != null &&
+                    this.TokenType.Equals(input.TokenType))
                 );
         }
 
@@ -106,9 +134,17 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.PaymentProcessorAuthorizationCode != null)
+                if (this.AccessToken != null)
                 {
-                    hashCode = (hashCode * 59) + this.PaymentProcessorAuthorizationCode.GetHashCode();
+                    hashCode = (hashCode * 59) + this.AccessToken.GetHashCode();
+                }
+                if (this.Scope != null)
+                {
+                    hashCode = (hashCode * 59) + this.Scope.GetHashCode();
+                }
+                if (this.TokenType != null)
+                {
+                    hashCode = (hashCode * 59) + this.TokenType.GetHashCode();
                 }
                 return hashCode;
             }

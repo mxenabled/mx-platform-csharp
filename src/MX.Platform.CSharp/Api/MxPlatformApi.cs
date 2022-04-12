@@ -1878,68 +1878,68 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of OAuthWindowResponseBody</returns>
         ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string));
         /// <summary>
-        /// Request payment account
+        /// Request partner account
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment account.
+        /// Use this endpoint to request a partner account.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PaymentAccountResponseBody</returns>
-        PaymentAccountResponseBody RequestPaymentAccount();
+        /// <returns>PartnerAccountResponseBody</returns>
+        PartnerAccountResponseBody RequestPartnerAccount();
 
         /// <summary>
-        /// Request payment account
+        /// Request partner account
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment account.
+        /// Use this endpoint to request a partner account.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PaymentAccountResponseBody</returns>
-        ApiResponse<PaymentAccountResponseBody> RequestPaymentAccountWithHttpInfo();
+        /// <returns>ApiResponse of PartnerAccountResponseBody</returns>
+        ApiResponse<PartnerAccountResponseBody> RequestPartnerAccountWithHttpInfo();
         /// <summary>
-        /// Request payment processor authorization code
+        /// Request partner authorization code
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment processor authorization code.
+        /// Use this endpoint to request a partner authorization code.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentProcessorAuthorizationCodeRequestBody">Payment processor authorization code object containing account_guid, member_guid, and user_guid.</param>
-        /// <returns>PaymentProcessorAuthorizationCodeResponseBody</returns>
-        PaymentProcessorAuthorizationCodeResponseBody RequestPaymentProcessorAuthorizationCode(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody);
+        /// <param name="partnerAuthorizationCodeRequestBody">Partner authorization code object containing account_guid, member_guid, and user_guid.</param>
+        /// <returns>PartnerAuthorizationCodeResponseBody</returns>
+        PartnerAuthorizationCodeResponseBody RequestPartnerAuthorizationCode(PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody);
 
         /// <summary>
-        /// Request payment processor authorization code
+        /// Request partner authorization code
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment processor authorization code.
+        /// Use this endpoint to request a partner authorization code.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentProcessorAuthorizationCodeRequestBody">Payment processor authorization code object containing account_guid, member_guid, and user_guid.</param>
-        /// <returns>ApiResponse of PaymentProcessorAuthorizationCodeResponseBody</returns>
-        ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> RequestPaymentProcessorAuthorizationCodeWithHttpInfo(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody);
+        /// <param name="partnerAuthorizationCodeRequestBody">Partner authorization code object containing account_guid, member_guid, and user_guid.</param>
+        /// <returns>ApiResponse of PartnerAuthorizationCodeResponseBody</returns>
+        ApiResponse<PartnerAuthorizationCodeResponseBody> RequestPartnerAuthorizationCodeWithHttpInfo(PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody);
         /// <summary>
-        /// Request payment processor token
+        /// Request partner token
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment processor token.
+        /// Use this endpoint to request a partner token.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="code">Code to request processor token. (optional)</param>
+        /// <param name="code">Code to request partner token. (optional)</param>
         /// <param name="grantType">Specify grant type. (optional)</param>
-        /// <returns>PaymentProcessorTokenResponseBody</returns>
-        PaymentProcessorTokenResponseBody RequestPaymentProcessorToken(string code = default(string), string grantType = default(string));
+        /// <returns>PartnerTokenResponseBody</returns>
+        PartnerTokenResponseBody RequestPartnerToken(string code = default(string), string grantType = default(string));
 
         /// <summary>
-        /// Request payment processor token
+        /// Request partner token
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment processor token.
+        /// Use this endpoint to request a partner token.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="code">Code to request processor token. (optional)</param>
+        /// <param name="code">Code to request partner token. (optional)</param>
         /// <param name="grantType">Specify grant type. (optional)</param>
-        /// <returns>ApiResponse of PaymentProcessorTokenResponseBody</returns>
-        ApiResponse<PaymentProcessorTokenResponseBody> RequestPaymentProcessorTokenWithHttpInfo(string code = default(string), string grantType = default(string));
+        /// <returns>ApiResponse of PartnerTokenResponseBody</returns>
+        ApiResponse<PartnerTokenResponseBody> RequestPartnerTokenWithHttpInfo(string code = default(string), string grantType = default(string));
         /// <summary>
         /// Request widget url
         /// </summary>
@@ -4305,74 +4305,74 @@ namespace MX.Platform.CSharp.Api
         /// <returns>Task of ApiResponse (OAuthWindowResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Request payment account
+        /// Request partner account
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment account.
+        /// Use this endpoint to request a partner account.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaymentAccountResponseBody</returns>
-        System.Threading.Tasks.Task<PaymentAccountResponseBody> RequestPaymentAccountAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PartnerAccountResponseBody</returns>
+        System.Threading.Tasks.Task<PartnerAccountResponseBody> RequestPartnerAccountAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Request payment account
+        /// Request partner account
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment account.
+        /// Use this endpoint to request a partner account.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaymentAccountResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentAccountResponseBody>> RequestPaymentAccountWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PartnerAccountResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PartnerAccountResponseBody>> RequestPartnerAccountWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Request payment processor authorization code
+        /// Request partner authorization code
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment processor authorization code.
+        /// Use this endpoint to request a partner authorization code.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentProcessorAuthorizationCodeRequestBody">Payment processor authorization code object containing account_guid, member_guid, and user_guid.</param>
+        /// <param name="partnerAuthorizationCodeRequestBody">Partner authorization code object containing account_guid, member_guid, and user_guid.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaymentProcessorAuthorizationCodeResponseBody</returns>
-        System.Threading.Tasks.Task<PaymentProcessorAuthorizationCodeResponseBody> RequestPaymentProcessorAuthorizationCodeAsync(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PartnerAuthorizationCodeResponseBody</returns>
+        System.Threading.Tasks.Task<PartnerAuthorizationCodeResponseBody> RequestPartnerAuthorizationCodeAsync(PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Request payment processor authorization code
+        /// Request partner authorization code
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment processor authorization code.
+        /// Use this endpoint to request a partner authorization code.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentProcessorAuthorizationCodeRequestBody">Payment processor authorization code object containing account_guid, member_guid, and user_guid.</param>
+        /// <param name="partnerAuthorizationCodeRequestBody">Partner authorization code object containing account_guid, member_guid, and user_guid.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaymentProcessorAuthorizationCodeResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentProcessorAuthorizationCodeResponseBody>> RequestPaymentProcessorAuthorizationCodeWithHttpInfoAsync(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PartnerAuthorizationCodeResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PartnerAuthorizationCodeResponseBody>> RequestPartnerAuthorizationCodeWithHttpInfoAsync(PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Request payment processor token
+        /// Request partner token
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment processor token.
+        /// Use this endpoint to request a partner token.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="code">Code to request processor token. (optional)</param>
+        /// <param name="code">Code to request partner token. (optional)</param>
         /// <param name="grantType">Specify grant type. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaymentProcessorTokenResponseBody</returns>
-        System.Threading.Tasks.Task<PaymentProcessorTokenResponseBody> RequestPaymentProcessorTokenAsync(string code = default(string), string grantType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of PartnerTokenResponseBody</returns>
+        System.Threading.Tasks.Task<PartnerTokenResponseBody> RequestPartnerTokenAsync(string code = default(string), string grantType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Request payment processor token
+        /// Request partner token
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to request a payment processor token.
+        /// Use this endpoint to request a partner token.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="code">Code to request processor token. (optional)</param>
+        /// <param name="code">Code to request partner token. (optional)</param>
         /// <param name="grantType">Specify grant type. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaymentProcessorTokenResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PaymentProcessorTokenResponseBody>> RequestPaymentProcessorTokenWithHttpInfoAsync(string code = default(string), string grantType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (PartnerTokenResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PartnerTokenResponseBody>> RequestPartnerTokenWithHttpInfoAsync(string code = default(string), string grantType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Request widget url
         /// </summary>
@@ -17804,22 +17804,22 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Request payment account Use this endpoint to request a payment account.
+        /// Request partner account Use this endpoint to request a partner account.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>PaymentAccountResponseBody</returns>
-        public PaymentAccountResponseBody RequestPaymentAccount()
+        /// <returns>PartnerAccountResponseBody</returns>
+        public PartnerAccountResponseBody RequestPartnerAccount()
         {
-            MX.Platform.CSharp.Client.ApiResponse<PaymentAccountResponseBody> localVarResponse = RequestPaymentAccountWithHttpInfo();
+            MX.Platform.CSharp.Client.ApiResponse<PartnerAccountResponseBody> localVarResponse = RequestPartnerAccountWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Request payment account Use this endpoint to request a payment account.
+        /// Request partner account Use this endpoint to request a partner account.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of PaymentAccountResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<PaymentAccountResponseBody> RequestPaymentAccountWithHttpInfo()
+        /// <returns>ApiResponse of PartnerAccountResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<PartnerAccountResponseBody> RequestPartnerAccountWithHttpInfo()
         {
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -17852,10 +17852,10 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<PaymentAccountResponseBody>("/payment_account", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<PartnerAccountResponseBody>("/partner_account", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RequestPaymentAccount", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RequestPartnerAccount", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -17866,24 +17866,24 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Request payment account Use this endpoint to request a payment account.
+        /// Request partner account Use this endpoint to request a partner account.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaymentAccountResponseBody</returns>
-        public async System.Threading.Tasks.Task<PaymentAccountResponseBody> RequestPaymentAccountAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PartnerAccountResponseBody</returns>
+        public async System.Threading.Tasks.Task<PartnerAccountResponseBody> RequestPartnerAccountAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<PaymentAccountResponseBody> localVarResponse = await RequestPaymentAccountWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<PartnerAccountResponseBody> localVarResponse = await RequestPartnerAccountWithHttpInfoAsync(cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Request payment account Use this endpoint to request a payment account.
+        /// Request partner account Use this endpoint to request a partner account.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaymentAccountResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<PaymentAccountResponseBody>> RequestPaymentAccountWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PartnerAccountResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<PartnerAccountResponseBody>> RequestPartnerAccountWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17917,11 +17917,11 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<PaymentAccountResponseBody>("/payment_account", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<PartnerAccountResponseBody>("/partner_account", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RequestPaymentAccount", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RequestPartnerAccount", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -17932,29 +17932,29 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Request payment processor authorization code Use this endpoint to request a payment processor authorization code.
+        /// Request partner authorization code Use this endpoint to request a partner authorization code.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentProcessorAuthorizationCodeRequestBody">Payment processor authorization code object containing account_guid, member_guid, and user_guid.</param>
-        /// <returns>PaymentProcessorAuthorizationCodeResponseBody</returns>
-        public PaymentProcessorAuthorizationCodeResponseBody RequestPaymentProcessorAuthorizationCode(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody)
+        /// <param name="partnerAuthorizationCodeRequestBody">Partner authorization code object containing account_guid, member_guid, and user_guid.</param>
+        /// <returns>PartnerAuthorizationCodeResponseBody</returns>
+        public PartnerAuthorizationCodeResponseBody RequestPartnerAuthorizationCode(PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody)
         {
-            MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> localVarResponse = RequestPaymentProcessorAuthorizationCodeWithHttpInfo(paymentProcessorAuthorizationCodeRequestBody);
+            MX.Platform.CSharp.Client.ApiResponse<PartnerAuthorizationCodeResponseBody> localVarResponse = RequestPartnerAuthorizationCodeWithHttpInfo(partnerAuthorizationCodeRequestBody);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Request payment processor authorization code Use this endpoint to request a payment processor authorization code.
+        /// Request partner authorization code Use this endpoint to request a partner authorization code.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentProcessorAuthorizationCodeRequestBody">Payment processor authorization code object containing account_guid, member_guid, and user_guid.</param>
-        /// <returns>ApiResponse of PaymentProcessorAuthorizationCodeResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> RequestPaymentProcessorAuthorizationCodeWithHttpInfo(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody)
+        /// <param name="partnerAuthorizationCodeRequestBody">Partner authorization code object containing account_guid, member_guid, and user_guid.</param>
+        /// <returns>ApiResponse of PartnerAuthorizationCodeResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<PartnerAuthorizationCodeResponseBody> RequestPartnerAuthorizationCodeWithHttpInfo(PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody)
         {
-            // verify the required parameter 'paymentProcessorAuthorizationCodeRequestBody' is set
-            if (paymentProcessorAuthorizationCodeRequestBody == null)
+            // verify the required parameter 'partnerAuthorizationCodeRequestBody' is set
+            if (partnerAuthorizationCodeRequestBody == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'paymentProcessorAuthorizationCodeRequestBody' when calling MxPlatformApi->RequestPaymentProcessorAuthorizationCode");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'partnerAuthorizationCodeRequestBody' when calling MxPlatformApi->RequestPartnerAuthorizationCode");
             }
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -17980,7 +17980,7 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = paymentProcessorAuthorizationCodeRequestBody;
+            localVarRequestOptions.Data = partnerAuthorizationCodeRequestBody;
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -17990,10 +17990,10 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PaymentProcessorAuthorizationCodeResponseBody>("/payment_processor_authorization_code", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PartnerAuthorizationCodeResponseBody>("/partner_authorization_code", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RequestPaymentProcessorAuthorizationCode", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RequestPartnerAuthorizationCode", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -18004,31 +18004,31 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Request payment processor authorization code Use this endpoint to request a payment processor authorization code.
+        /// Request partner authorization code Use this endpoint to request a partner authorization code.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentProcessorAuthorizationCodeRequestBody">Payment processor authorization code object containing account_guid, member_guid, and user_guid.</param>
+        /// <param name="partnerAuthorizationCodeRequestBody">Partner authorization code object containing account_guid, member_guid, and user_guid.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaymentProcessorAuthorizationCodeResponseBody</returns>
-        public async System.Threading.Tasks.Task<PaymentProcessorAuthorizationCodeResponseBody> RequestPaymentProcessorAuthorizationCodeAsync(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PartnerAuthorizationCodeResponseBody</returns>
+        public async System.Threading.Tasks.Task<PartnerAuthorizationCodeResponseBody> RequestPartnerAuthorizationCodeAsync(PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> localVarResponse = await RequestPaymentProcessorAuthorizationCodeWithHttpInfoAsync(paymentProcessorAuthorizationCodeRequestBody, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<PartnerAuthorizationCodeResponseBody> localVarResponse = await RequestPartnerAuthorizationCodeWithHttpInfoAsync(partnerAuthorizationCodeRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Request payment processor authorization code Use this endpoint to request a payment processor authorization code.
+        /// Request partner authorization code Use this endpoint to request a partner authorization code.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="paymentProcessorAuthorizationCodeRequestBody">Payment processor authorization code object containing account_guid, member_guid, and user_guid.</param>
+        /// <param name="partnerAuthorizationCodeRequestBody">Partner authorization code object containing account_guid, member_guid, and user_guid.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaymentProcessorAuthorizationCodeResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorAuthorizationCodeResponseBody>> RequestPaymentProcessorAuthorizationCodeWithHttpInfoAsync(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PartnerAuthorizationCodeResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<PartnerAuthorizationCodeResponseBody>> RequestPartnerAuthorizationCodeWithHttpInfoAsync(PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            // verify the required parameter 'paymentProcessorAuthorizationCodeRequestBody' is set
-            if (paymentProcessorAuthorizationCodeRequestBody == null)
+            // verify the required parameter 'partnerAuthorizationCodeRequestBody' is set
+            if (partnerAuthorizationCodeRequestBody == null)
             {
-                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'paymentProcessorAuthorizationCodeRequestBody' when calling MxPlatformApi->RequestPaymentProcessorAuthorizationCode");
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'partnerAuthorizationCodeRequestBody' when calling MxPlatformApi->RequestPartnerAuthorizationCode");
             }
 
 
@@ -18055,7 +18055,7 @@ namespace MX.Platform.CSharp.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.Data = paymentProcessorAuthorizationCodeRequestBody;
+            localVarRequestOptions.Data = partnerAuthorizationCodeRequestBody;
 
             // authentication (basicAuth) required
             // http basic authentication required
@@ -18065,11 +18065,11 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<PaymentProcessorAuthorizationCodeResponseBody>("/payment_processor_authorization_code", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PartnerAuthorizationCodeResponseBody>("/partner_authorization_code", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RequestPaymentProcessorAuthorizationCode", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RequestPartnerAuthorizationCode", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -18080,26 +18080,26 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Request payment processor token Use this endpoint to request a payment processor token.
+        /// Request partner token Use this endpoint to request a partner token.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="code">Code to request processor token. (optional)</param>
+        /// <param name="code">Code to request partner token. (optional)</param>
         /// <param name="grantType">Specify grant type. (optional)</param>
-        /// <returns>PaymentProcessorTokenResponseBody</returns>
-        public PaymentProcessorTokenResponseBody RequestPaymentProcessorToken(string code = default(string), string grantType = default(string))
+        /// <returns>PartnerTokenResponseBody</returns>
+        public PartnerTokenResponseBody RequestPartnerToken(string code = default(string), string grantType = default(string))
         {
-            MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorTokenResponseBody> localVarResponse = RequestPaymentProcessorTokenWithHttpInfo(code, grantType);
+            MX.Platform.CSharp.Client.ApiResponse<PartnerTokenResponseBody> localVarResponse = RequestPartnerTokenWithHttpInfo(code, grantType);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Request payment processor token Use this endpoint to request a payment processor token.
+        /// Request partner token Use this endpoint to request a partner token.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="code">Code to request processor token. (optional)</param>
+        /// <param name="code">Code to request partner token. (optional)</param>
         /// <param name="grantType">Specify grant type. (optional)</param>
-        /// <returns>ApiResponse of PaymentProcessorTokenResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorTokenResponseBody> RequestPaymentProcessorTokenWithHttpInfo(string code = default(string), string grantType = default(string))
+        /// <returns>ApiResponse of PartnerTokenResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<PartnerTokenResponseBody> RequestPartnerTokenWithHttpInfo(string code = default(string), string grantType = default(string))
         {
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -18140,10 +18140,10 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<PaymentProcessorTokenResponseBody>("/payment_processor_token", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<PartnerTokenResponseBody>("/partner_token", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RequestPaymentProcessorToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RequestPartnerToken", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -18154,28 +18154,28 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Request payment processor token Use this endpoint to request a payment processor token.
+        /// Request partner token Use this endpoint to request a partner token.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="code">Code to request processor token. (optional)</param>
+        /// <param name="code">Code to request partner token. (optional)</param>
         /// <param name="grantType">Specify grant type. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of PaymentProcessorTokenResponseBody</returns>
-        public async System.Threading.Tasks.Task<PaymentProcessorTokenResponseBody> RequestPaymentProcessorTokenAsync(string code = default(string), string grantType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of PartnerTokenResponseBody</returns>
+        public async System.Threading.Tasks.Task<PartnerTokenResponseBody> RequestPartnerTokenAsync(string code = default(string), string grantType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorTokenResponseBody> localVarResponse = await RequestPaymentProcessorTokenWithHttpInfoAsync(code, grantType, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<PartnerTokenResponseBody> localVarResponse = await RequestPartnerTokenWithHttpInfoAsync(code, grantType, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Request payment processor token Use this endpoint to request a payment processor token.
+        /// Request partner token Use this endpoint to request a partner token.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="code">Code to request processor token. (optional)</param>
+        /// <param name="code">Code to request partner token. (optional)</param>
         /// <param name="grantType">Specify grant type. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (PaymentProcessorTokenResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorTokenResponseBody>> RequestPaymentProcessorTokenWithHttpInfoAsync(string code = default(string), string grantType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (PartnerTokenResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<PartnerTokenResponseBody>> RequestPartnerTokenWithHttpInfoAsync(string code = default(string), string grantType = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -18217,11 +18217,11 @@ namespace MX.Platform.CSharp.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.PostAsync<PaymentProcessorTokenResponseBody>("/payment_processor_token", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PartnerTokenResponseBody>("/partner_token", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("RequestPaymentProcessorToken", localVarResponse);
+                Exception _exception = this.ExceptionFactory("RequestPartnerToken", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

@@ -26,25 +26,41 @@ using OpenAPIDateConverter = MX.Platform.CSharp.Client.OpenAPIDateConverter;
 namespace MX.Platform.CSharp.Model
 {
     /// <summary>
-    /// PaymentProcessorAuthorizationCodeResponse
+    /// PartnerAuthorizationCodeRequest
     /// </summary>
-    [DataContract(Name = "PaymentProcessorAuthorizationCodeResponse")]
-    public partial class PaymentProcessorAuthorizationCodeResponse : IEquatable<PaymentProcessorAuthorizationCodeResponse>, IValidatableObject
+    [DataContract(Name = "PartnerAuthorizationCodeRequest")]
+    public partial class PartnerAuthorizationCodeRequest : IEquatable<PartnerAuthorizationCodeRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PaymentProcessorAuthorizationCodeResponse" /> class.
+        /// Initializes a new instance of the <see cref="PartnerAuthorizationCodeRequest" /> class.
         /// </summary>
-        /// <param name="authorizationCode">authorizationCode.</param>
-        public PaymentProcessorAuthorizationCodeResponse(string authorizationCode = default(string))
+        /// <param name="accountGuid">accountGuid.</param>
+        /// <param name="memberGuid">memberGuid.</param>
+        /// <param name="userGuid">userGuid.</param>
+        public PartnerAuthorizationCodeRequest(string accountGuid = default(string), string memberGuid = default(string), string userGuid = default(string))
         {
-            this.AuthorizationCode = authorizationCode;
+            this.AccountGuid = accountGuid;
+            this.MemberGuid = memberGuid;
+            this.UserGuid = userGuid;
         }
 
         /// <summary>
-        /// Gets or Sets AuthorizationCode
+        /// Gets or Sets AccountGuid
         /// </summary>
-        [DataMember(Name = "authorization_code", EmitDefaultValue = true)]
-        public string AuthorizationCode { get; set; }
+        [DataMember(Name = "account_guid", EmitDefaultValue = false)]
+        public string AccountGuid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MemberGuid
+        /// </summary>
+        [DataMember(Name = "member_guid", EmitDefaultValue = false)]
+        public string MemberGuid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UserGuid
+        /// </summary>
+        [DataMember(Name = "user_guid", EmitDefaultValue = false)]
+        public string UserGuid { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,8 +69,10 @@ namespace MX.Platform.CSharp.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append("class PaymentProcessorAuthorizationCodeResponse {\n");
-            sb.Append("  AuthorizationCode: ").Append(AuthorizationCode).Append("\n");
+            sb.Append("class PartnerAuthorizationCodeRequest {\n");
+            sb.Append("  AccountGuid: ").Append(AccountGuid).Append("\n");
+            sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
+            sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,15 +93,15 @@ namespace MX.Platform.CSharp.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PaymentProcessorAuthorizationCodeResponse);
+            return this.Equals(input as PartnerAuthorizationCodeRequest);
         }
 
         /// <summary>
-        /// Returns true if PaymentProcessorAuthorizationCodeResponse instances are equal
+        /// Returns true if PartnerAuthorizationCodeRequest instances are equal
         /// </summary>
-        /// <param name="input">Instance of PaymentProcessorAuthorizationCodeResponse to be compared</param>
+        /// <param name="input">Instance of PartnerAuthorizationCodeRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PaymentProcessorAuthorizationCodeResponse input)
+        public bool Equals(PartnerAuthorizationCodeRequest input)
         {
             if (input == null)
             {
@@ -91,9 +109,19 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.AuthorizationCode == input.AuthorizationCode ||
-                    (this.AuthorizationCode != null &&
-                    this.AuthorizationCode.Equals(input.AuthorizationCode))
+                    this.AccountGuid == input.AccountGuid ||
+                    (this.AccountGuid != null &&
+                    this.AccountGuid.Equals(input.AccountGuid))
+                ) && 
+                (
+                    this.MemberGuid == input.MemberGuid ||
+                    (this.MemberGuid != null &&
+                    this.MemberGuid.Equals(input.MemberGuid))
+                ) && 
+                (
+                    this.UserGuid == input.UserGuid ||
+                    (this.UserGuid != null &&
+                    this.UserGuid.Equals(input.UserGuid))
                 );
         }
 
@@ -106,9 +134,17 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AuthorizationCode != null)
+                if (this.AccountGuid != null)
                 {
-                    hashCode = (hashCode * 59) + this.AuthorizationCode.GetHashCode();
+                    hashCode = (hashCode * 59) + this.AccountGuid.GetHashCode();
+                }
+                if (this.MemberGuid != null)
+                {
+                    hashCode = (hashCode * 59) + this.MemberGuid.GetHashCode();
+                }
+                if (this.UserGuid != null)
+                {
+                    hashCode = (hashCode * 59) + this.UserGuid.GetHashCode();
                 }
                 return hashCode;
             }

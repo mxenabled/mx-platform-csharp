@@ -1,12 +1,10 @@
-# MX.Platform.CSharp.Model.PaymentProcessorAuthorizationCodeRequest
+# MX.Platform.CSharp.Model.PartnerAuthorizationCodeResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountGuid** | **string** |  | [optional] 
-**MemberGuid** | **string** |  | [optional] 
-**UserGuid** | **string** |  | [optional] 
+**AuthorizationCode** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
