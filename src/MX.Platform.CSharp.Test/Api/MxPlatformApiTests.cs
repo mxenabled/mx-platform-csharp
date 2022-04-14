@@ -1084,42 +1084,6 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
-        /// Test RequestPartnerAccount
-        /// </summary>
-        [Fact]
-        public void RequestPartnerAccountTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.RequestPartnerAccount();
-            //Assert.IsType<PartnerAccountResponseBody>(response);
-        }
-
-        /// <summary>
-        /// Test RequestPartnerAuthorizationCode
-        /// </summary>
-        [Fact]
-        public void RequestPartnerAuthorizationCodeTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //PartnerAuthorizationCodeRequestBody partnerAuthorizationCodeRequestBody = null;
-            //var response = instance.RequestPartnerAuthorizationCode(partnerAuthorizationCodeRequestBody);
-            //Assert.IsType<PartnerAuthorizationCodeResponseBody>(response);
-        }
-
-        /// <summary>
-        /// Test RequestPartnerToken
-        /// </summary>
-        [Fact]
-        public void RequestPartnerTokenTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string code = null;
-            //string grantType = null;
-            //var response = instance.RequestPartnerToken(code, grantType);
-            //Assert.IsType<PartnerTokenResponseBody>(response);
-        }
-
-        /// <summary>
         /// Test RequestWidgetURL
         /// </summary>
         [Fact]
