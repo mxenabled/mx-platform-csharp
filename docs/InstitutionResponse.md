@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | **string** |  | [optional] 
+**InstructionalText** | **string** |  | [optional] 
 **MediumLogoUrl** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **SmallLogoUrl** | **string** |  | [optional] 
