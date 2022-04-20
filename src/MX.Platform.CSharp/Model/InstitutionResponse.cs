@@ -35,6 +35,7 @@ namespace MX.Platform.CSharp.Model
         /// Initializes a new instance of the <see cref="InstitutionResponse" /> class.
         /// </summary>
         /// <param name="code">code.</param>
+        /// <param name="instructionalText">instructionalText.</param>
         /// <param name="mediumLogoUrl">mediumLogoUrl.</param>
         /// <param name="name">name.</param>
         /// <param name="smallLogoUrl">smallLogoUrl.</param>
@@ -44,9 +45,10 @@ namespace MX.Platform.CSharp.Model
         /// <param name="supportsOauth">supportsOauth.</param>
         /// <param name="supportsTransactionHistory">supportsTransactionHistory.</param>
         /// <param name="url">url.</param>
-        public InstitutionResponse(string code = default(string), string mediumLogoUrl = default(string), string name = default(string), string smallLogoUrl = default(string), bool? supportsAccountIdentification = default(bool?), bool? supportsAccountStatement = default(bool?), bool? supportsAccountVerification = default(bool?), bool? supportsOauth = default(bool?), bool? supportsTransactionHistory = default(bool?), string url = default(string))
+        public InstitutionResponse(string code = default(string), string instructionalText = default(string), string mediumLogoUrl = default(string), string name = default(string), string smallLogoUrl = default(string), bool? supportsAccountIdentification = default(bool?), bool? supportsAccountStatement = default(bool?), bool? supportsAccountVerification = default(bool?), bool? supportsOauth = default(bool?), bool? supportsTransactionHistory = default(bool?), string url = default(string))
         {
             this.Code = code;
+            this.InstructionalText = instructionalText;
             this.MediumLogoUrl = mediumLogoUrl;
             this.Name = name;
             this.SmallLogoUrl = smallLogoUrl;
@@ -63,6 +65,12 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "code", EmitDefaultValue = true)]
         public string Code { get; set; }
+
+        /// <summary>
+        /// Gets or Sets InstructionalText
+        /// </summary>
+        [DataMember(Name = "instructional_text", EmitDefaultValue = true)]
+        public string InstructionalText { get; set; }
 
         /// <summary>
         /// Gets or Sets MediumLogoUrl
@@ -127,6 +135,7 @@ namespace MX.Platform.CSharp.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class InstitutionResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  InstructionalText: ").Append(InstructionalText).Append("\n");
             sb.Append("  MediumLogoUrl: ").Append(MediumLogoUrl).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SmallLogoUrl: ").Append(SmallLogoUrl).Append("\n");
@@ -175,6 +184,11 @@ namespace MX.Platform.CSharp.Model
                     this.Code == input.Code ||
                     (this.Code != null &&
                     this.Code.Equals(input.Code))
+                ) && 
+                (
+                    this.InstructionalText == input.InstructionalText ||
+                    (this.InstructionalText != null &&
+                    this.InstructionalText.Equals(input.InstructionalText))
                 ) && 
                 (
                     this.MediumLogoUrl == input.MediumLogoUrl ||
@@ -235,6 +249,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.Code != null)
                 {
                     hashCode = (hashCode * 59) + this.Code.GetHashCode();
+                }
+                if (this.InstructionalText != null)
+                {
+                    hashCode = (hashCode * 59) + this.InstructionalText.GetHashCode();
                 }
                 if (this.MediumLogoUrl != null)
                 {

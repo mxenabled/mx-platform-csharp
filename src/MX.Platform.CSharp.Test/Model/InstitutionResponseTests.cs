@@ -65,6 +65,14 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'Code'
         }
         /// <summary>
+        /// Test the property 'InstructionalText'
+        /// </summary>
+        [Fact]
+        public void InstructionalTextTest()
+        {
+            // TODO unit test for the property 'InstructionalText'
+        }
+        /// <summary>
         /// Test the property 'MediumLogoUrl'
         /// </summary>
         [Fact]
