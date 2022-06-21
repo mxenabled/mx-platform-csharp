@@ -39,6 +39,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WidgetRequest" /> class.
         /// </summary>
+        /// <param name="clientRedirectUrl">clientRedirectUrl.</param>
         /// <param name="colorScheme">colorScheme.</param>
         /// <param name="currentInstitutionCode">currentInstitutionCode.</param>
         /// <param name="currentInstitutionGuid">currentInstitutionGuid.</param>
@@ -50,15 +51,15 @@ namespace MX.Platform.CSharp.Model
         /// <param name="uiMessageVersion">uiMessageVersion.</param>
         /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
-        /// <param name="waitForFullAggregation">waitForFullAggregation.</param>
         /// <param name="widgetType">widgetType (required).</param>
-        public WidgetRequest(string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableInstitutionSearch = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string mode = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), bool waitForFullAggregation = default(bool), string widgetType = default(string))
+        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableInstitutionSearch = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string mode = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
         {
             // to ensure "widgetType" is required (not null)
             if (widgetType == null) {
                 throw new ArgumentNullException("widgetType is a required property for WidgetRequest and cannot be null");
             }
             this.WidgetType = widgetType;
+            this.ClientRedirectUrl = clientRedirectUrl;
             this.ColorScheme = colorScheme;
             this.CurrentInstitutionCode = currentInstitutionCode;
             this.CurrentInstitutionGuid = currentInstitutionGuid;
@@ -70,8 +71,13 @@ namespace MX.Platform.CSharp.Model
             this.UiMessageVersion = uiMessageVersion;
             this.UiMessageWebviewUrlScheme = uiMessageWebviewUrlScheme;
             this.UpdateCredentials = updateCredentials;
-            this.WaitForFullAggregation = waitForFullAggregation;
         }
+
+        /// <summary>
+        /// Gets or Sets ClientRedirectUrl
+        /// </summary>
+        [DataMember(Name = "client_redirect_url", EmitDefaultValue = false)]
+        public string ClientRedirectUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets ColorScheme
@@ -140,12 +146,6 @@ namespace MX.Platform.CSharp.Model
         public bool UpdateCredentials { get; set; }
 
         /// <summary>
-        /// Gets or Sets WaitForFullAggregation
-        /// </summary>
-        [DataMember(Name = "wait_for_full_aggregation", EmitDefaultValue = true)]
-        public bool WaitForFullAggregation { get; set; }
-
-        /// <summary>
         /// Gets or Sets WidgetType
         /// </summary>
         [DataMember(Name = "widget_type", IsRequired = true, EmitDefaultValue = false)]
@@ -159,6 +159,7 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class WidgetRequest {\n");
+            sb.Append("  ClientRedirectUrl: ").Append(ClientRedirectUrl).Append("\n");
             sb.Append("  ColorScheme: ").Append(ColorScheme).Append("\n");
             sb.Append("  CurrentInstitutionCode: ").Append(CurrentInstitutionCode).Append("\n");
             sb.Append("  CurrentInstitutionGuid: ").Append(CurrentInstitutionGuid).Append("\n");
@@ -170,7 +171,6 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  UiMessageVersion: ").Append(UiMessageVersion).Append("\n");
             sb.Append("  UiMessageWebviewUrlScheme: ").Append(UiMessageWebviewUrlScheme).Append("\n");
             sb.Append("  UpdateCredentials: ").Append(UpdateCredentials).Append("\n");
-            sb.Append("  WaitForFullAggregation: ").Append(WaitForFullAggregation).Append("\n");
             sb.Append("  WidgetType: ").Append(WidgetType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -207,6 +207,11 @@ namespace MX.Platform.CSharp.Model
                 return false;
             }
             return 
+                (
+                    this.ClientRedirectUrl == input.ClientRedirectUrl ||
+                    (this.ClientRedirectUrl != null &&
+                    this.ClientRedirectUrl.Equals(input.ClientRedirectUrl))
+                ) && 
                 (
                     this.ColorScheme == input.ColorScheme ||
                     (this.ColorScheme != null &&
@@ -258,10 +263,6 @@ namespace MX.Platform.CSharp.Model
                     this.UpdateCredentials.Equals(input.UpdateCredentials)
                 ) && 
                 (
-                    this.WaitForFullAggregation == input.WaitForFullAggregation ||
-                    this.WaitForFullAggregation.Equals(input.WaitForFullAggregation)
-                ) && 
-                (
                     this.WidgetType == input.WidgetType ||
                     (this.WidgetType != null &&
                     this.WidgetType.Equals(input.WidgetType))
@@ -277,6 +278,10 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.ClientRedirectUrl != null)
+                {
+                    hashCode = (hashCode * 59) + this.ClientRedirectUrl.GetHashCode();
+                }
                 if (this.ColorScheme != null)
                 {
                     hashCode = (hashCode * 59) + this.ColorScheme.GetHashCode();
@@ -306,7 +311,6 @@ namespace MX.Platform.CSharp.Model
                     hashCode = (hashCode * 59) + this.UiMessageWebviewUrlScheme.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.UpdateCredentials.GetHashCode();
-                hashCode = (hashCode * 59) + this.WaitForFullAggregation.GetHashCode();
                 if (this.WidgetType != null)
                 {
                     hashCode = (hashCode * 59) + this.WidgetType.GetHashCode();

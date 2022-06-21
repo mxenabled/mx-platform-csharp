@@ -57,6 +57,14 @@ namespace MX.Platform.CSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'ClientRedirectUrl'
+        /// </summary>
+        [Fact]
+        public void ClientRedirectUrlTest()
+        {
+            // TODO unit test for the property 'ClientRedirectUrl'
+        }
+        /// <summary>
         /// Test the property 'ColorScheme'
         /// </summary>
         [Fact]
@@ -143,14 +151,6 @@ namespace MX.Platform.CSharp.Test.Model
         public void UpdateCredentialsTest()
         {
             // TODO unit test for the property 'UpdateCredentials'
-        }
-        /// <summary>
-        /// Test the property 'WaitForFullAggregation'
-        /// </summary>
-        [Fact]
-        public void WaitForFullAggregationTest()
-        {
-            // TODO unit test for the property 'WaitForFullAggregation'
         }
         /// <summary>
         /// Test the property 'WidgetType'
