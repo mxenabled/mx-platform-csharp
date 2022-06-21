@@ -1076,10 +1076,11 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string memberGuid = null;
             //string userGuid = null;
+            //string clientRedirectUrl = null;
             //string referralSource = null;
             //bool? skipAggregation = null;
             //string uiMessageWebviewUrlScheme = null;
-            //var response = instance.RequestOAuthWindowURI(memberGuid, userGuid, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
+            //var response = instance.RequestOAuthWindowURI(memberGuid, userGuid, clientRedirectUrl, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
             //Assert.IsType<OAuthWindowResponseBody>(response);
         }
 

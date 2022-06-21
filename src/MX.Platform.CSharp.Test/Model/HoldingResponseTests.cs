@@ -129,6 +129,14 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'HoldingType'
         }
         /// <summary>
+        /// Test the property 'HoldingTypeId'
+        /// </summary>
+        [Fact]
+        public void HoldingTypeIdTest()
+        {
+            // TODO unit test for the property 'HoldingTypeId'
+        }
+        /// <summary>
         /// Test the property 'Id'
         /// </summary>
         [Fact]

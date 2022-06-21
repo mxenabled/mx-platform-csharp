@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BackgroundAggregationIsDisabled** | **bool** |  | [optional] 
+**ClientRedirectUrl** | **string** |  | [optional] 
 **Credentials** | [**List&lt;CredentialRequest&gt;**](CredentialRequest.md) |  | 
 **Id** | **string** |  | [optional] 
 **InstitutionCode** | **string** |  | 

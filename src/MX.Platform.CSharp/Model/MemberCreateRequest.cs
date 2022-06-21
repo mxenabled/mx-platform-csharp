@@ -40,13 +40,14 @@ namespace MX.Platform.CSharp.Model
         /// Initializes a new instance of the <see cref="MemberCreateRequest" /> class.
         /// </summary>
         /// <param name="backgroundAggregationIsDisabled">backgroundAggregationIsDisabled.</param>
+        /// <param name="clientRedirectUrl">clientRedirectUrl.</param>
         /// <param name="credentials">credentials (required).</param>
         /// <param name="id">id.</param>
         /// <param name="institutionCode">institutionCode (required).</param>
         /// <param name="isOauth">isOauth.</param>
         /// <param name="metadata">metadata.</param>
         /// <param name="skipAggregation">skipAggregation.</param>
-        public MemberCreateRequest(bool backgroundAggregationIsDisabled = default(bool), List<CredentialRequest> credentials = default(List<CredentialRequest>), string id = default(string), string institutionCode = default(string), bool isOauth = default(bool), string metadata = default(string), bool skipAggregation = default(bool))
+        public MemberCreateRequest(bool backgroundAggregationIsDisabled = default(bool), string clientRedirectUrl = default(string), List<CredentialRequest> credentials = default(List<CredentialRequest>), string id = default(string), string institutionCode = default(string), bool isOauth = default(bool), string metadata = default(string), bool skipAggregation = default(bool))
         {
             // to ensure "credentials" is required (not null)
             if (credentials == null) {
@@ -59,6 +60,7 @@ namespace MX.Platform.CSharp.Model
             }
             this.InstitutionCode = institutionCode;
             this.BackgroundAggregationIsDisabled = backgroundAggregationIsDisabled;
+            this.ClientRedirectUrl = clientRedirectUrl;
             this.Id = id;
             this.IsOauth = isOauth;
             this.Metadata = metadata;
@@ -70,6 +72,12 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "background_aggregation_is_disabled", EmitDefaultValue = true)]
         public bool BackgroundAggregationIsDisabled { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ClientRedirectUrl
+        /// </summary>
+        [DataMember(Name = "client_redirect_url", EmitDefaultValue = false)]
+        public string ClientRedirectUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets Credentials
@@ -116,6 +124,7 @@ namespace MX.Platform.CSharp.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class MemberCreateRequest {\n");
             sb.Append("  BackgroundAggregationIsDisabled: ").Append(BackgroundAggregationIsDisabled).Append("\n");
+            sb.Append("  ClientRedirectUrl: ").Append(ClientRedirectUrl).Append("\n");
             sb.Append("  Credentials: ").Append(Credentials).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
@@ -162,6 +171,11 @@ namespace MX.Platform.CSharp.Model
                     this.BackgroundAggregationIsDisabled.Equals(input.BackgroundAggregationIsDisabled)
                 ) && 
                 (
+                    this.ClientRedirectUrl == input.ClientRedirectUrl ||
+                    (this.ClientRedirectUrl != null &&
+                    this.ClientRedirectUrl.Equals(input.ClientRedirectUrl))
+                ) && 
+                (
                     this.Credentials == input.Credentials ||
                     this.Credentials != null &&
                     input.Credentials != null &&
@@ -202,6 +216,10 @@ namespace MX.Platform.CSharp.Model
             {
                 int hashCode = 41;
                 hashCode = (hashCode * 59) + this.BackgroundAggregationIsDisabled.GetHashCode();
+                if (this.ClientRedirectUrl != null)
+                {
+                    hashCode = (hashCode * 59) + this.ClientRedirectUrl.GetHashCode();
+                }
                 if (this.Credentials != null)
                 {
                     hashCode = (hashCode * 59) + this.Credentials.GetHashCode();

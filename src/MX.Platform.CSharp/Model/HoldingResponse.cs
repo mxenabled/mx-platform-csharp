@@ -43,6 +43,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="description">description.</param>
         /// <param name="guid">guid.</param>
         /// <param name="holdingType">holdingType.</param>
+        /// <param name="holdingTypeId">holdingTypeId.</param>
         /// <param name="id">id.</param>
         /// <param name="marketValue">marketValue.</param>
         /// <param name="memberGuid">memberGuid.</param>
@@ -52,7 +53,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="symbol">symbol.</param>
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
-        public HoldingResponse(string accountGuid = default(string), decimal? costBasis = default(decimal?), string createdAt = default(string), string currencyCode = default(string), string cusip = default(string), decimal? dailyChange = default(decimal?), string description = default(string), string guid = default(string), string holdingType = default(string), string id = default(string), decimal? marketValue = default(decimal?), string memberGuid = default(string), string metadata = default(string), decimal? purchasePrice = default(decimal?), decimal? shares = default(decimal?), string symbol = default(string), string updatedAt = default(string), string userGuid = default(string))
+        public HoldingResponse(string accountGuid = default(string), decimal? costBasis = default(decimal?), string createdAt = default(string), string currencyCode = default(string), string cusip = default(string), decimal? dailyChange = default(decimal?), string description = default(string), string guid = default(string), string holdingType = default(string), int? holdingTypeId = default(int?), string id = default(string), decimal? marketValue = default(decimal?), string memberGuid = default(string), string metadata = default(string), decimal? purchasePrice = default(decimal?), decimal? shares = default(decimal?), string symbol = default(string), string updatedAt = default(string), string userGuid = default(string))
         {
             this.AccountGuid = accountGuid;
             this.CostBasis = costBasis;
@@ -63,6 +64,7 @@ namespace MX.Platform.CSharp.Model
             this.Description = description;
             this.Guid = guid;
             this.HoldingType = holdingType;
+            this.HoldingTypeId = holdingTypeId;
             this.Id = id;
             this.MarketValue = marketValue;
             this.MemberGuid = memberGuid;
@@ -127,6 +129,12 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "holding_type", EmitDefaultValue = true)]
         public string HoldingType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HoldingTypeId
+        /// </summary>
+        [DataMember(Name = "holding_type_id", EmitDefaultValue = true)]
+        public int? HoldingTypeId { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
@@ -199,6 +207,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  HoldingType: ").Append(HoldingType).Append("\n");
+            sb.Append("  HoldingTypeId: ").Append(HoldingTypeId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MarketValue: ").Append(MarketValue).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
@@ -287,6 +296,11 @@ namespace MX.Platform.CSharp.Model
                     this.HoldingType == input.HoldingType ||
                     (this.HoldingType != null &&
                     this.HoldingType.Equals(input.HoldingType))
+                ) && 
+                (
+                    this.HoldingTypeId == input.HoldingTypeId ||
+                    (this.HoldingTypeId != null &&
+                    this.HoldingTypeId.Equals(input.HoldingTypeId))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -379,6 +393,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.HoldingType != null)
                 {
                     hashCode = (hashCode * 59) + this.HoldingType.GetHashCode();
+                }
+                if (this.HoldingTypeId != null)
+                {
+                    hashCode = (hashCode * 59) + this.HoldingTypeId.GetHashCode();
                 }
                 if (this.Id != null)
                 {

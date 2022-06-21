@@ -1857,11 +1857,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="clientRedirectUrl">A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <returns>OAuthWindowResponseBody</returns>
-        OAuthWindowResponseBody RequestOAuthWindowURI(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string));
+        OAuthWindowResponseBody RequestOAuthWindowURI(string memberGuid, string userGuid, string clientRedirectUrl = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string));
 
         /// <summary>
         /// Request oauth window uri
@@ -1872,11 +1873,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="clientRedirectUrl">A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <returns>ApiResponse of OAuthWindowResponseBody</returns>
-        ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string));
+        ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string clientRedirectUrl = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string));
         /// <summary>
         /// Request widget url
         /// </summary>
@@ -4219,12 +4221,13 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="clientRedirectUrl">A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OAuthWindowResponseBody</returns>
-        System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string clientRedirectUrl = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Request oauth window uri
@@ -4235,12 +4238,13 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="clientRedirectUrl">A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OAuthWindowResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string clientRedirectUrl = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Request widget url
         /// </summary>
@@ -17477,13 +17481,14 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="clientRedirectUrl">A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <returns>OAuthWindowResponseBody</returns>
-        public OAuthWindowResponseBody RequestOAuthWindowURI(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string))
+        public OAuthWindowResponseBody RequestOAuthWindowURI(string memberGuid, string userGuid, string clientRedirectUrl = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string))
         {
-            MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> localVarResponse = RequestOAuthWindowURIWithHttpInfo(memberGuid, userGuid, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
+            MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> localVarResponse = RequestOAuthWindowURIWithHttpInfo(memberGuid, userGuid, clientRedirectUrl, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
             return localVarResponse.Data;
         }
 
@@ -17493,11 +17498,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="clientRedirectUrl">A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <returns>ApiResponse of OAuthWindowResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string))
+        public MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> RequestOAuthWindowURIWithHttpInfo(string memberGuid, string userGuid, string clientRedirectUrl = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string))
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -17535,6 +17541,10 @@ namespace MX.Platform.CSharp.Api
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (clientRedirectUrl != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "client_redirect_url", clientRedirectUrl));
+            }
             if (referralSource != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "referral_source", referralSource));
@@ -17575,14 +17585,15 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="clientRedirectUrl">A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of OAuthWindowResponseBody</returns>
-        public async System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string clientRedirectUrl = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> localVarResponse = await RequestOAuthWindowURIWithHttpInfoAsync(memberGuid, userGuid, referralSource, skipAggregation, uiMessageWebviewUrlScheme, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody> localVarResponse = await RequestOAuthWindowURIWithHttpInfoAsync(memberGuid, userGuid, clientRedirectUrl, referralSource, skipAggregation, uiMessageWebviewUrlScheme, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -17592,12 +17603,13 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="clientRedirectUrl">A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="referralSource">Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. (optional)</param>
         /// <param name="skipAggregation">Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. (optional)</param>
-        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (OAuthWindowResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string clientRedirectUrl = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -17636,6 +17648,10 @@ namespace MX.Platform.CSharp.Api
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (clientRedirectUrl != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "client_redirect_url", clientRedirectUrl));
+            }
             if (referralSource != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "referral_source", referralSource));

@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **Description** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **HoldingType** | **string** |  | [optional] 
+**HoldingTypeId** | **int?** |  | [optional] 
 **Id** | **string** |  | [optional] 
 **MarketValue** | **decimal?** |  | [optional] 
 **MemberGuid** | **string** |  | [optional] 
