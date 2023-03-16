@@ -34,15 +34,23 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MemberCreateRequestBody" /> class.
         /// </summary>
+        /// <param name="clientRedirectUrl">clientRedirectUrl.</param>
         /// <param name="member">member.</param>
         /// <param name="referralSource">referralSource.</param>
         /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
-        public MemberCreateRequestBody(MemberCreateRequest member = default(MemberCreateRequest), string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string))
+        public MemberCreateRequestBody(string clientRedirectUrl = default(string), MemberCreateRequest member = default(MemberCreateRequest), string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string))
         {
+            this.ClientRedirectUrl = clientRedirectUrl;
             this.Member = member;
             this.ReferralSource = referralSource;
             this.UiMessageWebviewUrlScheme = uiMessageWebviewUrlScheme;
         }
+
+        /// <summary>
+        /// Gets or Sets ClientRedirectUrl
+        /// </summary>
+        [DataMember(Name = "client_redirect_url", EmitDefaultValue = false)]
+        public string ClientRedirectUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets Member
@@ -70,6 +78,7 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class MemberCreateRequestBody {\n");
+            sb.Append("  ClientRedirectUrl: ").Append(ClientRedirectUrl).Append("\n");
             sb.Append("  Member: ").Append(Member).Append("\n");
             sb.Append("  ReferralSource: ").Append(ReferralSource).Append("\n");
             sb.Append("  UiMessageWebviewUrlScheme: ").Append(UiMessageWebviewUrlScheme).Append("\n");
@@ -109,6 +118,11 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
+                    this.ClientRedirectUrl == input.ClientRedirectUrl ||
+                    (this.ClientRedirectUrl != null &&
+                    this.ClientRedirectUrl.Equals(input.ClientRedirectUrl))
+                ) && 
+                (
                     this.Member == input.Member ||
                     (this.Member != null &&
                     this.Member.Equals(input.Member))
@@ -134,6 +148,10 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.ClientRedirectUrl != null)
+                {
+                    hashCode = (hashCode * 59) + this.ClientRedirectUrl.GetHashCode();
+                }
                 if (this.Member != null)
                 {
                     hashCode = (hashCode * 59) + this.Member.GetHashCode();

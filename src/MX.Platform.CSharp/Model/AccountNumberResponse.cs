@@ -39,16 +39,18 @@ namespace MX.Platform.CSharp.Model
         /// <param name="guid">guid.</param>
         /// <param name="institutionNumber">institutionNumber.</param>
         /// <param name="memberGuid">memberGuid.</param>
+        /// <param name="passedValidation">passedValidation.</param>
         /// <param name="routingNumber">routingNumber.</param>
         /// <param name="transitNumber">transitNumber.</param>
         /// <param name="userGuid">userGuid.</param>
-        public AccountNumberResponse(string accountGuid = default(string), string accountNumber = default(string), string guid = default(string), string institutionNumber = default(string), string memberGuid = default(string), string routingNumber = default(string), string transitNumber = default(string), string userGuid = default(string))
+        public AccountNumberResponse(string accountGuid = default(string), string accountNumber = default(string), string guid = default(string), string institutionNumber = default(string), string memberGuid = default(string), bool? passedValidation = default(bool?), string routingNumber = default(string), string transitNumber = default(string), string userGuid = default(string))
         {
             this.AccountGuid = accountGuid;
             this.AccountNumber = accountNumber;
             this.Guid = guid;
             this.InstitutionNumber = institutionNumber;
             this.MemberGuid = memberGuid;
+            this.PassedValidation = passedValidation;
             this.RoutingNumber = routingNumber;
             this.TransitNumber = transitNumber;
             this.UserGuid = userGuid;
@@ -85,6 +87,12 @@ namespace MX.Platform.CSharp.Model
         public string MemberGuid { get; set; }
 
         /// <summary>
+        /// Gets or Sets PassedValidation
+        /// </summary>
+        [DataMember(Name = "passed_validation", EmitDefaultValue = true)]
+        public bool? PassedValidation { get; set; }
+
+        /// <summary>
         /// Gets or Sets RoutingNumber
         /// </summary>
         [DataMember(Name = "routing_number", EmitDefaultValue = true)]
@@ -115,6 +123,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  InstitutionNumber: ").Append(InstitutionNumber).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
+            sb.Append("  PassedValidation: ").Append(PassedValidation).Append("\n");
             sb.Append("  RoutingNumber: ").Append(RoutingNumber).Append("\n");
             sb.Append("  TransitNumber: ").Append(TransitNumber).Append("\n");
             sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
@@ -179,6 +188,11 @@ namespace MX.Platform.CSharp.Model
                     this.MemberGuid.Equals(input.MemberGuid))
                 ) && 
                 (
+                    this.PassedValidation == input.PassedValidation ||
+                    (this.PassedValidation != null &&
+                    this.PassedValidation.Equals(input.PassedValidation))
+                ) && 
+                (
                     this.RoutingNumber == input.RoutingNumber ||
                     (this.RoutingNumber != null &&
                     this.RoutingNumber.Equals(input.RoutingNumber))
@@ -223,6 +237,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.MemberGuid != null)
                 {
                     hashCode = (hashCode * 59) + this.MemberGuid.GetHashCode();
+                }
+                if (this.PassedValidation != null)
+                {
+                    hashCode = (hashCode * 59) + this.PassedValidation.GetHashCode();
                 }
                 if (this.RoutingNumber != null)
                 {

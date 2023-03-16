@@ -65,14 +65,6 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'BackgroundAggregationIsDisabled'
         }
         /// <summary>
-        /// Test the property 'ClientRedirectUrl'
-        /// </summary>
-        [Fact]
-        public void ClientRedirectUrlTest()
-        {
-            // TODO unit test for the property 'ClientRedirectUrl'
-        }
-        /// <summary>
         /// Test the property 'Credentials'
         /// </summary>
         [Fact]

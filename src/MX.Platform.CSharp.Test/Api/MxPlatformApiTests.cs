@@ -614,6 +614,22 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test ListMemberAccounts
+        /// </summary>
+        [Fact]
+        public void ListMemberAccountsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string memberGuid = null;
+            //bool? memberIsManagedByUser = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListMemberAccounts(userGuid, memberGuid, memberIsManagedByUser, page, recordsPerPage);
+            //Assert.IsType<AccountsResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test ListMemberChallenges
         /// </summary>
         [Fact]
@@ -802,9 +818,10 @@ namespace MX.Platform.CSharp.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string userGuid = null;
+            //bool? memberIsManagedByUser = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //var response = instance.ListUserAccounts(userGuid, page, recordsPerPage);
+            //var response = instance.ListUserAccounts(userGuid, memberIsManagedByUser, page, recordsPerPage);
             //Assert.IsType<AccountsResponseBody>(response);
         }
 
@@ -817,7 +834,10 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? page = null;
             //int? recordsPerPage = null;
-            //var response = instance.ListUsers(page, recordsPerPage);
+            //string id = null;
+            //string email = null;
+            //bool? isDisabled = null;
+            //var response = instance.ListUsers(page, recordsPerPage, id, email, isDisabled);
             //Assert.IsType<UsersResponseBody>(response);
         }
 
@@ -831,6 +851,20 @@ namespace MX.Platform.CSharp.Test.Api
             //string accountGuid = null;
             //string userGuid = null;
             //var response = instance.ReadAccount(accountGuid, userGuid);
+            //Assert.IsType<AccountResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test ReadAccountByMember
+        /// </summary>
+        [Fact]
+        public void ReadAccountByMemberTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
+            //string memberGuid = null;
+            //string userGuid = null;
+            //var response = instance.ReadAccountByMember(accountGuid, memberGuid, userGuid);
             //Assert.IsType<AccountResponseBody>(response);
         }
 

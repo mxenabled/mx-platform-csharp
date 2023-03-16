@@ -39,21 +39,25 @@ namespace MX.Platform.CSharp.Model
         /// <param name="city">city.</param>
         /// <param name="country">country.</param>
         /// <param name="email">email.</param>
+        /// <param name="firstName">firstName.</param>
         /// <param name="guid">guid.</param>
+        /// <param name="lastName">lastName.</param>
         /// <param name="memberGuid">memberGuid.</param>
         /// <param name="ownerName">ownerName.</param>
         /// <param name="phone">phone.</param>
         /// <param name="postalCode">postalCode.</param>
         /// <param name="state">state.</param>
         /// <param name="userGuid">userGuid.</param>
-        public AccountOwnerResponse(string accountGuid = default(string), string address = default(string), string city = default(string), string country = default(string), string email = default(string), string guid = default(string), string memberGuid = default(string), string ownerName = default(string), string phone = default(string), string postalCode = default(string), string state = default(string), string userGuid = default(string))
+        public AccountOwnerResponse(string accountGuid = default(string), string address = default(string), string city = default(string), string country = default(string), string email = default(string), string firstName = default(string), string guid = default(string), string lastName = default(string), string memberGuid = default(string), string ownerName = default(string), string phone = default(string), string postalCode = default(string), string state = default(string), string userGuid = default(string))
         {
             this.AccountGuid = accountGuid;
             this.Address = address;
             this.City = city;
             this.Country = country;
             this.Email = email;
+            this.FirstName = firstName;
             this.Guid = guid;
+            this.LastName = lastName;
             this.MemberGuid = memberGuid;
             this.OwnerName = ownerName;
             this.Phone = phone;
@@ -93,10 +97,22 @@ namespace MX.Platform.CSharp.Model
         public string Email { get; set; }
 
         /// <summary>
+        /// Gets or Sets FirstName
+        /// </summary>
+        [DataMember(Name = "first_name", EmitDefaultValue = true)]
+        public string FirstName { get; set; }
+
+        /// <summary>
         /// Gets or Sets Guid
         /// </summary>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LastName
+        /// </summary>
+        [DataMember(Name = "last_name", EmitDefaultValue = true)]
+        public string LastName { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
@@ -147,7 +163,9 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  City: ").Append(City).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
+            sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  OwnerName: ").Append(OwnerName).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
@@ -215,9 +233,19 @@ namespace MX.Platform.CSharp.Model
                     this.Email.Equals(input.Email))
                 ) && 
                 (
+                    this.FirstName == input.FirstName ||
+                    (this.FirstName != null &&
+                    this.FirstName.Equals(input.FirstName))
+                ) && 
+                (
                     this.Guid == input.Guid ||
                     (this.Guid != null &&
                     this.Guid.Equals(input.Guid))
+                ) && 
+                (
+                    this.LastName == input.LastName ||
+                    (this.LastName != null &&
+                    this.LastName.Equals(input.LastName))
                 ) && 
                 (
                     this.MemberGuid == input.MemberGuid ||
@@ -280,9 +308,17 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.Email.GetHashCode();
                 }
+                if (this.FirstName != null)
+                {
+                    hashCode = (hashCode * 59) + this.FirstName.GetHashCode();
+                }
                 if (this.Guid != null)
                 {
                     hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
+                if (this.LastName != null)
+                {
+                    hashCode = (hashCode * 59) + this.LastName.GetHashCode();
                 }
                 if (this.MemberGuid != null)
                 {

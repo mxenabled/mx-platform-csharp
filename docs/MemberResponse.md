@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AggregatedAt** | **string** |  | [optional] 
+**BackgroundAggregationIsDisabled** | **bool** |  | [optional] 
 **ConnectionStatus** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **Id** | **string** |  | [optional] 

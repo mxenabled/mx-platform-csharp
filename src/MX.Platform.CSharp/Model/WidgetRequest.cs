@@ -45,14 +45,16 @@ namespace MX.Platform.CSharp.Model
         /// <param name="currentInstitutionGuid">currentInstitutionGuid.</param>
         /// <param name="currentMemberGuid">currentMemberGuid.</param>
         /// <param name="disableInstitutionSearch">disableInstitutionSearch.</param>
+        /// <param name="includeIdentity">includeIdentity.</param>
         /// <param name="includeTransactions">includeTransactions.</param>
         /// <param name="isMobileWebview">isMobileWebview.</param>
         /// <param name="mode">mode.</param>
+        /// <param name="oauthReferralSource">oauthReferralSource.</param>
         /// <param name="uiMessageVersion">uiMessageVersion.</param>
         /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
         /// <param name="widgetType">widgetType (required).</param>
-        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableInstitutionSearch = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string mode = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
+        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableInstitutionSearch = default(bool), bool includeIdentity = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string mode = default(string), string oauthReferralSource = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
         {
             // to ensure "widgetType" is required (not null)
             if (widgetType == null) {
@@ -65,9 +67,11 @@ namespace MX.Platform.CSharp.Model
             this.CurrentInstitutionGuid = currentInstitutionGuid;
             this.CurrentMemberGuid = currentMemberGuid;
             this.DisableInstitutionSearch = disableInstitutionSearch;
+            this.IncludeIdentity = includeIdentity;
             this.IncludeTransactions = includeTransactions;
             this.IsMobileWebview = isMobileWebview;
             this.Mode = mode;
+            this.OauthReferralSource = oauthReferralSource;
             this.UiMessageVersion = uiMessageVersion;
             this.UiMessageWebviewUrlScheme = uiMessageWebviewUrlScheme;
             this.UpdateCredentials = updateCredentials;
@@ -110,6 +114,12 @@ namespace MX.Platform.CSharp.Model
         public bool DisableInstitutionSearch { get; set; }
 
         /// <summary>
+        /// Gets or Sets IncludeIdentity
+        /// </summary>
+        [DataMember(Name = "include_identity", EmitDefaultValue = true)]
+        public bool IncludeIdentity { get; set; }
+
+        /// <summary>
         /// Gets or Sets IncludeTransactions
         /// </summary>
         [DataMember(Name = "include_transactions", EmitDefaultValue = true)]
@@ -126,6 +136,12 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "mode", EmitDefaultValue = false)]
         public string Mode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OauthReferralSource
+        /// </summary>
+        [DataMember(Name = "oauth_referral_source", EmitDefaultValue = false)]
+        public string OauthReferralSource { get; set; }
 
         /// <summary>
         /// Gets or Sets UiMessageVersion
@@ -165,9 +181,11 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  CurrentInstitutionGuid: ").Append(CurrentInstitutionGuid).Append("\n");
             sb.Append("  CurrentMemberGuid: ").Append(CurrentMemberGuid).Append("\n");
             sb.Append("  DisableInstitutionSearch: ").Append(DisableInstitutionSearch).Append("\n");
+            sb.Append("  IncludeIdentity: ").Append(IncludeIdentity).Append("\n");
             sb.Append("  IncludeTransactions: ").Append(IncludeTransactions).Append("\n");
             sb.Append("  IsMobileWebview: ").Append(IsMobileWebview).Append("\n");
             sb.Append("  Mode: ").Append(Mode).Append("\n");
+            sb.Append("  OauthReferralSource: ").Append(OauthReferralSource).Append("\n");
             sb.Append("  UiMessageVersion: ").Append(UiMessageVersion).Append("\n");
             sb.Append("  UiMessageWebviewUrlScheme: ").Append(UiMessageWebviewUrlScheme).Append("\n");
             sb.Append("  UpdateCredentials: ").Append(UpdateCredentials).Append("\n");
@@ -237,6 +255,10 @@ namespace MX.Platform.CSharp.Model
                     this.DisableInstitutionSearch.Equals(input.DisableInstitutionSearch)
                 ) && 
                 (
+                    this.IncludeIdentity == input.IncludeIdentity ||
+                    this.IncludeIdentity.Equals(input.IncludeIdentity)
+                ) && 
+                (
                     this.IncludeTransactions == input.IncludeTransactions ||
                     this.IncludeTransactions.Equals(input.IncludeTransactions)
                 ) && 
@@ -248,6 +270,11 @@ namespace MX.Platform.CSharp.Model
                     this.Mode == input.Mode ||
                     (this.Mode != null &&
                     this.Mode.Equals(input.Mode))
+                ) && 
+                (
+                    this.OauthReferralSource == input.OauthReferralSource ||
+                    (this.OauthReferralSource != null &&
+                    this.OauthReferralSource.Equals(input.OauthReferralSource))
                 ) && 
                 (
                     this.UiMessageVersion == input.UiMessageVersion ||
@@ -299,11 +326,16 @@ namespace MX.Platform.CSharp.Model
                     hashCode = (hashCode * 59) + this.CurrentMemberGuid.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.DisableInstitutionSearch.GetHashCode();
+                hashCode = (hashCode * 59) + this.IncludeIdentity.GetHashCode();
                 hashCode = (hashCode * 59) + this.IncludeTransactions.GetHashCode();
                 hashCode = (hashCode * 59) + this.IsMobileWebview.GetHashCode();
                 if (this.Mode != null)
                 {
                     hashCode = (hashCode * 59) + this.Mode.GetHashCode();
+                }
+                if (this.OauthReferralSource != null)
+                {
+                    hashCode = (hashCode * 59) + this.OauthReferralSource.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.UiMessageVersion.GetHashCode();
                 if (this.UiMessageWebviewUrlScheme != null)

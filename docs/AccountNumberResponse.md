@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Guid** | **string** |  | [optional] 
 **InstitutionNumber** | **string** |  | [optional] 
 **MemberGuid** | **string** |  | [optional] 
+**PassedValidation** | **bool?** |  | [optional] 
 **RoutingNumber** | **string** |  | [optional] 
 **TransitNumber** | **string** |  | [optional] 
 **UserGuid** | **string** |  | [optional] 
