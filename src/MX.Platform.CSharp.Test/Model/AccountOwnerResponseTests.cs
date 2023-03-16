@@ -97,12 +97,28 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'Email'
         }
         /// <summary>
+        /// Test the property 'FirstName'
+        /// </summary>
+        [Fact]
+        public void FirstNameTest()
+        {
+            // TODO unit test for the property 'FirstName'
+        }
+        /// <summary>
         /// Test the property 'Guid'
         /// </summary>
         [Fact]
         public void GuidTest()
         {
             // TODO unit test for the property 'Guid'
+        }
+        /// <summary>
+        /// Test the property 'LastName'
+        /// </summary>
+        [Fact]
+        public void LastNameTest()
+        {
+            // TODO unit test for the property 'LastName'
         }
         /// <summary>
         /// Test the property 'MemberGuid'

@@ -97,6 +97,14 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'MemberGuid'
         }
         /// <summary>
+        /// Test the property 'PassedValidation'
+        /// </summary>
+        [Fact]
+        public void PassedValidationTest()
+        {
+            // TODO unit test for the property 'PassedValidation'
+        }
+        /// <summary>
         /// Test the property 'RoutingNumber'
         /// </summary>
         [Fact]

@@ -65,6 +65,14 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'AggregatedAt'
         }
         /// <summary>
+        /// Test the property 'BackgroundAggregationIsDisabled'
+        /// </summary>
+        [Fact]
+        public void BackgroundAggregationIsDisabledTest()
+        {
+            // TODO unit test for the property 'BackgroundAggregationIsDisabled'
+        }
+        /// <summary>
         /// Test the property 'ConnectionStatus'
         /// </summary>
         [Fact]

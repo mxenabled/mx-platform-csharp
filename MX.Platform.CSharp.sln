@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MX.Platform.CSharp", "src\MX.Platform.CSharp\MX.Platform.CSharp.csproj", "{548AA0F1-8762-4F55-8F4C-E2DB6D53B540}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MX.Platform.CSharp", "src\MX.Platform.CSharp\MX.Platform.CSharp.csproj", "{A74C6F3E-A36F-447F-B800-B237C13066F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MX.Platform.CSharp.Test", "src\MX.Platform.CSharp.Test\MX.Platform.CSharp.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{548AA0F1-8762-4F55-8F4C-E2DB6D53B540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{548AA0F1-8762-4F55-8F4C-E2DB6D53B540}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{548AA0F1-8762-4F55-8F4C-E2DB6D53B540}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{548AA0F1-8762-4F55-8F4C-E2DB6D53B540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A74C6F3E-A36F-447F-B800-B237C13066F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74C6F3E-A36F-447F-B800-B237C13066F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74C6F3E-A36F-447F-B800-B237C13066F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74C6F3E-A36F-447F-B800-B237C13066F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

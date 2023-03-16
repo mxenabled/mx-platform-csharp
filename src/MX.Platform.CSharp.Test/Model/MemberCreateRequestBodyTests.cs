@@ -57,6 +57,14 @@ namespace MX.Platform.CSharp.Test.Model
 
 
         /// <summary>
+        /// Test the property 'ClientRedirectUrl'
+        /// </summary>
+        [Fact]
+        public void ClientRedirectUrlTest()
+        {
+            // TODO unit test for the property 'ClientRedirectUrl'
+        }
+        /// <summary>
         /// Test the property 'Member'
         /// </summary>
         [Fact]

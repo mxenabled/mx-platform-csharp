@@ -35,6 +35,7 @@ namespace MX.Platform.CSharp.Model
         /// Initializes a new instance of the <see cref="MemberResponse" /> class.
         /// </summary>
         /// <param name="aggregatedAt">aggregatedAt.</param>
+        /// <param name="backgroundAggregationIsDisabled">backgroundAggregationIsDisabled.</param>
         /// <param name="connectionStatus">connectionStatus.</param>
         /// <param name="guid">guid.</param>
         /// <param name="id">id.</param>
@@ -48,9 +49,10 @@ namespace MX.Platform.CSharp.Model
         /// <param name="successfullyAggregatedAt">successfullyAggregatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public MemberResponse(string aggregatedAt = default(string), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), string userGuid = default(string), string userId = default(string))
+        public MemberResponse(string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), string userGuid = default(string), string userId = default(string))
         {
             this.AggregatedAt = aggregatedAt;
+            this.BackgroundAggregationIsDisabled = backgroundAggregationIsDisabled;
             this.ConnectionStatus = connectionStatus;
             this.Guid = guid;
             this.Id = id;
@@ -71,6 +73,12 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "aggregated_at", EmitDefaultValue = true)]
         public string AggregatedAt { get; set; }
+
+        /// <summary>
+        /// Gets or Sets BackgroundAggregationIsDisabled
+        /// </summary>
+        [DataMember(Name = "background_aggregation_is_disabled", EmitDefaultValue = true)]
+        public bool BackgroundAggregationIsDisabled { get; set; }
 
         /// <summary>
         /// Gets or Sets ConnectionStatus
@@ -159,6 +167,7 @@ namespace MX.Platform.CSharp.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class MemberResponse {\n");
             sb.Append("  AggregatedAt: ").Append(AggregatedAt).Append("\n");
+            sb.Append("  BackgroundAggregationIsDisabled: ").Append(BackgroundAggregationIsDisabled).Append("\n");
             sb.Append("  ConnectionStatus: ").Append(ConnectionStatus).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -211,6 +220,10 @@ namespace MX.Platform.CSharp.Model
                     this.AggregatedAt == input.AggregatedAt ||
                     (this.AggregatedAt != null &&
                     this.AggregatedAt.Equals(input.AggregatedAt))
+                ) && 
+                (
+                    this.BackgroundAggregationIsDisabled == input.BackgroundAggregationIsDisabled ||
+                    this.BackgroundAggregationIsDisabled.Equals(input.BackgroundAggregationIsDisabled)
                 ) && 
                 (
                     this.ConnectionStatus == input.ConnectionStatus ||
@@ -292,6 +305,7 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.AggregatedAt.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.BackgroundAggregationIsDisabled.GetHashCode();
                 if (this.ConnectionStatus != null)
                 {
                     hashCode = (hashCode * 59) + this.ConnectionStatus.GetHashCode();

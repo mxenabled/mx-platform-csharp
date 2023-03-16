@@ -1040,6 +1040,35 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of TransactionsResponseBody</returns>
         ApiResponse<TransactionsResponseBody> ListManagedTransactionsWithHttpInfo(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
         /// <summary>
+        /// List accounts by member
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns a list of all the accounts associated with the specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>AccountsResponseBody</returns>
+        AccountsResponseBody ListMemberAccounts(string userGuid, string memberGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?));
+
+        /// <summary>
+        /// List accounts by member
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns a list of all the accounts associated with the specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>ApiResponse of AccountsResponseBody</returns>
+        ApiResponse<AccountsResponseBody> ListMemberAccountsWithHttpInfo(string userGuid, string memberGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?));
+        /// <summary>
         /// List member challenges
         /// </summary>
         /// <remarks>
@@ -1373,10 +1402,11 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>AccountsResponseBody</returns>
-        AccountsResponseBody ListUserAccounts(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
+        AccountsResponseBody ListUserAccounts(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?));
 
         /// <summary>
         /// List accounts
@@ -1386,10 +1416,11 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of AccountsResponseBody</returns>
-        ApiResponse<AccountsResponseBody> ListUserAccountsWithHttpInfo(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
+        ApiResponse<AccountsResponseBody> ListUserAccountsWithHttpInfo(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?));
         /// <summary>
         /// List users
         /// </summary>
@@ -1399,8 +1430,11 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="id">The user &#x60;id&#x60; to search for. (optional)</param>
+        /// <param name="email">The user &#x60;email&#x60; to search for. (optional)</param>
+        /// <param name="isDisabled">Search for users that are diabled. (optional)</param>
         /// <returns>UsersResponseBody</returns>
-        UsersResponseBody ListUsers(int? page = default(int?), int? recordsPerPage = default(int?));
+        UsersResponseBody ListUsers(int? page = default(int?), int? recordsPerPage = default(int?), string id = default(string), string email = default(string), bool? isDisabled = default(bool?));
 
         /// <summary>
         /// List users
@@ -1411,8 +1445,11 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="id">The user &#x60;id&#x60; to search for. (optional)</param>
+        /// <param name="email">The user &#x60;email&#x60; to search for. (optional)</param>
+        /// <param name="isDisabled">Search for users that are diabled. (optional)</param>
         /// <returns>ApiResponse of UsersResponseBody</returns>
-        ApiResponse<UsersResponseBody> ListUsersWithHttpInfo(int? page = default(int?), int? recordsPerPage = default(int?));
+        ApiResponse<UsersResponseBody> ListUsersWithHttpInfo(int? page = default(int?), int? recordsPerPage = default(int?), string id = default(string), string email = default(string), bool? isDisabled = default(bool?));
         /// <summary>
         /// Read account
         /// </summary>
@@ -1436,6 +1473,31 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
         ApiResponse<AccountResponseBody> ReadAccountWithHttpInfo(string accountGuid, string userGuid);
+        /// <summary>
+        /// Read account by member
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows you to read the attributes of an &#x60;account&#x60; resource.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>AccountResponseBody</returns>
+        AccountResponseBody ReadAccountByMember(string accountGuid, string memberGuid, string userGuid);
+
+        /// <summary>
+        /// Read account by member
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows you to read the attributes of an &#x60;account&#x60; resource.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of AccountResponseBody</returns>
+        ApiResponse<AccountResponseBody> ReadAccountByMemberWithHttpInfo(string accountGuid, string memberGuid, string userGuid);
         /// <summary>
         /// Read a custom category
         /// </summary>
@@ -3338,6 +3400,37 @@ namespace MX.Platform.CSharp.Api
         /// <returns>Task of ApiResponse (TransactionsResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListManagedTransactionsWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// List accounts by member
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns a list of all the accounts associated with the specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AccountsResponseBody</returns>
+        System.Threading.Tasks.Task<AccountsResponseBody> ListMemberAccountsAsync(string userGuid, string memberGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List accounts by member
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns a list of all the accounts associated with the specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AccountsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListMemberAccountsWithHttpInfoAsync(string userGuid, string memberGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// List member challenges
         /// </summary>
         /// <remarks>
@@ -3695,11 +3788,12 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountsResponseBody</returns>
-        System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List accounts
@@ -3709,11 +3803,12 @@ namespace MX.Platform.CSharp.Api
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List users
         /// </summary>
@@ -3723,9 +3818,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="id">The user &#x60;id&#x60; to search for. (optional)</param>
+        /// <param name="email">The user &#x60;email&#x60; to search for. (optional)</param>
+        /// <param name="isDisabled">Search for users that are diabled. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UsersResponseBody</returns>
-        System.Threading.Tasks.Task<UsersResponseBody> ListUsersAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UsersResponseBody> ListUsersAsync(int? page = default(int?), int? recordsPerPage = default(int?), string id = default(string), string email = default(string), bool? isDisabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List users
@@ -3736,9 +3834,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="id">The user &#x60;id&#x60; to search for. (optional)</param>
+        /// <param name="email">The user &#x60;email&#x60; to search for. (optional)</param>
+        /// <param name="isDisabled">Search for users that are diabled. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UsersResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UsersResponseBody>> ListUsersWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UsersResponseBody>> ListUsersWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), string id = default(string), string email = default(string), bool? isDisabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Read account
         /// </summary>
@@ -3764,6 +3865,33 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> ReadAccountWithHttpInfoAsync(string accountGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Read account by member
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows you to read the attributes of an &#x60;account&#x60; resource.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AccountResponseBody</returns>
+        System.Threading.Tasks.Task<AccountResponseBody> ReadAccountByMemberAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Read account by member
+        /// </summary>
+        /// <remarks>
+        /// This endpoint allows you to read the attributes of an &#x60;account&#x60; resource.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> ReadAccountByMemberWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Read a custom category
         /// </summary>
@@ -11828,6 +11956,206 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
+        /// List accounts by member This endpoint returns a list of all the accounts associated with the specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>AccountsResponseBody</returns>
+        public AccountsResponseBody ListMemberAccounts(string userGuid, string memberGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = ListMemberAccountsWithHttpInfo(userGuid, memberGuid, memberIsManagedByUser, page, recordsPerPage);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List accounts by member This endpoint returns a list of all the accounts associated with the specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>ApiResponse of AccountsResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> ListMemberAccountsWithHttpInfo(string userGuid, string memberGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListMemberAccounts");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListMemberAccounts");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            if (memberIsManagedByUser != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "member_is_managed_by_user", memberIsManagedByUser));
+            }
+            if (page != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
+            }
+            if (recordsPerPage != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "records_per_page", recordsPerPage));
+            }
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<AccountsResponseBody>("/users/{user_guid}/members/{member_guid}/accounts", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListMemberAccounts", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List accounts by member This endpoint returns a list of all the accounts associated with the specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AccountsResponseBody</returns>
+        public async System.Threading.Tasks.Task<AccountsResponseBody> ListMemberAccountsAsync(string userGuid, string memberGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = await ListMemberAccountsWithHttpInfoAsync(userGuid, memberGuid, memberIsManagedByUser, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List accounts by member This endpoint returns a list of all the accounts associated with the specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AccountsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody>> ListMemberAccountsWithHttpInfoAsync(string userGuid, string memberGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListMemberAccounts");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListMemberAccounts");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            if (memberIsManagedByUser != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "member_is_managed_by_user", memberIsManagedByUser));
+            }
+            if (page != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
+            }
+            if (recordsPerPage != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "records_per_page", recordsPerPage));
+            }
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AccountsResponseBody>("/users/{user_guid}/members/{member_guid}/accounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListMemberAccounts", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List member challenges Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member. If the aggregation is not challenged, i.e., the member does not have a connection status of &#x60;CHALLENGED&#x60;, then code &#x60;204 No Content&#x60; will be returned. If the aggregation has been challenged, i.e., the member does have a connection status of &#x60;CHALLENGED&#x60;, then code &#x60;200 OK&#x60; will be returned - along with the corresponding credentials.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14058,12 +14386,13 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>AccountsResponseBody</returns>
-        public AccountsResponseBody ListUserAccounts(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?))
+        public AccountsResponseBody ListUserAccounts(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = ListUserAccountsWithHttpInfo(userGuid, page, recordsPerPage);
+            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = ListUserAccountsWithHttpInfo(userGuid, memberIsManagedByUser, page, recordsPerPage);
             return localVarResponse.Data;
         }
 
@@ -14072,10 +14401,11 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of AccountsResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> ListUserAccountsWithHttpInfo(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?))
+        public MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> ListUserAccountsWithHttpInfo(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?))
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -14106,6 +14436,10 @@ namespace MX.Platform.CSharp.Api
             }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (memberIsManagedByUser != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "member_is_managed_by_user", memberIsManagedByUser));
+            }
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
@@ -14141,13 +14475,14 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountsResponseBody</returns>
-        public async System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = await ListUserAccountsWithHttpInfoAsync(userGuid, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = await ListUserAccountsWithHttpInfoAsync(userGuid, memberIsManagedByUser, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -14156,11 +14491,12 @@ namespace MX.Platform.CSharp.Api
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -14192,6 +14528,10 @@ namespace MX.Platform.CSharp.Api
             }
 
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (memberIsManagedByUser != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "member_is_managed_by_user", memberIsManagedByUser));
+            }
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
@@ -14229,10 +14569,13 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="id">The user &#x60;id&#x60; to search for. (optional)</param>
+        /// <param name="email">The user &#x60;email&#x60; to search for. (optional)</param>
+        /// <param name="isDisabled">Search for users that are diabled. (optional)</param>
         /// <returns>UsersResponseBody</returns>
-        public UsersResponseBody ListUsers(int? page = default(int?), int? recordsPerPage = default(int?))
+        public UsersResponseBody ListUsers(int? page = default(int?), int? recordsPerPage = default(int?), string id = default(string), string email = default(string), bool? isDisabled = default(bool?))
         {
-            MX.Platform.CSharp.Client.ApiResponse<UsersResponseBody> localVarResponse = ListUsersWithHttpInfo(page, recordsPerPage);
+            MX.Platform.CSharp.Client.ApiResponse<UsersResponseBody> localVarResponse = ListUsersWithHttpInfo(page, recordsPerPage, id, email, isDisabled);
             return localVarResponse.Data;
         }
 
@@ -14242,8 +14585,11 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="id">The user &#x60;id&#x60; to search for. (optional)</param>
+        /// <param name="email">The user &#x60;email&#x60; to search for. (optional)</param>
+        /// <param name="isDisabled">Search for users that are diabled. (optional)</param>
         /// <returns>ApiResponse of UsersResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<UsersResponseBody> ListUsersWithHttpInfo(int? page = default(int?), int? recordsPerPage = default(int?))
+        public MX.Platform.CSharp.Client.ApiResponse<UsersResponseBody> ListUsersWithHttpInfo(int? page = default(int?), int? recordsPerPage = default(int?), string id = default(string), string email = default(string), bool? isDisabled = default(bool?))
         {
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
 
@@ -14274,6 +14620,18 @@ namespace MX.Platform.CSharp.Api
             if (recordsPerPage != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "records_per_page", recordsPerPage));
+            }
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+            if (email != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "email", email));
+            }
+            if (isDisabled != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "is_disabled", isDisabled));
             }
 
             // authentication (basicAuth) required
@@ -14303,11 +14661,14 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="id">The user &#x60;id&#x60; to search for. (optional)</param>
+        /// <param name="email">The user &#x60;email&#x60; to search for. (optional)</param>
+        /// <param name="isDisabled">Search for users that are diabled. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UsersResponseBody</returns>
-        public async System.Threading.Tasks.Task<UsersResponseBody> ListUsersAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UsersResponseBody> ListUsersAsync(int? page = default(int?), int? recordsPerPage = default(int?), string id = default(string), string email = default(string), bool? isDisabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<UsersResponseBody> localVarResponse = await ListUsersWithHttpInfoAsync(page, recordsPerPage, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<UsersResponseBody> localVarResponse = await ListUsersWithHttpInfoAsync(page, recordsPerPage, id, email, isDisabled, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -14317,9 +14678,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="id">The user &#x60;id&#x60; to search for. (optional)</param>
+        /// <param name="email">The user &#x60;email&#x60; to search for. (optional)</param>
+        /// <param name="isDisabled">Search for users that are diabled. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UsersResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<UsersResponseBody>> ListUsersWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<UsersResponseBody>> ListUsersWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), string id = default(string), string email = default(string), bool? isDisabled = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
@@ -14351,6 +14715,18 @@ namespace MX.Platform.CSharp.Api
             if (recordsPerPage != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "records_per_page", recordsPerPage));
+            }
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+            if (email != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "email", email));
+            }
+            if (isDisabled != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "is_disabled", isDisabled));
             }
 
             // authentication (basicAuth) required
@@ -14530,6 +14906,188 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadAccount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read account by member This endpoint allows you to read the attributes of an &#x60;account&#x60; resource.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>AccountResponseBody</returns>
+        public AccountResponseBody ReadAccountByMember(string accountGuid, string memberGuid, string userGuid)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = ReadAccountByMemberWithHttpInfo(accountGuid, memberGuid, userGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read account by member This endpoint allows you to read the attributes of an &#x60;account&#x60; resource.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of AccountResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> ReadAccountByMemberWithHttpInfo(string accountGuid, string memberGuid, string userGuid)
+        {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadAccountByMember");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadAccountByMember");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadAccountByMember");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<AccountResponseBody>("/users/{user_guid}/members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadAccountByMember", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read account by member This endpoint allows you to read the attributes of an &#x60;account&#x60; resource.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AccountResponseBody</returns>
+        public async System.Threading.Tasks.Task<AccountResponseBody> ReadAccountByMemberAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await ReadAccountByMemberWithHttpInfoAsync(accountGuid, memberGuid, userGuid, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read account by member This endpoint allows you to read the attributes of an &#x60;account&#x60; resource.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> ReadAccountByMemberWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->ReadAccountByMember");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadAccountByMember");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadAccountByMember");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<AccountResponseBody>("/users/{user_guid}/members/{member_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadAccountByMember", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

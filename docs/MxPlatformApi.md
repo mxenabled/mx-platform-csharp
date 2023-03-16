@@ -45,6 +45,7 @@ Method | HTTP request | Description
 [**ListManagedInstitutions**](MxPlatformApi.md#listmanagedinstitutions) | **GET** /managed_institutions | List managed institutions
 [**ListManagedMembers**](MxPlatformApi.md#listmanagedmembers) | **GET** /users/{user_guid}/managed_members | List managed members
 [**ListManagedTransactions**](MxPlatformApi.md#listmanagedtransactions) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions | List managed transactions
+[**ListMemberAccounts**](MxPlatformApi.md#listmemberaccounts) | **GET** /users/{user_guid}/members/{member_guid}/accounts | List accounts by member
 [**ListMemberChallenges**](MxPlatformApi.md#listmemberchallenges) | **GET** /users/{user_guid}/members/{member_guid}/challenges | List member challenges
 [**ListMemberCredentials**](MxPlatformApi.md#listmembercredentials) | **GET** /users/{user_guid}/members/{member_guid}/credentials | List member credentials
 [**ListMembers**](MxPlatformApi.md#listmembers) | **GET** /users/{user_guid}/members | List members
@@ -60,6 +61,7 @@ Method | HTTP request | Description
 [**ListUserAccounts**](MxPlatformApi.md#listuseraccounts) | **GET** /users/{user_guid}/accounts | List accounts
 [**ListUsers**](MxPlatformApi.md#listusers) | **GET** /users | List users
 [**ReadAccount**](MxPlatformApi.md#readaccount) | **GET** /users/{user_guid}/accounts/{account_guid} | Read account
+[**ReadAccountByMember**](MxPlatformApi.md#readaccountbymember) | **GET** /users/{user_guid}/members/{member_guid}/accounts/{account_guid} | Read account by member
 [**ReadCategory**](MxPlatformApi.md#readcategory) | **GET** /users/{user_guid}/categories/{category_guid} | Read a custom category
 [**ReadDefaultCategory**](MxPlatformApi.md#readdefaultcategory) | **GET** /categories/{category_guid} | Read a default category
 [**ReadHolding**](MxPlatformApi.md#readholding) | **GET** /users/{user_guid}/holdings/{holding_guid} | Read holding
@@ -3313,6 +3315,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="listmemberaccounts"></a>
+# **ListMemberAccounts**
+> AccountsResponseBody ListMemberAccounts (string userGuid, string memberGuid, bool? memberIsManagedByUser = null, int? page = null, int? recordsPerPage = null)
+
+List accounts by member
+
+This endpoint returns a list of all the accounts associated with the specified `member`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListMemberAccountsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var memberIsManagedByUser = true;  // bool? | List only accounts whose member is managed by the user. (optional) 
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // List accounts by member
+                AccountsResponseBody result = apiInstance.ListMemberAccounts(userGuid, memberGuid, memberIsManagedByUser, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListMemberAccounts: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **memberIsManagedByUser** | **bool?**| List only accounts whose member is managed by the user. | [optional] 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**AccountsResponseBody**](AccountsResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="listmemberchallenges"></a>
 # **ListMemberChallenges**
 > ChallengesResponseBody ListMemberChallenges (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
@@ -4289,7 +4374,7 @@ Name | Type | Description  | Notes
 
 <a name="listuseraccounts"></a>
 # **ListUserAccounts**
-> AccountsResponseBody ListUserAccounts (string userGuid, int? page = null, int? recordsPerPage = null)
+> AccountsResponseBody ListUserAccounts (string userGuid, bool? memberIsManagedByUser = null, int? page = null, int? recordsPerPage = null)
 
 List accounts
 
@@ -4317,13 +4402,14 @@ namespace Example
 
             var apiInstance = new MxPlatformApi(config);
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var memberIsManagedByUser = true;  // bool? | List only accounts whose member is managed by the user. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List accounts
-                AccountsResponseBody result = apiInstance.ListUserAccounts(userGuid, page, recordsPerPage);
+                AccountsResponseBody result = apiInstance.ListUserAccounts(userGuid, memberIsManagedByUser, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4342,6 +4428,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **memberIsManagedByUser** | **bool?**| List only accounts whose member is managed by the user. | [optional] 
  **page** | **int?**| Specify current page. | [optional] 
  **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
@@ -4368,7 +4455,7 @@ Name | Type | Description  | Notes
 
 <a name="listusers"></a>
 # **ListUsers**
-> UsersResponseBody ListUsers (int? page = null, int? recordsPerPage = null)
+> UsersResponseBody ListUsers (int? page = null, int? recordsPerPage = null, string id = null, string email = null, bool? isDisabled = null)
 
 List users
 
@@ -4397,11 +4484,14 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var id = u-12324-abdc;  // string | The user `id` to search for. (optional) 
+            var email = example@example.com;  // string | The user `email` to search for. (optional) 
+            var isDisabled = true;  // bool? | Search for users that are diabled. (optional) 
 
             try
             {
                 // List users
-                UsersResponseBody result = apiInstance.ListUsers(page, recordsPerPage);
+                UsersResponseBody result = apiInstance.ListUsers(page, recordsPerPage, id, email, isDisabled);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4421,6 +4511,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int?**| Specify current page. | [optional] 
  **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+ **id** | **string**| The user &#x60;id&#x60; to search for. | [optional] 
+ **email** | **string**| The user &#x60;email&#x60; to search for. | [optional] 
+ **isDisabled** | **bool?**| Search for users that are diabled. | [optional] 
 
 ### Return type
 
@@ -4497,6 +4590,85 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+
+### Return type
+
+[**AccountResponseBody**](AccountResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="readaccountbymember"></a>
+# **ReadAccountByMember**
+> AccountResponseBody ReadAccountByMember (string accountGuid, string memberGuid, string userGuid)
+
+Read account by member
+
+This endpoint allows you to read the attributes of an `account` resource.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadAccountByMemberExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
+            var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+
+            try
+            {
+                // Read account by member
+                AccountResponseBody result = apiInstance.ReadAccountByMember(accountGuid, memberGuid, userGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ReadAccountByMember: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
+ **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
 
 ### Return type

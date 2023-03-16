@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ClientRedirectUrl** | **string** |  | [optional] 
 **Member** | [**MemberCreateRequest**](MemberCreateRequest.md) |  | [optional] 
 **ReferralSource** | **string** |  | [optional] 
 **UiMessageWebviewUrlScheme** | **string** |  | [optional] 

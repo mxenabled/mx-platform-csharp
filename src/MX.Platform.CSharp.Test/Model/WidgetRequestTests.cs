@@ -105,6 +105,14 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'DisableInstitutionSearch'
         }
         /// <summary>
+        /// Test the property 'IncludeIdentity'
+        /// </summary>
+        [Fact]
+        public void IncludeIdentityTest()
+        {
+            // TODO unit test for the property 'IncludeIdentity'
+        }
+        /// <summary>
         /// Test the property 'IncludeTransactions'
         /// </summary>
         [Fact]
@@ -127,6 +135,14 @@ namespace MX.Platform.CSharp.Test.Model
         public void ModeTest()
         {
             // TODO unit test for the property 'Mode'
+        }
+        /// <summary>
+        /// Test the property 'OauthReferralSource'
+        /// </summary>
+        [Fact]
+        public void OauthReferralSourceTest()
+        {
+            // TODO unit test for the property 'OauthReferralSource'
         }
         /// <summary>
         /// Test the property 'UiMessageVersion'
