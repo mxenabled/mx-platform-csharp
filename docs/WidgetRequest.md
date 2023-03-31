@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **CurrentInstitutionCode** | **string** |  | [optional] 
 **CurrentInstitutionGuid** | **string** |  | [optional] 
 **CurrentMemberGuid** | **string** |  | [optional] 
+**DisableBackgroundAgg** | **bool** |  | [optional] 
 **DisableInstitutionSearch** | **bool** |  | [optional] 
 **IncludeIdentity** | **bool** |  | [optional] 
 **IncludeTransactions** | **bool** |  | [optional] 
