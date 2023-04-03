@@ -97,6 +97,14 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'CurrentMemberGuid'
         }
         /// <summary>
+        /// Test the property 'DisableBackgroundAgg'
+        /// </summary>
+        [Fact]
+        public void DisableBackgroundAggTest()
+        {
+            // TODO unit test for the property 'DisableBackgroundAgg'
+        }
+        /// <summary>
         /// Test the property 'DisableInstitutionSearch'
         /// </summary>
         [Fact]

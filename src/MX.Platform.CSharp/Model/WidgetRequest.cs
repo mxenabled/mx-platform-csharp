@@ -44,6 +44,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="currentInstitutionCode">currentInstitutionCode.</param>
         /// <param name="currentInstitutionGuid">currentInstitutionGuid.</param>
         /// <param name="currentMemberGuid">currentMemberGuid.</param>
+        /// <param name="disableBackgroundAgg">disableBackgroundAgg.</param>
         /// <param name="disableInstitutionSearch">disableInstitutionSearch.</param>
         /// <param name="includeIdentity">includeIdentity.</param>
         /// <param name="includeTransactions">includeTransactions.</param>
@@ -54,7 +55,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
         /// <param name="widgetType">widgetType (required).</param>
-        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableInstitutionSearch = default(bool), bool includeIdentity = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string mode = default(string), string oauthReferralSource = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
+        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableBackgroundAgg = default(bool), bool disableInstitutionSearch = default(bool), bool includeIdentity = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string mode = default(string), string oauthReferralSource = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
         {
             // to ensure "widgetType" is required (not null)
             if (widgetType == null) {
@@ -66,6 +67,7 @@ namespace MX.Platform.CSharp.Model
             this.CurrentInstitutionCode = currentInstitutionCode;
             this.CurrentInstitutionGuid = currentInstitutionGuid;
             this.CurrentMemberGuid = currentMemberGuid;
+            this.DisableBackgroundAgg = disableBackgroundAgg;
             this.DisableInstitutionSearch = disableInstitutionSearch;
             this.IncludeIdentity = includeIdentity;
             this.IncludeTransactions = includeTransactions;
@@ -106,6 +108,12 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "current_member_guid", EmitDefaultValue = false)]
         public string CurrentMemberGuid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisableBackgroundAgg
+        /// </summary>
+        [DataMember(Name = "disable_background_agg", EmitDefaultValue = true)]
+        public bool DisableBackgroundAgg { get; set; }
 
         /// <summary>
         /// Gets or Sets DisableInstitutionSearch
@@ -180,6 +188,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  CurrentInstitutionCode: ").Append(CurrentInstitutionCode).Append("\n");
             sb.Append("  CurrentInstitutionGuid: ").Append(CurrentInstitutionGuid).Append("\n");
             sb.Append("  CurrentMemberGuid: ").Append(CurrentMemberGuid).Append("\n");
+            sb.Append("  DisableBackgroundAgg: ").Append(DisableBackgroundAgg).Append("\n");
             sb.Append("  DisableInstitutionSearch: ").Append(DisableInstitutionSearch).Append("\n");
             sb.Append("  IncludeIdentity: ").Append(IncludeIdentity).Append("\n");
             sb.Append("  IncludeTransactions: ").Append(IncludeTransactions).Append("\n");
@@ -249,6 +258,10 @@ namespace MX.Platform.CSharp.Model
                     this.CurrentMemberGuid == input.CurrentMemberGuid ||
                     (this.CurrentMemberGuid != null &&
                     this.CurrentMemberGuid.Equals(input.CurrentMemberGuid))
+                ) && 
+                (
+                    this.DisableBackgroundAgg == input.DisableBackgroundAgg ||
+                    this.DisableBackgroundAgg.Equals(input.DisableBackgroundAgg)
                 ) && 
                 (
                     this.DisableInstitutionSearch == input.DisableInstitutionSearch ||
@@ -325,6 +338,7 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.CurrentMemberGuid.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.DisableBackgroundAgg.GetHashCode();
                 hashCode = (hashCode * 59) + this.DisableInstitutionSearch.GetHashCode();
                 hashCode = (hashCode * 59) + this.IncludeIdentity.GetHashCode();
                 hashCode = (hashCode * 59) + this.IncludeTransactions.GetHashCode();
