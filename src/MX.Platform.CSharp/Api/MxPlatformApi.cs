@@ -495,6 +495,27 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUserWithHttpInfo(string userGuid);
         /// <summary>
+        /// (Deprecated) Request an authorization code.
+        /// </summary>
+        /// <remarks>
+        /// (This endpoint is deprecated. Clients should use &#x60;/authorization_code&#x60;.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentProcessorAuthorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <returns>PaymentProcessorAuthorizationCodeResponseBody</returns>
+        PaymentProcessorAuthorizationCodeResponseBody DeprecatedRequestPaymentProcessorAuthorizationCode(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody);
+
+        /// <summary>
+        /// (Deprecated) Request an authorization code.
+        /// </summary>
+        /// <remarks>
+        /// (This endpoint is deprecated. Clients should use &#x60;/authorization_code&#x60;.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentProcessorAuthorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <returns>ApiResponse of PaymentProcessorAuthorizationCodeResponseBody</returns>
+        ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfo(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody);
+        /// <summary>
         /// Download statement pdf
         /// </summary>
         /// <remarks>
@@ -1888,6 +1909,27 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of UserResponseBody</returns>
         ApiResponse<UserResponseBody> ReadUserWithHttpInfo(string userGuid);
         /// <summary>
+        /// Request an authorization code.
+        /// </summary>
+        /// <remarks>
+        /// Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <returns>AuthorizationCodeResponseBody</returns>
+        AuthorizationCodeResponseBody RequestAuthorizationCode(AuthorizationCodeRequestBody authorizationCodeRequestBody);
+
+        /// <summary>
+        /// Request an authorization code.
+        /// </summary>
+        /// <remarks>
+        /// Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <returns>ApiResponse of AuthorizationCodeResponseBody</returns>
+        ApiResponse<AuthorizationCodeResponseBody> RequestAuthorizationCodeWithHttpInfo(AuthorizationCodeRequestBody authorizationCodeRequestBody);
+        /// <summary>
         /// Request connect widget url
         /// </summary>
         /// <remarks>
@@ -2812,6 +2854,29 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// (Deprecated) Request an authorization code.
+        /// </summary>
+        /// <remarks>
+        /// (This endpoint is deprecated. Clients should use &#x60;/authorization_code&#x60;.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentProcessorAuthorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentProcessorAuthorizationCodeResponseBody</returns>
+        System.Threading.Tasks.Task<PaymentProcessorAuthorizationCodeResponseBody> DeprecatedRequestPaymentProcessorAuthorizationCodeAsync(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// (Deprecated) Request an authorization code.
+        /// </summary>
+        /// <remarks>
+        /// (This endpoint is deprecated. Clients should use &#x60;/authorization_code&#x60;.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentProcessorAuthorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentProcessorAuthorizationCodeResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PaymentProcessorAuthorizationCodeResponseBody>> DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfoAsync(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Download statement pdf
         /// </summary>
@@ -4315,6 +4380,29 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> ReadUserWithHttpInfoAsync(string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Request an authorization code.
+        /// </summary>
+        /// <remarks>
+        /// Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AuthorizationCodeResponseBody</returns>
+        System.Threading.Tasks.Task<AuthorizationCodeResponseBody> RequestAuthorizationCodeAsync(AuthorizationCodeRequestBody authorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Request an authorization code.
+        /// </summary>
+        /// <remarks>
+        /// Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AuthorizationCodeResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationCodeResponseBody>> RequestAuthorizationCodeWithHttpInfoAsync(AuthorizationCodeRequestBody authorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Request connect widget url
         /// </summary>
@@ -8200,6 +8288,154 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteUser", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// (Deprecated) Request an authorization code. (This endpoint is deprecated. Clients should use &#x60;/authorization_code&#x60;.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentProcessorAuthorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <returns>PaymentProcessorAuthorizationCodeResponseBody</returns>
+        public PaymentProcessorAuthorizationCodeResponseBody DeprecatedRequestPaymentProcessorAuthorizationCode(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> localVarResponse = DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfo(paymentProcessorAuthorizationCodeRequestBody);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// (Deprecated) Request an authorization code. (This endpoint is deprecated. Clients should use &#x60;/authorization_code&#x60;.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentProcessorAuthorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <returns>ApiResponse of PaymentProcessorAuthorizationCodeResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfo(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody)
+        {
+            // verify the required parameter 'paymentProcessorAuthorizationCodeRequestBody' is set
+            if (paymentProcessorAuthorizationCodeRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'paymentProcessorAuthorizationCodeRequestBody' when calling MxPlatformApi->DeprecatedRequestPaymentProcessorAuthorizationCode");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = paymentProcessorAuthorizationCodeRequestBody;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<PaymentProcessorAuthorizationCodeResponseBody>("/payment_processor_authorization_code", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeprecatedRequestPaymentProcessorAuthorizationCode", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// (Deprecated) Request an authorization code. (This endpoint is deprecated. Clients should use &#x60;/authorization_code&#x60;.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentProcessorAuthorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of PaymentProcessorAuthorizationCodeResponseBody</returns>
+        public async System.Threading.Tasks.Task<PaymentProcessorAuthorizationCodeResponseBody> DeprecatedRequestPaymentProcessorAuthorizationCodeAsync(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> localVarResponse = await DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfoAsync(paymentProcessorAuthorizationCodeRequestBody, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// (Deprecated) Request an authorization code. (This endpoint is deprecated. Clients should use &#x60;/authorization_code&#x60;.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="paymentProcessorAuthorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (PaymentProcessorAuthorizationCodeResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<PaymentProcessorAuthorizationCodeResponseBody>> DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfoAsync(PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'paymentProcessorAuthorizationCodeRequestBody' is set
+            if (paymentProcessorAuthorizationCodeRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'paymentProcessorAuthorizationCodeRequestBody' when calling MxPlatformApi->DeprecatedRequestPaymentProcessorAuthorizationCode");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = paymentProcessorAuthorizationCodeRequestBody;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<PaymentProcessorAuthorizationCodeResponseBody>("/payment_processor_authorization_code", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeprecatedRequestPaymentProcessorAuthorizationCode", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -17858,6 +18094,154 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadUser", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Request an authorization code. Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <returns>AuthorizationCodeResponseBody</returns>
+        public AuthorizationCodeResponseBody RequestAuthorizationCode(AuthorizationCodeRequestBody authorizationCodeRequestBody)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<AuthorizationCodeResponseBody> localVarResponse = RequestAuthorizationCodeWithHttpInfo(authorizationCodeRequestBody);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request an authorization code. Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <returns>ApiResponse of AuthorizationCodeResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<AuthorizationCodeResponseBody> RequestAuthorizationCodeWithHttpInfo(AuthorizationCodeRequestBody authorizationCodeRequestBody)
+        {
+            // verify the required parameter 'authorizationCodeRequestBody' is set
+            if (authorizationCodeRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'authorizationCodeRequestBody' when calling MxPlatformApi->RequestAuthorizationCode");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = authorizationCodeRequestBody;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AuthorizationCodeResponseBody>("/authorization_code", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RequestAuthorizationCode", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Request an authorization code. Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AuthorizationCodeResponseBody</returns>
+        public async System.Threading.Tasks.Task<AuthorizationCodeResponseBody> RequestAuthorizationCodeAsync(AuthorizationCodeRequestBody authorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<AuthorizationCodeResponseBody> localVarResponse = await RequestAuthorizationCodeWithHttpInfoAsync(authorizationCodeRequestBody, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request an authorization code. Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="authorizationCodeRequestBody">The scope for the authorization code.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AuthorizationCodeResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AuthorizationCodeResponseBody>> RequestAuthorizationCodeWithHttpInfoAsync(AuthorizationCodeRequestBody authorizationCodeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'authorizationCodeRequestBody' is set
+            if (authorizationCodeRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'authorizationCodeRequestBody' when calling MxPlatformApi->RequestAuthorizationCode");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.Data = authorizationCodeRequestBody;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AuthorizationCodeResponseBody>("/authorization_code", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("RequestAuthorizationCode", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

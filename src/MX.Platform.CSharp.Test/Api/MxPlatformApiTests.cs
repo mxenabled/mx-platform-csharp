@@ -310,6 +310,18 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test DeprecatedRequestPaymentProcessorAuthorizationCode
+        /// </summary>
+        [Fact]
+        public void DeprecatedRequestPaymentProcessorAuthorizationCodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody = null;
+            //var response = instance.DeprecatedRequestPaymentProcessorAuthorizationCode(paymentProcessorAuthorizationCodeRequestBody);
+            //Assert.IsType<PaymentProcessorAuthorizationCodeResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test DownloadStatementPDF
         /// </summary>
         [Fact]
@@ -1086,6 +1098,18 @@ namespace MX.Platform.CSharp.Test.Api
             //string userGuid = null;
             //var response = instance.ReadUser(userGuid);
             //Assert.IsType<UserResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test RequestAuthorizationCode
+        /// </summary>
+        [Fact]
+        public void RequestAuthorizationCodeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //AuthorizationCodeRequestBody authorizationCodeRequestBody = null;
+            //var response = instance.RequestAuthorizationCode(authorizationCodeRequestBody);
+            //Assert.IsType<AuthorizationCodeResponseBody>(response);
         }
 
         /// <summary>

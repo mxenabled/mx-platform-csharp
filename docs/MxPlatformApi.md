@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**DeleteTagging**](MxPlatformApi.md#deletetagging) | **DELETE** /users/{user_guid}/taggings/{tagging_guid} | Delete tagging
 [**DeleteTransactionRule**](MxPlatformApi.md#deletetransactionrule) | **DELETE** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Delete transaction rule
 [**DeleteUser**](MxPlatformApi.md#deleteuser) | **DELETE** /users/{user_guid} | Delete user
+[**DeprecatedRequestPaymentProcessorAuthorizationCode**](MxPlatformApi.md#deprecatedrequestpaymentprocessorauthorizationcode) | **POST** /payment_processor_authorization_code | (Deprecated) Request an authorization code.
 [**DownloadStatementPDF**](MxPlatformApi.md#downloadstatementpdf) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid}.pdf | Download statement pdf
 [**EnhanceTransactions**](MxPlatformApi.md#enhancetransactions) | **POST** /transactions/enhance | Enhance transactions
 [**ExtendHistory**](MxPlatformApi.md#extendhistory) | **POST** /users/{user_guid}/members/{member_guid}/extend_history | Extend history
@@ -79,6 +80,7 @@ Method | HTTP request | Description
 [**ReadTransaction**](MxPlatformApi.md#readtransaction) | **GET** /users/{user_guid}/transactions/{transaction_guid} | Read transaction
 [**ReadTransactionRule**](MxPlatformApi.md#readtransactionrule) | **GET** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Read transaction rule
 [**ReadUser**](MxPlatformApi.md#readuser) | **GET** /users/{user_guid} | Read user
+[**RequestAuthorizationCode**](MxPlatformApi.md#requestauthorizationcode) | **POST** /authorization_code | Request an authorization code.
 [**RequestConnectWidgetURL**](MxPlatformApi.md#requestconnectwidgeturl) | **POST** /users/{user_guid}/connect_widget_url | Request connect widget url
 [**RequestOAuthWindowURI**](MxPlatformApi.md#requestoauthwindowuri) | **GET** /users/{user_guid}/members/{member_guid}/oauth_window_uri | Request oauth window uri
 [**RequestWidgetURL**](MxPlatformApi.md#requestwidgeturl) | **POST** /users/{user_guid}/widget_urls | Request widget url
@@ -1633,6 +1635,81 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **204** | No Content |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deprecatedrequestpaymentprocessorauthorizationcode"></a>
+# **DeprecatedRequestPaymentProcessorAuthorizationCode**
+> PaymentProcessorAuthorizationCodeResponseBody DeprecatedRequestPaymentProcessorAuthorizationCode (PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody)
+
+(Deprecated) Request an authorization code.
+
+(This endpoint is deprecated. Clients should use `/authorization_code`.) Clients use this endpoint to request an authorization_code according to a user, member, and account specified in the request body. Clients then pass this code to processors. Processor access is scoped only to the user/member/account specified in this request. Before requesting an authorization_code, clients must have verified the specified member.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class DeprecatedRequestPaymentProcessorAuthorizationCodeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var paymentProcessorAuthorizationCodeRequestBody = new PaymentProcessorAuthorizationCodeRequestBody(); // PaymentProcessorAuthorizationCodeRequestBody | The scope for the authorization code.
+
+            try
+            {
+                // (Deprecated) Request an authorization code.
+                PaymentProcessorAuthorizationCodeResponseBody result = apiInstance.DeprecatedRequestPaymentProcessorAuthorizationCode(paymentProcessorAuthorizationCodeRequestBody);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.DeprecatedRequestPaymentProcessorAuthorizationCode: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **paymentProcessorAuthorizationCodeRequestBody** | [**PaymentProcessorAuthorizationCodeRequestBody**](PaymentProcessorAuthorizationCodeRequestBody.md)| The scope for the authorization code. | 
+
+### Return type
+
+[**PaymentProcessorAuthorizationCodeResponseBody**](PaymentProcessorAuthorizationCodeResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5989,6 +6066,81 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="requestauthorizationcode"></a>
+# **RequestAuthorizationCode**
+> AuthorizationCodeResponseBody RequestAuthorizationCode (AuthorizationCodeRequestBody authorizationCodeRequestBody)
+
+Request an authorization code.
+
+Clients use this endpoint to request an authorization code according to the parameters specified in the scope. Clients then pass this code to processors. Processor access is scoped only to the GUIDs and features specified in this request. Before requesting an authorization code which includes a member in the scope, clients must have verified that member.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class RequestAuthorizationCodeExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var authorizationCodeRequestBody = new AuthorizationCodeRequestBody(); // AuthorizationCodeRequestBody | The scope for the authorization code.
+
+            try
+            {
+                // Request an authorization code.
+                AuthorizationCodeResponseBody result = apiInstance.RequestAuthorizationCode(authorizationCodeRequestBody);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.RequestAuthorizationCode: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorizationCodeRequestBody** | [**AuthorizationCodeRequestBody**](AuthorizationCodeRequestBody.md)| The scope for the authorization code. | 
+
+### Return type
+
+[**AuthorizationCodeResponseBody**](AuthorizationCodeResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/vnd.mx.api.v1+json
 
 

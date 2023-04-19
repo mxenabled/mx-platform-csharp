@@ -11,6 +11,10 @@ docs/AccountResponseBody.md
 docs/AccountUpdateRequest.md
 docs/AccountUpdateRequestBody.md
 docs/AccountsResponseBody.md
+docs/AuthorizationCodeRequest.md
+docs/AuthorizationCodeRequestBody.md
+docs/AuthorizationCodeResponse.md
+docs/AuthorizationCodeResponseBody.md
 docs/CategoriesResponseBody.md
 docs/CategoryCreateRequest.md
 docs/CategoryCreateRequestBody.md
@@ -71,6 +75,10 @@ docs/OAuthWindowResponse.md
 docs/OAuthWindowResponseBody.md
 docs/OptionResponse.md
 docs/PaginationResponse.md
+docs/PaymentProcessorAuthorizationCodeRequest.md
+docs/PaymentProcessorAuthorizationCodeRequestBody.md
+docs/PaymentProcessorAuthorizationCodeResponse.md
+docs/PaymentProcessorAuthorizationCodeResponseBody.md
 docs/StatementResponse.md
 docs/StatementResponseBody.md
 docs/StatementsResponseBody.md
@@ -122,6 +130,10 @@ src/MX.Platform.CSharp.Test/Model/AccountResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/AccountUpdateRequestBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/AccountUpdateRequestTests.cs
 src/MX.Platform.CSharp.Test/Model/AccountsResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/AuthorizationCodeRequestBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/AuthorizationCodeRequestTests.cs
+src/MX.Platform.CSharp.Test/Model/AuthorizationCodeResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/AuthorizationCodeResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/CategoriesResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/CategoryCreateRequestBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/CategoryCreateRequestTests.cs
@@ -181,6 +193,10 @@ src/MX.Platform.CSharp.Test/Model/OAuthWindowResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/OAuthWindowResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/OptionResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/PaginationResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeRequestBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeRequestTests.cs
+src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/StatementResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/StatementResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/StatementsResponseBodyTests.cs
@@ -249,6 +265,10 @@ src/MX.Platform.CSharp/Model/AccountResponseBody.cs
 src/MX.Platform.CSharp/Model/AccountUpdateRequest.cs
 src/MX.Platform.CSharp/Model/AccountUpdateRequestBody.cs
 src/MX.Platform.CSharp/Model/AccountsResponseBody.cs
+src/MX.Platform.CSharp/Model/AuthorizationCodeRequest.cs
+src/MX.Platform.CSharp/Model/AuthorizationCodeRequestBody.cs
+src/MX.Platform.CSharp/Model/AuthorizationCodeResponse.cs
+src/MX.Platform.CSharp/Model/AuthorizationCodeResponseBody.cs
 src/MX.Platform.CSharp/Model/CategoriesResponseBody.cs
 src/MX.Platform.CSharp/Model/CategoryCreateRequest.cs
 src/MX.Platform.CSharp/Model/CategoryCreateRequestBody.cs
@@ -308,6 +328,10 @@ src/MX.Platform.CSharp/Model/OAuthWindowResponse.cs
 src/MX.Platform.CSharp/Model/OAuthWindowResponseBody.cs
 src/MX.Platform.CSharp/Model/OptionResponse.cs
 src/MX.Platform.CSharp/Model/PaginationResponse.cs
+src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeRequest.cs
+src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeRequestBody.cs
+src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeResponse.cs
+src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeResponseBody.cs
 src/MX.Platform.CSharp/Model/StatementResponse.cs
 src/MX.Platform.CSharp/Model/StatementResponseBody.cs
 src/MX.Platform.CSharp/Model/StatementsResponseBody.cs
