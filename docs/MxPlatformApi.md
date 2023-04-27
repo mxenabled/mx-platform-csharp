@@ -26,9 +26,11 @@ Method | HTTP request | Description
 [**DeleteUser**](MxPlatformApi.md#deleteuser) | **DELETE** /users/{user_guid} | Delete user
 [**DeprecatedRequestPaymentProcessorAuthorizationCode**](MxPlatformApi.md#deprecatedrequestpaymentprocessorauthorizationcode) | **POST** /payment_processor_authorization_code | (Deprecated) Request an authorization code.
 [**DownloadStatementPDF**](MxPlatformApi.md#downloadstatementpdf) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid}.pdf | Download statement pdf
+[**DownloadTaxDocument**](MxPlatformApi.md#downloadtaxdocument) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid}.pdf | Download a Tax Document PDF
 [**EnhanceTransactions**](MxPlatformApi.md#enhancetransactions) | **POST** /transactions/enhance | Enhance transactions
 [**ExtendHistory**](MxPlatformApi.md#extendhistory) | **POST** /users/{user_guid}/members/{member_guid}/extend_history | Extend history
 [**FetchStatements**](MxPlatformApi.md#fetchstatements) | **POST** /users/{user_guid}/members/{member_guid}/fetch_statements | Fetch statements
+[**FetchTaxDocuments**](MxPlatformApi.md#fetchtaxdocuments) | **POST** /users/{user_guid}/members/{member_guid}/fetch_tax_documents | Fetch Tax Documents
 [**IdentifyMember**](MxPlatformApi.md#identifymember) | **POST** /users/{user_guid}/members/{member_guid}/identify | Identify member
 [**ListAccountNumbersByAccount**](MxPlatformApi.md#listaccountnumbersbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/account_numbers | List account numbers by account
 [**ListAccountNumbersByMember**](MxPlatformApi.md#listaccountnumbersbymember) | **GET** /users/{user_guid}/members/{member_guid}/account_numbers | List account numbers by member
@@ -54,6 +56,7 @@ Method | HTTP request | Description
 [**ListStatementsByMember**](MxPlatformApi.md#liststatementsbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements | List statements by member
 [**ListTaggings**](MxPlatformApi.md#listtaggings) | **GET** /users/{user_guid}/taggings | List taggings
 [**ListTags**](MxPlatformApi.md#listtags) | **GET** /users/{user_guid}/tags | List tags
+[**ListTaxDocuments**](MxPlatformApi.md#listtaxdocuments) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents | List Tax Documents
 [**ListTransactionRules**](MxPlatformApi.md#listtransactionrules) | **GET** /users/{user_guid}/transaction_rules | List transaction rules
 [**ListTransactions**](MxPlatformApi.md#listtransactions) | **GET** /users/{user_guid}/transactions | List transactions
 [**ListTransactionsByAccount**](MxPlatformApi.md#listtransactionsbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/transactions | List transactions by account
@@ -77,6 +80,7 @@ Method | HTTP request | Description
 [**ReadStatementByMember**](MxPlatformApi.md#readstatementbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid} | Read statement by member
 [**ReadTag**](MxPlatformApi.md#readtag) | **GET** /users/{user_guid}/tags/{tag_guid} | Read tag
 [**ReadTagging**](MxPlatformApi.md#readtagging) | **GET** /users/{user_guid}/taggings/{tagging_guid} | Read tagging
+[**ReadTaxDocument**](MxPlatformApi.md#readtaxdocument) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid} | Read a Tax Document
 [**ReadTransaction**](MxPlatformApi.md#readtransaction) | **GET** /users/{user_guid}/transactions/{transaction_guid} | Read transaction
 [**ReadTransactionRule**](MxPlatformApi.md#readtransactionrule) | **GET** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Read transaction rule
 [**ReadUser**](MxPlatformApi.md#readuser) | **GET** /users/{user_guid} | Read user
@@ -1792,6 +1796,85 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="downloadtaxdocument"></a>
+# **DownloadTaxDocument**
+> System.IO.Stream DownloadTaxDocument (string taxDocumentGuid, string memberGuid, string userGuid)
+
+Download a Tax Document PDF
+
+Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class DownloadTaxDocumentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var taxDocumentGuid = TAX-987dfds1b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `tax_document`.
+            var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+
+            try
+            {
+                // Download a Tax Document PDF
+                System.IO.Stream result = apiInstance.DownloadTaxDocument(taxDocumentGuid, memberGuid, userGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.DownloadTaxDocument: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **taxDocumentGuid** | **string**| The unique id for a &#x60;tax_document&#x60;. | 
+ **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+
+### Return type
+
+**System.IO.Stream**
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+pdf
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="enhancetransactions"></a>
 # **EnhanceTransactions**
 > EnhanceTransactionsResponseBody EnhanceTransactions (EnhanceTransactionsRequestBody enhanceTransactionsRequestBody)
@@ -1985,6 +2068,83 @@ namespace Example
             catch (ApiException  e)
             {
                 Debug.Print("Exception when calling MxPlatformApi.FetchStatements: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+
+### Return type
+
+[**MemberResponseBody**](MemberResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **202** | Accepted |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="fetchtaxdocuments"></a>
+# **FetchTaxDocuments**
+> MemberResponseBody FetchTaxDocuments (string memberGuid, string userGuid)
+
+Fetch Tax Documents
+
+Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class FetchTaxDocumentsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+
+            try
+            {
+                // Fetch Tax Documents
+                MemberResponseBody result = apiInstance.FetchTaxDocuments(memberGuid, userGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.FetchTaxDocuments: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -4032,6 +4192,87 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="listtaxdocuments"></a>
+# **ListTaxDocuments**
+> TaxDocumentsResponseBody ListTaxDocuments (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
+
+List Tax Documents
+
+Use this endpoint to get a paginated list of tax documents.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListTaxDocumentsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // List Tax Documents
+                TaxDocumentsResponseBody result = apiInstance.ListTaxDocuments(memberGuid, userGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListTaxDocuments: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**TaxDocumentsResponseBody**](TaxDocumentsResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="listtransactionrules"></a>
 # **ListTransactionRules**
 > TransactionRulesResponseBody ListTransactionRules (string userGuid, int? page = null, int? recordsPerPage = null)
@@ -5829,6 +6070,85 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TaggingResponseBody**](TaggingResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="readtaxdocument"></a>
+# **ReadTaxDocument**
+> TaxDocumentResponseBody ReadTaxDocument (string taxDocumentGuid, string memberGuid, string userGuid)
+
+Read a Tax Document
+
+Use this endpoint to read the attributes of the specified tax document.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadTaxDocumentExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var taxDocumentGuid = TAX-987dfds1b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `tax_document`.
+            var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+
+            try
+            {
+                // Read a Tax Document
+                TaxDocumentResponseBody result = apiInstance.ReadTaxDocument(taxDocumentGuid, memberGuid, userGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ReadTaxDocument: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **taxDocumentGuid** | **string**| The unique id for a &#x60;tax_document&#x60;. | 
+ **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+
+### Return type
+
+[**TaxDocumentResponseBody**](TaxDocumentResponseBody.md)
 
 ### Authorization
 
