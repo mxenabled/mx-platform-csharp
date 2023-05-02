@@ -336,6 +336,20 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test DownloadTaxDocument
+        /// </summary>
+        [Fact]
+        public void DownloadTaxDocumentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string taxDocumentGuid = null;
+            //string memberGuid = null;
+            //string userGuid = null;
+            //var response = instance.DownloadTaxDocument(taxDocumentGuid, memberGuid, userGuid);
+            //Assert.IsType<System.IO.Stream>(response);
+        }
+
+        /// <summary>
         /// Test EnhanceTransactions
         /// </summary>
         [Fact]
@@ -370,6 +384,19 @@ namespace MX.Platform.CSharp.Test.Api
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.FetchStatements(memberGuid, userGuid);
+            //Assert.IsType<MemberResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test FetchTaxDocuments
+        /// </summary>
+        [Fact]
+        public void FetchTaxDocumentsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string memberGuid = null;
+            //string userGuid = null;
+            //var response = instance.FetchTaxDocuments(memberGuid, userGuid);
             //Assert.IsType<MemberResponseBody>(response);
         }
 
@@ -742,6 +769,21 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test ListTaxDocuments
+        /// </summary>
+        [Fact]
+        public void ListTaxDocumentsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string memberGuid = null;
+            //string userGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListTaxDocuments(memberGuid, userGuid, page, recordsPerPage);
+            //Assert.IsType<TaxDocumentsResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test ListTransactionRules
         /// </summary>
         [Fact]
@@ -1060,6 +1102,20 @@ namespace MX.Platform.CSharp.Test.Api
             //string userGuid = null;
             //var response = instance.ReadTagging(taggingGuid, userGuid);
             //Assert.IsType<TaggingResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test ReadTaxDocument
+        /// </summary>
+        [Fact]
+        public void ReadTaxDocumentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string taxDocumentGuid = null;
+            //string memberGuid = null;
+            //string userGuid = null;
+            //var response = instance.ReadTaxDocument(taxDocumentGuid, memberGuid, userGuid);
+            //Assert.IsType<TaxDocumentResponseBody>(response);
         }
 
         /// <summary>

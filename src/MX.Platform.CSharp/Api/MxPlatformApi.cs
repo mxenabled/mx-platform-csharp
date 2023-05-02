@@ -541,6 +541,31 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> DownloadStatementPDFWithHttpInfo(string memberGuid, string statementGuid, string userGuid);
         /// <summary>
+        /// Download a Tax Document PDF
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream DownloadTaxDocument(string taxDocumentGuid, string memberGuid, string userGuid);
+
+        /// <summary>
+        /// Download a Tax Document PDF
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> DownloadTaxDocumentWithHttpInfo(string taxDocumentGuid, string memberGuid, string userGuid);
+        /// <summary>
         /// Enhance transactions
         /// </summary>
         /// <remarks>
@@ -607,6 +632,29 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of MemberResponseBody</returns>
         ApiResponse<MemberResponseBody> FetchStatementsWithHttpInfo(string memberGuid, string userGuid);
+        /// <summary>
+        /// Fetch Tax Documents
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>MemberResponseBody</returns>
+        MemberResponseBody FetchTaxDocuments(string memberGuid, string userGuid);
+
+        /// <summary>
+        /// Fetch Tax Documents
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        ApiResponse<MemberResponseBody> FetchTaxDocumentsWithHttpInfo(string memberGuid, string userGuid);
         /// <summary>
         /// Identify member
         /// </summary>
@@ -1269,6 +1317,33 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of TagsResponseBody</returns>
         ApiResponse<TagsResponseBody> ListTagsWithHttpInfo(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
         /// <summary>
+        /// List Tax Documents
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to get a paginated list of tax documents.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>TaxDocumentsResponseBody</returns>
+        TaxDocumentsResponseBody ListTaxDocuments(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
+
+        /// <summary>
+        /// List Tax Documents
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to get a paginated list of tax documents.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>ApiResponse of TaxDocumentsResponseBody</returns>
+        ApiResponse<TaxDocumentsResponseBody> ListTaxDocumentsWithHttpInfo(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?));
+        /// <summary>
         /// List transaction rules
         /// </summary>
         /// <remarks>
@@ -1841,6 +1916,31 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of TaggingResponseBody</returns>
         ApiResponse<TaggingResponseBody> ReadTaggingWithHttpInfo(string taggingGuid, string userGuid);
+        /// <summary>
+        /// Read a Tax Document
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to read the attributes of the specified tax document.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>TaxDocumentResponseBody</returns>
+        TaxDocumentResponseBody ReadTaxDocument(string taxDocumentGuid, string memberGuid, string userGuid);
+
+        /// <summary>
+        /// Read a Tax Document
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to read the attributes of the specified tax document.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of TaxDocumentResponseBody</returns>
+        ApiResponse<TaxDocumentResponseBody> ReadTaxDocumentWithHttpInfo(string taxDocumentGuid, string memberGuid, string userGuid);
         /// <summary>
         /// Read transaction
         /// </summary>
@@ -2905,6 +3005,33 @@ namespace MX.Platform.CSharp.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadStatementPDFWithHttpInfoAsync(string memberGuid, string statementGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// Download a Tax Document PDF
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadTaxDocumentAsync(string taxDocumentGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Download a Tax Document PDF
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadTaxDocumentWithHttpInfoAsync(string taxDocumentGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Enhance transactions
         /// </summary>
         /// <remarks>
@@ -2977,6 +3104,31 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> FetchStatementsWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Fetch Tax Documents
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of MemberResponseBody</returns>
+        System.Threading.Tasks.Task<MemberResponseBody> FetchTaxDocumentsAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Fetch Tax Documents
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> FetchTaxDocumentsWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Identify member
         /// </summary>
@@ -3689,6 +3841,35 @@ namespace MX.Platform.CSharp.Api
         /// <returns>Task of ApiResponse (TagsResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<TagsResponseBody>> ListTagsWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// List Tax Documents
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to get a paginated list of tax documents.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of TaxDocumentsResponseBody</returns>
+        System.Threading.Tasks.Task<TaxDocumentsResponseBody> ListTaxDocumentsAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Tax Documents
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to get a paginated list of tax documents.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (TaxDocumentsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TaxDocumentsResponseBody>> ListTaxDocumentsWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// List transaction rules
         /// </summary>
         /// <remarks>
@@ -4307,6 +4488,33 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaggingResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<TaggingResponseBody>> ReadTaggingWithHttpInfoAsync(string taggingGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Read a Tax Document
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to read the attributes of the specified tax document.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of TaxDocumentResponseBody</returns>
+        System.Threading.Tasks.Task<TaxDocumentResponseBody> ReadTaxDocumentAsync(string taxDocumentGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Read a Tax Document
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to read the attributes of the specified tax document.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (TaxDocumentResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TaxDocumentResponseBody>> ReadTaxDocumentWithHttpInfoAsync(string taxDocumentGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Read transaction
         /// </summary>
@@ -8628,6 +8836,188 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
+        /// Download a Tax Document PDF Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream DownloadTaxDocument(string taxDocumentGuid, string memberGuid, string userGuid)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<System.IO.Stream> localVarResponse = DownloadTaxDocumentWithHttpInfo(taxDocumentGuid, memberGuid, userGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download a Tax Document PDF Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<System.IO.Stream> DownloadTaxDocumentWithHttpInfo(string taxDocumentGuid, string memberGuid, string userGuid)
+        {
+            // verify the required parameter 'taxDocumentGuid' is set
+            if (taxDocumentGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taxDocumentGuid' when calling MxPlatformApi->DownloadTaxDocument");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DownloadTaxDocument");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DownloadTaxDocument");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+pdf"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("tax_document_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taxDocumentGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<System.IO.Stream>("/users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid}.pdf", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DownloadTaxDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Download a Tax Document PDF Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadTaxDocumentAsync(string taxDocumentGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<System.IO.Stream> localVarResponse = await DownloadTaxDocumentWithHttpInfoAsync(taxDocumentGuid, memberGuid, userGuid, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download a Tax Document PDF Use this endpoint to download a PDF version of the specified tax document. The endpoint URL is the base URL appended with the uri of the tax_document.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<System.IO.Stream>> DownloadTaxDocumentWithHttpInfoAsync(string taxDocumentGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'taxDocumentGuid' is set
+            if (taxDocumentGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taxDocumentGuid' when calling MxPlatformApi->DownloadTaxDocument");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->DownloadTaxDocument");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DownloadTaxDocument");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+pdf"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("tax_document_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taxDocumentGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<System.IO.Stream>("/users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid}.pdf", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DownloadTaxDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Enhance transactions Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9094,6 +9484,170 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FetchStatements", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Fetch Tax Documents Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>MemberResponseBody</returns>
+        public MemberResponseBody FetchTaxDocuments(string memberGuid, string userGuid)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> localVarResponse = FetchTaxDocumentsWithHttpInfo(memberGuid, userGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch Tax Documents Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> FetchTaxDocumentsWithHttpInfo(string memberGuid, string userGuid)
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->FetchTaxDocuments");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->FetchTaxDocuments");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/fetch_tax_documents", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FetchTaxDocuments", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Fetch Tax Documents Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of MemberResponseBody</returns>
+        public async System.Threading.Tasks.Task<MemberResponseBody> FetchTaxDocumentsAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> localVarResponse = await FetchTaxDocumentsWithHttpInfoAsync(memberGuid, userGuid, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch Tax Documents Use this endpoint to fetch (aggregate) the tax documents associated with the specified member. This request **does not** return the latest tax documents. It just starts the document aggregation process and returns the initial state of the process. You must interact with the newly aggregated data using the other document endpoints in this reference. This request may also trigger multi-factor authentication which requires end-user input and a specific process for answering authentication challenges.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody>> FetchTaxDocumentsWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->FetchTaxDocuments");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->FetchTaxDocuments");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/fetch_tax_documents", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FetchTaxDocuments", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -13618,6 +14172,194 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
+        /// List Tax Documents Use this endpoint to get a paginated list of tax documents.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>TaxDocumentsResponseBody</returns>
+        public TaxDocumentsResponseBody ListTaxDocuments(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<TaxDocumentsResponseBody> localVarResponse = ListTaxDocumentsWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Tax Documents Use this endpoint to get a paginated list of tax documents.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>ApiResponse of TaxDocumentsResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<TaxDocumentsResponseBody> ListTaxDocumentsWithHttpInfo(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?))
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListTaxDocuments");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTaxDocuments");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (page != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
+            }
+            if (recordsPerPage != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "records_per_page", recordsPerPage));
+            }
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<TaxDocumentsResponseBody>("/users/{user_guid}/members/{member_guid}/tax_documents", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListTaxDocuments", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Tax Documents Use this endpoint to get a paginated list of tax documents.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of TaxDocumentsResponseBody</returns>
+        public async System.Threading.Tasks.Task<TaxDocumentsResponseBody> ListTaxDocumentsAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<TaxDocumentsResponseBody> localVarResponse = await ListTaxDocumentsWithHttpInfoAsync(memberGuid, userGuid, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Tax Documents Use this endpoint to get a paginated list of tax documents.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (TaxDocumentsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TaxDocumentsResponseBody>> ListTaxDocumentsWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListTaxDocuments");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListTaxDocuments");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (page != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
+            }
+            if (recordsPerPage != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "records_per_page", recordsPerPage));
+            }
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TaxDocumentsResponseBody>("/users/{user_guid}/members/{member_guid}/tax_documents", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListTaxDocuments", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List transaction rules Use this endpoint to read the attributes of all existing transaction rules belonging to the user.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17620,6 +18362,188 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadTagging", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read a Tax Document Use this endpoint to read the attributes of the specified tax document.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>TaxDocumentResponseBody</returns>
+        public TaxDocumentResponseBody ReadTaxDocument(string taxDocumentGuid, string memberGuid, string userGuid)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<TaxDocumentResponseBody> localVarResponse = ReadTaxDocumentWithHttpInfo(taxDocumentGuid, memberGuid, userGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read a Tax Document Use this endpoint to read the attributes of the specified tax document.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of TaxDocumentResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<TaxDocumentResponseBody> ReadTaxDocumentWithHttpInfo(string taxDocumentGuid, string memberGuid, string userGuid)
+        {
+            // verify the required parameter 'taxDocumentGuid' is set
+            if (taxDocumentGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taxDocumentGuid' when calling MxPlatformApi->ReadTaxDocument");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadTaxDocument");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTaxDocument");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("tax_document_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taxDocumentGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<TaxDocumentResponseBody>("/users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadTaxDocument", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read a Tax Document Use this endpoint to read the attributes of the specified tax document.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of TaxDocumentResponseBody</returns>
+        public async System.Threading.Tasks.Task<TaxDocumentResponseBody> ReadTaxDocumentAsync(string taxDocumentGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<TaxDocumentResponseBody> localVarResponse = await ReadTaxDocumentWithHttpInfoAsync(taxDocumentGuid, memberGuid, userGuid, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read a Tax Document Use this endpoint to read the attributes of the specified tax document.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taxDocumentGuid">The unique id for a &#x60;tax_document&#x60;.</param>
+        /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (TaxDocumentResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<TaxDocumentResponseBody>> ReadTaxDocumentWithHttpInfoAsync(string taxDocumentGuid, string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'taxDocumentGuid' is set
+            if (taxDocumentGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'taxDocumentGuid' when calling MxPlatformApi->ReadTaxDocument");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadTaxDocument");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadTaxDocument");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("tax_document_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(taxDocumentGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TaxDocumentResponseBody>("/users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadTaxDocument", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

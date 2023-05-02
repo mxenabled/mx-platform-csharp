@@ -96,6 +96,9 @@ docs/TaggingUpdateRequest.md
 docs/TaggingUpdateRequestBody.md
 docs/TaggingsResponseBody.md
 docs/TagsResponseBody.md
+docs/TaxDocumentResponse.md
+docs/TaxDocumentResponseBody.md
+docs/TaxDocumentsResponseBody.md
 docs/TransactionResponse.md
 docs/TransactionResponseBody.md
 docs/TransactionRuleCreateRequest.md
@@ -214,6 +217,9 @@ src/MX.Platform.CSharp.Test/Model/TaggingUpdateRequestBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/TaggingUpdateRequestTests.cs
 src/MX.Platform.CSharp.Test/Model/TaggingsResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/TagsResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/TaxDocumentResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/TaxDocumentResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/TaxDocumentsResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/TransactionResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/TransactionResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/TransactionRuleCreateRequestBodyTests.cs
@@ -349,6 +355,9 @@ src/MX.Platform.CSharp/Model/TaggingUpdateRequest.cs
 src/MX.Platform.CSharp/Model/TaggingUpdateRequestBody.cs
 src/MX.Platform.CSharp/Model/TaggingsResponseBody.cs
 src/MX.Platform.CSharp/Model/TagsResponseBody.cs
+src/MX.Platform.CSharp/Model/TaxDocumentResponse.cs
+src/MX.Platform.CSharp/Model/TaxDocumentResponseBody.cs
+src/MX.Platform.CSharp/Model/TaxDocumentsResponseBody.cs
 src/MX.Platform.CSharp/Model/TransactionResponse.cs
 src/MX.Platform.CSharp/Model/TransactionResponseBody.cs
 src/MX.Platform.CSharp/Model/TransactionRuleCreateRequest.cs
