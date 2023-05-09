@@ -65,6 +65,22 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'Code'
         }
         /// <summary>
+        /// Test the property 'ForgotPasswordUrl'
+        /// </summary>
+        [Fact]
+        public void ForgotPasswordUrlTest()
+        {
+            // TODO unit test for the property 'ForgotPasswordUrl'
+        }
+        /// <summary>
+        /// Test the property 'ForgotUsernameUrl'
+        /// </summary>
+        [Fact]
+        public void ForgotUsernameUrlTest()
+        {
+            // TODO unit test for the property 'ForgotUsernameUrl'
+        }
+        /// <summary>
         /// Test the property 'InstructionalText'
         /// </summary>
         [Fact]
@@ -135,6 +151,14 @@ namespace MX.Platform.CSharp.Test.Model
         public void SupportsTransactionHistoryTest()
         {
             // TODO unit test for the property 'SupportsTransactionHistory'
+        }
+        /// <summary>
+        /// Test the property 'TroubleSigningInUrl'
+        /// </summary>
+        [Fact]
+        public void TroubleSigningInUrlTest()
+        {
+            // TODO unit test for the property 'TroubleSigningInUrl'
         }
         /// <summary>
         /// Test the property 'Url'

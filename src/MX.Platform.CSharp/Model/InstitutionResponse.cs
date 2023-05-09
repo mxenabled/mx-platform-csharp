@@ -35,6 +35,8 @@ namespace MX.Platform.CSharp.Model
         /// Initializes a new instance of the <see cref="InstitutionResponse" /> class.
         /// </summary>
         /// <param name="code">code.</param>
+        /// <param name="forgotPasswordUrl">forgotPasswordUrl.</param>
+        /// <param name="forgotUsernameUrl">forgotUsernameUrl.</param>
         /// <param name="instructionalText">instructionalText.</param>
         /// <param name="mediumLogoUrl">mediumLogoUrl.</param>
         /// <param name="name">name.</param>
@@ -44,10 +46,13 @@ namespace MX.Platform.CSharp.Model
         /// <param name="supportsAccountVerification">supportsAccountVerification.</param>
         /// <param name="supportsOauth">supportsOauth.</param>
         /// <param name="supportsTransactionHistory">supportsTransactionHistory.</param>
+        /// <param name="troubleSigningInUrl">troubleSigningInUrl.</param>
         /// <param name="url">url.</param>
-        public InstitutionResponse(string code = default(string), string instructionalText = default(string), string mediumLogoUrl = default(string), string name = default(string), string smallLogoUrl = default(string), bool? supportsAccountIdentification = default(bool?), bool? supportsAccountStatement = default(bool?), bool? supportsAccountVerification = default(bool?), bool? supportsOauth = default(bool?), bool? supportsTransactionHistory = default(bool?), string url = default(string))
+        public InstitutionResponse(string code = default(string), string forgotPasswordUrl = default(string), string forgotUsernameUrl = default(string), string instructionalText = default(string), string mediumLogoUrl = default(string), string name = default(string), string smallLogoUrl = default(string), bool? supportsAccountIdentification = default(bool?), bool? supportsAccountStatement = default(bool?), bool? supportsAccountVerification = default(bool?), bool? supportsOauth = default(bool?), bool? supportsTransactionHistory = default(bool?), string troubleSigningInUrl = default(string), string url = default(string))
         {
             this.Code = code;
+            this.ForgotPasswordUrl = forgotPasswordUrl;
+            this.ForgotUsernameUrl = forgotUsernameUrl;
             this.InstructionalText = instructionalText;
             this.MediumLogoUrl = mediumLogoUrl;
             this.Name = name;
@@ -57,6 +62,7 @@ namespace MX.Platform.CSharp.Model
             this.SupportsAccountVerification = supportsAccountVerification;
             this.SupportsOauth = supportsOauth;
             this.SupportsTransactionHistory = supportsTransactionHistory;
+            this.TroubleSigningInUrl = troubleSigningInUrl;
             this.Url = url;
         }
 
@@ -65,6 +71,18 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "code", EmitDefaultValue = true)]
         public string Code { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ForgotPasswordUrl
+        /// </summary>
+        [DataMember(Name = "forgot_password_url", EmitDefaultValue = true)]
+        public string ForgotPasswordUrl { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ForgotUsernameUrl
+        /// </summary>
+        [DataMember(Name = "forgot_username_url", EmitDefaultValue = true)]
+        public string ForgotUsernameUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets InstructionalText
@@ -121,6 +139,12 @@ namespace MX.Platform.CSharp.Model
         public bool? SupportsTransactionHistory { get; set; }
 
         /// <summary>
+        /// Gets or Sets TroubleSigningInUrl
+        /// </summary>
+        [DataMember(Name = "trouble_signing_in_url", EmitDefaultValue = true)]
+        public string TroubleSigningInUrl { get; set; }
+
+        /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name = "url", EmitDefaultValue = true)]
@@ -135,6 +159,8 @@ namespace MX.Platform.CSharp.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class InstitutionResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  ForgotPasswordUrl: ").Append(ForgotPasswordUrl).Append("\n");
+            sb.Append("  ForgotUsernameUrl: ").Append(ForgotUsernameUrl).Append("\n");
             sb.Append("  InstructionalText: ").Append(InstructionalText).Append("\n");
             sb.Append("  MediumLogoUrl: ").Append(MediumLogoUrl).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -144,6 +170,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  SupportsAccountVerification: ").Append(SupportsAccountVerification).Append("\n");
             sb.Append("  SupportsOauth: ").Append(SupportsOauth).Append("\n");
             sb.Append("  SupportsTransactionHistory: ").Append(SupportsTransactionHistory).Append("\n");
+            sb.Append("  TroubleSigningInUrl: ").Append(TroubleSigningInUrl).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -184,6 +211,16 @@ namespace MX.Platform.CSharp.Model
                     this.Code == input.Code ||
                     (this.Code != null &&
                     this.Code.Equals(input.Code))
+                ) && 
+                (
+                    this.ForgotPasswordUrl == input.ForgotPasswordUrl ||
+                    (this.ForgotPasswordUrl != null &&
+                    this.ForgotPasswordUrl.Equals(input.ForgotPasswordUrl))
+                ) && 
+                (
+                    this.ForgotUsernameUrl == input.ForgotUsernameUrl ||
+                    (this.ForgotUsernameUrl != null &&
+                    this.ForgotUsernameUrl.Equals(input.ForgotUsernameUrl))
                 ) && 
                 (
                     this.InstructionalText == input.InstructionalText ||
@@ -231,6 +268,11 @@ namespace MX.Platform.CSharp.Model
                     this.SupportsTransactionHistory.Equals(input.SupportsTransactionHistory))
                 ) && 
                 (
+                    this.TroubleSigningInUrl == input.TroubleSigningInUrl ||
+                    (this.TroubleSigningInUrl != null &&
+                    this.TroubleSigningInUrl.Equals(input.TroubleSigningInUrl))
+                ) && 
+                (
                     this.Url == input.Url ||
                     (this.Url != null &&
                     this.Url.Equals(input.Url))
@@ -249,6 +291,14 @@ namespace MX.Platform.CSharp.Model
                 if (this.Code != null)
                 {
                     hashCode = (hashCode * 59) + this.Code.GetHashCode();
+                }
+                if (this.ForgotPasswordUrl != null)
+                {
+                    hashCode = (hashCode * 59) + this.ForgotPasswordUrl.GetHashCode();
+                }
+                if (this.ForgotUsernameUrl != null)
+                {
+                    hashCode = (hashCode * 59) + this.ForgotUsernameUrl.GetHashCode();
                 }
                 if (this.InstructionalText != null)
                 {
@@ -285,6 +335,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.SupportsTransactionHistory != null)
                 {
                     hashCode = (hashCode * 59) + this.SupportsTransactionHistory.GetHashCode();
+                }
+                if (this.TroubleSigningInUrl != null)
+                {
+                    hashCode = (hashCode * 59) + this.TroubleSigningInUrl.GetHashCode();
                 }
                 if (this.Url != null)
                 {

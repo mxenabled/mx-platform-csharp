@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | **string** |  | [optional] 
+**ForgotPasswordUrl** | **string** |  | [optional] 
+**ForgotUsernameUrl** | **string** |  | [optional] 
 **InstructionalText** | **string** |  | [optional] 
 **MediumLogoUrl** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
@@ -14,6 +16,7 @@ Name | Type | Description | Notes
 **SupportsAccountVerification** | **bool?** |  | [optional] 
 **SupportsOauth** | **bool?** |  | [optional] 
 **SupportsTransactionHistory** | **bool?** |  | [optional] 
+**TroubleSigningInUrl** | **string** |  | [optional] 
 **Url** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
