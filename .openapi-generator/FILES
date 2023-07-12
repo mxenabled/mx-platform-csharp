@@ -2,6 +2,8 @@
 MX.Platform.CSharp.sln
 README.md
 appveyor.yml
+docs/AccountCreateRequest.md
+docs/AccountCreateRequestBody.md
 docs/AccountNumberResponse.md
 docs/AccountNumbersResponseBody.md
 docs/AccountOwnerResponse.md
@@ -124,6 +126,8 @@ docs/WidgetResponse.md
 docs/WidgetResponseBody.md
 src/MX.Platform.CSharp.Test/Api/MxPlatformApiTests.cs
 src/MX.Platform.CSharp.Test/MX.Platform.CSharp.Test.csproj
+src/MX.Platform.CSharp.Test/Model/AccountCreateRequestBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/AccountCreateRequestTests.cs
 src/MX.Platform.CSharp.Test/Model/AccountNumberResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/AccountNumbersResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/AccountOwnerResponseTests.cs
@@ -262,6 +266,8 @@ src/MX.Platform.CSharp/Client/RequestOptions.cs
 src/MX.Platform.CSharp/Client/RetryConfiguration.cs
 src/MX.Platform.CSharp/MX.Platform.CSharp.csproj
 src/MX.Platform.CSharp/Model/AbstractOpenAPISchema.cs
+src/MX.Platform.CSharp/Model/AccountCreateRequest.cs
+src/MX.Platform.CSharp/Model/AccountCreateRequestBody.cs
 src/MX.Platform.CSharp/Model/AccountNumberResponse.cs
 src/MX.Platform.CSharp/Model/AccountNumbersResponseBody.cs
 src/MX.Platform.CSharp/Model/AccountOwnerResponse.cs

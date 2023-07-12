@@ -171,6 +171,29 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of TransactionResponseBody</returns>
         ApiResponse<TransactionResponseBody> CreateManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody);
         /// <summary>
+        /// Create manual account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountCreateRequestBody">Manual account object to be created.</param>
+        /// <returns>AccountResponseBody</returns>
+        AccountResponseBody CreateManualAccount(string userGuid, AccountCreateRequestBody accountCreateRequestBody);
+
+        /// <summary>
+        /// Create manual account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountCreateRequestBody">Manual account object to be created.</param>
+        /// <returns>ApiResponse of AccountResponseBody</returns>
+        ApiResponse<AccountResponseBody> CreateManualAccountWithHttpInfo(string userGuid, AccountCreateRequestBody accountCreateRequestBody);
+        /// <summary>
         /// Create member
         /// </summary>
         /// <remarks>
@@ -381,6 +404,29 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteManagedTransactionWithHttpInfo(string accountGuid, string memberGuid, string transactionGuid, string userGuid);
+        /// <summary>
+        /// Delete manual account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint deletes accounts that were manually created. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns></returns>
+        void DeleteManualAccount(string accountGuid, string userGuid);
+
+        /// <summary>
+        /// Delete manual account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint deletes accounts that were manually created. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteManualAccountWithHttpInfo(string accountGuid, string userGuid);
         /// <summary>
         /// Delete member
         /// </summary>
@@ -2603,6 +2649,31 @@ namespace MX.Platform.CSharp.Api
         /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> CreateManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// Create manual account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountCreateRequestBody">Manual account object to be created.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AccountResponseBody</returns>
+        System.Threading.Tasks.Task<AccountResponseBody> CreateManualAccountAsync(string userGuid, AccountCreateRequestBody accountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create manual account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountCreateRequestBody">Manual account object to be created.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> CreateManualAccountWithHttpInfoAsync(string userGuid, AccountCreateRequestBody accountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Create member
         /// </summary>
         /// <remarks>
@@ -2831,6 +2902,31 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManagedTransactionWithHttpInfoAsync(string accountGuid, string memberGuid, string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Delete manual account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint deletes accounts that were manually created. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteManualAccountAsync(string accountGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Delete manual account
+        /// </summary>
+        /// <remarks>
+        /// This endpoint deletes accounts that were manually created. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManualAccountWithHttpInfoAsync(string accountGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Delete member
         /// </summary>
@@ -6218,6 +6314,172 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
+        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountCreateRequestBody">Manual account object to be created.</param>
+        /// <returns>AccountResponseBody</returns>
+        public AccountResponseBody CreateManualAccount(string userGuid, AccountCreateRequestBody accountCreateRequestBody)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = CreateManualAccountWithHttpInfo(userGuid, accountCreateRequestBody);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountCreateRequestBody">Manual account object to be created.</param>
+        /// <returns>ApiResponse of AccountResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> CreateManualAccountWithHttpInfo(string userGuid, AccountCreateRequestBody accountCreateRequestBody)
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManualAccount");
+            }
+
+            // verify the required parameter 'accountCreateRequestBody' is set
+            if (accountCreateRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountCreateRequestBody' when calling MxPlatformApi->CreateManualAccount");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.Data = accountCreateRequestBody;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<AccountResponseBody>("/users/{user_guid}/accounts", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateManualAccount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountCreateRequestBody">Manual account object to be created.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of AccountResponseBody</returns>
+        public async System.Threading.Tasks.Task<AccountResponseBody> CreateManualAccountAsync(string userGuid, AccountCreateRequestBody accountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> localVarResponse = await CreateManualAccountWithHttpInfoAsync(userGuid, accountCreateRequestBody, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="accountCreateRequestBody">Manual account object to be created.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody>> CreateManualAccountWithHttpInfoAsync(string userGuid, AccountCreateRequestBody accountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->CreateManualAccount");
+            }
+
+            // verify the required parameter 'accountCreateRequestBody' is set
+            if (accountCreateRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountCreateRequestBody' when calling MxPlatformApi->CreateManualAccount");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.Data = accountCreateRequestBody;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<AccountResponseBody>("/users/{user_guid}/accounts", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreateManualAccount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Create member This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters id and metadata. When creating a member, youll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the &#x60;/institutions/{institution_code}/credentials&#x60; endpoint. If successful, the MX Platform API will respond with the newly-created member object. Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7714,6 +7976,166 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteManagedTransaction", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete manual account This endpoint deletes accounts that were manually created. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns></returns>
+        public void DeleteManualAccount(string accountGuid, string userGuid)
+        {
+            DeleteManualAccountWithHttpInfo(accountGuid, userGuid);
+        }
+
+        /// <summary>
+        /// Delete manual account This endpoint deletes accounts that were manually created. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<Object> DeleteManualAccountWithHttpInfo(string accountGuid, string userGuid)
+        {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManualAccount");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManualAccount");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeleteManualAccount", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete manual account This endpoint deletes accounts that were manually created. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteManualAccountAsync(string accountGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await DeleteManualAccountWithHttpInfoAsync(accountGuid, userGuid, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Delete manual account This endpoint deletes accounts that were manually created. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<Object>> DeleteManualAccountWithHttpInfoAsync(string accountGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'accountGuid' is set
+            if (accountGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'accountGuid' when calling MxPlatformApi->DeleteManualAccount");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->DeleteManualAccount");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("account_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(accountGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/accounts/{account_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("DeleteManualAccount", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

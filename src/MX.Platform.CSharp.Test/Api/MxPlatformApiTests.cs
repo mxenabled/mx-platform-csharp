@@ -136,6 +136,19 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test CreateManualAccount
+        /// </summary>
+        [Fact]
+        public void CreateManualAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //AccountCreateRequestBody accountCreateRequestBody = null;
+            //var response = instance.CreateManualAccount(userGuid, accountCreateRequestBody);
+            //Assert.IsType<AccountResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test CreateMember
         /// </summary>
         [Fact]
@@ -248,6 +261,18 @@ namespace MX.Platform.CSharp.Test.Api
             //string transactionGuid = null;
             //string userGuid = null;
             //instance.DeleteManagedTransaction(accountGuid, memberGuid, transactionGuid, userGuid);
+        }
+
+        /// <summary>
+        /// Test DeleteManualAccount
+        /// </summary>
+        [Fact]
+        public void DeleteManualAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string accountGuid = null;
+            //string userGuid = null;
+            //instance.DeleteManualAccount(accountGuid, userGuid);
         }
 
         /// <summary>
