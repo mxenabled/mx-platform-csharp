@@ -65,6 +65,38 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'AccountNumber'
         }
         /// <summary>
+        /// Test the property 'AccountOwnership'
+        /// </summary>
+        [Fact]
+        public void AccountOwnershipTest()
+        {
+            // TODO unit test for the property 'AccountOwnership'
+        }
+        /// <summary>
+        /// Test the property 'AnnuityPolicyToDate'
+        /// </summary>
+        [Fact]
+        public void AnnuityPolicyToDateTest()
+        {
+            // TODO unit test for the property 'AnnuityPolicyToDate'
+        }
+        /// <summary>
+        /// Test the property 'AnnuityProvider'
+        /// </summary>
+        [Fact]
+        public void AnnuityProviderTest()
+        {
+            // TODO unit test for the property 'AnnuityProvider'
+        }
+        /// <summary>
+        /// Test the property 'AnnuityTermYear'
+        /// </summary>
+        [Fact]
+        public void AnnuityTermYearTest()
+        {
+            // TODO unit test for the property 'AnnuityTermYear'
+        }
+        /// <summary>
         /// Test the property 'Apr'
         /// </summary>
         [Fact]
@@ -193,6 +225,14 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'ImportedAt'
         }
         /// <summary>
+        /// Test the property 'InterestRate'
+        /// </summary>
+        [Fact]
+        public void InterestRateTest()
+        {
+            // TODO unit test for the property 'InterestRate'
+        }
+        /// <summary>
         /// Test the property 'InstitutionCode'
         /// </summary>
         [Fact]
@@ -207,22 +247,6 @@ namespace MX.Platform.CSharp.Test.Model
         public void InsuredNameTest()
         {
             // TODO unit test for the property 'InsuredName'
-        }
-        /// <summary>
-        /// Test the property 'InterestRate'
-        /// </summary>
-        [Fact]
-        public void InterestRateTest()
-        {
-            // TODO unit test for the property 'InterestRate'
-        }
-        /// <summary>
-        /// Test the property 'IsBusiness'
-        /// </summary>
-        [Fact]
-        public void IsBusinessTest()
-        {
-            // TODO unit test for the property 'IsBusiness'
         }
         /// <summary>
         /// Test the property 'IsClosed'
@@ -271,6 +295,14 @@ namespace MX.Platform.CSharp.Test.Model
         public void LoanAmountTest()
         {
             // TODO unit test for the property 'LoanAmount'
+        }
+        /// <summary>
+        /// Test the property 'MarginBalance'
+        /// </summary>
+        [Fact]
+        public void MarginBalanceTest()
+        {
+            // TODO unit test for the property 'MarginBalance'
         }
         /// <summary>
         /// Test the property 'MaturesOn'
@@ -385,14 +417,6 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'PremiumAmount'
         }
         /// <summary>
-        /// Test the property 'PropertyType'
-        /// </summary>
-        [Fact]
-        public void PropertyTypeTest()
-        {
-            // TODO unit test for the property 'PropertyType'
-        }
-        /// <summary>
         /// Test the property 'RoutingNumber'
         /// </summary>
         [Fact]
@@ -415,6 +439,22 @@ namespace MX.Platform.CSharp.Test.Model
         public void SubtypeTest()
         {
             // TODO unit test for the property 'Subtype'
+        }
+        /// <summary>
+        /// Test the property 'TodayUglAmount'
+        /// </summary>
+        [Fact]
+        public void TodayUglAmountTest()
+        {
+            // TODO unit test for the property 'TodayUglAmount'
+        }
+        /// <summary>
+        /// Test the property 'TodayUglPercentage'
+        /// </summary>
+        [Fact]
+        public void TodayUglPercentageTest()
+        {
+            // TODO unit test for the property 'TodayUglPercentage'
         }
         /// <summary>
         /// Test the property 'TotalAccountValue'

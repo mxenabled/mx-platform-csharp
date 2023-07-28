@@ -39,85 +39,69 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountCreateRequest" /> class.
         /// </summary>
-        /// <param name="accountNumber">accountNumber.</param>
+        /// <param name="accountSubtypeName">accountSubtypeName.</param>
+        /// <param name="accountType">accountType (required).</param>
         /// <param name="apr">apr.</param>
         /// <param name="apy">apy.</param>
         /// <param name="availableBalance">availableBalance.</param>
-        /// <param name="availableCredit">availableCredit.</param>
-        /// <param name="balance">balance (required).</param>
+        /// <param name="balance">balance.</param>
         /// <param name="cashSurrenderValue">cashSurrenderValue.</param>
         /// <param name="creditLimit">creditLimit.</param>
         /// <param name="currencyCode">currencyCode.</param>
-        /// <param name="dayPaymentIsDue">dayPaymentIsDue.</param>
         /// <param name="deathBenefit">deathBenefit.</param>
-        /// <param name="id">id.</param>
         /// <param name="interestRate">interestRate.</param>
+        /// <param name="isBusiness">isBusiness.</param>
         /// <param name="isClosed">isClosed.</param>
         /// <param name="isHidden">isHidden.</param>
-        /// <param name="lastPayment">lastPayment.</param>
-        /// <param name="lastPaymentAt">lastPaymentAt.</param>
         /// <param name="loanAmount">loanAmount.</param>
-        /// <param name="maturesOn">maturesOn.</param>
         /// <param name="metadata">metadata.</param>
-        /// <param name="minimumBalance">minimumBalance.</param>
-        /// <param name="minimumPayment">minimumPayment.</param>
         /// <param name="name">name (required).</param>
         /// <param name="nickname">nickname.</param>
         /// <param name="originalBalance">originalBalance.</param>
-        /// <param name="paymentDueAt">paymentDueAt.</param>
-        /// <param name="payoffBalance">payoffBalance.</param>
-        /// <param name="routingNumber">routingNumber.</param>
-        /// <param name="startedOn">startedOn.</param>
-        /// <param name="subtype">subtype.</param>
-        /// <param name="type">type (required).</param>
-        public AccountCreateRequest(string accountNumber = default(string), decimal apr = default(decimal), decimal apy = default(decimal), decimal availableBalance = default(decimal), decimal availableCredit = default(decimal), decimal balance = default(decimal), decimal cashSurrenderValue = default(decimal), decimal creditLimit = default(decimal), string currencyCode = default(string), int dayPaymentIsDue = default(int), int deathBenefit = default(int), string id = default(string), decimal interestRate = default(decimal), bool isClosed = default(bool), bool isHidden = default(bool), decimal lastPayment = default(decimal), string lastPaymentAt = default(string), decimal loanAmount = default(decimal), string maturesOn = default(string), string metadata = default(string), decimal minimumBalance = default(decimal), decimal minimumPayment = default(decimal), string name = default(string), string nickname = default(string), decimal originalBalance = default(decimal), string paymentDueAt = default(string), decimal payoffBalance = default(decimal), string routingNumber = default(string), string startedOn = default(string), string subtype = default(string), string type = default(string))
+        /// <param name="propertyType">propertyType.</param>
+        /// <param name="propertyTypeName">propertyTypeName.</param>
+        /// <param name="skipWebhook">skipWebhook.</param>
+        public AccountCreateRequest(string accountSubtypeName = default(string), int accountType = default(int), decimal apr = default(decimal), decimal apy = default(decimal), decimal availableBalance = default(decimal), decimal balance = default(decimal), decimal cashSurrenderValue = default(decimal), decimal creditLimit = default(decimal), string currencyCode = default(string), int deathBenefit = default(int), decimal interestRate = default(decimal), bool isBusiness = default(bool), bool isClosed = default(bool), bool isHidden = default(bool), decimal loanAmount = default(decimal), string metadata = default(string), string name = default(string), string nickname = default(string), decimal originalBalance = default(decimal), int propertyType = default(int), string propertyTypeName = default(string), bool skipWebhook = default(bool))
         {
-            this.Balance = balance;
+            this.AccountType = accountType;
             // to ensure "name" is required (not null)
             if (name == null) {
                 throw new ArgumentNullException("name is a required property for AccountCreateRequest and cannot be null");
             }
             this.Name = name;
-            // to ensure "type" is required (not null)
-            if (type == null) {
-                throw new ArgumentNullException("type is a required property for AccountCreateRequest and cannot be null");
-            }
-            this.Type = type;
-            this.AccountNumber = accountNumber;
+            this.AccountSubtypeName = accountSubtypeName;
             this.Apr = apr;
             this.Apy = apy;
             this.AvailableBalance = availableBalance;
-            this.AvailableCredit = availableCredit;
+            this.Balance = balance;
             this.CashSurrenderValue = cashSurrenderValue;
             this.CreditLimit = creditLimit;
             this.CurrencyCode = currencyCode;
-            this.DayPaymentIsDue = dayPaymentIsDue;
             this.DeathBenefit = deathBenefit;
-            this.Id = id;
             this.InterestRate = interestRate;
+            this.IsBusiness = isBusiness;
             this.IsClosed = isClosed;
             this.IsHidden = isHidden;
-            this.LastPayment = lastPayment;
-            this.LastPaymentAt = lastPaymentAt;
             this.LoanAmount = loanAmount;
-            this.MaturesOn = maturesOn;
             this.Metadata = metadata;
-            this.MinimumBalance = minimumBalance;
-            this.MinimumPayment = minimumPayment;
             this.Nickname = nickname;
             this.OriginalBalance = originalBalance;
-            this.PaymentDueAt = paymentDueAt;
-            this.PayoffBalance = payoffBalance;
-            this.RoutingNumber = routingNumber;
-            this.StartedOn = startedOn;
-            this.Subtype = subtype;
+            this.PropertyType = propertyType;
+            this.PropertyTypeName = propertyTypeName;
+            this.SkipWebhook = skipWebhook;
         }
 
         /// <summary>
-        /// Gets or Sets AccountNumber
+        /// Gets or Sets AccountSubtypeName
         /// </summary>
-        [DataMember(Name = "account_number", EmitDefaultValue = false)]
-        public string AccountNumber { get; set; }
+        [DataMember(Name = "account_subtype_name", EmitDefaultValue = false)]
+        public string AccountSubtypeName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AccountType
+        /// </summary>
+        [DataMember(Name = "account_type", IsRequired = true, EmitDefaultValue = false)]
+        public int AccountType { get; set; }
 
         /// <summary>
         /// Gets or Sets Apr
@@ -138,15 +122,9 @@ namespace MX.Platform.CSharp.Model
         public decimal AvailableBalance { get; set; }
 
         /// <summary>
-        /// Gets or Sets AvailableCredit
-        /// </summary>
-        [DataMember(Name = "available_credit", EmitDefaultValue = false)]
-        public decimal AvailableCredit { get; set; }
-
-        /// <summary>
         /// Gets or Sets Balance
         /// </summary>
-        [DataMember(Name = "balance", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "balance", EmitDefaultValue = false)]
         public decimal Balance { get; set; }
 
         /// <summary>
@@ -168,28 +146,22 @@ namespace MX.Platform.CSharp.Model
         public string CurrencyCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets DayPaymentIsDue
-        /// </summary>
-        [DataMember(Name = "day_payment_is_due", EmitDefaultValue = false)]
-        public int DayPaymentIsDue { get; set; }
-
-        /// <summary>
         /// Gets or Sets DeathBenefit
         /// </summary>
         [DataMember(Name = "death_benefit", EmitDefaultValue = false)]
         public int DeathBenefit { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name = "id", EmitDefaultValue = false)]
-        public string Id { get; set; }
-
-        /// <summary>
         /// Gets or Sets InterestRate
         /// </summary>
         [DataMember(Name = "interest_rate", EmitDefaultValue = false)]
         public decimal InterestRate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsBusiness
+        /// </summary>
+        [DataMember(Name = "is_business", EmitDefaultValue = true)]
+        public bool IsBusiness { get; set; }
 
         /// <summary>
         /// Gets or Sets IsClosed
@@ -204,46 +176,16 @@ namespace MX.Platform.CSharp.Model
         public bool IsHidden { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastPayment
-        /// </summary>
-        [DataMember(Name = "last_payment", EmitDefaultValue = false)]
-        public decimal LastPayment { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LastPaymentAt
-        /// </summary>
-        [DataMember(Name = "last_payment_at", EmitDefaultValue = false)]
-        public string LastPaymentAt { get; set; }
-
-        /// <summary>
         /// Gets or Sets LoanAmount
         /// </summary>
         [DataMember(Name = "loan_amount", EmitDefaultValue = false)]
         public decimal LoanAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets MaturesOn
-        /// </summary>
-        [DataMember(Name = "matures_on", EmitDefaultValue = false)]
-        public string MaturesOn { get; set; }
-
-        /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public string Metadata { get; set; }
-
-        /// <summary>
-        /// Gets or Sets MinimumBalance
-        /// </summary>
-        [DataMember(Name = "minimum_balance", EmitDefaultValue = false)]
-        public decimal MinimumBalance { get; set; }
-
-        /// <summary>
-        /// Gets or Sets MinimumPayment
-        /// </summary>
-        [DataMember(Name = "minimum_payment", EmitDefaultValue = false)]
-        public decimal MinimumPayment { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -264,40 +206,22 @@ namespace MX.Platform.CSharp.Model
         public decimal OriginalBalance { get; set; }
 
         /// <summary>
-        /// Gets or Sets PaymentDueAt
+        /// Gets or Sets PropertyType
         /// </summary>
-        [DataMember(Name = "payment_due_at", EmitDefaultValue = false)]
-        public string PaymentDueAt { get; set; }
+        [DataMember(Name = "property_type", EmitDefaultValue = false)]
+        public int PropertyType { get; set; }
 
         /// <summary>
-        /// Gets or Sets PayoffBalance
+        /// Gets or Sets PropertyTypeName
         /// </summary>
-        [DataMember(Name = "payoff_balance", EmitDefaultValue = false)]
-        public decimal PayoffBalance { get; set; }
+        [DataMember(Name = "property_type_name", EmitDefaultValue = false)]
+        public string PropertyTypeName { get; set; }
 
         /// <summary>
-        /// Gets or Sets RoutingNumber
+        /// Gets or Sets SkipWebhook
         /// </summary>
-        [DataMember(Name = "routing_number", EmitDefaultValue = false)]
-        public string RoutingNumber { get; set; }
-
-        /// <summary>
-        /// Gets or Sets StartedOn
-        /// </summary>
-        [DataMember(Name = "started_on", EmitDefaultValue = false)]
-        public string StartedOn { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Subtype
-        /// </summary>
-        [DataMember(Name = "subtype", EmitDefaultValue = false)]
-        public string Subtype { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
-        public string Type { get; set; }
+        [DataMember(Name = "skip_webhook", EmitDefaultValue = true)]
+        public bool SkipWebhook { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -307,37 +231,28 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AccountCreateRequest {\n");
-            sb.Append("  AccountNumber: ").Append(AccountNumber).Append("\n");
+            sb.Append("  AccountSubtypeName: ").Append(AccountSubtypeName).Append("\n");
+            sb.Append("  AccountType: ").Append(AccountType).Append("\n");
             sb.Append("  Apr: ").Append(Apr).Append("\n");
             sb.Append("  Apy: ").Append(Apy).Append("\n");
             sb.Append("  AvailableBalance: ").Append(AvailableBalance).Append("\n");
-            sb.Append("  AvailableCredit: ").Append(AvailableCredit).Append("\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
             sb.Append("  CashSurrenderValue: ").Append(CashSurrenderValue).Append("\n");
             sb.Append("  CreditLimit: ").Append(CreditLimit).Append("\n");
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
-            sb.Append("  DayPaymentIsDue: ").Append(DayPaymentIsDue).Append("\n");
             sb.Append("  DeathBenefit: ").Append(DeathBenefit).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  InterestRate: ").Append(InterestRate).Append("\n");
+            sb.Append("  IsBusiness: ").Append(IsBusiness).Append("\n");
             sb.Append("  IsClosed: ").Append(IsClosed).Append("\n");
             sb.Append("  IsHidden: ").Append(IsHidden).Append("\n");
-            sb.Append("  LastPayment: ").Append(LastPayment).Append("\n");
-            sb.Append("  LastPaymentAt: ").Append(LastPaymentAt).Append("\n");
             sb.Append("  LoanAmount: ").Append(LoanAmount).Append("\n");
-            sb.Append("  MaturesOn: ").Append(MaturesOn).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
-            sb.Append("  MinimumBalance: ").Append(MinimumBalance).Append("\n");
-            sb.Append("  MinimumPayment: ").Append(MinimumPayment).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
             sb.Append("  OriginalBalance: ").Append(OriginalBalance).Append("\n");
-            sb.Append("  PaymentDueAt: ").Append(PaymentDueAt).Append("\n");
-            sb.Append("  PayoffBalance: ").Append(PayoffBalance).Append("\n");
-            sb.Append("  RoutingNumber: ").Append(RoutingNumber).Append("\n");
-            sb.Append("  StartedOn: ").Append(StartedOn).Append("\n");
-            sb.Append("  Subtype: ").Append(Subtype).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
+            sb.Append("  PropertyTypeName: ").Append(PropertyTypeName).Append("\n");
+            sb.Append("  SkipWebhook: ").Append(SkipWebhook).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -374,9 +289,13 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.AccountNumber == input.AccountNumber ||
-                    (this.AccountNumber != null &&
-                    this.AccountNumber.Equals(input.AccountNumber))
+                    this.AccountSubtypeName == input.AccountSubtypeName ||
+                    (this.AccountSubtypeName != null &&
+                    this.AccountSubtypeName.Equals(input.AccountSubtypeName))
+                ) && 
+                (
+                    this.AccountType == input.AccountType ||
+                    this.AccountType.Equals(input.AccountType)
                 ) && 
                 (
                     this.Apr == input.Apr ||
@@ -389,10 +308,6 @@ namespace MX.Platform.CSharp.Model
                 (
                     this.AvailableBalance == input.AvailableBalance ||
                     this.AvailableBalance.Equals(input.AvailableBalance)
-                ) && 
-                (
-                    this.AvailableCredit == input.AvailableCredit ||
-                    this.AvailableCredit.Equals(input.AvailableCredit)
                 ) && 
                 (
                     this.Balance == input.Balance ||
@@ -412,21 +327,16 @@ namespace MX.Platform.CSharp.Model
                     this.CurrencyCode.Equals(input.CurrencyCode))
                 ) && 
                 (
-                    this.DayPaymentIsDue == input.DayPaymentIsDue ||
-                    this.DayPaymentIsDue.Equals(input.DayPaymentIsDue)
-                ) && 
-                (
                     this.DeathBenefit == input.DeathBenefit ||
                     this.DeathBenefit.Equals(input.DeathBenefit)
                 ) && 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
-                ) && 
-                (
                     this.InterestRate == input.InterestRate ||
                     this.InterestRate.Equals(input.InterestRate)
+                ) && 
+                (
+                    this.IsBusiness == input.IsBusiness ||
+                    this.IsBusiness.Equals(input.IsBusiness)
                 ) && 
                 (
                     this.IsClosed == input.IsClosed ||
@@ -437,35 +347,13 @@ namespace MX.Platform.CSharp.Model
                     this.IsHidden.Equals(input.IsHidden)
                 ) && 
                 (
-                    this.LastPayment == input.LastPayment ||
-                    this.LastPayment.Equals(input.LastPayment)
-                ) && 
-                (
-                    this.LastPaymentAt == input.LastPaymentAt ||
-                    (this.LastPaymentAt != null &&
-                    this.LastPaymentAt.Equals(input.LastPaymentAt))
-                ) && 
-                (
                     this.LoanAmount == input.LoanAmount ||
                     this.LoanAmount.Equals(input.LoanAmount)
-                ) && 
-                (
-                    this.MaturesOn == input.MaturesOn ||
-                    (this.MaturesOn != null &&
-                    this.MaturesOn.Equals(input.MaturesOn))
                 ) && 
                 (
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
-                ) && 
-                (
-                    this.MinimumBalance == input.MinimumBalance ||
-                    this.MinimumBalance.Equals(input.MinimumBalance)
-                ) && 
-                (
-                    this.MinimumPayment == input.MinimumPayment ||
-                    this.MinimumPayment.Equals(input.MinimumPayment)
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -482,33 +370,17 @@ namespace MX.Platform.CSharp.Model
                     this.OriginalBalance.Equals(input.OriginalBalance)
                 ) && 
                 (
-                    this.PaymentDueAt == input.PaymentDueAt ||
-                    (this.PaymentDueAt != null &&
-                    this.PaymentDueAt.Equals(input.PaymentDueAt))
+                    this.PropertyType == input.PropertyType ||
+                    this.PropertyType.Equals(input.PropertyType)
                 ) && 
                 (
-                    this.PayoffBalance == input.PayoffBalance ||
-                    this.PayoffBalance.Equals(input.PayoffBalance)
+                    this.PropertyTypeName == input.PropertyTypeName ||
+                    (this.PropertyTypeName != null &&
+                    this.PropertyTypeName.Equals(input.PropertyTypeName))
                 ) && 
                 (
-                    this.RoutingNumber == input.RoutingNumber ||
-                    (this.RoutingNumber != null &&
-                    this.RoutingNumber.Equals(input.RoutingNumber))
-                ) && 
-                (
-                    this.StartedOn == input.StartedOn ||
-                    (this.StartedOn != null &&
-                    this.StartedOn.Equals(input.StartedOn))
-                ) && 
-                (
-                    this.Subtype == input.Subtype ||
-                    (this.Subtype != null &&
-                    this.Subtype.Equals(input.Subtype))
-                ) && 
-                (
-                    this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
+                    this.SkipWebhook == input.SkipWebhook ||
+                    this.SkipWebhook.Equals(input.SkipWebhook)
                 );
         }
 
@@ -521,14 +393,14 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AccountNumber != null)
+                if (this.AccountSubtypeName != null)
                 {
-                    hashCode = (hashCode * 59) + this.AccountNumber.GetHashCode();
+                    hashCode = (hashCode * 59) + this.AccountSubtypeName.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.AccountType.GetHashCode();
                 hashCode = (hashCode * 59) + this.Apr.GetHashCode();
                 hashCode = (hashCode * 59) + this.Apy.GetHashCode();
                 hashCode = (hashCode * 59) + this.AvailableBalance.GetHashCode();
-                hashCode = (hashCode * 59) + this.AvailableCredit.GetHashCode();
                 hashCode = (hashCode * 59) + this.Balance.GetHashCode();
                 hashCode = (hashCode * 59) + this.CashSurrenderValue.GetHashCode();
                 hashCode = (hashCode * 59) + this.CreditLimit.GetHashCode();
@@ -536,31 +408,16 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.CurrencyCode.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.DayPaymentIsDue.GetHashCode();
                 hashCode = (hashCode * 59) + this.DeathBenefit.GetHashCode();
-                if (this.Id != null)
-                {
-                    hashCode = (hashCode * 59) + this.Id.GetHashCode();
-                }
                 hashCode = (hashCode * 59) + this.InterestRate.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsBusiness.GetHashCode();
                 hashCode = (hashCode * 59) + this.IsClosed.GetHashCode();
                 hashCode = (hashCode * 59) + this.IsHidden.GetHashCode();
-                hashCode = (hashCode * 59) + this.LastPayment.GetHashCode();
-                if (this.LastPaymentAt != null)
-                {
-                    hashCode = (hashCode * 59) + this.LastPaymentAt.GetHashCode();
-                }
                 hashCode = (hashCode * 59) + this.LoanAmount.GetHashCode();
-                if (this.MaturesOn != null)
-                {
-                    hashCode = (hashCode * 59) + this.MaturesOn.GetHashCode();
-                }
                 if (this.Metadata != null)
                 {
                     hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.MinimumBalance.GetHashCode();
-                hashCode = (hashCode * 59) + this.MinimumPayment.GetHashCode();
                 if (this.Name != null)
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
@@ -570,27 +427,12 @@ namespace MX.Platform.CSharp.Model
                     hashCode = (hashCode * 59) + this.Nickname.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.OriginalBalance.GetHashCode();
-                if (this.PaymentDueAt != null)
+                hashCode = (hashCode * 59) + this.PropertyType.GetHashCode();
+                if (this.PropertyTypeName != null)
                 {
-                    hashCode = (hashCode * 59) + this.PaymentDueAt.GetHashCode();
+                    hashCode = (hashCode * 59) + this.PropertyTypeName.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.PayoffBalance.GetHashCode();
-                if (this.RoutingNumber != null)
-                {
-                    hashCode = (hashCode * 59) + this.RoutingNumber.GetHashCode();
-                }
-                if (this.StartedOn != null)
-                {
-                    hashCode = (hashCode * 59) + this.StartedOn.GetHashCode();
-                }
-                if (this.Subtype != null)
-                {
-                    hashCode = (hashCode * 59) + this.Subtype.GetHashCode();
-                }
-                if (this.Type != null)
-                {
-                    hashCode = (hashCode * 59) + this.Type.GetHashCode();
-                }
+                hashCode = (hashCode * 59) + this.SkipWebhook.GetHashCode();
                 return hashCode;
             }
         }

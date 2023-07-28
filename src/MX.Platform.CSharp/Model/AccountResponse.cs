@@ -35,6 +35,10 @@ namespace MX.Platform.CSharp.Model
         /// Initializes a new instance of the <see cref="AccountResponse" /> class.
         /// </summary>
         /// <param name="accountNumber">accountNumber.</param>
+        /// <param name="accountOwnership">accountOwnership.</param>
+        /// <param name="annuityPolicyToDate">annuityPolicyToDate.</param>
+        /// <param name="annuityProvider">annuityProvider.</param>
+        /// <param name="annuityTermYear">annuityTermYear.</param>
         /// <param name="apr">apr.</param>
         /// <param name="apy">apy.</param>
         /// <param name="availableBalance">availableBalance.</param>
@@ -51,16 +55,16 @@ namespace MX.Platform.CSharp.Model
         /// <param name="holdingsValue">holdingsValue.</param>
         /// <param name="id">id.</param>
         /// <param name="importedAt">importedAt.</param>
+        /// <param name="interestRate">interestRate.</param>
         /// <param name="institutionCode">institutionCode.</param>
         /// <param name="insuredName">insuredName.</param>
-        /// <param name="interestRate">interestRate.</param>
-        /// <param name="isBusiness">isBusiness.</param>
         /// <param name="isClosed">isClosed.</param>
         /// <param name="isHidden">isHidden.</param>
         /// <param name="isManual">isManual.</param>
         /// <param name="lastPayment">lastPayment.</param>
         /// <param name="lastPaymentAt">lastPaymentAt.</param>
         /// <param name="loanAmount">loanAmount.</param>
+        /// <param name="marginBalance">marginBalance.</param>
         /// <param name="maturesOn">maturesOn.</param>
         /// <param name="memberGuid">memberGuid.</param>
         /// <param name="memberId">memberId.</param>
@@ -75,18 +79,23 @@ namespace MX.Platform.CSharp.Model
         /// <param name="paymentDueAt">paymentDueAt.</param>
         /// <param name="payoffBalance">payoffBalance.</param>
         /// <param name="premiumAmount">premiumAmount.</param>
-        /// <param name="propertyType">propertyType.</param>
         /// <param name="routingNumber">routingNumber.</param>
         /// <param name="startedOn">startedOn.</param>
         /// <param name="subtype">subtype.</param>
+        /// <param name="todayUglAmount">todayUglAmount.</param>
+        /// <param name="todayUglPercentage">todayUglPercentage.</param>
         /// <param name="totalAccountValue">totalAccountValue.</param>
         /// <param name="type">type.</param>
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public AccountResponse(string accountNumber = default(string), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), string institutionCode = default(string), string insuredName = default(string), decimal? interestRate = default(decimal?), bool? isBusiness = default(bool?), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), string propertyType = default(string), string routingNumber = default(string), string startedOn = default(string), string subtype = default(string), decimal? totalAccountValue = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
+        public AccountResponse(string accountNumber = default(string), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), decimal? annuityTermYear = default(decimal?), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), decimal? interestRate = default(decimal?), string institutionCode = default(string), string insuredName = default(string), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), string routingNumber = default(string), string startedOn = default(string), string subtype = default(string), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
         {
             this.AccountNumber = accountNumber;
+            this.AccountOwnership = accountOwnership;
+            this.AnnuityPolicyToDate = annuityPolicyToDate;
+            this.AnnuityProvider = annuityProvider;
+            this.AnnuityTermYear = annuityTermYear;
             this.Apr = apr;
             this.Apy = apy;
             this.AvailableBalance = availableBalance;
@@ -103,16 +112,16 @@ namespace MX.Platform.CSharp.Model
             this.HoldingsValue = holdingsValue;
             this.Id = id;
             this.ImportedAt = importedAt;
+            this.InterestRate = interestRate;
             this.InstitutionCode = institutionCode;
             this.InsuredName = insuredName;
-            this.InterestRate = interestRate;
-            this.IsBusiness = isBusiness;
             this.IsClosed = isClosed;
             this.IsHidden = isHidden;
             this.IsManual = isManual;
             this.LastPayment = lastPayment;
             this.LastPaymentAt = lastPaymentAt;
             this.LoanAmount = loanAmount;
+            this.MarginBalance = marginBalance;
             this.MaturesOn = maturesOn;
             this.MemberGuid = memberGuid;
             this.MemberId = memberId;
@@ -127,10 +136,11 @@ namespace MX.Platform.CSharp.Model
             this.PaymentDueAt = paymentDueAt;
             this.PayoffBalance = payoffBalance;
             this.PremiumAmount = premiumAmount;
-            this.PropertyType = propertyType;
             this.RoutingNumber = routingNumber;
             this.StartedOn = startedOn;
             this.Subtype = subtype;
+            this.TodayUglAmount = todayUglAmount;
+            this.TodayUglPercentage = todayUglPercentage;
             this.TotalAccountValue = totalAccountValue;
             this.Type = type;
             this.UpdatedAt = updatedAt;
@@ -143,6 +153,30 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "account_number", EmitDefaultValue = true)]
         public string AccountNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AccountOwnership
+        /// </summary>
+        [DataMember(Name = "account_ownership", EmitDefaultValue = true)]
+        public string AccountOwnership { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AnnuityPolicyToDate
+        /// </summary>
+        [DataMember(Name = "annuity_policy_to_date", EmitDefaultValue = true)]
+        public string AnnuityPolicyToDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AnnuityProvider
+        /// </summary>
+        [DataMember(Name = "annuity_provider", EmitDefaultValue = true)]
+        public string AnnuityProvider { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AnnuityTermYear
+        /// </summary>
+        [DataMember(Name = "annuity_term_year", EmitDefaultValue = true)]
+        public decimal? AnnuityTermYear { get; set; }
 
         /// <summary>
         /// Gets or Sets Apr
@@ -189,7 +223,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
-        [DataMember(Name = "created_at", EmitDefaultValue = true)]
+        [DataMember(Name = "created_at", EmitDefaultValue = false)]
         public string CreatedAt { get; set; }
 
         /// <summary>
@@ -241,6 +275,12 @@ namespace MX.Platform.CSharp.Model
         public string ImportedAt { get; set; }
 
         /// <summary>
+        /// Gets or Sets InterestRate
+        /// </summary>
+        [DataMember(Name = "interest_rate", EmitDefaultValue = true)]
+        public decimal? InterestRate { get; set; }
+
+        /// <summary>
         /// Gets or Sets InstitutionCode
         /// </summary>
         [DataMember(Name = "institution_code", EmitDefaultValue = true)]
@@ -251,18 +291,6 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "insured_name", EmitDefaultValue = true)]
         public string InsuredName { get; set; }
-
-        /// <summary>
-        /// Gets or Sets InterestRate
-        /// </summary>
-        [DataMember(Name = "interest_rate", EmitDefaultValue = true)]
-        public decimal? InterestRate { get; set; }
-
-        /// <summary>
-        /// Gets or Sets IsBusiness
-        /// </summary>
-        [DataMember(Name = "is_business", EmitDefaultValue = true)]
-        public bool? IsBusiness { get; set; }
 
         /// <summary>
         /// Gets or Sets IsClosed
@@ -299,6 +327,12 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "loan_amount", EmitDefaultValue = true)]
         public decimal? LoanAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MarginBalance
+        /// </summary>
+        [DataMember(Name = "margin_balance", EmitDefaultValue = true)]
+        public decimal? MarginBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets MaturesOn
@@ -385,12 +419,6 @@ namespace MX.Platform.CSharp.Model
         public decimal? PremiumAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets PropertyType
-        /// </summary>
-        [DataMember(Name = "property_type", EmitDefaultValue = true)]
-        public string PropertyType { get; set; }
-
-        /// <summary>
         /// Gets or Sets RoutingNumber
         /// </summary>
         [DataMember(Name = "routing_number", EmitDefaultValue = true)]
@@ -407,6 +435,18 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "subtype", EmitDefaultValue = true)]
         public string Subtype { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TodayUglAmount
+        /// </summary>
+        [DataMember(Name = "today_ugl_amount", EmitDefaultValue = true)]
+        public decimal? TodayUglAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TodayUglPercentage
+        /// </summary>
+        [DataMember(Name = "today_ugl_percentage", EmitDefaultValue = true)]
+        public decimal? TodayUglPercentage { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalAccountValue
@@ -447,6 +487,10 @@ namespace MX.Platform.CSharp.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class AccountResponse {\n");
             sb.Append("  AccountNumber: ").Append(AccountNumber).Append("\n");
+            sb.Append("  AccountOwnership: ").Append(AccountOwnership).Append("\n");
+            sb.Append("  AnnuityPolicyToDate: ").Append(AnnuityPolicyToDate).Append("\n");
+            sb.Append("  AnnuityProvider: ").Append(AnnuityProvider).Append("\n");
+            sb.Append("  AnnuityTermYear: ").Append(AnnuityTermYear).Append("\n");
             sb.Append("  Apr: ").Append(Apr).Append("\n");
             sb.Append("  Apy: ").Append(Apy).Append("\n");
             sb.Append("  AvailableBalance: ").Append(AvailableBalance).Append("\n");
@@ -463,16 +507,16 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  HoldingsValue: ").Append(HoldingsValue).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ImportedAt: ").Append(ImportedAt).Append("\n");
+            sb.Append("  InterestRate: ").Append(InterestRate).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
             sb.Append("  InsuredName: ").Append(InsuredName).Append("\n");
-            sb.Append("  InterestRate: ").Append(InterestRate).Append("\n");
-            sb.Append("  IsBusiness: ").Append(IsBusiness).Append("\n");
             sb.Append("  IsClosed: ").Append(IsClosed).Append("\n");
             sb.Append("  IsHidden: ").Append(IsHidden).Append("\n");
             sb.Append("  IsManual: ").Append(IsManual).Append("\n");
             sb.Append("  LastPayment: ").Append(LastPayment).Append("\n");
             sb.Append("  LastPaymentAt: ").Append(LastPaymentAt).Append("\n");
             sb.Append("  LoanAmount: ").Append(LoanAmount).Append("\n");
+            sb.Append("  MarginBalance: ").Append(MarginBalance).Append("\n");
             sb.Append("  MaturesOn: ").Append(MaturesOn).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  MemberId: ").Append(MemberId).Append("\n");
@@ -487,10 +531,11 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  PaymentDueAt: ").Append(PaymentDueAt).Append("\n");
             sb.Append("  PayoffBalance: ").Append(PayoffBalance).Append("\n");
             sb.Append("  PremiumAmount: ").Append(PremiumAmount).Append("\n");
-            sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
             sb.Append("  RoutingNumber: ").Append(RoutingNumber).Append("\n");
             sb.Append("  StartedOn: ").Append(StartedOn).Append("\n");
             sb.Append("  Subtype: ").Append(Subtype).Append("\n");
+            sb.Append("  TodayUglAmount: ").Append(TodayUglAmount).Append("\n");
+            sb.Append("  TodayUglPercentage: ").Append(TodayUglPercentage).Append("\n");
             sb.Append("  TotalAccountValue: ").Append(TotalAccountValue).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
@@ -535,6 +580,26 @@ namespace MX.Platform.CSharp.Model
                     this.AccountNumber == input.AccountNumber ||
                     (this.AccountNumber != null &&
                     this.AccountNumber.Equals(input.AccountNumber))
+                ) && 
+                (
+                    this.AccountOwnership == input.AccountOwnership ||
+                    (this.AccountOwnership != null &&
+                    this.AccountOwnership.Equals(input.AccountOwnership))
+                ) && 
+                (
+                    this.AnnuityPolicyToDate == input.AnnuityPolicyToDate ||
+                    (this.AnnuityPolicyToDate != null &&
+                    this.AnnuityPolicyToDate.Equals(input.AnnuityPolicyToDate))
+                ) && 
+                (
+                    this.AnnuityProvider == input.AnnuityProvider ||
+                    (this.AnnuityProvider != null &&
+                    this.AnnuityProvider.Equals(input.AnnuityProvider))
+                ) && 
+                (
+                    this.AnnuityTermYear == input.AnnuityTermYear ||
+                    (this.AnnuityTermYear != null &&
+                    this.AnnuityTermYear.Equals(input.AnnuityTermYear))
                 ) && 
                 (
                     this.Apr == input.Apr ||
@@ -617,6 +682,11 @@ namespace MX.Platform.CSharp.Model
                     this.ImportedAt.Equals(input.ImportedAt))
                 ) && 
                 (
+                    this.InterestRate == input.InterestRate ||
+                    (this.InterestRate != null &&
+                    this.InterestRate.Equals(input.InterestRate))
+                ) && 
+                (
                     this.InstitutionCode == input.InstitutionCode ||
                     (this.InstitutionCode != null &&
                     this.InstitutionCode.Equals(input.InstitutionCode))
@@ -625,16 +695,6 @@ namespace MX.Platform.CSharp.Model
                     this.InsuredName == input.InsuredName ||
                     (this.InsuredName != null &&
                     this.InsuredName.Equals(input.InsuredName))
-                ) && 
-                (
-                    this.InterestRate == input.InterestRate ||
-                    (this.InterestRate != null &&
-                    this.InterestRate.Equals(input.InterestRate))
-                ) && 
-                (
-                    this.IsBusiness == input.IsBusiness ||
-                    (this.IsBusiness != null &&
-                    this.IsBusiness.Equals(input.IsBusiness))
                 ) && 
                 (
                     this.IsClosed == input.IsClosed ||
@@ -665,6 +725,11 @@ namespace MX.Platform.CSharp.Model
                     this.LoanAmount == input.LoanAmount ||
                     (this.LoanAmount != null &&
                     this.LoanAmount.Equals(input.LoanAmount))
+                ) && 
+                (
+                    this.MarginBalance == input.MarginBalance ||
+                    (this.MarginBalance != null &&
+                    this.MarginBalance.Equals(input.MarginBalance))
                 ) && 
                 (
                     this.MaturesOn == input.MaturesOn ||
@@ -737,11 +802,6 @@ namespace MX.Platform.CSharp.Model
                     this.PremiumAmount.Equals(input.PremiumAmount))
                 ) && 
                 (
-                    this.PropertyType == input.PropertyType ||
-                    (this.PropertyType != null &&
-                    this.PropertyType.Equals(input.PropertyType))
-                ) && 
-                (
                     this.RoutingNumber == input.RoutingNumber ||
                     (this.RoutingNumber != null &&
                     this.RoutingNumber.Equals(input.RoutingNumber))
@@ -755,6 +815,16 @@ namespace MX.Platform.CSharp.Model
                     this.Subtype == input.Subtype ||
                     (this.Subtype != null &&
                     this.Subtype.Equals(input.Subtype))
+                ) && 
+                (
+                    this.TodayUglAmount == input.TodayUglAmount ||
+                    (this.TodayUglAmount != null &&
+                    this.TodayUglAmount.Equals(input.TodayUglAmount))
+                ) && 
+                (
+                    this.TodayUglPercentage == input.TodayUglPercentage ||
+                    (this.TodayUglPercentage != null &&
+                    this.TodayUglPercentage.Equals(input.TodayUglPercentage))
                 ) && 
                 (
                     this.TotalAccountValue == input.TotalAccountValue ||
@@ -795,6 +865,22 @@ namespace MX.Platform.CSharp.Model
                 if (this.AccountNumber != null)
                 {
                     hashCode = (hashCode * 59) + this.AccountNumber.GetHashCode();
+                }
+                if (this.AccountOwnership != null)
+                {
+                    hashCode = (hashCode * 59) + this.AccountOwnership.GetHashCode();
+                }
+                if (this.AnnuityPolicyToDate != null)
+                {
+                    hashCode = (hashCode * 59) + this.AnnuityPolicyToDate.GetHashCode();
+                }
+                if (this.AnnuityProvider != null)
+                {
+                    hashCode = (hashCode * 59) + this.AnnuityProvider.GetHashCode();
+                }
+                if (this.AnnuityTermYear != null)
+                {
+                    hashCode = (hashCode * 59) + this.AnnuityTermYear.GetHashCode();
                 }
                 if (this.Apr != null)
                 {
@@ -860,6 +946,10 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.ImportedAt.GetHashCode();
                 }
+                if (this.InterestRate != null)
+                {
+                    hashCode = (hashCode * 59) + this.InterestRate.GetHashCode();
+                }
                 if (this.InstitutionCode != null)
                 {
                     hashCode = (hashCode * 59) + this.InstitutionCode.GetHashCode();
@@ -867,14 +957,6 @@ namespace MX.Platform.CSharp.Model
                 if (this.InsuredName != null)
                 {
                     hashCode = (hashCode * 59) + this.InsuredName.GetHashCode();
-                }
-                if (this.InterestRate != null)
-                {
-                    hashCode = (hashCode * 59) + this.InterestRate.GetHashCode();
-                }
-                if (this.IsBusiness != null)
-                {
-                    hashCode = (hashCode * 59) + this.IsBusiness.GetHashCode();
                 }
                 if (this.IsClosed != null)
                 {
@@ -899,6 +981,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.LoanAmount != null)
                 {
                     hashCode = (hashCode * 59) + this.LoanAmount.GetHashCode();
+                }
+                if (this.MarginBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.MarginBalance.GetHashCode();
                 }
                 if (this.MaturesOn != null)
                 {
@@ -956,10 +1042,6 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.PremiumAmount.GetHashCode();
                 }
-                if (this.PropertyType != null)
-                {
-                    hashCode = (hashCode * 59) + this.PropertyType.GetHashCode();
-                }
                 if (this.RoutingNumber != null)
                 {
                     hashCode = (hashCode * 59) + this.RoutingNumber.GetHashCode();
@@ -971,6 +1053,14 @@ namespace MX.Platform.CSharp.Model
                 if (this.Subtype != null)
                 {
                     hashCode = (hashCode * 59) + this.Subtype.GetHashCode();
+                }
+                if (this.TodayUglAmount != null)
+                {
+                    hashCode = (hashCode * 59) + this.TodayUglAmount.GetHashCode();
+                }
+                if (this.TodayUglPercentage != null)
+                {
+                    hashCode = (hashCode * 59) + this.TodayUglPercentage.GetHashCode();
                 }
                 if (this.TotalAccountValue != null)
                 {

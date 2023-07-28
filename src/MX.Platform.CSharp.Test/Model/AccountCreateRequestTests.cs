@@ -57,12 +57,20 @@ namespace MX.Platform.CSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'AccountNumber'
+        /// Test the property 'AccountSubtypeName'
         /// </summary>
         [Fact]
-        public void AccountNumberTest()
+        public void AccountSubtypeNameTest()
         {
-            // TODO unit test for the property 'AccountNumber'
+            // TODO unit test for the property 'AccountSubtypeName'
+        }
+        /// <summary>
+        /// Test the property 'AccountType'
+        /// </summary>
+        [Fact]
+        public void AccountTypeTest()
+        {
+            // TODO unit test for the property 'AccountType'
         }
         /// <summary>
         /// Test the property 'Apr'
@@ -87,14 +95,6 @@ namespace MX.Platform.CSharp.Test.Model
         public void AvailableBalanceTest()
         {
             // TODO unit test for the property 'AvailableBalance'
-        }
-        /// <summary>
-        /// Test the property 'AvailableCredit'
-        /// </summary>
-        [Fact]
-        public void AvailableCreditTest()
-        {
-            // TODO unit test for the property 'AvailableCredit'
         }
         /// <summary>
         /// Test the property 'Balance'
@@ -129,14 +129,6 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'CurrencyCode'
         }
         /// <summary>
-        /// Test the property 'DayPaymentIsDue'
-        /// </summary>
-        [Fact]
-        public void DayPaymentIsDueTest()
-        {
-            // TODO unit test for the property 'DayPaymentIsDue'
-        }
-        /// <summary>
         /// Test the property 'DeathBenefit'
         /// </summary>
         [Fact]
@@ -145,20 +137,20 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'DeathBenefit'
         }
         /// <summary>
-        /// Test the property 'Id'
-        /// </summary>
-        [Fact]
-        public void IdTest()
-        {
-            // TODO unit test for the property 'Id'
-        }
-        /// <summary>
         /// Test the property 'InterestRate'
         /// </summary>
         [Fact]
         public void InterestRateTest()
         {
             // TODO unit test for the property 'InterestRate'
+        }
+        /// <summary>
+        /// Test the property 'IsBusiness'
+        /// </summary>
+        [Fact]
+        public void IsBusinessTest()
+        {
+            // TODO unit test for the property 'IsBusiness'
         }
         /// <summary>
         /// Test the property 'IsClosed'
@@ -177,22 +169,6 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'IsHidden'
         }
         /// <summary>
-        /// Test the property 'LastPayment'
-        /// </summary>
-        [Fact]
-        public void LastPaymentTest()
-        {
-            // TODO unit test for the property 'LastPayment'
-        }
-        /// <summary>
-        /// Test the property 'LastPaymentAt'
-        /// </summary>
-        [Fact]
-        public void LastPaymentAtTest()
-        {
-            // TODO unit test for the property 'LastPaymentAt'
-        }
-        /// <summary>
         /// Test the property 'LoanAmount'
         /// </summary>
         [Fact]
@@ -201,36 +177,12 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'LoanAmount'
         }
         /// <summary>
-        /// Test the property 'MaturesOn'
-        /// </summary>
-        [Fact]
-        public void MaturesOnTest()
-        {
-            // TODO unit test for the property 'MaturesOn'
-        }
-        /// <summary>
         /// Test the property 'Metadata'
         /// </summary>
         [Fact]
         public void MetadataTest()
         {
             // TODO unit test for the property 'Metadata'
-        }
-        /// <summary>
-        /// Test the property 'MinimumBalance'
-        /// </summary>
-        [Fact]
-        public void MinimumBalanceTest()
-        {
-            // TODO unit test for the property 'MinimumBalance'
-        }
-        /// <summary>
-        /// Test the property 'MinimumPayment'
-        /// </summary>
-        [Fact]
-        public void MinimumPaymentTest()
-        {
-            // TODO unit test for the property 'MinimumPayment'
         }
         /// <summary>
         /// Test the property 'Name'
@@ -257,52 +209,28 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'OriginalBalance'
         }
         /// <summary>
-        /// Test the property 'PaymentDueAt'
+        /// Test the property 'PropertyType'
         /// </summary>
         [Fact]
-        public void PaymentDueAtTest()
+        public void PropertyTypeTest()
         {
-            // TODO unit test for the property 'PaymentDueAt'
+            // TODO unit test for the property 'PropertyType'
         }
         /// <summary>
-        /// Test the property 'PayoffBalance'
+        /// Test the property 'PropertyTypeName'
         /// </summary>
         [Fact]
-        public void PayoffBalanceTest()
+        public void PropertyTypeNameTest()
         {
-            // TODO unit test for the property 'PayoffBalance'
+            // TODO unit test for the property 'PropertyTypeName'
         }
         /// <summary>
-        /// Test the property 'RoutingNumber'
+        /// Test the property 'SkipWebhook'
         /// </summary>
         [Fact]
-        public void RoutingNumberTest()
+        public void SkipWebhookTest()
         {
-            // TODO unit test for the property 'RoutingNumber'
-        }
-        /// <summary>
-        /// Test the property 'StartedOn'
-        /// </summary>
-        [Fact]
-        public void StartedOnTest()
-        {
-            // TODO unit test for the property 'StartedOn'
-        }
-        /// <summary>
-        /// Test the property 'Subtype'
-        /// </summary>
-        [Fact]
-        public void SubtypeTest()
-        {
-            // TODO unit test for the property 'Subtype'
-        }
-        /// <summary>
-        /// Test the property 'Type'
-        /// </summary>
-        [Fact]
-        public void TypeTest()
-        {
-            // TODO unit test for the property 'Type'
+            // TODO unit test for the property 'SkipWebhook'
         }
 
     }
