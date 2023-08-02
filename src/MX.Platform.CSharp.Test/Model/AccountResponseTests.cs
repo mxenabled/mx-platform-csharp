@@ -417,6 +417,22 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'PremiumAmount'
         }
         /// <summary>
+        /// Test the property 'PropertyType'
+        /// </summary>
+        [Fact]
+        public void PropertyTypeTest()
+        {
+            // TODO unit test for the property 'PropertyType'
+        }
+        /// <summary>
+        /// Test the property 'PropertyTypeName'
+        /// </summary>
+        [Fact]
+        public void PropertyTypeNameTest()
+        {
+            // TODO unit test for the property 'PropertyTypeName'
+        }
+        /// <summary>
         /// Test the property 'RoutingNumber'
         /// </summary>
         [Fact]

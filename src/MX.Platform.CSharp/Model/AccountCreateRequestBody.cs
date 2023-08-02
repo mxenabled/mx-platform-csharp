@@ -34,19 +34,11 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountCreateRequestBody" /> class.
         /// </summary>
-        /// <param name="skipWebhook">skipWebhook.</param>
         /// <param name="account">account.</param>
-        public AccountCreateRequestBody(bool? skipWebhook = default(bool?), AccountCreateRequest account = default(AccountCreateRequest))
+        public AccountCreateRequestBody(AccountCreateRequest account = default(AccountCreateRequest))
         {
-            this.SkipWebhook = skipWebhook;
             this.Account = account;
         }
-
-        /// <summary>
-        /// Gets or Sets SkipWebhook
-        /// </summary>
-        [DataMember(Name = "skip_webhook", EmitDefaultValue = true)]
-        public bool? SkipWebhook { get; set; }
 
         /// <summary>
         /// Gets or Sets Account
@@ -62,7 +54,6 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AccountCreateRequestBody {\n");
-            sb.Append("  SkipWebhook: ").Append(SkipWebhook).Append("\n");
             sb.Append("  Account: ").Append(Account).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -100,11 +91,6 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.SkipWebhook == input.SkipWebhook ||
-                    (this.SkipWebhook != null &&
-                    this.SkipWebhook.Equals(input.SkipWebhook))
-                ) && 
-                (
                     this.Account == input.Account ||
                     (this.Account != null &&
                     this.Account.Equals(input.Account))
@@ -120,10 +106,6 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.SkipWebhook != null)
-                {
-                    hashCode = (hashCode * 59) + this.SkipWebhook.GetHashCode();
-                }
                 if (this.Account != null)
                 {
                     hashCode = (hashCode * 59) + this.Account.GetHashCode();

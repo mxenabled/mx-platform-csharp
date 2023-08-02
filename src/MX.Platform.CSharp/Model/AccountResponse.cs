@@ -79,6 +79,8 @@ namespace MX.Platform.CSharp.Model
         /// <param name="paymentDueAt">paymentDueAt.</param>
         /// <param name="payoffBalance">payoffBalance.</param>
         /// <param name="premiumAmount">premiumAmount.</param>
+        /// <param name="propertyType">propertyType.</param>
+        /// <param name="propertyTypeName">propertyTypeName.</param>
         /// <param name="routingNumber">routingNumber.</param>
         /// <param name="startedOn">startedOn.</param>
         /// <param name="subtype">subtype.</param>
@@ -89,7 +91,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public AccountResponse(string accountNumber = default(string), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), decimal? annuityTermYear = default(decimal?), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), decimal? interestRate = default(decimal?), string institutionCode = default(string), string insuredName = default(string), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), string routingNumber = default(string), string startedOn = default(string), string subtype = default(string), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
+        public AccountResponse(string accountNumber = default(string), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), decimal? annuityTermYear = default(decimal?), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), decimal? interestRate = default(decimal?), string institutionCode = default(string), string insuredName = default(string), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), int? propertyType = default(int?), string propertyTypeName = default(string), string routingNumber = default(string), string startedOn = default(string), string subtype = default(string), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
         {
             this.AccountNumber = accountNumber;
             this.AccountOwnership = accountOwnership;
@@ -136,6 +138,8 @@ namespace MX.Platform.CSharp.Model
             this.PaymentDueAt = paymentDueAt;
             this.PayoffBalance = payoffBalance;
             this.PremiumAmount = premiumAmount;
+            this.PropertyType = propertyType;
+            this.PropertyTypeName = propertyTypeName;
             this.RoutingNumber = routingNumber;
             this.StartedOn = startedOn;
             this.Subtype = subtype;
@@ -419,6 +423,18 @@ namespace MX.Platform.CSharp.Model
         public decimal? PremiumAmount { get; set; }
 
         /// <summary>
+        /// Gets or Sets PropertyType
+        /// </summary>
+        [DataMember(Name = "property_type", EmitDefaultValue = true)]
+        public int? PropertyType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PropertyTypeName
+        /// </summary>
+        [DataMember(Name = "property_type_name", EmitDefaultValue = true)]
+        public string PropertyTypeName { get; set; }
+
+        /// <summary>
         /// Gets or Sets RoutingNumber
         /// </summary>
         [DataMember(Name = "routing_number", EmitDefaultValue = true)]
@@ -531,6 +547,8 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  PaymentDueAt: ").Append(PaymentDueAt).Append("\n");
             sb.Append("  PayoffBalance: ").Append(PayoffBalance).Append("\n");
             sb.Append("  PremiumAmount: ").Append(PremiumAmount).Append("\n");
+            sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
+            sb.Append("  PropertyTypeName: ").Append(PropertyTypeName).Append("\n");
             sb.Append("  RoutingNumber: ").Append(RoutingNumber).Append("\n");
             sb.Append("  StartedOn: ").Append(StartedOn).Append("\n");
             sb.Append("  Subtype: ").Append(Subtype).Append("\n");
@@ -802,6 +820,16 @@ namespace MX.Platform.CSharp.Model
                     this.PremiumAmount.Equals(input.PremiumAmount))
                 ) && 
                 (
+                    this.PropertyType == input.PropertyType ||
+                    (this.PropertyType != null &&
+                    this.PropertyType.Equals(input.PropertyType))
+                ) && 
+                (
+                    this.PropertyTypeName == input.PropertyTypeName ||
+                    (this.PropertyTypeName != null &&
+                    this.PropertyTypeName.Equals(input.PropertyTypeName))
+                ) && 
+                (
                     this.RoutingNumber == input.RoutingNumber ||
                     (this.RoutingNumber != null &&
                     this.RoutingNumber.Equals(input.RoutingNumber))
@@ -1041,6 +1069,14 @@ namespace MX.Platform.CSharp.Model
                 if (this.PremiumAmount != null)
                 {
                     hashCode = (hashCode * 59) + this.PremiumAmount.GetHashCode();
+                }
+                if (this.PropertyType != null)
+                {
+                    hashCode = (hashCode * 59) + this.PropertyType.GetHashCode();
+                }
+                if (this.PropertyTypeName != null)
+                {
+                    hashCode = (hashCode * 59) + this.PropertyTypeName.GetHashCode();
                 }
                 if (this.RoutingNumber != null)
                 {

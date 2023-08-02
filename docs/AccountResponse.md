@@ -49,6 +49,8 @@ Name | Type | Description | Notes
 **PaymentDueAt** | **string** |  | [optional] 
 **PayoffBalance** | **decimal?** |  | [optional] 
 **PremiumAmount** | **decimal?** |  | [optional] 
+**PropertyType** | **int?** |  | [optional] 
+**PropertyTypeName** | **string** |  | [optional] 
 **RoutingNumber** | **string** |  | [optional] 
 **StartedOn** | **string** |  | [optional] 
 **Subtype** | **string** |  | [optional] 

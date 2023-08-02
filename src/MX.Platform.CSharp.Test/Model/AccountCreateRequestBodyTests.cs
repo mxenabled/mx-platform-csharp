@@ -57,14 +57,6 @@ namespace MX.Platform.CSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'SkipWebhook'
-        /// </summary>
-        [Fact]
-        public void SkipWebhookTest()
-        {
-            // TODO unit test for the property 'SkipWebhook'
-        }
-        /// <summary>
         /// Test the property 'Account'
         /// </summary>
         [Fact]
