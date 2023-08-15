@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountSubtypeName** | **string** |  | [optional] 
-**AccountType** | **int** |  | 
+**AccountSubtype** | **string** |  | [optional] 
+**AccountType** | **string** |  | 
 **Apr** | **decimal** |  | [optional] 
 **Apy** | **decimal** |  | [optional] 
 **AvailableBalance** | **decimal** |  | [optional] 
@@ -23,8 +23,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | 
 **Nickname** | **string** |  | [optional] 
 **OriginalBalance** | **decimal** |  | [optional] 
-**PropertyType** | **int** |  | [optional] 
-**PropertyTypeName** | **string** |  | [optional] 
+**PropertyType** | **string** |  | [optional] 
 **SkipWebhook** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

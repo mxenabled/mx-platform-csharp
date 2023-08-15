@@ -34,17 +34,177 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountUpdateRequest" /> class.
         /// </summary>
+        /// <param name="accountSubtype">accountSubtype.</param>
+        /// <param name="accountType">accountType.</param>
+        /// <param name="apr">apr.</param>
+        /// <param name="apy">apy.</param>
+        /// <param name="availableBalance">availableBalance.</param>
+        /// <param name="balance">balance.</param>
+        /// <param name="cashSurrenderValue">cashSurrenderValue.</param>
+        /// <param name="creditLimit">creditLimit.</param>
+        /// <param name="currencyCode">currencyCode.</param>
+        /// <param name="deathBenefit">deathBenefit.</param>
+        /// <param name="interestRate">interestRate.</param>
+        /// <param name="isBusiness">isBusiness.</param>
+        /// <param name="isClosed">isClosed.</param>
         /// <param name="isHidden">isHidden.</param>
-        public AccountUpdateRequest(bool isHidden = default(bool))
+        /// <param name="loanAmount">loanAmount.</param>
+        /// <param name="metadata">metadata.</param>
+        /// <param name="name">name.</param>
+        /// <param name="nickname">nickname.</param>
+        /// <param name="originalBalance">originalBalance.</param>
+        /// <param name="propertyType">propertyType.</param>
+        /// <param name="skipWebhook">skipWebhook.</param>
+        public AccountUpdateRequest(string accountSubtype = default(string), string accountType = default(string), decimal apr = default(decimal), decimal apy = default(decimal), decimal availableBalance = default(decimal), decimal balance = default(decimal), decimal cashSurrenderValue = default(decimal), decimal creditLimit = default(decimal), string currencyCode = default(string), int deathBenefit = default(int), decimal interestRate = default(decimal), bool isBusiness = default(bool), bool isClosed = default(bool), bool isHidden = default(bool), decimal loanAmount = default(decimal), string metadata = default(string), string name = default(string), string nickname = default(string), decimal originalBalance = default(decimal), string propertyType = default(string), bool skipWebhook = default(bool))
         {
+            this.AccountSubtype = accountSubtype;
+            this.AccountType = accountType;
+            this.Apr = apr;
+            this.Apy = apy;
+            this.AvailableBalance = availableBalance;
+            this.Balance = balance;
+            this.CashSurrenderValue = cashSurrenderValue;
+            this.CreditLimit = creditLimit;
+            this.CurrencyCode = currencyCode;
+            this.DeathBenefit = deathBenefit;
+            this.InterestRate = interestRate;
+            this.IsBusiness = isBusiness;
+            this.IsClosed = isClosed;
             this.IsHidden = isHidden;
+            this.LoanAmount = loanAmount;
+            this.Metadata = metadata;
+            this.Name = name;
+            this.Nickname = nickname;
+            this.OriginalBalance = originalBalance;
+            this.PropertyType = propertyType;
+            this.SkipWebhook = skipWebhook;
         }
+
+        /// <summary>
+        /// Gets or Sets AccountSubtype
+        /// </summary>
+        [DataMember(Name = "account_subtype", EmitDefaultValue = false)]
+        public string AccountSubtype { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AccountType
+        /// </summary>
+        [DataMember(Name = "account_type", EmitDefaultValue = false)]
+        public string AccountType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Apr
+        /// </summary>
+        [DataMember(Name = "apr", EmitDefaultValue = false)]
+        public decimal Apr { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Apy
+        /// </summary>
+        [DataMember(Name = "apy", EmitDefaultValue = false)]
+        public decimal Apy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AvailableBalance
+        /// </summary>
+        [DataMember(Name = "available_balance", EmitDefaultValue = false)]
+        public decimal AvailableBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Balance
+        /// </summary>
+        [DataMember(Name = "balance", EmitDefaultValue = false)]
+        public decimal Balance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CashSurrenderValue
+        /// </summary>
+        [DataMember(Name = "cash_surrender_value", EmitDefaultValue = false)]
+        public decimal CashSurrenderValue { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CreditLimit
+        /// </summary>
+        [DataMember(Name = "credit_limit", EmitDefaultValue = false)]
+        public decimal CreditLimit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CurrencyCode
+        /// </summary>
+        [DataMember(Name = "currency_code", EmitDefaultValue = false)]
+        public string CurrencyCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DeathBenefit
+        /// </summary>
+        [DataMember(Name = "death_benefit", EmitDefaultValue = false)]
+        public int DeathBenefit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets InterestRate
+        /// </summary>
+        [DataMember(Name = "interest_rate", EmitDefaultValue = false)]
+        public decimal InterestRate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsBusiness
+        /// </summary>
+        [DataMember(Name = "is_business", EmitDefaultValue = true)]
+        public bool IsBusiness { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsClosed
+        /// </summary>
+        [DataMember(Name = "is_closed", EmitDefaultValue = true)]
+        public bool IsClosed { get; set; }
 
         /// <summary>
         /// Gets or Sets IsHidden
         /// </summary>
         [DataMember(Name = "is_hidden", EmitDefaultValue = true)]
         public bool IsHidden { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LoanAmount
+        /// </summary>
+        [DataMember(Name = "loan_amount", EmitDefaultValue = false)]
+        public decimal LoanAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Metadata
+        /// </summary>
+        [DataMember(Name = "metadata", EmitDefaultValue = false)]
+        public string Metadata { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name = "name", EmitDefaultValue = false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Nickname
+        /// </summary>
+        [DataMember(Name = "nickname", EmitDefaultValue = false)]
+        public string Nickname { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OriginalBalance
+        /// </summary>
+        [DataMember(Name = "original_balance", EmitDefaultValue = false)]
+        public decimal OriginalBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PropertyType
+        /// </summary>
+        [DataMember(Name = "property_type", EmitDefaultValue = false)]
+        public string PropertyType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SkipWebhook
+        /// </summary>
+        [DataMember(Name = "skip_webhook", EmitDefaultValue = true)]
+        public bool SkipWebhook { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,7 +214,27 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AccountUpdateRequest {\n");
+            sb.Append("  AccountSubtype: ").Append(AccountSubtype).Append("\n");
+            sb.Append("  AccountType: ").Append(AccountType).Append("\n");
+            sb.Append("  Apr: ").Append(Apr).Append("\n");
+            sb.Append("  Apy: ").Append(Apy).Append("\n");
+            sb.Append("  AvailableBalance: ").Append(AvailableBalance).Append("\n");
+            sb.Append("  Balance: ").Append(Balance).Append("\n");
+            sb.Append("  CashSurrenderValue: ").Append(CashSurrenderValue).Append("\n");
+            sb.Append("  CreditLimit: ").Append(CreditLimit).Append("\n");
+            sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
+            sb.Append("  DeathBenefit: ").Append(DeathBenefit).Append("\n");
+            sb.Append("  InterestRate: ").Append(InterestRate).Append("\n");
+            sb.Append("  IsBusiness: ").Append(IsBusiness).Append("\n");
+            sb.Append("  IsClosed: ").Append(IsClosed).Append("\n");
             sb.Append("  IsHidden: ").Append(IsHidden).Append("\n");
+            sb.Append("  LoanAmount: ").Append(LoanAmount).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Nickname: ").Append(Nickname).Append("\n");
+            sb.Append("  OriginalBalance: ").Append(OriginalBalance).Append("\n");
+            sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
+            sb.Append("  SkipWebhook: ").Append(SkipWebhook).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,8 +271,95 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
+                    this.AccountSubtype == input.AccountSubtype ||
+                    (this.AccountSubtype != null &&
+                    this.AccountSubtype.Equals(input.AccountSubtype))
+                ) && 
+                (
+                    this.AccountType == input.AccountType ||
+                    (this.AccountType != null &&
+                    this.AccountType.Equals(input.AccountType))
+                ) && 
+                (
+                    this.Apr == input.Apr ||
+                    this.Apr.Equals(input.Apr)
+                ) && 
+                (
+                    this.Apy == input.Apy ||
+                    this.Apy.Equals(input.Apy)
+                ) && 
+                (
+                    this.AvailableBalance == input.AvailableBalance ||
+                    this.AvailableBalance.Equals(input.AvailableBalance)
+                ) && 
+                (
+                    this.Balance == input.Balance ||
+                    this.Balance.Equals(input.Balance)
+                ) && 
+                (
+                    this.CashSurrenderValue == input.CashSurrenderValue ||
+                    this.CashSurrenderValue.Equals(input.CashSurrenderValue)
+                ) && 
+                (
+                    this.CreditLimit == input.CreditLimit ||
+                    this.CreditLimit.Equals(input.CreditLimit)
+                ) && 
+                (
+                    this.CurrencyCode == input.CurrencyCode ||
+                    (this.CurrencyCode != null &&
+                    this.CurrencyCode.Equals(input.CurrencyCode))
+                ) && 
+                (
+                    this.DeathBenefit == input.DeathBenefit ||
+                    this.DeathBenefit.Equals(input.DeathBenefit)
+                ) && 
+                (
+                    this.InterestRate == input.InterestRate ||
+                    this.InterestRate.Equals(input.InterestRate)
+                ) && 
+                (
+                    this.IsBusiness == input.IsBusiness ||
+                    this.IsBusiness.Equals(input.IsBusiness)
+                ) && 
+                (
+                    this.IsClosed == input.IsClosed ||
+                    this.IsClosed.Equals(input.IsClosed)
+                ) && 
+                (
                     this.IsHidden == input.IsHidden ||
                     this.IsHidden.Equals(input.IsHidden)
+                ) && 
+                (
+                    this.LoanAmount == input.LoanAmount ||
+                    this.LoanAmount.Equals(input.LoanAmount)
+                ) && 
+                (
+                    this.Metadata == input.Metadata ||
+                    (this.Metadata != null &&
+                    this.Metadata.Equals(input.Metadata))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Nickname == input.Nickname ||
+                    (this.Nickname != null &&
+                    this.Nickname.Equals(input.Nickname))
+                ) && 
+                (
+                    this.OriginalBalance == input.OriginalBalance ||
+                    this.OriginalBalance.Equals(input.OriginalBalance)
+                ) && 
+                (
+                    this.PropertyType == input.PropertyType ||
+                    (this.PropertyType != null &&
+                    this.PropertyType.Equals(input.PropertyType))
+                ) && 
+                (
+                    this.SkipWebhook == input.SkipWebhook ||
+                    this.SkipWebhook.Equals(input.SkipWebhook)
                 );
         }
 
@@ -105,7 +372,48 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.AccountSubtype != null)
+                {
+                    hashCode = (hashCode * 59) + this.AccountSubtype.GetHashCode();
+                }
+                if (this.AccountType != null)
+                {
+                    hashCode = (hashCode * 59) + this.AccountType.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.Apr.GetHashCode();
+                hashCode = (hashCode * 59) + this.Apy.GetHashCode();
+                hashCode = (hashCode * 59) + this.AvailableBalance.GetHashCode();
+                hashCode = (hashCode * 59) + this.Balance.GetHashCode();
+                hashCode = (hashCode * 59) + this.CashSurrenderValue.GetHashCode();
+                hashCode = (hashCode * 59) + this.CreditLimit.GetHashCode();
+                if (this.CurrencyCode != null)
+                {
+                    hashCode = (hashCode * 59) + this.CurrencyCode.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.DeathBenefit.GetHashCode();
+                hashCode = (hashCode * 59) + this.InterestRate.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsBusiness.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsClosed.GetHashCode();
                 hashCode = (hashCode * 59) + this.IsHidden.GetHashCode();
+                hashCode = (hashCode * 59) + this.LoanAmount.GetHashCode();
+                if (this.Metadata != null)
+                {
+                    hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
+                if (this.Name != null)
+                {
+                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
+                if (this.Nickname != null)
+                {
+                    hashCode = (hashCode * 59) + this.Nickname.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.OriginalBalance.GetHashCode();
+                if (this.PropertyType != null)
+                {
+                    hashCode = (hashCode * 59) + this.PropertyType.GetHashCode();
+                }
+                hashCode = (hashCode * 59) + this.SkipWebhook.GetHashCode();
                 return hashCode;
             }
         }

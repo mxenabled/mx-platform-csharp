@@ -1546,9 +1546,10 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="isManual">List only accounts that were manually created. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>AccountsResponseBody</returns>
-        AccountsResponseBody ListUserAccounts(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?));
+        AccountsResponseBody ListUserAccounts(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), bool? isManual = default(bool?), int? recordsPerPage = default(int?));
 
         /// <summary>
         /// List accounts
@@ -1560,9 +1561,10 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="isManual">List only accounts that were manually created. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of AccountsResponseBody</returns>
-        ApiResponse<AccountsResponseBody> ListUserAccountsWithHttpInfo(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?));
+        ApiResponse<AccountsResponseBody> ListUserAccountsWithHttpInfo(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), bool? isManual = default(bool?), int? recordsPerPage = default(int?));
         /// <summary>
         /// List users
         /// </summary>
@@ -4132,10 +4134,11 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="isManual">List only accounts that were manually created. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountsResponseBody</returns>
-        System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), bool? isManual = default(bool?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// List accounts
@@ -4147,10 +4150,11 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="isManual">List only accounts that were manually created. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), bool? isManual = default(bool?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// List users
         /// </summary>
@@ -15788,11 +15792,12 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="isManual">List only accounts that were manually created. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>AccountsResponseBody</returns>
-        public AccountsResponseBody ListUserAccounts(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?))
+        public AccountsResponseBody ListUserAccounts(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), bool? isManual = default(bool?), int? recordsPerPage = default(int?))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = ListUserAccountsWithHttpInfo(userGuid, memberIsManagedByUser, page, recordsPerPage);
+            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = ListUserAccountsWithHttpInfo(userGuid, memberIsManagedByUser, page, isManual, recordsPerPage);
             return localVarResponse.Data;
         }
 
@@ -15803,9 +15808,10 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="isManual">List only accounts that were manually created. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of AccountsResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> ListUserAccountsWithHttpInfo(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?))
+        public MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> ListUserAccountsWithHttpInfo(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), bool? isManual = default(bool?), int? recordsPerPage = default(int?))
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -15843,6 +15849,10 @@ namespace MX.Platform.CSharp.Api
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
+            }
+            if (isManual != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "is_manual", isManual));
             }
             if (recordsPerPage != null)
             {
@@ -15877,12 +15887,13 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="isManual">List only accounts that were manually created. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountsResponseBody</returns>
-        public async System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), bool? isManual = default(bool?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = await ListUserAccountsWithHttpInfoAsync(userGuid, memberIsManagedByUser, page, recordsPerPage, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody> localVarResponse = await ListUserAccountsWithHttpInfoAsync(userGuid, memberIsManagedByUser, page, isManual, recordsPerPage, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -15893,10 +15904,11 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="memberIsManagedByUser">List only accounts whose member is managed by the user. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="isManual">List only accounts that were manually created. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, bool? memberIsManagedByUser = default(bool?), int? page = default(int?), bool? isManual = default(bool?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -15935,6 +15947,10 @@ namespace MX.Platform.CSharp.Api
             if (page != null)
             {
                 localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "page", page));
+            }
+            if (isManual != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "is_manual", isManual));
             }
             if (recordsPerPage != null)
             {

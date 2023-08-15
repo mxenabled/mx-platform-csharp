@@ -4847,7 +4847,7 @@ Name | Type | Description  | Notes
 
 <a name="listuseraccounts"></a>
 # **ListUserAccounts**
-> AccountsResponseBody ListUserAccounts (string userGuid, bool? memberIsManagedByUser = null, int? page = null, int? recordsPerPage = null)
+> AccountsResponseBody ListUserAccounts (string userGuid, bool? memberIsManagedByUser = null, int? page = null, bool? isManual = null, int? recordsPerPage = null)
 
 List accounts
 
@@ -4877,12 +4877,13 @@ namespace Example
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var memberIsManagedByUser = true;  // bool? | List only accounts whose member is managed by the user. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
+            var isManual = true;  // bool? | List only accounts that were manually created. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List accounts
-                AccountsResponseBody result = apiInstance.ListUserAccounts(userGuid, memberIsManagedByUser, page, recordsPerPage);
+                AccountsResponseBody result = apiInstance.ListUserAccounts(userGuid, memberIsManagedByUser, page, isManual, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4903,6 +4904,7 @@ Name | Type | Description  | Notes
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **memberIsManagedByUser** | **bool?**| List only accounts whose member is managed by the user. | [optional] 
  **page** | **int?**| Specify current page. | [optional] 
+ **isManual** | **bool?**| List only accounts that were manually created. | [optional] 
  **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
 ### Return type

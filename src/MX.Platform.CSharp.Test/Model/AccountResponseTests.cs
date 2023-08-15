@@ -425,14 +425,6 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'PropertyType'
         }
         /// <summary>
-        /// Test the property 'PropertyTypeName'
-        /// </summary>
-        [Fact]
-        public void PropertyTypeNameTest()
-        {
-            // TODO unit test for the property 'PropertyTypeName'
-        }
-        /// <summary>
         /// Test the property 'RoutingNumber'
         /// </summary>
         [Fact]

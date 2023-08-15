@@ -899,8 +899,9 @@ namespace MX.Platform.CSharp.Test.Api
             //string userGuid = null;
             //bool? memberIsManagedByUser = null;
             //int? page = null;
+            //bool? isManual = null;
             //int? recordsPerPage = null;
-            //var response = instance.ListUserAccounts(userGuid, memberIsManagedByUser, page, recordsPerPage);
+            //var response = instance.ListUserAccounts(userGuid, memberIsManagedByUser, page, isManual, recordsPerPage);
             //Assert.IsType<AccountsResponseBody>(response);
         }
 

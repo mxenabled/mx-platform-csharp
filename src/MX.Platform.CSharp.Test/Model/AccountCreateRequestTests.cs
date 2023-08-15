@@ -57,12 +57,12 @@ namespace MX.Platform.CSharp.Test.Model
 
 
         /// <summary>
-        /// Test the property 'AccountSubtypeName'
+        /// Test the property 'AccountSubtype'
         /// </summary>
         [Fact]
-        public void AccountSubtypeNameTest()
+        public void AccountSubtypeTest()
         {
-            // TODO unit test for the property 'AccountSubtypeName'
+            // TODO unit test for the property 'AccountSubtype'
         }
         /// <summary>
         /// Test the property 'AccountType'
@@ -215,14 +215,6 @@ namespace MX.Platform.CSharp.Test.Model
         public void PropertyTypeTest()
         {
             // TODO unit test for the property 'PropertyType'
-        }
-        /// <summary>
-        /// Test the property 'PropertyTypeName'
-        /// </summary>
-        [Fact]
-        public void PropertyTypeNameTest()
-        {
-            // TODO unit test for the property 'PropertyTypeName'
         }
         /// <summary>
         /// Test the property 'SkipWebhook'

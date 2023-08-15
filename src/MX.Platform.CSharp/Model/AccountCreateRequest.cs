@@ -39,7 +39,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountCreateRequest" /> class.
         /// </summary>
-        /// <param name="accountSubtypeName">accountSubtypeName.</param>
+        /// <param name="accountSubtype">accountSubtype.</param>
         /// <param name="accountType">accountType (required).</param>
         /// <param name="apr">apr.</param>
         /// <param name="apy">apy.</param>
@@ -59,17 +59,20 @@ namespace MX.Platform.CSharp.Model
         /// <param name="nickname">nickname.</param>
         /// <param name="originalBalance">originalBalance.</param>
         /// <param name="propertyType">propertyType.</param>
-        /// <param name="propertyTypeName">propertyTypeName.</param>
         /// <param name="skipWebhook">skipWebhook.</param>
-        public AccountCreateRequest(string accountSubtypeName = default(string), int accountType = default(int), decimal apr = default(decimal), decimal apy = default(decimal), decimal availableBalance = default(decimal), decimal balance = default(decimal), decimal cashSurrenderValue = default(decimal), decimal creditLimit = default(decimal), string currencyCode = default(string), int deathBenefit = default(int), decimal interestRate = default(decimal), bool isBusiness = default(bool), bool isClosed = default(bool), bool isHidden = default(bool), decimal loanAmount = default(decimal), string metadata = default(string), string name = default(string), string nickname = default(string), decimal originalBalance = default(decimal), int propertyType = default(int), string propertyTypeName = default(string), bool skipWebhook = default(bool))
+        public AccountCreateRequest(string accountSubtype = default(string), string accountType = default(string), decimal apr = default(decimal), decimal apy = default(decimal), decimal availableBalance = default(decimal), decimal balance = default(decimal), decimal cashSurrenderValue = default(decimal), decimal creditLimit = default(decimal), string currencyCode = default(string), int deathBenefit = default(int), decimal interestRate = default(decimal), bool isBusiness = default(bool), bool isClosed = default(bool), bool isHidden = default(bool), decimal loanAmount = default(decimal), string metadata = default(string), string name = default(string), string nickname = default(string), decimal originalBalance = default(decimal), string propertyType = default(string), bool skipWebhook = default(bool))
         {
+            // to ensure "accountType" is required (not null)
+            if (accountType == null) {
+                throw new ArgumentNullException("accountType is a required property for AccountCreateRequest and cannot be null");
+            }
             this.AccountType = accountType;
             // to ensure "name" is required (not null)
             if (name == null) {
                 throw new ArgumentNullException("name is a required property for AccountCreateRequest and cannot be null");
             }
             this.Name = name;
-            this.AccountSubtypeName = accountSubtypeName;
+            this.AccountSubtype = accountSubtype;
             this.Apr = apr;
             this.Apy = apy;
             this.AvailableBalance = availableBalance;
@@ -87,21 +90,20 @@ namespace MX.Platform.CSharp.Model
             this.Nickname = nickname;
             this.OriginalBalance = originalBalance;
             this.PropertyType = propertyType;
-            this.PropertyTypeName = propertyTypeName;
             this.SkipWebhook = skipWebhook;
         }
 
         /// <summary>
-        /// Gets or Sets AccountSubtypeName
+        /// Gets or Sets AccountSubtype
         /// </summary>
-        [DataMember(Name = "account_subtype_name", EmitDefaultValue = false)]
-        public string AccountSubtypeName { get; set; }
+        [DataMember(Name = "account_subtype", EmitDefaultValue = false)]
+        public string AccountSubtype { get; set; }
 
         /// <summary>
         /// Gets or Sets AccountType
         /// </summary>
         [DataMember(Name = "account_type", IsRequired = true, EmitDefaultValue = false)]
-        public int AccountType { get; set; }
+        public string AccountType { get; set; }
 
         /// <summary>
         /// Gets or Sets Apr
@@ -209,13 +211,7 @@ namespace MX.Platform.CSharp.Model
         /// Gets or Sets PropertyType
         /// </summary>
         [DataMember(Name = "property_type", EmitDefaultValue = false)]
-        public int PropertyType { get; set; }
-
-        /// <summary>
-        /// Gets or Sets PropertyTypeName
-        /// </summary>
-        [DataMember(Name = "property_type_name", EmitDefaultValue = false)]
-        public string PropertyTypeName { get; set; }
+        public string PropertyType { get; set; }
 
         /// <summary>
         /// Gets or Sets SkipWebhook
@@ -231,7 +227,7 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class AccountCreateRequest {\n");
-            sb.Append("  AccountSubtypeName: ").Append(AccountSubtypeName).Append("\n");
+            sb.Append("  AccountSubtype: ").Append(AccountSubtype).Append("\n");
             sb.Append("  AccountType: ").Append(AccountType).Append("\n");
             sb.Append("  Apr: ").Append(Apr).Append("\n");
             sb.Append("  Apy: ").Append(Apy).Append("\n");
@@ -251,7 +247,6 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
             sb.Append("  OriginalBalance: ").Append(OriginalBalance).Append("\n");
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
-            sb.Append("  PropertyTypeName: ").Append(PropertyTypeName).Append("\n");
             sb.Append("  SkipWebhook: ").Append(SkipWebhook).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -289,13 +284,14 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.AccountSubtypeName == input.AccountSubtypeName ||
-                    (this.AccountSubtypeName != null &&
-                    this.AccountSubtypeName.Equals(input.AccountSubtypeName))
+                    this.AccountSubtype == input.AccountSubtype ||
+                    (this.AccountSubtype != null &&
+                    this.AccountSubtype.Equals(input.AccountSubtype))
                 ) && 
                 (
                     this.AccountType == input.AccountType ||
-                    this.AccountType.Equals(input.AccountType)
+                    (this.AccountType != null &&
+                    this.AccountType.Equals(input.AccountType))
                 ) && 
                 (
                     this.Apr == input.Apr ||
@@ -371,12 +367,8 @@ namespace MX.Platform.CSharp.Model
                 ) && 
                 (
                     this.PropertyType == input.PropertyType ||
-                    this.PropertyType.Equals(input.PropertyType)
-                ) && 
-                (
-                    this.PropertyTypeName == input.PropertyTypeName ||
-                    (this.PropertyTypeName != null &&
-                    this.PropertyTypeName.Equals(input.PropertyTypeName))
+                    (this.PropertyType != null &&
+                    this.PropertyType.Equals(input.PropertyType))
                 ) && 
                 (
                     this.SkipWebhook == input.SkipWebhook ||
@@ -393,11 +385,14 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AccountSubtypeName != null)
+                if (this.AccountSubtype != null)
                 {
-                    hashCode = (hashCode * 59) + this.AccountSubtypeName.GetHashCode();
+                    hashCode = (hashCode * 59) + this.AccountSubtype.GetHashCode();
                 }
-                hashCode = (hashCode * 59) + this.AccountType.GetHashCode();
+                if (this.AccountType != null)
+                {
+                    hashCode = (hashCode * 59) + this.AccountType.GetHashCode();
+                }
                 hashCode = (hashCode * 59) + this.Apr.GetHashCode();
                 hashCode = (hashCode * 59) + this.Apy.GetHashCode();
                 hashCode = (hashCode * 59) + this.AvailableBalance.GetHashCode();
@@ -427,10 +422,9 @@ namespace MX.Platform.CSharp.Model
                     hashCode = (hashCode * 59) + this.Nickname.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.OriginalBalance.GetHashCode();
-                hashCode = (hashCode * 59) + this.PropertyType.GetHashCode();
-                if (this.PropertyTypeName != null)
+                if (this.PropertyType != null)
                 {
-                    hashCode = (hashCode * 59) + this.PropertyTypeName.GetHashCode();
+                    hashCode = (hashCode * 59) + this.PropertyType.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.SkipWebhook.GetHashCode();
                 return hashCode;
