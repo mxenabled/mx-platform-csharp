@@ -35,12 +35,14 @@ namespace MX.Platform.CSharp.Model
         /// Initializes a new instance of the <see cref="MemberCreateRequestBody" /> class.
         /// </summary>
         /// <param name="clientRedirectUrl">clientRedirectUrl.</param>
+        /// <param name="enableApp2app">enableApp2app.</param>
         /// <param name="member">member.</param>
         /// <param name="referralSource">referralSource.</param>
         /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
-        public MemberCreateRequestBody(string clientRedirectUrl = default(string), MemberCreateRequest member = default(MemberCreateRequest), string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string))
+        public MemberCreateRequestBody(string clientRedirectUrl = default(string), bool enableApp2app = default(bool), MemberCreateRequest member = default(MemberCreateRequest), string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string))
         {
             this.ClientRedirectUrl = clientRedirectUrl;
+            this.EnableApp2app = enableApp2app;
             this.Member = member;
             this.ReferralSource = referralSource;
             this.UiMessageWebviewUrlScheme = uiMessageWebviewUrlScheme;
@@ -51,6 +53,12 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         [DataMember(Name = "client_redirect_url", EmitDefaultValue = false)]
         public string ClientRedirectUrl { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EnableApp2app
+        /// </summary>
+        [DataMember(Name = "enable_app2app", EmitDefaultValue = true)]
+        public bool EnableApp2app { get; set; }
 
         /// <summary>
         /// Gets or Sets Member
@@ -79,6 +87,7 @@ namespace MX.Platform.CSharp.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class MemberCreateRequestBody {\n");
             sb.Append("  ClientRedirectUrl: ").Append(ClientRedirectUrl).Append("\n");
+            sb.Append("  EnableApp2app: ").Append(EnableApp2app).Append("\n");
             sb.Append("  Member: ").Append(Member).Append("\n");
             sb.Append("  ReferralSource: ").Append(ReferralSource).Append("\n");
             sb.Append("  UiMessageWebviewUrlScheme: ").Append(UiMessageWebviewUrlScheme).Append("\n");
@@ -123,6 +132,10 @@ namespace MX.Platform.CSharp.Model
                     this.ClientRedirectUrl.Equals(input.ClientRedirectUrl))
                 ) && 
                 (
+                    this.EnableApp2app == input.EnableApp2app ||
+                    this.EnableApp2app.Equals(input.EnableApp2app)
+                ) && 
+                (
                     this.Member == input.Member ||
                     (this.Member != null &&
                     this.Member.Equals(input.Member))
@@ -152,6 +165,7 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.ClientRedirectUrl.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.EnableApp2app.GetHashCode();
                 if (this.Member != null)
                 {
                     hashCode = (hashCode * 59) + this.Member.GetHashCode();

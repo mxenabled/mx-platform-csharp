@@ -65,6 +65,14 @@ namespace MX.Platform.CSharp.Test.Model
             // TODO unit test for the property 'ClientRedirectUrl'
         }
         /// <summary>
+        /// Test the property 'EnableApp2app'
+        /// </summary>
+        [Fact]
+        public void EnableApp2appTest()
+        {
+            // TODO unit test for the property 'EnableApp2app'
+        }
+        /// <summary>
         /// Test the property 'Member'
         /// </summary>
         [Fact]

@@ -6707,7 +6707,7 @@ Name | Type | Description  | Notes
 
 <a name="requestoauthwindowuri"></a>
 # **RequestOAuthWindowURI**
-> OAuthWindowResponseBody RequestOAuthWindowURI (string memberGuid, string userGuid, string clientRedirectUrl = null, string referralSource = null, bool? skipAggregation = null, string uiMessageWebviewUrlScheme = null)
+> OAuthWindowResponseBody RequestOAuthWindowURI (string memberGuid, string userGuid, string clientRedirectUrl = null, string enableApp2app = null, string referralSource = null, bool? skipAggregation = null, string uiMessageWebviewUrlScheme = null)
 
 Request oauth window uri
 
@@ -6737,6 +6737,7 @@ namespace Example
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var clientRedirectUrl = https://mx.com;  // string | A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with `referral_source=APP`. (optional) 
+            var enableApp2app = false;  // string | This indicates whether OAuth app2app behavior is enabled for institutions that support it. Defaults to `true`. This setting is not persistent. (optional) 
             var referralSource = APP;  // string | Must be either `BROWSER` or `APP` depending on the implementation. Defaults to `BROWSER`. (optional) 
             var skipAggregation = false;  // bool? | Setting this parameter to `true` will prevent the member from automatically aggregating after being redirected from the authorization page. (optional) 
             var uiMessageWebviewUrlScheme = mx;  // string | A scheme for routing the user back to the application state they were previously in. Only available with `referral_source=APP`. (optional) 
@@ -6744,7 +6745,7 @@ namespace Example
             try
             {
                 // Request oauth window uri
-                OAuthWindowResponseBody result = apiInstance.RequestOAuthWindowURI(memberGuid, userGuid, clientRedirectUrl, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
+                OAuthWindowResponseBody result = apiInstance.RequestOAuthWindowURI(memberGuid, userGuid, clientRedirectUrl, enableApp2app, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6765,6 +6766,7 @@ Name | Type | Description  | Notes
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
  **clientRedirectUrl** | **string**| A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. | [optional] 
+ **enableApp2app** | **string**| This indicates whether OAuth app2app behavior is enabled for institutions that support it. Defaults to &#x60;true&#x60;. This setting is not persistent. | [optional] 
  **referralSource** | **string**| Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. | [optional] 
  **skipAggregation** | **bool?**| Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. | [optional] 
  **uiMessageWebviewUrlScheme** | **string**| A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. | [optional] 

@@ -1217,10 +1217,11 @@ namespace MX.Platform.CSharp.Test.Api
             //string memberGuid = null;
             //string userGuid = null;
             //string clientRedirectUrl = null;
+            //string enableApp2app = null;
             //string referralSource = null;
             //bool? skipAggregation = null;
             //string uiMessageWebviewUrlScheme = null;
-            //var response = instance.RequestOAuthWindowURI(memberGuid, userGuid, clientRedirectUrl, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
+            //var response = instance.RequestOAuthWindowURI(memberGuid, userGuid, clientRedirectUrl, enableApp2app, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
             //Assert.IsType<OAuthWindowResponseBody>(response);
         }
 
