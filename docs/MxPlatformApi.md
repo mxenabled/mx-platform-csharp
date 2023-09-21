@@ -12,6 +12,8 @@ Method | HTTP request | Description
 [**CreateManagedTransaction**](MxPlatformApi.md#createmanagedtransaction) | **POST** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions | Create managed transaction
 [**CreateManualAccount**](MxPlatformApi.md#createmanualaccount) | **POST** /users/{user_guid}/accounts | Create manual account
 [**CreateMember**](MxPlatformApi.md#createmember) | **POST** /users/{user_guid}/members | Create member
+[**CreateSpendingPlan**](MxPlatformApi.md#createspendingplan) | **POST** /users/{user_guid}/spending_plans | Create spending plan
+[**CreateSpendingPlanIterationItem**](MxPlatformApi.md#createspendingplaniterationitem) | **POST** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items | Create spending plan iteration item
 [**CreateTag**](MxPlatformApi.md#createtag) | **POST** /users/{user_guid}/tags | Create tag
 [**CreateTagging**](MxPlatformApi.md#createtagging) | **POST** /users/{user_guid}/taggings | Create tagging
 [**CreateTransactionRule**](MxPlatformApi.md#createtransactionrule) | **POST** /users/{user_guid}/transaction_rules | Create transaction rule
@@ -22,6 +24,9 @@ Method | HTTP request | Description
 [**DeleteManagedTransaction**](MxPlatformApi.md#deletemanagedtransaction) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Delete managed transaction
 [**DeleteManualAccount**](MxPlatformApi.md#deletemanualaccount) | **DELETE** /users/{user_guid}/accounts/{account_guid} | Delete manual account
 [**DeleteMember**](MxPlatformApi.md#deletemember) | **DELETE** /users/{user_guid}/members/{member_guid} | Delete member
+[**DeleteSpendingPlan**](MxPlatformApi.md#deletespendingplan) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid} | Delete spending plan
+[**DeleteSpendingPlanAccount**](MxPlatformApi.md#deletespendingplanaccount) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts/{spending_plan_account_guid} | Delete spending plan account
+[**DeleteSpendingPlanIterationItem**](MxPlatformApi.md#deletespendingplaniterationitem) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Delete spending plan iteration item
 [**DeleteTag**](MxPlatformApi.md#deletetag) | **DELETE** /users/{user_guid}/tags/{tag_guid} | Delete tag
 [**DeleteTagging**](MxPlatformApi.md#deletetagging) | **DELETE** /users/{user_guid}/taggings/{tagging_guid} | Delete tagging
 [**DeleteTransactionRule**](MxPlatformApi.md#deletetransactionrule) | **DELETE** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Delete transaction rule
@@ -55,6 +60,10 @@ Method | HTTP request | Description
 [**ListMemberCredentials**](MxPlatformApi.md#listmembercredentials) | **GET** /users/{user_guid}/members/{member_guid}/credentials | List member credentials
 [**ListMembers**](MxPlatformApi.md#listmembers) | **GET** /users/{user_guid}/members | List members
 [**ListMerchants**](MxPlatformApi.md#listmerchants) | **GET** /merchants | List merchants
+[**ListSpendingPlanAccounts**](MxPlatformApi.md#listspendingplanaccounts) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts | List spending plan accounts
+[**ListSpendingPlanIterationItems**](MxPlatformApi.md#listspendingplaniterationitems) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items | List spending plan iteration items
+[**ListSpendingPlanIterations**](MxPlatformApi.md#listspendingplaniterations) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations | List spending plan iterations
+[**ListSpendingPlans**](MxPlatformApi.md#listspendingplans) | **GET** /users/{user_guid}/spending_plans | List spending plans
 [**ListStatementsByMember**](MxPlatformApi.md#liststatementsbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements | List statements by member
 [**ListTaggings**](MxPlatformApi.md#listtaggings) | **GET** /users/{user_guid}/taggings | List taggings
 [**ListTags**](MxPlatformApi.md#listtags) | **GET** /users/{user_guid}/tags | List tags
@@ -79,6 +88,10 @@ Method | HTTP request | Description
 [**ReadMemberStatus**](MxPlatformApi.md#readmemberstatus) | **GET** /users/{user_guid}/members/{member_guid}/status | Read member status
 [**ReadMerchant**](MxPlatformApi.md#readmerchant) | **GET** /merchants/{merchant_guid} | Read merchant
 [**ReadMerchantLocation**](MxPlatformApi.md#readmerchantlocation) | **GET** /merchant_locations/{merchant_location_guid} | Read merchant location
+[**ReadSpendingPlanAccount**](MxPlatformApi.md#readspendingplanaccount) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts/{spending_plan_account_guid} | Read spending plan account
+[**ReadSpendingPlanIteration**](MxPlatformApi.md#readspendingplaniteration) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/{iteration_number} | Read a spending plan iteration
+[**ReadSpendingPlanIterationItem**](MxPlatformApi.md#readspendingplaniterationitem) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Read a spending plan iteration item
+[**ReadSpendingPlanUser**](MxPlatformApi.md#readspendingplanuser) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid} | Read a spending plan for a user
 [**ReadStatementByMember**](MxPlatformApi.md#readstatementbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid} | Read statement by member
 [**ReadTag**](MxPlatformApi.md#readtag) | **GET** /users/{user_guid}/tags/{tag_guid} | Read tag
 [**ReadTagging**](MxPlatformApi.md#readtagging) | **GET** /users/{user_guid}/taggings/{tagging_guid} | Read tagging
@@ -97,6 +110,7 @@ Method | HTTP request | Description
 [**UpdateManagedMember**](MxPlatformApi.md#updatemanagedmember) | **PUT** /users/{user_guid}/managed_members/{member_guid} | Update managed member
 [**UpdateManagedTransaction**](MxPlatformApi.md#updatemanagedtransaction) | **PUT** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Update managed transaction
 [**UpdateMember**](MxPlatformApi.md#updatemember) | **PUT** /users/{user_guid}/members/{member_guid} | Update member
+[**UpdateSpendingPlanIterationItem**](MxPlatformApi.md#updatespendingplaniterationitem) | **PUT** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Update a spending plan iteration item
 [**UpdateTag**](MxPlatformApi.md#updatetag) | **PUT** /users/{user_guid}/tags/{tag_guid} | Update tag
 [**UpdateTagging**](MxPlatformApi.md#updatetagging) | **PUT** /users/{user_guid}/taggings/{tagging_guid} | Update tagging
 [**UpdateTransaction**](MxPlatformApi.md#updatetransaction) | **PUT** /users/{user_guid}/transactions/{transaction_guid} | Update transaction
@@ -724,6 +738,160 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **202** | Accepted |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createspendingplan"></a>
+# **CreateSpendingPlan**
+> SpendingPlanResponse CreateSpendingPlan (string userGuid)
+
+Create spending plan
+
+This endpoint creates a new `spending_plan` for the user.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class CreateSpendingPlanExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+
+            try
+            {
+                // Create spending plan
+                SpendingPlanResponse result = apiInstance.CreateSpendingPlan(userGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.CreateSpendingPlan: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+
+### Return type
+
+[**SpendingPlanResponse**](SpendingPlanResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="createspendingplaniterationitem"></a>
+# **CreateSpendingPlanIterationItem**
+> SpendingPlanIterationItemResponse CreateSpendingPlanIterationItem (string spendingPlanGuid, string userGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody)
+
+Create spending plan iteration item
+
+This endpoint creates a new `spending_plan_iteration_item`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class CreateSpendingPlanIterationItemExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanIterationItemCreateRequestBody = new SpendingPlanIterationItemCreateRequestBody(); // SpendingPlanIterationItemCreateRequestBody | Iteration item to be created with required parameters (planned_amount)
+
+            try
+            {
+                // Create spending plan iteration item
+                SpendingPlanIterationItemResponse result = apiInstance.CreateSpendingPlanIterationItem(spendingPlanGuid, userGuid, spendingPlanIterationItemCreateRequestBody);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.CreateSpendingPlanIterationItem: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md)| Iteration item to be created with required parameters (planned_amount) | 
+
+### Return type
+
+[**SpendingPlanIterationItemResponse**](SpendingPlanIterationItemResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1473,6 +1641,238 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletespendingplan"></a>
+# **DeleteSpendingPlan**
+> void DeleteSpendingPlan (string userGuid, string spendingPlanGuid)
+
+Delete spending plan
+
+Use this endpoint to delete a user's `spending_plan`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class DeleteSpendingPlanExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique ID for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+
+            try
+            {
+                // Delete spending plan
+                apiInstance.DeleteSpendingPlan(userGuid, spendingPlanGuid);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlan: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique ID for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletespendingplanaccount"></a>
+# **DeleteSpendingPlanAccount**
+> void DeleteSpendingPlanAccount (string userGuid, string spendingPlanGuid, string spendingPlanAccountGuid)
+
+Delete spending plan account
+
+Use this endpoint to delete a `spending_plan_account`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class DeleteSpendingPlanAccountExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique ID for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var spendingPlanAccountGuid = ACT-e9f80fee-84da-7s7r-9a5e-0346g4279b4c;  // string | The unique ID for the specified account.
+
+            try
+            {
+                // Delete spending plan account
+                apiInstance.DeleteSpendingPlanAccount(userGuid, spendingPlanGuid, spendingPlanAccountGuid);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanAccount: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique ID for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **spendingPlanAccountGuid** | **string**| The unique ID for the specified account. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No Content |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletespendingplaniterationitem"></a>
+# **DeleteSpendingPlanIterationItem**
+> void DeleteSpendingPlanIterationItem (string userGuid, string spendingPlanGuid, string iterationItemGuid)
+
+Delete spending plan iteration item
+
+Use this endpoint to delete a spending plan `iteration_item`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class DeleteSpendingPlanIterationItemExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique ID for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var iterationItemGuid = SII-a4dc1549-da28-1245-9c9c-53eee4cdfbe3;  // string | The unique ID for the `iteration_item`.
+
+            try
+            {
+                // Delete spending plan iteration item
+                apiInstance.DeleteSpendingPlanIterationItem(userGuid, spendingPlanGuid, iterationItemGuid);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanIterationItem: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique ID for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **iterationItemGuid** | **string**| The unique ID for the &#x60;iteration_item&#x60;. | 
 
 ### Return type
 
@@ -4108,6 +4508,328 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="listspendingplanaccounts"></a>
+# **ListSpendingPlanAccounts**
+> SpendingPlanAccountsResponse ListSpendingPlanAccounts (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
+
+List spending plan accounts
+
+Use this endpoint to list all the spending plan accounts associated with the spending plan.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListSpendingPlanAccountsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // List spending plan accounts
+                SpendingPlanAccountsResponse result = apiInstance.ListSpendingPlanAccounts(userGuid, spendingPlanGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanAccounts: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**SpendingPlanAccountsResponse**](SpendingPlanAccountsResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="listspendingplaniterationitems"></a>
+# **ListSpendingPlanIterationItems**
+> SpendingPlanIterationItemsResponseBody ListSpendingPlanIterationItems (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
+
+List spending plan iteration items
+
+Use this endpoint to list all the spending plan `iteration_items` associated with the `iteration`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListSpendingPlanIterationItemsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // List spending plan iteration items
+                SpendingPlanIterationItemsResponseBody result = apiInstance.ListSpendingPlanIterationItems(userGuid, spendingPlanGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanIterationItems: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**SpendingPlanIterationItemsResponseBody**](SpendingPlanIterationItemsResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="listspendingplaniterations"></a>
+# **ListSpendingPlanIterations**
+> SpendingPlanIterationsResponse ListSpendingPlanIterations (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
+
+List spending plan iterations
+
+Use this endpoint to list all the spending plan `iterations` associated with the `spending_plan`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListSpendingPlanIterationsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // List spending plan iterations
+                SpendingPlanIterationsResponse result = apiInstance.ListSpendingPlanIterations(userGuid, spendingPlanGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanIterations: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**SpendingPlanIterationsResponse**](SpendingPlanIterationsResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="listspendingplans"></a>
+# **ListSpendingPlans**
+> SpendingPlansResponseBody ListSpendingPlans (string userGuid, int? page = null, int? recordsPerPage = null)
+
+List spending plans
+
+Use this endpoint to list all the spending plans associated with the user.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListSpendingPlansExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // List spending plans
+                SpendingPlansResponseBody result = apiInstance.ListSpendingPlans(userGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlans: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**SpendingPlansResponseBody**](SpendingPlansResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="liststatementsbymember"></a>
 # **ListStatementsByMember**
 > StatementsResponseBody ListStatementsByMember (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
@@ -6012,6 +6734,336 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="readspendingplanaccount"></a>
+# **ReadSpendingPlanAccount**
+> SpendingPlanAccountResponse ReadSpendingPlanAccount (string userGuid, string spendingPlanGuid, string spendingPlanAccountGuid, int? page = null, int? recordsPerPage = null)
+
+Read spending plan account
+
+Use this endpoint to read the attributes of a specific spending plan account according to its unique GUID.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadSpendingPlanAccountExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var spendingPlanAccountGuid = ACT-e9f80fee-84da-7s7r-9a5e-0346g4279b4c;  // string | The unique ID for the specified account.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // Read spending plan account
+                SpendingPlanAccountResponse result = apiInstance.ReadSpendingPlanAccount(userGuid, spendingPlanGuid, spendingPlanAccountGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanAccount: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **spendingPlanAccountGuid** | **string**| The unique ID for the specified account. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**SpendingPlanAccountResponse**](SpendingPlanAccountResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="readspendingplaniteration"></a>
+# **ReadSpendingPlanIteration**
+> SpendingPlanIterationResponse ReadSpendingPlanIteration (string userGuid, string spendingPlanGuid, int iterationNumber, int? page = null, int? recordsPerPage = null)
+
+Read a spending plan iteration
+
+Use this endpoint to read the attributes of a specific spending plan `iteration` according to its `iteration_number`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadSpendingPlanIterationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var iterationNumber = 1;  // int | The current iteration number for the spending plan `iteration``.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // Read a spending plan iteration
+                SpendingPlanIterationResponse result = apiInstance.ReadSpendingPlanIteration(userGuid, spendingPlanGuid, iterationNumber, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanIteration: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **iterationNumber** | **int**| The current iteration number for the spending plan &#x60;iteration&#x60;&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**SpendingPlanIterationResponse**](SpendingPlanIterationResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="readspendingplaniterationitem"></a>
+# **ReadSpendingPlanIterationItem**
+> SpendingPlanIterationItemResponse ReadSpendingPlanIterationItem (string userGuid, string spendingPlanGuid, string iterationItemGuid, int? page = null, int? recordsPerPage = null)
+
+Read a spending plan iteration item
+
+Use this endpoint to read the attributes of a specific spending plan `iteration_item` according to its unique GUID.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadSpendingPlanIterationItemExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var iterationItemGuid = SII-a4dc1549-da28-1245-9c9c-53eee4cdfbe3;  // string | The unique ID for the `iteration_item`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // Read a spending plan iteration item
+                SpendingPlanIterationItemResponse result = apiInstance.ReadSpendingPlanIterationItem(userGuid, spendingPlanGuid, iterationItemGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanIterationItem: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **iterationItemGuid** | **string**| The unique ID for the &#x60;iteration_item&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**SpendingPlanIterationItemResponse**](SpendingPlanIterationItemResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="readspendingplanuser"></a>
+# **ReadSpendingPlanUser**
+> SpendingPlanResponse ReadSpendingPlanUser (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
+
+Read a spending plan for a user
+
+Use this endpoint to read the attributes of a specific spending plan according to its unique GUID.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadSpendingPlanUserExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+
+            try
+            {
+                // Read a spending plan for a user
+                SpendingPlanResponse result = apiInstance.ReadSpendingPlanUser(userGuid, spendingPlanGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanUser: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+
+### Return type
+
+[**SpendingPlanResponse**](SpendingPlanResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="readstatementbymember"></a>
 # **ReadStatementByMember**
 > StatementResponseBody ReadStatementByMember (string memberGuid, string statementGuid, string userGuid)
@@ -7414,6 +8466,87 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**MemberResponseBody**](MemberResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="updatespendingplaniterationitem"></a>
+# **UpdateSpendingPlanIterationItem**
+> SpendingPlanIterationItemResponse UpdateSpendingPlanIterationItem (string userGuid, string spendingPlanGuid, string iterationItemGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody)
+
+Update a spending plan iteration item
+
+Use this endpoint to update an existing `spending_plan_iteration_item`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class UpdateSpendingPlanIterationItemExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var iterationItemGuid = SII-a4dc1549-da28-1245-9c9c-53eee4cdfbe3;  // string | The unique ID for the `iteration_item`.
+            var spendingPlanIterationItemCreateRequestBody = new SpendingPlanIterationItemCreateRequestBody(); // SpendingPlanIterationItemCreateRequestBody | Iteration item object to be updated with required parameter (iteration_item_guid)
+
+            try
+            {
+                // Update a spending plan iteration item
+                SpendingPlanIterationItemResponse result = apiInstance.UpdateSpendingPlanIterationItem(userGuid, spendingPlanGuid, iterationItemGuid, spendingPlanIterationItemCreateRequestBody);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.UpdateSpendingPlanIterationItem: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+ **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+ **iterationItemGuid** | **string**| The unique ID for the &#x60;iteration_item&#x60;. | 
+ **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md)| Iteration item object to be updated with required parameter (iteration_item_guid) | 
+
+### Return type
+
+[**SpendingPlanIterationItemResponse**](SpendingPlanIterationItemResponse.md)
 
 ### Authorization
 

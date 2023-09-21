@@ -162,6 +162,32 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test CreateSpendingPlan
+        /// </summary>
+        [Fact]
+        public void CreateSpendingPlanTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //var response = instance.CreateSpendingPlan(userGuid);
+            //Assert.IsType<SpendingPlanResponse>(response);
+        }
+
+        /// <summary>
+        /// Test CreateSpendingPlanIterationItem
+        /// </summary>
+        [Fact]
+        public void CreateSpendingPlanIterationItemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string spendingPlanGuid = null;
+            //string userGuid = null;
+            //SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody = null;
+            //var response = instance.CreateSpendingPlanIterationItem(spendingPlanGuid, userGuid, spendingPlanIterationItemCreateRequestBody);
+            //Assert.IsType<SpendingPlanIterationItemResponse>(response);
+        }
+
+        /// <summary>
         /// Test CreateTag
         /// </summary>
         [Fact]
@@ -285,6 +311,44 @@ namespace MX.Platform.CSharp.Test.Api
             //string memberGuid = null;
             //string userGuid = null;
             //instance.DeleteMember(memberGuid, userGuid);
+        }
+
+        /// <summary>
+        /// Test DeleteSpendingPlan
+        /// </summary>
+        [Fact]
+        public void DeleteSpendingPlanTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //instance.DeleteSpendingPlan(userGuid, spendingPlanGuid);
+        }
+
+        /// <summary>
+        /// Test DeleteSpendingPlanAccount
+        /// </summary>
+        [Fact]
+        public void DeleteSpendingPlanAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //string spendingPlanAccountGuid = null;
+            //instance.DeleteSpendingPlanAccount(userGuid, spendingPlanGuid, spendingPlanAccountGuid);
+        }
+
+        /// <summary>
+        /// Test DeleteSpendingPlanIterationItem
+        /// </summary>
+        [Fact]
+        public void DeleteSpendingPlanIterationItemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //string iterationItemGuid = null;
+            //instance.DeleteSpendingPlanIterationItem(userGuid, spendingPlanGuid, iterationItemGuid);
         }
 
         /// <summary>
@@ -751,6 +815,65 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test ListSpendingPlanAccounts
+        /// </summary>
+        [Fact]
+        public void ListSpendingPlanAccountsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListSpendingPlanAccounts(userGuid, spendingPlanGuid, page, recordsPerPage);
+            //Assert.IsType<SpendingPlanAccountsResponse>(response);
+        }
+
+        /// <summary>
+        /// Test ListSpendingPlanIterationItems
+        /// </summary>
+        [Fact]
+        public void ListSpendingPlanIterationItemsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListSpendingPlanIterationItems(userGuid, spendingPlanGuid, page, recordsPerPage);
+            //Assert.IsType<SpendingPlanIterationItemsResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test ListSpendingPlanIterations
+        /// </summary>
+        [Fact]
+        public void ListSpendingPlanIterationsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListSpendingPlanIterations(userGuid, spendingPlanGuid, page, recordsPerPage);
+            //Assert.IsType<SpendingPlanIterationsResponse>(response);
+        }
+
+        /// <summary>
+        /// Test ListSpendingPlans
+        /// </summary>
+        [Fact]
+        public void ListSpendingPlansTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListSpendingPlans(userGuid, page, recordsPerPage);
+            //Assert.IsType<SpendingPlansResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test ListStatementsByMember
         /// </summary>
         [Fact]
@@ -1091,6 +1214,69 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test ReadSpendingPlanAccount
+        /// </summary>
+        [Fact]
+        public void ReadSpendingPlanAccountTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //string spendingPlanAccountGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ReadSpendingPlanAccount(userGuid, spendingPlanGuid, spendingPlanAccountGuid, page, recordsPerPage);
+            //Assert.IsType<SpendingPlanAccountResponse>(response);
+        }
+
+        /// <summary>
+        /// Test ReadSpendingPlanIteration
+        /// </summary>
+        [Fact]
+        public void ReadSpendingPlanIterationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //int iterationNumber = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ReadSpendingPlanIteration(userGuid, spendingPlanGuid, iterationNumber, page, recordsPerPage);
+            //Assert.IsType<SpendingPlanIterationResponse>(response);
+        }
+
+        /// <summary>
+        /// Test ReadSpendingPlanIterationItem
+        /// </summary>
+        [Fact]
+        public void ReadSpendingPlanIterationItemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //string iterationItemGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ReadSpendingPlanIterationItem(userGuid, spendingPlanGuid, iterationItemGuid, page, recordsPerPage);
+            //Assert.IsType<SpendingPlanIterationItemResponse>(response);
+        }
+
+        /// <summary>
+        /// Test ReadSpendingPlanUser
+        /// </summary>
+        [Fact]
+        public void ReadSpendingPlanUserTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ReadSpendingPlanUser(userGuid, spendingPlanGuid, page, recordsPerPage);
+            //Assert.IsType<SpendingPlanResponse>(response);
+        }
+
+        /// <summary>
         /// Test ReadStatementByMember
         /// </summary>
         [Fact]
@@ -1339,6 +1525,21 @@ namespace MX.Platform.CSharp.Test.Api
             //MemberUpdateRequestBody memberUpdateRequestBody = null;
             //var response = instance.UpdateMember(memberGuid, userGuid, memberUpdateRequestBody);
             //Assert.IsType<MemberResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test UpdateSpendingPlanIterationItem
+        /// </summary>
+        [Fact]
+        public void UpdateSpendingPlanIterationItemTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string spendingPlanGuid = null;
+            //string iterationItemGuid = null;
+            //SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody = null;
+            //var response = instance.UpdateSpendingPlanIterationItem(userGuid, spendingPlanGuid, iterationItemGuid, spendingPlanIterationItemCreateRequestBody);
+            //Assert.IsType<SpendingPlanIterationItemResponse>(response);
         }
 
         /// <summary>
