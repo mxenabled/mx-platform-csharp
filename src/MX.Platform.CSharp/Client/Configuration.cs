@@ -33,7 +33,7 @@ namespace MX.Platform.CSharp.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.17.0";
+        public const string Version = "0.17.1";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -117,7 +117,7 @@ namespace MX.Platform.CSharp.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/0.17.0/csharp");
+            UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/0.17.1/csharp");
             BasePath = "https://api.mx.com";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -189,7 +189,7 @@ namespace MX.Platform.CSharp.Client
         /// <summary>
         /// Gets or sets the base path for API access.
         /// </summary>
-        public virtual string BasePath
+        public virtual string BasePath 
         {
             get { return _basePath; }
             set { _basePath = value; }
@@ -527,7 +527,7 @@ namespace MX.Platform.CSharp.Client
 
             return url;
         }
-
+        
         /// <summary>
         /// Gets and Sets the RemoteCertificateValidationCallback
         /// </summary>
@@ -546,7 +546,7 @@ namespace MX.Platform.CSharp.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 0.1.0\n";
-            report += "    SDK Package Version: 0.17.0\n";
+            report += "    SDK Package Version: 0.17.1\n";
 
             return report;
         }
