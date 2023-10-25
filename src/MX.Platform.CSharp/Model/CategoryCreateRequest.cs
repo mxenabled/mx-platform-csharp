@@ -45,7 +45,8 @@ namespace MX.Platform.CSharp.Model
         public CategoryCreateRequest(string metadata = default(string), string name = default(string), string parentGuid = default(string))
         {
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for CategoryCreateRequest and cannot be null");
             }
             this.Name = name;
@@ -56,18 +57,21 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>some metadata</example>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>Online Shopping</example>
+        [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets ParentGuid
         /// </summary>
+        /// <example>CAT-aad51b46-d6f7-3da5-fd6e-492328b3023f</example>
         [DataMember(Name = "parent_guid", EmitDefaultValue = false)]
         public string ParentGuid { get; set; }
 
@@ -164,7 +168,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

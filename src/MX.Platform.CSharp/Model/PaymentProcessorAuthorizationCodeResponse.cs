@@ -43,6 +43,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AuthorizationCode
         /// </summary>
+        /// <example>9nN-9D8_4Z3WYazx7-zXfmqsD3jwgL_2W927Sb3otI</example>
         [DataMember(Name = "authorization_code", EmitDefaultValue = true)]
         public string AuthorizationCode { get; set; }
 
@@ -119,7 +120,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

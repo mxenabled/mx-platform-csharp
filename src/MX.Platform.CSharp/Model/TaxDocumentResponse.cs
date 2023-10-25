@@ -61,60 +61,70 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets ContentHash
         /// </summary>
+        /// <example>a16c580c4fcdfa8088edaa7b4d35b290</example>
         [DataMember(Name = "content_hash", EmitDefaultValue = true)]
         public string ContentHash { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2022-10-18T19:23:16Z</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets DocumentType
         /// </summary>
+        /// <example>TAX1099_C</example>
         [DataMember(Name = "document_type", EmitDefaultValue = true)]
         public string DocumentType { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>TAX-ee8776ea-468b-4b02-b95d-743adf6ba50e</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets IssuedOn
         /// </summary>
+        /// <example>2022-03-31</example>
         [DataMember(Name = "issued_on", EmitDefaultValue = true)]
         public string IssuedOn { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets TaxYear
         /// </summary>
+        /// <example>2023</example>
         [DataMember(Name = "tax_year", EmitDefaultValue = true)]
         public string TaxYear { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2022-10-18T19:23:16Z</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Uri
         /// </summary>
+        /// <example>/users/USR-11141024-90b3-1bce-cac9-c06ced52ab4c/members/MBR-7c6f361b-e582-15b6-60c0-358f12466b4b/tax_documents/TAX-ee8776ea-468b-4b02-b95d-743adf6ba50e.pdf</example>
         [DataMember(Name = "uri", EmitDefaultValue = true)]
         public string Uri { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-11141024-90b3-1bce-cac9-c06ced52ab4c</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -281,7 +291,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

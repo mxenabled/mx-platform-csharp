@@ -65,54 +65,63 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets ActualAmount
         /// </summary>
+        /// <example>345.0</example>
         [DataMember(Name = "actual_amount", EmitDefaultValue = true)]
         public decimal? ActualAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets CategoryGuid
         /// </summary>
+        /// <example>CAT-40faf068-abb4-405c-8f6a-e883ed541fff</example>
         [DataMember(Name = "category_guid", EmitDefaultValue = true)]
         public string CategoryGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2016-10-13T18:08:00+00:00</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets ItemType
         /// </summary>
+        /// <example>0</example>
         [DataMember(Name = "item_type", EmitDefaultValue = true)]
         public string ItemType { get; set; }
 
         /// <summary>
         /// Gets or Sets PlannedAmount
         /// </summary>
+        /// <example>345.0</example>
         [DataMember(Name = "planned_amount", EmitDefaultValue = true)]
         public decimal? PlannedAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets ScheduledPaymentGuid
         /// </summary>
+        /// <example>SCP-54bed778-6600-4262-908c-8822f141cc30</example>
         [DataMember(Name = "scheduled_payment_guid", EmitDefaultValue = true)]
         public string ScheduledPaymentGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets SpendingPlanIterationGuid
         /// </summary>
+        /// <example>SPI-848e6648-3fa3-4632-ac8f-e65f03167102</example>
         [DataMember(Name = "spending_plan_iteration_guid", EmitDefaultValue = true)]
         public string SpendingPlanIterationGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets TopLevelCategoryGuid
         /// </summary>
+        /// <example>CAT-50af068-abb4-405c-8f6a-e883ed541f4f</example>
         [DataMember(Name = "top_level_category_guid", EmitDefaultValue = true)]
         public string TopLevelCategoryGuid { get; set; }
 
@@ -125,12 +134,14 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2016-10-13T18:09:00+00:00</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -318,7 +329,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

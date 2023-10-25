@@ -69,84 +69,98 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
+        /// <example>chase</example>
         [DataMember(Name = "code", EmitDefaultValue = true)]
         public string Code { get; set; }
 
         /// <summary>
         /// Gets or Sets ForgotPasswordUrl
         /// </summary>
+        /// <example>https://example.url.chase.com/forgot-password</example>
         [DataMember(Name = "forgot_password_url", EmitDefaultValue = true)]
         public string ForgotPasswordUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets ForgotUsernameUrl
         /// </summary>
+        /// <example>https://example.url.chase.com/forgot-username</example>
         [DataMember(Name = "forgot_username_url", EmitDefaultValue = true)]
         public string ForgotUsernameUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets InstructionalText
         /// </summary>
+        /// <example>Some instructional text &lt;a href&#x3D;&quot;https://example.url.chase.com/instructions&quot; id&#x3D;&quot;instructional_text&quot;&gt;for end users&lt;/a&gt;.</example>
         [DataMember(Name = "instructional_text", EmitDefaultValue = true)]
         public string InstructionalText { get; set; }
 
         /// <summary>
         /// Gets or Sets MediumLogoUrl
         /// </summary>
+        /// <example>https://content.moneydesktop.com/storage/MD_Assets/Ipad%20Logos/100x100/default_100x100.png</example>
         [DataMember(Name = "medium_logo_url", EmitDefaultValue = true)]
         public string MediumLogoUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
+        /// <example>Chase Bank</example>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets SmallLogoUrl
         /// </summary>
+        /// <example>https://content.moneydesktop.com/storage/MD_Assets/Ipad%20Logos/50x50/default_50x50.png</example>
         [DataMember(Name = "small_logo_url", EmitDefaultValue = true)]
         public string SmallLogoUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets SupportsAccountIdentification
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "supports_account_identification", EmitDefaultValue = true)]
         public bool? SupportsAccountIdentification { get; set; }
 
         /// <summary>
         /// Gets or Sets SupportsAccountStatement
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "supports_account_statement", EmitDefaultValue = true)]
         public bool? SupportsAccountStatement { get; set; }
 
         /// <summary>
         /// Gets or Sets SupportsAccountVerification
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "supports_account_verification", EmitDefaultValue = true)]
         public bool? SupportsAccountVerification { get; set; }
 
         /// <summary>
         /// Gets or Sets SupportsOauth
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "supports_oauth", EmitDefaultValue = true)]
         public bool? SupportsOauth { get; set; }
 
         /// <summary>
         /// Gets or Sets SupportsTransactionHistory
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "supports_transaction_history", EmitDefaultValue = true)]
         public bool? SupportsTransactionHistory { get; set; }
 
         /// <summary>
         /// Gets or Sets TroubleSigningInUrl
         /// </summary>
+        /// <example>https://example.url.chase.com/login-trouble</example>
         [DataMember(Name = "trouble_signing_in_url", EmitDefaultValue = true)]
         public string TroubleSigningInUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
+        /// <example>https://www.chase.com</example>
         [DataMember(Name = "url", EmitDefaultValue = true)]
         public string Url { get; set; }
 
@@ -353,7 +367,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

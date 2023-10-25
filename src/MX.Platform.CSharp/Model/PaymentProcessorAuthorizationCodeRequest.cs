@@ -47,18 +47,21 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AccountGuid
         /// </summary>
+        /// <example>ACT-4d4c0068-33bc-4d06-bbd6-cd270fd0135c</example>
         [DataMember(Name = "account_guid", EmitDefaultValue = true)]
         public string AccountGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
+        /// <example>MBR-46637bc5-942d-4229-9370-ddd858bf805e</example>
         [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-f12b1f5a-7cbe-467c-aa30-0a10d0b2f549</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -155,7 +158,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

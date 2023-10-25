@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<EnhanceTransactionsRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Amount'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Amount'
         }
+
         /// <summary>
         /// Test the property 'Description'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Description'
         }
+
         /// <summary>
         /// Test the property 'ExtendedTransactionType'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ExtendedTransactionType'
         }
+
         /// <summary>
         /// Test the property 'Id'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Id'
         }
+
         /// <summary>
         /// Test the property 'Memo'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Memo'
         }
+
         /// <summary>
         /// Test the property 'MerchantCategoryCode'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MerchantCategoryCode'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -112,7 +116,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
-
     }
-
 }

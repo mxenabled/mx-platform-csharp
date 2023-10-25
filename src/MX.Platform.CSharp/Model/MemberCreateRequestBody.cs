@@ -51,12 +51,14 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets ClientRedirectUrl
         /// </summary>
+        /// <example>https://mx.com</example>
         [DataMember(Name = "client_redirect_url", EmitDefaultValue = false)]
         public string ClientRedirectUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets EnableApp2app
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "enable_app2app", EmitDefaultValue = true)]
         public bool EnableApp2app { get; set; }
 
@@ -69,12 +71,14 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets ReferralSource
         /// </summary>
+        /// <example>APP</example>
         [DataMember(Name = "referral_source", EmitDefaultValue = false)]
         public string ReferralSource { get; set; }
 
         /// <summary>
         /// Gets or Sets UiMessageWebviewUrlScheme
         /// </summary>
+        /// <example>mx</example>
         [DataMember(Name = "ui_message_webview_url_scheme", EmitDefaultValue = false)]
         public string UiMessageWebviewUrlScheme { get; set; }
 
@@ -187,7 +191,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

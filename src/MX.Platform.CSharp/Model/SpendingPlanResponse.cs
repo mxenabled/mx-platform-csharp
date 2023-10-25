@@ -51,30 +51,35 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2016-10-13T18:08:00+00:00</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrentIterationNumber
         /// </summary>
+        /// <example>1</example>
         [DataMember(Name = "current_iteration_number", EmitDefaultValue = true)]
         public int? CurrentIterationNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2016-10-13T18:09:00+00:00</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -191,7 +196,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

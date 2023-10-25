@@ -58,7 +58,8 @@ namespace MX.Platform.CSharp.Model
         public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableBackgroundAgg = default(bool), bool disableInstitutionSearch = default(bool), bool includeIdentity = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string mode = default(string), string oauthReferralSource = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
         {
             // to ensure "widgetType" is required (not null)
-            if (widgetType == null) {
+            if (widgetType == null)
+            {
                 throw new ArgumentNullException("widgetType is a required property for WidgetRequest and cannot be null");
             }
             this.WidgetType = widgetType;
@@ -82,97 +83,113 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets ClientRedirectUrl
         /// </summary>
+        /// <example>https://mx.com</example>
         [DataMember(Name = "client_redirect_url", EmitDefaultValue = false)]
         public string ClientRedirectUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets ColorScheme
         /// </summary>
+        /// <example>light</example>
         [DataMember(Name = "color_scheme", EmitDefaultValue = false)]
         public string ColorScheme { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrentInstitutionCode
         /// </summary>
+        /// <example>chase</example>
         [DataMember(Name = "current_institution_code", EmitDefaultValue = false)]
         public string CurrentInstitutionCode { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrentInstitutionGuid
         /// </summary>
+        /// <example>INS-f1a3285d-e855-b61f-6aa7-8ae575c0e0e9</example>
         [DataMember(Name = "current_institution_guid", EmitDefaultValue = false)]
         public string CurrentInstitutionGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrentMemberGuid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "current_member_guid", EmitDefaultValue = false)]
         public string CurrentMemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets DisableBackgroundAgg
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "disable_background_agg", EmitDefaultValue = true)]
         public bool DisableBackgroundAgg { get; set; }
 
         /// <summary>
         /// Gets or Sets DisableInstitutionSearch
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "disable_institution_search", EmitDefaultValue = true)]
         public bool DisableInstitutionSearch { get; set; }
 
         /// <summary>
         /// Gets or Sets IncludeIdentity
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "include_identity", EmitDefaultValue = true)]
         public bool IncludeIdentity { get; set; }
 
         /// <summary>
         /// Gets or Sets IncludeTransactions
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "include_transactions", EmitDefaultValue = true)]
         public bool IncludeTransactions { get; set; }
 
         /// <summary>
         /// Gets or Sets IsMobileWebview
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_mobile_webview", EmitDefaultValue = true)]
         public bool IsMobileWebview { get; set; }
 
         /// <summary>
         /// Gets or Sets Mode
         /// </summary>
+        /// <example>aggregation</example>
         [DataMember(Name = "mode", EmitDefaultValue = false)]
         public string Mode { get; set; }
 
         /// <summary>
         /// Gets or Sets OauthReferralSource
         /// </summary>
+        /// <example>BROWSER</example>
         [DataMember(Name = "oauth_referral_source", EmitDefaultValue = false)]
         public string OauthReferralSource { get; set; }
 
         /// <summary>
         /// Gets or Sets UiMessageVersion
         /// </summary>
+        /// <example>4</example>
         [DataMember(Name = "ui_message_version", EmitDefaultValue = false)]
         public int UiMessageVersion { get; set; }
 
         /// <summary>
         /// Gets or Sets UiMessageWebviewUrlScheme
         /// </summary>
+        /// <example>mx</example>
         [DataMember(Name = "ui_message_webview_url_scheme", EmitDefaultValue = false)]
         public string UiMessageWebviewUrlScheme { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdateCredentials
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "update_credentials", EmitDefaultValue = true)]
         public bool UpdateCredentials { get; set; }
 
         /// <summary>
         /// Gets or Sets WidgetType
         /// </summary>
-        [DataMember(Name = "widget_type", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>connect_widget</example>
+        [DataMember(Name = "widget_type", IsRequired = true, EmitDefaultValue = true)]
         public string WidgetType { get; set; }
 
         /// <summary>
@@ -370,7 +387,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

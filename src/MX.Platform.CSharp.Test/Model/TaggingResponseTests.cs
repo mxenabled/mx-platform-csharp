@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<TaggingResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Guid'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Guid'
         }
+
         /// <summary>
         /// Test the property 'MemberIsManagedByUser'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MemberIsManagedByUser'
         }
+
         /// <summary>
         /// Test the property 'TagGuid'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TagGuid'
         }
+
         /// <summary>
         /// Test the property 'TransactionGuid'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TransactionGuid'
         }
+
         /// <summary>
         /// Test the property 'UserGuid'
         /// </summary>
@@ -96,7 +98,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UserGuid'
         }
-
     }
-
 }

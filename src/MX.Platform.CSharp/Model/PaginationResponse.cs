@@ -49,24 +49,28 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CurrentPage
         /// </summary>
+        /// <example>1</example>
         [DataMember(Name = "current_page", EmitDefaultValue = false)]
         public int CurrentPage { get; set; }
 
         /// <summary>
         /// Gets or Sets PerPage
         /// </summary>
+        /// <example>25</example>
         [DataMember(Name = "per_page", EmitDefaultValue = false)]
         public int PerPage { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalEntries
         /// </summary>
+        /// <example>1</example>
         [DataMember(Name = "total_entries", EmitDefaultValue = false)]
         public int TotalEntries { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalPages
         /// </summary>
+        /// <example>1</example>
         [DataMember(Name = "total_pages", EmitDefaultValue = false)]
         public int TotalPages { get; set; }
 
@@ -157,7 +161,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

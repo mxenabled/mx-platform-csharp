@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<MemberStatusResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AggregatedAt'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AggregatedAt'
         }
+
         /// <summary>
         /// Test the property 'Challenges'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Challenges'
         }
+
         /// <summary>
         /// Test the property 'ConnectionStatus'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ConnectionStatus'
         }
+
         /// <summary>
         /// Test the property 'Guid'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Guid'
         }
+
         /// <summary>
         /// Test the property 'HasProcessedAccounts'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'HasProcessedAccounts'
         }
+
         /// <summary>
         /// Test the property 'HasProcessedTransactions'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'HasProcessedTransactions'
         }
+
         /// <summary>
         /// Test the property 'IsAuthenticated'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsAuthenticated'
         }
+
         /// <summary>
         /// Test the property 'IsBeingAggregated'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsBeingAggregated'
         }
+
         /// <summary>
         /// Test the property 'SuccessfullyAggregatedAt'
         /// </summary>
@@ -128,7 +134,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SuccessfullyAggregatedAt'
         }
-
     }
-
 }

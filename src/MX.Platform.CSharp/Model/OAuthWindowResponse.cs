@@ -45,12 +45,14 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>MBR-df96fd60-7122-4464-b3c2-ff11d8c74f6f</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets OauthWindowUri
         /// </summary>
+        /// <example>https://mxbank.mx.com/oauth/authorize?client_id&#x3D;b8OikQ4Ep3NuSUrQ13DdvFuwpNx-qqoAsJDVAQCyLkQ&amp;redirect_uri&#x3D;https%3A%2F%2Fint-app.moneydesktop.com%2Foauth%2Fredirect_from&amp;response_type&#x3D;code&amp;scope&#x3D;openid&amp;state&#x3D;d745bd4ee6f0f9c184757f574bcc2df2</example>
         [DataMember(Name = "oauth_window_uri", EmitDefaultValue = true)]
         public string OauthWindowUri { get; set; }
 
@@ -137,7 +139,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

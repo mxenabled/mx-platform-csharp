@@ -57,48 +57,56 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2016-10-13T18:08:00+00:00</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets EndOn
         /// </summary>
+        /// <example>2023-05-31</example>
         [DataMember(Name = "end_on", EmitDefaultValue = true)]
         public string EndOn { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>SPI-848e6648-3fa3-4632-ac8f-e65f03167102</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets IterationNumber
         /// </summary>
+        /// <example>1</example>
         [DataMember(Name = "iteration_number", EmitDefaultValue = true)]
         public int? IterationNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets SpendingPlanGuid
         /// </summary>
+        /// <example>SPL-dbfe201d-c341-4bff-93c0-62a918d0b600</example>
         [DataMember(Name = "spending_plan_guid", EmitDefaultValue = true)]
         public string SpendingPlanGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets StartOn
         /// </summary>
+        /// <example>2023-05-01</example>
         [DataMember(Name = "start_on", EmitDefaultValue = true)]
         public string StartOn { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2016-10-13T18:09:00+00:00</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-72086f59-6684-4adf-8f29-c4d32db43cd7</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -245,7 +253,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

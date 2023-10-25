@@ -59,54 +59,63 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AccountGuid
         /// </summary>
+        /// <example>ACT-06d7f45b-caae-0f6e-1384-01f52e75dcb1</example>
         [DataMember(Name = "account_guid", EmitDefaultValue = true)]
         public string AccountGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets AccountNumber
         /// </summary>
+        /// <example>10001</example>
         [DataMember(Name = "account_number", EmitDefaultValue = true)]
         public string AccountNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>ACN-8899832e-e5b4-42cd-aa25-bbf1dc889a8f</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets InstitutionNumber
         /// </summary>
+        /// <example>123</example>
         [DataMember(Name = "institution_number", EmitDefaultValue = true)]
         public string InstitutionNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets PassedValidation
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "passed_validation", EmitDefaultValue = true)]
         public bool? PassedValidation { get; set; }
 
         /// <summary>
         /// Gets or Sets RoutingNumber
         /// </summary>
+        /// <example>68899990000000</example>
         [DataMember(Name = "routing_number", EmitDefaultValue = true)]
         public string RoutingNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets TransitNumber
         /// </summary>
+        /// <example>12345</example>
         [DataMember(Name = "transit_number", EmitDefaultValue = true)]
         public string TransitNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -263,7 +272,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

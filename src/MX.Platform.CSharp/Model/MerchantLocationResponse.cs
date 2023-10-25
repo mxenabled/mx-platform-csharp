@@ -65,72 +65,84 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets City
         /// </summary>
+        /// <example>Greenwood Village</example>
         [DataMember(Name = "city", EmitDefaultValue = true)]
         public string City { get; set; }
 
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
+        /// <example>US</example>
         [DataMember(Name = "country", EmitDefaultValue = true)]
         public string Country { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2020-04-13 21:05:09.000000000 Z</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>MCL-00024e59-18b5-4d79-b879-2a7896726fea</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets Latitude
         /// </summary>
+        /// <example>39.5963005</example>
         [DataMember(Name = "latitude", EmitDefaultValue = true)]
         public decimal? Latitude { get; set; }
 
         /// <summary>
         /// Gets or Sets Longitude
         /// </summary>
+        /// <example>-104.89158799999998</example>
         [DataMember(Name = "longitude", EmitDefaultValue = true)]
         public decimal? Longitude { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantGuid
         /// </summary>
+        /// <example>MCH-09466f0a-fb58-9d1a-bae2-2af0afbea621</example>
         [DataMember(Name = "merchant_guid", EmitDefaultValue = true)]
         public string MerchantGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
+        /// <example>(303) 689-0728</example>
         [DataMember(Name = "phone_number", EmitDefaultValue = true)]
         public string PhoneNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets PostalCode
         /// </summary>
+        /// <example>801121436</example>
         [DataMember(Name = "postal_code", EmitDefaultValue = true)]
         public string PostalCode { get; set; }
 
         /// <summary>
         /// Gets or Sets State
         /// </summary>
+        /// <example>CO</example>
         [DataMember(Name = "state", EmitDefaultValue = true)]
         public string State { get; set; }
 
         /// <summary>
         /// Gets or Sets StreetAddress
         /// </summary>
+        /// <example>8547 E Arapahoe Rd, Ste 1</example>
         [DataMember(Name = "street_address", EmitDefaultValue = true)]
         public string StreetAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2020-04-13 21:05:09.000000000 Z</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
@@ -317,7 +329,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

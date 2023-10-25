@@ -51,30 +51,35 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>TGN-007f5486-17e1-45fc-8b87-8f03984430fe</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberIsManagedByUser
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "member_is_managed_by_user", EmitDefaultValue = true)]
         public bool? MemberIsManagedByUser { get; set; }
 
         /// <summary>
         /// Gets or Sets TagGuid
         /// </summary>
+        /// <example>TAG-40faf068-abb4-405c-8f6a-e883ed541fff</example>
         [DataMember(Name = "tag_guid", EmitDefaultValue = true)]
         public string TagGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets TransactionGuid
         /// </summary>
+        /// <example>TRN-810828b0-5210-4878-9bd3-f4ce514f90c4</example>
         [DataMember(Name = "transaction_guid", EmitDefaultValue = true)]
         public string TransactionGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-11141024-90b3-1bce-cac9-c06ced52ab4c</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -191,7 +196,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

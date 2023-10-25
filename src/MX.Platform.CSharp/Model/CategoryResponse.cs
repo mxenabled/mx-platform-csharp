@@ -57,48 +57,56 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2015-04-13T18:01:23.000Z</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>CAT-7829f71c-2e8c-afa5-2f55-fa3634b89874</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDefault
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "is_default", EmitDefaultValue = true)]
         public bool? IsDefault { get; set; }
 
         /// <summary>
         /// Gets or Sets IsIncome
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_income", EmitDefaultValue = true)]
         public bool? IsIncome { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>some metadata</example>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
+        /// <example>Auto Insurance</example>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets ParentGuid
         /// </summary>
+        /// <example>CAT-7829f71c-2e8c-afa5-2f55-fa3634b89874</example>
         [DataMember(Name = "parent_guid", EmitDefaultValue = true)]
         public string ParentGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2015-05-13T18:01:23.000Z</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
@@ -245,7 +253,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

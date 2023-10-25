@@ -51,6 +51,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets BackgroundAggregationIsDisabled
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "background_aggregation_is_disabled", EmitDefaultValue = true)]
         public bool BackgroundAggregationIsDisabled { get; set; }
 
@@ -63,18 +64,21 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>unique_id</example>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>\&quot;credentials_last_refreshed_at\&quot;: \&quot;2015-10-15\&quot;</example>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets SkipAggregation
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "skip_aggregation", EmitDefaultValue = true)]
         public bool SkipAggregation { get; set; }
 
@@ -184,7 +188,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

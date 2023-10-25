@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<AccountCreateRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccountSubtype'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AccountSubtype'
         }
+
         /// <summary>
         /// Test the property 'AccountType'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AccountType'
         }
+
         /// <summary>
         /// Test the property 'Apr'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Apr'
         }
+
         /// <summary>
         /// Test the property 'Apy'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Apy'
         }
+
         /// <summary>
         /// Test the property 'AvailableBalance'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AvailableBalance'
         }
+
         /// <summary>
         /// Test the property 'Balance'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Balance'
         }
+
         /// <summary>
         /// Test the property 'CashSurrenderValue'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CashSurrenderValue'
         }
+
         /// <summary>
         /// Test the property 'CreditLimit'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CreditLimit'
         }
+
         /// <summary>
         /// Test the property 'CurrencyCode'
         /// </summary>
@@ -128,6 +134,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CurrencyCode'
         }
+
         /// <summary>
         /// Test the property 'DeathBenefit'
         /// </summary>
@@ -136,6 +143,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'DeathBenefit'
         }
+
         /// <summary>
         /// Test the property 'InterestRate'
         /// </summary>
@@ -144,6 +152,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'InterestRate'
         }
+
         /// <summary>
         /// Test the property 'IsBusiness'
         /// </summary>
@@ -152,6 +161,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsBusiness'
         }
+
         /// <summary>
         /// Test the property 'IsClosed'
         /// </summary>
@@ -160,6 +170,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsClosed'
         }
+
         /// <summary>
         /// Test the property 'IsHidden'
         /// </summary>
@@ -168,6 +179,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsHidden'
         }
+
         /// <summary>
         /// Test the property 'LoanAmount'
         /// </summary>
@@ -176,6 +188,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'LoanAmount'
         }
+
         /// <summary>
         /// Test the property 'Metadata'
         /// </summary>
@@ -184,6 +197,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Metadata'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -192,6 +206,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'Nickname'
         /// </summary>
@@ -200,6 +215,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Nickname'
         }
+
         /// <summary>
         /// Test the property 'OriginalBalance'
         /// </summary>
@@ -208,6 +224,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'OriginalBalance'
         }
+
         /// <summary>
         /// Test the property 'PropertyType'
         /// </summary>
@@ -216,6 +233,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'PropertyType'
         }
+
         /// <summary>
         /// Test the property 'SkipWebhook'
         /// </summary>
@@ -224,7 +242,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SkipWebhook'
         }
-
     }
-
 }

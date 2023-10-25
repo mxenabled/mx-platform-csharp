@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<InstitutionResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Code'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Code'
         }
+
         /// <summary>
         /// Test the property 'ForgotPasswordUrl'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ForgotPasswordUrl'
         }
+
         /// <summary>
         /// Test the property 'ForgotUsernameUrl'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ForgotUsernameUrl'
         }
+
         /// <summary>
         /// Test the property 'InstructionalText'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'InstructionalText'
         }
+
         /// <summary>
         /// Test the property 'MediumLogoUrl'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MediumLogoUrl'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'SmallLogoUrl'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SmallLogoUrl'
         }
+
         /// <summary>
         /// Test the property 'SupportsAccountIdentification'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SupportsAccountIdentification'
         }
+
         /// <summary>
         /// Test the property 'SupportsAccountStatement'
         /// </summary>
@@ -128,6 +134,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SupportsAccountStatement'
         }
+
         /// <summary>
         /// Test the property 'SupportsAccountVerification'
         /// </summary>
@@ -136,6 +143,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SupportsAccountVerification'
         }
+
         /// <summary>
         /// Test the property 'SupportsOauth'
         /// </summary>
@@ -144,6 +152,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SupportsOauth'
         }
+
         /// <summary>
         /// Test the property 'SupportsTransactionHistory'
         /// </summary>
@@ -152,6 +161,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SupportsTransactionHistory'
         }
+
         /// <summary>
         /// Test the property 'TroubleSigningInUrl'
         /// </summary>
@@ -160,6 +170,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TroubleSigningInUrl'
         }
+
         /// <summary>
         /// Test the property 'Url'
         /// </summary>
@@ -168,7 +179,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Url'
         }
-
     }
-
 }

@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<SpendingPlanIterationItemCreateRequestBody>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CategoryGuid'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CategoryGuid'
         }
+
         /// <summary>
         /// Test the property 'ItemType'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ItemType'
         }
+
         /// <summary>
         /// Test the property 'PlannedAmount'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'PlannedAmount'
         }
+
         /// <summary>
         /// Test the property 'ScheduledPaymentGuid'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ScheduledPaymentGuid'
         }
+
         /// <summary>
         /// Test the property 'TopLevelCategoryGuid'
         /// </summary>
@@ -96,7 +98,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TopLevelCategoryGuid'
         }
-
     }
-
 }

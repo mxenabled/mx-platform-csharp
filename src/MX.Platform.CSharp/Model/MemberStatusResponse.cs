@@ -59,6 +59,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AggregatedAt
         /// </summary>
+        /// <example>2016-10-13T18:07:57.000Z</example>
         [DataMember(Name = "aggregated_at", EmitDefaultValue = true)]
         public string AggregatedAt { get; set; }
 
@@ -71,42 +72,49 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets ConnectionStatus
         /// </summary>
+        /// <example>CONNECTED</example>
         [DataMember(Name = "connection_status", EmitDefaultValue = true)]
         public string ConnectionStatus { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets HasProcessedAccounts
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "has_processed_accounts", EmitDefaultValue = true)]
         public bool? HasProcessedAccounts { get; set; }
 
         /// <summary>
         /// Gets or Sets HasProcessedTransactions
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "has_processed_transactions", EmitDefaultValue = true)]
         public bool? HasProcessedTransactions { get; set; }
 
         /// <summary>
         /// Gets or Sets IsAuthenticated
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_authenticated", EmitDefaultValue = true)]
         public bool? IsAuthenticated { get; set; }
 
         /// <summary>
         /// Gets or Sets IsBeingAggregated
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_being_aggregated", EmitDefaultValue = true)]
         public bool? IsBeingAggregated { get; set; }
 
         /// <summary>
         /// Gets or Sets SuccessfullyAggregatedAt
         /// </summary>
+        /// <example>2016-10-13T17:57:38.000Z</example>
         [DataMember(Name = "successfully_aggregated_at", EmitDefaultValue = true)]
         public string SuccessfullyAggregatedAt { get; set; }
 
@@ -264,7 +272,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

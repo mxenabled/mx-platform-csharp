@@ -79,114 +79,133 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AccountGuid
         /// </summary>
+        /// <example>ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1</example>
         [DataMember(Name = "account_guid", EmitDefaultValue = true)]
         public string AccountGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets CostBasis
         /// </summary>
+        /// <example>827.0</example>
         [DataMember(Name = "cost_basis", EmitDefaultValue = true)]
         public decimal? CostBasis { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2015-04-13T18:01:23.000Z</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrencyCode
         /// </summary>
+        /// <example>USD</example>
         [DataMember(Name = "currency_code", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Cusip
         /// </summary>
+        /// <example>18383M878</example>
         [DataMember(Name = "cusip", EmitDefaultValue = true)]
         public string Cusip { get; set; }
 
         /// <summary>
         /// Gets or Sets DailyChange
         /// </summary>
+        /// <example>2.5</example>
         [DataMember(Name = "daily_change", EmitDefaultValue = true)]
         public decimal? DailyChange { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
+        /// <example>Guggenheim Defensive Equity ETF</example>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>HOL-d65683e8-9eab-26bb-bcfd-ced159c9abe2</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets HoldingType
         /// </summary>
+        /// <example>MONEY_MARKET</example>
         [DataMember(Name = "holding_type", EmitDefaultValue = true)]
         public string HoldingType { get; set; }
 
         /// <summary>
         /// Gets or Sets HoldingTypeId
         /// </summary>
+        /// <example>1</example>
         [DataMember(Name = "holding_type_id", EmitDefaultValue = true)]
         public int? HoldingTypeId { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>ID-123</example>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets MarketValue
         /// </summary>
+        /// <example>989.5</example>
         [DataMember(Name = "market_value", EmitDefaultValue = true)]
         public decimal? MarketValue { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
+        /// <example>MBR-d65683e8-9eab-26bb-bcfd-ced159c9abe</example>
         [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>metadata</example>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets PurchasePrice
         /// </summary>
+        /// <example>26.3</example>
         [DataMember(Name = "purchase_price", EmitDefaultValue = true)]
         public decimal? PurchasePrice { get; set; }
 
         /// <summary>
         /// Gets or Sets Shares
         /// </summary>
+        /// <example>6.0</example>
         [DataMember(Name = "shares", EmitDefaultValue = true)]
         public decimal? Shares { get; set; }
 
         /// <summary>
         /// Gets or Sets Symbol
         /// </summary>
+        /// <example>DEF</example>
         [DataMember(Name = "symbol", EmitDefaultValue = true)]
         public string Symbol { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2015-04-13T18:01:23.000Z</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-743e5d7f-1116-28fa-5de1-d3ba02e41d8d</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -443,7 +462,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

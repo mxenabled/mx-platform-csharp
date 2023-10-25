@@ -1,6 +1,7 @@
 .gitignore
 MX.Platform.CSharp.sln
 README.md
+api/openapi.yaml
 appveyor.yml
 docs/AccountCreateRequest.md
 docs/AccountCreateRequestBody.md

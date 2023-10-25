@@ -49,12 +49,14 @@ namespace MX.Platform.CSharp.Model
         public EnhanceTransactionsRequest(decimal amount = default(decimal), string description = default(string), string extendedTransactionType = default(string), string id = default(string), string memo = default(string), int merchantCategoryCode = default(int), string type = default(string))
         {
             // to ensure "description" is required (not null)
-            if (description == null) {
+            if (description == null)
+            {
                 throw new ArgumentNullException("description is a required property for EnhanceTransactionsRequest and cannot be null");
             }
             this.Description = description;
             // to ensure "id" is required (not null)
-            if (id == null) {
+            if (id == null)
+            {
                 throw new ArgumentNullException("id is a required property for EnhanceTransactionsRequest and cannot be null");
             }
             this.Id = id;
@@ -68,42 +70,49 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
+        /// <example>21.33</example>
         [DataMember(Name = "amount", EmitDefaultValue = false)]
         public decimal Amount { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>ubr* pending.uber.com</example>
+        [DataMember(Name = "description", IsRequired = true, EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets ExtendedTransactionType
         /// </summary>
+        /// <example>partner_transaction_type</example>
         [DataMember(Name = "extended_transaction_type", EmitDefaultValue = false)]
         public string ExtendedTransactionType { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>ID-123</example>
+        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Memo
         /// </summary>
+        /// <example>Additional-information*on_transaction</example>
         [DataMember(Name = "memo", EmitDefaultValue = false)]
         public string Memo { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantCategoryCode
         /// </summary>
+        /// <example>4121</example>
         [DataMember(Name = "merchant_category_code", EmitDefaultValue = false)]
         public int MerchantCategoryCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
+        /// <example>DEBIT</example>
         [DataMember(Name = "type", EmitDefaultValue = false)]
         public string Type { get; set; }
 
@@ -232,7 +241,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

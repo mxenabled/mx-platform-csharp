@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<AccountNumberResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccountGuid'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AccountGuid'
         }
+
         /// <summary>
         /// Test the property 'AccountNumber'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AccountNumber'
         }
+
         /// <summary>
         /// Test the property 'Guid'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Guid'
         }
+
         /// <summary>
         /// Test the property 'InstitutionNumber'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'InstitutionNumber'
         }
+
         /// <summary>
         /// Test the property 'MemberGuid'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MemberGuid'
         }
+
         /// <summary>
         /// Test the property 'PassedValidation'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'PassedValidation'
         }
+
         /// <summary>
         /// Test the property 'RoutingNumber'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'RoutingNumber'
         }
+
         /// <summary>
         /// Test the property 'TransitNumber'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TransitNumber'
         }
+
         /// <summary>
         /// Test the property 'UserGuid'
         /// </summary>
@@ -128,7 +134,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UserGuid'
         }
-
     }
-
 }

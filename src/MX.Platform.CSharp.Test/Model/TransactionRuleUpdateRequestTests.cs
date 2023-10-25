@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<TransactionRuleUpdateRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CategoryGuid'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CategoryGuid'
         }
+
         /// <summary>
         /// Test the property 'Description'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Description'
         }
+
         /// <summary>
         /// Test the property 'MatchDescription'
         /// </summary>
@@ -80,7 +80,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MatchDescription'
         }
-
     }
-
 }

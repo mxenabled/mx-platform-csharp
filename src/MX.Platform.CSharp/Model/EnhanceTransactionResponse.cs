@@ -87,138 +87,161 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
+        /// <example>21.33</example>
         [DataMember(Name = "amount", EmitDefaultValue = true)]
         public decimal? Amount { get; set; }
 
         /// <summary>
         /// Gets or Sets CategorizedBy
         /// </summary>
+        /// <example>13</example>
         [DataMember(Name = "categorized_by", EmitDefaultValue = true)]
         public int? CategorizedBy { get; set; }
 
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
+        /// <example>Rental Car &amp; Taxi</example>
         [DataMember(Name = "category", EmitDefaultValue = true)]
         public string Category { get; set; }
 
         /// <summary>
         /// Gets or Sets CategoryGuid
         /// </summary>
+        /// <example>CAT-9588eaad-90a4-bb5c-66c8-1812503d0db8</example>
         [DataMember(Name = "category_guid", EmitDefaultValue = true)]
         public string CategoryGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets DescribedBy
         /// </summary>
+        /// <example>6</example>
         [DataMember(Name = "described_by", EmitDefaultValue = true)]
         public int? DescribedBy { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
+        /// <example>Uber</example>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets ExtendedTransactionType
         /// </summary>
+        /// <example>partner_transaction_type</example>
         [DataMember(Name = "extended_transaction_type", EmitDefaultValue = true)]
         public string ExtendedTransactionType { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>ID-123</example>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets IsBillPay
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_bill_pay", EmitDefaultValue = true)]
         public bool? IsBillPay { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDirectDeposit
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_direct_deposit", EmitDefaultValue = true)]
         public bool? IsDirectDeposit { get; set; }
 
         /// <summary>
         /// Gets or Sets IsExpense
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_expense", EmitDefaultValue = true)]
         public bool? IsExpense { get; set; }
 
         /// <summary>
         /// Gets or Sets IsFee
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_fee", EmitDefaultValue = true)]
         public bool? IsFee { get; set; }
 
         /// <summary>
         /// Gets or Sets IsIncome
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_income", EmitDefaultValue = true)]
         public bool? IsIncome { get; set; }
 
         /// <summary>
         /// Gets or Sets IsInternational
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_international", EmitDefaultValue = true)]
         public bool? IsInternational { get; set; }
 
         /// <summary>
         /// Gets or Sets IsOverdraftFee
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_overdraft_fee", EmitDefaultValue = true)]
         public bool? IsOverdraftFee { get; set; }
 
         /// <summary>
         /// Gets or Sets IsPayrollAdvance
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_payroll_advance", EmitDefaultValue = true)]
         public bool? IsPayrollAdvance { get; set; }
 
         /// <summary>
         /// Gets or Sets IsSubscription
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_subscription", EmitDefaultValue = true)]
         public bool? IsSubscription { get; set; }
 
         /// <summary>
         /// Gets or Sets Memo
         /// </summary>
+        /// <example>Additional-information*on_transaction</example>
         [DataMember(Name = "memo", EmitDefaultValue = true)]
         public string Memo { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantCategoryCode
         /// </summary>
+        /// <example>4121</example>
         [DataMember(Name = "merchant_category_code", EmitDefaultValue = true)]
         public int? MerchantCategoryCode { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantGuid
         /// </summary>
+        /// <example>MCH-14f25b63-ef47-a38e-b2b6-d02b280b6e4e</example>
         [DataMember(Name = "merchant_guid", EmitDefaultValue = true)]
         public string MerchantGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantLocationGuid
         /// </summary>
+        /// <example>MCL-00024e59-18b5-4d79-b879-2a7896726fea</example>
         [DataMember(Name = "merchant_location_guid", EmitDefaultValue = true)]
         public string MerchantLocationGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets OriginalDescription
         /// </summary>
+        /// <example>ubr* pending.uber.com</example>
         [DataMember(Name = "original_description", EmitDefaultValue = true)]
         public string OriginalDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
+        /// <example>DEBIT</example>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
@@ -515,7 +538,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

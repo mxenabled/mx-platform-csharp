@@ -71,90 +71,105 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AggregatedAt
         /// </summary>
+        /// <example>2016-10-13T18:07:57.000Z</example>
         [DataMember(Name = "aggregated_at", EmitDefaultValue = true)]
         public string AggregatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets BackgroundAggregationIsDisabled
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "background_aggregation_is_disabled", EmitDefaultValue = true)]
         public bool BackgroundAggregationIsDisabled { get; set; }
 
         /// <summary>
         /// Gets or Sets ConnectionStatus
         /// </summary>
+        /// <example>CONNECTED</example>
         [DataMember(Name = "connection_status", EmitDefaultValue = true)]
         public string ConnectionStatus { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>unique_id</example>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets InstitutionCode
         /// </summary>
+        /// <example>chase</example>
         [DataMember(Name = "institution_code", EmitDefaultValue = true)]
         public string InstitutionCode { get; set; }
 
         /// <summary>
         /// Gets or Sets IsBeingAggregated
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_being_aggregated", EmitDefaultValue = true)]
         public bool? IsBeingAggregated { get; set; }
 
         /// <summary>
         /// Gets or Sets IsManagedByUser
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_managed_by_user", EmitDefaultValue = true)]
         public bool? IsManagedByUser { get; set; }
 
         /// <summary>
         /// Gets or Sets IsOauth
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_oauth", EmitDefaultValue = true)]
         public bool? IsOauth { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>\&quot;credentials_last_refreshed_at\&quot;: \&quot;2015-10-15\&quot;</example>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
+        /// <example>Chase Bank</example>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets OauthWindowUri
         /// </summary>
+        /// <example>https://mxbank.mx.com/oauth/authorize?client_id&#x3D;b8OikQ4Ep3NuSUrQ13DdvFuwpNx-qqoAsJDVAQCyLkQ&amp;redirect_uri&#x3D;https%3A%2F%2Fint-app.moneydesktop.com%2Foauth%2Fredirect_from&amp;response_type&#x3D;code&amp;scope&#x3D;openid&amp;state&#x3D;d745bd4ee6f0f9c184757f574bcc2df2</example>
         [DataMember(Name = "oauth_window_uri", EmitDefaultValue = true)]
         public string OauthWindowUri { get; set; }
 
         /// <summary>
         /// Gets or Sets SuccessfullyAggregatedAt
         /// </summary>
+        /// <example>2016-10-13T17:57:38.000Z</example>
         [DataMember(Name = "successfully_aggregated_at", EmitDefaultValue = true)]
         public string SuccessfullyAggregatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
+        /// <example>user123</example>
         [DataMember(Name = "user_id", EmitDefaultValue = true)]
         public string UserId { get; set; }
 
@@ -367,7 +382,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

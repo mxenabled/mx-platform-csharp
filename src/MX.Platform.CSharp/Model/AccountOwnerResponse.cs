@@ -69,84 +69,98 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AccountGuid
         /// </summary>
+        /// <example>ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1</example>
         [DataMember(Name = "account_guid", EmitDefaultValue = true)]
         public string AccountGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
+        /// <example>123 This Way</example>
         [DataMember(Name = "address", EmitDefaultValue = true)]
         public string Address { get; set; }
 
         /// <summary>
         /// Gets or Sets City
         /// </summary>
+        /// <example>Middlesex</example>
         [DataMember(Name = "city", EmitDefaultValue = true)]
         public string City { get; set; }
 
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
+        /// <example>US</example>
         [DataMember(Name = "country", EmitDefaultValue = true)]
         public string Country { get; set; }
 
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
+        /// <example>donnie@darko.co</example>
         [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
+        /// <example>Donnie</example>
         [DataMember(Name = "first_name", EmitDefaultValue = true)]
         public string FirstName { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>ACO-63dc7714-6fc0-4aa2-a069-c06cdccd1af9</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
+        /// <example>Darko</example>
         [DataMember(Name = "last_name", EmitDefaultValue = true)]
         public string LastName { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets OwnerName
         /// </summary>
+        /// <example>Donnie Darko</example>
         [DataMember(Name = "owner_name", EmitDefaultValue = true)]
         public string OwnerName { get; set; }
 
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
+        /// <example>555-555-5555</example>
         [DataMember(Name = "phone", EmitDefaultValue = true)]
         public string Phone { get; set; }
 
         /// <summary>
         /// Gets or Sets PostalCode
         /// </summary>
+        /// <example>00000-0000</example>
         [DataMember(Name = "postal_code", EmitDefaultValue = true)]
         public string PostalCode { get; set; }
 
         /// <summary>
         /// Gets or Sets State
         /// </summary>
+        /// <example>VA</example>
         [DataMember(Name = "state", EmitDefaultValue = true)]
         public string State { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -353,7 +367,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

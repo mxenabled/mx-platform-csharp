@@ -49,24 +49,28 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
+        /// <example>email@provider.com</example>
         [DataMember(Name = "email", EmitDefaultValue = false)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>My-Unique-ID</example>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDisabled
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_disabled", EmitDefaultValue = true)]
         public bool IsDisabled { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>{\&quot;type\&quot;: \&quot;individual\&quot;, \&quot;status\&quot;: \&quot;preferred\&quot;}</example>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public string Metadata { get; set; }
 
@@ -169,7 +173,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

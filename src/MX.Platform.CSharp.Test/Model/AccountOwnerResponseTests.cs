@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<AccountOwnerResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccountGuid'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AccountGuid'
         }
+
         /// <summary>
         /// Test the property 'Address'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Address'
         }
+
         /// <summary>
         /// Test the property 'City'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'City'
         }
+
         /// <summary>
         /// Test the property 'Country'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Country'
         }
+
         /// <summary>
         /// Test the property 'Email'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Email'
         }
+
         /// <summary>
         /// Test the property 'FirstName'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'FirstName'
         }
+
         /// <summary>
         /// Test the property 'Guid'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Guid'
         }
+
         /// <summary>
         /// Test the property 'LastName'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'LastName'
         }
+
         /// <summary>
         /// Test the property 'MemberGuid'
         /// </summary>
@@ -128,6 +134,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MemberGuid'
         }
+
         /// <summary>
         /// Test the property 'OwnerName'
         /// </summary>
@@ -136,6 +143,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'OwnerName'
         }
+
         /// <summary>
         /// Test the property 'Phone'
         /// </summary>
@@ -144,6 +152,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Phone'
         }
+
         /// <summary>
         /// Test the property 'PostalCode'
         /// </summary>
@@ -152,6 +161,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'PostalCode'
         }
+
         /// <summary>
         /// Test the property 'State'
         /// </summary>
@@ -160,6 +170,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'State'
         }
+
         /// <summary>
         /// Test the property 'UserGuid'
         /// </summary>
@@ -168,7 +179,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UserGuid'
         }
-
     }
-
 }

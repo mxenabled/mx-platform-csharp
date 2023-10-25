@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<ChallengeResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'FieldName'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'FieldName'
         }
+
         /// <summary>
         /// Test the property 'Guid'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Guid'
         }
+
         /// <summary>
         /// Test the property 'ImageData'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ImageData'
         }
+
         /// <summary>
         /// Test the property 'ImageOptions'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ImageOptions'
         }
+
         /// <summary>
         /// Test the property 'Label'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Label'
         }
+
         /// <summary>
         /// Test the property 'Options'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Options'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -112,7 +116,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
-
     }
-
 }

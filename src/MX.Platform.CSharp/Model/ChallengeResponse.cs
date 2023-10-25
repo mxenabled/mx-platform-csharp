@@ -55,18 +55,21 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets FieldName
         /// </summary>
+        /// <example>Who is this guy?</example>
         [DataMember(Name = "field_name", EmitDefaultValue = true)]
         public string FieldName { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>CRD-ce76d2e3-86bd-ec4a-ec52-eb53b5194bf5</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets ImageData
         /// </summary>
+        /// <example>Who is this guy?</example>
         [DataMember(Name = "image_data", EmitDefaultValue = true)]
         public string ImageData { get; set; }
 
@@ -79,6 +82,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
+        /// <example>Who is this guy?</example>
         [DataMember(Name = "label", EmitDefaultValue = true)]
         public string Label { get; set; }
 
@@ -91,6 +95,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
+        /// <example>IMAGE_DATA</example>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
@@ -229,7 +234,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

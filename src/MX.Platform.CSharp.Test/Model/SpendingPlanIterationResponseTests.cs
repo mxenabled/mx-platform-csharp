@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<SpendingPlanIterationResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CreatedAt'
         }
+
         /// <summary>
         /// Test the property 'EndOn'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'EndOn'
         }
+
         /// <summary>
         /// Test the property 'Guid'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Guid'
         }
+
         /// <summary>
         /// Test the property 'IterationNumber'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IterationNumber'
         }
+
         /// <summary>
         /// Test the property 'SpendingPlanGuid'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SpendingPlanGuid'
         }
+
         /// <summary>
         /// Test the property 'StartOn'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'StartOn'
         }
+
         /// <summary>
         /// Test the property 'UpdatedAt'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UpdatedAt'
         }
+
         /// <summary>
         /// Test the property 'UserGuid'
         /// </summary>
@@ -120,7 +125,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UserGuid'
         }
-
     }
-
 }

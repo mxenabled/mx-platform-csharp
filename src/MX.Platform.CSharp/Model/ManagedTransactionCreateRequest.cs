@@ -62,27 +62,32 @@ namespace MX.Platform.CSharp.Model
         public ManagedTransactionCreateRequest(string amount = default(string), string category = default(string), string checkNumberString = default(string), string currencyCode = default(string), string description = default(string), string id = default(string), bool isInternational = default(bool), decimal latitude = default(decimal), string localizedDescription = default(string), string localizedMemo = default(string), decimal longitude = default(decimal), string memo = default(string), int merchantCategoryCode = default(int), string merchantGuid = default(string), string merchantLocationGuid = default(string), string metadata = default(string), string postedAt = default(string), string status = default(string), string transactedAt = default(string), string type = default(string))
         {
             // to ensure "amount" is required (not null)
-            if (amount == null) {
+            if (amount == null)
+            {
                 throw new ArgumentNullException("amount is a required property for ManagedTransactionCreateRequest and cannot be null");
             }
             this.Amount = amount;
             // to ensure "description" is required (not null)
-            if (description == null) {
+            if (description == null)
+            {
                 throw new ArgumentNullException("description is a required property for ManagedTransactionCreateRequest and cannot be null");
             }
             this.Description = description;
             // to ensure "status" is required (not null)
-            if (status == null) {
+            if (status == null)
+            {
                 throw new ArgumentNullException("status is a required property for ManagedTransactionCreateRequest and cannot be null");
             }
             this.Status = status;
             // to ensure "transactedAt" is required (not null)
-            if (transactedAt == null) {
+            if (transactedAt == null)
+            {
                 throw new ArgumentNullException("transactedAt is a required property for ManagedTransactionCreateRequest and cannot be null");
             }
             this.TransactedAt = transactedAt;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for ManagedTransactionCreateRequest and cannot be null");
             }
             this.Type = type;
@@ -106,121 +111,141 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>61.11</example>
+        [DataMember(Name = "amount", IsRequired = true, EmitDefaultValue = true)]
         public string Amount { get; set; }
 
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
+        /// <example>Groceries</example>
         [DataMember(Name = "category", EmitDefaultValue = false)]
         public string Category { get; set; }
 
         /// <summary>
         /// Gets or Sets CheckNumberString
         /// </summary>
+        /// <example>6812</example>
         [DataMember(Name = "check_number_string", EmitDefaultValue = false)]
         public string CheckNumberString { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrencyCode
         /// </summary>
+        /// <example>USD</example>
         [DataMember(Name = "currency_code", EmitDefaultValue = false)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name = "description", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>Whole foods</example>
+        [DataMember(Name = "description", IsRequired = true, EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>transaction-265abee9-889b-af6a-c69b-25157db2bdd9</example>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets IsInternational
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_international", EmitDefaultValue = true)]
         public bool IsInternational { get; set; }
 
         /// <summary>
         /// Gets or Sets Latitude
         /// </summary>
+        /// <example>-43.2075</example>
         [DataMember(Name = "latitude", EmitDefaultValue = false)]
         public decimal Latitude { get; set; }
 
         /// <summary>
         /// Gets or Sets LocalizedDescription
         /// </summary>
+        /// <example>This is a localized_description</example>
         [DataMember(Name = "localized_description", EmitDefaultValue = false)]
         public string LocalizedDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets LocalizedMemo
         /// </summary>
+        /// <example>This is a localized_memo</example>
         [DataMember(Name = "localized_memo", EmitDefaultValue = false)]
         public string LocalizedMemo { get; set; }
 
         /// <summary>
         /// Gets or Sets Longitude
         /// </summary>
+        /// <example>139.691706</example>
         [DataMember(Name = "longitude", EmitDefaultValue = false)]
         public decimal Longitude { get; set; }
 
         /// <summary>
         /// Gets or Sets Memo
         /// </summary>
+        /// <example>This is a memo</example>
         [DataMember(Name = "memo", EmitDefaultValue = false)]
         public string Memo { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantCategoryCode
         /// </summary>
+        /// <example>5411</example>
         [DataMember(Name = "merchant_category_code", EmitDefaultValue = false)]
         public int MerchantCategoryCode { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantGuid
         /// </summary>
+        /// <example>MCH-7ed79542-884d-2b1b-dd74-501c5cc9d25b</example>
         [DataMember(Name = "merchant_guid", EmitDefaultValue = false)]
         public string MerchantGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantLocationGuid
         /// </summary>
+        /// <example>MCL-00024e59-18b5-4d79-b879-2a7896726fea</example>
         [DataMember(Name = "merchant_location_guid", EmitDefaultValue = false)]
         public string MerchantLocationGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>some metadata</example>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets PostedAt
         /// </summary>
+        /// <example>2016-10-07T06:00:00.000Z</example>
         [DataMember(Name = "posted_at", EmitDefaultValue = false)]
         public string PostedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>POSTED</example>
+        [DataMember(Name = "status", IsRequired = true, EmitDefaultValue = true)]
         public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets TransactedAt
         /// </summary>
-        [DataMember(Name = "transacted_at", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>2016-10-06T13:00:00.000Z</example>
+        [DataMember(Name = "transacted_at", IsRequired = true, EmitDefaultValue = true)]
         public string TransactedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>DEBIT</example>
+        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
@@ -470,7 +495,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

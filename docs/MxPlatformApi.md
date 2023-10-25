@@ -2,124 +2,123 @@
 
 All URIs are relative to *https://api.mx.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AggregateMember**](MxPlatformApi.md#aggregatemember) | **POST** /users/{user_guid}/members/{member_guid}/aggregate | Aggregate member
-[**CheckBalances**](MxPlatformApi.md#checkbalances) | **POST** /users/{user_guid}/members/{member_guid}/check_balance | Check balances
-[**CreateCategory**](MxPlatformApi.md#createcategory) | **POST** /users/{user_guid}/categories | Create category
-[**CreateManagedAccount**](MxPlatformApi.md#createmanagedaccount) | **POST** /users/{user_guid}/managed_members/{member_guid}/accounts | Create managed account
-[**CreateManagedMember**](MxPlatformApi.md#createmanagedmember) | **POST** /users/{user_guid}/managed_members | Create managed member
-[**CreateManagedTransaction**](MxPlatformApi.md#createmanagedtransaction) | **POST** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions | Create managed transaction
-[**CreateManualAccount**](MxPlatformApi.md#createmanualaccount) | **POST** /users/{user_guid}/accounts | Create manual account
-[**CreateMember**](MxPlatformApi.md#createmember) | **POST** /users/{user_guid}/members | Create member
-[**CreateSpendingPlan**](MxPlatformApi.md#createspendingplan) | **POST** /users/{user_guid}/spending_plans | Create spending plan
-[**CreateSpendingPlanIterationItem**](MxPlatformApi.md#createspendingplaniterationitem) | **POST** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items | Create spending plan iteration item
-[**CreateTag**](MxPlatformApi.md#createtag) | **POST** /users/{user_guid}/tags | Create tag
-[**CreateTagging**](MxPlatformApi.md#createtagging) | **POST** /users/{user_guid}/taggings | Create tagging
-[**CreateTransactionRule**](MxPlatformApi.md#createtransactionrule) | **POST** /users/{user_guid}/transaction_rules | Create transaction rule
-[**CreateUser**](MxPlatformApi.md#createuser) | **POST** /users | Create user
-[**DeleteCategory**](MxPlatformApi.md#deletecategory) | **DELETE** /users/{user_guid}/categories/{category_guid} | Delete category
-[**DeleteManagedAccount**](MxPlatformApi.md#deletemanagedaccount) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Delete managed account
-[**DeleteManagedMember**](MxPlatformApi.md#deletemanagedmember) | **DELETE** /users/{user_guid}/managed_members/{member_guid} | Delete managed member
-[**DeleteManagedTransaction**](MxPlatformApi.md#deletemanagedtransaction) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Delete managed transaction
-[**DeleteManualAccount**](MxPlatformApi.md#deletemanualaccount) | **DELETE** /users/{user_guid}/accounts/{account_guid} | Delete manual account
-[**DeleteMember**](MxPlatformApi.md#deletemember) | **DELETE** /users/{user_guid}/members/{member_guid} | Delete member
-[**DeleteSpendingPlan**](MxPlatformApi.md#deletespendingplan) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid} | Delete spending plan
-[**DeleteSpendingPlanAccount**](MxPlatformApi.md#deletespendingplanaccount) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts/{spending_plan_account_guid} | Delete spending plan account
-[**DeleteSpendingPlanIterationItem**](MxPlatformApi.md#deletespendingplaniterationitem) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Delete spending plan iteration item
-[**DeleteTag**](MxPlatformApi.md#deletetag) | **DELETE** /users/{user_guid}/tags/{tag_guid} | Delete tag
-[**DeleteTagging**](MxPlatformApi.md#deletetagging) | **DELETE** /users/{user_guid}/taggings/{tagging_guid} | Delete tagging
-[**DeleteTransactionRule**](MxPlatformApi.md#deletetransactionrule) | **DELETE** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Delete transaction rule
-[**DeleteUser**](MxPlatformApi.md#deleteuser) | **DELETE** /users/{user_guid} | Delete user
-[**DeprecatedRequestPaymentProcessorAuthorizationCode**](MxPlatformApi.md#deprecatedrequestpaymentprocessorauthorizationcode) | **POST** /payment_processor_authorization_code | (Deprecated) Request an authorization code.
-[**DownloadStatementPDF**](MxPlatformApi.md#downloadstatementpdf) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid}.pdf | Download statement pdf
-[**DownloadTaxDocument**](MxPlatformApi.md#downloadtaxdocument) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid}.pdf | Download a Tax Document PDF
-[**EnhanceTransactions**](MxPlatformApi.md#enhancetransactions) | **POST** /transactions/enhance | Enhance transactions
-[**ExtendHistory**](MxPlatformApi.md#extendhistory) | **POST** /users/{user_guid}/members/{member_guid}/extend_history | Extend history
-[**FetchStatements**](MxPlatformApi.md#fetchstatements) | **POST** /users/{user_guid}/members/{member_guid}/fetch_statements | Fetch statements
-[**FetchTaxDocuments**](MxPlatformApi.md#fetchtaxdocuments) | **POST** /users/{user_guid}/members/{member_guid}/fetch_tax_documents | Fetch Tax Documents
-[**IdentifyMember**](MxPlatformApi.md#identifymember) | **POST** /users/{user_guid}/members/{member_guid}/identify | Identify member
-[**ListAccountNumbersByAccount**](MxPlatformApi.md#listaccountnumbersbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/account_numbers | List account numbers by account
-[**ListAccountNumbersByMember**](MxPlatformApi.md#listaccountnumbersbymember) | **GET** /users/{user_guid}/members/{member_guid}/account_numbers | List account numbers by member
-[**ListAccountOwnersByMember**](MxPlatformApi.md#listaccountownersbymember) | **GET** /users/{user_guid}/members/{member_guid}/account_owners | List account owners by member
-[**ListCategories**](MxPlatformApi.md#listcategories) | **GET** /users/{user_guid}/categories | List categories
-[**ListDefaultCategories**](MxPlatformApi.md#listdefaultcategories) | **GET** /categories/default | List default categories
-[**ListDefaultCategoriesByUser**](MxPlatformApi.md#listdefaultcategoriesbyuser) | **GET** /users/{user_guid}/categories/default | List default categories by user
-[**ListFavoriteInstitutions**](MxPlatformApi.md#listfavoriteinstitutions) | **GET** /institutions/favorites | List favorite institutions
-[**ListHoldings**](MxPlatformApi.md#listholdings) | **GET** /users/{user_guid}/holdings | List holdings
-[**ListHoldingsByAccount**](MxPlatformApi.md#listholdingsbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/holdings | List holdings by account
-[**ListHoldingsByMember**](MxPlatformApi.md#listholdingsbymember) | **GET** /users/{user_guid}/members/{member_guid}/holdings | List holdings by member
-[**ListInstitutionCredentials**](MxPlatformApi.md#listinstitutioncredentials) | **GET** /institutions/{institution_code}/credentials | List institution credentials
-[**ListInstitutions**](MxPlatformApi.md#listinstitutions) | **GET** /institutions | List institutions
-[**ListManagedAccounts**](MxPlatformApi.md#listmanagedaccounts) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts | List managed accounts
-[**ListManagedInstitutions**](MxPlatformApi.md#listmanagedinstitutions) | **GET** /managed_institutions | List managed institutions
-[**ListManagedMembers**](MxPlatformApi.md#listmanagedmembers) | **GET** /users/{user_guid}/managed_members | List managed members
-[**ListManagedTransactions**](MxPlatformApi.md#listmanagedtransactions) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions | List managed transactions
-[**ListMemberAccounts**](MxPlatformApi.md#listmemberaccounts) | **GET** /users/{user_guid}/members/{member_guid}/accounts | List accounts by member
-[**ListMemberChallenges**](MxPlatformApi.md#listmemberchallenges) | **GET** /users/{user_guid}/members/{member_guid}/challenges | List member challenges
-[**ListMemberCredentials**](MxPlatformApi.md#listmembercredentials) | **GET** /users/{user_guid}/members/{member_guid}/credentials | List member credentials
-[**ListMembers**](MxPlatformApi.md#listmembers) | **GET** /users/{user_guid}/members | List members
-[**ListMerchants**](MxPlatformApi.md#listmerchants) | **GET** /merchants | List merchants
-[**ListSpendingPlanAccounts**](MxPlatformApi.md#listspendingplanaccounts) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts | List spending plan accounts
-[**ListSpendingPlanIterationItems**](MxPlatformApi.md#listspendingplaniterationitems) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items | List spending plan iteration items
-[**ListSpendingPlanIterations**](MxPlatformApi.md#listspendingplaniterations) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations | List spending plan iterations
-[**ListSpendingPlans**](MxPlatformApi.md#listspendingplans) | **GET** /users/{user_guid}/spending_plans | List spending plans
-[**ListStatementsByMember**](MxPlatformApi.md#liststatementsbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements | List statements by member
-[**ListTaggings**](MxPlatformApi.md#listtaggings) | **GET** /users/{user_guid}/taggings | List taggings
-[**ListTags**](MxPlatformApi.md#listtags) | **GET** /users/{user_guid}/tags | List tags
-[**ListTaxDocuments**](MxPlatformApi.md#listtaxdocuments) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents | List Tax Documents
-[**ListTransactionRules**](MxPlatformApi.md#listtransactionrules) | **GET** /users/{user_guid}/transaction_rules | List transaction rules
-[**ListTransactions**](MxPlatformApi.md#listtransactions) | **GET** /users/{user_guid}/transactions | List transactions
-[**ListTransactionsByAccount**](MxPlatformApi.md#listtransactionsbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/transactions | List transactions by account
-[**ListTransactionsByMember**](MxPlatformApi.md#listtransactionsbymember) | **GET** /users/{user_guid}/members/{member_guid}/transactions | List transactions by member
-[**ListTransactionsByTag**](MxPlatformApi.md#listtransactionsbytag) | **GET** /users/{user_guid}/tags/{tag_guid}/transactions | List transactions by tag
-[**ListUserAccounts**](MxPlatformApi.md#listuseraccounts) | **GET** /users/{user_guid}/accounts | List accounts
-[**ListUsers**](MxPlatformApi.md#listusers) | **GET** /users | List users
-[**ReadAccount**](MxPlatformApi.md#readaccount) | **GET** /users/{user_guid}/accounts/{account_guid} | Read account
-[**ReadAccountByMember**](MxPlatformApi.md#readaccountbymember) | **GET** /users/{user_guid}/members/{member_guid}/accounts/{account_guid} | Read account by member
-[**ReadCategory**](MxPlatformApi.md#readcategory) | **GET** /users/{user_guid}/categories/{category_guid} | Read a custom category
-[**ReadDefaultCategory**](MxPlatformApi.md#readdefaultcategory) | **GET** /categories/{category_guid} | Read a default category
-[**ReadHolding**](MxPlatformApi.md#readholding) | **GET** /users/{user_guid}/holdings/{holding_guid} | Read holding
-[**ReadInstitution**](MxPlatformApi.md#readinstitution) | **GET** /institutions/{institution_code} | Read institution
-[**ReadManagedAccount**](MxPlatformApi.md#readmanagedaccount) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Read managed account
-[**ReadManagedMember**](MxPlatformApi.md#readmanagedmember) | **GET** /users/{user_guid}/managed_members/{member_guid} | Read managed member
-[**ReadManagedTransaction**](MxPlatformApi.md#readmanagedtransaction) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Read managed transaction
-[**ReadMember**](MxPlatformApi.md#readmember) | **GET** /users/{user_guid}/members/{member_guid} | Read member
-[**ReadMemberStatus**](MxPlatformApi.md#readmemberstatus) | **GET** /users/{user_guid}/members/{member_guid}/status | Read member status
-[**ReadMerchant**](MxPlatformApi.md#readmerchant) | **GET** /merchants/{merchant_guid} | Read merchant
-[**ReadMerchantLocation**](MxPlatformApi.md#readmerchantlocation) | **GET** /merchant_locations/{merchant_location_guid} | Read merchant location
-[**ReadSpendingPlanAccount**](MxPlatformApi.md#readspendingplanaccount) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts/{spending_plan_account_guid} | Read spending plan account
-[**ReadSpendingPlanIteration**](MxPlatformApi.md#readspendingplaniteration) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/{iteration_number} | Read a spending plan iteration
-[**ReadSpendingPlanIterationItem**](MxPlatformApi.md#readspendingplaniterationitem) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Read a spending plan iteration item
-[**ReadSpendingPlanUser**](MxPlatformApi.md#readspendingplanuser) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid} | Read a spending plan for a user
-[**ReadStatementByMember**](MxPlatformApi.md#readstatementbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid} | Read statement by member
-[**ReadTag**](MxPlatformApi.md#readtag) | **GET** /users/{user_guid}/tags/{tag_guid} | Read tag
-[**ReadTagging**](MxPlatformApi.md#readtagging) | **GET** /users/{user_guid}/taggings/{tagging_guid} | Read tagging
-[**ReadTaxDocument**](MxPlatformApi.md#readtaxdocument) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid} | Read a Tax Document
-[**ReadTransaction**](MxPlatformApi.md#readtransaction) | **GET** /users/{user_guid}/transactions/{transaction_guid} | Read transaction
-[**ReadTransactionRule**](MxPlatformApi.md#readtransactionrule) | **GET** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Read transaction rule
-[**ReadUser**](MxPlatformApi.md#readuser) | **GET** /users/{user_guid} | Read user
-[**RequestAuthorizationCode**](MxPlatformApi.md#requestauthorizationcode) | **POST** /authorization_code | Request an authorization code.
-[**RequestConnectWidgetURL**](MxPlatformApi.md#requestconnectwidgeturl) | **POST** /users/{user_guid}/connect_widget_url | Request connect widget url
-[**RequestOAuthWindowURI**](MxPlatformApi.md#requestoauthwindowuri) | **GET** /users/{user_guid}/members/{member_guid}/oauth_window_uri | Request oauth window uri
-[**RequestWidgetURL**](MxPlatformApi.md#requestwidgeturl) | **POST** /users/{user_guid}/widget_urls | Request widget url
-[**ResumeAggregation**](MxPlatformApi.md#resumeaggregation) | **PUT** /users/{user_guid}/members/{member_guid}/resume | Resume aggregation
-[**UpdateAccountByMember**](MxPlatformApi.md#updateaccountbymember) | **PUT** /users/{user_guid}/members/{member_guid}/accounts/{account_guid} | Update account by member
-[**UpdateCategory**](MxPlatformApi.md#updatecategory) | **PUT** /users/{user_guid}/categories/{category_guid} | Update category
-[**UpdateManagedAccount**](MxPlatformApi.md#updatemanagedaccount) | **PUT** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Update managed account
-[**UpdateManagedMember**](MxPlatformApi.md#updatemanagedmember) | **PUT** /users/{user_guid}/managed_members/{member_guid} | Update managed member
-[**UpdateManagedTransaction**](MxPlatformApi.md#updatemanagedtransaction) | **PUT** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Update managed transaction
-[**UpdateMember**](MxPlatformApi.md#updatemember) | **PUT** /users/{user_guid}/members/{member_guid} | Update member
-[**UpdateSpendingPlanIterationItem**](MxPlatformApi.md#updatespendingplaniterationitem) | **PUT** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Update a spending plan iteration item
-[**UpdateTag**](MxPlatformApi.md#updatetag) | **PUT** /users/{user_guid}/tags/{tag_guid} | Update tag
-[**UpdateTagging**](MxPlatformApi.md#updatetagging) | **PUT** /users/{user_guid}/taggings/{tagging_guid} | Update tagging
-[**UpdateTransaction**](MxPlatformApi.md#updatetransaction) | **PUT** /users/{user_guid}/transactions/{transaction_guid} | Update transaction
-[**UpdateTransactionRule**](MxPlatformApi.md#updatetransactionrule) | **PUT** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Update transaction_rule
-[**UpdateUser**](MxPlatformApi.md#updateuser) | **PUT** /users/{user_guid} | Update user
-[**VerifyMember**](MxPlatformApi.md#verifymember) | **POST** /users/{user_guid}/members/{member_guid}/verify | Verify member
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**AggregateMember**](MxPlatformApi.md#aggregatemember) | **POST** /users/{user_guid}/members/{member_guid}/aggregate | Aggregate member |
+| [**CheckBalances**](MxPlatformApi.md#checkbalances) | **POST** /users/{user_guid}/members/{member_guid}/check_balance | Check balances |
+| [**CreateCategory**](MxPlatformApi.md#createcategory) | **POST** /users/{user_guid}/categories | Create category |
+| [**CreateManagedAccount**](MxPlatformApi.md#createmanagedaccount) | **POST** /users/{user_guid}/managed_members/{member_guid}/accounts | Create managed account |
+| [**CreateManagedMember**](MxPlatformApi.md#createmanagedmember) | **POST** /users/{user_guid}/managed_members | Create managed member |
+| [**CreateManagedTransaction**](MxPlatformApi.md#createmanagedtransaction) | **POST** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions | Create managed transaction |
+| [**CreateManualAccount**](MxPlatformApi.md#createmanualaccount) | **POST** /users/{user_guid}/accounts | Create manual account |
+| [**CreateMember**](MxPlatformApi.md#createmember) | **POST** /users/{user_guid}/members | Create member |
+| [**CreateSpendingPlan**](MxPlatformApi.md#createspendingplan) | **POST** /users/{user_guid}/spending_plans | Create spending plan |
+| [**CreateSpendingPlanIterationItem**](MxPlatformApi.md#createspendingplaniterationitem) | **POST** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items | Create spending plan iteration item |
+| [**CreateTag**](MxPlatformApi.md#createtag) | **POST** /users/{user_guid}/tags | Create tag |
+| [**CreateTagging**](MxPlatformApi.md#createtagging) | **POST** /users/{user_guid}/taggings | Create tagging |
+| [**CreateTransactionRule**](MxPlatformApi.md#createtransactionrule) | **POST** /users/{user_guid}/transaction_rules | Create transaction rule |
+| [**CreateUser**](MxPlatformApi.md#createuser) | **POST** /users | Create user |
+| [**DeleteCategory**](MxPlatformApi.md#deletecategory) | **DELETE** /users/{user_guid}/categories/{category_guid} | Delete category |
+| [**DeleteManagedAccount**](MxPlatformApi.md#deletemanagedaccount) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Delete managed account |
+| [**DeleteManagedMember**](MxPlatformApi.md#deletemanagedmember) | **DELETE** /users/{user_guid}/managed_members/{member_guid} | Delete managed member |
+| [**DeleteManagedTransaction**](MxPlatformApi.md#deletemanagedtransaction) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Delete managed transaction |
+| [**DeleteManualAccount**](MxPlatformApi.md#deletemanualaccount) | **DELETE** /users/{user_guid}/accounts/{account_guid} | Delete manual account |
+| [**DeleteMember**](MxPlatformApi.md#deletemember) | **DELETE** /users/{user_guid}/members/{member_guid} | Delete member |
+| [**DeleteSpendingPlan**](MxPlatformApi.md#deletespendingplan) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid} | Delete spending plan |
+| [**DeleteSpendingPlanAccount**](MxPlatformApi.md#deletespendingplanaccount) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts/{spending_plan_account_guid} | Delete spending plan account |
+| [**DeleteSpendingPlanIterationItem**](MxPlatformApi.md#deletespendingplaniterationitem) | **DELETE** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Delete spending plan iteration item |
+| [**DeleteTag**](MxPlatformApi.md#deletetag) | **DELETE** /users/{user_guid}/tags/{tag_guid} | Delete tag |
+| [**DeleteTagging**](MxPlatformApi.md#deletetagging) | **DELETE** /users/{user_guid}/taggings/{tagging_guid} | Delete tagging |
+| [**DeleteTransactionRule**](MxPlatformApi.md#deletetransactionrule) | **DELETE** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Delete transaction rule |
+| [**DeleteUser**](MxPlatformApi.md#deleteuser) | **DELETE** /users/{user_guid} | Delete user |
+| [**DeprecatedRequestPaymentProcessorAuthorizationCode**](MxPlatformApi.md#deprecatedrequestpaymentprocessorauthorizationcode) | **POST** /payment_processor_authorization_code | (Deprecated) Request an authorization code. |
+| [**DownloadStatementPDF**](MxPlatformApi.md#downloadstatementpdf) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid}.pdf | Download statement pdf |
+| [**DownloadTaxDocument**](MxPlatformApi.md#downloadtaxdocument) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid}.pdf | Download a Tax Document PDF |
+| [**EnhanceTransactions**](MxPlatformApi.md#enhancetransactions) | **POST** /transactions/enhance | Enhance transactions |
+| [**ExtendHistory**](MxPlatformApi.md#extendhistory) | **POST** /users/{user_guid}/members/{member_guid}/extend_history | Extend history |
+| [**FetchStatements**](MxPlatformApi.md#fetchstatements) | **POST** /users/{user_guid}/members/{member_guid}/fetch_statements | Fetch statements |
+| [**FetchTaxDocuments**](MxPlatformApi.md#fetchtaxdocuments) | **POST** /users/{user_guid}/members/{member_guid}/fetch_tax_documents | Fetch Tax Documents |
+| [**IdentifyMember**](MxPlatformApi.md#identifymember) | **POST** /users/{user_guid}/members/{member_guid}/identify | Identify member |
+| [**ListAccountNumbersByAccount**](MxPlatformApi.md#listaccountnumbersbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/account_numbers | List account numbers by account |
+| [**ListAccountNumbersByMember**](MxPlatformApi.md#listaccountnumbersbymember) | **GET** /users/{user_guid}/members/{member_guid}/account_numbers | List account numbers by member |
+| [**ListAccountOwnersByMember**](MxPlatformApi.md#listaccountownersbymember) | **GET** /users/{user_guid}/members/{member_guid}/account_owners | List account owners by member |
+| [**ListCategories**](MxPlatformApi.md#listcategories) | **GET** /users/{user_guid}/categories | List categories |
+| [**ListDefaultCategories**](MxPlatformApi.md#listdefaultcategories) | **GET** /categories/default | List default categories |
+| [**ListDefaultCategoriesByUser**](MxPlatformApi.md#listdefaultcategoriesbyuser) | **GET** /users/{user_guid}/categories/default | List default categories by user |
+| [**ListFavoriteInstitutions**](MxPlatformApi.md#listfavoriteinstitutions) | **GET** /institutions/favorites | List favorite institutions |
+| [**ListHoldings**](MxPlatformApi.md#listholdings) | **GET** /users/{user_guid}/holdings | List holdings |
+| [**ListHoldingsByAccount**](MxPlatformApi.md#listholdingsbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/holdings | List holdings by account |
+| [**ListHoldingsByMember**](MxPlatformApi.md#listholdingsbymember) | **GET** /users/{user_guid}/members/{member_guid}/holdings | List holdings by member |
+| [**ListInstitutionCredentials**](MxPlatformApi.md#listinstitutioncredentials) | **GET** /institutions/{institution_code}/credentials | List institution credentials |
+| [**ListInstitutions**](MxPlatformApi.md#listinstitutions) | **GET** /institutions | List institutions |
+| [**ListManagedAccounts**](MxPlatformApi.md#listmanagedaccounts) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts | List managed accounts |
+| [**ListManagedInstitutions**](MxPlatformApi.md#listmanagedinstitutions) | **GET** /managed_institutions | List managed institutions |
+| [**ListManagedMembers**](MxPlatformApi.md#listmanagedmembers) | **GET** /users/{user_guid}/managed_members | List managed members |
+| [**ListManagedTransactions**](MxPlatformApi.md#listmanagedtransactions) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions | List managed transactions |
+| [**ListMemberAccounts**](MxPlatformApi.md#listmemberaccounts) | **GET** /users/{user_guid}/members/{member_guid}/accounts | List accounts by member |
+| [**ListMemberChallenges**](MxPlatformApi.md#listmemberchallenges) | **GET** /users/{user_guid}/members/{member_guid}/challenges | List member challenges |
+| [**ListMemberCredentials**](MxPlatformApi.md#listmembercredentials) | **GET** /users/{user_guid}/members/{member_guid}/credentials | List member credentials |
+| [**ListMembers**](MxPlatformApi.md#listmembers) | **GET** /users/{user_guid}/members | List members |
+| [**ListMerchants**](MxPlatformApi.md#listmerchants) | **GET** /merchants | List merchants |
+| [**ListSpendingPlanAccounts**](MxPlatformApi.md#listspendingplanaccounts) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts | List spending plan accounts |
+| [**ListSpendingPlanIterationItems**](MxPlatformApi.md#listspendingplaniterationitems) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items | List spending plan iteration items |
+| [**ListSpendingPlanIterations**](MxPlatformApi.md#listspendingplaniterations) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations | List spending plan iterations |
+| [**ListSpendingPlans**](MxPlatformApi.md#listspendingplans) | **GET** /users/{user_guid}/spending_plans | List spending plans |
+| [**ListStatementsByMember**](MxPlatformApi.md#liststatementsbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements | List statements by member |
+| [**ListTaggings**](MxPlatformApi.md#listtaggings) | **GET** /users/{user_guid}/taggings | List taggings |
+| [**ListTags**](MxPlatformApi.md#listtags) | **GET** /users/{user_guid}/tags | List tags |
+| [**ListTaxDocuments**](MxPlatformApi.md#listtaxdocuments) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents | List Tax Documents |
+| [**ListTransactionRules**](MxPlatformApi.md#listtransactionrules) | **GET** /users/{user_guid}/transaction_rules | List transaction rules |
+| [**ListTransactions**](MxPlatformApi.md#listtransactions) | **GET** /users/{user_guid}/transactions | List transactions |
+| [**ListTransactionsByAccount**](MxPlatformApi.md#listtransactionsbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/transactions | List transactions by account |
+| [**ListTransactionsByMember**](MxPlatformApi.md#listtransactionsbymember) | **GET** /users/{user_guid}/members/{member_guid}/transactions | List transactions by member |
+| [**ListTransactionsByTag**](MxPlatformApi.md#listtransactionsbytag) | **GET** /users/{user_guid}/tags/{tag_guid}/transactions | List transactions by tag |
+| [**ListUserAccounts**](MxPlatformApi.md#listuseraccounts) | **GET** /users/{user_guid}/accounts | List accounts |
+| [**ListUsers**](MxPlatformApi.md#listusers) | **GET** /users | List users |
+| [**ReadAccount**](MxPlatformApi.md#readaccount) | **GET** /users/{user_guid}/accounts/{account_guid} | Read account |
+| [**ReadAccountByMember**](MxPlatformApi.md#readaccountbymember) | **GET** /users/{user_guid}/members/{member_guid}/accounts/{account_guid} | Read account by member |
+| [**ReadCategory**](MxPlatformApi.md#readcategory) | **GET** /users/{user_guid}/categories/{category_guid} | Read a custom category |
+| [**ReadDefaultCategory**](MxPlatformApi.md#readdefaultcategory) | **GET** /categories/{category_guid} | Read a default category |
+| [**ReadHolding**](MxPlatformApi.md#readholding) | **GET** /users/{user_guid}/holdings/{holding_guid} | Read holding |
+| [**ReadInstitution**](MxPlatformApi.md#readinstitution) | **GET** /institutions/{institution_code} | Read institution |
+| [**ReadManagedAccount**](MxPlatformApi.md#readmanagedaccount) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Read managed account |
+| [**ReadManagedMember**](MxPlatformApi.md#readmanagedmember) | **GET** /users/{user_guid}/managed_members/{member_guid} | Read managed member |
+| [**ReadManagedTransaction**](MxPlatformApi.md#readmanagedtransaction) | **GET** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Read managed transaction |
+| [**ReadMember**](MxPlatformApi.md#readmember) | **GET** /users/{user_guid}/members/{member_guid} | Read member |
+| [**ReadMemberStatus**](MxPlatformApi.md#readmemberstatus) | **GET** /users/{user_guid}/members/{member_guid}/status | Read member status |
+| [**ReadMerchant**](MxPlatformApi.md#readmerchant) | **GET** /merchants/{merchant_guid} | Read merchant |
+| [**ReadMerchantLocation**](MxPlatformApi.md#readmerchantlocation) | **GET** /merchant_locations/{merchant_location_guid} | Read merchant location |
+| [**ReadSpendingPlanAccount**](MxPlatformApi.md#readspendingplanaccount) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts/{spending_plan_account_guid} | Read spending plan account |
+| [**ReadSpendingPlanIteration**](MxPlatformApi.md#readspendingplaniteration) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/{iteration_number} | Read a spending plan iteration |
+| [**ReadSpendingPlanIterationItem**](MxPlatformApi.md#readspendingplaniterationitem) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Read a spending plan iteration item |
+| [**ReadSpendingPlanUser**](MxPlatformApi.md#readspendingplanuser) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid} | Read a spending plan for a user |
+| [**ReadStatementByMember**](MxPlatformApi.md#readstatementbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid} | Read statement by member |
+| [**ReadTag**](MxPlatformApi.md#readtag) | **GET** /users/{user_guid}/tags/{tag_guid} | Read tag |
+| [**ReadTagging**](MxPlatformApi.md#readtagging) | **GET** /users/{user_guid}/taggings/{tagging_guid} | Read tagging |
+| [**ReadTaxDocument**](MxPlatformApi.md#readtaxdocument) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid} | Read a Tax Document |
+| [**ReadTransaction**](MxPlatformApi.md#readtransaction) | **GET** /users/{user_guid}/transactions/{transaction_guid} | Read transaction |
+| [**ReadTransactionRule**](MxPlatformApi.md#readtransactionrule) | **GET** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Read transaction rule |
+| [**ReadUser**](MxPlatformApi.md#readuser) | **GET** /users/{user_guid} | Read user |
+| [**RequestAuthorizationCode**](MxPlatformApi.md#requestauthorizationcode) | **POST** /authorization_code | Request an authorization code. |
+| [**RequestConnectWidgetURL**](MxPlatformApi.md#requestconnectwidgeturl) | **POST** /users/{user_guid}/connect_widget_url | Request connect widget url |
+| [**RequestOAuthWindowURI**](MxPlatformApi.md#requestoauthwindowuri) | **GET** /users/{user_guid}/members/{member_guid}/oauth_window_uri | Request oauth window uri |
+| [**RequestWidgetURL**](MxPlatformApi.md#requestwidgeturl) | **POST** /users/{user_guid}/widget_urls | Request widget url |
+| [**ResumeAggregation**](MxPlatformApi.md#resumeaggregation) | **PUT** /users/{user_guid}/members/{member_guid}/resume | Resume aggregation |
+| [**UpdateAccountByMember**](MxPlatformApi.md#updateaccountbymember) | **PUT** /users/{user_guid}/members/{member_guid}/accounts/{account_guid} | Update account by member |
+| [**UpdateCategory**](MxPlatformApi.md#updatecategory) | **PUT** /users/{user_guid}/categories/{category_guid} | Update category |
+| [**UpdateManagedAccount**](MxPlatformApi.md#updatemanagedaccount) | **PUT** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Update managed account |
+| [**UpdateManagedMember**](MxPlatformApi.md#updatemanagedmember) | **PUT** /users/{user_guid}/managed_members/{member_guid} | Update managed member |
+| [**UpdateManagedTransaction**](MxPlatformApi.md#updatemanagedtransaction) | **PUT** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid} | Update managed transaction |
+| [**UpdateMember**](MxPlatformApi.md#updatemember) | **PUT** /users/{user_guid}/members/{member_guid} | Update member |
+| [**UpdateSpendingPlanIterationItem**](MxPlatformApi.md#updatespendingplaniterationitem) | **PUT** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Update a spending plan iteration item |
+| [**UpdateTag**](MxPlatformApi.md#updatetag) | **PUT** /users/{user_guid}/tags/{tag_guid} | Update tag |
+| [**UpdateTagging**](MxPlatformApi.md#updatetagging) | **PUT** /users/{user_guid}/taggings/{tagging_guid} | Update tagging |
+| [**UpdateTransaction**](MxPlatformApi.md#updatetransaction) | **PUT** /users/{user_guid}/transactions/{transaction_guid} | Update transaction |
+| [**UpdateTransactionRule**](MxPlatformApi.md#updatetransactionrule) | **PUT** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Update transaction_rule |
+| [**UpdateUser**](MxPlatformApi.md#updateuser) | **PUT** /users/{user_guid} | Update user |
+| [**VerifyMember**](MxPlatformApi.md#verifymember) | **POST** /users/{user_guid}/members/{member_guid}/verify | Verify member |
 
-
-<a name="aggregatemember"></a>
+<a id="aggregatemember"></a>
 # **AggregateMember**
 > MemberResponseBody AggregateMember (string memberGuid, string userGuid)
 
@@ -159,8 +158,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.AggregateMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.AggregateMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -168,12 +167,32 @@ namespace Example
 }
 ```
 
+#### Using the AggregateMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Aggregate member
+    ApiResponse<MemberResponseBody> response = apiInstance.AggregateMemberWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.AggregateMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -196,7 +215,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="checkbalances"></a>
+<a id="checkbalances"></a>
 # **CheckBalances**
 > MemberResponseBody CheckBalances (string memberGuid, string userGuid)
 
@@ -236,8 +255,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CheckBalances: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CheckBalances: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -245,12 +264,32 @@ namespace Example
 }
 ```
 
+#### Using the CheckBalancesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Check balances
+    ApiResponse<MemberResponseBody> response = apiInstance.CheckBalancesWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CheckBalancesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -273,7 +312,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createcategory"></a>
+<a id="createcategory"></a>
 # **CreateCategory**
 > CategoryResponseBody CreateCategory (string userGuid, CategoryCreateRequestBody categoryCreateRequestBody)
 
@@ -313,8 +352,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateCategory: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateCategory: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -322,12 +361,32 @@ namespace Example
 }
 ```
 
+#### Using the CreateCategoryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create category
+    ApiResponse<CategoryResponseBody> response = apiInstance.CreateCategoryWithHttpInfo(userGuid, categoryCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateCategoryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **categoryCreateRequestBody** | [**CategoryCreateRequestBody**](CategoryCreateRequestBody.md)| Custom category object to be created | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **categoryCreateRequestBody** | [**CategoryCreateRequestBody**](CategoryCreateRequestBody.md) | Custom category object to be created |  |
 
 ### Return type
 
@@ -350,7 +409,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createmanagedaccount"></a>
+<a id="createmanagedaccount"></a>
 # **CreateManagedAccount**
 > AccountResponseBody CreateManagedAccount (string memberGuid, string userGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody)
 
@@ -391,8 +450,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateManagedAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateManagedAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -400,13 +459,33 @@ namespace Example
 }
 ```
 
+#### Using the CreateManagedAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create managed account
+    ApiResponse<AccountResponseBody> response = apiInstance.CreateManagedAccountWithHttpInfo(memberGuid, userGuid, managedAccountCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateManagedAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **managedAccountCreateRequestBody** | [**ManagedAccountCreateRequestBody**](ManagedAccountCreateRequestBody.md)| Managed account to be created. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **managedAccountCreateRequestBody** | [**ManagedAccountCreateRequestBody**](ManagedAccountCreateRequestBody.md) | Managed account to be created. |  |
 
 ### Return type
 
@@ -429,7 +508,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createmanagedmember"></a>
+<a id="createmanagedmember"></a>
 # **CreateManagedMember**
 > MemberResponseBody CreateManagedMember (string userGuid, ManagedMemberCreateRequestBody managedMemberCreateRequestBody)
 
@@ -469,8 +548,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateManagedMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateManagedMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -478,12 +557,32 @@ namespace Example
 }
 ```
 
+#### Using the CreateManagedMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create managed member
+    ApiResponse<MemberResponseBody> response = apiInstance.CreateManagedMemberWithHttpInfo(userGuid, managedMemberCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateManagedMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **managedMemberCreateRequestBody** | [**ManagedMemberCreateRequestBody**](ManagedMemberCreateRequestBody.md)| Managed member to be created. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **managedMemberCreateRequestBody** | [**ManagedMemberCreateRequestBody**](ManagedMemberCreateRequestBody.md) | Managed member to be created. |  |
 
 ### Return type
 
@@ -506,7 +605,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createmanagedtransaction"></a>
+<a id="createmanagedtransaction"></a>
 # **CreateManagedTransaction**
 > TransactionResponseBody CreateManagedTransaction (string accountGuid, string memberGuid, string userGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody)
 
@@ -548,8 +647,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateManagedTransaction: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateManagedTransaction: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -557,14 +656,34 @@ namespace Example
 }
 ```
 
+#### Using the CreateManagedTransactionWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create managed transaction
+    ApiResponse<TransactionResponseBody> response = apiInstance.CreateManagedTransactionWithHttpInfo(accountGuid, memberGuid, userGuid, managedTransactionCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateManagedTransactionWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **managedTransactionCreateRequestBody** | [**ManagedTransactionCreateRequestBody**](ManagedTransactionCreateRequestBody.md)| Managed transaction to be created. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **managedTransactionCreateRequestBody** | [**ManagedTransactionCreateRequestBody**](ManagedTransactionCreateRequestBody.md) | Managed transaction to be created. |  |
 
 ### Return type
 
@@ -587,7 +706,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createmanualaccount"></a>
+<a id="createmanualaccount"></a>
 # **CreateManualAccount**
 > AccountResponseBody CreateManualAccount (string userGuid, AccountCreateRequestBody accountCreateRequestBody)
 
@@ -627,8 +746,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateManualAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateManualAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -636,12 +755,32 @@ namespace Example
 }
 ```
 
+#### Using the CreateManualAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create manual account
+    ApiResponse<AccountResponseBody> response = apiInstance.CreateManualAccountWithHttpInfo(userGuid, accountCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateManualAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **accountCreateRequestBody** | [**AccountCreateRequestBody**](AccountCreateRequestBody.md)| Manual account object to be created. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **accountCreateRequestBody** | [**AccountCreateRequestBody**](AccountCreateRequestBody.md) | Manual account object to be created. |  |
 
 ### Return type
 
@@ -664,7 +803,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createmember"></a>
+<a id="createmember"></a>
 # **CreateMember**
 > MemberResponseBody CreateMember (string userGuid, MemberCreateRequestBody memberCreateRequestBody)
 
@@ -704,8 +843,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -713,12 +852,32 @@ namespace Example
 }
 ```
 
+#### Using the CreateMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create member
+    ApiResponse<MemberResponseBody> response = apiInstance.CreateMemberWithHttpInfo(userGuid, memberCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **memberCreateRequestBody** | [**MemberCreateRequestBody**](MemberCreateRequestBody.md)| Member object to be created with optional parameters (id and metadata) and required parameters (credentials and institution_code) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **memberCreateRequestBody** | [**MemberCreateRequestBody**](MemberCreateRequestBody.md) | Member object to be created with optional parameters (id and metadata) and required parameters (credentials and institution_code) |  |
 
 ### Return type
 
@@ -741,7 +900,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createspendingplan"></a>
+<a id="createspendingplan"></a>
 # **CreateSpendingPlan**
 > SpendingPlanResponse CreateSpendingPlan (string userGuid)
 
@@ -780,8 +939,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateSpendingPlan: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateSpendingPlan: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -789,11 +948,31 @@ namespace Example
 }
 ```
 
+#### Using the CreateSpendingPlanWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create spending plan
+    ApiResponse<SpendingPlanResponse> response = apiInstance.CreateSpendingPlanWithHttpInfo(userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateSpendingPlanWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -816,7 +995,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createspendingplaniterationitem"></a>
+<a id="createspendingplaniterationitem"></a>
 # **CreateSpendingPlanIterationItem**
 > SpendingPlanIterationItemResponse CreateSpendingPlanIterationItem (string spendingPlanGuid, string userGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody)
 
@@ -857,8 +1036,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateSpendingPlanIterationItem: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateSpendingPlanIterationItem: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -866,13 +1045,33 @@ namespace Example
 }
 ```
 
+#### Using the CreateSpendingPlanIterationItemWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create spending plan iteration item
+    ApiResponse<SpendingPlanIterationItemResponse> response = apiInstance.CreateSpendingPlanIterationItemWithHttpInfo(spendingPlanGuid, userGuid, spendingPlanIterationItemCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateSpendingPlanIterationItemWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md)| Iteration item to be created with required parameters (planned_amount) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md) | Iteration item to be created with required parameters (planned_amount) |  |
 
 ### Return type
 
@@ -895,7 +1094,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createtag"></a>
+<a id="createtag"></a>
 # **CreateTag**
 > TagResponseBody CreateTag (string userGuid, TagCreateRequestBody tagCreateRequestBody)
 
@@ -935,8 +1134,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateTag: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateTag: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -944,12 +1143,32 @@ namespace Example
 }
 ```
 
+#### Using the CreateTagWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create tag
+    ApiResponse<TagResponseBody> response = apiInstance.CreateTagWithHttpInfo(userGuid, tagCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateTagWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **tagCreateRequestBody** | [**TagCreateRequestBody**](TagCreateRequestBody.md)| Tag object to be created with required parameters (tag_guid) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **tagCreateRequestBody** | [**TagCreateRequestBody**](TagCreateRequestBody.md) | Tag object to be created with required parameters (tag_guid) |  |
 
 ### Return type
 
@@ -972,7 +1191,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createtagging"></a>
+<a id="createtagging"></a>
 # **CreateTagging**
 > TaggingResponseBody CreateTagging (string userGuid, TaggingCreateRequestBody taggingCreateRequestBody)
 
@@ -1012,8 +1231,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateTagging: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateTagging: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1021,12 +1240,32 @@ namespace Example
 }
 ```
 
+#### Using the CreateTaggingWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create tagging
+    ApiResponse<TaggingResponseBody> response = apiInstance.CreateTaggingWithHttpInfo(userGuid, taggingCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateTaggingWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **taggingCreateRequestBody** | [**TaggingCreateRequestBody**](TaggingCreateRequestBody.md)| Tagging object to be created with required parameters (tag_guid and transaction_guid) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **taggingCreateRequestBody** | [**TaggingCreateRequestBody**](TaggingCreateRequestBody.md) | Tagging object to be created with required parameters (tag_guid and transaction_guid) |  |
 
 ### Return type
 
@@ -1049,7 +1288,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createtransactionrule"></a>
+<a id="createtransactionrule"></a>
 # **CreateTransactionRule**
 > TransactionRuleResponseBody CreateTransactionRule (string userGuid, TransactionRuleCreateRequestBody transactionRuleCreateRequestBody)
 
@@ -1089,8 +1328,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateTransactionRule: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateTransactionRule: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1098,12 +1337,32 @@ namespace Example
 }
 ```
 
+#### Using the CreateTransactionRuleWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create transaction rule
+    ApiResponse<TransactionRuleResponseBody> response = apiInstance.CreateTransactionRuleWithHttpInfo(userGuid, transactionRuleCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateTransactionRuleWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **transactionRuleCreateRequestBody** | [**TransactionRuleCreateRequestBody**](TransactionRuleCreateRequestBody.md)| TransactionRule object to be created with optional parameters (description) and required parameters (category_guid and match_description) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **transactionRuleCreateRequestBody** | [**TransactionRuleCreateRequestBody**](TransactionRuleCreateRequestBody.md) | TransactionRule object to be created with optional parameters (description) and required parameters (category_guid and match_description) |  |
 
 ### Return type
 
@@ -1126,7 +1385,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createuser"></a>
+<a id="createuser"></a>
 # **CreateUser**
 > UserResponseBody CreateUser (UserCreateRequestBody userCreateRequestBody)
 
@@ -1165,8 +1424,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.CreateUser: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.CreateUser: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1174,11 +1433,31 @@ namespace Example
 }
 ```
 
+#### Using the CreateUserWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create user
+    ApiResponse<UserResponseBody> response = apiInstance.CreateUserWithHttpInfo(userCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreateUserWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userCreateRequestBody** | [**UserCreateRequestBody**](UserCreateRequestBody.md)| User object to be created. (None of these parameters are required, but the user object cannot be empty) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userCreateRequestBody** | [**UserCreateRequestBody**](UserCreateRequestBody.md) | User object to be created. (None of these parameters are required, but the user object cannot be empty) |  |
 
 ### Return type
 
@@ -1201,7 +1480,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletecategory"></a>
+<a id="deletecategory"></a>
 # **DeleteCategory**
 > void DeleteCategory (string categoryGuid, string userGuid)
 
@@ -1240,8 +1519,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteCategory: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteCategory: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1249,12 +1528,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteCategoryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete category
+    apiInstance.DeleteCategoryWithHttpInfo(categoryGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteCategoryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **categoryGuid** | **string**| The unique id for a &#x60;category&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **categoryGuid** | **string** | The unique id for a &#x60;category&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -1277,7 +1573,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletemanagedaccount"></a>
+<a id="deletemanagedaccount"></a>
 # **DeleteManagedAccount**
 > void DeleteManagedAccount (string accountGuid, string memberGuid, string userGuid)
 
@@ -1317,8 +1613,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteManagedAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteManagedAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1326,13 +1622,30 @@ namespace Example
 }
 ```
 
+#### Using the DeleteManagedAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete managed account
+    apiInstance.DeleteManagedAccountWithHttpInfo(accountGuid, memberGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteManagedAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -1355,7 +1668,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletemanagedmember"></a>
+<a id="deletemanagedmember"></a>
 # **DeleteManagedMember**
 > void DeleteManagedMember (string memberGuid, string userGuid)
 
@@ -1394,8 +1707,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteManagedMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteManagedMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1403,12 +1716,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteManagedMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete managed member
+    apiInstance.DeleteManagedMemberWithHttpInfo(memberGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteManagedMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -1431,7 +1761,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletemanagedtransaction"></a>
+<a id="deletemanagedtransaction"></a>
 # **DeleteManagedTransaction**
 > void DeleteManagedTransaction (string accountGuid, string memberGuid, string transactionGuid, string userGuid)
 
@@ -1472,8 +1802,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteManagedTransaction: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteManagedTransaction: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1481,14 +1811,31 @@ namespace Example
 }
 ```
 
+#### Using the DeleteManagedTransactionWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete managed transaction
+    apiInstance.DeleteManagedTransactionWithHttpInfo(accountGuid, memberGuid, transactionGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteManagedTransactionWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **transactionGuid** | **string**| The unique id for a &#x60;transaction&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **transactionGuid** | **string** | The unique id for a &#x60;transaction&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -1511,7 +1858,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletemanualaccount"></a>
+<a id="deletemanualaccount"></a>
 # **DeleteManualAccount**
 > void DeleteManualAccount (string accountGuid, string userGuid)
 
@@ -1550,8 +1897,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteManualAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteManualAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1559,12 +1906,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteManualAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete manual account
+    apiInstance.DeleteManualAccountWithHttpInfo(accountGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteManualAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -1587,7 +1951,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletemember"></a>
+<a id="deletemember"></a>
 # **DeleteMember**
 > void DeleteMember (string memberGuid, string userGuid)
 
@@ -1626,8 +1990,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1635,12 +1999,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete member
+    apiInstance.DeleteMemberWithHttpInfo(memberGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -1663,7 +2044,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletespendingplan"></a>
+<a id="deletespendingplan"></a>
 # **DeleteSpendingPlan**
 > void DeleteSpendingPlan (string userGuid, string spendingPlanGuid)
 
@@ -1702,8 +2083,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlan: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlan: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1711,12 +2092,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteSpendingPlanWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete spending plan
+    apiInstance.DeleteSpendingPlanWithHttpInfo(userGuid, spendingPlanGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique ID for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique ID for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 
 ### Return type
 
@@ -1739,7 +2137,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletespendingplanaccount"></a>
+<a id="deletespendingplanaccount"></a>
 # **DeleteSpendingPlanAccount**
 > void DeleteSpendingPlanAccount (string userGuid, string spendingPlanGuid, string spendingPlanAccountGuid)
 
@@ -1779,8 +2177,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1788,13 +2186,30 @@ namespace Example
 }
 ```
 
+#### Using the DeleteSpendingPlanAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete spending plan account
+    apiInstance.DeleteSpendingPlanAccountWithHttpInfo(userGuid, spendingPlanGuid, spendingPlanAccountGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique ID for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **spendingPlanAccountGuid** | **string**| The unique ID for the specified account. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique ID for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **spendingPlanAccountGuid** | **string** | The unique ID for the specified account. |  |
 
 ### Return type
 
@@ -1817,7 +2232,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletespendingplaniterationitem"></a>
+<a id="deletespendingplaniterationitem"></a>
 # **DeleteSpendingPlanIterationItem**
 > void DeleteSpendingPlanIterationItem (string userGuid, string spendingPlanGuid, string iterationItemGuid)
 
@@ -1857,8 +2272,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanIterationItem: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanIterationItem: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1866,13 +2281,30 @@ namespace Example
 }
 ```
 
+#### Using the DeleteSpendingPlanIterationItemWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete spending plan iteration item
+    apiInstance.DeleteSpendingPlanIterationItemWithHttpInfo(userGuid, spendingPlanGuid, iterationItemGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteSpendingPlanIterationItemWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique ID for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **iterationItemGuid** | **string**| The unique ID for the &#x60;iteration_item&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique ID for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **iterationItemGuid** | **string** | The unique ID for the &#x60;iteration_item&#x60;. |  |
 
 ### Return type
 
@@ -1895,7 +2327,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletetag"></a>
+<a id="deletetag"></a>
 # **DeleteTag**
 > void DeleteTag (string tagGuid, string userGuid)
 
@@ -1934,8 +2366,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteTag: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteTag: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1943,12 +2375,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteTagWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete tag
+    apiInstance.DeleteTagWithHttpInfo(tagGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteTagWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tagGuid** | **string**| The unique id for a &#x60;tag&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **tagGuid** | **string** | The unique id for a &#x60;tag&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -1971,7 +2420,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletetagging"></a>
+<a id="deletetagging"></a>
 # **DeleteTagging**
 > void DeleteTagging (string taggingGuid, string userGuid)
 
@@ -2010,8 +2459,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteTagging: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteTagging: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2019,12 +2468,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteTaggingWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete tagging
+    apiInstance.DeleteTaggingWithHttpInfo(taggingGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteTaggingWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taggingGuid** | **string**| The unique id for a &#x60;tagging&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **taggingGuid** | **string** | The unique id for a &#x60;tagging&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2047,7 +2513,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletetransactionrule"></a>
+<a id="deletetransactionrule"></a>
 # **DeleteTransactionRule**
 > void DeleteTransactionRule (string transactionRuleGuid, string userGuid)
 
@@ -2086,8 +2552,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteTransactionRule: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteTransactionRule: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2095,12 +2561,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteTransactionRuleWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete transaction rule
+    apiInstance.DeleteTransactionRuleWithHttpInfo(transactionRuleGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteTransactionRuleWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **transactionRuleGuid** | **string**| The unique id for a &#x60;transaction_rule&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **transactionRuleGuid** | **string** | The unique id for a &#x60;transaction_rule&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2123,7 +2606,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteuser"></a>
+<a id="deleteuser"></a>
 # **DeleteUser**
 > void DeleteUser (string userGuid)
 
@@ -2161,8 +2644,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeleteUser: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeleteUser: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2170,11 +2653,28 @@ namespace Example
 }
 ```
 
+#### Using the DeleteUserWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete user
+    apiInstance.DeleteUserWithHttpInfo(userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeleteUserWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2197,7 +2697,7 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deprecatedrequestpaymentprocessorauthorizationcode"></a>
+<a id="deprecatedrequestpaymentprocessorauthorizationcode"></a>
 # **DeprecatedRequestPaymentProcessorAuthorizationCode**
 > PaymentProcessorAuthorizationCodeResponseBody DeprecatedRequestPaymentProcessorAuthorizationCode (PaymentProcessorAuthorizationCodeRequestBody paymentProcessorAuthorizationCodeRequestBody)
 
@@ -2236,8 +2736,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DeprecatedRequestPaymentProcessorAuthorizationCode: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DeprecatedRequestPaymentProcessorAuthorizationCode: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2245,11 +2745,31 @@ namespace Example
 }
 ```
 
+#### Using the DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // (Deprecated) Request an authorization code.
+    ApiResponse<PaymentProcessorAuthorizationCodeResponseBody> response = apiInstance.DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfo(paymentProcessorAuthorizationCodeRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DeprecatedRequestPaymentProcessorAuthorizationCodeWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **paymentProcessorAuthorizationCodeRequestBody** | [**PaymentProcessorAuthorizationCodeRequestBody**](PaymentProcessorAuthorizationCodeRequestBody.md)| The scope for the authorization code. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **paymentProcessorAuthorizationCodeRequestBody** | [**PaymentProcessorAuthorizationCodeRequestBody**](PaymentProcessorAuthorizationCodeRequestBody.md) | The scope for the authorization code. |  |
 
 ### Return type
 
@@ -2272,7 +2792,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="downloadstatementpdf"></a>
+<a id="downloadstatementpdf"></a>
 # **DownloadStatementPDF**
 > System.IO.Stream DownloadStatementPDF (string memberGuid, string statementGuid, string userGuid)
 
@@ -2313,8 +2833,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DownloadStatementPDF: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DownloadStatementPDF: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2322,13 +2842,33 @@ namespace Example
 }
 ```
 
+#### Using the DownloadStatementPDFWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Download statement pdf
+    ApiResponse<System.IO.Stream> response = apiInstance.DownloadStatementPDFWithHttpInfo(memberGuid, statementGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DownloadStatementPDFWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **statementGuid** | **string**| The unique id for a &#x60;statement&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **statementGuid** | **string** | The unique id for a &#x60;statement&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2351,7 +2891,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="downloadtaxdocument"></a>
+<a id="downloadtaxdocument"></a>
 # **DownloadTaxDocument**
 > System.IO.Stream DownloadTaxDocument (string taxDocumentGuid, string memberGuid, string userGuid)
 
@@ -2392,8 +2932,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.DownloadTaxDocument: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.DownloadTaxDocument: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2401,13 +2941,33 @@ namespace Example
 }
 ```
 
+#### Using the DownloadTaxDocumentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Download a Tax Document PDF
+    ApiResponse<System.IO.Stream> response = apiInstance.DownloadTaxDocumentWithHttpInfo(taxDocumentGuid, memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.DownloadTaxDocumentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taxDocumentGuid** | **string**| The unique id for a &#x60;tax_document&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **taxDocumentGuid** | **string** | The unique id for a &#x60;tax_document&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2430,7 +2990,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="enhancetransactions"></a>
+<a id="enhancetransactions"></a>
 # **EnhanceTransactions**
 > EnhanceTransactionsResponseBody EnhanceTransactions (EnhanceTransactionsRequestBody enhanceTransactionsRequestBody)
 
@@ -2469,8 +3029,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.EnhanceTransactions: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.EnhanceTransactions: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2478,11 +3038,31 @@ namespace Example
 }
 ```
 
+#### Using the EnhanceTransactionsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Enhance transactions
+    ApiResponse<EnhanceTransactionsResponseBody> response = apiInstance.EnhanceTransactionsWithHttpInfo(enhanceTransactionsRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.EnhanceTransactionsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **enhanceTransactionsRequestBody** | [**EnhanceTransactionsRequestBody**](EnhanceTransactionsRequestBody.md)| Transaction object to be enhanced | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **enhanceTransactionsRequestBody** | [**EnhanceTransactionsRequestBody**](EnhanceTransactionsRequestBody.md) | Transaction object to be enhanced |  |
 
 ### Return type
 
@@ -2505,7 +3085,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="extendhistory"></a>
+<a id="extendhistory"></a>
 # **ExtendHistory**
 > MemberResponseBody ExtendHistory (string memberGuid, string userGuid)
 
@@ -2545,8 +3125,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ExtendHistory: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ExtendHistory: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2554,12 +3134,32 @@ namespace Example
 }
 ```
 
+#### Using the ExtendHistoryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Extend history
+    ApiResponse<MemberResponseBody> response = apiInstance.ExtendHistoryWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ExtendHistoryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique identifier for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique identifier for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique identifier for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2582,7 +3182,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="fetchstatements"></a>
+<a id="fetchstatements"></a>
 # **FetchStatements**
 > MemberResponseBody FetchStatements (string memberGuid, string userGuid)
 
@@ -2622,8 +3222,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.FetchStatements: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.FetchStatements: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2631,12 +3231,32 @@ namespace Example
 }
 ```
 
+#### Using the FetchStatementsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Fetch statements
+    ApiResponse<MemberResponseBody> response = apiInstance.FetchStatementsWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.FetchStatementsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2659,7 +3279,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="fetchtaxdocuments"></a>
+<a id="fetchtaxdocuments"></a>
 # **FetchTaxDocuments**
 > MemberResponseBody FetchTaxDocuments (string memberGuid, string userGuid)
 
@@ -2699,8 +3319,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.FetchTaxDocuments: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.FetchTaxDocuments: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2708,12 +3328,32 @@ namespace Example
 }
 ```
 
+#### Using the FetchTaxDocumentsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Fetch Tax Documents
+    ApiResponse<MemberResponseBody> response = apiInstance.FetchTaxDocumentsWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.FetchTaxDocumentsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2736,7 +3376,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="identifymember"></a>
+<a id="identifymember"></a>
 # **IdentifyMember**
 > MemberResponseBody IdentifyMember (string memberGuid, string userGuid)
 
@@ -2776,8 +3416,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.IdentifyMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.IdentifyMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2785,12 +3425,32 @@ namespace Example
 }
 ```
 
+#### Using the IdentifyMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Identify member
+    ApiResponse<MemberResponseBody> response = apiInstance.IdentifyMemberWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.IdentifyMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -2813,7 +3473,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listaccountnumbersbyaccount"></a>
+<a id="listaccountnumbersbyaccount"></a>
 # **ListAccountNumbersByAccount**
 > AccountNumbersResponseBody ListAccountNumbersByAccount (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -2855,8 +3515,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListAccountNumbersByAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListAccountNumbersByAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2864,14 +3524,34 @@ namespace Example
 }
 ```
 
+#### Using the ListAccountNumbersByAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List account numbers by account
+    ApiResponse<AccountNumbersResponseBody> response = apiInstance.ListAccountNumbersByAccountWithHttpInfo(accountGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListAccountNumbersByAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -2894,7 +3574,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listaccountnumbersbymember"></a>
+<a id="listaccountnumbersbymember"></a>
 # **ListAccountNumbersByMember**
 > AccountNumbersResponseBody ListAccountNumbersByMember (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -2936,8 +3616,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListAccountNumbersByMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListAccountNumbersByMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2945,14 +3625,34 @@ namespace Example
 }
 ```
 
+#### Using the ListAccountNumbersByMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List account numbers by member
+    ApiResponse<AccountNumbersResponseBody> response = apiInstance.ListAccountNumbersByMemberWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListAccountNumbersByMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -2975,7 +3675,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listaccountownersbymember"></a>
+<a id="listaccountownersbymember"></a>
 # **ListAccountOwnersByMember**
 > AccountOwnersResponseBody ListAccountOwnersByMember (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -3017,8 +3717,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListAccountOwnersByMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListAccountOwnersByMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3026,14 +3726,34 @@ namespace Example
 }
 ```
 
+#### Using the ListAccountOwnersByMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List account owners by member
+    ApiResponse<AccountOwnersResponseBody> response = apiInstance.ListAccountOwnersByMemberWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListAccountOwnersByMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -3056,7 +3776,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listcategories"></a>
+<a id="listcategories"></a>
 # **ListCategories**
 > CategoriesResponseBody ListCategories (string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -3097,8 +3817,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListCategories: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListCategories: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3106,13 +3826,33 @@ namespace Example
 }
 ```
 
+#### Using the ListCategoriesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List categories
+    ApiResponse<CategoriesResponseBody> response = apiInstance.ListCategoriesWithHttpInfo(userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListCategoriesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -3135,7 +3875,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listdefaultcategories"></a>
+<a id="listdefaultcategories"></a>
 # **ListDefaultCategories**
 > CategoriesResponseBody ListDefaultCategories (int? page = null, int? recordsPerPage = null)
 
@@ -3175,8 +3915,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategories: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategories: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3184,12 +3924,32 @@ namespace Example
 }
 ```
 
+#### Using the ListDefaultCategoriesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List default categories
+    ApiResponse<CategoriesResponseBody> response = apiInstance.ListDefaultCategoriesWithHttpInfo(page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategoriesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -3212,7 +3972,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listdefaultcategoriesbyuser"></a>
+<a id="listdefaultcategoriesbyuser"></a>
 # **ListDefaultCategoriesByUser**
 > CategoriesResponseBody ListDefaultCategoriesByUser (string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -3253,8 +4013,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategoriesByUser: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategoriesByUser: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3262,13 +4022,33 @@ namespace Example
 }
 ```
 
+#### Using the ListDefaultCategoriesByUserWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List default categories by user
+    ApiResponse<CategoriesResponseBody> response = apiInstance.ListDefaultCategoriesByUserWithHttpInfo(userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListDefaultCategoriesByUserWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -3291,7 +4071,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listfavoriteinstitutions"></a>
+<a id="listfavoriteinstitutions"></a>
 # **ListFavoriteInstitutions**
 > InstitutionsResponseBody ListFavoriteInstitutions (int? page = null, int? recordsPerPage = null)
 
@@ -3331,8 +4111,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListFavoriteInstitutions: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListFavoriteInstitutions: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3340,12 +4120,32 @@ namespace Example
 }
 ```
 
+#### Using the ListFavoriteInstitutionsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List favorite institutions
+    ApiResponse<InstitutionsResponseBody> response = apiInstance.ListFavoriteInstitutionsWithHttpInfo(page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListFavoriteInstitutionsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -3368,9 +4168,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listholdings"></a>
+<a id="listholdings"></a>
 # **ListHoldings**
-> HoldingsResponseBody ListHoldings (string userGuid, string fromDate = null, int? page = null, int? recordsPerPage = null, string toDate = null)
+> HoldingsResponseBody ListHoldings (string userGuid, string? fromDate = null, int? page = null, int? recordsPerPage = null, string? toDate = null)
 
 List holdings
 
@@ -3398,10 +4198,10 @@ namespace Example
 
             var apiInstance = new MxPlatformApi(config);
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var fromDate = 2015-09-20;  // string | Filter holdings from this date. (optional) 
+            var fromDate = 2015-09-20;  // string? | Filter holdings from this date. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
-            var toDate = 2019-10-20;  // string | Filter holdings to this date. (optional) 
+            var toDate = 2019-10-20;  // string? | Filter holdings to this date. (optional) 
 
             try
             {
@@ -3411,8 +4211,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListHoldings: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListHoldings: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3420,15 +4220,35 @@ namespace Example
 }
 ```
 
+#### Using the ListHoldingsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List holdings
+    ApiResponse<HoldingsResponseBody> response = apiInstance.ListHoldingsWithHttpInfo(userGuid, fromDate, page, recordsPerPage, toDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListHoldingsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **fromDate** | **string**| Filter holdings from this date. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **toDate** | **string**| Filter holdings to this date. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **fromDate** | **string?** | Filter holdings from this date. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **toDate** | **string?** | Filter holdings to this date. | [optional]  |
 
 ### Return type
 
@@ -3451,9 +4271,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listholdingsbyaccount"></a>
+<a id="listholdingsbyaccount"></a>
 # **ListHoldingsByAccount**
-> HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid, string fromDate = null, int? page = null, int? recordsPerPage = null, string toDate = null)
+> HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid, string? fromDate = null, int? page = null, int? recordsPerPage = null, string? toDate = null)
 
 List holdings by account
 
@@ -3482,10 +4302,10 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var accountGuid = ACT-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for the `account`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for the `user`.
-            var fromDate = 2015-09-20;  // string | Filter holdings from this date. (optional) 
+            var fromDate = 2015-09-20;  // string? | Filter holdings from this date. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
-            var toDate = 2019-10-20;  // string | Filter holdings to this date. (optional) 
+            var toDate = 2019-10-20;  // string? | Filter holdings to this date. (optional) 
 
             try
             {
@@ -3495,8 +4315,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListHoldingsByAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListHoldingsByAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3504,16 +4324,36 @@ namespace Example
 }
 ```
 
+#### Using the ListHoldingsByAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List holdings by account
+    ApiResponse<HoldingsResponseBody> response = apiInstance.ListHoldingsByAccountWithHttpInfo(accountGuid, userGuid, fromDate, page, recordsPerPage, toDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListHoldingsByAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for the &#x60;account&#x60;. | 
- **userGuid** | **string**| The unique id for the &#x60;user&#x60;. | 
- **fromDate** | **string**| Filter holdings from this date. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **toDate** | **string**| Filter holdings to this date. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for the &#x60;account&#x60;. |  |
+| **userGuid** | **string** | The unique id for the &#x60;user&#x60;. |  |
+| **fromDate** | **string?** | Filter holdings from this date. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **toDate** | **string?** | Filter holdings to this date. | [optional]  |
 
 ### Return type
 
@@ -3536,9 +4376,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listholdingsbymember"></a>
+<a id="listholdingsbymember"></a>
 # **ListHoldingsByMember**
-> HoldingsResponseBody ListHoldingsByMember (string memberGuid, string userGuid, string fromDate = null, int? page = null, int? recordsPerPage = null, string toDate = null)
+> HoldingsResponseBody ListHoldingsByMember (string memberGuid, string userGuid, string? fromDate = null, int? page = null, int? recordsPerPage = null, string? toDate = null)
 
 List holdings by member
 
@@ -3567,10 +4407,10 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var fromDate = 2015-09-20;  // string | Filter holdings from this date. (optional) 
+            var fromDate = 2015-09-20;  // string? | Filter holdings from this date. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
-            var toDate = 2019-10-20;  // string | Filter holdings to this date. (optional) 
+            var toDate = 2019-10-20;  // string? | Filter holdings to this date. (optional) 
 
             try
             {
@@ -3580,8 +4420,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListHoldingsByMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListHoldingsByMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3589,16 +4429,36 @@ namespace Example
 }
 ```
 
+#### Using the ListHoldingsByMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List holdings by member
+    ApiResponse<HoldingsResponseBody> response = apiInstance.ListHoldingsByMemberWithHttpInfo(memberGuid, userGuid, fromDate, page, recordsPerPage, toDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListHoldingsByMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **fromDate** | **string**| Filter holdings from this date. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **toDate** | **string**| Filter holdings to this date. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **fromDate** | **string?** | Filter holdings from this date. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **toDate** | **string?** | Filter holdings to this date. | [optional]  |
 
 ### Return type
 
@@ -3621,7 +4481,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listinstitutioncredentials"></a>
+<a id="listinstitutioncredentials"></a>
 # **ListInstitutionCredentials**
 > CredentialsResponseBody ListInstitutionCredentials (string institutionCode, int? page = null, int? recordsPerPage = null)
 
@@ -3662,8 +4522,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListInstitutionCredentials: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListInstitutionCredentials: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3671,13 +4531,33 @@ namespace Example
 }
 ```
 
+#### Using the ListInstitutionCredentialsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List institution credentials
+    ApiResponse<CredentialsResponseBody> response = apiInstance.ListInstitutionCredentialsWithHttpInfo(institutionCode, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListInstitutionCredentialsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **institutionCode** | **string**| The institution_code of the institution. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **institutionCode** | **string** | The institution_code of the institution. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -3700,9 +4580,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listinstitutions"></a>
+<a id="listinstitutions"></a>
 # **ListInstitutions**
-> InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null)
+> InstitutionsResponseBody ListInstitutions (string? name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null)
 
 List institutions
 
@@ -3729,7 +4609,7 @@ namespace Example
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new MxPlatformApi(config);
-            var name = chase;  // string | This will list only institutions in which the appended string appears. (optional) 
+            var name = chase;  // string? | This will list only institutions in which the appended string appears. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
             var supportsAccountIdentification = true;  // bool? | Filter only institutions which support account identification. (optional) 
@@ -3745,8 +4625,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListInstitutions: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListInstitutions: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3754,17 +4634,37 @@ namespace Example
 }
 ```
 
+#### Using the ListInstitutionsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List institutions
+    ApiResponse<InstitutionsResponseBody> response = apiInstance.ListInstitutionsWithHttpInfo(name, page, recordsPerPage, supportsAccountIdentification, supportsAccountStatement, supportsAccountVerification, supportsTransactionHistory);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListInstitutionsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| This will list only institutions in which the appended string appears. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **supportsAccountIdentification** | **bool?**| Filter only institutions which support account identification. | [optional] 
- **supportsAccountStatement** | **bool?**| Filter only institutions which support account statements. | [optional] 
- **supportsAccountVerification** | **bool?**| Filter only institutions which support account verification. | [optional] 
- **supportsTransactionHistory** | **bool?**| Filter only institutions which support extended transaction history. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **name** | **string?** | This will list only institutions in which the appended string appears. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **supportsAccountIdentification** | **bool?** | Filter only institutions which support account identification. | [optional]  |
+| **supportsAccountStatement** | **bool?** | Filter only institutions which support account statements. | [optional]  |
+| **supportsAccountVerification** | **bool?** | Filter only institutions which support account verification. | [optional]  |
+| **supportsTransactionHistory** | **bool?** | Filter only institutions which support extended transaction history. | [optional]  |
 
 ### Return type
 
@@ -3787,7 +4687,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmanagedaccounts"></a>
+<a id="listmanagedaccounts"></a>
 # **ListManagedAccounts**
 > AccountsResponseBody ListManagedAccounts (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -3829,8 +4729,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListManagedAccounts: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListManagedAccounts: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3838,14 +4738,34 @@ namespace Example
 }
 ```
 
+#### Using the ListManagedAccountsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List managed accounts
+    ApiResponse<AccountsResponseBody> response = apiInstance.ListManagedAccountsWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListManagedAccountsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -3868,7 +4788,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmanagedinstitutions"></a>
+<a id="listmanagedinstitutions"></a>
 # **ListManagedInstitutions**
 > InstitutionsResponseBody ListManagedInstitutions (int? page = null, int? recordsPerPage = null)
 
@@ -3908,8 +4828,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListManagedInstitutions: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListManagedInstitutions: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3917,12 +4837,32 @@ namespace Example
 }
 ```
 
+#### Using the ListManagedInstitutionsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List managed institutions
+    ApiResponse<InstitutionsResponseBody> response = apiInstance.ListManagedInstitutionsWithHttpInfo(page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListManagedInstitutionsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -3945,7 +4885,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmanagedmembers"></a>
+<a id="listmanagedmembers"></a>
 # **ListManagedMembers**
 > MembersResponseBody ListManagedMembers (string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -3986,8 +4926,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListManagedMembers: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListManagedMembers: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -3995,13 +4935,33 @@ namespace Example
 }
 ```
 
+#### Using the ListManagedMembersWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List managed members
+    ApiResponse<MembersResponseBody> response = apiInstance.ListManagedMembersWithHttpInfo(userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListManagedMembersWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4024,7 +4984,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmanagedtransactions"></a>
+<a id="listmanagedtransactions"></a>
 # **ListManagedTransactions**
 > TransactionsResponseBody ListManagedTransactions (string accountGuid, string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4067,8 +5027,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListManagedTransactions: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListManagedTransactions: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4076,15 +5036,35 @@ namespace Example
 }
 ```
 
+#### Using the ListManagedTransactionsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List managed transactions
+    ApiResponse<TransactionsResponseBody> response = apiInstance.ListManagedTransactionsWithHttpInfo(accountGuid, memberGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListManagedTransactionsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4107,7 +5087,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmemberaccounts"></a>
+<a id="listmemberaccounts"></a>
 # **ListMemberAccounts**
 > AccountsResponseBody ListMemberAccounts (string userGuid, string memberGuid, bool? memberIsManagedByUser = null, int? page = null, int? recordsPerPage = null)
 
@@ -4150,8 +5130,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListMemberAccounts: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListMemberAccounts: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4159,15 +5139,35 @@ namespace Example
 }
 ```
 
+#### Using the ListMemberAccountsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List accounts by member
+    ApiResponse<AccountsResponseBody> response = apiInstance.ListMemberAccountsWithHttpInfo(userGuid, memberGuid, memberIsManagedByUser, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListMemberAccountsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **memberIsManagedByUser** | **bool?**| List only accounts whose member is managed by the user. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **memberIsManagedByUser** | **bool?** | List only accounts whose member is managed by the user. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4190,7 +5190,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmemberchallenges"></a>
+<a id="listmemberchallenges"></a>
 # **ListMemberChallenges**
 > ChallengesResponseBody ListMemberChallenges (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4232,8 +5232,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListMemberChallenges: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListMemberChallenges: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4241,14 +5241,34 @@ namespace Example
 }
 ```
 
+#### Using the ListMemberChallengesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List member challenges
+    ApiResponse<ChallengesResponseBody> response = apiInstance.ListMemberChallengesWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListMemberChallengesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4271,7 +5291,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmembercredentials"></a>
+<a id="listmembercredentials"></a>
 # **ListMemberCredentials**
 > CredentialsResponseBody ListMemberCredentials (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4313,8 +5333,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListMemberCredentials: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListMemberCredentials: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4322,14 +5342,34 @@ namespace Example
 }
 ```
 
+#### Using the ListMemberCredentialsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List member credentials
+    ApiResponse<CredentialsResponseBody> response = apiInstance.ListMemberCredentialsWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListMemberCredentialsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4352,7 +5392,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmembers"></a>
+<a id="listmembers"></a>
 # **ListMembers**
 > MembersResponseBody ListMembers (string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4393,8 +5433,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListMembers: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListMembers: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4402,13 +5442,33 @@ namespace Example
 }
 ```
 
+#### Using the ListMembersWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List members
+    ApiResponse<MembersResponseBody> response = apiInstance.ListMembersWithHttpInfo(userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListMembersWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4431,7 +5491,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listmerchants"></a>
+<a id="listmerchants"></a>
 # **ListMerchants**
 > MerchantsResponseBody ListMerchants (int? page = null, int? recordsPerPage = null)
 
@@ -4471,8 +5531,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListMerchants: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListMerchants: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4480,12 +5540,32 @@ namespace Example
 }
 ```
 
+#### Using the ListMerchantsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List merchants
+    ApiResponse<MerchantsResponseBody> response = apiInstance.ListMerchantsWithHttpInfo(page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListMerchantsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4508,7 +5588,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listspendingplanaccounts"></a>
+<a id="listspendingplanaccounts"></a>
 # **ListSpendingPlanAccounts**
 > SpendingPlanAccountsResponse ListSpendingPlanAccounts (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4550,8 +5630,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanAccounts: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanAccounts: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4559,14 +5639,34 @@ namespace Example
 }
 ```
 
+#### Using the ListSpendingPlanAccountsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List spending plan accounts
+    ApiResponse<SpendingPlanAccountsResponse> response = apiInstance.ListSpendingPlanAccountsWithHttpInfo(userGuid, spendingPlanGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanAccountsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4589,7 +5689,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listspendingplaniterationitems"></a>
+<a id="listspendingplaniterationitems"></a>
 # **ListSpendingPlanIterationItems**
 > SpendingPlanIterationItemsResponseBody ListSpendingPlanIterationItems (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4631,8 +5731,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanIterationItems: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanIterationItems: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4640,14 +5740,34 @@ namespace Example
 }
 ```
 
+#### Using the ListSpendingPlanIterationItemsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List spending plan iteration items
+    ApiResponse<SpendingPlanIterationItemsResponseBody> response = apiInstance.ListSpendingPlanIterationItemsWithHttpInfo(userGuid, spendingPlanGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanIterationItemsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4670,7 +5790,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listspendingplaniterations"></a>
+<a id="listspendingplaniterations"></a>
 # **ListSpendingPlanIterations**
 > SpendingPlanIterationsResponse ListSpendingPlanIterations (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4712,8 +5832,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanIterations: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanIterations: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4721,14 +5841,34 @@ namespace Example
 }
 ```
 
+#### Using the ListSpendingPlanIterationsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List spending plan iterations
+    ApiResponse<SpendingPlanIterationsResponse> response = apiInstance.ListSpendingPlanIterationsWithHttpInfo(userGuid, spendingPlanGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlanIterationsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4751,7 +5891,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listspendingplans"></a>
+<a id="listspendingplans"></a>
 # **ListSpendingPlans**
 > SpendingPlansResponseBody ListSpendingPlans (string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4792,8 +5932,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlans: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlans: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4801,13 +5941,33 @@ namespace Example
 }
 ```
 
+#### Using the ListSpendingPlansWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List spending plans
+    ApiResponse<SpendingPlansResponseBody> response = apiInstance.ListSpendingPlansWithHttpInfo(userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListSpendingPlansWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4830,7 +5990,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="liststatementsbymember"></a>
+<a id="liststatementsbymember"></a>
 # **ListStatementsByMember**
 > StatementsResponseBody ListStatementsByMember (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4872,8 +6032,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListStatementsByMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListStatementsByMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4881,14 +6041,34 @@ namespace Example
 }
 ```
 
+#### Using the ListStatementsByMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List statements by member
+    ApiResponse<StatementsResponseBody> response = apiInstance.ListStatementsByMemberWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListStatementsByMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4911,7 +6091,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtaggings"></a>
+<a id="listtaggings"></a>
 # **ListTaggings**
 > TaggingsResponseBody ListTaggings (string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -4952,8 +6132,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListTaggings: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListTaggings: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -4961,13 +6141,33 @@ namespace Example
 }
 ```
 
+#### Using the ListTaggingsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List taggings
+    ApiResponse<TaggingsResponseBody> response = apiInstance.ListTaggingsWithHttpInfo(userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListTaggingsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -4990,7 +6190,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtags"></a>
+<a id="listtags"></a>
 # **ListTags**
 > TagsResponseBody ListTags (string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -5031,8 +6231,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListTags: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListTags: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5040,13 +6240,33 @@ namespace Example
 }
 ```
 
+#### Using the ListTagsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List tags
+    ApiResponse<TagsResponseBody> response = apiInstance.ListTagsWithHttpInfo(userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListTagsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -5069,7 +6289,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtaxdocuments"></a>
+<a id="listtaxdocuments"></a>
 # **ListTaxDocuments**
 > TaxDocumentsResponseBody ListTaxDocuments (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -5111,8 +6331,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListTaxDocuments: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListTaxDocuments: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5120,14 +6340,34 @@ namespace Example
 }
 ```
 
+#### Using the ListTaxDocumentsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Tax Documents
+    ApiResponse<TaxDocumentsResponseBody> response = apiInstance.ListTaxDocumentsWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListTaxDocumentsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -5150,7 +6390,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtransactionrules"></a>
+<a id="listtransactionrules"></a>
 # **ListTransactionRules**
 > TransactionRulesResponseBody ListTransactionRules (string userGuid, int? page = null, int? recordsPerPage = null)
 
@@ -5191,8 +6431,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListTransactionRules: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListTransactionRules: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5200,13 +6440,33 @@ namespace Example
 }
 ```
 
+#### Using the ListTransactionRulesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List transaction rules
+    ApiResponse<TransactionRulesResponseBody> response = apiInstance.ListTransactionRulesWithHttpInfo(userGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListTransactionRulesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -5229,9 +6489,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtransactions"></a>
+<a id="listtransactions"></a>
 # **ListTransactions**
-> TransactionsResponseBody ListTransactions (string userGuid, string fromDate = null, int? page = null, int? recordsPerPage = null, string toDate = null)
+> TransactionsResponseBody ListTransactions (string userGuid, string? fromDate = null, int? page = null, int? recordsPerPage = null, string? toDate = null)
 
 List transactions
 
@@ -5259,10 +6519,10 @@ namespace Example
 
             var apiInstance = new MxPlatformApi(config);
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var fromDate = 2015-09-20;  // string | Filter transactions from this date. (optional) 
+            var fromDate = 2015-09-20;  // string? | Filter transactions from this date. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
-            var toDate = 2019-10-20;  // string | Filter transactions to this date. (optional) 
+            var toDate = 2019-10-20;  // string? | Filter transactions to this date. (optional) 
 
             try
             {
@@ -5272,8 +6532,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListTransactions: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListTransactions: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5281,15 +6541,35 @@ namespace Example
 }
 ```
 
+#### Using the ListTransactionsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List transactions
+    ApiResponse<TransactionsResponseBody> response = apiInstance.ListTransactionsWithHttpInfo(userGuid, fromDate, page, recordsPerPage, toDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListTransactionsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **fromDate** | **string**| Filter transactions from this date. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **toDate** | **string**| Filter transactions to this date. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **fromDate** | **string?** | Filter transactions from this date. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **toDate** | **string?** | Filter transactions to this date. | [optional]  |
 
 ### Return type
 
@@ -5312,9 +6592,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtransactionsbyaccount"></a>
+<a id="listtransactionsbyaccount"></a>
 # **ListTransactionsByAccount**
-> TransactionsResponseBody ListTransactionsByAccount (string accountGuid, string userGuid, string fromDate = null, int? page = null, int? recordsPerPage = null, string toDate = null)
+> TransactionsResponseBody ListTransactionsByAccount (string accountGuid, string userGuid, string? fromDate = null, int? page = null, int? recordsPerPage = null, string? toDate = null)
 
 List transactions by account
 
@@ -5343,10 +6623,10 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var fromDate = 2015-09-20;  // string | Filter transactions from this date. (optional) 
+            var fromDate = 2015-09-20;  // string? | Filter transactions from this date. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
-            var toDate = 2019-10-20;  // string | Filter transactions to this date. (optional) 
+            var toDate = 2019-10-20;  // string? | Filter transactions to this date. (optional) 
 
             try
             {
@@ -5356,8 +6636,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5365,16 +6645,36 @@ namespace Example
 }
 ```
 
+#### Using the ListTransactionsByAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List transactions by account
+    ApiResponse<TransactionsResponseBody> response = apiInstance.ListTransactionsByAccountWithHttpInfo(accountGuid, userGuid, fromDate, page, recordsPerPage, toDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **fromDate** | **string**| Filter transactions from this date. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **toDate** | **string**| Filter transactions to this date. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **fromDate** | **string?** | Filter transactions from this date. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **toDate** | **string?** | Filter transactions to this date. | [optional]  |
 
 ### Return type
 
@@ -5397,9 +6697,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtransactionsbymember"></a>
+<a id="listtransactionsbymember"></a>
 # **ListTransactionsByMember**
-> TransactionsResponseBody ListTransactionsByMember (string memberGuid, string userGuid, string fromDate = null, int? page = null, int? recordsPerPage = null, string toDate = null)
+> TransactionsResponseBody ListTransactionsByMember (string memberGuid, string userGuid, string? fromDate = null, int? page = null, int? recordsPerPage = null, string? toDate = null)
 
 List transactions by member
 
@@ -5428,10 +6728,10 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var fromDate = 2015-09-20;  // string | Filter transactions from this date. (optional) 
+            var fromDate = 2015-09-20;  // string? | Filter transactions from this date. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
-            var toDate = 2019-10-20;  // string | Filter transactions to this date. (optional) 
+            var toDate = 2019-10-20;  // string? | Filter transactions to this date. (optional) 
 
             try
             {
@@ -5441,8 +6741,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5450,16 +6750,36 @@ namespace Example
 }
 ```
 
+#### Using the ListTransactionsByMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List transactions by member
+    ApiResponse<TransactionsResponseBody> response = apiInstance.ListTransactionsByMemberWithHttpInfo(memberGuid, userGuid, fromDate, page, recordsPerPage, toDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **fromDate** | **string**| Filter transactions from this date. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **toDate** | **string**| Filter transactions to this date. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **fromDate** | **string?** | Filter transactions from this date. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **toDate** | **string?** | Filter transactions to this date. | [optional]  |
 
 ### Return type
 
@@ -5482,9 +6802,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listtransactionsbytag"></a>
+<a id="listtransactionsbytag"></a>
 # **ListTransactionsByTag**
-> TransactionsResponseBody ListTransactionsByTag (string tagGuid, string userGuid, string fromDate = null, int? page = null, int? recordsPerPage = null, string toDate = null)
+> TransactionsResponseBody ListTransactionsByTag (string tagGuid, string userGuid, string? fromDate = null, int? page = null, int? recordsPerPage = null, string? toDate = null)
 
 List transactions by tag
 
@@ -5513,10 +6833,10 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var tagGuid = TAG-aef36e72-6294-4c38-844d-e573e80aed52;  // string | The unique id for a `tag`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var fromDate = 2015-09-20;  // string | Filter transactions from this date. (optional) 
+            var fromDate = 2015-09-20;  // string? | Filter transactions from this date. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
-            var toDate = 2019-10-20;  // string | Filter transactions to this date. (optional) 
+            var toDate = 2019-10-20;  // string? | Filter transactions to this date. (optional) 
 
             try
             {
@@ -5526,8 +6846,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByTag: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByTag: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5535,16 +6855,36 @@ namespace Example
 }
 ```
 
+#### Using the ListTransactionsByTagWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List transactions by tag
+    ApiResponse<TransactionsResponseBody> response = apiInstance.ListTransactionsByTagWithHttpInfo(tagGuid, userGuid, fromDate, page, recordsPerPage, toDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListTransactionsByTagWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tagGuid** | **string**| The unique id for a &#x60;tag&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **fromDate** | **string**| Filter transactions from this date. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **toDate** | **string**| Filter transactions to this date. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **tagGuid** | **string** | The unique id for a &#x60;tag&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **fromDate** | **string?** | Filter transactions from this date. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **toDate** | **string?** | Filter transactions to this date. | [optional]  |
 
 ### Return type
 
@@ -5567,7 +6907,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listuseraccounts"></a>
+<a id="listuseraccounts"></a>
 # **ListUserAccounts**
 > AccountsResponseBody ListUserAccounts (string userGuid, bool? memberIsManagedByUser = null, int? page = null, bool? isManual = null, int? recordsPerPage = null)
 
@@ -5610,8 +6950,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListUserAccounts: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListUserAccounts: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5619,15 +6959,35 @@ namespace Example
 }
 ```
 
+#### Using the ListUserAccountsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List accounts
+    ApiResponse<AccountsResponseBody> response = apiInstance.ListUserAccountsWithHttpInfo(userGuid, memberIsManagedByUser, page, isManual, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListUserAccountsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **memberIsManagedByUser** | **bool?**| List only accounts whose member is managed by the user. | [optional] 
- **page** | **int?**| Specify current page. | [optional] 
- **isManual** | **bool?**| List only accounts that were manually created. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **memberIsManagedByUser** | **bool?** | List only accounts whose member is managed by the user. | [optional]  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **isManual** | **bool?** | List only accounts that were manually created. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -5650,9 +7010,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="listusers"></a>
+<a id="listusers"></a>
 # **ListUsers**
-> UsersResponseBody ListUsers (int? page = null, int? recordsPerPage = null, string id = null, string email = null, bool? isDisabled = null)
+> UsersResponseBody ListUsers (int? page = null, int? recordsPerPage = null, string? id = null, string? email = null, bool? isDisabled = null)
 
 List users
 
@@ -5681,8 +7041,8 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
-            var id = u-12324-abdc;  // string | The user `id` to search for. (optional) 
-            var email = example@example.com;  // string | The user `email` to search for. (optional) 
+            var id = u-12324-abdc;  // string? | The user `id` to search for. (optional) 
+            var email = example@example.com;  // string? | The user `email` to search for. (optional) 
             var isDisabled = true;  // bool? | Search for users that are diabled. (optional) 
 
             try
@@ -5693,8 +7053,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ListUsers: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ListUsers: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5702,15 +7062,35 @@ namespace Example
 }
 ```
 
+#### Using the ListUsersWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List users
+    ApiResponse<UsersResponseBody> response = apiInstance.ListUsersWithHttpInfo(page, recordsPerPage, id, email, isDisabled);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListUsersWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
- **id** | **string**| The user &#x60;id&#x60; to search for. | [optional] 
- **email** | **string**| The user &#x60;email&#x60; to search for. | [optional] 
- **isDisabled** | **bool?**| Search for users that are diabled. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **id** | **string?** | The user &#x60;id&#x60; to search for. | [optional]  |
+| **email** | **string?** | The user &#x60;email&#x60; to search for. | [optional]  |
+| **isDisabled** | **bool?** | Search for users that are diabled. | [optional]  |
 
 ### Return type
 
@@ -5733,7 +7113,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readaccount"></a>
+<a id="readaccount"></a>
 # **ReadAccount**
 > AccountResponseBody ReadAccount (string accountGuid, string userGuid)
 
@@ -5773,8 +7153,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5782,12 +7162,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read account
+    ApiResponse<AccountResponseBody> response = apiInstance.ReadAccountWithHttpInfo(accountGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -5810,7 +7210,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readaccountbymember"></a>
+<a id="readaccountbymember"></a>
 # **ReadAccountByMember**
 > AccountResponseBody ReadAccountByMember (string accountGuid, string memberGuid, string userGuid)
 
@@ -5851,8 +7251,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadAccountByMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadAccountByMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5860,13 +7260,33 @@ namespace Example
 }
 ```
 
+#### Using the ReadAccountByMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read account by member
+    ApiResponse<AccountResponseBody> response = apiInstance.ReadAccountByMemberWithHttpInfo(accountGuid, memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadAccountByMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -5889,7 +7309,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readcategory"></a>
+<a id="readcategory"></a>
 # **ReadCategory**
 > CategoryResponseBody ReadCategory (string categoryGuid, string userGuid)
 
@@ -5929,8 +7349,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadCategory: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadCategory: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -5938,12 +7358,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadCategoryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read a custom category
+    ApiResponse<CategoryResponseBody> response = apiInstance.ReadCategoryWithHttpInfo(categoryGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadCategoryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **categoryGuid** | **string**| The unique id for a &#x60;category&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **categoryGuid** | **string** | The unique id for a &#x60;category&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -5966,7 +7406,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readdefaultcategory"></a>
+<a id="readdefaultcategory"></a>
 # **ReadDefaultCategory**
 > CategoryResponseBody ReadDefaultCategory (string categoryGuid)
 
@@ -6005,8 +7445,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadDefaultCategory: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadDefaultCategory: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6014,11 +7454,31 @@ namespace Example
 }
 ```
 
+#### Using the ReadDefaultCategoryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read a default category
+    ApiResponse<CategoryResponseBody> response = apiInstance.ReadDefaultCategoryWithHttpInfo(categoryGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadDefaultCategoryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **categoryGuid** | **string**| The unique id for a &#x60;category&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **categoryGuid** | **string** | The unique id for a &#x60;category&#x60;. |  |
 
 ### Return type
 
@@ -6041,7 +7501,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readholding"></a>
+<a id="readholding"></a>
 # **ReadHolding**
 > HoldingResponseBody ReadHolding (string holdingGuid, string userGuid)
 
@@ -6081,8 +7541,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadHolding: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadHolding: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6090,12 +7550,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadHoldingWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read holding
+    ApiResponse<HoldingResponseBody> response = apiInstance.ReadHoldingWithHttpInfo(holdingGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadHoldingWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **holdingGuid** | **string**| The unique id for a &#x60;holding&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **holdingGuid** | **string** | The unique id for a &#x60;holding&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -6118,7 +7598,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readinstitution"></a>
+<a id="readinstitution"></a>
 # **ReadInstitution**
 > InstitutionResponseBody ReadInstitution (string institutionCode)
 
@@ -6157,8 +7637,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadInstitution: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadInstitution: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6166,11 +7646,31 @@ namespace Example
 }
 ```
 
+#### Using the ReadInstitutionWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read institution
+    ApiResponse<InstitutionResponseBody> response = apiInstance.ReadInstitutionWithHttpInfo(institutionCode);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadInstitutionWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **institutionCode** | **string**| The institution_code of the institution. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **institutionCode** | **string** | The institution_code of the institution. |  |
 
 ### Return type
 
@@ -6193,7 +7693,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readmanagedaccount"></a>
+<a id="readmanagedaccount"></a>
 # **ReadManagedAccount**
 > AccountResponseBody ReadManagedAccount (string accountGuid, string memberGuid, string userGuid)
 
@@ -6234,8 +7734,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadManagedAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadManagedAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6243,13 +7743,33 @@ namespace Example
 }
 ```
 
+#### Using the ReadManagedAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read managed account
+    ApiResponse<AccountResponseBody> response = apiInstance.ReadManagedAccountWithHttpInfo(accountGuid, memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadManagedAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -6272,7 +7792,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readmanagedmember"></a>
+<a id="readmanagedmember"></a>
 # **ReadManagedMember**
 > MemberResponseBody ReadManagedMember (string memberGuid, string userGuid)
 
@@ -6312,8 +7832,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadManagedMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadManagedMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6321,12 +7841,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadManagedMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read managed member
+    ApiResponse<MemberResponseBody> response = apiInstance.ReadManagedMemberWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadManagedMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -6349,7 +7889,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readmanagedtransaction"></a>
+<a id="readmanagedtransaction"></a>
 # **ReadManagedTransaction**
 > TransactionResponseBody ReadManagedTransaction (string accountGuid, string memberGuid, string transactionGuid, string userGuid)
 
@@ -6391,8 +7931,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadManagedTransaction: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadManagedTransaction: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6400,14 +7940,34 @@ namespace Example
 }
 ```
 
+#### Using the ReadManagedTransactionWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read managed transaction
+    ApiResponse<TransactionResponseBody> response = apiInstance.ReadManagedTransactionWithHttpInfo(accountGuid, memberGuid, transactionGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadManagedTransactionWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **transactionGuid** | **string**| The unique id for a &#x60;transaction&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **transactionGuid** | **string** | The unique id for a &#x60;transaction&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -6430,7 +7990,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readmember"></a>
+<a id="readmember"></a>
 # **ReadMember**
 > MemberResponseBody ReadMember (string memberGuid, string userGuid)
 
@@ -6470,8 +8030,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6479,12 +8039,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read member
+    ApiResponse<MemberResponseBody> response = apiInstance.ReadMemberWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -6507,7 +8087,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readmemberstatus"></a>
+<a id="readmemberstatus"></a>
 # **ReadMemberStatus**
 > MemberStatusResponseBody ReadMemberStatus (string memberGuid, string userGuid)
 
@@ -6547,8 +8127,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadMemberStatus: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadMemberStatus: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6556,12 +8136,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadMemberStatusWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read member status
+    ApiResponse<MemberStatusResponseBody> response = apiInstance.ReadMemberStatusWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadMemberStatusWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -6584,7 +8184,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readmerchant"></a>
+<a id="readmerchant"></a>
 # **ReadMerchant**
 > MerchantResponseBody ReadMerchant (string merchantGuid)
 
@@ -6623,8 +8223,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadMerchant: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadMerchant: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6632,11 +8232,31 @@ namespace Example
 }
 ```
 
+#### Using the ReadMerchantWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read merchant
+    ApiResponse<MerchantResponseBody> response = apiInstance.ReadMerchantWithHttpInfo(merchantGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadMerchantWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantGuid** | **string**| The unique id for a &#x60;merchant&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **merchantGuid** | **string** | The unique id for a &#x60;merchant&#x60;. |  |
 
 ### Return type
 
@@ -6659,7 +8279,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readmerchantlocation"></a>
+<a id="readmerchantlocation"></a>
 # **ReadMerchantLocation**
 > MerchantLocationResponseBody ReadMerchantLocation (string merchantLocationGuid)
 
@@ -6698,8 +8318,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadMerchantLocation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadMerchantLocation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6707,11 +8327,31 @@ namespace Example
 }
 ```
 
+#### Using the ReadMerchantLocationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read merchant location
+    ApiResponse<MerchantLocationResponseBody> response = apiInstance.ReadMerchantLocationWithHttpInfo(merchantLocationGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadMerchantLocationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **merchantLocationGuid** | **string**| The unique id for a &#x60;merchant_location&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **merchantLocationGuid** | **string** | The unique id for a &#x60;merchant_location&#x60;. |  |
 
 ### Return type
 
@@ -6734,7 +8374,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readspendingplanaccount"></a>
+<a id="readspendingplanaccount"></a>
 # **ReadSpendingPlanAccount**
 > SpendingPlanAccountResponse ReadSpendingPlanAccount (string userGuid, string spendingPlanGuid, string spendingPlanAccountGuid, int? page = null, int? recordsPerPage = null)
 
@@ -6777,8 +8417,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6786,15 +8426,35 @@ namespace Example
 }
 ```
 
+#### Using the ReadSpendingPlanAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read spending plan account
+    ApiResponse<SpendingPlanAccountResponse> response = apiInstance.ReadSpendingPlanAccountWithHttpInfo(userGuid, spendingPlanGuid, spendingPlanAccountGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **spendingPlanAccountGuid** | **string**| The unique ID for the specified account. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **spendingPlanAccountGuid** | **string** | The unique ID for the specified account. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -6817,7 +8477,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readspendingplaniteration"></a>
+<a id="readspendingplaniteration"></a>
 # **ReadSpendingPlanIteration**
 > SpendingPlanIterationResponse ReadSpendingPlanIteration (string userGuid, string spendingPlanGuid, int iterationNumber, int? page = null, int? recordsPerPage = null)
 
@@ -6860,8 +8520,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanIteration: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanIteration: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6869,15 +8529,35 @@ namespace Example
 }
 ```
 
+#### Using the ReadSpendingPlanIterationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read a spending plan iteration
+    ApiResponse<SpendingPlanIterationResponse> response = apiInstance.ReadSpendingPlanIterationWithHttpInfo(userGuid, spendingPlanGuid, iterationNumber, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanIterationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **iterationNumber** | **int**| The current iteration number for the spending plan &#x60;iteration&#x60;&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **iterationNumber** | **int** | The current iteration number for the spending plan &#x60;iteration&#x60;&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -6900,7 +8580,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readspendingplaniterationitem"></a>
+<a id="readspendingplaniterationitem"></a>
 # **ReadSpendingPlanIterationItem**
 > SpendingPlanIterationItemResponse ReadSpendingPlanIterationItem (string userGuid, string spendingPlanGuid, string iterationItemGuid, int? page = null, int? recordsPerPage = null)
 
@@ -6943,8 +8623,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanIterationItem: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanIterationItem: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -6952,15 +8632,35 @@ namespace Example
 }
 ```
 
+#### Using the ReadSpendingPlanIterationItemWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read a spending plan iteration item
+    ApiResponse<SpendingPlanIterationItemResponse> response = apiInstance.ReadSpendingPlanIterationItemWithHttpInfo(userGuid, spendingPlanGuid, iterationItemGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanIterationItemWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **iterationItemGuid** | **string**| The unique ID for the &#x60;iteration_item&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **iterationItemGuid** | **string** | The unique ID for the &#x60;iteration_item&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -6983,7 +8683,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readspendingplanuser"></a>
+<a id="readspendingplanuser"></a>
 # **ReadSpendingPlanUser**
 > SpendingPlanResponse ReadSpendingPlanUser (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
 
@@ -7025,8 +8725,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanUser: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanUser: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7034,14 +8734,34 @@ namespace Example
 }
 ```
 
+#### Using the ReadSpendingPlanUserWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read a spending plan for a user
+    ApiResponse<SpendingPlanResponse> response = apiInstance.ReadSpendingPlanUserWithHttpInfo(userGuid, spendingPlanGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadSpendingPlanUserWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **page** | **int?** | Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
 
 ### Return type
 
@@ -7064,7 +8784,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readstatementbymember"></a>
+<a id="readstatementbymember"></a>
 # **ReadStatementByMember**
 > StatementResponseBody ReadStatementByMember (string memberGuid, string statementGuid, string userGuid)
 
@@ -7105,8 +8825,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadStatementByMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadStatementByMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7114,13 +8834,33 @@ namespace Example
 }
 ```
 
+#### Using the ReadStatementByMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read statement by member
+    ApiResponse<StatementResponseBody> response = apiInstance.ReadStatementByMemberWithHttpInfo(memberGuid, statementGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadStatementByMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **statementGuid** | **string**| The unique id for a &#x60;statement&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **statementGuid** | **string** | The unique id for a &#x60;statement&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -7143,7 +8883,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readtag"></a>
+<a id="readtag"></a>
 # **ReadTag**
 > TagResponseBody ReadTag (string tagGuid, string userGuid)
 
@@ -7183,8 +8923,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadTag: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadTag: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7192,12 +8932,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadTagWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read tag
+    ApiResponse<TagResponseBody> response = apiInstance.ReadTagWithHttpInfo(tagGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadTagWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tagGuid** | **string**| The unique id for a &#x60;tag&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **tagGuid** | **string** | The unique id for a &#x60;tag&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -7220,7 +8980,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readtagging"></a>
+<a id="readtagging"></a>
 # **ReadTagging**
 > TaggingResponseBody ReadTagging (string taggingGuid, string userGuid)
 
@@ -7260,8 +9020,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadTagging: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadTagging: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7269,12 +9029,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadTaggingWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read tagging
+    ApiResponse<TaggingResponseBody> response = apiInstance.ReadTaggingWithHttpInfo(taggingGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadTaggingWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taggingGuid** | **string**| The unique id for a &#x60;tagging&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **taggingGuid** | **string** | The unique id for a &#x60;tagging&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -7297,7 +9077,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readtaxdocument"></a>
+<a id="readtaxdocument"></a>
 # **ReadTaxDocument**
 > TaxDocumentResponseBody ReadTaxDocument (string taxDocumentGuid, string memberGuid, string userGuid)
 
@@ -7338,8 +9118,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadTaxDocument: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadTaxDocument: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7347,13 +9127,33 @@ namespace Example
 }
 ```
 
+#### Using the ReadTaxDocumentWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read a Tax Document
+    ApiResponse<TaxDocumentResponseBody> response = apiInstance.ReadTaxDocumentWithHttpInfo(taxDocumentGuid, memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadTaxDocumentWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taxDocumentGuid** | **string**| The unique id for a &#x60;tax_document&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **taxDocumentGuid** | **string** | The unique id for a &#x60;tax_document&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -7376,7 +9176,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readtransaction"></a>
+<a id="readtransaction"></a>
 # **ReadTransaction**
 > TransactionResponseBody ReadTransaction (string transactionGuid, string userGuid)
 
@@ -7416,8 +9216,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadTransaction: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadTransaction: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7425,12 +9225,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadTransactionWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read transaction
+    ApiResponse<TransactionResponseBody> response = apiInstance.ReadTransactionWithHttpInfo(transactionGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadTransactionWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **transactionGuid** | **string**| The unique id for a &#x60;transaction&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **transactionGuid** | **string** | The unique id for a &#x60;transaction&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -7453,7 +9273,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readtransactionrule"></a>
+<a id="readtransactionrule"></a>
 # **ReadTransactionRule**
 > TransactionRuleResponseBody ReadTransactionRule (string transactionRuleGuid, string userGuid)
 
@@ -7493,8 +9313,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadTransactionRule: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadTransactionRule: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7502,12 +9322,32 @@ namespace Example
 }
 ```
 
+#### Using the ReadTransactionRuleWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read transaction rule
+    ApiResponse<TransactionRuleResponseBody> response = apiInstance.ReadTransactionRuleWithHttpInfo(transactionRuleGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadTransactionRuleWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **transactionRuleGuid** | **string**| The unique id for a &#x60;transaction_rule&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **transactionRuleGuid** | **string** | The unique id for a &#x60;transaction_rule&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -7530,7 +9370,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="readuser"></a>
+<a id="readuser"></a>
 # **ReadUser**
 > UserResponseBody ReadUser (string userGuid)
 
@@ -7569,8 +9409,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ReadUser: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ReadUser: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7578,11 +9418,31 @@ namespace Example
 }
 ```
 
+#### Using the ReadUserWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read user
+    ApiResponse<UserResponseBody> response = apiInstance.ReadUserWithHttpInfo(userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadUserWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 
@@ -7605,7 +9465,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="requestauthorizationcode"></a>
+<a id="requestauthorizationcode"></a>
 # **RequestAuthorizationCode**
 > AuthorizationCodeResponseBody RequestAuthorizationCode (AuthorizationCodeRequestBody authorizationCodeRequestBody)
 
@@ -7644,8 +9504,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.RequestAuthorizationCode: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.RequestAuthorizationCode: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7653,11 +9513,31 @@ namespace Example
 }
 ```
 
+#### Using the RequestAuthorizationCodeWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Request an authorization code.
+    ApiResponse<AuthorizationCodeResponseBody> response = apiInstance.RequestAuthorizationCodeWithHttpInfo(authorizationCodeRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.RequestAuthorizationCodeWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorizationCodeRequestBody** | [**AuthorizationCodeRequestBody**](AuthorizationCodeRequestBody.md)| The scope for the authorization code. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **authorizationCodeRequestBody** | [**AuthorizationCodeRequestBody**](AuthorizationCodeRequestBody.md) | The scope for the authorization code. |  |
 
 ### Return type
 
@@ -7680,7 +9560,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="requestconnectwidgeturl"></a>
+<a id="requestconnectwidgeturl"></a>
 # **RequestConnectWidgetURL**
 > ConnectWidgetResponseBody RequestConnectWidgetURL (string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody)
 
@@ -7720,8 +9600,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.RequestConnectWidgetURL: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.RequestConnectWidgetURL: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7729,12 +9609,32 @@ namespace Example
 }
 ```
 
+#### Using the RequestConnectWidgetURLWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Request connect widget url
+    ApiResponse<ConnectWidgetResponseBody> response = apiInstance.RequestConnectWidgetURLWithHttpInfo(userGuid, connectWidgetRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.RequestConnectWidgetURLWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **connectWidgetRequestBody** | [**ConnectWidgetRequestBody**](ConnectWidgetRequestBody.md)| Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **connectWidgetRequestBody** | [**ConnectWidgetRequestBody**](ConnectWidgetRequestBody.md) | Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials) |  |
 
 ### Return type
 
@@ -7757,9 +9657,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="requestoauthwindowuri"></a>
+<a id="requestoauthwindowuri"></a>
 # **RequestOAuthWindowURI**
-> OAuthWindowResponseBody RequestOAuthWindowURI (string memberGuid, string userGuid, string clientRedirectUrl = null, string enableApp2app = null, string referralSource = null, bool? skipAggregation = null, string uiMessageWebviewUrlScheme = null)
+> OAuthWindowResponseBody RequestOAuthWindowURI (string memberGuid, string userGuid, string? clientRedirectUrl = null, string? enableApp2app = null, string? referralSource = null, bool? skipAggregation = null, string? uiMessageWebviewUrlScheme = null)
 
 Request oauth window uri
 
@@ -7788,11 +9688,11 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var clientRedirectUrl = https://mx.com;  // string | A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with `referral_source=APP`. (optional) 
-            var enableApp2app = false;  // string | This indicates whether OAuth app2app behavior is enabled for institutions that support it. Defaults to `true`. This setting is not persistent. (optional) 
-            var referralSource = APP;  // string | Must be either `BROWSER` or `APP` depending on the implementation. Defaults to `BROWSER`. (optional) 
+            var clientRedirectUrl = https://mx.com;  // string? | A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with `referral_source=APP`. (optional) 
+            var enableApp2app = false;  // string? | This indicates whether OAuth app2app behavior is enabled for institutions that support it. Defaults to `true`. This setting is not persistent. (optional) 
+            var referralSource = APP;  // string? | Must be either `BROWSER` or `APP` depending on the implementation. Defaults to `BROWSER`. (optional) 
             var skipAggregation = false;  // bool? | Setting this parameter to `true` will prevent the member from automatically aggregating after being redirected from the authorization page. (optional) 
-            var uiMessageWebviewUrlScheme = mx;  // string | A scheme for routing the user back to the application state they were previously in. Only available with `referral_source=APP`. (optional) 
+            var uiMessageWebviewUrlScheme = mx;  // string? | A scheme for routing the user back to the application state they were previously in. Only available with `referral_source=APP`. (optional) 
 
             try
             {
@@ -7802,8 +9702,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.RequestOAuthWindowURI: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.RequestOAuthWindowURI: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7811,17 +9711,37 @@ namespace Example
 }
 ```
 
+#### Using the RequestOAuthWindowURIWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Request oauth window uri
+    ApiResponse<OAuthWindowResponseBody> response = apiInstance.RequestOAuthWindowURIWithHttpInfo(memberGuid, userGuid, clientRedirectUrl, enableApp2app, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.RequestOAuthWindowURIWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **clientRedirectUrl** | **string**| A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. | [optional] 
- **enableApp2app** | **string**| This indicates whether OAuth app2app behavior is enabled for institutions that support it. Defaults to &#x60;true&#x60;. This setting is not persistent. | [optional] 
- **referralSource** | **string**| Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. | [optional] 
- **skipAggregation** | **bool?**| Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. | [optional] 
- **uiMessageWebviewUrlScheme** | **string**| A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **clientRedirectUrl** | **string?** | A URL that MX will redirect to at the end of OAuth with additional query parameters. Only available with &#x60;referral_source&#x3D;APP&#x60;. | [optional]  |
+| **enableApp2app** | **string?** | This indicates whether OAuth app2app behavior is enabled for institutions that support it. Defaults to &#x60;true&#x60;. This setting is not persistent. | [optional]  |
+| **referralSource** | **string?** | Must be either &#x60;BROWSER&#x60; or &#x60;APP&#x60; depending on the implementation. Defaults to &#x60;BROWSER&#x60;. | [optional]  |
+| **skipAggregation** | **bool?** | Setting this parameter to &#x60;true&#x60; will prevent the member from automatically aggregating after being redirected from the authorization page. | [optional]  |
+| **uiMessageWebviewUrlScheme** | **string?** | A scheme for routing the user back to the application state they were previously in. Only available with &#x60;referral_source&#x3D;APP&#x60;. | [optional]  |
 
 ### Return type
 
@@ -7844,9 +9764,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="requestwidgeturl"></a>
+<a id="requestwidgeturl"></a>
 # **RequestWidgetURL**
-> WidgetResponseBody RequestWidgetURL (string userGuid, WidgetRequestBody widgetRequestBody, string acceptLanguage = null)
+> WidgetResponseBody RequestWidgetURL (string userGuid, WidgetRequestBody widgetRequestBody, string? acceptLanguage = null)
 
 Request widget url
 
@@ -7875,7 +9795,7 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var widgetRequestBody = new WidgetRequestBody(); // WidgetRequestBody | The widget url configuration options.
-            var acceptLanguage = en-US;  // string | The desired language of the widget. (optional) 
+            var acceptLanguage = en-US;  // string? | The desired language of the widget. (optional) 
 
             try
             {
@@ -7885,8 +9805,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.RequestWidgetURL: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.RequestWidgetURL: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7894,13 +9814,33 @@ namespace Example
 }
 ```
 
+#### Using the RequestWidgetURLWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Request widget url
+    ApiResponse<WidgetResponseBody> response = apiInstance.RequestWidgetURLWithHttpInfo(userGuid, widgetRequestBody, acceptLanguage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.RequestWidgetURLWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **widgetRequestBody** | [**WidgetRequestBody**](WidgetRequestBody.md)| The widget url configuration options. | 
- **acceptLanguage** | **string**| The desired language of the widget. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **widgetRequestBody** | [**WidgetRequestBody**](WidgetRequestBody.md) | The widget url configuration options. |  |
+| **acceptLanguage** | **string?** | The desired language of the widget. | [optional]  |
 
 ### Return type
 
@@ -7923,7 +9863,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="resumeaggregation"></a>
+<a id="resumeaggregation"></a>
 # **ResumeAggregation**
 > MemberResponseBody ResumeAggregation (string memberGuid, string userGuid, MemberResumeRequestBody memberResumeRequestBody)
 
@@ -7964,8 +9904,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.ResumeAggregation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.ResumeAggregation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -7973,13 +9913,33 @@ namespace Example
 }
 ```
 
+#### Using the ResumeAggregationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Resume aggregation
+    ApiResponse<MemberResponseBody> response = apiInstance.ResumeAggregationWithHttpInfo(memberGuid, userGuid, memberResumeRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ResumeAggregationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **memberResumeRequestBody** | [**MemberResumeRequestBody**](MemberResumeRequestBody.md)| Member object with MFA challenge answers | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **memberResumeRequestBody** | [**MemberResumeRequestBody**](MemberResumeRequestBody.md) | Member object with MFA challenge answers |  |
 
 ### Return type
 
@@ -8002,7 +9962,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateaccountbymember"></a>
+<a id="updateaccountbymember"></a>
 # **UpdateAccountByMember**
 > AccountResponseBody UpdateAccountByMember (string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody)
 
@@ -8044,8 +10004,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateAccountByMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateAccountByMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8053,14 +10013,34 @@ namespace Example
 }
 ```
 
+#### Using the UpdateAccountByMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update account by member
+    ApiResponse<AccountResponseBody> response = apiInstance.UpdateAccountByMemberWithHttpInfo(accountGuid, memberGuid, userGuid, accountUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateAccountByMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **accountUpdateRequestBody** | [**AccountUpdateRequestBody**](AccountUpdateRequestBody.md)| Account object to be created with optional parameters (is_hidden) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **accountUpdateRequestBody** | [**AccountUpdateRequestBody**](AccountUpdateRequestBody.md) | Account object to be created with optional parameters (is_hidden) |  |
 
 ### Return type
 
@@ -8083,7 +10063,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatecategory"></a>
+<a id="updatecategory"></a>
 # **UpdateCategory**
 > CategoryResponseBody UpdateCategory (string categoryGuid, string userGuid, CategoryUpdateRequestBody categoryUpdateRequestBody)
 
@@ -8124,8 +10104,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateCategory: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateCategory: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8133,13 +10113,33 @@ namespace Example
 }
 ```
 
+#### Using the UpdateCategoryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update category
+    ApiResponse<CategoryResponseBody> response = apiInstance.UpdateCategoryWithHttpInfo(categoryGuid, userGuid, categoryUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateCategoryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **categoryGuid** | **string**| The unique id for a &#x60;category&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **categoryUpdateRequestBody** | [**CategoryUpdateRequestBody**](CategoryUpdateRequestBody.md)| Category object to be updated (While no single parameter is required, the &#x60;category&#x60; object cannot be empty) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **categoryGuid** | **string** | The unique id for a &#x60;category&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **categoryUpdateRequestBody** | [**CategoryUpdateRequestBody**](CategoryUpdateRequestBody.md) | Category object to be updated (While no single parameter is required, the &#x60;category&#x60; object cannot be empty) |  |
 
 ### Return type
 
@@ -8162,7 +10162,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatemanagedaccount"></a>
+<a id="updatemanagedaccount"></a>
 # **UpdateManagedAccount**
 > AccountResponseBody UpdateManagedAccount (string accountGuid, string memberGuid, string userGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody)
 
@@ -8204,8 +10204,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateManagedAccount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateManagedAccount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8213,14 +10213,34 @@ namespace Example
 }
 ```
 
+#### Using the UpdateManagedAccountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update managed account
+    ApiResponse<AccountResponseBody> response = apiInstance.UpdateManagedAccountWithHttpInfo(accountGuid, memberGuid, userGuid, managedAccountUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateManagedAccountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **managedAccountUpdateRequestBody** | [**ManagedAccountUpdateRequestBody**](ManagedAccountUpdateRequestBody.md)| Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **managedAccountUpdateRequestBody** | [**ManagedAccountUpdateRequestBody**](ManagedAccountUpdateRequestBody.md) | Managed account object to be updated (While no single parameter is required, the request body can&#39;t be empty) |  |
 
 ### Return type
 
@@ -8243,7 +10263,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatemanagedmember"></a>
+<a id="updatemanagedmember"></a>
 # **UpdateManagedMember**
 > MemberResponseBody UpdateManagedMember (string memberGuid, string userGuid, ManagedMemberUpdateRequestBody managedMemberUpdateRequestBody)
 
@@ -8284,8 +10304,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateManagedMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateManagedMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8293,13 +10313,33 @@ namespace Example
 }
 ```
 
+#### Using the UpdateManagedMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update managed member
+    ApiResponse<MemberResponseBody> response = apiInstance.UpdateManagedMemberWithHttpInfo(memberGuid, userGuid, managedMemberUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateManagedMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **managedMemberUpdateRequestBody** | [**ManagedMemberUpdateRequestBody**](ManagedMemberUpdateRequestBody.md)| Managed member object to be updated (While no single parameter is required, the request body can&#39;t be empty) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **managedMemberUpdateRequestBody** | [**ManagedMemberUpdateRequestBody**](ManagedMemberUpdateRequestBody.md) | Managed member object to be updated (While no single parameter is required, the request body can&#39;t be empty) |  |
 
 ### Return type
 
@@ -8322,7 +10362,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatemanagedtransaction"></a>
+<a id="updatemanagedtransaction"></a>
 # **UpdateManagedTransaction**
 > TransactionResponseBody UpdateManagedTransaction (string accountGuid, string memberGuid, string transactionGuid, string userGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody)
 
@@ -8365,8 +10405,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateManagedTransaction: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateManagedTransaction: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8374,15 +10414,35 @@ namespace Example
 }
 ```
 
+#### Using the UpdateManagedTransactionWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update managed transaction
+    ApiResponse<TransactionResponseBody> response = apiInstance.UpdateManagedTransactionWithHttpInfo(accountGuid, memberGuid, transactionGuid, userGuid, managedTransactionUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateManagedTransactionWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountGuid** | **string**| The unique id for an &#x60;account&#x60;. | 
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **transactionGuid** | **string**| The unique id for a &#x60;transaction&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **managedTransactionUpdateRequestBody** | [**ManagedTransactionUpdateRequestBody**](ManagedTransactionUpdateRequestBody.md)| Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **transactionGuid** | **string** | The unique id for a &#x60;transaction&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **managedTransactionUpdateRequestBody** | [**ManagedTransactionUpdateRequestBody**](ManagedTransactionUpdateRequestBody.md) | Managed transaction object to be updated (While no single parameter is required, the request body can&#39;t be empty) |  |
 
 ### Return type
 
@@ -8405,7 +10465,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatemember"></a>
+<a id="updatemember"></a>
 # **UpdateMember**
 > MemberResponseBody UpdateMember (string memberGuid, string userGuid, MemberUpdateRequestBody memberUpdateRequestBody)
 
@@ -8446,8 +10506,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8455,13 +10515,33 @@ namespace Example
 }
 ```
 
+#### Using the UpdateMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update member
+    ApiResponse<MemberResponseBody> response = apiInstance.UpdateMemberWithHttpInfo(memberGuid, userGuid, memberUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **memberUpdateRequestBody** | [**MemberUpdateRequestBody**](MemberUpdateRequestBody.md)| Member object to be updated (While no single parameter is required, the request body can&#39;t be empty) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **memberUpdateRequestBody** | [**MemberUpdateRequestBody**](MemberUpdateRequestBody.md) | Member object to be updated (While no single parameter is required, the request body can&#39;t be empty) |  |
 
 ### Return type
 
@@ -8484,7 +10564,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatespendingplaniterationitem"></a>
+<a id="updatespendingplaniterationitem"></a>
 # **UpdateSpendingPlanIterationItem**
 > SpendingPlanIterationItemResponse UpdateSpendingPlanIterationItem (string userGuid, string spendingPlanGuid, string iterationItemGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody)
 
@@ -8526,8 +10606,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateSpendingPlanIterationItem: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateSpendingPlanIterationItem: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8535,14 +10615,34 @@ namespace Example
 }
 ```
 
+#### Using the UpdateSpendingPlanIterationItemWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update a spending plan iteration item
+    ApiResponse<SpendingPlanIterationItemResponse> response = apiInstance.UpdateSpendingPlanIterationItemWithHttpInfo(userGuid, spendingPlanGuid, iterationItemGuid, spendingPlanIterationItemCreateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateSpendingPlanIterationItemWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **spendingPlanGuid** | **string**| The unique ID for the &#x60;spending_plan&#x60;. | 
- **iterationItemGuid** | **string**| The unique ID for the &#x60;iteration_item&#x60;. | 
- **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md)| Iteration item object to be updated with required parameter (iteration_item_guid) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **iterationItemGuid** | **string** | The unique ID for the &#x60;iteration_item&#x60;. |  |
+| **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md) | Iteration item object to be updated with required parameter (iteration_item_guid) |  |
 
 ### Return type
 
@@ -8565,7 +10665,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetag"></a>
+<a id="updatetag"></a>
 # **UpdateTag**
 > TagResponseBody UpdateTag (string tagGuid, string userGuid, TagUpdateRequestBody tagUpdateRequestBody)
 
@@ -8606,8 +10706,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateTag: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateTag: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8615,13 +10715,33 @@ namespace Example
 }
 ```
 
+#### Using the UpdateTagWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update tag
+    ApiResponse<TagResponseBody> response = apiInstance.UpdateTagWithHttpInfo(tagGuid, userGuid, tagUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateTagWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tagGuid** | **string**| The unique id for a &#x60;tag&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **tagUpdateRequestBody** | [**TagUpdateRequestBody**](TagUpdateRequestBody.md)| Tag object to be updated with required parameter (tag_guid) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **tagGuid** | **string** | The unique id for a &#x60;tag&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **tagUpdateRequestBody** | [**TagUpdateRequestBody**](TagUpdateRequestBody.md) | Tag object to be updated with required parameter (tag_guid) |  |
 
 ### Return type
 
@@ -8644,7 +10764,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetagging"></a>
+<a id="updatetagging"></a>
 # **UpdateTagging**
 > TaggingResponseBody UpdateTagging (string taggingGuid, string userGuid, TaggingUpdateRequestBody taggingUpdateRequestBody)
 
@@ -8685,8 +10805,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateTagging: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateTagging: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8694,13 +10814,33 @@ namespace Example
 }
 ```
 
+#### Using the UpdateTaggingWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update tagging
+    ApiResponse<TaggingResponseBody> response = apiInstance.UpdateTaggingWithHttpInfo(taggingGuid, userGuid, taggingUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateTaggingWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taggingGuid** | **string**| The unique id for a &#x60;tagging&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **taggingUpdateRequestBody** | [**TaggingUpdateRequestBody**](TaggingUpdateRequestBody.md)| Tagging object to be updated with required parameter (tag_guid) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **taggingGuid** | **string** | The unique id for a &#x60;tagging&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **taggingUpdateRequestBody** | [**TaggingUpdateRequestBody**](TaggingUpdateRequestBody.md) | Tagging object to be updated with required parameter (tag_guid) |  |
 
 ### Return type
 
@@ -8723,7 +10863,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetransaction"></a>
+<a id="updatetransaction"></a>
 # **UpdateTransaction**
 > TransactionResponseBody UpdateTransaction (string transactionGuid, string userGuid, TransactionUpdateRequestBody transactionUpdateRequestBody)
 
@@ -8764,8 +10904,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateTransaction: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateTransaction: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8773,13 +10913,33 @@ namespace Example
 }
 ```
 
+#### Using the UpdateTransactionWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update transaction
+    ApiResponse<TransactionResponseBody> response = apiInstance.UpdateTransactionWithHttpInfo(transactionGuid, userGuid, transactionUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateTransactionWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **transactionGuid** | **string**| The unique id for a &#x60;transaction&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **transactionUpdateRequestBody** | [**TransactionUpdateRequestBody**](TransactionUpdateRequestBody.md)| Transaction object to be updated with a new description | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **transactionGuid** | **string** | The unique id for a &#x60;transaction&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **transactionUpdateRequestBody** | [**TransactionUpdateRequestBody**](TransactionUpdateRequestBody.md) | Transaction object to be updated with a new description |  |
 
 ### Return type
 
@@ -8802,7 +10962,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatetransactionrule"></a>
+<a id="updatetransactionrule"></a>
 # **UpdateTransactionRule**
 > TransactionRuleResponseBody UpdateTransactionRule (string transactionRuleGuid, string userGuid, TransactionRuleUpdateRequestBody transactionRuleUpdateRequestBody)
 
@@ -8843,8 +11003,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateTransactionRule: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateTransactionRule: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8852,13 +11012,33 @@ namespace Example
 }
 ```
 
+#### Using the UpdateTransactionRuleWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update transaction_rule
+    ApiResponse<TransactionRuleResponseBody> response = apiInstance.UpdateTransactionRuleWithHttpInfo(transactionRuleGuid, userGuid, transactionRuleUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateTransactionRuleWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **transactionRuleGuid** | **string**| The unique id for a &#x60;transaction_rule&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **transactionRuleUpdateRequestBody** | [**TransactionRuleUpdateRequestBody**](TransactionRuleUpdateRequestBody.md)| TransactionRule object to be updated | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **transactionRuleGuid** | **string** | The unique id for a &#x60;transaction_rule&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **transactionRuleUpdateRequestBody** | [**TransactionRuleUpdateRequestBody**](TransactionRuleUpdateRequestBody.md) | TransactionRule object to be updated |  |
 
 ### Return type
 
@@ -8881,7 +11061,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateuser"></a>
+<a id="updateuser"></a>
 # **UpdateUser**
 > UserResponseBody UpdateUser (string userGuid, UserUpdateRequestBody userUpdateRequestBody)
 
@@ -8921,8 +11101,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.UpdateUser: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.UpdateUser: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -8930,12 +11110,32 @@ namespace Example
 }
 ```
 
+#### Using the UpdateUserWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update user
+    ApiResponse<UserResponseBody> response = apiInstance.UpdateUserWithHttpInfo(userGuid, userUpdateRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UpdateUserWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
- **userUpdateRequestBody** | [**UserUpdateRequestBody**](UserUpdateRequestBody.md)| User object to be updated (None of these parameters are required, but the user object cannot be empty.) | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userUpdateRequestBody** | [**UserUpdateRequestBody**](UserUpdateRequestBody.md) | User object to be updated (None of these parameters are required, but the user object cannot be empty.) |  |
 
 ### Return type
 
@@ -8958,7 +11158,7 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="verifymember"></a>
+<a id="verifymember"></a>
 # **VerifyMember**
 > MemberResponseBody VerifyMember (string memberGuid, string userGuid)
 
@@ -8998,8 +11198,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MxPlatformApi.VerifyMember: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MxPlatformApi.VerifyMember: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -9007,12 +11207,32 @@ namespace Example
 }
 ```
 
+#### Using the VerifyMemberWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Verify member
+    ApiResponse<MemberResponseBody> response = apiInstance.VerifyMemberWithHttpInfo(memberGuid, userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.VerifyMemberWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique id for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique id for a &#x60;user&#x60;. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 
 ### Return type
 

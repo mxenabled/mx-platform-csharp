@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<ConnectWidgetRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'ClientRedirectUrl'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ClientRedirectUrl'
         }
+
         /// <summary>
         /// Test the property 'ColorScheme'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ColorScheme'
         }
+
         /// <summary>
         /// Test the property 'CurrentInstitutionCode'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CurrentInstitutionCode'
         }
+
         /// <summary>
         /// Test the property 'CurrentMemberGuid'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CurrentMemberGuid'
         }
+
         /// <summary>
         /// Test the property 'DisableBackgroundAgg'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'DisableBackgroundAgg'
         }
+
         /// <summary>
         /// Test the property 'DisableInstitutionSearch'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'DisableInstitutionSearch'
         }
+
         /// <summary>
         /// Test the property 'IncludeIdentity'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IncludeIdentity'
         }
+
         /// <summary>
         /// Test the property 'IncludeTransactions'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IncludeTransactions'
         }
+
         /// <summary>
         /// Test the property 'IsMobileWebview'
         /// </summary>
@@ -128,6 +134,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsMobileWebview'
         }
+
         /// <summary>
         /// Test the property 'Mode'
         /// </summary>
@@ -136,6 +143,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Mode'
         }
+
         /// <summary>
         /// Test the property 'OauthReferralSource'
         /// </summary>
@@ -144,6 +152,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'OauthReferralSource'
         }
+
         /// <summary>
         /// Test the property 'UiMessageVersion'
         /// </summary>
@@ -152,6 +161,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UiMessageVersion'
         }
+
         /// <summary>
         /// Test the property 'UiMessageWebviewUrlScheme'
         /// </summary>
@@ -160,6 +170,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UiMessageWebviewUrlScheme'
         }
+
         /// <summary>
         /// Test the property 'UpdateCredentials'
         /// </summary>
@@ -168,7 +179,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UpdateCredentials'
         }
-
     }
-
 }

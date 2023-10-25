@@ -56,30 +56,35 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CategoryGuid
         /// </summary>
+        /// <example>CAT-40faf068-abb4-405c-8f6a-e883ed541fff</example>
         [DataMember(Name = "category_guid", EmitDefaultValue = false)]
         public string CategoryGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets ItemType
         /// </summary>
+        /// <example>1</example>
         [DataMember(Name = "item_type", EmitDefaultValue = false)]
         public decimal ItemType { get; set; }
 
         /// <summary>
         /// Gets or Sets PlannedAmount
         /// </summary>
-        [DataMember(Name = "planned_amount", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>110</example>
+        [DataMember(Name = "planned_amount", IsRequired = true, EmitDefaultValue = true)]
         public decimal PlannedAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets ScheduledPaymentGuid
         /// </summary>
+        /// <example>SCP-c731988a-712f-4f83-9b3b-0aa5b3d5208b</example>
         [DataMember(Name = "scheduled_payment_guid", EmitDefaultValue = false)]
         public string ScheduledPaymentGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets TopLevelCategoryGuid
         /// </summary>
+        /// <example>CAT-9588eaad-90a4-bb5c-66c8-1812503d0db8</example>
         [DataMember(Name = "top_level_category_guid", EmitDefaultValue = false)]
         public string TopLevelCategoryGuid { get; set; }
 
@@ -188,7 +193,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

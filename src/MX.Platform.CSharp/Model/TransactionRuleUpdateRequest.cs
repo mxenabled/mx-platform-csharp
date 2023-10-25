@@ -47,18 +47,21 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CategoryGuid
         /// </summary>
+        /// <example>CAT-b1de2a04-db08-b6ed-f6fe-ca2f5b11c2d0</example>
         [DataMember(Name = "category_guid", EmitDefaultValue = false)]
         public string CategoryGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
+        /// <example>Wal-mart food storage</example>
         [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets MatchDescription
         /// </summary>
+        /// <example>Wal-mart</example>
         [DataMember(Name = "match_description", EmitDefaultValue = false)]
         public string MatchDescription { get; set; }
 
@@ -155,7 +158,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

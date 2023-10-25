@@ -609,10 +609,10 @@ namespace MX.Platform.CSharp.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string userGuid = null;
-            //string fromDate = null;
+            //string? fromDate = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //string toDate = null;
+            //string? toDate = null;
             //var response = instance.ListHoldings(userGuid, fromDate, page, recordsPerPage, toDate);
             //Assert.IsType<HoldingsResponseBody>(response);
         }
@@ -626,10 +626,10 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string accountGuid = null;
             //string userGuid = null;
-            //string fromDate = null;
+            //string? fromDate = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //string toDate = null;
+            //string? toDate = null;
             //var response = instance.ListHoldingsByAccount(accountGuid, userGuid, fromDate, page, recordsPerPage, toDate);
             //Assert.IsType<HoldingsResponseBody>(response);
         }
@@ -643,10 +643,10 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string memberGuid = null;
             //string userGuid = null;
-            //string fromDate = null;
+            //string? fromDate = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //string toDate = null;
+            //string? toDate = null;
             //var response = instance.ListHoldingsByMember(memberGuid, userGuid, fromDate, page, recordsPerPage, toDate);
             //Assert.IsType<HoldingsResponseBody>(response);
         }
@@ -672,7 +672,7 @@ namespace MX.Platform.CSharp.Test.Api
         public void ListInstitutionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string name = null;
+            //string? name = null;
             //int? page = null;
             //int? recordsPerPage = null;
             //bool? supportsAccountIdentification = null;
@@ -953,10 +953,10 @@ namespace MX.Platform.CSharp.Test.Api
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string userGuid = null;
-            //string fromDate = null;
+            //string? fromDate = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //string toDate = null;
+            //string? toDate = null;
             //var response = instance.ListTransactions(userGuid, fromDate, page, recordsPerPage, toDate);
             //Assert.IsType<TransactionsResponseBody>(response);
         }
@@ -970,10 +970,10 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string accountGuid = null;
             //string userGuid = null;
-            //string fromDate = null;
+            //string? fromDate = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //string toDate = null;
+            //string? toDate = null;
             //var response = instance.ListTransactionsByAccount(accountGuid, userGuid, fromDate, page, recordsPerPage, toDate);
             //Assert.IsType<TransactionsResponseBody>(response);
         }
@@ -987,10 +987,10 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string memberGuid = null;
             //string userGuid = null;
-            //string fromDate = null;
+            //string? fromDate = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //string toDate = null;
+            //string? toDate = null;
             //var response = instance.ListTransactionsByMember(memberGuid, userGuid, fromDate, page, recordsPerPage, toDate);
             //Assert.IsType<TransactionsResponseBody>(response);
         }
@@ -1004,10 +1004,10 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string tagGuid = null;
             //string userGuid = null;
-            //string fromDate = null;
+            //string? fromDate = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //string toDate = null;
+            //string? toDate = null;
             //var response = instance.ListTransactionsByTag(tagGuid, userGuid, fromDate, page, recordsPerPage, toDate);
             //Assert.IsType<TransactionsResponseBody>(response);
         }
@@ -1037,8 +1037,8 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //int? page = null;
             //int? recordsPerPage = null;
-            //string id = null;
-            //string email = null;
+            //string? id = null;
+            //string? email = null;
             //bool? isDisabled = null;
             //var response = instance.ListUsers(page, recordsPerPage, id, email, isDisabled);
             //Assert.IsType<UsersResponseBody>(response);
@@ -1402,11 +1402,11 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string memberGuid = null;
             //string userGuid = null;
-            //string clientRedirectUrl = null;
-            //string enableApp2app = null;
-            //string referralSource = null;
+            //string? clientRedirectUrl = null;
+            //string? enableApp2app = null;
+            //string? referralSource = null;
             //bool? skipAggregation = null;
-            //string uiMessageWebviewUrlScheme = null;
+            //string? uiMessageWebviewUrlScheme = null;
             //var response = instance.RequestOAuthWindowURI(memberGuid, userGuid, clientRedirectUrl, enableApp2app, referralSource, skipAggregation, uiMessageWebviewUrlScheme);
             //Assert.IsType<OAuthWindowResponseBody>(response);
         }
@@ -1420,7 +1420,7 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string userGuid = null;
             //WidgetRequestBody widgetRequestBody = null;
-            //string acceptLanguage = null;
+            //string? acceptLanguage = null;
             //var response = instance.RequestWidgetURL(userGuid, widgetRequestBody, acceptLanguage);
             //Assert.IsType<WidgetResponseBody>(response);
         }

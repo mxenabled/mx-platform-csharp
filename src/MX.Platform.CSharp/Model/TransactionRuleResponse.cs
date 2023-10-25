@@ -55,42 +55,49 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CategoryGuid
         /// </summary>
+        /// <example>CAT-b1de2a04-db08-b6ed-f6fe-ca2f5b11c2d0</example>
         [DataMember(Name = "category_guid", EmitDefaultValue = true)]
         public string CategoryGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2018-10-02T22:00:50+00:00</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
+        /// <example>Wal-mart food storage</example>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>TXR-a080e0f9-a2d4-4d6f-9e03-672cc357a4d3</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets MatchDescription
         /// </summary>
+        /// <example>Wal-mart</example>
         [DataMember(Name = "match_description", EmitDefaultValue = true)]
         public string MatchDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2018-10-02T23:54:40+00:00</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-22fc3203-b3e6-8340-43db-8e50b2f56995</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -227,7 +234,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

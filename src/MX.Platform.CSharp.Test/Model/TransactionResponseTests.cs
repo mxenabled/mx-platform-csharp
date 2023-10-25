@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<TransactionResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccountGuid'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AccountGuid'
         }
+
         /// <summary>
         /// Test the property 'AccountId'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AccountId'
         }
+
         /// <summary>
         /// Test the property 'Amount'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Amount'
         }
+
         /// <summary>
         /// Test the property 'Category'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Category'
         }
+
         /// <summary>
         /// Test the property 'CategoryGuid'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CategoryGuid'
         }
+
         /// <summary>
         /// Test the property 'CheckNumberString'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CheckNumberString'
         }
+
         /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CreatedAt'
         }
+
         /// <summary>
         /// Test the property 'CurrencyCode'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CurrencyCode'
         }
+
         /// <summary>
         /// Test the property 'Date'
         /// </summary>
@@ -128,6 +134,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Date'
         }
+
         /// <summary>
         /// Test the property 'Description'
         /// </summary>
@@ -136,6 +143,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Description'
         }
+
         /// <summary>
         /// Test the property 'ExtendedTransactionType'
         /// </summary>
@@ -144,6 +152,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ExtendedTransactionType'
         }
+
         /// <summary>
         /// Test the property 'Guid'
         /// </summary>
@@ -152,6 +161,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Guid'
         }
+
         /// <summary>
         /// Test the property 'Id'
         /// </summary>
@@ -160,6 +170,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Id'
         }
+
         /// <summary>
         /// Test the property 'IsBillPay'
         /// </summary>
@@ -168,6 +179,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsBillPay'
         }
+
         /// <summary>
         /// Test the property 'IsDirectDeposit'
         /// </summary>
@@ -176,6 +188,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsDirectDeposit'
         }
+
         /// <summary>
         /// Test the property 'IsExpense'
         /// </summary>
@@ -184,6 +197,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsExpense'
         }
+
         /// <summary>
         /// Test the property 'IsFee'
         /// </summary>
@@ -192,6 +206,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsFee'
         }
+
         /// <summary>
         /// Test the property 'IsIncome'
         /// </summary>
@@ -200,6 +215,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsIncome'
         }
+
         /// <summary>
         /// Test the property 'IsInternational'
         /// </summary>
@@ -208,6 +224,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsInternational'
         }
+
         /// <summary>
         /// Test the property 'IsOverdraftFee'
         /// </summary>
@@ -216,6 +233,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsOverdraftFee'
         }
+
         /// <summary>
         /// Test the property 'IsPayrollAdvance'
         /// </summary>
@@ -224,6 +242,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsPayrollAdvance'
         }
+
         /// <summary>
         /// Test the property 'IsRecurring'
         /// </summary>
@@ -232,6 +251,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsRecurring'
         }
+
         /// <summary>
         /// Test the property 'IsSubscription'
         /// </summary>
@@ -240,6 +260,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsSubscription'
         }
+
         /// <summary>
         /// Test the property 'Latitude'
         /// </summary>
@@ -248,6 +269,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Latitude'
         }
+
         /// <summary>
         /// Test the property 'LocalizedDescription'
         /// </summary>
@@ -256,6 +278,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'LocalizedDescription'
         }
+
         /// <summary>
         /// Test the property 'LocalizedMemo'
         /// </summary>
@@ -264,6 +287,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'LocalizedMemo'
         }
+
         /// <summary>
         /// Test the property 'Longitude'
         /// </summary>
@@ -272,6 +296,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Longitude'
         }
+
         /// <summary>
         /// Test the property 'MemberGuid'
         /// </summary>
@@ -280,6 +305,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MemberGuid'
         }
+
         /// <summary>
         /// Test the property 'MemberIsManagedByUser'
         /// </summary>
@@ -288,6 +314,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MemberIsManagedByUser'
         }
+
         /// <summary>
         /// Test the property 'Memo'
         /// </summary>
@@ -296,6 +323,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Memo'
         }
+
         /// <summary>
         /// Test the property 'MerchantCategoryCode'
         /// </summary>
@@ -304,6 +332,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MerchantCategoryCode'
         }
+
         /// <summary>
         /// Test the property 'MerchantGuid'
         /// </summary>
@@ -312,6 +341,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MerchantGuid'
         }
+
         /// <summary>
         /// Test the property 'MerchantLocationGuid'
         /// </summary>
@@ -320,6 +350,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MerchantLocationGuid'
         }
+
         /// <summary>
         /// Test the property 'Metadata'
         /// </summary>
@@ -328,6 +359,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Metadata'
         }
+
         /// <summary>
         /// Test the property 'OriginalDescription'
         /// </summary>
@@ -336,6 +368,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'OriginalDescription'
         }
+
         /// <summary>
         /// Test the property 'PostedAt'
         /// </summary>
@@ -344,6 +377,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'PostedAt'
         }
+
         /// <summary>
         /// Test the property 'Status'
         /// </summary>
@@ -352,6 +386,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Status'
         }
+
         /// <summary>
         /// Test the property 'TopLevelCategory'
         /// </summary>
@@ -360,6 +395,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TopLevelCategory'
         }
+
         /// <summary>
         /// Test the property 'TransactedAt'
         /// </summary>
@@ -368,6 +404,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TransactedAt'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -376,6 +413,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
+
         /// <summary>
         /// Test the property 'UpdatedAt'
         /// </summary>
@@ -384,6 +422,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UpdatedAt'
         }
+
         /// <summary>
         /// Test the property 'UserGuid'
         /// </summary>
@@ -392,6 +431,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UserGuid'
         }
+
         /// <summary>
         /// Test the property 'UserId'
         /// </summary>
@@ -400,7 +440,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UserId'
         }
-
     }
-
 }

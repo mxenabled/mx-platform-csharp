@@ -43,6 +43,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Scope
         /// </summary>
+        /// <example>user-guid:USR-101ad774-288b-44ed-ad16-da87d522ea20 member-guid:MBR-54feffb9-8474-47bd-8442-de003910113a account-guid:ACT-32a64160-582a-4f00-ab34-5f49cc35ed35 read-protected</example>
         [DataMember(Name = "scope", EmitDefaultValue = true)]
         public string Scope { get; set; }
 
@@ -119,7 +120,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

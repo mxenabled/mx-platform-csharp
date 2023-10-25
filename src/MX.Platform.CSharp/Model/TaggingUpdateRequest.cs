@@ -43,7 +43,8 @@ namespace MX.Platform.CSharp.Model
         public TaggingUpdateRequest(string tagGuid = default(string))
         {
             // to ensure "tagGuid" is required (not null)
-            if (tagGuid == null) {
+            if (tagGuid == null)
+            {
                 throw new ArgumentNullException("tagGuid is a required property for TaggingUpdateRequest and cannot be null");
             }
             this.TagGuid = tagGuid;
@@ -52,7 +53,8 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets TagGuid
         /// </summary>
-        [DataMember(Name = "tag_guid", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>TAG-40faf068-abb4-405c-8f6a-e883ed541fff</example>
+        [DataMember(Name = "tag_guid", IsRequired = true, EmitDefaultValue = true)]
         public string TagGuid { get; set; }
 
         /// <summary>
@@ -128,7 +130,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

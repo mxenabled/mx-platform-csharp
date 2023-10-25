@@ -45,12 +45,14 @@ namespace MX.Platform.CSharp.Model
         public TransactionRuleCreateRequest(string categoryGuid = default(string), string description = default(string), string matchDescription = default(string))
         {
             // to ensure "categoryGuid" is required (not null)
-            if (categoryGuid == null) {
+            if (categoryGuid == null)
+            {
                 throw new ArgumentNullException("categoryGuid is a required property for TransactionRuleCreateRequest and cannot be null");
             }
             this.CategoryGuid = categoryGuid;
             // to ensure "matchDescription" is required (not null)
-            if (matchDescription == null) {
+            if (matchDescription == null)
+            {
                 throw new ArgumentNullException("matchDescription is a required property for TransactionRuleCreateRequest and cannot be null");
             }
             this.MatchDescription = matchDescription;
@@ -60,19 +62,22 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CategoryGuid
         /// </summary>
-        [DataMember(Name = "category_guid", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>CAT-b1de2a04-db08-b6ed-f6fe-ca2f5b11c2d0</example>
+        [DataMember(Name = "category_guid", IsRequired = true, EmitDefaultValue = true)]
         public string CategoryGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
+        /// <example>Wal-mart food storage</example>
         [DataMember(Name = "description", EmitDefaultValue = false)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets MatchDescription
         /// </summary>
-        [DataMember(Name = "match_description", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>Wal-mart</example>
+        [DataMember(Name = "match_description", IsRequired = true, EmitDefaultValue = true)]
         public string MatchDescription { get; set; }
 
         /// <summary>
@@ -168,7 +173,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

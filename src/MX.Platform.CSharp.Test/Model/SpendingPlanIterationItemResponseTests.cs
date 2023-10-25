@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<SpendingPlanIterationItemResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'ActualAmount'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ActualAmount'
         }
+
         /// <summary>
         /// Test the property 'CategoryGuid'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CategoryGuid'
         }
+
         /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CreatedAt'
         }
+
         /// <summary>
         /// Test the property 'Guid'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Guid'
         }
+
         /// <summary>
         /// Test the property 'ItemType'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ItemType'
         }
+
         /// <summary>
         /// Test the property 'PlannedAmount'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'PlannedAmount'
         }
+
         /// <summary>
         /// Test the property 'ScheduledPaymentGuid'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ScheduledPaymentGuid'
         }
+
         /// <summary>
         /// Test the property 'SpendingPlanIterationGuid'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'SpendingPlanIterationGuid'
         }
+
         /// <summary>
         /// Test the property 'TopLevelCategoryGuid'
         /// </summary>
@@ -128,6 +134,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TopLevelCategoryGuid'
         }
+
         /// <summary>
         /// Test the property 'TransactionGuids'
         /// </summary>
@@ -136,6 +143,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'TransactionGuids'
         }
+
         /// <summary>
         /// Test the property 'UpdatedAt'
         /// </summary>
@@ -144,6 +152,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UpdatedAt'
         }
+
         /// <summary>
         /// Test the property 'UserGuid'
         /// </summary>
@@ -152,7 +161,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'UserGuid'
         }
-
     }
-
 }

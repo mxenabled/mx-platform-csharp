@@ -46,7 +46,8 @@ namespace MX.Platform.CSharp.Model
         public ManagedMemberCreateRequest(string id = default(string), string institutionCode = default(string), string metadata = default(string), string name = default(string))
         {
             // to ensure "institutionCode" is required (not null)
-            if (institutionCode == null) {
+            if (institutionCode == null)
+            {
                 throw new ArgumentNullException("institutionCode is a required property for ManagedMemberCreateRequest and cannot be null");
             }
             this.InstitutionCode = institutionCode;
@@ -58,24 +59,28 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>member123</example>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets InstitutionCode
         /// </summary>
-        [DataMember(Name = "institution_code", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>mxbank</example>
+        [DataMember(Name = "institution_code", IsRequired = true, EmitDefaultValue = true)]
         public string InstitutionCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>some metadata</example>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
+        /// <example>MX Bank</example>
         [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name { get; set; }
 
@@ -182,7 +187,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

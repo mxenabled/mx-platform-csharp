@@ -57,48 +57,56 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AccountGuid
         /// </summary>
+        /// <example>ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1</example>
         [DataMember(Name = "account_guid", EmitDefaultValue = true)]
         public string AccountGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets ContentHash
         /// </summary>
+        /// <example>ca53785b812d00ef821c3d94bfd6e5bbc0020504410589b7ea8552169f021981</example>
         [DataMember(Name = "content_hash", EmitDefaultValue = true)]
         public string ContentHash { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2016-10-13T18:08:00+00:00</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>STA-737a344b-caae-0f6e-1384-01f52e75dcb1</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2016-10-13T18:09:00+00:00</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Uri
         /// </summary>
+        /// <example>uri/to/statement</example>
         [DataMember(Name = "uri", EmitDefaultValue = true)]
         public string Uri { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
@@ -245,7 +253,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

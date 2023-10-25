@@ -49,12 +49,14 @@ namespace MX.Platform.CSharp.Model
         public MemberCreateRequest(bool backgroundAggregationIsDisabled = default(bool), List<CredentialRequest> credentials = default(List<CredentialRequest>), string id = default(string), string institutionCode = default(string), bool isOauth = default(bool), string metadata = default(string), bool skipAggregation = default(bool))
         {
             // to ensure "credentials" is required (not null)
-            if (credentials == null) {
+            if (credentials == null)
+            {
                 throw new ArgumentNullException("credentials is a required property for MemberCreateRequest and cannot be null");
             }
             this.Credentials = credentials;
             // to ensure "institutionCode" is required (not null)
-            if (institutionCode == null) {
+            if (institutionCode == null)
+            {
                 throw new ArgumentNullException("institutionCode is a required property for MemberCreateRequest and cannot be null");
             }
             this.InstitutionCode = institutionCode;
@@ -68,42 +70,48 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets BackgroundAggregationIsDisabled
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "background_aggregation_is_disabled", EmitDefaultValue = true)]
         public bool BackgroundAggregationIsDisabled { get; set; }
 
         /// <summary>
         /// Gets or Sets Credentials
         /// </summary>
-        [DataMember(Name = "credentials", IsRequired = true, EmitDefaultValue = false)]
+        [DataMember(Name = "credentials", IsRequired = true, EmitDefaultValue = true)]
         public List<CredentialRequest> Credentials { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>unique_id</example>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets InstitutionCode
         /// </summary>
-        [DataMember(Name = "institution_code", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>chase</example>
+        [DataMember(Name = "institution_code", IsRequired = true, EmitDefaultValue = true)]
         public string InstitutionCode { get; set; }
 
         /// <summary>
         /// Gets or Sets IsOauth
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_oauth", EmitDefaultValue = true)]
         public bool IsOauth { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>\&quot;credentials_last_refreshed_at\&quot;: \&quot;2015-10-15\&quot;</example>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets SkipAggregation
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "skip_aggregation", EmitDefaultValue = true)]
         public bool SkipAggregation { get; set; }
 
@@ -229,7 +237,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

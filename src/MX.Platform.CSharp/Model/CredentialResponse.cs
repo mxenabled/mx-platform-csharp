@@ -53,36 +53,42 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets DisplayOrder
         /// </summary>
+        /// <example>1</example>
         [DataMember(Name = "display_order", EmitDefaultValue = true)]
         public int? DisplayOrder { get; set; }
 
         /// <summary>
         /// Gets or Sets FieldName
         /// </summary>
+        /// <example>LOGIN</example>
         [DataMember(Name = "field_name", EmitDefaultValue = true)]
         public string FieldName { get; set; }
 
         /// <summary>
         /// Gets or Sets FieldType
         /// </summary>
+        /// <example>TEXT</example>
         [DataMember(Name = "field_type", EmitDefaultValue = true)]
         public string FieldType { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>CRD-1ec152cd-e628-e81a-e852-d1e7104624da</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
+        /// <example>Username</example>
         [DataMember(Name = "label", EmitDefaultValue = true)]
         public string Label { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
+        /// <example>TEXT</example>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
@@ -209,7 +215,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

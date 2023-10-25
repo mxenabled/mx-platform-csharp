@@ -74,12 +74,14 @@ namespace MX.Platform.CSharp.Model
         {
             this.Balance = balance;
             // to ensure "name" is required (not null)
-            if (name == null) {
+            if (name == null)
+            {
                 throw new ArgumentNullException("name is a required property for ManagedAccountCreateRequest and cannot be null");
             }
             this.Name = name;
             // to ensure "type" is required (not null)
-            if (type == null) {
+            if (type == null)
+            {
                 throw new ArgumentNullException("type is a required property for ManagedAccountCreateRequest and cannot be null");
             }
             this.Type = type;
@@ -116,187 +118,218 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AccountNumber
         /// </summary>
+        /// <example>5366</example>
         [DataMember(Name = "account_number", EmitDefaultValue = false)]
         public string AccountNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets Apr
         /// </summary>
+        /// <example>1.0</example>
         [DataMember(Name = "apr", EmitDefaultValue = false)]
         public decimal Apr { get; set; }
 
         /// <summary>
         /// Gets or Sets Apy
         /// </summary>
+        /// <example>1.0</example>
         [DataMember(Name = "apy", EmitDefaultValue = false)]
         public decimal Apy { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailableBalance
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "available_balance", EmitDefaultValue = false)]
         public decimal AvailableBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailableCredit
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "available_credit", EmitDefaultValue = false)]
         public decimal AvailableCredit { get; set; }
 
         /// <summary>
         /// Gets or Sets Balance
         /// </summary>
-        [DataMember(Name = "balance", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>1000.0</example>
+        [DataMember(Name = "balance", IsRequired = true, EmitDefaultValue = true)]
         public decimal Balance { get; set; }
 
         /// <summary>
         /// Gets or Sets CashSurrenderValue
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "cash_surrender_value", EmitDefaultValue = false)]
         public decimal CashSurrenderValue { get; set; }
 
         /// <summary>
         /// Gets or Sets CreditLimit
         /// </summary>
+        /// <example>100.0</example>
         [DataMember(Name = "credit_limit", EmitDefaultValue = false)]
         public decimal CreditLimit { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrencyCode
         /// </summary>
+        /// <example>USD</example>
         [DataMember(Name = "currency_code", EmitDefaultValue = false)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Gets or Sets DayPaymentIsDue
         /// </summary>
+        /// <example>20</example>
         [DataMember(Name = "day_payment_is_due", EmitDefaultValue = false)]
         public int DayPaymentIsDue { get; set; }
 
         /// <summary>
         /// Gets or Sets DeathBenefit
         /// </summary>
+        /// <example>1000</example>
         [DataMember(Name = "death_benefit", EmitDefaultValue = false)]
         public int DeathBenefit { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>1040434698</example>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets InterestRate
         /// </summary>
+        /// <example>1.0</example>
         [DataMember(Name = "interest_rate", EmitDefaultValue = false)]
         public decimal InterestRate { get; set; }
 
         /// <summary>
         /// Gets or Sets IsClosed
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_closed", EmitDefaultValue = true)]
         public bool IsClosed { get; set; }
 
         /// <summary>
         /// Gets or Sets IsHidden
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_hidden", EmitDefaultValue = true)]
         public bool IsHidden { get; set; }
 
         /// <summary>
         /// Gets or Sets LastPayment
         /// </summary>
+        /// <example>100.0</example>
         [DataMember(Name = "last_payment", EmitDefaultValue = false)]
         public decimal LastPayment { get; set; }
 
         /// <summary>
         /// Gets or Sets LastPaymentAt
         /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "last_payment_at", EmitDefaultValue = false)]
         public string LastPaymentAt { get; set; }
 
         /// <summary>
         /// Gets or Sets LoanAmount
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "loan_amount", EmitDefaultValue = false)]
         public decimal LoanAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets MaturesOn
         /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "matures_on", EmitDefaultValue = false)]
         public string MaturesOn { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>some metadata</example>
         [DataMember(Name = "metadata", EmitDefaultValue = false)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets MinimumBalance
         /// </summary>
+        /// <example>100.0</example>
         [DataMember(Name = "minimum_balance", EmitDefaultValue = false)]
         public decimal MinimumBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets MinimumPayment
         /// </summary>
+        /// <example>10.0</example>
         [DataMember(Name = "minimum_payment", EmitDefaultValue = false)]
         public decimal MinimumPayment { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>Test account 2</example>
+        [DataMember(Name = "name", IsRequired = true, EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Nickname
         /// </summary>
+        /// <example>Swiss Account</example>
         [DataMember(Name = "nickname", EmitDefaultValue = false)]
         public string Nickname { get; set; }
 
         /// <summary>
         /// Gets or Sets OriginalBalance
         /// </summary>
+        /// <example>10.0</example>
         [DataMember(Name = "original_balance", EmitDefaultValue = false)]
         public decimal OriginalBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentDueAt
         /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "payment_due_at", EmitDefaultValue = false)]
         public string PaymentDueAt { get; set; }
 
         /// <summary>
         /// Gets or Sets PayoffBalance
         /// </summary>
+        /// <example>10.0</example>
         [DataMember(Name = "payoff_balance", EmitDefaultValue = false)]
         public decimal PayoffBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets RoutingNumber
         /// </summary>
+        /// <example>68899990000000</example>
         [DataMember(Name = "routing_number", EmitDefaultValue = false)]
         public string RoutingNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets StartedOn
         /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "started_on", EmitDefaultValue = false)]
         public string StartedOn { get; set; }
 
         /// <summary>
         /// Gets or Sets Subtype
         /// </summary>
+        /// <example>NONE</example>
         [DataMember(Name = "subtype", EmitDefaultValue = false)]
         public string Subtype { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>SAVINGS</example>
+        [DataMember(Name = "type", IsRequired = true, EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
@@ -600,7 +633,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

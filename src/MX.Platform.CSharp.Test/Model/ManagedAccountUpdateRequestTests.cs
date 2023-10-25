@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<ManagedAccountUpdateRequest>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'AccountNumber'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AccountNumber'
         }
+
         /// <summary>
         /// Test the property 'Apr'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Apr'
         }
+
         /// <summary>
         /// Test the property 'Apy'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Apy'
         }
+
         /// <summary>
         /// Test the property 'AvailableBalance'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AvailableBalance'
         }
+
         /// <summary>
         /// Test the property 'AvailableCredit'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'AvailableCredit'
         }
+
         /// <summary>
         /// Test the property 'Balance'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Balance'
         }
+
         /// <summary>
         /// Test the property 'CashSurrenderValue'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CashSurrenderValue'
         }
+
         /// <summary>
         /// Test the property 'CreditLimit'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CreditLimit'
         }
+
         /// <summary>
         /// Test the property 'CurrencyCode'
         /// </summary>
@@ -128,6 +134,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CurrencyCode'
         }
+
         /// <summary>
         /// Test the property 'DayPaymentIsDue'
         /// </summary>
@@ -136,6 +143,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'DayPaymentIsDue'
         }
+
         /// <summary>
         /// Test the property 'DeathBenefit'
         /// </summary>
@@ -144,6 +152,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'DeathBenefit'
         }
+
         /// <summary>
         /// Test the property 'Id'
         /// </summary>
@@ -152,6 +161,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Id'
         }
+
         /// <summary>
         /// Test the property 'InterestRate'
         /// </summary>
@@ -160,6 +170,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'InterestRate'
         }
+
         /// <summary>
         /// Test the property 'IsClosed'
         /// </summary>
@@ -168,6 +179,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsClosed'
         }
+
         /// <summary>
         /// Test the property 'IsHidden'
         /// </summary>
@@ -176,6 +188,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsHidden'
         }
+
         /// <summary>
         /// Test the property 'LastPayment'
         /// </summary>
@@ -184,6 +197,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'LastPayment'
         }
+
         /// <summary>
         /// Test the property 'LastPaymentAt'
         /// </summary>
@@ -192,6 +206,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'LastPaymentAt'
         }
+
         /// <summary>
         /// Test the property 'LoanAmount'
         /// </summary>
@@ -200,6 +215,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'LoanAmount'
         }
+
         /// <summary>
         /// Test the property 'MaturesOn'
         /// </summary>
@@ -208,6 +224,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MaturesOn'
         }
+
         /// <summary>
         /// Test the property 'Metadata'
         /// </summary>
@@ -216,6 +233,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Metadata'
         }
+
         /// <summary>
         /// Test the property 'MinimumBalance'
         /// </summary>
@@ -224,6 +242,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MinimumBalance'
         }
+
         /// <summary>
         /// Test the property 'MinimumPayment'
         /// </summary>
@@ -232,6 +251,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MinimumPayment'
         }
+
         /// <summary>
         /// Test the property 'Name'
         /// </summary>
@@ -240,6 +260,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Name'
         }
+
         /// <summary>
         /// Test the property 'Nickname'
         /// </summary>
@@ -248,6 +269,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Nickname'
         }
+
         /// <summary>
         /// Test the property 'OriginalBalance'
         /// </summary>
@@ -256,6 +278,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'OriginalBalance'
         }
+
         /// <summary>
         /// Test the property 'PaymentDueAt'
         /// </summary>
@@ -264,6 +287,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'PaymentDueAt'
         }
+
         /// <summary>
         /// Test the property 'PayoffBalance'
         /// </summary>
@@ -272,6 +296,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'PayoffBalance'
         }
+
         /// <summary>
         /// Test the property 'RoutingNumber'
         /// </summary>
@@ -280,6 +305,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'RoutingNumber'
         }
+
         /// <summary>
         /// Test the property 'StartedOn'
         /// </summary>
@@ -288,6 +314,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'StartedOn'
         }
+
         /// <summary>
         /// Test the property 'Subtype'
         /// </summary>
@@ -296,6 +323,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Subtype'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -304,7 +332,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
-
     }
-
 }

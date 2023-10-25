@@ -127,258 +127,301 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AccountGuid
         /// </summary>
+        /// <example>ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1</example>
         [DataMember(Name = "account_guid", EmitDefaultValue = true)]
         public string AccountGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets AccountId
         /// </summary>
+        /// <example>account123</example>
         [DataMember(Name = "account_id", EmitDefaultValue = true)]
         public string AccountId { get; set; }
 
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
+        /// <example>61.11</example>
         [DataMember(Name = "amount", EmitDefaultValue = true)]
         public decimal? Amount { get; set; }
 
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
+        /// <example>Groceries</example>
         [DataMember(Name = "category", EmitDefaultValue = true)]
         public string Category { get; set; }
 
         /// <summary>
         /// Gets or Sets CategoryGuid
         /// </summary>
+        /// <example>CAT-9588eaad-90a4-bb5c-66c8-1812503d0db8</example>
         [DataMember(Name = "category_guid", EmitDefaultValue = true)]
         public string CategoryGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets CheckNumberString
         /// </summary>
+        /// <example>6812</example>
         [DataMember(Name = "check_number_string", EmitDefaultValue = true)]
         public string CheckNumberString { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2016-10-06T09:43:42.000Z</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrencyCode
         /// </summary>
+        /// <example>USD</example>
         [DataMember(Name = "currency_code", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Date
         /// </summary>
+        /// <example>2013-09-23T00:00:00.000Z</example>
         [DataMember(Name = "date", EmitDefaultValue = true)]
         public string Date { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
+        /// <example>Whole foods</example>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
         /// Gets or Sets ExtendedTransactionType
         /// </summary>
+        /// <example>partner_transaction_type</example>
         [DataMember(Name = "extended_transaction_type", EmitDefaultValue = true)]
         public string ExtendedTransactionType { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>TRN-265abee9-889b-af6a-c69b-25157db2bdd9</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>transaction-265abee9-889b-af6a-c69b-25157db2bdd9</example>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets IsBillPay
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_bill_pay", EmitDefaultValue = true)]
         public bool? IsBillPay { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDirectDeposit
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_direct_deposit", EmitDefaultValue = true)]
         public bool? IsDirectDeposit { get; set; }
 
         /// <summary>
         /// Gets or Sets IsExpense
         /// </summary>
+        /// <example>true</example>
         [DataMember(Name = "is_expense", EmitDefaultValue = true)]
         public bool? IsExpense { get; set; }
 
         /// <summary>
         /// Gets or Sets IsFee
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_fee", EmitDefaultValue = true)]
         public bool? IsFee { get; set; }
 
         /// <summary>
         /// Gets or Sets IsIncome
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_income", EmitDefaultValue = true)]
         public bool? IsIncome { get; set; }
 
         /// <summary>
         /// Gets or Sets IsInternational
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_international", EmitDefaultValue = true)]
         public bool? IsInternational { get; set; }
 
         /// <summary>
         /// Gets or Sets IsOverdraftFee
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_overdraft_fee", EmitDefaultValue = true)]
         public bool? IsOverdraftFee { get; set; }
 
         /// <summary>
         /// Gets or Sets IsPayrollAdvance
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_payroll_advance", EmitDefaultValue = true)]
         public bool? IsPayrollAdvance { get; set; }
 
         /// <summary>
         /// Gets or Sets IsRecurring
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_recurring", EmitDefaultValue = true)]
         public bool? IsRecurring { get; set; }
 
         /// <summary>
         /// Gets or Sets IsSubscription
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_subscription", EmitDefaultValue = true)]
         public bool? IsSubscription { get; set; }
 
         /// <summary>
         /// Gets or Sets Latitude
         /// </summary>
+        /// <example>-43.2075</example>
         [DataMember(Name = "latitude", EmitDefaultValue = true)]
         public decimal? Latitude { get; set; }
 
         /// <summary>
         /// Gets or Sets LocalizedDescription
         /// </summary>
+        /// <example>This is a localized_description</example>
         [DataMember(Name = "localized_description", EmitDefaultValue = true)]
         public string LocalizedDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets LocalizedMemo
         /// </summary>
+        /// <example>This is a localized_memo</example>
         [DataMember(Name = "localized_memo", EmitDefaultValue = true)]
         public string LocalizedMemo { get; set; }
 
         /// <summary>
         /// Gets or Sets Longitude
         /// </summary>
+        /// <example>139.691706</example>
         [DataMember(Name = "longitude", EmitDefaultValue = true)]
         public decimal? Longitude { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberIsManagedByUser
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "member_is_managed_by_user", EmitDefaultValue = true)]
         public bool? MemberIsManagedByUser { get; set; }
 
         /// <summary>
         /// Gets or Sets Memo
         /// </summary>
+        /// <example>This is a memo</example>
         [DataMember(Name = "memo", EmitDefaultValue = true)]
         public string Memo { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantCategoryCode
         /// </summary>
+        /// <example>5411</example>
         [DataMember(Name = "merchant_category_code", EmitDefaultValue = true)]
         public int? MerchantCategoryCode { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantGuid
         /// </summary>
+        /// <example>MCH-7ed79542-884d-2b1b-dd74-501c5cc9d25b</example>
         [DataMember(Name = "merchant_guid", EmitDefaultValue = true)]
         public string MerchantGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets MerchantLocationGuid
         /// </summary>
+        /// <example>MCL-00024e59-18b5-4d79-b879-2a7896726fea</example>
         [DataMember(Name = "merchant_location_guid", EmitDefaultValue = true)]
         public string MerchantLocationGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>some metadata</example>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets OriginalDescription
         /// </summary>
+        /// <example>WHOLEFDS TSQ 102</example>
         [DataMember(Name = "original_description", EmitDefaultValue = true)]
         public string OriginalDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets PostedAt
         /// </summary>
+        /// <example>2016-10-07T06:00:00.000Z</example>
         [DataMember(Name = "posted_at", EmitDefaultValue = true)]
         public string PostedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
+        /// <example>POSTED</example>
         [DataMember(Name = "status", EmitDefaultValue = true)]
         public string Status { get; set; }
 
         /// <summary>
         /// Gets or Sets TopLevelCategory
         /// </summary>
+        /// <example>Food &amp; Dining</example>
         [DataMember(Name = "top_level_category", EmitDefaultValue = true)]
         public string TopLevelCategory { get; set; }
 
         /// <summary>
         /// Gets or Sets TransactedAt
         /// </summary>
+        /// <example>2016-10-06T13:00:00.000Z</example>
         [DataMember(Name = "transacted_at", EmitDefaultValue = true)]
         public string TransactedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
+        /// <example>DEBIT</example>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2016-10-07T05:49:12.000Z</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
+        /// <example>user123</example>
         [DataMember(Name = "user_id", EmitDefaultValue = true)]
         public string UserId { get; set; }
 
@@ -875,7 +918,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

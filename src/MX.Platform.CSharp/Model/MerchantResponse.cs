@@ -53,36 +53,42 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2017-04-20T19:30:12.000Z</example>
         [DataMember(Name = "created_at", EmitDefaultValue = true)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>MCH-7ed79542-884d-2b1b-dd74-501c5cc9d25b</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets LogoUrl
         /// </summary>
+        /// <example>https://s3.amazonaws.com/MD_Assets/merchant_logos/comcast.png</example>
         [DataMember(Name = "logo_url", EmitDefaultValue = true)]
         public string LogoUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
+        /// <example>Comcast</example>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2018-09-28T21:13:53.000Z</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets WebsiteUrl
         /// </summary>
+        /// <example>https://www.xfinity.com</example>
         [DataMember(Name = "website_url", EmitDefaultValue = true)]
         public string WebsiteUrl { get; set; }
 
@@ -209,7 +215,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -14,7 +14,6 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using MX.Platform.CSharp.Api;
 using MX.Platform.CSharp.Model;
 using MX.Platform.CSharp.Client;
 using System.Reflection;
@@ -55,7 +54,6 @@ namespace MX.Platform.CSharp.Test.Model
             //Assert.IsType<EnhanceTransactionResponse>(instance);
         }
 
-
         /// <summary>
         /// Test the property 'Amount'
         /// </summary>
@@ -64,6 +62,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Amount'
         }
+
         /// <summary>
         /// Test the property 'CategorizedBy'
         /// </summary>
@@ -72,6 +71,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CategorizedBy'
         }
+
         /// <summary>
         /// Test the property 'Category'
         /// </summary>
@@ -80,6 +80,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Category'
         }
+
         /// <summary>
         /// Test the property 'CategoryGuid'
         /// </summary>
@@ -88,6 +89,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'CategoryGuid'
         }
+
         /// <summary>
         /// Test the property 'DescribedBy'
         /// </summary>
@@ -96,6 +98,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'DescribedBy'
         }
+
         /// <summary>
         /// Test the property 'Description'
         /// </summary>
@@ -104,6 +107,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Description'
         }
+
         /// <summary>
         /// Test the property 'ExtendedTransactionType'
         /// </summary>
@@ -112,6 +116,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'ExtendedTransactionType'
         }
+
         /// <summary>
         /// Test the property 'Id'
         /// </summary>
@@ -120,6 +125,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Id'
         }
+
         /// <summary>
         /// Test the property 'IsBillPay'
         /// </summary>
@@ -128,6 +134,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsBillPay'
         }
+
         /// <summary>
         /// Test the property 'IsDirectDeposit'
         /// </summary>
@@ -136,6 +143,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsDirectDeposit'
         }
+
         /// <summary>
         /// Test the property 'IsExpense'
         /// </summary>
@@ -144,6 +152,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsExpense'
         }
+
         /// <summary>
         /// Test the property 'IsFee'
         /// </summary>
@@ -152,6 +161,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsFee'
         }
+
         /// <summary>
         /// Test the property 'IsIncome'
         /// </summary>
@@ -160,6 +170,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsIncome'
         }
+
         /// <summary>
         /// Test the property 'IsInternational'
         /// </summary>
@@ -168,6 +179,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsInternational'
         }
+
         /// <summary>
         /// Test the property 'IsOverdraftFee'
         /// </summary>
@@ -176,6 +188,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsOverdraftFee'
         }
+
         /// <summary>
         /// Test the property 'IsPayrollAdvance'
         /// </summary>
@@ -184,6 +197,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsPayrollAdvance'
         }
+
         /// <summary>
         /// Test the property 'IsSubscription'
         /// </summary>
@@ -192,6 +206,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'IsSubscription'
         }
+
         /// <summary>
         /// Test the property 'Memo'
         /// </summary>
@@ -200,6 +215,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Memo'
         }
+
         /// <summary>
         /// Test the property 'MerchantCategoryCode'
         /// </summary>
@@ -208,6 +224,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MerchantCategoryCode'
         }
+
         /// <summary>
         /// Test the property 'MerchantGuid'
         /// </summary>
@@ -216,6 +233,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MerchantGuid'
         }
+
         /// <summary>
         /// Test the property 'MerchantLocationGuid'
         /// </summary>
@@ -224,6 +242,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'MerchantLocationGuid'
         }
+
         /// <summary>
         /// Test the property 'OriginalDescription'
         /// </summary>
@@ -232,6 +251,7 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'OriginalDescription'
         }
+
         /// <summary>
         /// Test the property 'Type'
         /// </summary>
@@ -240,7 +260,5 @@ namespace MX.Platform.CSharp.Test.Model
         {
             // TODO unit test for the property 'Type'
         }
-
     }
-
 }

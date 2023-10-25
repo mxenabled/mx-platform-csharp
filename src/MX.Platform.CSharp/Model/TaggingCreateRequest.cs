@@ -44,12 +44,14 @@ namespace MX.Platform.CSharp.Model
         public TaggingCreateRequest(string tagGuid = default(string), string transactionGuid = default(string))
         {
             // to ensure "tagGuid" is required (not null)
-            if (tagGuid == null) {
+            if (tagGuid == null)
+            {
                 throw new ArgumentNullException("tagGuid is a required property for TaggingCreateRequest and cannot be null");
             }
             this.TagGuid = tagGuid;
             // to ensure "transactionGuid" is required (not null)
-            if (transactionGuid == null) {
+            if (transactionGuid == null)
+            {
                 throw new ArgumentNullException("transactionGuid is a required property for TaggingCreateRequest and cannot be null");
             }
             this.TransactionGuid = transactionGuid;
@@ -58,13 +60,15 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets TagGuid
         /// </summary>
-        [DataMember(Name = "tag_guid", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>TAG-40faf068-abb4-405c-8f6a-e883ed541fff</example>
+        [DataMember(Name = "tag_guid", IsRequired = true, EmitDefaultValue = true)]
         public string TagGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets TransactionGuid
         /// </summary>
-        [DataMember(Name = "transaction_guid", IsRequired = true, EmitDefaultValue = false)]
+        /// <example>TRN-810828b0-5210-4878-9bd3-f4ce514f90c4</example>
+        [DataMember(Name = "transaction_guid", IsRequired = true, EmitDefaultValue = true)]
         public string TransactionGuid { get; set; }
 
         /// <summary>
@@ -150,7 +154,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

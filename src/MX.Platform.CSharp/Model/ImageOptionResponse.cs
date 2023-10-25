@@ -47,18 +47,21 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets DataUri
         /// </summary>
+        /// <example>data:image/png;base64,iVBORw0KGgoAAAANSUh ... more image data ...</example>
         [DataMember(Name = "data_uri", EmitDefaultValue = true)]
         public string DataUri { get; set; }
 
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
+        /// <example>IMAGE_1</example>
         [DataMember(Name = "label", EmitDefaultValue = true)]
         public string Label { get; set; }
 
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
+        /// <example>image_data</example>
         [DataMember(Name = "value", EmitDefaultValue = true)]
         public string Value { get; set; }
 
@@ -155,7 +158,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

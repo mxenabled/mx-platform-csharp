@@ -51,30 +51,35 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
+        /// <example>email@provider.com</example>
         [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>USR-d74cb14f-fd0a-449f-991b-e0362a63d9c6</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>My-Unique-ID</example>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets IsDisabled
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_disabled", EmitDefaultValue = true)]
         public bool? IsDisabled { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>{\&quot;first_name\&quot;: \&quot;Steven\&quot;, \&quot;last_name\&quot;: \&quot;Universe\&quot;}</example>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
         public string Metadata { get; set; }
 
@@ -191,7 +196,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

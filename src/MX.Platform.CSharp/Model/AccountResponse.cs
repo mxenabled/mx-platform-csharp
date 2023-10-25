@@ -153,336 +153,392 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets AccountNumber
         /// </summary>
+        /// <example>5366</example>
         [DataMember(Name = "account_number", EmitDefaultValue = true)]
         public string AccountNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets AccountOwnership
         /// </summary>
+        /// <example>INDIVIDUAL</example>
         [DataMember(Name = "account_ownership", EmitDefaultValue = true)]
         public string AccountOwnership { get; set; }
 
         /// <summary>
         /// Gets or Sets AnnuityPolicyToDate
         /// </summary>
+        /// <example>2016-10-13T17:57:37.000Z</example>
         [DataMember(Name = "annuity_policy_to_date", EmitDefaultValue = true)]
         public string AnnuityPolicyToDate { get; set; }
 
         /// <summary>
         /// Gets or Sets AnnuityProvider
         /// </summary>
+        /// <example>Metlife</example>
         [DataMember(Name = "annuity_provider", EmitDefaultValue = true)]
         public string AnnuityProvider { get; set; }
 
         /// <summary>
         /// Gets or Sets AnnuityTermYear
         /// </summary>
+        /// <example>2048</example>
         [DataMember(Name = "annuity_term_year", EmitDefaultValue = true)]
         public decimal? AnnuityTermYear { get; set; }
 
         /// <summary>
         /// Gets or Sets Apr
         /// </summary>
+        /// <example>1.0</example>
         [DataMember(Name = "apr", EmitDefaultValue = true)]
         public decimal? Apr { get; set; }
 
         /// <summary>
         /// Gets or Sets Apy
         /// </summary>
+        /// <example>1.0</example>
         [DataMember(Name = "apy", EmitDefaultValue = true)]
         public decimal? Apy { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailableBalance
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "available_balance", EmitDefaultValue = true)]
         public decimal? AvailableBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailableCredit
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "available_credit", EmitDefaultValue = true)]
         public decimal? AvailableCredit { get; set; }
 
         /// <summary>
         /// Gets or Sets Balance
         /// </summary>
+        /// <example>10000.0</example>
         [DataMember(Name = "balance", EmitDefaultValue = true)]
         public decimal? Balance { get; set; }
 
         /// <summary>
         /// Gets or Sets CashBalance
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "cash_balance", EmitDefaultValue = true)]
         public decimal? CashBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets CashSurrenderValue
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "cash_surrender_value", EmitDefaultValue = true)]
         public decimal? CashSurrenderValue { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
+        /// <example>2023-07-25T17:14:46Z</example>
         [DataMember(Name = "created_at", EmitDefaultValue = false)]
         public string CreatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets CreditLimit
         /// </summary>
+        /// <example>100.0</example>
         [DataMember(Name = "credit_limit", EmitDefaultValue = true)]
         public decimal? CreditLimit { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrencyCode
         /// </summary>
+        /// <example>USD</example>
         [DataMember(Name = "currency_code", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
 
         /// <summary>
         /// Gets or Sets DayPaymentIsDue
         /// </summary>
+        /// <example>20</example>
         [DataMember(Name = "day_payment_is_due", EmitDefaultValue = true)]
         public int? DayPaymentIsDue { get; set; }
 
         /// <summary>
         /// Gets or Sets DeathBenefit
         /// </summary>
+        /// <example>1000</example>
         [DataMember(Name = "death_benefit", EmitDefaultValue = true)]
         public int? DeathBenefit { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
+        /// <example>ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets HoldingsValue
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "holdings_value", EmitDefaultValue = true)]
         public decimal? HoldingsValue { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
+        /// <example>1040434698</example>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets ImportedAt
         /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "imported_at", EmitDefaultValue = true)]
         public string ImportedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets InterestRate
         /// </summary>
+        /// <example>1.0</example>
         [DataMember(Name = "interest_rate", EmitDefaultValue = true)]
         public decimal? InterestRate { get; set; }
 
         /// <summary>
         /// Gets or Sets InstitutionCode
         /// </summary>
+        /// <example>3af3685e-05d9-7060-359f-008d0755e993</example>
         [DataMember(Name = "institution_code", EmitDefaultValue = true)]
         public string InstitutionCode { get; set; }
 
         /// <summary>
         /// Gets or Sets InsuredName
         /// </summary>
+        /// <example>Tommy Shelby</example>
         [DataMember(Name = "insured_name", EmitDefaultValue = true)]
         public string InsuredName { get; set; }
 
         /// <summary>
         /// Gets or Sets IsClosed
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_closed", EmitDefaultValue = true)]
         public bool? IsClosed { get; set; }
 
         /// <summary>
         /// Gets or Sets IsHidden
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_hidden", EmitDefaultValue = true)]
         public bool? IsHidden { get; set; }
 
         /// <summary>
         /// Gets or Sets IsManual
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "is_manual", EmitDefaultValue = true)]
         public bool? IsManual { get; set; }
 
         /// <summary>
         /// Gets or Sets LastPayment
         /// </summary>
+        /// <example>100.0</example>
         [DataMember(Name = "last_payment", EmitDefaultValue = true)]
         public decimal? LastPayment { get; set; }
 
         /// <summary>
         /// Gets or Sets LastPaymentAt
         /// </summary>
+        /// <example>2023-07-25T17:14:46Z</example>
         [DataMember(Name = "last_payment_at", EmitDefaultValue = true)]
         public string LastPaymentAt { get; set; }
 
         /// <summary>
         /// Gets or Sets LoanAmount
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "loan_amount", EmitDefaultValue = true)]
         public decimal? LoanAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets MarginBalance
         /// </summary>
+        /// <example>1000.0</example>
         [DataMember(Name = "margin_balance", EmitDefaultValue = true)]
         public decimal? MarginBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets MaturesOn
         /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "matures_on", EmitDefaultValue = true)]
         public string MaturesOn { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
+        /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
         [DataMember(Name = "member_guid", EmitDefaultValue = true)]
         public string MemberGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberId
         /// </summary>
+        /// <example>member123</example>
         [DataMember(Name = "member_id", EmitDefaultValue = true)]
         public string MemberId { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberIsManagedByUser
         /// </summary>
+        /// <example>false</example>
         [DataMember(Name = "member_is_managed_by_user", EmitDefaultValue = true)]
         public bool? MemberIsManagedByUser { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
+        /// <example>some metadata</example>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets MinimumBalance
         /// </summary>
+        /// <example>100.0</example>
         [DataMember(Name = "minimum_balance", EmitDefaultValue = true)]
         public decimal? MinimumBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets MinimumPayment
         /// </summary>
+        /// <example>10.0</example>
         [DataMember(Name = "minimum_payment", EmitDefaultValue = true)]
         public decimal? MinimumPayment { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
+        /// <example>Test account 2</example>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or Sets Nickname
         /// </summary>
+        /// <example>My Checking</example>
         [DataMember(Name = "nickname", EmitDefaultValue = true)]
         public string Nickname { get; set; }
 
         /// <summary>
         /// Gets or Sets OriginalBalance
         /// </summary>
+        /// <example>10.0</example>
         [DataMember(Name = "original_balance", EmitDefaultValue = true)]
         public decimal? OriginalBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets PayOutAmount
         /// </summary>
+        /// <example>10.0</example>
         [DataMember(Name = "pay_out_amount", EmitDefaultValue = true)]
         public decimal? PayOutAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentDueAt
         /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "payment_due_at", EmitDefaultValue = true)]
         public string PaymentDueAt { get; set; }
 
         /// <summary>
         /// Gets or Sets PayoffBalance
         /// </summary>
+        /// <example>10.0</example>
         [DataMember(Name = "payoff_balance", EmitDefaultValue = true)]
         public decimal? PayoffBalance { get; set; }
 
         /// <summary>
         /// Gets or Sets PremiumAmount
         /// </summary>
+        /// <example>1.0</example>
         [DataMember(Name = "premium_amount", EmitDefaultValue = true)]
         public decimal? PremiumAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets PropertyType
         /// </summary>
+        /// <example>VEHICLE</example>
         [DataMember(Name = "property_type", EmitDefaultValue = true)]
         public string PropertyType { get; set; }
 
         /// <summary>
         /// Gets or Sets RoutingNumber
         /// </summary>
+        /// <example>68899990000000</example>
         [DataMember(Name = "routing_number", EmitDefaultValue = true)]
         public string RoutingNumber { get; set; }
 
         /// <summary>
         /// Gets or Sets StartedOn
         /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "started_on", EmitDefaultValue = true)]
         public string StartedOn { get; set; }
 
         /// <summary>
         /// Gets or Sets Subtype
         /// </summary>
+        /// <example>NONE</example>
         [DataMember(Name = "subtype", EmitDefaultValue = true)]
         public string Subtype { get; set; }
 
         /// <summary>
         /// Gets or Sets TodayUglAmount
         /// </summary>
+        /// <example>1000.5</example>
         [DataMember(Name = "today_ugl_amount", EmitDefaultValue = true)]
         public decimal? TodayUglAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets TodayUglPercentage
         /// </summary>
+        /// <example>6.9</example>
         [DataMember(Name = "today_ugl_percentage", EmitDefaultValue = true)]
         public decimal? TodayUglPercentage { get; set; }
 
         /// <summary>
         /// Gets or Sets TotalAccountValue
         /// </summary>
+        /// <example>1.0</example>
         [DataMember(Name = "total_account_value", EmitDefaultValue = true)]
         public decimal? TotalAccountValue { get; set; }
 
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
+        /// <example>SAVINGS</example>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
         /// </summary>
+        /// <example>2016-10-13T18:08:00.000Z</example>
         [DataMember(Name = "updated_at", EmitDefaultValue = true)]
         public string UpdatedAt { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
+        /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
         [DataMember(Name = "user_guid", EmitDefaultValue = true)]
         public string UserGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
+        /// <example>user123</example>
         [DataMember(Name = "user_id", EmitDefaultValue = true)]
         public string UserId { get; set; }
 
@@ -1109,7 +1165,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }
