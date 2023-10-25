@@ -33,7 +33,7 @@ jobs:
     - run: |
         openapi-generator-cli generate \
           -i https://raw.githubusercontent.com/mxenabled/openapi/master/openapi/mx_platform_api.yml \
-          -g csharp-netcore \
+          -g csharp \
           -c ./openapi/config.yml \
           -t ./openapi/templates
     - name: Create branch
