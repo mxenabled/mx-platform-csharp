@@ -3409,7 +3409,7 @@ paths:
           description: OK
       summary: List spending plan iteration items
       tags:
-      - mx_platform
+      - spending plan
     post:
       description: This endpoint creates a new `spending_plan_iteration_item`.
       operationId: createSpendingPlanIterationItem
@@ -3448,7 +3448,7 @@ paths:
           description: OK
       summary: Create spending plan iteration item
       tags:
-      - mx_platform
+      - spending plan
   /users/{user_guid}/spending_plans:
     get:
       description: Use this endpoint to list all the spending plans associated with
@@ -3491,7 +3491,7 @@ paths:
           description: OK
       summary: List spending plans
       tags:
-      - mx_platform
+      - spending plan
     post:
       description: This endpoint creates a new `spending_plan` for the user.
       operationId: createSpendingPlan
@@ -3514,7 +3514,7 @@ paths:
           description: OK
       summary: Create spending plan
       tags:
-      - mx_platform
+      - spending plan
   /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts/{spending_plan_account_guid}:
     delete:
       description: Use this endpoint to delete a `spending_plan_account`.
@@ -3552,7 +3552,7 @@ paths:
           description: No Content
       summary: Delete spending plan account
       tags:
-      - mx_platform
+      - spending plan
     get:
       description: Use this endpoint to read the attributes of a specific spending
         plan account according to its unique GUID.
@@ -3612,7 +3612,7 @@ paths:
           description: OK
       summary: Read spending plan account
       tags:
-      - mx_platform
+      - spending plan
   /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid}:
     delete:
       description: Use this endpoint to delete a spending plan `iteration_item`.
@@ -3650,7 +3650,7 @@ paths:
           description: No Content
       summary: Delete spending plan iteration item
       tags:
-      - mx_platform
+      - spending plan
     get:
       description: Use this endpoint to read the attributes of a specific spending
         plan `iteration_item` according to its unique GUID.
@@ -3710,7 +3710,7 @@ paths:
           description: OK
       summary: Read a spending plan iteration item
       tags:
-      - mx_platform
+      - spending plan
     put:
       description: Use this endpoint to update an existing `spending_plan_iteration_item`.
       operationId: updateSpendingPlanIterationItem
@@ -3758,7 +3758,7 @@ paths:
           description: OK
       summary: Update a spending plan iteration item
       tags:
-      - mx_platform
+      - spending plan
   /users/{user_guid}/spending_plans/{spending_plan_guid}:
     delete:
       description: Use this endpoint to delete a user's `spending_plan`.
@@ -3787,7 +3787,7 @@ paths:
           description: No Content
       summary: Delete spending plan
       tags:
-      - mx_platform
+      - spending plan
     get:
       description: Use this endpoint to read the attributes of a specific spending
         plan according to its unique GUID.
@@ -3838,7 +3838,7 @@ paths:
           description: OK
       summary: Read a spending plan for a user
       tags:
-      - mx_platform
+      - spending plan
   /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts:
     get:
       description: Use this endpoint to list all the spending plan accounts associated
@@ -3890,7 +3890,7 @@ paths:
           description: OK
       summary: List spending plan accounts
       tags:
-      - mx_platform
+      - spending plan
   /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations:
     get:
       description: Use this endpoint to list all the spending plan `iterations` associated
@@ -3942,7 +3942,7 @@ paths:
           description: OK
       summary: List spending plan iterations
       tags:
-      - mx_platform
+      - spending plan
   /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/{iteration_number}:
     get:
       description: Use this endpoint to read the attributes of a specific spending
@@ -4003,7 +4003,7 @@ paths:
           description: OK
       summary: Read a spending plan iteration
       tags:
-      - mx_platform
+      - spending plan
   /users/{user_guid}/taggings:
     get:
       description: Use this endpoint to retrieve a list of all the taggings associated

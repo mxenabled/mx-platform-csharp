@@ -84,6 +84,7 @@ docs/PaymentProcessorAuthorizationCodeResponse.md
 docs/PaymentProcessorAuthorizationCodeResponseBody.md
 docs/SpendingPlanAccountResponse.md
 docs/SpendingPlanAccountsResponse.md
+docs/SpendingPlanApi.md
 docs/SpendingPlanIterationItemCreateRequestBody.md
 docs/SpendingPlanIterationItemResponse.md
 docs/SpendingPlanIterationItemsResponseBody.md
@@ -135,6 +136,7 @@ docs/WidgetRequestBody.md
 docs/WidgetResponse.md
 docs/WidgetResponseBody.md
 src/MX.Platform.CSharp.Test/Api/MxPlatformApiTests.cs
+src/MX.Platform.CSharp.Test/Api/SpendingPlanApiTests.cs
 src/MX.Platform.CSharp.Test/MX.Platform.CSharp.Test.csproj
 src/MX.Platform.CSharp.Test/Model/AccountCreateRequestBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/AccountCreateRequestTests.cs
@@ -267,6 +269,7 @@ src/MX.Platform.CSharp.Test/Model/WidgetRequestTests.cs
 src/MX.Platform.CSharp.Test/Model/WidgetResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/WidgetResponseTests.cs
 src/MX.Platform.CSharp/Api/MxPlatformApi.cs
+src/MX.Platform.CSharp/Api/SpendingPlanApi.cs
 src/MX.Platform.CSharp/Client/ApiClient.cs
 src/MX.Platform.CSharp/Client/ApiException.cs
 src/MX.Platform.CSharp/Client/ApiResponse.cs
