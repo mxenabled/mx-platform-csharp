@@ -34,19 +34,19 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SpendingPlansResponseBody" /> class.
         /// </summary>
-        /// <param name="iterationItems">iterationItems.</param>
+        /// <param name="spendingPlans">spendingPlans.</param>
         /// <param name="pagination">pagination.</param>
-        public SpendingPlansResponseBody(List<SpendingPlanResponse> iterationItems = default(List<SpendingPlanResponse>), PaginationResponse pagination = default(PaginationResponse))
+        public SpendingPlansResponseBody(List<SpendingPlanResponse> spendingPlans = default(List<SpendingPlanResponse>), PaginationResponse pagination = default(PaginationResponse))
         {
-            this.IterationItems = iterationItems;
+            this.SpendingPlans = spendingPlans;
             this.Pagination = pagination;
         }
 
         /// <summary>
-        /// Gets or Sets IterationItems
+        /// Gets or Sets SpendingPlans
         /// </summary>
-        [DataMember(Name = "iteration_items", EmitDefaultValue = false)]
-        public List<SpendingPlanResponse> IterationItems { get; set; }
+        [DataMember(Name = "spending_plans", EmitDefaultValue = false)]
+        public List<SpendingPlanResponse> SpendingPlans { get; set; }
 
         /// <summary>
         /// Gets or Sets Pagination
@@ -62,7 +62,7 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class SpendingPlansResponseBody {\n");
-            sb.Append("  IterationItems: ").Append(IterationItems).Append("\n");
+            sb.Append("  SpendingPlans: ").Append(SpendingPlans).Append("\n");
             sb.Append("  Pagination: ").Append(Pagination).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -100,10 +100,10 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.IterationItems == input.IterationItems ||
-                    this.IterationItems != null &&
-                    input.IterationItems != null &&
-                    this.IterationItems.SequenceEqual(input.IterationItems)
+                    this.SpendingPlans == input.SpendingPlans ||
+                    this.SpendingPlans != null &&
+                    input.SpendingPlans != null &&
+                    this.SpendingPlans.SequenceEqual(input.SpendingPlans)
                 ) && 
                 (
                     this.Pagination == input.Pagination ||
@@ -121,9 +121,9 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.IterationItems != null)
+                if (this.SpendingPlans != null)
                 {
-                    hashCode = (hashCode * 59) + this.IterationItems.GetHashCode();
+                    hashCode = (hashCode * 59) + this.SpendingPlans.GetHashCode();
                 }
                 if (this.Pagination != null)
                 {

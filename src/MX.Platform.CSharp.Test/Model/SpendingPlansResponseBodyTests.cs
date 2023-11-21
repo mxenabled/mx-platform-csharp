@@ -55,12 +55,12 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'IterationItems'
+        /// Test the property 'SpendingPlans'
         /// </summary>
         [Fact]
-        public void IterationItemsTest()
+        public void SpendingPlansTest()
         {
-            // TODO unit test for the property 'IterationItems'
+            // TODO unit test for the property 'SpendingPlans'
         }
 
         /// <summary>
