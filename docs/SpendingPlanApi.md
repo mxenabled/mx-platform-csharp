@@ -145,7 +145,7 @@ namespace Example
             var apiInstance = new SpendingPlanApi(config);
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var spendingPlanIterationItemCreateRequestBody = new SpendingPlanIterationItemCreateRequestBody(); // SpendingPlanIterationItemCreateRequestBody | Iteration item to be created with required parameters (planned_amount)
+            var spendingPlanIterationItemCreateRequestBody = new SpendingPlanIterationItemCreateRequestBody(); // SpendingPlanIterationItemCreateRequestBody | Iteration item to be created with required parameter (planned_amount)
 
             try
             {
@@ -190,7 +190,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 | **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
-| **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md) | Iteration item to be created with required parameters (planned_amount) |  |
+| **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md) | Iteration item to be created with required parameter (planned_amount) |  |
 
 ### Return type
 
@@ -1340,7 +1340,7 @@ namespace Example
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
             var iterationItemGuid = SII-a4dc1549-da28-1245-9c9c-53eee4cdfbe3;  // string | The unique ID for the `iteration_item`.
-            var spendingPlanIterationItemCreateRequestBody = new SpendingPlanIterationItemCreateRequestBody(); // SpendingPlanIterationItemCreateRequestBody | Iteration item object to be updated with required parameter (iteration_item_guid)
+            var spendingPlanIterationItemCreateRequestBody = new SpendingPlanIterationItemCreateRequestBody(); // SpendingPlanIterationItemCreateRequestBody | Iteration item to be updated with required parameter (planned_amount)
 
             try
             {
@@ -1386,7 +1386,7 @@ catch (ApiException e)
 | **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 | **iterationItemGuid** | **string** | The unique ID for the &#x60;iteration_item&#x60;. |  |
-| **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md) | Iteration item object to be updated with required parameter (iteration_item_guid) |  |
+| **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md) | Iteration item to be updated with required parameter (planned_amount) |  |
 
 ### Return type
 

@@ -58,7 +58,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameters (planned_amount)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SpendingPlanIterationItemResponse</returns>
         SpendingPlanIterationItemResponse CreateSpendingPlanIterationItem(string spendingPlanGuid, string userGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody, int operationIndex = 0);
@@ -72,7 +72,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameters (planned_amount)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SpendingPlanIterationItemResponse</returns>
         ApiResponse<SpendingPlanIterationItemResponse> CreateSpendingPlanIterationItemWithHttpInfo(string spendingPlanGuid, string userGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody, int operationIndex = 0);
@@ -401,7 +401,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="iterationItemGuid">The unique ID for the &#x60;iteration_item&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item object to be updated with required parameter (iteration_item_guid)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be updated with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SpendingPlanIterationItemResponse</returns>
         SpendingPlanIterationItemResponse UpdateSpendingPlanIterationItem(string userGuid, string spendingPlanGuid, string iterationItemGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody, int operationIndex = 0);
@@ -416,7 +416,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="iterationItemGuid">The unique ID for the &#x60;iteration_item&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item object to be updated with required parameter (iteration_item_guid)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be updated with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SpendingPlanIterationItemResponse</returns>
         ApiResponse<SpendingPlanIterationItemResponse> UpdateSpendingPlanIterationItemWithHttpInfo(string userGuid, string spendingPlanGuid, string iterationItemGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody, int operationIndex = 0);
@@ -463,7 +463,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameters (planned_amount)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SpendingPlanIterationItemResponse</returns>
@@ -478,7 +478,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameters (planned_amount)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SpendingPlanIterationItemResponse)</returns>
@@ -830,7 +830,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="iterationItemGuid">The unique ID for the &#x60;iteration_item&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item object to be updated with required parameter (iteration_item_guid)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be updated with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SpendingPlanIterationItemResponse</returns>
@@ -846,7 +846,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="iterationItemGuid">The unique ID for the &#x60;iteration_item&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item object to be updated with required parameter (iteration_item_guid)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be updated with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SpendingPlanIterationItemResponse)</returns>
@@ -1133,7 +1133,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameters (planned_amount)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SpendingPlanIterationItemResponse</returns>
         public SpendingPlanIterationItemResponse CreateSpendingPlanIterationItem(string spendingPlanGuid, string userGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody, int operationIndex = 0)
@@ -1148,7 +1148,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameters (planned_amount)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SpendingPlanIterationItemResponse</returns>
         public MX.Platform.CSharp.Client.ApiResponse<SpendingPlanIterationItemResponse> CreateSpendingPlanIterationItemWithHttpInfo(string spendingPlanGuid, string userGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody, int operationIndex = 0)
@@ -1228,7 +1228,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameters (planned_amount)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SpendingPlanIterationItemResponse</returns>
@@ -1244,7 +1244,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameters (planned_amount)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be created with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SpendingPlanIterationItemResponse)</returns>
@@ -3482,7 +3482,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="iterationItemGuid">The unique ID for the &#x60;iteration_item&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item object to be updated with required parameter (iteration_item_guid)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be updated with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SpendingPlanIterationItemResponse</returns>
         public SpendingPlanIterationItemResponse UpdateSpendingPlanIterationItem(string userGuid, string spendingPlanGuid, string iterationItemGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody, int operationIndex = 0)
@@ -3498,7 +3498,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="iterationItemGuid">The unique ID for the &#x60;iteration_item&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item object to be updated with required parameter (iteration_item_guid)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be updated with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SpendingPlanIterationItemResponse</returns>
         public MX.Platform.CSharp.Client.ApiResponse<SpendingPlanIterationItemResponse> UpdateSpendingPlanIterationItemWithHttpInfo(string userGuid, string spendingPlanGuid, string iterationItemGuid, SpendingPlanIterationItemCreateRequestBody spendingPlanIterationItemCreateRequestBody, int operationIndex = 0)
@@ -3586,7 +3586,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="iterationItemGuid">The unique ID for the &#x60;iteration_item&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item object to be updated with required parameter (iteration_item_guid)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be updated with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SpendingPlanIterationItemResponse</returns>
@@ -3603,7 +3603,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
         /// <param name="spendingPlanGuid">The unique ID for the &#x60;spending_plan&#x60;.</param>
         /// <param name="iterationItemGuid">The unique ID for the &#x60;iteration_item&#x60;.</param>
-        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item object to be updated with required parameter (iteration_item_guid)</param>
+        /// <param name="spendingPlanIterationItemCreateRequestBody">Iteration item to be updated with required parameter (planned_amount)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SpendingPlanIterationItemResponse)</returns>
