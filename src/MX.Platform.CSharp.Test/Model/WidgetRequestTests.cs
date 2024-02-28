@@ -145,6 +145,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'MicrowidgetInstanceId'
+        /// </summary>
+        [Fact]
+        public void MicrowidgetInstanceIdTest()
+        {
+            // TODO unit test for the property 'MicrowidgetInstanceId'
+        }
+
+        /// <summary>
         /// Test the property 'Mode'
         /// </summary>
         [Fact]

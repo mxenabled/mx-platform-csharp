@@ -49,13 +49,14 @@ namespace MX.Platform.CSharp.Model
         /// <param name="includeIdentity">includeIdentity.</param>
         /// <param name="includeTransactions">includeTransactions.</param>
         /// <param name="isMobileWebview">isMobileWebview.</param>
+        /// <param name="microwidgetInstanceId">microwidgetInstanceId.</param>
         /// <param name="mode">mode.</param>
         /// <param name="oauthReferralSource">oauthReferralSource.</param>
         /// <param name="uiMessageVersion">uiMessageVersion.</param>
         /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
         /// <param name="widgetType">widgetType (required).</param>
-        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableBackgroundAgg = default(bool), bool disableInstitutionSearch = default(bool), bool includeIdentity = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string mode = default(string), string oauthReferralSource = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
+        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableBackgroundAgg = default(bool), bool disableInstitutionSearch = default(bool), bool includeIdentity = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string microwidgetInstanceId = default(string), string mode = default(string), string oauthReferralSource = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
         {
             // to ensure "widgetType" is required (not null)
             if (widgetType == null)
@@ -73,6 +74,7 @@ namespace MX.Platform.CSharp.Model
             this.IncludeIdentity = includeIdentity;
             this.IncludeTransactions = includeTransactions;
             this.IsMobileWebview = isMobileWebview;
+            this.MicrowidgetInstanceId = microwidgetInstanceId;
             this.Mode = mode;
             this.OauthReferralSource = oauthReferralSource;
             this.UiMessageVersion = uiMessageVersion;
@@ -151,6 +153,13 @@ namespace MX.Platform.CSharp.Model
         public bool IsMobileWebview { get; set; }
 
         /// <summary>
+        /// Gets or Sets MicrowidgetInstanceId
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name = "microwidget_instance_id", EmitDefaultValue = false)]
+        public string MicrowidgetInstanceId { get; set; }
+
+        /// <summary>
         /// Gets or Sets Mode
         /// </summary>
         /// <example>aggregation</example>
@@ -210,6 +219,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  IncludeIdentity: ").Append(IncludeIdentity).Append("\n");
             sb.Append("  IncludeTransactions: ").Append(IncludeTransactions).Append("\n");
             sb.Append("  IsMobileWebview: ").Append(IsMobileWebview).Append("\n");
+            sb.Append("  MicrowidgetInstanceId: ").Append(MicrowidgetInstanceId).Append("\n");
             sb.Append("  Mode: ").Append(Mode).Append("\n");
             sb.Append("  OauthReferralSource: ").Append(OauthReferralSource).Append("\n");
             sb.Append("  UiMessageVersion: ").Append(UiMessageVersion).Append("\n");
@@ -297,6 +307,11 @@ namespace MX.Platform.CSharp.Model
                     this.IsMobileWebview.Equals(input.IsMobileWebview)
                 ) && 
                 (
+                    this.MicrowidgetInstanceId == input.MicrowidgetInstanceId ||
+                    (this.MicrowidgetInstanceId != null &&
+                    this.MicrowidgetInstanceId.Equals(input.MicrowidgetInstanceId))
+                ) && 
+                (
                     this.Mode == input.Mode ||
                     (this.Mode != null &&
                     this.Mode.Equals(input.Mode))
@@ -360,6 +375,10 @@ namespace MX.Platform.CSharp.Model
                 hashCode = (hashCode * 59) + this.IncludeIdentity.GetHashCode();
                 hashCode = (hashCode * 59) + this.IncludeTransactions.GetHashCode();
                 hashCode = (hashCode * 59) + this.IsMobileWebview.GetHashCode();
+                if (this.MicrowidgetInstanceId != null)
+                {
+                    hashCode = (hashCode * 59) + this.MicrowidgetInstanceId.GetHashCode();
+                }
                 if (this.Mode != null)
                 {
                     hashCode = (hashCode * 59) + this.Mode.GetHashCode();

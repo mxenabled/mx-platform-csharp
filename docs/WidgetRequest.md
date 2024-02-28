@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **IncludeIdentity** | **bool** |  | [optional] 
 **IncludeTransactions** | **bool** |  | [optional] 
 **IsMobileWebview** | **bool** |  | [optional] 
+**MicrowidgetInstanceId** | **string** |  | [optional] 
 **Mode** | **string** |  | [optional] 
 **OauthReferralSource** | **string** |  | [optional] 
 **UiMessageVersion** | **int** |  | [optional] 
