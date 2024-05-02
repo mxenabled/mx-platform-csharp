@@ -136,6 +136,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'InsightGuid'
+        /// </summary>
+        [Fact]
+        public void InsightGuidTest()
+        {
+            // TODO unit test for the property 'InsightGuid'
+        }
+
+        /// <summary>
         /// Test the property 'IsMobileWebview'
         /// </summary>
         [Fact]

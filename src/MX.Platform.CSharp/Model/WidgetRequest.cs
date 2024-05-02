@@ -48,6 +48,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="disableInstitutionSearch">disableInstitutionSearch.</param>
         /// <param name="includeIdentity">includeIdentity.</param>
         /// <param name="includeTransactions">includeTransactions.</param>
+        /// <param name="insightGuid">insightGuid.</param>
         /// <param name="isMobileWebview">isMobileWebview.</param>
         /// <param name="microwidgetInstanceId">microwidgetInstanceId.</param>
         /// <param name="mode">mode.</param>
@@ -56,7 +57,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
         /// <param name="widgetType">widgetType (required).</param>
-        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableBackgroundAgg = default(bool), bool disableInstitutionSearch = default(bool), bool includeIdentity = default(bool), bool includeTransactions = default(bool), bool isMobileWebview = default(bool), string microwidgetInstanceId = default(string), string mode = default(string), string oauthReferralSource = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
+        public WidgetRequest(string clientRedirectUrl = default(string), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentInstitutionGuid = default(string), string currentMemberGuid = default(string), bool disableBackgroundAgg = default(bool), bool disableInstitutionSearch = default(bool), bool includeIdentity = default(bool), bool includeTransactions = default(bool), string insightGuid = default(string), bool isMobileWebview = default(bool), string microwidgetInstanceId = default(string), string mode = default(string), string oauthReferralSource = default(string), int uiMessageVersion = default(int), string uiMessageWebviewUrlScheme = default(string), bool updateCredentials = default(bool), string widgetType = default(string))
         {
             // to ensure "widgetType" is required (not null)
             if (widgetType == null)
@@ -73,6 +74,7 @@ namespace MX.Platform.CSharp.Model
             this.DisableInstitutionSearch = disableInstitutionSearch;
             this.IncludeIdentity = includeIdentity;
             this.IncludeTransactions = includeTransactions;
+            this.InsightGuid = insightGuid;
             this.IsMobileWebview = isMobileWebview;
             this.MicrowidgetInstanceId = microwidgetInstanceId;
             this.Mode = mode;
@@ -146,6 +148,13 @@ namespace MX.Platform.CSharp.Model
         public bool IncludeTransactions { get; set; }
 
         /// <summary>
+        /// Gets or Sets InsightGuid
+        /// </summary>
+        /// <example>BET-1234</example>
+        [DataMember(Name = "insight_guid", EmitDefaultValue = false)]
+        public string InsightGuid { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsMobileWebview
         /// </summary>
         /// <example>false</example>
@@ -155,7 +164,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets MicrowidgetInstanceId
         /// </summary>
-        /// <example>false</example>
+        /// <example>accounts_page</example>
         [DataMember(Name = "microwidget_instance_id", EmitDefaultValue = false)]
         public string MicrowidgetInstanceId { get; set; }
 
@@ -218,6 +227,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  DisableInstitutionSearch: ").Append(DisableInstitutionSearch).Append("\n");
             sb.Append("  IncludeIdentity: ").Append(IncludeIdentity).Append("\n");
             sb.Append("  IncludeTransactions: ").Append(IncludeTransactions).Append("\n");
+            sb.Append("  InsightGuid: ").Append(InsightGuid).Append("\n");
             sb.Append("  IsMobileWebview: ").Append(IsMobileWebview).Append("\n");
             sb.Append("  MicrowidgetInstanceId: ").Append(MicrowidgetInstanceId).Append("\n");
             sb.Append("  Mode: ").Append(Mode).Append("\n");
@@ -303,6 +313,11 @@ namespace MX.Platform.CSharp.Model
                     this.IncludeTransactions.Equals(input.IncludeTransactions)
                 ) && 
                 (
+                    this.InsightGuid == input.InsightGuid ||
+                    (this.InsightGuid != null &&
+                    this.InsightGuid.Equals(input.InsightGuid))
+                ) && 
+                (
                     this.IsMobileWebview == input.IsMobileWebview ||
                     this.IsMobileWebview.Equals(input.IsMobileWebview)
                 ) && 
@@ -374,6 +389,10 @@ namespace MX.Platform.CSharp.Model
                 hashCode = (hashCode * 59) + this.DisableInstitutionSearch.GetHashCode();
                 hashCode = (hashCode * 59) + this.IncludeIdentity.GetHashCode();
                 hashCode = (hashCode * 59) + this.IncludeTransactions.GetHashCode();
+                if (this.InsightGuid != null)
+                {
+                    hashCode = (hashCode * 59) + this.InsightGuid.GetHashCode();
+                }
                 hashCode = (hashCode * 59) + this.IsMobileWebview.GetHashCode();
                 if (this.MicrowidgetInstanceId != null)
                 {

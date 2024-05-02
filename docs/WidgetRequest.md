@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **DisableInstitutionSearch** | **bool** |  | [optional] 
 **IncludeIdentity** | **bool** |  | [optional] 
 **IncludeTransactions** | **bool** |  | [optional] 
+**InsightGuid** | **string** |  | [optional] 
 **IsMobileWebview** | **bool** |  | [optional] 
 **MicrowidgetInstanceId** | **string** |  | [optional] 
 **Mode** | **string** |  | [optional] 
