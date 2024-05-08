@@ -186,7 +186,7 @@ namespace MX.Platform.CSharp.Api
         /// Create manual account
         /// </summary>
         /// <remarks>
-        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
@@ -199,7 +199,7 @@ namespace MX.Platform.CSharp.Api
         /// Create manual account
         /// </summary>
         /// <remarks>
-        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
@@ -2866,7 +2866,7 @@ namespace MX.Platform.CSharp.Api
         /// Create manual account
         /// </summary>
         /// <remarks>
-        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
@@ -2880,7 +2880,7 @@ namespace MX.Platform.CSharp.Api
         /// Create manual account
         /// </summary>
         /// <remarks>
-        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
@@ -6778,7 +6778,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
@@ -6792,7 +6792,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
@@ -6864,7 +6864,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
@@ -6879,7 +6879,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed..
+        /// Create manual account This endpoint can only be used to create manual accounts. Creating a manual account will automatically create it under the Manual Institution member. Since a manual account has no credentials tied to the member, the account will never aggregate or include data from a data feed.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>

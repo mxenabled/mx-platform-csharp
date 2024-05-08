@@ -244,15 +244,6 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'InterestRate'
-        /// </summary>
-        [Fact]
-        public void InterestRateTest()
-        {
-            // TODO unit test for the property 'InterestRate'
-        }
-
-        /// <summary>
         /// Test the property 'InstitutionCode'
         /// </summary>
         [Fact]
@@ -268,6 +259,15 @@ namespace MX.Platform.CSharp.Test.Model
         public void InsuredNameTest()
         {
             // TODO unit test for the property 'InsuredName'
+        }
+
+        /// <summary>
+        /// Test the property 'InterestRate'
+        /// </summary>
+        [Fact]
+        public void InterestRateTest()
+        {
+            // TODO unit test for the property 'InterestRate'
         }
 
         /// <summary>

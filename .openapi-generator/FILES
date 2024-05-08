@@ -42,6 +42,11 @@ docs/HoldingResponse.md
 docs/HoldingResponseBody.md
 docs/HoldingsResponseBody.md
 docs/ImageOptionResponse.md
+docs/InsightResponse.md
+docs/InsightResponseBody.md
+docs/InsightUpdateRequest.md
+docs/InsightsApi.md
+docs/InsightsResponseBody.md
 docs/InstitutionResponse.md
 docs/InstitutionResponseBody.md
 docs/InstitutionsResponseBody.md
@@ -82,6 +87,8 @@ docs/PaymentProcessorAuthorizationCodeRequest.md
 docs/PaymentProcessorAuthorizationCodeRequestBody.md
 docs/PaymentProcessorAuthorizationCodeResponse.md
 docs/PaymentProcessorAuthorizationCodeResponseBody.md
+docs/ScheduledPaymentResponse.md
+docs/ScheduledPaymentsResponseBody.md
 docs/SpendingPlanAccountResponse.md
 docs/SpendingPlanAccountsResponse.md
 docs/SpendingPlanApi.md
@@ -135,6 +142,7 @@ docs/WidgetRequest.md
 docs/WidgetRequestBody.md
 docs/WidgetResponse.md
 docs/WidgetResponseBody.md
+src/MX.Platform.CSharp.Test/Api/InsightsApiTests.cs
 src/MX.Platform.CSharp.Test/Api/MxPlatformApiTests.cs
 src/MX.Platform.CSharp.Test/Api/SpendingPlanApiTests.cs
 src/MX.Platform.CSharp.Test/MX.Platform.CSharp.Test.csproj
@@ -177,6 +185,10 @@ src/MX.Platform.CSharp.Test/Model/HoldingResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/HoldingResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/HoldingsResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/ImageOptionResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/InsightResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/InsightResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/InsightUpdateRequestTests.cs
+src/MX.Platform.CSharp.Test/Model/InsightsResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/InstitutionResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/InstitutionResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/InstitutionsResponseBodyTests.cs
@@ -216,6 +228,8 @@ src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeRequestBodyTe
 src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeRequestTests.cs
 src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/ScheduledPaymentResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/ScheduledPaymentsResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/SpendingPlanAccountResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/SpendingPlanAccountsResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/SpendingPlanIterationItemCreateRequestBodyTests.cs
@@ -268,6 +282,7 @@ src/MX.Platform.CSharp.Test/Model/WidgetRequestBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/WidgetRequestTests.cs
 src/MX.Platform.CSharp.Test/Model/WidgetResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/WidgetResponseTests.cs
+src/MX.Platform.CSharp/Api/InsightsApi.cs
 src/MX.Platform.CSharp/Api/MxPlatformApi.cs
 src/MX.Platform.CSharp/Api/SpendingPlanApi.cs
 src/MX.Platform.CSharp/Client/ApiClient.cs
@@ -327,6 +342,10 @@ src/MX.Platform.CSharp/Model/HoldingResponse.cs
 src/MX.Platform.CSharp/Model/HoldingResponseBody.cs
 src/MX.Platform.CSharp/Model/HoldingsResponseBody.cs
 src/MX.Platform.CSharp/Model/ImageOptionResponse.cs
+src/MX.Platform.CSharp/Model/InsightResponse.cs
+src/MX.Platform.CSharp/Model/InsightResponseBody.cs
+src/MX.Platform.CSharp/Model/InsightUpdateRequest.cs
+src/MX.Platform.CSharp/Model/InsightsResponseBody.cs
 src/MX.Platform.CSharp/Model/InstitutionResponse.cs
 src/MX.Platform.CSharp/Model/InstitutionResponseBody.cs
 src/MX.Platform.CSharp/Model/InstitutionsResponseBody.cs
@@ -366,6 +385,8 @@ src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeRequest.cs
 src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeRequestBody.cs
 src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeResponse.cs
 src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeResponseBody.cs
+src/MX.Platform.CSharp/Model/ScheduledPaymentResponse.cs
+src/MX.Platform.CSharp/Model/ScheduledPaymentsResponseBody.cs
 src/MX.Platform.CSharp/Model/SpendingPlanAccountResponse.cs
 src/MX.Platform.CSharp/Model/SpendingPlanAccountsResponse.cs
 src/MX.Platform.CSharp/Model/SpendingPlanIterationItemCreateRequestBody.cs

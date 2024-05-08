@@ -150,7 +150,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets InsightGuid
         /// </summary>
-        /// <example>BET-1234</example>
+        /// <example>BET-123</example>
         [DataMember(Name = "insight_guid", EmitDefaultValue = false)]
         public string InsightGuid { get; set; }
 
