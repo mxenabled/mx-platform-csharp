@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **ConnectionStatus** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **HasProcessedAccounts** | **bool?** |  | [optional] 
+**HasProcessedAccountNumbers** | **bool?** |  | [optional] 
 **HasProcessedTransactions** | **bool?** |  | [optional] 
 **IsAuthenticated** | **bool?** |  | [optional] 
 **IsBeingAggregated** | **bool?** |  | [optional] 

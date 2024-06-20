@@ -100,6 +100,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'HasProcessedAccountNumbers'
+        /// </summary>
+        [Fact]
+        public void HasProcessedAccountNumbersTest()
+        {
+            // TODO unit test for the property 'HasProcessedAccountNumbers'
+        }
+
+        /// <summary>
         /// Test the property 'HasProcessedTransactions'
         /// </summary>
         [Fact]

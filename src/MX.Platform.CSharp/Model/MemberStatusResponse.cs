@@ -39,17 +39,19 @@ namespace MX.Platform.CSharp.Model
         /// <param name="connectionStatus">connectionStatus.</param>
         /// <param name="guid">guid.</param>
         /// <param name="hasProcessedAccounts">hasProcessedAccounts.</param>
+        /// <param name="hasProcessedAccountNumbers">hasProcessedAccountNumbers.</param>
         /// <param name="hasProcessedTransactions">hasProcessedTransactions.</param>
         /// <param name="isAuthenticated">isAuthenticated.</param>
         /// <param name="isBeingAggregated">isBeingAggregated.</param>
         /// <param name="successfullyAggregatedAt">successfullyAggregatedAt.</param>
-        public MemberStatusResponse(string aggregatedAt = default(string), List<ChallengeResponse> challenges = default(List<ChallengeResponse>), string connectionStatus = default(string), string guid = default(string), bool? hasProcessedAccounts = default(bool?), bool? hasProcessedTransactions = default(bool?), bool? isAuthenticated = default(bool?), bool? isBeingAggregated = default(bool?), string successfullyAggregatedAt = default(string))
+        public MemberStatusResponse(string aggregatedAt = default(string), List<ChallengeResponse> challenges = default(List<ChallengeResponse>), string connectionStatus = default(string), string guid = default(string), bool? hasProcessedAccounts = default(bool?), bool? hasProcessedAccountNumbers = default(bool?), bool? hasProcessedTransactions = default(bool?), bool? isAuthenticated = default(bool?), bool? isBeingAggregated = default(bool?), string successfullyAggregatedAt = default(string))
         {
             this.AggregatedAt = aggregatedAt;
             this.Challenges = challenges;
             this.ConnectionStatus = connectionStatus;
             this.Guid = guid;
             this.HasProcessedAccounts = hasProcessedAccounts;
+            this.HasProcessedAccountNumbers = hasProcessedAccountNumbers;
             this.HasProcessedTransactions = hasProcessedTransactions;
             this.IsAuthenticated = isAuthenticated;
             this.IsBeingAggregated = isBeingAggregated;
@@ -89,6 +91,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>true</example>
         [DataMember(Name = "has_processed_accounts", EmitDefaultValue = true)]
         public bool? HasProcessedAccounts { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HasProcessedAccountNumbers
+        /// </summary>
+        /// <example>true</example>
+        [DataMember(Name = "has_processed_account_numbers", EmitDefaultValue = true)]
+        public bool? HasProcessedAccountNumbers { get; set; }
 
         /// <summary>
         /// Gets or Sets HasProcessedTransactions
@@ -131,6 +140,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  ConnectionStatus: ").Append(ConnectionStatus).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  HasProcessedAccounts: ").Append(HasProcessedAccounts).Append("\n");
+            sb.Append("  HasProcessedAccountNumbers: ").Append(HasProcessedAccountNumbers).Append("\n");
             sb.Append("  HasProcessedTransactions: ").Append(HasProcessedTransactions).Append("\n");
             sb.Append("  IsAuthenticated: ").Append(IsAuthenticated).Append("\n");
             sb.Append("  IsBeingAggregated: ").Append(IsBeingAggregated).Append("\n");
@@ -197,6 +207,11 @@ namespace MX.Platform.CSharp.Model
                     this.HasProcessedAccounts.Equals(input.HasProcessedAccounts))
                 ) && 
                 (
+                    this.HasProcessedAccountNumbers == input.HasProcessedAccountNumbers ||
+                    (this.HasProcessedAccountNumbers != null &&
+                    this.HasProcessedAccountNumbers.Equals(input.HasProcessedAccountNumbers))
+                ) && 
+                (
                     this.HasProcessedTransactions == input.HasProcessedTransactions ||
                     (this.HasProcessedTransactions != null &&
                     this.HasProcessedTransactions.Equals(input.HasProcessedTransactions))
@@ -246,6 +261,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.HasProcessedAccounts != null)
                 {
                     hashCode = (hashCode * 59) + this.HasProcessedAccounts.GetHashCode();
+                }
+                if (this.HasProcessedAccountNumbers != null)
+                {
+                    hashCode = (hashCode * 59) + this.HasProcessedAccountNumbers.GetHashCode();
                 }
                 if (this.HasProcessedTransactions != null)
                 {
