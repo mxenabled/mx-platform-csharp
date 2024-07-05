@@ -127,6 +127,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'IsManual'
+        /// </summary>
+        [Fact]
+        public void IsManualTest()
+        {
+            // TODO unit test for the property 'IsManual'
+        }
+
+        /// <summary>
         /// Test the property 'IsOauth'
         /// </summary>
         [Fact]
@@ -142,6 +151,24 @@ namespace MX.Platform.CSharp.Test.Model
         public void MetadataTest()
         {
             // TODO unit test for the property 'Metadata'
+        }
+
+        /// <summary>
+        /// Test the property 'MostRecentJobDetailCode'
+        /// </summary>
+        [Fact]
+        public void MostRecentJobDetailCodeTest()
+        {
+            // TODO unit test for the property 'MostRecentJobDetailCode'
+        }
+
+        /// <summary>
+        /// Test the property 'MostRecentJobDetailText'
+        /// </summary>
+        [Fact]
+        public void MostRecentJobDetailTextTest()
+        {
+            // TODO unit test for the property 'MostRecentJobDetailText'
         }
 
         /// <summary>

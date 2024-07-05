@@ -42,14 +42,17 @@ namespace MX.Platform.CSharp.Model
         /// <param name="institutionCode">institutionCode.</param>
         /// <param name="isBeingAggregated">isBeingAggregated.</param>
         /// <param name="isManagedByUser">isManagedByUser.</param>
+        /// <param name="isManual">isManual.</param>
         /// <param name="isOauth">isOauth.</param>
         /// <param name="metadata">metadata.</param>
+        /// <param name="mostRecentJobDetailCode">mostRecentJobDetailCode.</param>
+        /// <param name="mostRecentJobDetailText">mostRecentJobDetailText.</param>
         /// <param name="name">name.</param>
         /// <param name="oauthWindowUri">oauthWindowUri.</param>
         /// <param name="successfullyAggregatedAt">successfullyAggregatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public MemberResponse(string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), string userGuid = default(string), string userId = default(string))
+        public MemberResponse(string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isManual = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string mostRecentJobDetailCode = default(string), string mostRecentJobDetailText = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), string userGuid = default(string), string userId = default(string))
         {
             this.AggregatedAt = aggregatedAt;
             this.BackgroundAggregationIsDisabled = backgroundAggregationIsDisabled;
@@ -59,8 +62,11 @@ namespace MX.Platform.CSharp.Model
             this.InstitutionCode = institutionCode;
             this.IsBeingAggregated = isBeingAggregated;
             this.IsManagedByUser = isManagedByUser;
+            this.IsManual = isManual;
             this.IsOauth = isOauth;
             this.Metadata = metadata;
+            this.MostRecentJobDetailCode = mostRecentJobDetailCode;
+            this.MostRecentJobDetailText = mostRecentJobDetailText;
             this.Name = name;
             this.OauthWindowUri = oauthWindowUri;
             this.SuccessfullyAggregatedAt = successfullyAggregatedAt;
@@ -125,6 +131,13 @@ namespace MX.Platform.CSharp.Model
         public bool? IsManagedByUser { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsManual
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name = "is_manual", EmitDefaultValue = true)]
+        public bool? IsManual { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsOauth
         /// </summary>
         /// <example>false</example>
@@ -137,6 +150,20 @@ namespace MX.Platform.CSharp.Model
         /// <example>\&quot;credentials_last_refreshed_at\&quot;: \&quot;2015-10-15\&quot;</example>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
         public string Metadata { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MostRecentJobDetailCode
+        /// </summary>
+        /// <example>(deprecated)</example>
+        [DataMember(Name = "most_recent_job_detail_code", EmitDefaultValue = true)]
+        public string MostRecentJobDetailCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MostRecentJobDetailText
+        /// </summary>
+        /// <example>(deprecated)</example>
+        [DataMember(Name = "most_recent_job_detail_text", EmitDefaultValue = true)]
+        public string MostRecentJobDetailText { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -189,8 +216,11 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
             sb.Append("  IsBeingAggregated: ").Append(IsBeingAggregated).Append("\n");
             sb.Append("  IsManagedByUser: ").Append(IsManagedByUser).Append("\n");
+            sb.Append("  IsManual: ").Append(IsManual).Append("\n");
             sb.Append("  IsOauth: ").Append(IsOauth).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  MostRecentJobDetailCode: ").Append(MostRecentJobDetailCode).Append("\n");
+            sb.Append("  MostRecentJobDetailText: ").Append(MostRecentJobDetailText).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OauthWindowUri: ").Append(OauthWindowUri).Append("\n");
             sb.Append("  SuccessfullyAggregatedAt: ").Append(SuccessfullyAggregatedAt).Append("\n");
@@ -271,6 +301,11 @@ namespace MX.Platform.CSharp.Model
                     this.IsManagedByUser.Equals(input.IsManagedByUser))
                 ) && 
                 (
+                    this.IsManual == input.IsManual ||
+                    (this.IsManual != null &&
+                    this.IsManual.Equals(input.IsManual))
+                ) && 
+                (
                     this.IsOauth == input.IsOauth ||
                     (this.IsOauth != null &&
                     this.IsOauth.Equals(input.IsOauth))
@@ -279,6 +314,16 @@ namespace MX.Platform.CSharp.Model
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
+                ) && 
+                (
+                    this.MostRecentJobDetailCode == input.MostRecentJobDetailCode ||
+                    (this.MostRecentJobDetailCode != null &&
+                    this.MostRecentJobDetailCode.Equals(input.MostRecentJobDetailCode))
+                ) && 
+                (
+                    this.MostRecentJobDetailText == input.MostRecentJobDetailText ||
+                    (this.MostRecentJobDetailText != null &&
+                    this.MostRecentJobDetailText.Equals(input.MostRecentJobDetailText))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -345,6 +390,10 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.IsManagedByUser.GetHashCode();
                 }
+                if (this.IsManual != null)
+                {
+                    hashCode = (hashCode * 59) + this.IsManual.GetHashCode();
+                }
                 if (this.IsOauth != null)
                 {
                     hashCode = (hashCode * 59) + this.IsOauth.GetHashCode();
@@ -352,6 +401,14 @@ namespace MX.Platform.CSharp.Model
                 if (this.Metadata != null)
                 {
                     hashCode = (hashCode * 59) + this.Metadata.GetHashCode();
+                }
+                if (this.MostRecentJobDetailCode != null)
+                {
+                    hashCode = (hashCode * 59) + this.MostRecentJobDetailCode.GetHashCode();
+                }
+                if (this.MostRecentJobDetailText != null)
+                {
+                    hashCode = (hashCode * 59) + this.MostRecentJobDetailText.GetHashCode();
                 }
                 if (this.Name != null)
                 {
