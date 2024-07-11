@@ -523,6 +523,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'TotalAccountValueUgl'
+        /// </summary>
+        [Fact]
+        public void TotalAccountValueUglTest()
+        {
+            // TODO unit test for the property 'TotalAccountValueUgl'
+        }
+
+        /// <summary>
         /// Test the property 'Type'
         /// </summary>
         [Fact]

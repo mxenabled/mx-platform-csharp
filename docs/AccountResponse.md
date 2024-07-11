@@ -56,6 +56,7 @@ Name | Type | Description | Notes
 **TodayUglAmount** | **decimal?** |  | [optional] 
 **TodayUglPercentage** | **decimal?** |  | [optional] 
 **TotalAccountValue** | **decimal?** |  | [optional] 
+**TotalAccountValueUgl** | **decimal?** |  | [optional] 
 **Type** | **string** |  | [optional] 
 **UpdatedAt** | **string** |  | [optional] 
 **UserGuid** | **string** |  | [optional] 
