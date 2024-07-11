@@ -37,17 +37,19 @@ namespace MX.Platform.CSharp.Model
         /// <param name="accountGuid">accountGuid.</param>
         /// <param name="accountNumber">accountNumber.</param>
         /// <param name="guid">guid.</param>
+        /// <param name="loanGuarantor">loanGuarantor.</param>
         /// <param name="institutionNumber">institutionNumber.</param>
         /// <param name="memberGuid">memberGuid.</param>
         /// <param name="passedValidation">passedValidation.</param>
         /// <param name="routingNumber">routingNumber.</param>
         /// <param name="transitNumber">transitNumber.</param>
         /// <param name="userGuid">userGuid.</param>
-        public AccountNumberResponse(string accountGuid = default(string), string accountNumber = default(string), string guid = default(string), string institutionNumber = default(string), string memberGuid = default(string), bool? passedValidation = default(bool?), string routingNumber = default(string), string transitNumber = default(string), string userGuid = default(string))
+        public AccountNumberResponse(string accountGuid = default(string), string accountNumber = default(string), string guid = default(string), string loanGuarantor = default(string), string institutionNumber = default(string), string memberGuid = default(string), bool? passedValidation = default(bool?), string routingNumber = default(string), string transitNumber = default(string), string userGuid = default(string))
         {
             this.AccountGuid = accountGuid;
             this.AccountNumber = accountNumber;
             this.Guid = guid;
+            this.LoanGuarantor = loanGuarantor;
             this.InstitutionNumber = institutionNumber;
             this.MemberGuid = memberGuid;
             this.PassedValidation = passedValidation;
@@ -76,6 +78,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>ACN-8899832e-e5b4-42cd-aa25-bbf1dc889a8f</example>
         [DataMember(Name = "guid", EmitDefaultValue = true)]
         public string Guid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LoanGuarantor
+        /// </summary>
+        /// <example>U.S. DEPARTMENT OF EDUCATION</example>
+        [DataMember(Name = "loan_guarantor", EmitDefaultValue = true)]
+        public string LoanGuarantor { get; set; }
 
         /// <summary>
         /// Gets or Sets InstitutionNumber
@@ -130,6 +139,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  AccountGuid: ").Append(AccountGuid).Append("\n");
             sb.Append("  AccountNumber: ").Append(AccountNumber).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
+            sb.Append("  LoanGuarantor: ").Append(LoanGuarantor).Append("\n");
             sb.Append("  InstitutionNumber: ").Append(InstitutionNumber).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  PassedValidation: ").Append(PassedValidation).Append("\n");
@@ -187,6 +197,11 @@ namespace MX.Platform.CSharp.Model
                     this.Guid.Equals(input.Guid))
                 ) && 
                 (
+                    this.LoanGuarantor == input.LoanGuarantor ||
+                    (this.LoanGuarantor != null &&
+                    this.LoanGuarantor.Equals(input.LoanGuarantor))
+                ) && 
+                (
                     this.InstitutionNumber == input.InstitutionNumber ||
                     (this.InstitutionNumber != null &&
                     this.InstitutionNumber.Equals(input.InstitutionNumber))
@@ -238,6 +253,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.Guid != null)
                 {
                     hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
+                if (this.LoanGuarantor != null)
+                {
+                    hashCode = (hashCode * 59) + this.LoanGuarantor.GetHashCode();
                 }
                 if (this.InstitutionNumber != null)
                 {

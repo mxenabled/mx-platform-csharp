@@ -82,6 +82,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'LoanGuarantor'
+        /// </summary>
+        [Fact]
+        public void LoanGuarantorTest()
+        {
+            // TODO unit test for the property 'LoanGuarantor'
+        }
+
+        /// <summary>
         /// Test the property 'InstitutionNumber'
         /// </summary>
         [Fact]
