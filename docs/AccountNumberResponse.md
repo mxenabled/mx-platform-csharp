@@ -8,10 +8,12 @@ Name | Type | Description | Notes
 **AccountNumber** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **LoanGuarantor** | **string** |  | [optional] 
+**LoanReferenceNumber** | **string** |  | [optional] 
 **InstitutionNumber** | **string** |  | [optional] 
 **MemberGuid** | **string** |  | [optional] 
 **PassedValidation** | **bool?** |  | [optional] 
 **RoutingNumber** | **string** |  | [optional] 
+**SequenceNumber** | **string** |  | [optional] 
 **TransitNumber** | **string** |  | [optional] 
 **UserGuid** | **string** |  | [optional] 
 

@@ -38,22 +38,26 @@ namespace MX.Platform.CSharp.Model
         /// <param name="accountNumber">accountNumber.</param>
         /// <param name="guid">guid.</param>
         /// <param name="loanGuarantor">loanGuarantor.</param>
+        /// <param name="loanReferenceNumber">loanReferenceNumber.</param>
         /// <param name="institutionNumber">institutionNumber.</param>
         /// <param name="memberGuid">memberGuid.</param>
         /// <param name="passedValidation">passedValidation.</param>
         /// <param name="routingNumber">routingNumber.</param>
+        /// <param name="sequenceNumber">sequenceNumber.</param>
         /// <param name="transitNumber">transitNumber.</param>
         /// <param name="userGuid">userGuid.</param>
-        public AccountNumberResponse(string accountGuid = default(string), string accountNumber = default(string), string guid = default(string), string loanGuarantor = default(string), string institutionNumber = default(string), string memberGuid = default(string), bool? passedValidation = default(bool?), string routingNumber = default(string), string transitNumber = default(string), string userGuid = default(string))
+        public AccountNumberResponse(string accountGuid = default(string), string accountNumber = default(string), string guid = default(string), string loanGuarantor = default(string), string loanReferenceNumber = default(string), string institutionNumber = default(string), string memberGuid = default(string), bool? passedValidation = default(bool?), string routingNumber = default(string), string sequenceNumber = default(string), string transitNumber = default(string), string userGuid = default(string))
         {
             this.AccountGuid = accountGuid;
             this.AccountNumber = accountNumber;
             this.Guid = guid;
             this.LoanGuarantor = loanGuarantor;
+            this.LoanReferenceNumber = loanReferenceNumber;
             this.InstitutionNumber = institutionNumber;
             this.MemberGuid = memberGuid;
             this.PassedValidation = passedValidation;
             this.RoutingNumber = routingNumber;
+            this.SequenceNumber = sequenceNumber;
             this.TransitNumber = transitNumber;
             this.UserGuid = userGuid;
         }
@@ -87,6 +91,13 @@ namespace MX.Platform.CSharp.Model
         public string LoanGuarantor { get; set; }
 
         /// <summary>
+        /// Gets or Sets LoanReferenceNumber
+        /// </summary>
+        /// <example>123456789012345</example>
+        [DataMember(Name = "loan_reference_number", EmitDefaultValue = true)]
+        public string LoanReferenceNumber { get; set; }
+
+        /// <summary>
         /// Gets or Sets InstitutionNumber
         /// </summary>
         /// <example>123</example>
@@ -115,6 +126,13 @@ namespace MX.Platform.CSharp.Model
         public string RoutingNumber { get; set; }
 
         /// <summary>
+        /// Gets or Sets SequenceNumber
+        /// </summary>
+        /// <example>1-01</example>
+        [DataMember(Name = "sequence_number", EmitDefaultValue = true)]
+        public string SequenceNumber { get; set; }
+
+        /// <summary>
         /// Gets or Sets TransitNumber
         /// </summary>
         /// <example>12345</example>
@@ -140,10 +158,12 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  AccountNumber: ").Append(AccountNumber).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  LoanGuarantor: ").Append(LoanGuarantor).Append("\n");
+            sb.Append("  LoanReferenceNumber: ").Append(LoanReferenceNumber).Append("\n");
             sb.Append("  InstitutionNumber: ").Append(InstitutionNumber).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  PassedValidation: ").Append(PassedValidation).Append("\n");
             sb.Append("  RoutingNumber: ").Append(RoutingNumber).Append("\n");
+            sb.Append("  SequenceNumber: ").Append(SequenceNumber).Append("\n");
             sb.Append("  TransitNumber: ").Append(TransitNumber).Append("\n");
             sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
             sb.Append("}\n");
@@ -202,6 +222,11 @@ namespace MX.Platform.CSharp.Model
                     this.LoanGuarantor.Equals(input.LoanGuarantor))
                 ) && 
                 (
+                    this.LoanReferenceNumber == input.LoanReferenceNumber ||
+                    (this.LoanReferenceNumber != null &&
+                    this.LoanReferenceNumber.Equals(input.LoanReferenceNumber))
+                ) && 
+                (
                     this.InstitutionNumber == input.InstitutionNumber ||
                     (this.InstitutionNumber != null &&
                     this.InstitutionNumber.Equals(input.InstitutionNumber))
@@ -220,6 +245,11 @@ namespace MX.Platform.CSharp.Model
                     this.RoutingNumber == input.RoutingNumber ||
                     (this.RoutingNumber != null &&
                     this.RoutingNumber.Equals(input.RoutingNumber))
+                ) && 
+                (
+                    this.SequenceNumber == input.SequenceNumber ||
+                    (this.SequenceNumber != null &&
+                    this.SequenceNumber.Equals(input.SequenceNumber))
                 ) && 
                 (
                     this.TransitNumber == input.TransitNumber ||
@@ -258,6 +288,10 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.LoanGuarantor.GetHashCode();
                 }
+                if (this.LoanReferenceNumber != null)
+                {
+                    hashCode = (hashCode * 59) + this.LoanReferenceNumber.GetHashCode();
+                }
                 if (this.InstitutionNumber != null)
                 {
                     hashCode = (hashCode * 59) + this.InstitutionNumber.GetHashCode();
@@ -273,6 +307,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.RoutingNumber != null)
                 {
                     hashCode = (hashCode * 59) + this.RoutingNumber.GetHashCode();
+                }
+                if (this.SequenceNumber != null)
+                {
+                    hashCode = (hashCode * 59) + this.SequenceNumber.GetHashCode();
                 }
                 if (this.TransitNumber != null)
                 {

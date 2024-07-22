@@ -91,6 +91,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'LoanReferenceNumber'
+        /// </summary>
+        [Fact]
+        public void LoanReferenceNumberTest()
+        {
+            // TODO unit test for the property 'LoanReferenceNumber'
+        }
+
+        /// <summary>
         /// Test the property 'InstitutionNumber'
         /// </summary>
         [Fact]
@@ -124,6 +133,15 @@ namespace MX.Platform.CSharp.Test.Model
         public void RoutingNumberTest()
         {
             // TODO unit test for the property 'RoutingNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'SequenceNumber'
+        /// </summary>
+        [Fact]
+        public void SequenceNumberTest()
+        {
+            // TODO unit test for the property 'SequenceNumber'
         }
 
         /// <summary>

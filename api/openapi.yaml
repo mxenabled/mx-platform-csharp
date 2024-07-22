@@ -5359,6 +5359,10 @@ components:
           example: U.S. DEPARTMENT OF EDUCATION
           nullable: true
           type: string
+        loan_reference_number:
+          example: "123456789012345"
+          nullable: true
+          type: string
         institution_number:
           example: "123"
           nullable: true
@@ -5373,6 +5377,10 @@ components:
           type: boolean
         routing_number:
           example: "68899990000000"
+          nullable: true
+          type: string
+        sequence_number:
+          example: 1-01
           nullable: true
           type: string
         transit_number:
