@@ -34,6 +34,8 @@ docs/ConnectWidgetResponseBody.md
 docs/CredentialRequest.md
 docs/CredentialResponse.md
 docs/CredentialsResponseBody.md
+docs/CreditCardProduct.md
+docs/CreditCardProductResponse.md
 docs/EnhanceTransactionResponse.md
 docs/EnhanceTransactionsRequest.md
 docs/EnhanceTransactionsRequestBody.md
@@ -87,6 +89,10 @@ docs/PaymentProcessorAuthorizationCodeRequest.md
 docs/PaymentProcessorAuthorizationCodeRequestBody.md
 docs/PaymentProcessorAuthorizationCodeResponse.md
 docs/PaymentProcessorAuthorizationCodeResponseBody.md
+docs/RewardResponse.md
+docs/RewardResponseBody.md
+docs/RewardsResponse.md
+docs/RewardsResponseBody.md
 docs/ScheduledPaymentResponse.md
 docs/ScheduledPaymentsResponseBody.md
 docs/SpendingPlanAccountResponse.md
@@ -177,6 +183,8 @@ src/MX.Platform.CSharp.Test/Model/ConnectWidgetResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/CredentialRequestTests.cs
 src/MX.Platform.CSharp.Test/Model/CredentialResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/CredentialsResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/CreditCardProductResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/CreditCardProductTests.cs
 src/MX.Platform.CSharp.Test/Model/EnhanceTransactionResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/EnhanceTransactionsRequestBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/EnhanceTransactionsRequestTests.cs
@@ -228,6 +236,10 @@ src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeRequestBodyTe
 src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeRequestTests.cs
 src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/PaymentProcessorAuthorizationCodeResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/RewardResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/RewardResponseTests.cs
+src/MX.Platform.CSharp.Test/Model/RewardsResponseBodyTests.cs
+src/MX.Platform.CSharp.Test/Model/RewardsResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/ScheduledPaymentResponseTests.cs
 src/MX.Platform.CSharp.Test/Model/ScheduledPaymentsResponseBodyTests.cs
 src/MX.Platform.CSharp.Test/Model/SpendingPlanAccountResponseTests.cs
@@ -334,6 +346,8 @@ src/MX.Platform.CSharp/Model/ConnectWidgetResponseBody.cs
 src/MX.Platform.CSharp/Model/CredentialRequest.cs
 src/MX.Platform.CSharp/Model/CredentialResponse.cs
 src/MX.Platform.CSharp/Model/CredentialsResponseBody.cs
+src/MX.Platform.CSharp/Model/CreditCardProduct.cs
+src/MX.Platform.CSharp/Model/CreditCardProductResponse.cs
 src/MX.Platform.CSharp/Model/EnhanceTransactionResponse.cs
 src/MX.Platform.CSharp/Model/EnhanceTransactionsRequest.cs
 src/MX.Platform.CSharp/Model/EnhanceTransactionsRequestBody.cs
@@ -385,6 +399,10 @@ src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeRequest.cs
 src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeRequestBody.cs
 src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeResponse.cs
 src/MX.Platform.CSharp/Model/PaymentProcessorAuthorizationCodeResponseBody.cs
+src/MX.Platform.CSharp/Model/RewardResponse.cs
+src/MX.Platform.CSharp/Model/RewardResponseBody.cs
+src/MX.Platform.CSharp/Model/RewardsResponse.cs
+src/MX.Platform.CSharp/Model/RewardsResponseBody.cs
 src/MX.Platform.CSharp/Model/ScheduledPaymentResponse.cs
 src/MX.Platform.CSharp/Model/ScheduledPaymentsResponseBody.cs
 src/MX.Platform.CSharp/Model/SpendingPlanAccountResponse.cs

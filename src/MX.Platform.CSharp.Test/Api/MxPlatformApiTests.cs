@@ -213,6 +213,18 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test CreditCard
+        /// </summary>
+        [Fact]
+        public void CreditCardTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string creditCardProductGuid = null;
+            //var response = instance.CreditCard(creditCardProductGuid);
+            //Assert.IsType<CreditCardProductResponse>(response);
+        }
+
+        /// <summary>
         /// Test DeleteCategory
         /// </summary>
         [Fact]
@@ -396,6 +408,19 @@ namespace MX.Platform.CSharp.Test.Api
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.ExtendHistory(memberGuid, userGuid);
+            //Assert.IsType<MemberResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test FetchRewards
+        /// </summary>
+        [Fact]
+        public void FetchRewardsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string memberGuid = null;
+            //var response = instance.FetchRewards(userGuid, memberGuid);
             //Assert.IsType<MemberResponseBody>(response);
         }
 
@@ -751,6 +776,19 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test ListRewards
+        /// </summary>
+        [Fact]
+        public void ListRewardsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string memberGuid = null;
+            //var response = instance.ListRewards(userGuid, memberGuid);
+            //Assert.IsType<RewardsResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test ListStatementsByMember
         /// </summary>
         [Fact]
@@ -1088,6 +1126,20 @@ namespace MX.Platform.CSharp.Test.Api
             //string merchantLocationGuid = null;
             //var response = instance.ReadMerchantLocation(merchantLocationGuid);
             //Assert.IsType<MerchantLocationResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test ReadRewards
+        /// </summary>
+        [Fact]
+        public void ReadRewardsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string memberGuid = null;
+            //string rewardGuid = null;
+            //var response = instance.ReadRewards(userGuid, memberGuid, rewardGuid);
+            //Assert.IsType<RewardResponseBody>(response);
         }
 
         /// <summary>
