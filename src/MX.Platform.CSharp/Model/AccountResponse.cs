@@ -82,6 +82,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="propertyType">propertyType.</param>
         /// <param name="routingNumber">routingNumber.</param>
         /// <param name="startedOn">startedOn.</param>
+        /// <param name="statementBalance">statementBalance.</param>
         /// <param name="subtype">subtype.</param>
         /// <param name="todayUglAmount">todayUglAmount.</param>
         /// <param name="todayUglPercentage">todayUglPercentage.</param>
@@ -91,7 +92,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public AccountResponse(string accountNumber = default(string), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), decimal? annuityTermYear = default(decimal?), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), string institutionCode = default(string), string insuredName = default(string), decimal? interestRate = default(decimal?), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), string propertyType = default(string), string routingNumber = default(string), string startedOn = default(string), string subtype = default(string), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), decimal? totalAccountValueUgl = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
+        public AccountResponse(string accountNumber = default(string), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), decimal? annuityTermYear = default(decimal?), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), string institutionCode = default(string), string insuredName = default(string), decimal? interestRate = default(decimal?), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), string propertyType = default(string), string routingNumber = default(string), string startedOn = default(string), decimal? statementBalance = default(decimal?), string subtype = default(string), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), decimal? totalAccountValueUgl = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
         {
             this.AccountNumber = accountNumber;
             this.AccountOwnership = accountOwnership;
@@ -141,6 +142,7 @@ namespace MX.Platform.CSharp.Model
             this.PropertyType = propertyType;
             this.RoutingNumber = routingNumber;
             this.StartedOn = startedOn;
+            this.StatementBalance = statementBalance;
             this.Subtype = subtype;
             this.TodayUglAmount = todayUglAmount;
             this.TodayUglPercentage = todayUglPercentage;
@@ -489,6 +491,13 @@ namespace MX.Platform.CSharp.Model
         public string StartedOn { get; set; }
 
         /// <summary>
+        /// Gets or Sets StatementBalance
+        /// </summary>
+        /// <example>100.1</example>
+        [DataMember(Name = "statement_balance", EmitDefaultValue = true)]
+        public decimal? StatementBalance { get; set; }
+
+        /// <summary>
         /// Gets or Sets Subtype
         /// </summary>
         /// <example>NONE</example>
@@ -607,6 +616,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
             sb.Append("  RoutingNumber: ").Append(RoutingNumber).Append("\n");
             sb.Append("  StartedOn: ").Append(StartedOn).Append("\n");
+            sb.Append("  StatementBalance: ").Append(StatementBalance).Append("\n");
             sb.Append("  Subtype: ").Append(Subtype).Append("\n");
             sb.Append("  TodayUglAmount: ").Append(TodayUglAmount).Append("\n");
             sb.Append("  TodayUglPercentage: ").Append(TodayUglPercentage).Append("\n");
@@ -892,6 +902,11 @@ namespace MX.Platform.CSharp.Model
                     this.StartedOn.Equals(input.StartedOn))
                 ) && 
                 (
+                    this.StatementBalance == input.StatementBalance ||
+                    (this.StatementBalance != null &&
+                    this.StatementBalance.Equals(input.StatementBalance))
+                ) && 
+                (
                     this.Subtype == input.Subtype ||
                     (this.Subtype != null &&
                     this.Subtype.Equals(input.Subtype))
@@ -1138,6 +1153,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.StartedOn != null)
                 {
                     hashCode = (hashCode * 59) + this.StartedOn.GetHashCode();
+                }
+                if (this.StatementBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.StatementBalance.GetHashCode();
                 }
                 if (this.Subtype != null)
                 {

@@ -487,6 +487,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'StatementBalance'
+        /// </summary>
+        [Fact]
+        public void StatementBalanceTest()
+        {
+            // TODO unit test for the property 'StatementBalance'
+        }
+
+        /// <summary>
         /// Test the property 'Subtype'
         /// </summary>
         [Fact]

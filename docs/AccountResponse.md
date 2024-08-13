@@ -52,6 +52,7 @@ Name | Type | Description | Notes
 **PropertyType** | **string** |  | [optional] 
 **RoutingNumber** | **string** |  | [optional] 
 **StartedOn** | **string** |  | [optional] 
+**StatementBalance** | **decimal?** |  | [optional] 
 **Subtype** | **string** |  | [optional] 
 **TodayUglAmount** | **decimal?** |  | [optional] 
 **TodayUglPercentage** | **decimal?** |  | [optional] 
