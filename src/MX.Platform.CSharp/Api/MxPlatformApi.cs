@@ -331,6 +331,29 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of UserResponseBody</returns>
         ApiResponse<UserResponseBody> CreateUserWithHttpInfo(UserCreateRequestBody userCreateRequestBody, int operationIndex = 0);
         /// <summary>
+        /// Read a Credit Card Product
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns the specified &#x60;credit_card_product&#x60; according to the unique GUID.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="creditCardProductGuid">The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CreditCardProductResponse</returns>
+        CreditCardProductResponse CreditCard(string creditCardProductGuid, int operationIndex = 0);
+
+        /// <summary>
+        /// Read a Credit Card Product
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns the specified &#x60;credit_card_product&#x60; according to the unique GUID.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="creditCardProductGuid">The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CreditCardProductResponse</returns>
+        ApiResponse<CreditCardProductResponse> CreditCardWithHttpInfo(string creditCardProductGuid, int operationIndex = 0);
+        /// <summary>
         /// Delete category
         /// </summary>
         /// <remarks>
@@ -709,6 +732,31 @@ namespace MX.Platform.CSharp.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MemberResponseBody</returns>
         ApiResponse<MemberResponseBody> ExtendHistoryWithHttpInfo(string memberGuid, string userGuid, int operationIndex = 0);
+        /// <summary>
+        /// Fetch Rewards
+        /// </summary>
+        /// <remarks>
+        /// Calling this endpoint initiates an aggregation-type event which will gather the member&#39;s rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>MemberResponseBody</returns>
+        MemberResponseBody FetchRewards(string userGuid, string memberGuid, int operationIndex = 0);
+
+        /// <summary>
+        /// Fetch Rewards
+        /// </summary>
+        /// <remarks>
+        /// Calling this endpoint initiates an aggregation-type event which will gather the member&#39;s rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        ApiResponse<MemberResponseBody> FetchRewardsWithHttpInfo(string userGuid, string memberGuid, int operationIndex = 0);
         /// <summary>
         /// Fetch statements
         /// </summary>
@@ -1388,6 +1436,31 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of MerchantsResponseBody</returns>
         ApiResponse<MerchantsResponseBody> ListMerchantsWithHttpInfo(int? page = default(int?), int? recordsPerPage = default(int?), int operationIndex = 0);
         /// <summary>
+        /// List Rewards
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to list all the &#x60;rewards&#x60; associated with a specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RewardsResponseBody</returns>
+        RewardsResponseBody ListRewards(string userGuid, string memberGuid, int operationIndex = 0);
+
+        /// <summary>
+        /// List Rewards
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to list all the &#x60;rewards&#x60; associated with a specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RewardsResponseBody</returns>
+        ApiResponse<RewardsResponseBody> ListRewardsWithHttpInfo(string userGuid, string memberGuid, int operationIndex = 0);
+        /// <summary>
         /// List statements by member
         /// </summary>
         /// <remarks>
@@ -2043,6 +2116,33 @@ namespace MX.Platform.CSharp.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MerchantLocationResponseBody</returns>
         ApiResponse<MerchantLocationResponseBody> ReadMerchantLocationWithHttpInfo(string merchantLocationGuid, int operationIndex = 0);
+        /// <summary>
+        /// Read Reward
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to read a specific &#x60;reward&#x60; based on its unique GUID..
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="rewardGuid">The unique identifier for the rewards. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RewardResponseBody</returns>
+        RewardResponseBody ReadRewards(string userGuid, string memberGuid, string rewardGuid, int operationIndex = 0);
+
+        /// <summary>
+        /// Read Reward
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to read a specific &#x60;reward&#x60; based on its unique GUID..
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="rewardGuid">The unique identifier for the rewards. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RewardResponseBody</returns>
+        ApiResponse<RewardResponseBody> ReadRewardsWithHttpInfo(string userGuid, string memberGuid, string rewardGuid, int operationIndex = 0);
         /// <summary>
         /// Read statement by member
         /// </summary>
@@ -3023,6 +3123,31 @@ namespace MX.Platform.CSharp.Api
         /// <returns>Task of ApiResponse (UserResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> CreateUserWithHttpInfoAsync(UserCreateRequestBody userCreateRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// Read a Credit Card Product
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns the specified &#x60;credit_card_product&#x60; according to the unique GUID.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="creditCardProductGuid">The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreditCardProductResponse</returns>
+        System.Threading.Tasks.Task<CreditCardProductResponse> CreditCardAsync(string creditCardProductGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Read a Credit Card Product
+        /// </summary>
+        /// <remarks>
+        /// This endpoint returns the specified &#x60;credit_card_product&#x60; according to the unique GUID.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="creditCardProductGuid">The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreditCardProductResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreditCardProductResponse>> CreditCardWithHttpInfoAsync(string creditCardProductGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Delete category
         /// </summary>
         /// <remarks>
@@ -3431,6 +3556,33 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> ExtendHistoryWithHttpInfoAsync(string memberGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Fetch Rewards
+        /// </summary>
+        /// <remarks>
+        /// Calling this endpoint initiates an aggregation-type event which will gather the member&#39;s rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of MemberResponseBody</returns>
+        System.Threading.Tasks.Task<MemberResponseBody> FetchRewardsAsync(string userGuid, string memberGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Fetch Rewards
+        /// </summary>
+        /// <remarks>
+        /// Calling this endpoint initiates an aggregation-type event which will gather the member&#39;s rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> FetchRewardsWithHttpInfoAsync(string userGuid, string memberGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Fetch statements
         /// </summary>
@@ -4158,6 +4310,33 @@ namespace MX.Platform.CSharp.Api
         /// <returns>Task of ApiResponse (MerchantsResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<MerchantsResponseBody>> ListMerchantsWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// List Rewards
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to list all the &#x60;rewards&#x60; associated with a specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RewardsResponseBody</returns>
+        System.Threading.Tasks.Task<RewardsResponseBody> ListRewardsAsync(string userGuid, string memberGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// List Rewards
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to list all the &#x60;rewards&#x60; associated with a specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RewardsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RewardsResponseBody>> ListRewardsWithHttpInfoAsync(string userGuid, string memberGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// List statements by member
         /// </summary>
         /// <remarks>
@@ -4861,6 +5040,35 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MerchantLocationResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<MerchantLocationResponseBody>> ReadMerchantLocationWithHttpInfoAsync(string merchantLocationGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Read Reward
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to read a specific &#x60;reward&#x60; based on its unique GUID..
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="rewardGuid">The unique identifier for the rewards. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RewardResponseBody</returns>
+        System.Threading.Tasks.Task<RewardResponseBody> ReadRewardsAsync(string userGuid, string memberGuid, string rewardGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Read Reward
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to read a specific &#x60;reward&#x60; based on its unique GUID..
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="rewardGuid">The unique identifier for the rewards. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RewardResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RewardResponseBody>> ReadRewardsWithHttpInfoAsync(string userGuid, string memberGuid, string rewardGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Read statement by member
         /// </summary>
@@ -7816,6 +8024,162 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
+        /// Read a Credit Card Product This endpoint returns the specified &#x60;credit_card_product&#x60; according to the unique GUID.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="creditCardProductGuid">The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>CreditCardProductResponse</returns>
+        public CreditCardProductResponse CreditCard(string creditCardProductGuid, int operationIndex = 0)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<CreditCardProductResponse> localVarResponse = CreditCardWithHttpInfo(creditCardProductGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read a Credit Card Product This endpoint returns the specified &#x60;credit_card_product&#x60; according to the unique GUID.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="creditCardProductGuid">The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of CreditCardProductResponse</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<CreditCardProductResponse> CreditCardWithHttpInfo(string creditCardProductGuid, int operationIndex = 0)
+        {
+            // verify the required parameter 'creditCardProductGuid' is set
+            if (creditCardProductGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'creditCardProductGuid' when calling MxPlatformApi->CreditCard");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("credit_card_product_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(creditCardProductGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.CreditCard";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CreditCardProductResponse>("/credit_card_products/{credit_card_product_guid}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreditCard", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read a Credit Card Product This endpoint returns the specified &#x60;credit_card_product&#x60; according to the unique GUID.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="creditCardProductGuid">The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreditCardProductResponse</returns>
+        public async System.Threading.Tasks.Task<CreditCardProductResponse> CreditCardAsync(string creditCardProductGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<CreditCardProductResponse> localVarResponse = await CreditCardWithHttpInfoAsync(creditCardProductGuid, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read a Credit Card Product This endpoint returns the specified &#x60;credit_card_product&#x60; according to the unique GUID.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="creditCardProductGuid">The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreditCardProductResponse)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<CreditCardProductResponse>> CreditCardWithHttpInfoAsync(string creditCardProductGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'creditCardProductGuid' is set
+            if (creditCardProductGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'creditCardProductGuid' when calling MxPlatformApi->CreditCard");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("credit_card_product_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(creditCardProductGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.CreditCard";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CreditCardProductResponse>("/credit_card_products/{credit_card_product_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("CreditCard", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Delete category Use this endpoint to delete a specific custom category according to its unique GUID. The API will respond with an empty object and a status of &#x60;204 No Content&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10416,6 +10780,180 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ExtendHistory", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Fetch Rewards Calling this endpoint initiates an aggregation-type event which will gather the member&#39;s rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>MemberResponseBody</returns>
+        public MemberResponseBody FetchRewards(string userGuid, string memberGuid, int operationIndex = 0)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> localVarResponse = FetchRewardsWithHttpInfo(userGuid, memberGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch Rewards Calling this endpoint initiates an aggregation-type event which will gather the member&#39;s rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> FetchRewardsWithHttpInfo(string userGuid, string memberGuid, int operationIndex = 0)
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->FetchRewards");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->FetchRewards");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.FetchRewards";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/fetch_rewards", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FetchRewards", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Fetch Rewards Calling this endpoint initiates an aggregation-type event which will gather the member&#39;s rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of MemberResponseBody</returns>
+        public async System.Threading.Tasks.Task<MemberResponseBody> FetchRewardsAsync(string userGuid, string memberGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> localVarResponse = await FetchRewardsWithHttpInfoAsync(userGuid, memberGuid, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch Rewards Calling this endpoint initiates an aggregation-type event which will gather the member&#39;s rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody>> FetchRewardsWithHttpInfoAsync(string userGuid, string memberGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->FetchRewards");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->FetchRewards");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.FetchRewards";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<MemberResponseBody>("/users/{user_guid}/members/{member_guid}/fetch_rewards", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("FetchRewards", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -14980,6 +15518,180 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
+        /// List Rewards Use this endpoint to list all the &#x60;rewards&#x60; associated with a specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RewardsResponseBody</returns>
+        public RewardsResponseBody ListRewards(string userGuid, string memberGuid, int operationIndex = 0)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<RewardsResponseBody> localVarResponse = ListRewardsWithHttpInfo(userGuid, memberGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Rewards Use this endpoint to list all the &#x60;rewards&#x60; associated with a specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RewardsResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<RewardsResponseBody> ListRewardsWithHttpInfo(string userGuid, string memberGuid, int operationIndex = 0)
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListRewards");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListRewards");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.ListRewards";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<RewardsResponseBody>("/users/{user_guid}/members/{member_guid}/rewards", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListRewards", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// List Rewards Use this endpoint to list all the &#x60;rewards&#x60; associated with a specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RewardsResponseBody</returns>
+        public async System.Threading.Tasks.Task<RewardsResponseBody> ListRewardsAsync(string userGuid, string memberGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<RewardsResponseBody> localVarResponse = await ListRewardsWithHttpInfoAsync(userGuid, memberGuid, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List Rewards Use this endpoint to list all the &#x60;rewards&#x60; associated with a specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RewardsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<RewardsResponseBody>> ListRewardsWithHttpInfoAsync(string userGuid, string memberGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ListRewards");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ListRewards");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.ListRewards";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RewardsResponseBody>("/users/{user_guid}/members/{member_guid}/rewards", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ListRewards", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// List statements by member Use this endpoint to get an array of available statements.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19440,6 +20152,198 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ReadMerchantLocation", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read Reward Use this endpoint to read a specific &#x60;reward&#x60; based on its unique GUID..
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="rewardGuid">The unique identifier for the rewards. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>RewardResponseBody</returns>
+        public RewardResponseBody ReadRewards(string userGuid, string memberGuid, string rewardGuid, int operationIndex = 0)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<RewardResponseBody> localVarResponse = ReadRewardsWithHttpInfo(userGuid, memberGuid, rewardGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read Reward Use this endpoint to read a specific &#x60;reward&#x60; based on its unique GUID..
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="rewardGuid">The unique identifier for the rewards. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of RewardResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<RewardResponseBody> ReadRewardsWithHttpInfo(string userGuid, string memberGuid, string rewardGuid, int operationIndex = 0)
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadRewards");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadRewards");
+            }
+
+            // verify the required parameter 'rewardGuid' is set
+            if (rewardGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'rewardGuid' when calling MxPlatformApi->ReadRewards");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("reward_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(rewardGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.ReadRewards";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<RewardResponseBody>("/users/{user_guid}/members/{member_guid}/rewards/{reward_guid}", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadRewards", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read Reward Use this endpoint to read a specific &#x60;reward&#x60; based on its unique GUID..
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="rewardGuid">The unique identifier for the rewards. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of RewardResponseBody</returns>
+        public async System.Threading.Tasks.Task<RewardResponseBody> ReadRewardsAsync(string userGuid, string memberGuid, string rewardGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<RewardResponseBody> localVarResponse = await ReadRewardsWithHttpInfoAsync(userGuid, memberGuid, rewardGuid, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read Reward Use this endpoint to read a specific &#x60;reward&#x60; based on its unique GUID..
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="memberGuid">The unique identifier for the member. Defined by MX.</param>
+        /// <param name="rewardGuid">The unique identifier for the rewards. Defined by MX.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (RewardResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<RewardResponseBody>> ReadRewardsWithHttpInfoAsync(string userGuid, string memberGuid, string rewardGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->ReadRewards");
+            }
+
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'memberGuid' when calling MxPlatformApi->ReadRewards");
+            }
+
+            // verify the required parameter 'rewardGuid' is set
+            if (rewardGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'rewardGuid' when calling MxPlatformApi->ReadRewards");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("reward_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(rewardGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.ReadRewards";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<RewardResponseBody>("/users/{user_guid}/members/{member_guid}/rewards/{reward_guid}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ReadRewards", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

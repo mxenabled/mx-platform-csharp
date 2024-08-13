@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mx.com*
 | [**CreateTagging**](MxPlatformApi.md#createtagging) | **POST** /users/{user_guid}/taggings | Create tagging |
 | [**CreateTransactionRule**](MxPlatformApi.md#createtransactionrule) | **POST** /users/{user_guid}/transaction_rules | Create transaction rule |
 | [**CreateUser**](MxPlatformApi.md#createuser) | **POST** /users | Create user |
+| [**CreditCard**](MxPlatformApi.md#creditcard) | **GET** /credit_card_products/{credit_card_product_guid} | Read a Credit Card Product |
 | [**DeleteCategory**](MxPlatformApi.md#deletecategory) | **DELETE** /users/{user_guid}/categories/{category_guid} | Delete category |
 | [**DeleteManagedAccount**](MxPlatformApi.md#deletemanagedaccount) | **DELETE** /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid} | Delete managed account |
 | [**DeleteManagedMember**](MxPlatformApi.md#deletemanagedmember) | **DELETE** /users/{user_guid}/managed_members/{member_guid} | Delete managed member |
@@ -31,6 +32,7 @@ All URIs are relative to *https://api.mx.com*
 | [**DownloadTaxDocument**](MxPlatformApi.md#downloadtaxdocument) | **GET** /users/{user_guid}/members/{member_guid}/tax_documents/{tax_document_guid}.pdf | Download a Tax Document PDF |
 | [**EnhanceTransactions**](MxPlatformApi.md#enhancetransactions) | **POST** /transactions/enhance | Enhance transactions |
 | [**ExtendHistory**](MxPlatformApi.md#extendhistory) | **POST** /users/{user_guid}/members/{member_guid}/extend_history | Extend history |
+| [**FetchRewards**](MxPlatformApi.md#fetchrewards) | **POST** /users/{user_guid}/members/{member_guid}/fetch_rewards | Fetch Rewards |
 | [**FetchStatements**](MxPlatformApi.md#fetchstatements) | **POST** /users/{user_guid}/members/{member_guid}/fetch_statements | Fetch statements |
 | [**FetchTaxDocuments**](MxPlatformApi.md#fetchtaxdocuments) | **POST** /users/{user_guid}/members/{member_guid}/fetch_tax_documents | Fetch Tax Documents |
 | [**IdentifyMember**](MxPlatformApi.md#identifymember) | **POST** /users/{user_guid}/members/{member_guid}/identify | Identify member |
@@ -55,6 +57,7 @@ All URIs are relative to *https://api.mx.com*
 | [**ListMemberCredentials**](MxPlatformApi.md#listmembercredentials) | **GET** /users/{user_guid}/members/{member_guid}/credentials | List member credentials |
 | [**ListMembers**](MxPlatformApi.md#listmembers) | **GET** /users/{user_guid}/members | List members |
 | [**ListMerchants**](MxPlatformApi.md#listmerchants) | **GET** /merchants | List merchants |
+| [**ListRewards**](MxPlatformApi.md#listrewards) | **GET** /users/{user_guid}/members/{member_guid}/rewards | List Rewards |
 | [**ListStatementsByMember**](MxPlatformApi.md#liststatementsbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements | List statements by member |
 | [**ListTaggings**](MxPlatformApi.md#listtaggings) | **GET** /users/{user_guid}/taggings | List taggings |
 | [**ListTags**](MxPlatformApi.md#listtags) | **GET** /users/{user_guid}/tags | List tags |
@@ -79,6 +82,7 @@ All URIs are relative to *https://api.mx.com*
 | [**ReadMemberStatus**](MxPlatformApi.md#readmemberstatus) | **GET** /users/{user_guid}/members/{member_guid}/status | Read member status |
 | [**ReadMerchant**](MxPlatformApi.md#readmerchant) | **GET** /merchants/{merchant_guid} | Read merchant |
 | [**ReadMerchantLocation**](MxPlatformApi.md#readmerchantlocation) | **GET** /merchant_locations/{merchant_location_guid} | Read merchant location |
+| [**ReadRewards**](MxPlatformApi.md#readrewards) | **GET** /users/{user_guid}/members/{member_guid}/rewards/{reward_guid} | Read Reward |
 | [**ReadStatementByMember**](MxPlatformApi.md#readstatementbymember) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid} | Read statement by member |
 | [**ReadTag**](MxPlatformApi.md#readtag) | **GET** /users/{user_guid}/tags/{tag_guid} | Read tag |
 | [**ReadTagging**](MxPlatformApi.md#readtagging) | **GET** /users/{user_guid}/taggings/{tagging_guid} | Read tagging |
@@ -1262,6 +1266,101 @@ catch (ApiException e)
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="creditcard"></a>
+# **CreditCard**
+> CreditCardProductResponse CreditCard (string creditCardProductGuid)
+
+Read a Credit Card Product
+
+This endpoint returns the specified `credit_card_product` according to the unique GUID.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class CreditCardExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var creditCardProductGuid = credit_card_product_guid;  // string | The required `credit_card_product_guid` can be found on the `account` object.
+
+            try
+            {
+                // Read a Credit Card Product
+                CreditCardProductResponse result = apiInstance.CreditCard(creditCardProductGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.CreditCard: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CreditCardWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read a Credit Card Product
+    ApiResponse<CreditCardProductResponse> response = apiInstance.CreditCardWithHttpInfo(creditCardProductGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.CreditCardWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **creditCardProductGuid** | **string** | The required &#x60;credit_card_product_guid&#x60; can be found on the &#x60;account&#x60; object. |  |
+
+### Return type
+
+[**CreditCardProductResponse**](CreditCardProductResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/vnd.mx.api.v1+json
 
 
@@ -2688,6 +2787,103 @@ catch (ApiException e)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **202** | Accepted |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="fetchrewards"></a>
+# **FetchRewards**
+> MemberResponseBody FetchRewards (string userGuid, string memberGuid)
+
+Fetch Rewards
+
+Calling this endpoint initiates an aggregation-type event which will gather the member's rewards information, as well as account and transaction information. Rewards data is also gathered with daily background aggregations.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class FetchRewardsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var memberGuid = MBR-fa7537f3-48aa-a683-a02a-b18345562f54;  // string | The unique identifier for the member. Defined by MX.
+
+            try
+            {
+                // Fetch Rewards
+                MemberResponseBody result = apiInstance.FetchRewards(userGuid, memberGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.FetchRewards: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the FetchRewardsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Fetch Rewards
+    ApiResponse<MemberResponseBody> response = apiInstance.FetchRewardsWithHttpInfo(userGuid, memberGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.FetchRewardsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **memberGuid** | **string** | The unique identifier for the member. Defined by MX. |  |
+
+### Return type
+
+[**MemberResponseBody**](MemberResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5097,6 +5293,103 @@ catch (ApiException e)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a id="listrewards"></a>
+# **ListRewards**
+> RewardsResponseBody ListRewards (string userGuid, string memberGuid)
+
+List Rewards
+
+Use this endpoint to list all the `rewards` associated with a specified `member`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ListRewardsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var memberGuid = MBR-fa7537f3-48aa-a683-a02a-b18345562f54;  // string | The unique identifier for the member. Defined by MX.
+
+            try
+            {
+                // List Rewards
+                RewardsResponseBody result = apiInstance.ListRewards(userGuid, memberGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ListRewards: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ListRewardsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // List Rewards
+    ApiResponse<RewardsResponseBody> response = apiInstance.ListRewardsWithHttpInfo(userGuid, memberGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ListRewardsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **memberGuid** | **string** | The unique identifier for the member. Defined by MX. |  |
+
+### Return type
+
+[**RewardsResponseBody**](RewardsResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a id="liststatementsbymember"></a>
 # **ListStatementsByMember**
 > StatementsResponseBody ListStatementsByMember (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
@@ -7463,6 +7756,105 @@ catch (ApiException e)
 ### Return type
 
 [**MerchantLocationResponseBody**](MerchantLocationResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="readrewards"></a>
+# **ReadRewards**
+> RewardResponseBody ReadRewards (string userGuid, string memberGuid, string rewardGuid)
+
+Read Reward
+
+Use this endpoint to read a specific `reward` based on its unique GUID..
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadRewardsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var memberGuid = MBR-fa7537f3-48aa-a683-a02a-b18345562f54;  // string | The unique identifier for the member. Defined by MX.
+            var rewardGuid = RWD-fa7537f3-48aa-a683-a02a-b324322f54;  // string | The unique identifier for the rewards. Defined by MX.
+
+            try
+            {
+                // Read Reward
+                RewardResponseBody result = apiInstance.ReadRewards(userGuid, memberGuid, rewardGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.ReadRewards: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ReadRewardsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read Reward
+    ApiResponse<RewardResponseBody> response = apiInstance.ReadRewardsWithHttpInfo(userGuid, memberGuid, rewardGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.ReadRewardsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **memberGuid** | **string** | The unique identifier for the member. Defined by MX. |  |
+| **rewardGuid** | **string** | The unique identifier for the rewards. Defined by MX. |  |
+
+### Return type
+
+[**RewardResponseBody**](RewardResponseBody.md)
 
 ### Authorization
 
