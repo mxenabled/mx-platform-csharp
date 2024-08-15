@@ -1463,6 +1463,57 @@ namespace MX.Platform.CSharp.Test.Api
         }
 
         /// <summary>
+        /// Test UsersUserGuidMonthlyCashFlowProfileGet
+        /// </summary>
+        [Fact]
+        public void UsersUserGuidMonthlyCashFlowProfileGetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //var response = instance.UsersUserGuidMonthlyCashFlowProfileGet(userGuid);
+            //Assert.IsType<MonthlyCashFlowResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test UsersUserGuidMonthlyCashFlowProfilePut
+        /// </summary>
+        [Fact]
+        public void UsersUserGuidMonthlyCashFlowProfilePutTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody = null;
+            //var response = instance.UsersUserGuidMonthlyCashFlowProfilePut(userGuid, monthlyCashFlowProfileRequestBody);
+            //Assert.IsType<MonthlyCashFlowResponseBody>(response);
+        }
+
+        /// <summary>
+        /// Test UsersUserGuidTransactionsTransactionGuidSplitDelete
+        /// </summary>
+        [Fact]
+        public void UsersUserGuidTransactionsTransactionGuidSplitDeleteTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string transactionGuid = null;
+            //string userGuid = null;
+            //instance.UsersUserGuidTransactionsTransactionGuidSplitDelete(transactionGuid, userGuid);
+        }
+
+        /// <summary>
+        /// Test UsersUserGuidTransactionsTransactionGuidSplitPost
+        /// </summary>
+        [Fact]
+        public void UsersUserGuidTransactionsTransactionGuidSplitPostTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string userGuid = null;
+            //string transactionGuid = null;
+            //SplitTransactionRequestBody? splitTransactionRequestBody = null;
+            //var response = instance.UsersUserGuidTransactionsTransactionGuidSplitPost(userGuid, transactionGuid, splitTransactionRequestBody);
+            //Assert.IsType<SplitTransactionsResponseBody>(response);
+        }
+
+        /// <summary>
         /// Test VerifyMember
         /// </summary>
         [Fact]

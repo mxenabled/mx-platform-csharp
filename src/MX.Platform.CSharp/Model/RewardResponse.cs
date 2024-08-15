@@ -43,8 +43,9 @@ namespace MX.Platform.CSharp.Model
         /// <param name="guid">guid.</param>
         /// <param name="memberGuid">memberGuid.</param>
         /// <param name="unitType">unitType.</param>
+        /// <param name="updatedAt">updatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
-        public RewardResponse(string accountGuid = default(string), string balanceType = default(string), int balance = default(int), string createdAt = default(string), string description = default(string), string expiresOn = default(string), string guid = default(string), string memberGuid = default(string), string unitType = default(string), string userGuid = default(string))
+        public RewardResponse(string accountGuid = default(string), string balanceType = default(string), int balance = default(int), string createdAt = default(string), string description = default(string), string expiresOn = default(string), string guid = default(string), string memberGuid = default(string), string unitType = default(string), string updatedAt = default(string), string userGuid = default(string))
         {
             this.AccountGuid = accountGuid;
             this.BalanceType = balanceType;
@@ -55,6 +56,7 @@ namespace MX.Platform.CSharp.Model
             this.Guid = guid;
             this.MemberGuid = memberGuid;
             this.UnitType = unitType;
+            this.UpdatedAt = updatedAt;
             this.UserGuid = userGuid;
         }
 
@@ -122,6 +124,13 @@ namespace MX.Platform.CSharp.Model
         public string UnitType { get; set; }
 
         /// <summary>
+        /// Gets or Sets UpdatedAt
+        /// </summary>
+        /// <example>2023-06-01T19:18:06Z</example>
+        [DataMember(Name = "updated_at", EmitDefaultValue = false)]
+        public string UpdatedAt { get; set; }
+
+        /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
         /// <example>USR-1234</example>
@@ -145,6 +154,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  UnitType: ").Append(UnitType).Append("\n");
+            sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -226,6 +236,11 @@ namespace MX.Platform.CSharp.Model
                     this.UnitType.Equals(input.UnitType))
                 ) && 
                 (
+                    this.UpdatedAt == input.UpdatedAt ||
+                    (this.UpdatedAt != null &&
+                    this.UpdatedAt.Equals(input.UpdatedAt))
+                ) && 
+                (
                     this.UserGuid == input.UserGuid ||
                     (this.UserGuid != null &&
                     this.UserGuid.Equals(input.UserGuid))
@@ -273,6 +288,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.UnitType != null)
                 {
                     hashCode = (hashCode * 59) + this.UnitType.GetHashCode();
+                }
+                if (this.UpdatedAt != null)
+                {
+                    hashCode = (hashCode * 59) + this.UpdatedAt.GetHashCode();
                 }
                 if (this.UserGuid != null)
                 {

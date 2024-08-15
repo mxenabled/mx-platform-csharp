@@ -34,17 +34,17 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreditCardProductResponse" /> class.
         /// </summary>
-        /// <param name="reward">reward.</param>
-        public CreditCardProductResponse(CreditCardProduct reward = default(CreditCardProduct))
+        /// <param name="creditCardProduct">creditCardProduct.</param>
+        public CreditCardProductResponse(CreditCardProduct creditCardProduct = default(CreditCardProduct))
         {
-            this.Reward = reward;
+            this.CreditCardProduct = creditCardProduct;
         }
 
         /// <summary>
-        /// Gets or Sets Reward
+        /// Gets or Sets CreditCardProduct
         /// </summary>
-        [DataMember(Name = "reward", EmitDefaultValue = false)]
-        public CreditCardProduct Reward { get; set; }
+        [DataMember(Name = "credit_card_product", EmitDefaultValue = false)]
+        public CreditCardProduct CreditCardProduct { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,7 +54,7 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class CreditCardProductResponse {\n");
-            sb.Append("  Reward: ").Append(Reward).Append("\n");
+            sb.Append("  CreditCardProduct: ").Append(CreditCardProduct).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,9 +91,9 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.Reward == input.Reward ||
-                    (this.Reward != null &&
-                    this.Reward.Equals(input.Reward))
+                    this.CreditCardProduct == input.CreditCardProduct ||
+                    (this.CreditCardProduct != null &&
+                    this.CreditCardProduct.Equals(input.CreditCardProduct))
                 );
         }
 
@@ -106,9 +106,9 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Reward != null)
+                if (this.CreditCardProduct != null)
                 {
-                    hashCode = (hashCode * 59) + this.Reward.GetHashCode();
+                    hashCode = (hashCode * 59) + this.CreditCardProduct.GetHashCode();
                 }
                 return hashCode;
             }

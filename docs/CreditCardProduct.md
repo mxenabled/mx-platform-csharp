@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AnnualFee** | **Object** |  | [optional] 
-**DurationOfIntroductoryRateOnBalanceTransfer** | **Object** |  | [optional] 
-**DurationOfIntroductoryRateOnPurchases** | **Object** |  | [optional] 
-**Guid** | **Object** |  | [optional] 
+**AnnualFee** | **decimal** |  | [optional] 
+**DurationOfIntroductoryRateOnBalanceTransfer** | **int** |  | [optional] 
+**DurationOfIntroductoryRateOnPurchases** | **int** |  | [optional] 
+**Guid** | **string** |  | [optional] 
 **HasCashbackRewards** | **bool** |  | [optional] 
 **HasOtherRewards** | **bool** |  | [optional] 
 **HasTravelRewards** | **bool** |  | [optional] 
 **HasZeroIntroductoryAnnualFee** | **bool** |  | [optional] 
 **HasZeroPercentIntroductoryRate** | **bool** |  | [optional] 
 **HasZeroPercentIntroductoryRateOnBalanceTransfer** | **bool** |  | [optional] 
-**FinancialInstitution** | **bool** |  | [optional] 
-**IsAcceptingApplications** | **bool** |  | [optional] 
+**IsAcceptingApplicants** | **bool** |  | [optional] 
+**IsActiveCreditCardProduct** | **bool** |  | [optional] 
 **IsSmallBusinessCard** | **bool** |  | [optional] 
 **Name** | **string** |  | [optional] 
 

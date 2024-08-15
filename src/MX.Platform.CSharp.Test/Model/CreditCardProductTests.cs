@@ -145,21 +145,21 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'FinancialInstitution'
+        /// Test the property 'IsAcceptingApplicants'
         /// </summary>
         [Fact]
-        public void FinancialInstitutionTest()
+        public void IsAcceptingApplicantsTest()
         {
-            // TODO unit test for the property 'FinancialInstitution'
+            // TODO unit test for the property 'IsAcceptingApplicants'
         }
 
         /// <summary>
-        /// Test the property 'IsAcceptingApplications'
+        /// Test the property 'IsActiveCreditCardProduct'
         /// </summary>
         [Fact]
-        public void IsAcceptingApplicationsTest()
+        public void IsActiveCreditCardProductTest()
         {
-            // TODO unit test for the property 'IsAcceptingApplications'
+            // TODO unit test for the property 'IsActiveCreditCardProduct'
         }
 
         /// <summary>

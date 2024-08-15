@@ -136,6 +136,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'UpdatedAt'
+        /// </summary>
+        [Fact]
+        public void UpdatedAtTest()
+        {
+            // TODO unit test for the property 'UpdatedAt'
+        }
+
+        /// <summary>
         /// Test the property 'UserGuid'
         /// </summary>
         [Fact]

@@ -106,6 +106,10 @@ All URIs are relative to *https://api.mx.com*
 | [**UpdateTransaction**](MxPlatformApi.md#updatetransaction) | **PUT** /users/{user_guid}/transactions/{transaction_guid} | Update transaction |
 | [**UpdateTransactionRule**](MxPlatformApi.md#updatetransactionrule) | **PUT** /users/{user_guid}/transaction_rules/{transaction_rule_guid} | Update transaction_rule |
 | [**UpdateUser**](MxPlatformApi.md#updateuser) | **PUT** /users/{user_guid} | Update user |
+| [**UsersUserGuidMonthlyCashFlowProfileGet**](MxPlatformApi.md#usersuserguidmonthlycashflowprofileget) | **GET** /users/{user_guid}/monthly_cash_flow_profile | Read monthly cash flow profile |
+| [**UsersUserGuidMonthlyCashFlowProfilePut**](MxPlatformApi.md#usersuserguidmonthlycashflowprofileput) | **PUT** /users/{user_guid}/monthly_cash_flow_profile | Update monthly cash flow profile |
+| [**UsersUserGuidTransactionsTransactionGuidSplitDelete**](MxPlatformApi.md#usersuserguidtransactionstransactionguidsplitdelete) | **DELETE** /users/{user_guid}/transactions/{transaction_guid}/split | Delete split transactions |
+| [**UsersUserGuidTransactionsTransactionGuidSplitPost**](MxPlatformApi.md#usersuserguidtransactionstransactionguidsplitpost) | **POST** /users/{user_guid}/transactions/{transaction_guid}/split | Create split transactions |
 | [**VerifyMember**](MxPlatformApi.md#verifymember) | **POST** /users/{user_guid}/members/{member_guid}/verify | Verify member |
 
 <a id="aggregatemember"></a>
@@ -10128,6 +10132,388 @@ catch (ApiException e)
 ### Return type
 
 [**UserResponseBody**](UserResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="usersuserguidmonthlycashflowprofileget"></a>
+# **UsersUserGuidMonthlyCashFlowProfileGet**
+> MonthlyCashFlowResponseBody UsersUserGuidMonthlyCashFlowProfileGet (string userGuid)
+
+Read monthly cash flow profile
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class UsersUserGuidMonthlyCashFlowProfileGetExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = "userGuid_example";  // string | The unique identifier for the user.
+
+            try
+            {
+                // Read monthly cash flow profile
+                MonthlyCashFlowResponseBody result = apiInstance.UsersUserGuidMonthlyCashFlowProfileGet(userGuid);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.UsersUserGuidMonthlyCashFlowProfileGet: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read monthly cash flow profile
+    ApiResponse<MonthlyCashFlowResponseBody> response = apiInstance.UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfo(userGuid);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique identifier for the user. |  |
+
+### Return type
+
+[**MonthlyCashFlowResponseBody**](MonthlyCashFlowResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="usersuserguidmonthlycashflowprofileput"></a>
+# **UsersUserGuidMonthlyCashFlowProfilePut**
+> MonthlyCashFlowResponseBody UsersUserGuidMonthlyCashFlowProfilePut (string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody)
+
+Update monthly cash flow profile
+
+Use this endpoint to update the attributes of a `monthly_cash_flow_profile`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class UsersUserGuidMonthlyCashFlowProfilePutExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = "userGuid_example";  // string | The unique identifier for the user.
+            var monthlyCashFlowProfileRequestBody = new MonthlyCashFlowProfileRequestBody(); // MonthlyCashFlowProfileRequestBody | 
+
+            try
+            {
+                // Update monthly cash flow profile
+                MonthlyCashFlowResponseBody result = apiInstance.UsersUserGuidMonthlyCashFlowProfilePut(userGuid, monthlyCashFlowProfileRequestBody);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.UsersUserGuidMonthlyCashFlowProfilePut: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update monthly cash flow profile
+    ApiResponse<MonthlyCashFlowResponseBody> response = apiInstance.UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfo(userGuid, monthlyCashFlowProfileRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique identifier for the user. |  |
+| **monthlyCashFlowProfileRequestBody** | [**MonthlyCashFlowProfileRequestBody**](MonthlyCashFlowProfileRequestBody.md) |  |  |
+
+### Return type
+
+[**MonthlyCashFlowResponseBody**](MonthlyCashFlowResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="usersuserguidtransactionstransactionguidsplitdelete"></a>
+# **UsersUserGuidTransactionsTransactionGuidSplitDelete**
+> void UsersUserGuidTransactionsTransactionGuidSplitDelete (string transactionGuid, string userGuid)
+
+Delete split transactions
+
+This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction's has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class UsersUserGuidTransactionsTransactionGuidSplitDeleteExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var transactionGuid = TRN-810828b0-5210-4878-9bd3-f4ce514f90c4;  // string | The unique id for a `transaction`.
+            var userGuid = USR-85628b0-5210-4878-9bd3-f4ce154f90c4;  // string | The unique id for a `user`.
+
+            try
+            {
+                // Delete split transactions
+                apiInstance.UsersUserGuidTransactionsTransactionGuidSplitDelete(transactionGuid, userGuid);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.UsersUserGuidTransactionsTransactionGuidSplitDelete: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete split transactions
+    apiInstance.UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfo(transactionGuid, userGuid);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **transactionGuid** | **string** | The unique id for a &#x60;transaction&#x60;. |  |
+| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | No content |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="usersuserguidtransactionstransactionguidsplitpost"></a>
+# **UsersUserGuidTransactionsTransactionGuidSplitPost**
+> SplitTransactionsResponseBody UsersUserGuidTransactionsTransactionGuidSplitPost (string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = null)
+
+Create split transactions
+
+This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction's `has_been_split` field will automatically be updated to true and the child transactions' `parent_guid` will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can't be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction's `has_been_split` field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class UsersUserGuidTransactionsTransactionGuidSplitPostExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new MxPlatformApi(config);
+            var userGuid = "userGuid_example";  // string | The unique identifier for the user. Defined by MX.
+            var transactionGuid = "transactionGuid_example";  // string | The unique identifier for the transaction. Defined by MX.
+            var splitTransactionRequestBody = new SplitTransactionRequestBody?(); // SplitTransactionRequestBody? |  (optional) 
+
+            try
+            {
+                // Create split transactions
+                SplitTransactionsResponseBody result = apiInstance.UsersUserGuidTransactionsTransactionGuidSplitPost(userGuid, transactionGuid, splitTransactionRequestBody);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling MxPlatformApi.UsersUserGuidTransactionsTransactionGuidSplitPost: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create split transactions
+    ApiResponse<SplitTransactionsResponseBody> response = apiInstance.UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfo(userGuid, transactionGuid, splitTransactionRequestBody);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MxPlatformApi.UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique identifier for the user. Defined by MX. |  |
+| **transactionGuid** | **string** | The unique identifier for the transaction. Defined by MX. |  |
+| **splitTransactionRequestBody** | [**SplitTransactionRequestBody?**](SplitTransactionRequestBody?.md) |  | [optional]  |
+
+### Return type
+
+[**SplitTransactionsResponseBody**](SplitTransactionsResponseBody.md)
 
 ### Authorization
 
