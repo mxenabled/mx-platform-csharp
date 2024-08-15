@@ -44,11 +44,11 @@ namespace MX.Platform.CSharp.Model
         /// <param name="hasZeroIntroductoryAnnualFee">hasZeroIntroductoryAnnualFee.</param>
         /// <param name="hasZeroPercentIntroductoryRate">hasZeroPercentIntroductoryRate.</param>
         /// <param name="hasZeroPercentIntroductoryRateOnBalanceTransfer">hasZeroPercentIntroductoryRateOnBalanceTransfer.</param>
-        /// <param name="financialInstitution">financialInstitution.</param>
-        /// <param name="isAcceptingApplications">isAcceptingApplications.</param>
+        /// <param name="isAcceptingApplicants">isAcceptingApplicants.</param>
+        /// <param name="isActiveCreditCardProduct">isActiveCreditCardProduct.</param>
         /// <param name="isSmallBusinessCard">isSmallBusinessCard.</param>
         /// <param name="name">name.</param>
-        public CreditCardProduct(Object annualFee = default(Object), Object durationOfIntroductoryRateOnBalanceTransfer = default(Object), Object durationOfIntroductoryRateOnPurchases = default(Object), Object guid = default(Object), bool hasCashbackRewards = default(bool), bool hasOtherRewards = default(bool), bool hasTravelRewards = default(bool), bool hasZeroIntroductoryAnnualFee = default(bool), bool hasZeroPercentIntroductoryRate = default(bool), bool hasZeroPercentIntroductoryRateOnBalanceTransfer = default(bool), bool financialInstitution = default(bool), bool isAcceptingApplications = default(bool), bool isSmallBusinessCard = default(bool), string name = default(string))
+        public CreditCardProduct(decimal annualFee = default(decimal), int durationOfIntroductoryRateOnBalanceTransfer = default(int), int durationOfIntroductoryRateOnPurchases = default(int), string guid = default(string), bool hasCashbackRewards = default(bool), bool hasOtherRewards = default(bool), bool hasTravelRewards = default(bool), bool hasZeroIntroductoryAnnualFee = default(bool), bool hasZeroPercentIntroductoryRate = default(bool), bool hasZeroPercentIntroductoryRateOnBalanceTransfer = default(bool), bool isAcceptingApplicants = default(bool), bool isActiveCreditCardProduct = default(bool), bool isSmallBusinessCard = default(bool), string name = default(string))
         {
             this.AnnualFee = annualFee;
             this.DurationOfIntroductoryRateOnBalanceTransfer = durationOfIntroductoryRateOnBalanceTransfer;
@@ -60,8 +60,8 @@ namespace MX.Platform.CSharp.Model
             this.HasZeroIntroductoryAnnualFee = hasZeroIntroductoryAnnualFee;
             this.HasZeroPercentIntroductoryRate = hasZeroPercentIntroductoryRate;
             this.HasZeroPercentIntroductoryRateOnBalanceTransfer = hasZeroPercentIntroductoryRateOnBalanceTransfer;
-            this.FinancialInstitution = financialInstitution;
-            this.IsAcceptingApplications = isAcceptingApplications;
+            this.IsAcceptingApplicants = isAcceptingApplicants;
+            this.IsActiveCreditCardProduct = isActiveCreditCardProduct;
             this.IsSmallBusinessCard = isSmallBusinessCard;
             this.Name = name;
         }
@@ -70,27 +70,27 @@ namespace MX.Platform.CSharp.Model
         /// Gets or Sets AnnualFee
         /// </summary>
         /// <example>45.0</example>
-        [DataMember(Name = "annual_fee", EmitDefaultValue = true)]
-        public Object AnnualFee { get; set; }
+        [DataMember(Name = "annual_fee", EmitDefaultValue = false)]
+        public decimal AnnualFee { get; set; }
 
         /// <summary>
         /// Gets or Sets DurationOfIntroductoryRateOnBalanceTransfer
         /// </summary>
-        [DataMember(Name = "duration_of_introductory_rate_on_balance_transfer", EmitDefaultValue = true)]
-        public Object DurationOfIntroductoryRateOnBalanceTransfer { get; set; }
+        [DataMember(Name = "duration_of_introductory_rate_on_balance_transfer", EmitDefaultValue = false)]
+        public int DurationOfIntroductoryRateOnBalanceTransfer { get; set; }
 
         /// <summary>
         /// Gets or Sets DurationOfIntroductoryRateOnPurchases
         /// </summary>
-        [DataMember(Name = "duration_of_introductory_rate_on_purchases", EmitDefaultValue = true)]
-        public Object DurationOfIntroductoryRateOnPurchases { get; set; }
+        [DataMember(Name = "duration_of_introductory_rate_on_purchases", EmitDefaultValue = false)]
+        public int DurationOfIntroductoryRateOnPurchases { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
         /// </summary>
         /// <example>CCA-b5bcd822-6d01-4e23-b8d6-846a225e714a</example>
-        [DataMember(Name = "guid", EmitDefaultValue = true)]
-        public Object Guid { get; set; }
+        [DataMember(Name = "guid", EmitDefaultValue = false)]
+        public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets HasCashbackRewards
@@ -135,18 +135,18 @@ namespace MX.Platform.CSharp.Model
         public bool HasZeroPercentIntroductoryRateOnBalanceTransfer { get; set; }
 
         /// <summary>
-        /// Gets or Sets FinancialInstitution
+        /// Gets or Sets IsAcceptingApplicants
         /// </summary>
         /// <example>true</example>
-        [DataMember(Name = "financial_institution", EmitDefaultValue = true)]
-        public bool FinancialInstitution { get; set; }
+        [DataMember(Name = "is_accepting_applicants", EmitDefaultValue = true)]
+        public bool IsAcceptingApplicants { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsAcceptingApplications
+        /// Gets or Sets IsActiveCreditCardProduct
         /// </summary>
         /// <example>true</example>
-        [DataMember(Name = "is_accepting_applications", EmitDefaultValue = true)]
-        public bool IsAcceptingApplications { get; set; }
+        [DataMember(Name = "is_active_credit_card_product", EmitDefaultValue = true)]
+        public bool IsActiveCreditCardProduct { get; set; }
 
         /// <summary>
         /// Gets or Sets IsSmallBusinessCard
@@ -180,8 +180,8 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  HasZeroIntroductoryAnnualFee: ").Append(HasZeroIntroductoryAnnualFee).Append("\n");
             sb.Append("  HasZeroPercentIntroductoryRate: ").Append(HasZeroPercentIntroductoryRate).Append("\n");
             sb.Append("  HasZeroPercentIntroductoryRateOnBalanceTransfer: ").Append(HasZeroPercentIntroductoryRateOnBalanceTransfer).Append("\n");
-            sb.Append("  FinancialInstitution: ").Append(FinancialInstitution).Append("\n");
-            sb.Append("  IsAcceptingApplications: ").Append(IsAcceptingApplications).Append("\n");
+            sb.Append("  IsAcceptingApplicants: ").Append(IsAcceptingApplicants).Append("\n");
+            sb.Append("  IsActiveCreditCardProduct: ").Append(IsActiveCreditCardProduct).Append("\n");
             sb.Append("  IsSmallBusinessCard: ").Append(IsSmallBusinessCard).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
@@ -221,18 +221,15 @@ namespace MX.Platform.CSharp.Model
             return 
                 (
                     this.AnnualFee == input.AnnualFee ||
-                    (this.AnnualFee != null &&
-                    this.AnnualFee.Equals(input.AnnualFee))
+                    this.AnnualFee.Equals(input.AnnualFee)
                 ) && 
                 (
                     this.DurationOfIntroductoryRateOnBalanceTransfer == input.DurationOfIntroductoryRateOnBalanceTransfer ||
-                    (this.DurationOfIntroductoryRateOnBalanceTransfer != null &&
-                    this.DurationOfIntroductoryRateOnBalanceTransfer.Equals(input.DurationOfIntroductoryRateOnBalanceTransfer))
+                    this.DurationOfIntroductoryRateOnBalanceTransfer.Equals(input.DurationOfIntroductoryRateOnBalanceTransfer)
                 ) && 
                 (
                     this.DurationOfIntroductoryRateOnPurchases == input.DurationOfIntroductoryRateOnPurchases ||
-                    (this.DurationOfIntroductoryRateOnPurchases != null &&
-                    this.DurationOfIntroductoryRateOnPurchases.Equals(input.DurationOfIntroductoryRateOnPurchases))
+                    this.DurationOfIntroductoryRateOnPurchases.Equals(input.DurationOfIntroductoryRateOnPurchases)
                 ) && 
                 (
                     this.Guid == input.Guid ||
@@ -264,12 +261,12 @@ namespace MX.Platform.CSharp.Model
                     this.HasZeroPercentIntroductoryRateOnBalanceTransfer.Equals(input.HasZeroPercentIntroductoryRateOnBalanceTransfer)
                 ) && 
                 (
-                    this.FinancialInstitution == input.FinancialInstitution ||
-                    this.FinancialInstitution.Equals(input.FinancialInstitution)
+                    this.IsAcceptingApplicants == input.IsAcceptingApplicants ||
+                    this.IsAcceptingApplicants.Equals(input.IsAcceptingApplicants)
                 ) && 
                 (
-                    this.IsAcceptingApplications == input.IsAcceptingApplications ||
-                    this.IsAcceptingApplications.Equals(input.IsAcceptingApplications)
+                    this.IsActiveCreditCardProduct == input.IsActiveCreditCardProduct ||
+                    this.IsActiveCreditCardProduct.Equals(input.IsActiveCreditCardProduct)
                 ) && 
                 (
                     this.IsSmallBusinessCard == input.IsSmallBusinessCard ||
@@ -291,18 +288,9 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.AnnualFee != null)
-                {
-                    hashCode = (hashCode * 59) + this.AnnualFee.GetHashCode();
-                }
-                if (this.DurationOfIntroductoryRateOnBalanceTransfer != null)
-                {
-                    hashCode = (hashCode * 59) + this.DurationOfIntroductoryRateOnBalanceTransfer.GetHashCode();
-                }
-                if (this.DurationOfIntroductoryRateOnPurchases != null)
-                {
-                    hashCode = (hashCode * 59) + this.DurationOfIntroductoryRateOnPurchases.GetHashCode();
-                }
+                hashCode = (hashCode * 59) + this.AnnualFee.GetHashCode();
+                hashCode = (hashCode * 59) + this.DurationOfIntroductoryRateOnBalanceTransfer.GetHashCode();
+                hashCode = (hashCode * 59) + this.DurationOfIntroductoryRateOnPurchases.GetHashCode();
                 if (this.Guid != null)
                 {
                     hashCode = (hashCode * 59) + this.Guid.GetHashCode();
@@ -313,8 +301,8 @@ namespace MX.Platform.CSharp.Model
                 hashCode = (hashCode * 59) + this.HasZeroIntroductoryAnnualFee.GetHashCode();
                 hashCode = (hashCode * 59) + this.HasZeroPercentIntroductoryRate.GetHashCode();
                 hashCode = (hashCode * 59) + this.HasZeroPercentIntroductoryRateOnBalanceTransfer.GetHashCode();
-                hashCode = (hashCode * 59) + this.FinancialInstitution.GetHashCode();
-                hashCode = (hashCode * 59) + this.IsAcceptingApplications.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsAcceptingApplicants.GetHashCode();
+                hashCode = (hashCode * 59) + this.IsActiveCreditCardProduct.GetHashCode();
                 hashCode = (hashCode * 59) + this.IsSmallBusinessCard.GetHashCode();
                 if (this.Name != null)
                 {

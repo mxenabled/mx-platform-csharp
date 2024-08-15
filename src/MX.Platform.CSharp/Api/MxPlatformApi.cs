@@ -2761,6 +2761,103 @@ namespace MX.Platform.CSharp.Api
         /// <returns>ApiResponse of UserResponseBody</returns>
         ApiResponse<UserResponseBody> UpdateUserWithHttpInfo(string userGuid, UserUpdateRequestBody userUpdateRequestBody, int operationIndex = 0);
         /// <summary>
+        /// Read monthly cash flow profile
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>MonthlyCashFlowResponseBody</returns>
+        MonthlyCashFlowResponseBody UsersUserGuidMonthlyCashFlowProfileGet(string userGuid, int operationIndex = 0);
+
+        /// <summary>
+        /// Read monthly cash flow profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of MonthlyCashFlowResponseBody</returns>
+        ApiResponse<MonthlyCashFlowResponseBody> UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfo(string userGuid, int operationIndex = 0);
+        /// <summary>
+        /// Update monthly cash flow profile
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to update the attributes of a &#x60;monthly_cash_flow_profile&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="monthlyCashFlowProfileRequestBody"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>MonthlyCashFlowResponseBody</returns>
+        MonthlyCashFlowResponseBody UsersUserGuidMonthlyCashFlowProfilePut(string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody, int operationIndex = 0);
+
+        /// <summary>
+        /// Update monthly cash flow profile
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to update the attributes of a &#x60;monthly_cash_flow_profile&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="monthlyCashFlowProfileRequestBody"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of MonthlyCashFlowResponseBody</returns>
+        ApiResponse<MonthlyCashFlowResponseBody> UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfo(string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody, int operationIndex = 0);
+        /// <summary>
+        /// Delete split transactions
+        /// </summary>
+        /// <remarks>
+        /// This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction&#39;s has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns></returns>
+        void UsersUserGuidTransactionsTransactionGuidSplitDelete(string transactionGuid, string userGuid, int operationIndex = 0);
+
+        /// <summary>
+        /// Delete split transactions
+        /// </summary>
+        /// <remarks>
+        /// This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction&#39;s has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfo(string transactionGuid, string userGuid, int operationIndex = 0);
+        /// <summary>
+        /// Create split transactions
+        /// </summary>
+        /// <remarks>
+        /// This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction&#39;s &#x60;has_been_split&#x60; field will automatically be updated to true and the child transactions&#39; &#x60;parent_guid&#x60; will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can&#39;t be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction&#39;s &#x60;has_been_split&#x60; field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user. Defined by MX.</param>
+        /// <param name="transactionGuid">The unique identifier for the transaction. Defined by MX.</param>
+        /// <param name="splitTransactionRequestBody"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SplitTransactionsResponseBody</returns>
+        SplitTransactionsResponseBody UsersUserGuidTransactionsTransactionGuidSplitPost(string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = default(SplitTransactionRequestBody?), int operationIndex = 0);
+
+        /// <summary>
+        /// Create split transactions
+        /// </summary>
+        /// <remarks>
+        /// This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction&#39;s &#x60;has_been_split&#x60; field will automatically be updated to true and the child transactions&#39; &#x60;parent_guid&#x60; will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can&#39;t be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction&#39;s &#x60;has_been_split&#x60; field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user. Defined by MX.</param>
+        /// <param name="transactionGuid">The unique identifier for the transaction. Defined by MX.</param>
+        /// <param name="splitTransactionRequestBody"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SplitTransactionsResponseBody</returns>
+        ApiResponse<SplitTransactionsResponseBody> UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfo(string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = default(SplitTransactionRequestBody?), int operationIndex = 0);
+        /// <summary>
         /// Verify member
         /// </summary>
         /// <remarks>
@@ -5732,6 +5829,114 @@ namespace MX.Platform.CSharp.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UserResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> UpdateUserWithHttpInfoAsync(string userGuid, UserUpdateRequestBody userUpdateRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Read monthly cash flow profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of MonthlyCashFlowResponseBody</returns>
+        System.Threading.Tasks.Task<MonthlyCashFlowResponseBody> UsersUserGuidMonthlyCashFlowProfileGetAsync(string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Read monthly cash flow profile
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (MonthlyCashFlowResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MonthlyCashFlowResponseBody>> UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfoAsync(string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Update monthly cash flow profile
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to update the attributes of a &#x60;monthly_cash_flow_profile&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="monthlyCashFlowProfileRequestBody"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of MonthlyCashFlowResponseBody</returns>
+        System.Threading.Tasks.Task<MonthlyCashFlowResponseBody> UsersUserGuidMonthlyCashFlowProfilePutAsync(string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Update monthly cash flow profile
+        /// </summary>
+        /// <remarks>
+        /// Use this endpoint to update the attributes of a &#x60;monthly_cash_flow_profile&#x60;.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="monthlyCashFlowProfileRequestBody"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (MonthlyCashFlowResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MonthlyCashFlowResponseBody>> UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfoAsync(string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Delete split transactions
+        /// </summary>
+        /// <remarks>
+        /// This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction&#39;s has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UsersUserGuidTransactionsTransactionGuidSplitDeleteAsync(string transactionGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Delete split transactions
+        /// </summary>
+        /// <remarks>
+        /// This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction&#39;s has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfoAsync(string transactionGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// Create split transactions
+        /// </summary>
+        /// <remarks>
+        /// This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction&#39;s &#x60;has_been_split&#x60; field will automatically be updated to true and the child transactions&#39; &#x60;parent_guid&#x60; will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can&#39;t be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction&#39;s &#x60;has_been_split&#x60; field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user. Defined by MX.</param>
+        /// <param name="transactionGuid">The unique identifier for the transaction. Defined by MX.</param>
+        /// <param name="splitTransactionRequestBody"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SplitTransactionsResponseBody</returns>
+        System.Threading.Tasks.Task<SplitTransactionsResponseBody> UsersUserGuidTransactionsTransactionGuidSplitPostAsync(string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = default(SplitTransactionRequestBody?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// Create split transactions
+        /// </summary>
+        /// <remarks>
+        /// This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction&#39;s &#x60;has_been_split&#x60; field will automatically be updated to true and the child transactions&#39; &#x60;parent_guid&#x60; will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can&#39;t be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction&#39;s &#x60;has_been_split&#x60; field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+        /// </remarks>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user. Defined by MX.</param>
+        /// <param name="transactionGuid">The unique identifier for the transaction. Defined by MX.</param>
+        /// <param name="splitTransactionRequestBody"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SplitTransactionsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SplitTransactionsResponseBody>> UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfoAsync(string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = default(SplitTransactionRequestBody?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Verify member
         /// </summary>
@@ -24718,6 +24923,690 @@ namespace MX.Platform.CSharp.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UpdateUser", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read monthly cash flow profile 
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>MonthlyCashFlowResponseBody</returns>
+        public MonthlyCashFlowResponseBody UsersUserGuidMonthlyCashFlowProfileGet(string userGuid, int operationIndex = 0)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<MonthlyCashFlowResponseBody> localVarResponse = UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfo(userGuid);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read monthly cash flow profile 
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of MonthlyCashFlowResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<MonthlyCashFlowResponseBody> UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfo(string userGuid, int operationIndex = 0)
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UsersUserGuidMonthlyCashFlowProfileGet");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.UsersUserGuidMonthlyCashFlowProfileGet";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<MonthlyCashFlowResponseBody>("/users/{user_guid}/monthly_cash_flow_profile", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsersUserGuidMonthlyCashFlowProfileGet", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Read monthly cash flow profile 
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of MonthlyCashFlowResponseBody</returns>
+        public async System.Threading.Tasks.Task<MonthlyCashFlowResponseBody> UsersUserGuidMonthlyCashFlowProfileGetAsync(string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<MonthlyCashFlowResponseBody> localVarResponse = await UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfoAsync(userGuid, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read monthly cash flow profile 
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (MonthlyCashFlowResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<MonthlyCashFlowResponseBody>> UsersUserGuidMonthlyCashFlowProfileGetWithHttpInfoAsync(string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UsersUserGuidMonthlyCashFlowProfileGet");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.UsersUserGuidMonthlyCashFlowProfileGet";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.GetAsync<MonthlyCashFlowResponseBody>("/users/{user_guid}/monthly_cash_flow_profile", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsersUserGuidMonthlyCashFlowProfileGet", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update monthly cash flow profile Use this endpoint to update the attributes of a &#x60;monthly_cash_flow_profile&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="monthlyCashFlowProfileRequestBody"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>MonthlyCashFlowResponseBody</returns>
+        public MonthlyCashFlowResponseBody UsersUserGuidMonthlyCashFlowProfilePut(string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody, int operationIndex = 0)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<MonthlyCashFlowResponseBody> localVarResponse = UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfo(userGuid, monthlyCashFlowProfileRequestBody);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update monthly cash flow profile Use this endpoint to update the attributes of a &#x60;monthly_cash_flow_profile&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="monthlyCashFlowProfileRequestBody"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of MonthlyCashFlowResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<MonthlyCashFlowResponseBody> UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfo(string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody, int operationIndex = 0)
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UsersUserGuidMonthlyCashFlowProfilePut");
+            }
+
+            // verify the required parameter 'monthlyCashFlowProfileRequestBody' is set
+            if (monthlyCashFlowProfileRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'monthlyCashFlowProfileRequestBody' when calling MxPlatformApi->UsersUserGuidMonthlyCashFlowProfilePut");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.Data = monthlyCashFlowProfileRequestBody;
+
+            localVarRequestOptions.Operation = "MxPlatformApi.UsersUserGuidMonthlyCashFlowProfilePut";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Put<MonthlyCashFlowResponseBody>("/users/{user_guid}/monthly_cash_flow_profile", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsersUserGuidMonthlyCashFlowProfilePut", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Update monthly cash flow profile Use this endpoint to update the attributes of a &#x60;monthly_cash_flow_profile&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="monthlyCashFlowProfileRequestBody"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of MonthlyCashFlowResponseBody</returns>
+        public async System.Threading.Tasks.Task<MonthlyCashFlowResponseBody> UsersUserGuidMonthlyCashFlowProfilePutAsync(string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<MonthlyCashFlowResponseBody> localVarResponse = await UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfoAsync(userGuid, monthlyCashFlowProfileRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update monthly cash flow profile Use this endpoint to update the attributes of a &#x60;monthly_cash_flow_profile&#x60;.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user.</param>
+        /// <param name="monthlyCashFlowProfileRequestBody"></param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (MonthlyCashFlowResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<MonthlyCashFlowResponseBody>> UsersUserGuidMonthlyCashFlowProfilePutWithHttpInfoAsync(string userGuid, MonthlyCashFlowProfileRequestBody monthlyCashFlowProfileRequestBody, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UsersUserGuidMonthlyCashFlowProfilePut");
+            }
+
+            // verify the required parameter 'monthlyCashFlowProfileRequestBody' is set
+            if (monthlyCashFlowProfileRequestBody == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'monthlyCashFlowProfileRequestBody' when calling MxPlatformApi->UsersUserGuidMonthlyCashFlowProfilePut");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.Data = monthlyCashFlowProfileRequestBody;
+
+            localVarRequestOptions.Operation = "MxPlatformApi.UsersUserGuidMonthlyCashFlowProfilePut";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PutAsync<MonthlyCashFlowResponseBody>("/users/{user_guid}/monthly_cash_flow_profile", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsersUserGuidMonthlyCashFlowProfilePut", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete split transactions This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction&#39;s has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns></returns>
+        public void UsersUserGuidTransactionsTransactionGuidSplitDelete(string transactionGuid, string userGuid, int operationIndex = 0)
+        {
+            UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfo(transactionGuid, userGuid);
+        }
+
+        /// <summary>
+        /// Delete split transactions This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction&#39;s has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<Object> UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfo(string transactionGuid, string userGuid, int operationIndex = 0)
+        {
+            // verify the required parameter 'transactionGuid' is set
+            if (transactionGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UsersUserGuidTransactionsTransactionGuidSplitDelete");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UsersUserGuidTransactionsTransactionGuidSplitDelete");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.UsersUserGuidTransactionsTransactionGuidSplitDelete";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Delete<Object>("/users/{user_guid}/transactions/{transaction_guid}/split", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsersUserGuidTransactionsTransactionGuidSplitDelete", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Delete split transactions This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction&#39;s has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UsersUserGuidTransactionsTransactionGuidSplitDeleteAsync(string transactionGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfoAsync(transactionGuid, userGuid, operationIndex, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Delete split transactions This endpoint deletes all split transactions linked to a parent transaction, but it leaves the parent transaction active. This request will also update the parent transaction&#39;s has_been_split field to false. This endpoint accepts the optional MX-Skip-Webhook header.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="transactionGuid">The unique id for a &#x60;transaction&#x60;.</param>
+        /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<Object>> UsersUserGuidTransactionsTransactionGuidSplitDeleteWithHttpInfoAsync(string transactionGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'transactionGuid' is set
+            if (transactionGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UsersUserGuidTransactionsTransactionGuidSplitDelete");
+            }
+
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UsersUserGuidTransactionsTransactionGuidSplitDelete");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+
+            localVarRequestOptions.Operation = "MxPlatformApi.UsersUserGuidTransactionsTransactionGuidSplitDelete";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.DeleteAsync<Object>("/users/{user_guid}/transactions/{transaction_guid}/split", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsersUserGuidTransactionsTransactionGuidSplitDelete", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create split transactions This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction&#39;s &#x60;has_been_split&#x60; field will automatically be updated to true and the child transactions&#39; &#x60;parent_guid&#x60; will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can&#39;t be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction&#39;s &#x60;has_been_split&#x60; field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user. Defined by MX.</param>
+        /// <param name="transactionGuid">The unique identifier for the transaction. Defined by MX.</param>
+        /// <param name="splitTransactionRequestBody"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>SplitTransactionsResponseBody</returns>
+        public SplitTransactionsResponseBody UsersUserGuidTransactionsTransactionGuidSplitPost(string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = default(SplitTransactionRequestBody?), int operationIndex = 0)
+        {
+            MX.Platform.CSharp.Client.ApiResponse<SplitTransactionsResponseBody> localVarResponse = UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfo(userGuid, transactionGuid, splitTransactionRequestBody);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create split transactions This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction&#39;s &#x60;has_been_split&#x60; field will automatically be updated to true and the child transactions&#39; &#x60;parent_guid&#x60; will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can&#39;t be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction&#39;s &#x60;has_been_split&#x60; field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user. Defined by MX.</param>
+        /// <param name="transactionGuid">The unique identifier for the transaction. Defined by MX.</param>
+        /// <param name="splitTransactionRequestBody"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <returns>ApiResponse of SplitTransactionsResponseBody</returns>
+        public MX.Platform.CSharp.Client.ApiResponse<SplitTransactionsResponseBody> UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfo(string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = default(SplitTransactionRequestBody?), int operationIndex = 0)
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UsersUserGuidTransactionsTransactionGuidSplitPost");
+            }
+
+            // verify the required parameter 'transactionGuid' is set
+            if (transactionGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UsersUserGuidTransactionsTransactionGuidSplitPost");
+            }
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.Data = splitTransactionRequestBody;
+
+            localVarRequestOptions.Operation = "MxPlatformApi.UsersUserGuidTransactionsTransactionGuidSplitPost";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<SplitTransactionsResponseBody>("/users/{user_guid}/transactions/{transaction_guid}/split", localVarRequestOptions, this.Configuration);
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsersUserGuidTransactionsTransactionGuidSplitPost", localVarResponse);
+                if (_exception != null)
+                {
+                    throw _exception;
+                }
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// Create split transactions This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction&#39;s &#x60;has_been_split&#x60; field will automatically be updated to true and the child transactions&#39; &#x60;parent_guid&#x60; will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can&#39;t be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction&#39;s &#x60;has_been_split&#x60; field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user. Defined by MX.</param>
+        /// <param name="transactionGuid">The unique identifier for the transaction. Defined by MX.</param>
+        /// <param name="splitTransactionRequestBody"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of SplitTransactionsResponseBody</returns>
+        public async System.Threading.Tasks.Task<SplitTransactionsResponseBody> UsersUserGuidTransactionsTransactionGuidSplitPostAsync(string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = default(SplitTransactionRequestBody?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            MX.Platform.CSharp.Client.ApiResponse<SplitTransactionsResponseBody> localVarResponse = await UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfoAsync(userGuid, transactionGuid, splitTransactionRequestBody, operationIndex, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create split transactions This endpoint creates two or more child transactions that are branched from a previous transaction. This endpoint allows you to link multiple categories, descriptions, and amounts to a parent transaction.  When a split transaction is created, the parent transaction&#39;s &#x60;has_been_split&#x60; field will automatically be updated to true and the child transactions&#39; &#x60;parent_guid&#x60; will have the transaction guid of the parent. The total amount of the child transactions must equal the amount of the parent transaction. Once a transaction has been split it can&#39;t be split again.    In order to re-split a transaction, it must first be un-split. This can be done by calling the Delete Split Transactions endpoint. Calling this endpoint will delete the existing child transactions and update the parent transaction&#39;s &#x60;has_been_split&#x60; field to false. You can then re-split the parent transaction by calling Create Split Transaction again.
+        /// </summary>
+        /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userGuid">The unique identifier for the user. Defined by MX.</param>
+        /// <param name="transactionGuid">The unique identifier for the transaction. Defined by MX.</param>
+        /// <param name="splitTransactionRequestBody"> (optional)</param>
+        /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (SplitTransactionsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<SplitTransactionsResponseBody>> UsersUserGuidTransactionsTransactionGuidSplitPostWithHttpInfoAsync(string userGuid, string transactionGuid, SplitTransactionRequestBody? splitTransactionRequestBody = default(SplitTransactionRequestBody?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'userGuid' when calling MxPlatformApi->UsersUserGuidTransactionsTransactionGuidSplitPost");
+            }
+
+            // verify the required parameter 'transactionGuid' is set
+            if (transactionGuid == null)
+            {
+                throw new MX.Platform.CSharp.Client.ApiException(400, "Missing required parameter 'transactionGuid' when calling MxPlatformApi->UsersUserGuidTransactionsTransactionGuidSplitPost");
+            }
+
+
+            MX.Platform.CSharp.Client.RequestOptions localVarRequestOptions = new MX.Platform.CSharp.Client.RequestOptions();
+
+            string[] _contentTypes = new string[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            string[] _accepts = new string[] {
+                "application/vnd.mx.api.v1+json"
+            };
+
+            var localVarContentType = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+            }
+
+            var localVarAccept = MX.Platform.CSharp.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null)
+            {
+                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+            }
+
+            localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("transaction_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(transactionGuid)); // path parameter
+            localVarRequestOptions.Data = splitTransactionRequestBody;
+
+            localVarRequestOptions.Operation = "MxPlatformApi.UsersUserGuidTransactionsTransactionGuidSplitPost";
+            localVarRequestOptions.OperationIndex = operationIndex;
+
+            // authentication (basicAuth) required
+            // http basic authentication required
+            if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
+            {
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + MX.Platform.CSharp.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+            }
+
+            // make the HTTP request
+            var localVarResponse = await this.AsynchronousClient.PostAsync<SplitTransactionsResponseBody>("/users/{user_guid}/transactions/{transaction_guid}/split", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("UsersUserGuidTransactionsTransactionGuidSplitPost", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

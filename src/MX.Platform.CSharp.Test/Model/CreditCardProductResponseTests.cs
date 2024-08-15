@@ -55,12 +55,12 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Reward'
+        /// Test the property 'CreditCardProduct'
         /// </summary>
         [Fact]
-        public void RewardTest()
+        public void CreditCardProductTest()
         {
-            // TODO unit test for the property 'Reward'
+            // TODO unit test for the property 'CreditCardProduct'
         }
     }
 }
