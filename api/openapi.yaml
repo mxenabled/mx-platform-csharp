@@ -3198,8 +3198,10 @@ paths:
       tags:
       - mx_platform
     put:
-      description: This endpoint allows you to update certain attributes of an `account`
-        resource.
+      description: "This endpoint allows you to update certain attributes of an `account`\
+        \ resource, including manual accounts. For manual accounts, you can update\
+        \ every field listed. For aggregated accounts, you can only update `is_business`,\
+        \ `is_hidden` and `metadata`."
       operationId: updateAccountByMember
       parameters:
       - description: The unique id for an `account`.
@@ -3234,7 +3236,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/AccountUpdateRequestBody'
-        description: Account object to be created with optional parameters (is_hidden)
         required: true
       responses:
         "200":

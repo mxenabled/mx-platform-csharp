@@ -2461,13 +2461,13 @@ namespace MX.Platform.CSharp.Api
         /// Update account by member
         /// </summary>
         /// <remarks>
-        /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
+        /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update &#x60;is_business&#x60;, &#x60;is_hidden&#x60; and &#x60;metadata&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
+        /// <param name="accountUpdateRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountResponseBody</returns>
         AccountResponseBody UpdateAccountByMember(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody, int operationIndex = 0);
@@ -2476,13 +2476,13 @@ namespace MX.Platform.CSharp.Api
         /// Update account by member
         /// </summary>
         /// <remarks>
-        /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
+        /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update &#x60;is_business&#x60;, &#x60;is_hidden&#x60; and &#x60;metadata&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
+        /// <param name="accountUpdateRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
         ApiResponse<AccountResponseBody> UpdateAccountByMemberWithHttpInfo(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody, int operationIndex = 0);
@@ -5508,13 +5508,13 @@ namespace MX.Platform.CSharp.Api
         /// Update account by member
         /// </summary>
         /// <remarks>
-        /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
+        /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update &#x60;is_business&#x60;, &#x60;is_hidden&#x60; and &#x60;metadata&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
+        /// <param name="accountUpdateRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
@@ -5524,13 +5524,13 @@ namespace MX.Platform.CSharp.Api
         /// Update account by member
         /// </summary>
         /// <remarks>
-        /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
+        /// This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update &#x60;is_business&#x60;, &#x60;is_hidden&#x60; and &#x60;metadata&#x60;.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
+        /// <param name="accountUpdateRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>
@@ -22745,13 +22745,13 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
+        /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update &#x60;is_business&#x60;, &#x60;is_hidden&#x60; and &#x60;metadata&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
+        /// <param name="accountUpdateRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>AccountResponseBody</returns>
         public AccountResponseBody UpdateAccountByMember(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody, int operationIndex = 0)
@@ -22761,13 +22761,13 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
+        /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update &#x60;is_business&#x60;, &#x60;is_hidden&#x60; and &#x60;metadata&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
+        /// <param name="accountUpdateRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of AccountResponseBody</returns>
         public MX.Platform.CSharp.Client.ApiResponse<AccountResponseBody> UpdateAccountByMemberWithHttpInfo(string accountGuid, string memberGuid, string userGuid, AccountUpdateRequestBody accountUpdateRequestBody, int operationIndex = 0)
@@ -22849,13 +22849,13 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
+        /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update &#x60;is_business&#x60;, &#x60;is_hidden&#x60; and &#x60;metadata&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
+        /// <param name="accountUpdateRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of AccountResponseBody</returns>
@@ -22866,13 +22866,13 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource.
+        /// Update account by member This endpoint allows you to update certain attributes of an &#x60;account&#x60; resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update &#x60;is_business&#x60;, &#x60;is_hidden&#x60; and &#x60;metadata&#x60;.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
-        /// <param name="accountUpdateRequestBody">Account object to be created with optional parameters (is_hidden)</param>
+        /// <param name="accountUpdateRequestBody"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (AccountResponseBody)</returns>

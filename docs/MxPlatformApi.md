@@ -9061,7 +9061,7 @@ catch (ApiException e)
 
 Update account by member
 
-This endpoint allows you to update certain attributes of an `account` resource.
+This endpoint allows you to update certain attributes of an `account` resource, including manual accounts. For manual accounts, you can update every field listed. For aggregated accounts, you can only update `is_business`, `is_hidden` and `metadata`.
 
 ### Example
 ```csharp
@@ -9087,7 +9087,7 @@ namespace Example
             var accountGuid = ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1;  // string | The unique id for an `account`.
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var accountUpdateRequestBody = new AccountUpdateRequestBody(); // AccountUpdateRequestBody | Account object to be created with optional parameters (is_hidden)
+            var accountUpdateRequestBody = new AccountUpdateRequestBody(); // AccountUpdateRequestBody | 
 
             try
             {
@@ -9133,7 +9133,7 @@ catch (ApiException e)
 | **accountGuid** | **string** | The unique id for an &#x60;account&#x60;. |  |
 | **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
 | **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
-| **accountUpdateRequestBody** | [**AccountUpdateRequestBody**](AccountUpdateRequestBody.md) | Account object to be created with optional parameters (is_hidden) |  |
+| **accountUpdateRequestBody** | [**AccountUpdateRequestBody**](AccountUpdateRequestBody.md) |  |  |
 
 ### Return type
 
