@@ -1038,6 +1038,43 @@ paths:
       summary: List transactions by account
       tags:
       - mx_platform
+    post:
+      description: This endpoint can only be used to create manual transactions that
+        are under a manual account. This endpoint accepts the optional MX-Skip-Webhook
+        header and skip_webhook parameter.
+      parameters:
+      - description: The unique identifier for the user.
+        explode: false
+        in: path
+        name: user_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The unique identifier for the account.
+        explode: false
+        in: path
+        name: account_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionCreateRequestBody'
+        required: true
+      responses:
+        "200":
+          content:
+            application/vnd.mx.api.v1+json:
+              schema:
+                $ref: '#/components/schemas/TransactionCreateResponseBody'
+          description: OK
+      summary: Create manual transaction
+      tags:
+      - transactions
   /users/{user_guid}/budgets/generate:
     post:
       description: "This endpoint will automatically create budgets for several categories\
@@ -4294,6 +4331,148 @@ paths:
       summary: Verify member
       tags:
       - mx_platform
+  /users/{user_guid}/micro_deposits:
+    get:
+      description: Use this endpoint to read the attributes of a specific microdeposit
+        according to its unique GUID.
+      parameters:
+      - description: The unique identifier for the user. Defined by MX.
+        explode: false
+        in: path
+        name: user_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MicrodepositsResponseBody'
+          description: OK
+      summary: List all microdeposits for a user
+      tags:
+      - microdeposits
+    post:
+      description: Use this endpoint to create a microdeposit. The response will include
+        the new microdeposit record with a status of INITIATED.
+      parameters:
+      - description: The unique identifier for the user. Defined by MX.
+        explode: false
+        in: path
+        name: user_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MicrodepositRequestBody'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MicrodepositResponseBody'
+          description: OK
+      summary: Create a microdeposit
+      tags:
+      - microdeposits
+  /users/{user_guid}/micro_deposits/{micro_deposit_guid}:
+    delete:
+      description: Use this endpoint to delete the specified microdeposit.
+      parameters:
+      - description: The unique identifier for the microdeposit. Defined by MX.
+        example: MIC-09ba578e-8448-4f7f-89e1-b62ff2517edb
+        explode: false
+        in: path
+        name: micro_deposit_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The unique id for a `user`.
+        example: USR-fa7537f3-48aa-a683-a02a-b18940482f54
+        explode: false
+        in: path
+        name: user_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "204":
+          description: No Content
+      summary: Delete a microdeposit
+      tags:
+      - microdeposits
+    get:
+      description: Use this endpoint to read the attributes of a specific microdeposit
+        according to its unique GUID. <br></br> Webhooks for microdeposit status changes
+        are triggered when a status changes. The actual status of the microdeposit
+        guid updates every minute. You may force a status update by calling the read
+        microdeposit endpoint.
+      parameters:
+      - description: The unique identifier for the user. Defined by MX.
+        explode: false
+        in: path
+        name: user_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: The unique identifier for the microdeposit. Defined by MX.
+        explode: false
+        in: path
+        name: micro_deposit_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MicrodepositResponseBody'
+          description: OK
+      summary: Read a microdeposit for a user
+      tags:
+      - microdeposits
+  /micro_deposits/{microdeposit_guid}/verify:
+    put:
+      description: "Use this endpoint to verify the amounts deposited into the account\
+        \ during a microdeposit verification. The verification has not successfully\
+        \ completed until the `status` is `VERIFIED`. Poll the `/users/{user_guid}/micro_deposits/{micro_deposit_guid}`\
+        \ (read microdeposit) endpoint until you see this status or an error state."
+      parameters:
+      - description: The unique identifier for the microdeposit. Defined by MX.
+        explode: false
+        in: path
+        name: microdeposit_guid
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MicrodepositVerifyRequestBody'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MicrodepositResponseBody'
+          description: OK
+      summary: Verify a Microdeposit
+      tags:
+      - microdeposits
   /users/{user_guid}/monthly_cash_flow_profile:
     get:
       parameters:
@@ -8794,6 +8973,197 @@ components:
         pagination:
           $ref: '#/components/schemas/PaginationResponse'
       type: object
+    MicrodepositVerifyRequest:
+      example:
+        deposit_amount_1: 0
+        deposit_amount_2: 6
+      properties:
+        deposit_amount_1:
+          type: integer
+        deposit_amount_2:
+          type: integer
+    MicrodepositVerifyRequestBody:
+      example:
+        micro_deposit:
+          deposit_amount_1: 0
+          deposit_amount_2: 6
+      properties:
+        micro_deposit:
+          $ref: '#/components/schemas/MicrodepositVerifyRequest'
+      type: object
+    MicrodepositRequest:
+      example:
+        account_number: "3331261"
+        account_type: CHECKING
+        account_name: My test account
+        last_name: Grobanne
+        routing_number: "091000019"
+        first_name: Joshy
+        email: joshyboy2@example.com
+      properties:
+        account_number:
+          example: "3331261"
+          type: string
+        account_type:
+          example: CHECKING
+          type: string
+        routing_number:
+          example: "091000019"
+          type: string
+        account_name:
+          example: My test account
+          type: string
+        email:
+          example: joshyboy2@example.com
+          type: string
+        first_name:
+          example: Joshy
+          type: string
+        last_name:
+          example: Grobanne
+          type: string
+      required:
+      - account_number
+      - account_type
+      - routing_number
+    MicrodepositRequestBody:
+      example:
+        micro_deposit:
+          account_number: "3331261"
+          account_type: CHECKING
+          account_name: My test account
+          last_name: Grobanne
+          routing_number: "091000019"
+          first_name: Joshy
+          email: joshyboy2@example.com
+      properties:
+        micro_deposit:
+          $ref: '#/components/schemas/MicrodepositRequest'
+      type: object
+    MicrodepositResponse:
+      example:
+        error_message: error_message
+        account_number: "3331261"
+        account_type: CHECKING
+        last_name: Grobanne
+        routing_number: "091000019"
+        institution_name: MX Bank
+        institution_code: mxbank
+        updated_at: 2023-06-01T19:18:06Z
+        verified_at: verified_at
+        account_name: My test account
+        guid: MIC-09ba578e-8448-4f7f-89e1-b62ff2517edb
+        first_name: Joshy
+        email: joshyboy2@example.com
+        status: INITIATED
+      properties:
+        account_name:
+          example: My test account
+          type: string
+        account_number:
+          example: "3331261"
+          type: string
+        account_type:
+          example: CHECKING
+          type: string
+        email:
+          example: joshyboy2@example.com
+          type: string
+        first_name:
+          example: Joshy
+          type: string
+        last_name:
+          example: Grobanne
+          type: string
+        routing_number:
+          example: "091000019"
+          type: string
+        error_message:
+          type: string
+          example: null
+        guid:
+          example: MIC-09ba578e-8448-4f7f-89e1-b62ff2517edb
+          type: string
+        institution_code:
+          example: mxbank
+          type: string
+        institution_name:
+          example: MX Bank
+          type: string
+        status:
+          example: INITIATED
+          type: string
+        updated_at:
+          example: 2023-06-01T19:18:06Z
+          type: string
+        verified_at:
+          type: string
+          example: null
+    MicrodepositResponseBody:
+      example:
+        micro_deposit:
+          error_message: error_message
+          account_number: "3331261"
+          account_type: CHECKING
+          last_name: Grobanne
+          routing_number: "091000019"
+          institution_name: MX Bank
+          institution_code: mxbank
+          updated_at: 2023-06-01T19:18:06Z
+          verified_at: verified_at
+          account_name: My test account
+          guid: MIC-09ba578e-8448-4f7f-89e1-b62ff2517edb
+          first_name: Joshy
+          email: joshyboy2@example.com
+          status: INITIATED
+      properties:
+        micro_deposit:
+          $ref: '#/components/schemas/MicrodepositResponse'
+      type: object
+    MicrodepositsResponseBody:
+      example:
+        micro_deposits:
+        - error_message: error_message
+          account_number: "3331261"
+          account_type: CHECKING
+          last_name: Grobanne
+          routing_number: "091000019"
+          institution_name: MX Bank
+          institution_code: mxbank
+          updated_at: 2023-06-01T19:18:06Z
+          verified_at: verified_at
+          account_name: My test account
+          guid: MIC-09ba578e-8448-4f7f-89e1-b62ff2517edb
+          first_name: Joshy
+          email: joshyboy2@example.com
+          status: INITIATED
+        - error_message: error_message
+          account_number: "3331261"
+          account_type: CHECKING
+          last_name: Grobanne
+          routing_number: "091000019"
+          institution_name: MX Bank
+          institution_code: mxbank
+          updated_at: 2023-06-01T19:18:06Z
+          verified_at: verified_at
+          account_name: My test account
+          guid: MIC-09ba578e-8448-4f7f-89e1-b62ff2517edb
+          first_name: Joshy
+          email: joshyboy2@example.com
+          status: INITIATED
+        pagination:
+          per_page: 25
+          total_pages: 1
+          current_page: 1
+          total_entries: 1
+      properties:
+        micro_deposits:
+          items:
+            $ref: '#/components/schemas/MicrodepositResponse'
+          type: array
+        pagination:
+          $ref: '#/components/schemas/PaginationResponse'
+      type: object
     MonthlyCashFlowResponse:
       example:
         budgeted_income: 1200.12
@@ -9654,6 +10024,265 @@ components:
           items:
             $ref: '#/components/schemas/TaxDocumentResponse'
           type: array
+      type: object
+    TransactionCreateRequest:
+      example:
+        date: 2016-10-06
+        amount: 61.11
+        metadata: some metadata
+        category_guid: CAT-b6d61a19-30a7-e852-2703-bdfb4072289e
+        is_hidden: false
+        description: Whole foods
+        memo: This is a memo
+        type: DEBIT
+        has_been_viewed: false
+        is_international: false
+        currency_code: USD
+        skip_webhook: true
+      properties:
+        amount:
+          example: 61.11
+          type: number
+        date:
+          example: 2016-10-06
+          type: string
+        description:
+          example: Whole foods
+          type: string
+        type:
+          description: "The type of transaction, which must be CREDIT or DEBIT. See\
+            \ Transaction Fields for more information."
+          example: DEBIT
+          type: string
+        category_guid:
+          description: Unique identifier of the category.
+          example: CAT-b6d61a19-30a7-e852-2703-bdfb4072289e
+          type: string
+        currency_code:
+          example: USD
+          type: string
+        has_been_viewed:
+          example: false
+          type: boolean
+        is_hidden:
+          example: false
+          type: boolean
+        is_international:
+          example: false
+          type: boolean
+        memo:
+          example: This is a memo
+          type: string
+        metadata:
+          example: some metadata
+          type: string
+        skip_webhook:
+          description: "When set to true, this parameter will prevent a webhook from\
+            \ being triggered by the request."
+          example: true
+          type: boolean
+      required:
+      - amount
+      - date
+      - description
+      - type
+    TransactionCreateRequestBody:
+      example:
+        transaction:
+          date: 2016-10-06
+          amount: 61.11
+          metadata: some metadata
+          category_guid: CAT-b6d61a19-30a7-e852-2703-bdfb4072289e
+          is_hidden: false
+          description: Whole foods
+          memo: This is a memo
+          type: DEBIT
+          has_been_viewed: false
+          is_international: false
+          currency_code: USD
+          skip_webhook: true
+      properties:
+        transaction:
+          $ref: '#/components/schemas/TransactionCreateRequest'
+      type: object
+    TransactionCreateResponseBody:
+      properties:
+        account_guid:
+          example: ACT-06d7f44b-caae-0f6e-1384-01f52e75dcb1
+          nullable: true
+          type: string
+        account_id:
+          example: account123
+          nullable: true
+          type: string
+        amount:
+          example: 61.11
+          nullable: false
+          type: number
+        category:
+          example: Groceries
+          nullable: true
+          type: string
+        category_guid:
+          example: CAT-b6d61a19-30a7-e852-2703-bdfb4072289e
+          nullable: true
+          type: string
+        check_number_string:
+          nullable: true
+          type: string
+          example: null
+        created_at:
+          example: 2016-10-08T09:43:42.000Z
+          nullable: true
+          type: string
+        currency_code:
+          example: USD
+          nullable: true
+          type: string
+        date:
+          example: 2016-10-06T00:00:00.000Z
+          nullable: true
+          type: string
+        description:
+          example: Whole foods
+          nullable: true
+          type: string
+        extended_transaction_type:
+          nullable: true
+          type: string
+          example: null
+        guid:
+          example: TRN-265abee9-889b-af6a-c69b-25157db2bdd9
+          nullable: true
+          type: string
+        id:
+          nullable: true
+          type: string
+          example: null
+        is_bill_pay:
+          example: false
+          nullable: true
+          type: boolean
+        is_direct_deposit:
+          example: false
+          nullable: true
+          type: boolean
+        is_expense:
+          example: true
+          nullable: true
+          type: boolean
+        is_fee:
+          example: false
+          nullable: true
+          type: boolean
+        is_income:
+          example: false
+          nullable: true
+          type: boolean
+        is_international:
+          example: false
+          nullable: true
+          type: boolean
+        is_manual:
+          example: true
+          nullable: true
+          type: boolean
+        is_overdraft_fee:
+          example: false
+          nullable: true
+          type: boolean
+        is_payroll_advance:
+          example: false
+          nullable: true
+          type: boolean
+        is_recurring:
+          nullable: true
+          type: boolean
+          example: null
+        is_subscription:
+          example: false
+          nullable: true
+          type: boolean
+        latitude:
+          nullable: true
+          type: number
+          example: null
+        localized_description:
+          nullable: true
+          type: string
+          example: null
+        localized_memo:
+          nullable: true
+          type: string
+          example: null
+        longitude:
+          nullable: true
+          type: number
+          example: null
+        member_guid:
+          example: MBR-7c6f361b-e582-15b6-60c0-358f12466b4b
+          nullable: true
+          type: string
+        member_is_managed_by_user:
+          example: true
+          nullable: true
+          type: boolean
+        memo:
+          example: This is a memo
+          nullable: true
+          type: string
+        merchant_category_code:
+          nullable: true
+          type: integer
+          example: null
+        merchant_guid:
+          nullable: true
+          type: string
+          example: null
+        merchant_location_guid:
+          nullable: true
+          type: string
+          example: null
+        metadata:
+          example: some metadata
+          nullable: true
+          type: string
+        original_description:
+          nullable: true
+          type: string
+          example: null
+        posted_at:
+          nullable: true
+          type: string
+          example: null
+        status:
+          nullable: true
+          type: string
+          example: null
+        top_level_category:
+          example: Food & Dining
+          nullable: true
+          type: string
+        transacted_at:
+          nullable: true
+          type: string
+          example: null
+        type:
+          example: DEBIT
+          nullable: false
+          type: string
+        updated_at:
+          example: 2016-10-08T05:49:12.000Z
+          nullable: false
+          type: string
+        user_guid:
+          example: USR-fa7537f3-48aa-a683-a02a-b18940482f54
+          nullable: true
+          type: string
+        user_id:
+          example: user123
+          nullable: true
+          type: string
       type: object
     TransactionResponse:
       properties:
