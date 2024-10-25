@@ -45,10 +45,11 @@ namespace MX.Platform.CSharp.Model
         /// <param name="supportsAccountStatement">supportsAccountStatement.</param>
         /// <param name="supportsAccountVerification">supportsAccountVerification.</param>
         /// <param name="supportsOauth">supportsOauth.</param>
+        /// <param name="supportsTaxDocument">supportsTaxDocument.</param>
         /// <param name="supportsTransactionHistory">supportsTransactionHistory.</param>
         /// <param name="troubleSigningInUrl">troubleSigningInUrl.</param>
         /// <param name="url">url.</param>
-        public InstitutionResponse(string code = default(string), string forgotPasswordUrl = default(string), string forgotUsernameUrl = default(string), string instructionalText = default(string), string mediumLogoUrl = default(string), string name = default(string), string smallLogoUrl = default(string), bool? supportsAccountIdentification = default(bool?), bool? supportsAccountStatement = default(bool?), bool? supportsAccountVerification = default(bool?), bool? supportsOauth = default(bool?), bool? supportsTransactionHistory = default(bool?), string troubleSigningInUrl = default(string), string url = default(string))
+        public InstitutionResponse(string code = default(string), string forgotPasswordUrl = default(string), string forgotUsernameUrl = default(string), string instructionalText = default(string), string mediumLogoUrl = default(string), string name = default(string), string smallLogoUrl = default(string), bool? supportsAccountIdentification = default(bool?), bool? supportsAccountStatement = default(bool?), bool? supportsAccountVerification = default(bool?), bool? supportsOauth = default(bool?), bool? supportsTaxDocument = default(bool?), bool? supportsTransactionHistory = default(bool?), string troubleSigningInUrl = default(string), string url = default(string))
         {
             this.Code = code;
             this.ForgotPasswordUrl = forgotPasswordUrl;
@@ -61,6 +62,7 @@ namespace MX.Platform.CSharp.Model
             this.SupportsAccountStatement = supportsAccountStatement;
             this.SupportsAccountVerification = supportsAccountVerification;
             this.SupportsOauth = supportsOauth;
+            this.SupportsTaxDocument = supportsTaxDocument;
             this.SupportsTransactionHistory = supportsTransactionHistory;
             this.TroubleSigningInUrl = troubleSigningInUrl;
             this.Url = url;
@@ -144,6 +146,13 @@ namespace MX.Platform.CSharp.Model
         public bool? SupportsOauth { get; set; }
 
         /// <summary>
+        /// Gets or Sets SupportsTaxDocument
+        /// </summary>
+        /// <example>true</example>
+        [DataMember(Name = "supports_tax_document", EmitDefaultValue = true)]
+        public bool? SupportsTaxDocument { get; set; }
+
+        /// <summary>
         /// Gets or Sets SupportsTransactionHistory
         /// </summary>
         /// <example>true</example>
@@ -183,6 +192,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  SupportsAccountStatement: ").Append(SupportsAccountStatement).Append("\n");
             sb.Append("  SupportsAccountVerification: ").Append(SupportsAccountVerification).Append("\n");
             sb.Append("  SupportsOauth: ").Append(SupportsOauth).Append("\n");
+            sb.Append("  SupportsTaxDocument: ").Append(SupportsTaxDocument).Append("\n");
             sb.Append("  SupportsTransactionHistory: ").Append(SupportsTransactionHistory).Append("\n");
             sb.Append("  TroubleSigningInUrl: ").Append(TroubleSigningInUrl).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
@@ -277,6 +287,11 @@ namespace MX.Platform.CSharp.Model
                     this.SupportsOauth.Equals(input.SupportsOauth))
                 ) && 
                 (
+                    this.SupportsTaxDocument == input.SupportsTaxDocument ||
+                    (this.SupportsTaxDocument != null &&
+                    this.SupportsTaxDocument.Equals(input.SupportsTaxDocument))
+                ) && 
+                (
                     this.SupportsTransactionHistory == input.SupportsTransactionHistory ||
                     (this.SupportsTransactionHistory != null &&
                     this.SupportsTransactionHistory.Equals(input.SupportsTransactionHistory))
@@ -345,6 +360,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.SupportsOauth != null)
                 {
                     hashCode = (hashCode * 59) + this.SupportsOauth.GetHashCode();
+                }
+                if (this.SupportsTaxDocument != null)
+                {
+                    hashCode = (hashCode * 59) + this.SupportsTaxDocument.GetHashCode();
                 }
                 if (this.SupportsTransactionHistory != null)
                 {

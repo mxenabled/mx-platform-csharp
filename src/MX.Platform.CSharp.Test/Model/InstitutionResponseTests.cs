@@ -154,6 +154,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'SupportsTaxDocument'
+        /// </summary>
+        [Fact]
+        public void SupportsTaxDocumentTest()
+        {
+            // TODO unit test for the property 'SupportsTaxDocument'
+        }
+
+        /// <summary>
         /// Test the property 'SupportsTransactionHistory'
         /// </summary>
         [Fact]

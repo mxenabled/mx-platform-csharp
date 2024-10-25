@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **CurrencyCode** | **string** |  | [optional] 
 **DayPaymentIsDue** | **int?** |  | [optional] 
 **DeathBenefit** | **int?** |  | [optional] 
+**FederalInsuranceStatus** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **HoldingsValue** | **decimal?** |  | [optional] 
 **Id** | **string** |  | [optional] 

@@ -51,6 +51,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="currencyCode">currencyCode.</param>
         /// <param name="dayPaymentIsDue">dayPaymentIsDue.</param>
         /// <param name="deathBenefit">deathBenefit.</param>
+        /// <param name="federalInsuranceStatus">federalInsuranceStatus.</param>
         /// <param name="guid">guid.</param>
         /// <param name="holdingsValue">holdingsValue.</param>
         /// <param name="id">id.</param>
@@ -92,7 +93,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public AccountResponse(string accountNumber = default(string), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), decimal? annuityTermYear = default(decimal?), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), string institutionCode = default(string), string insuredName = default(string), decimal? interestRate = default(decimal?), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), string propertyType = default(string), string routingNumber = default(string), string startedOn = default(string), decimal? statementBalance = default(decimal?), string subtype = default(string), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), decimal? totalAccountValueUgl = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
+        public AccountResponse(string accountNumber = default(string), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), decimal? annuityTermYear = default(decimal?), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string federalInsuranceStatus = default(string), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), string institutionCode = default(string), string insuredName = default(string), decimal? interestRate = default(decimal?), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), string propertyType = default(string), string routingNumber = default(string), string startedOn = default(string), decimal? statementBalance = default(decimal?), string subtype = default(string), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), decimal? totalAccountValueUgl = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
         {
             this.AccountNumber = accountNumber;
             this.AccountOwnership = accountOwnership;
@@ -111,6 +112,7 @@ namespace MX.Platform.CSharp.Model
             this.CurrencyCode = currencyCode;
             this.DayPaymentIsDue = dayPaymentIsDue;
             this.DeathBenefit = deathBenefit;
+            this.FederalInsuranceStatus = federalInsuranceStatus;
             this.Guid = guid;
             this.HoldingsValue = holdingsValue;
             this.Id = id;
@@ -272,6 +274,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>1000</example>
         [DataMember(Name = "death_benefit", EmitDefaultValue = true)]
         public int? DeathBenefit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FederalInsuranceStatus
+        /// </summary>
+        /// <example>INSURED</example>
+        [DataMember(Name = "federal_insurance_status", EmitDefaultValue = true)]
+        public string FederalInsuranceStatus { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
@@ -585,6 +594,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  DayPaymentIsDue: ").Append(DayPaymentIsDue).Append("\n");
             sb.Append("  DeathBenefit: ").Append(DeathBenefit).Append("\n");
+            sb.Append("  FederalInsuranceStatus: ").Append(FederalInsuranceStatus).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  HoldingsValue: ").Append(HoldingsValue).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -745,6 +755,11 @@ namespace MX.Platform.CSharp.Model
                     this.DeathBenefit == input.DeathBenefit ||
                     (this.DeathBenefit != null &&
                     this.DeathBenefit.Equals(input.DeathBenefit))
+                ) && 
+                (
+                    this.FederalInsuranceStatus == input.FederalInsuranceStatus ||
+                    (this.FederalInsuranceStatus != null &&
+                    this.FederalInsuranceStatus.Equals(input.FederalInsuranceStatus))
                 ) && 
                 (
                     this.Guid == input.Guid ||
@@ -1029,6 +1044,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.DeathBenefit != null)
                 {
                     hashCode = (hashCode * 59) + this.DeathBenefit.GetHashCode();
+                }
+                if (this.FederalInsuranceStatus != null)
+                {
+                    hashCode = (hashCode * 59) + this.FederalInsuranceStatus.GetHashCode();
                 }
                 if (this.Guid != null)
                 {

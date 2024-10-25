@@ -208,6 +208,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'FederalInsuranceStatus'
+        /// </summary>
+        [Fact]
+        public void FederalInsuranceStatusTest()
+        {
+            // TODO unit test for the property 'FederalInsuranceStatus'
+        }
+
+        /// <summary>
         /// Test the property 'Guid'
         /// </summary>
         [Fact]

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **SupportsAccountStatement** | **bool?** |  | [optional] 
 **SupportsAccountVerification** | **bool?** |  | [optional] 
 **SupportsOauth** | **bool?** |  | [optional] 
+**SupportsTaxDocument** | **bool?** |  | [optional] 
 **SupportsTransactionHistory** | **bool?** |  | [optional] 
 **TroubleSigningInUrl** | **string** |  | [optional] 
 **Url** | **string** |  | [optional] 
