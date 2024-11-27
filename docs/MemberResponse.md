@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | [optional] 
 **OauthWindowUri** | **string** |  | [optional] 
 **SuccessfullyAggregatedAt** | **string** |  | [optional] 
+**UseCases** | **List&lt;string&gt;** |  | [optional] 
 **UserGuid** | **string** |  | [optional] 
 **UserId** | **string** |  | [optional] 
 

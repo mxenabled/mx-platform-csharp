@@ -50,9 +50,10 @@ namespace MX.Platform.CSharp.Model
         /// <param name="name">name.</param>
         /// <param name="oauthWindowUri">oauthWindowUri.</param>
         /// <param name="successfullyAggregatedAt">successfullyAggregatedAt.</param>
+        /// <param name="useCases">useCases.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public MemberResponse(string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isManual = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string mostRecentJobDetailCode = default(string), string mostRecentJobDetailText = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), string userGuid = default(string), string userId = default(string))
+        public MemberResponse(string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isManual = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string mostRecentJobDetailCode = default(string), string mostRecentJobDetailText = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), List<string> useCases = default(List<string>), string userGuid = default(string), string userId = default(string))
         {
             this.AggregatedAt = aggregatedAt;
             this.BackgroundAggregationIsDisabled = backgroundAggregationIsDisabled;
@@ -70,6 +71,7 @@ namespace MX.Platform.CSharp.Model
             this.Name = name;
             this.OauthWindowUri = oauthWindowUri;
             this.SuccessfullyAggregatedAt = successfullyAggregatedAt;
+            this.UseCases = useCases;
             this.UserGuid = userGuid;
             this.UserId = userId;
         }
@@ -187,6 +189,13 @@ namespace MX.Platform.CSharp.Model
         public string SuccessfullyAggregatedAt { get; set; }
 
         /// <summary>
+        /// Gets or Sets UseCases
+        /// </summary>
+        /// <example>[&quot;PFM&quot;,&quot;IAV&quot;]</example>
+        [DataMember(Name = "use_cases", EmitDefaultValue = true)]
+        public List<string> UseCases { get; set; }
+
+        /// <summary>
         /// Gets or Sets UserGuid
         /// </summary>
         /// <example>USR-fa7537f3-48aa-a683-a02a-b18940482f54</example>
@@ -224,6 +233,7 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OauthWindowUri: ").Append(OauthWindowUri).Append("\n");
             sb.Append("  SuccessfullyAggregatedAt: ").Append(SuccessfullyAggregatedAt).Append("\n");
+            sb.Append("  UseCases: ").Append(UseCases).Append("\n");
             sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("}\n");
@@ -341,6 +351,12 @@ namespace MX.Platform.CSharp.Model
                     this.SuccessfullyAggregatedAt.Equals(input.SuccessfullyAggregatedAt))
                 ) && 
                 (
+                    this.UseCases == input.UseCases ||
+                    this.UseCases != null &&
+                    input.UseCases != null &&
+                    this.UseCases.SequenceEqual(input.UseCases)
+                ) && 
+                (
                     this.UserGuid == input.UserGuid ||
                     (this.UserGuid != null &&
                     this.UserGuid.Equals(input.UserGuid))
@@ -421,6 +437,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.SuccessfullyAggregatedAt != null)
                 {
                     hashCode = (hashCode * 59) + this.SuccessfullyAggregatedAt.GetHashCode();
+                }
+                if (this.UseCases != null)
+                {
+                    hashCode = (hashCode * 59) + this.UseCases.GetHashCode();
                 }
                 if (this.UserGuid != null)
                 {

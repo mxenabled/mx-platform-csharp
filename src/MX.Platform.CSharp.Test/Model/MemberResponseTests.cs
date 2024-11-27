@@ -199,6 +199,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'UseCases'
+        /// </summary>
+        [Fact]
+        public void UseCasesTest()
+        {
+            // TODO unit test for the property 'UseCases'
+        }
+
+        /// <summary>
         /// Test the property 'UserGuid'
         /// </summary>
         [Fact]
