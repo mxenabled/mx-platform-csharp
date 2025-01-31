@@ -34,6 +34,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MemberResponse" /> class.
         /// </summary>
+        /// <param name="actionableError">actionableError.</param>
         /// <param name="aggregatedAt">aggregatedAt.</param>
         /// <param name="backgroundAggregationIsDisabled">backgroundAggregationIsDisabled.</param>
         /// <param name="connectionStatus">connectionStatus.</param>
@@ -53,8 +54,9 @@ namespace MX.Platform.CSharp.Model
         /// <param name="useCases">useCases.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public MemberResponse(string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isManual = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string mostRecentJobDetailCode = default(string), string mostRecentJobDetailText = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), List<string> useCases = default(List<string>), string userGuid = default(string), string userId = default(string))
+        public MemberResponse(string actionableError = default(string), string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isManual = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string mostRecentJobDetailCode = default(string), string mostRecentJobDetailText = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), List<string> useCases = default(List<string>), string userGuid = default(string), string userId = default(string))
         {
+            this.ActionableError = actionableError;
             this.AggregatedAt = aggregatedAt;
             this.BackgroundAggregationIsDisabled = backgroundAggregationIsDisabled;
             this.ConnectionStatus = connectionStatus;
@@ -75,6 +77,13 @@ namespace MX.Platform.CSharp.Model
             this.UserGuid = userGuid;
             this.UserId = userId;
         }
+
+        /// <summary>
+        /// Gets or Sets ActionableError
+        /// </summary>
+        /// <example>{\&quot;error_type\&quot;: \&quot;MEMBER\&quot;, \&quot;error_code\&quot;: 1000, \&quot;error_message\&quot;: \&quot;This Member has no eligible checking, savings, or money market accounts.\&quot;, \&quot;user_message\&quot;: \&quot;We could not find any accounts eligible for transfers. Please link a checking or savings account.\&quot;, \&quot;locale\&quot;: \&quot;en\&quot;}</example>
+        [DataMember(Name = "actionable_error", EmitDefaultValue = true)]
+        public string ActionableError { get; set; }
 
         /// <summary>
         /// Gets or Sets AggregatedAt
@@ -217,6 +226,7 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class MemberResponse {\n");
+            sb.Append("  ActionableError: ").Append(ActionableError).Append("\n");
             sb.Append("  AggregatedAt: ").Append(AggregatedAt).Append("\n");
             sb.Append("  BackgroundAggregationIsDisabled: ").Append(BackgroundAggregationIsDisabled).Append("\n");
             sb.Append("  ConnectionStatus: ").Append(ConnectionStatus).Append("\n");
@@ -271,6 +281,11 @@ namespace MX.Platform.CSharp.Model
                 return false;
             }
             return 
+                (
+                    this.ActionableError == input.ActionableError ||
+                    (this.ActionableError != null &&
+                    this.ActionableError.Equals(input.ActionableError))
+                ) && 
                 (
                     this.AggregatedAt == input.AggregatedAt ||
                     (this.AggregatedAt != null &&
@@ -377,6 +392,10 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.ActionableError != null)
+                {
+                    hashCode = (hashCode * 59) + this.ActionableError.GetHashCode();
+                }
                 if (this.AggregatedAt != null)
                 {
                     hashCode = (hashCode * 59) + this.AggregatedAt.GetHashCode();

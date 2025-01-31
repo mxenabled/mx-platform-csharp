@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ActionableError** | **string** |  | [optional] 
 **AggregatedAt** | **string** |  | [optional] 
 **BackgroundAggregationIsDisabled** | **bool** |  | [optional] 
 **ConnectionStatus** | **string** |  | [optional] 

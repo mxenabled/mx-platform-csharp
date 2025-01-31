@@ -55,6 +55,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ActionableError'
+        /// </summary>
+        [Fact]
+        public void ActionableErrorTest()
+        {
+            // TODO unit test for the property 'ActionableError'
+        }
+
+        /// <summary>
         /// Test the property 'AggregatedAt'
         /// </summary>
         [Fact]

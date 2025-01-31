@@ -8686,6 +8686,14 @@ components:
       type: object
     MemberResponse:
       properties:
+        actionable_error:
+          example: "{\\\"error_type\\\": \\\"MEMBER\\\", \\\"error_code\\\": 1000,\
+            \ \\\"error_message\\\": \\\"This Member has no eligible checking, savings,\
+            \ or money market accounts.\\\", \\\"user_message\\\": \\\"We could not\
+            \ find any accounts eligible for transfers. Please link a checking or\
+            \ savings account.\\\", \\\"locale\\\": \\\"en\\\"}"
+          nullable: true
+          type: string
         aggregated_at:
           example: 2016-10-13T18:07:57.000Z
           nullable: true
