@@ -55,15 +55,6 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ActionableError'
-        /// </summary>
-        [Fact]
-        public void ActionableErrorTest()
-        {
-            // TODO unit test for the property 'ActionableError'
-        }
-
-        /// <summary>
         /// Test the property 'AggregatedAt'
         /// </summary>
         [Fact]
@@ -91,6 +82,24 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'ConnectionStatusMessage'
+        /// </summary>
+        [Fact]
+        public void ConnectionStatusMessageTest()
+        {
+            // TODO unit test for the property 'ConnectionStatusMessage'
+        }
+
+        /// <summary>
+        /// Test the property 'Error'
+        /// </summary>
+        [Fact]
+        public void ErrorTest()
+        {
+            // TODO unit test for the property 'Error'
+        }
+
+        /// <summary>
         /// Test the property 'Guid'
         /// </summary>
         [Fact]
@@ -115,6 +124,15 @@ namespace MX.Platform.CSharp.Test.Model
         public void InstitutionCodeTest()
         {
             // TODO unit test for the property 'InstitutionCode'
+        }
+
+        /// <summary>
+        /// Test the property 'InstitutionGuid'
+        /// </summary>
+        [Fact]
+        public void InstitutionGuidTest()
+        {
+            // TODO unit test for the property 'InstitutionGuid'
         }
 
         /// <summary>
@@ -181,12 +199,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'MostRecentJobGuid'
+        /// </summary>
+        [Fact]
+        public void MostRecentJobGuidTest()
+        {
+            // TODO unit test for the property 'MostRecentJobGuid'
+        }
+
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Fact]
         public void NameTest()
         {
             // TODO unit test for the property 'Name'
+        }
+
+        /// <summary>
+        /// Test the property 'NeedsUpdatedCredentials'
+        /// </summary>
+        [Fact]
+        public void NeedsUpdatedCredentialsTest()
+        {
+            // TODO unit test for the property 'NeedsUpdatedCredentials'
         }
 
         /// <summary>

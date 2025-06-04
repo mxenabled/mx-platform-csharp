@@ -32,15 +32,36 @@ namespace MX.Platform.CSharp.Model
     public partial class MemberResponse : IEquatable<MemberResponse>, IValidatableObject
     {
         /// <summary>
+        /// Defines UseCases
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum UseCasesEnum
+        {
+            /// <summary>
+            /// Enum MONEYMOVEMENT for value: MONEY_MOVEMENT
+            /// </summary>
+            [EnumMember(Value = "MONEY_MOVEMENT")]
+            MONEYMOVEMENT = 1,
+
+            /// <summary>
+            /// Enum PFM for value: PFM
+            /// </summary>
+            [EnumMember(Value = "PFM")]
+            PFM = 2
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="MemberResponse" /> class.
         /// </summary>
-        /// <param name="actionableError">actionableError.</param>
         /// <param name="aggregatedAt">aggregatedAt.</param>
         /// <param name="backgroundAggregationIsDisabled">backgroundAggregationIsDisabled.</param>
         /// <param name="connectionStatus">connectionStatus.</param>
+        /// <param name="connectionStatusMessage">connectionStatusMessage.</param>
+        /// <param name="error">error.</param>
         /// <param name="guid">guid.</param>
         /// <param name="id">id.</param>
         /// <param name="institutionCode">institutionCode.</param>
+        /// <param name="institutionGuid">institutionGuid.</param>
         /// <param name="isBeingAggregated">isBeingAggregated.</param>
         /// <param name="isManagedByUser">isManagedByUser.</param>
         /// <param name="isManual">isManual.</param>
@@ -48,21 +69,25 @@ namespace MX.Platform.CSharp.Model
         /// <param name="metadata">metadata.</param>
         /// <param name="mostRecentJobDetailCode">mostRecentJobDetailCode.</param>
         /// <param name="mostRecentJobDetailText">mostRecentJobDetailText.</param>
+        /// <param name="mostRecentJobGuid">mostRecentJobGuid.</param>
         /// <param name="name">name.</param>
+        /// <param name="needsUpdatedCredentials">needsUpdatedCredentials.</param>
         /// <param name="oauthWindowUri">oauthWindowUri.</param>
         /// <param name="successfullyAggregatedAt">successfullyAggregatedAt.</param>
-        /// <param name="useCases">useCases.</param>
+        /// <param name="useCases">The use case associated with the member. Valid values are &#x60;PFM&#x60; and/or &#x60;MONEY_MOVEMENT&#x60;. Only set this if you&#39;ve met with MX and have opted in to using this field..</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public MemberResponse(string actionableError = default(string), string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isManual = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), string mostRecentJobDetailCode = default(string), string mostRecentJobDetailText = default(string), string name = default(string), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), List<string> useCases = default(List<string>), string userGuid = default(string), string userId = default(string))
+        public MemberResponse(string aggregatedAt = default(string), bool backgroundAggregationIsDisabled = default(bool), string connectionStatus = default(string), string connectionStatusMessage = default(string), string error = default(string), string guid = default(string), string id = default(string), string institutionCode = default(string), string institutionGuid = default(string), bool? isBeingAggregated = default(bool?), bool? isManagedByUser = default(bool?), bool? isManual = default(bool?), bool? isOauth = default(bool?), string metadata = default(string), int? mostRecentJobDetailCode = default(int?), bool? mostRecentJobDetailText = default(bool?), bool? mostRecentJobGuid = default(bool?), string name = default(string), bool? needsUpdatedCredentials = default(bool?), string oauthWindowUri = default(string), string successfullyAggregatedAt = default(string), List<UseCasesEnum> useCases = default(List<UseCasesEnum>), string userGuid = default(string), string userId = default(string))
         {
-            this.ActionableError = actionableError;
             this.AggregatedAt = aggregatedAt;
             this.BackgroundAggregationIsDisabled = backgroundAggregationIsDisabled;
             this.ConnectionStatus = connectionStatus;
+            this.ConnectionStatusMessage = connectionStatusMessage;
+            this.Error = error;
             this.Guid = guid;
             this.Id = id;
             this.InstitutionCode = institutionCode;
+            this.InstitutionGuid = institutionGuid;
             this.IsBeingAggregated = isBeingAggregated;
             this.IsManagedByUser = isManagedByUser;
             this.IsManual = isManual;
@@ -70,20 +95,15 @@ namespace MX.Platform.CSharp.Model
             this.Metadata = metadata;
             this.MostRecentJobDetailCode = mostRecentJobDetailCode;
             this.MostRecentJobDetailText = mostRecentJobDetailText;
+            this.MostRecentJobGuid = mostRecentJobGuid;
             this.Name = name;
+            this.NeedsUpdatedCredentials = needsUpdatedCredentials;
             this.OauthWindowUri = oauthWindowUri;
             this.SuccessfullyAggregatedAt = successfullyAggregatedAt;
             this.UseCases = useCases;
             this.UserGuid = userGuid;
             this.UserId = userId;
         }
-
-        /// <summary>
-        /// Gets or Sets ActionableError
-        /// </summary>
-        /// <example>{\&quot;error_type\&quot;: \&quot;MEMBER\&quot;, \&quot;error_code\&quot;: 1000, \&quot;error_message\&quot;: \&quot;This Member has no eligible checking, savings, or money market accounts.\&quot;, \&quot;user_message\&quot;: \&quot;We could not find any accounts eligible for transfers. Please link a checking or savings account.\&quot;, \&quot;locale\&quot;: \&quot;en\&quot;}</example>
-        [DataMember(Name = "actionable_error", EmitDefaultValue = true)]
-        public string ActionableError { get; set; }
 
         /// <summary>
         /// Gets or Sets AggregatedAt
@@ -107,6 +127,20 @@ namespace MX.Platform.CSharp.Model
         public string ConnectionStatus { get; set; }
 
         /// <summary>
+        /// Gets or Sets ConnectionStatusMessage
+        /// </summary>
+        /// <example>Connected to MX Bank</example>
+        [DataMember(Name = "connection_status_message", EmitDefaultValue = true)]
+        public string ConnectionStatusMessage { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Error
+        /// </summary>
+        /// <example>{\&quot;error_type\&quot;: \&quot;MEMBER\&quot;, \&quot;error_code\&quot;: 1000, \&quot;error_message\&quot;: \&quot;This Member has no eligible checking, savings, or money market accounts.\&quot;, \&quot;user_message\&quot;: \&quot;We could not find any accounts eligible for transfers. Please link a checking or savings account.\&quot;, \&quot;locale\&quot;: \&quot;en\&quot;}</example>
+        [DataMember(Name = "error", EmitDefaultValue = true)]
+        public string Error { get; set; }
+
+        /// <summary>
         /// Gets or Sets Guid
         /// </summary>
         /// <example>MBR-7c6f361b-e582-15b6-60c0-358f12466b4b</example>
@@ -123,9 +157,16 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets InstitutionCode
         /// </summary>
-        /// <example>chase</example>
+        /// <example>mxbank</example>
         [DataMember(Name = "institution_code", EmitDefaultValue = true)]
         public string InstitutionCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets InstitutionGuid
+        /// </summary>
+        /// <example>INS-12345678-90ab-cdef-1234-567890abcdef</example>
+        [DataMember(Name = "institution_guid", EmitDefaultValue = false)]
+        public string InstitutionGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets IsBeingAggregated
@@ -158,30 +199,42 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
-        /// <example>\&quot;credentials_last_refreshed_at\&quot;: \&quot;2015-10-15\&quot;</example>
+        /// <example>\&quot;credentials_last_refreshed_at\&quot;: \&quot;2015-10-15\</example>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
         public string Metadata { get; set; }
 
         /// <summary>
         /// Gets or Sets MostRecentJobDetailCode
         /// </summary>
-        /// <example>(deprecated)</example>
         [DataMember(Name = "most_recent_job_detail_code", EmitDefaultValue = true)]
-        public string MostRecentJobDetailCode { get; set; }
+        public int? MostRecentJobDetailCode { get; set; }
 
         /// <summary>
         /// Gets or Sets MostRecentJobDetailText
         /// </summary>
-        /// <example>(deprecated)</example>
         [DataMember(Name = "most_recent_job_detail_text", EmitDefaultValue = true)]
-        public string MostRecentJobDetailText { get; set; }
+        public bool? MostRecentJobDetailText { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MostRecentJobGuid
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name = "most_recent_job_guid", EmitDefaultValue = true)]
+        public bool? MostRecentJobGuid { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        /// <example>Chase Bank</example>
+        /// <example>MX Bank</example>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NeedsUpdatedCredentials
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name = "needs_updated_credentials", EmitDefaultValue = true)]
+        public bool? NeedsUpdatedCredentials { get; set; }
 
         /// <summary>
         /// Gets or Sets OauthWindowUri
@@ -198,11 +251,12 @@ namespace MX.Platform.CSharp.Model
         public string SuccessfullyAggregatedAt { get; set; }
 
         /// <summary>
-        /// Gets or Sets UseCases
+        /// The use case associated with the member. Valid values are &#x60;PFM&#x60; and/or &#x60;MONEY_MOVEMENT&#x60;. Only set this if you&#39;ve met with MX and have opted in to using this field.
         /// </summary>
-        /// <example>[&quot;PFM&quot;,&quot;IAV&quot;]</example>
-        [DataMember(Name = "use_cases", EmitDefaultValue = true)]
-        public List<string> UseCases { get; set; }
+        /// <value>The use case associated with the member. Valid values are &#x60;PFM&#x60; and/or &#x60;MONEY_MOVEMENT&#x60;. Only set this if you&#39;ve met with MX and have opted in to using this field.</value>
+        /// <example>[&quot;PFM&quot;]</example>
+        [DataMember(Name = "use_cases", EmitDefaultValue = false)]
+        public List<MemberResponse.UseCasesEnum> UseCases { get; set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
@@ -226,13 +280,15 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class MemberResponse {\n");
-            sb.Append("  ActionableError: ").Append(ActionableError).Append("\n");
             sb.Append("  AggregatedAt: ").Append(AggregatedAt).Append("\n");
             sb.Append("  BackgroundAggregationIsDisabled: ").Append(BackgroundAggregationIsDisabled).Append("\n");
             sb.Append("  ConnectionStatus: ").Append(ConnectionStatus).Append("\n");
+            sb.Append("  ConnectionStatusMessage: ").Append(ConnectionStatusMessage).Append("\n");
+            sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
+            sb.Append("  InstitutionGuid: ").Append(InstitutionGuid).Append("\n");
             sb.Append("  IsBeingAggregated: ").Append(IsBeingAggregated).Append("\n");
             sb.Append("  IsManagedByUser: ").Append(IsManagedByUser).Append("\n");
             sb.Append("  IsManual: ").Append(IsManual).Append("\n");
@@ -240,7 +296,9 @@ namespace MX.Platform.CSharp.Model
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  MostRecentJobDetailCode: ").Append(MostRecentJobDetailCode).Append("\n");
             sb.Append("  MostRecentJobDetailText: ").Append(MostRecentJobDetailText).Append("\n");
+            sb.Append("  MostRecentJobGuid: ").Append(MostRecentJobGuid).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  NeedsUpdatedCredentials: ").Append(NeedsUpdatedCredentials).Append("\n");
             sb.Append("  OauthWindowUri: ").Append(OauthWindowUri).Append("\n");
             sb.Append("  SuccessfullyAggregatedAt: ").Append(SuccessfullyAggregatedAt).Append("\n");
             sb.Append("  UseCases: ").Append(UseCases).Append("\n");
@@ -282,11 +340,6 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
-                    this.ActionableError == input.ActionableError ||
-                    (this.ActionableError != null &&
-                    this.ActionableError.Equals(input.ActionableError))
-                ) && 
-                (
                     this.AggregatedAt == input.AggregatedAt ||
                     (this.AggregatedAt != null &&
                     this.AggregatedAt.Equals(input.AggregatedAt))
@@ -299,6 +352,16 @@ namespace MX.Platform.CSharp.Model
                     this.ConnectionStatus == input.ConnectionStatus ||
                     (this.ConnectionStatus != null &&
                     this.ConnectionStatus.Equals(input.ConnectionStatus))
+                ) && 
+                (
+                    this.ConnectionStatusMessage == input.ConnectionStatusMessage ||
+                    (this.ConnectionStatusMessage != null &&
+                    this.ConnectionStatusMessage.Equals(input.ConnectionStatusMessage))
+                ) && 
+                (
+                    this.Error == input.Error ||
+                    (this.Error != null &&
+                    this.Error.Equals(input.Error))
                 ) && 
                 (
                     this.Guid == input.Guid ||
@@ -314,6 +377,11 @@ namespace MX.Platform.CSharp.Model
                     this.InstitutionCode == input.InstitutionCode ||
                     (this.InstitutionCode != null &&
                     this.InstitutionCode.Equals(input.InstitutionCode))
+                ) && 
+                (
+                    this.InstitutionGuid == input.InstitutionGuid ||
+                    (this.InstitutionGuid != null &&
+                    this.InstitutionGuid.Equals(input.InstitutionGuid))
                 ) && 
                 (
                     this.IsBeingAggregated == input.IsBeingAggregated ||
@@ -351,9 +419,19 @@ namespace MX.Platform.CSharp.Model
                     this.MostRecentJobDetailText.Equals(input.MostRecentJobDetailText))
                 ) && 
                 (
+                    this.MostRecentJobGuid == input.MostRecentJobGuid ||
+                    (this.MostRecentJobGuid != null &&
+                    this.MostRecentJobGuid.Equals(input.MostRecentJobGuid))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.NeedsUpdatedCredentials == input.NeedsUpdatedCredentials ||
+                    (this.NeedsUpdatedCredentials != null &&
+                    this.NeedsUpdatedCredentials.Equals(input.NeedsUpdatedCredentials))
                 ) && 
                 (
                     this.OauthWindowUri == input.OauthWindowUri ||
@@ -392,10 +470,6 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ActionableError != null)
-                {
-                    hashCode = (hashCode * 59) + this.ActionableError.GetHashCode();
-                }
                 if (this.AggregatedAt != null)
                 {
                     hashCode = (hashCode * 59) + this.AggregatedAt.GetHashCode();
@@ -404,6 +478,14 @@ namespace MX.Platform.CSharp.Model
                 if (this.ConnectionStatus != null)
                 {
                     hashCode = (hashCode * 59) + this.ConnectionStatus.GetHashCode();
+                }
+                if (this.ConnectionStatusMessage != null)
+                {
+                    hashCode = (hashCode * 59) + this.ConnectionStatusMessage.GetHashCode();
+                }
+                if (this.Error != null)
+                {
+                    hashCode = (hashCode * 59) + this.Error.GetHashCode();
                 }
                 if (this.Guid != null)
                 {
@@ -416,6 +498,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.InstitutionCode != null)
                 {
                     hashCode = (hashCode * 59) + this.InstitutionCode.GetHashCode();
+                }
+                if (this.InstitutionGuid != null)
+                {
+                    hashCode = (hashCode * 59) + this.InstitutionGuid.GetHashCode();
                 }
                 if (this.IsBeingAggregated != null)
                 {
@@ -445,9 +531,17 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.MostRecentJobDetailText.GetHashCode();
                 }
+                if (this.MostRecentJobGuid != null)
+                {
+                    hashCode = (hashCode * 59) + this.MostRecentJobGuid.GetHashCode();
+                }
                 if (this.Name != null)
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
+                }
+                if (this.NeedsUpdatedCredentials != null)
+                {
+                    hashCode = (hashCode * 59) + this.NeedsUpdatedCredentials.GetHashCode();
                 }
                 if (this.OauthWindowUri != null)
                 {
