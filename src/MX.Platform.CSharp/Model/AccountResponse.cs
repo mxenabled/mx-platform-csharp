@@ -35,122 +35,250 @@ namespace MX.Platform.CSharp.Model
         /// Initializes a new instance of the <see cref="AccountResponse" /> class.
         /// </summary>
         /// <param name="accountNumber">accountNumber.</param>
+        /// <param name="accountNumberSetBy">accountNumberSetBy.</param>
         /// <param name="accountOwnership">accountOwnership.</param>
         /// <param name="annuityPolicyToDate">annuityPolicyToDate.</param>
         /// <param name="annuityProvider">annuityProvider.</param>
         /// <param name="annuityTermYear">annuityTermYear.</param>
         /// <param name="apr">apr.</param>
+        /// <param name="aprSetBy">aprSetBy.</param>
         /// <param name="apy">apy.</param>
+        /// <param name="apySetBy">apySetBy.</param>
         /// <param name="availableBalance">availableBalance.</param>
+        /// <param name="availableBalanceSetBy">availableBalanceSetBy.</param>
         /// <param name="availableCredit">availableCredit.</param>
+        /// <param name="availableCreditSetBy">availableCreditSetBy.</param>
         /// <param name="balance">balance.</param>
+        /// <param name="balanceSetBy">balanceSetBy.</param>
+        /// <param name="calculatedApr">calculatedApr.</param>
         /// <param name="cashBalance">cashBalance.</param>
+        /// <param name="cashBalanceSetBy">cashBalanceSetBy.</param>
         /// <param name="cashSurrenderValue">cashSurrenderValue.</param>
+        /// <param name="cashSurrenderValueSetBy">cashSurrenderValueSetBy.</param>
         /// <param name="createdAt">createdAt.</param>
         /// <param name="creditLimit">creditLimit.</param>
+        /// <param name="creditLimitSetBy">creditLimitSetBy.</param>
         /// <param name="currencyCode">currencyCode.</param>
+        /// <param name="currencyCodeSetBy">currencyCodeSetBy.</param>
         /// <param name="dayPaymentIsDue">dayPaymentIsDue.</param>
+        /// <param name="dayPaymentIsDueSetBy">dayPaymentIsDueSetBy.</param>
         /// <param name="deathBenefit">deathBenefit.</param>
+        /// <param name="deathBenefitSetBy">deathBenefitSetBy.</param>
         /// <param name="federalInsuranceStatus">federalInsuranceStatus.</param>
+        /// <param name="feedAccountNumber">feedAccountNumber.</param>
+        /// <param name="feedAccountSubtype">feedAccountSubtype.</param>
+        /// <param name="feedAccountType">feedAccountType.</param>
+        /// <param name="feedApr">feedApr.</param>
+        /// <param name="feedApy">feedApy.</param>
+        /// <param name="feedAvailableBalance">feedAvailableBalance.</param>
+        /// <param name="feedBalance">feedBalance.</param>
+        /// <param name="feedCashBalance">feedCashBalance.</param>
+        /// <param name="feedCashSurrenderValue">feedCashSurrenderValue.</param>
+        /// <param name="feedCreditLimit">feedCreditLimit.</param>
+        /// <param name="feedCurrencyCode">feedCurrencyCode.</param>
+        /// <param name="feedDayPaymentIsDue">feedDayPaymentIsDue.</param>
+        /// <param name="feedDeathBenefit">feedDeathBenefit.</param>
+        /// <param name="feedHoldingsValue">feedHoldingsValue.</param>
+        /// <param name="feedInterestRate">feedInterestRate.</param>
+        /// <param name="feedIsClosed">feedIsClosed.</param>
+        /// <param name="feedLastPayment">feedLastPayment.</param>
+        /// <param name="feedLastPaymentAt">feedLastPaymentAt.</param>
+        /// <param name="feedLoanAmount">feedLoanAmount.</param>
+        /// <param name="feedMaturesOn">feedMaturesOn.</param>
+        /// <param name="feedMinimumBalance">feedMinimumBalance.</param>
+        /// <param name="feedMinimumPayment">feedMinimumPayment.</param>
+        /// <param name="feedName">feedName.</param>
+        /// <param name="feedNickname">feedNickname.</param>
+        /// <param name="feedOriginalBalance">feedOriginalBalance.</param>
+        /// <param name="feedPaymentDueAt">feedPaymentDueAt.</param>
+        /// <param name="feedPayoffBalance">feedPayoffBalance.</param>
+        /// <param name="feedRoutingNumber">feedRoutingNumber.</param>
+        /// <param name="feedStartedOn">feedStartedOn.</param>
+        /// <param name="feedStatementBalance">feedStatementBalance.</param>
+        /// <param name="feedTotalAccountValue">feedTotalAccountValue.</param>
         /// <param name="guid">guid.</param>
         /// <param name="holdingsValue">holdingsValue.</param>
+        /// <param name="holdingsValueSetBy">holdingsValueSetBy.</param>
         /// <param name="id">id.</param>
         /// <param name="importedAt">importedAt.</param>
         /// <param name="institutionCode">institutionCode.</param>
+        /// <param name="institutionGuid">institutionGuid.</param>
         /// <param name="insuredName">insuredName.</param>
         /// <param name="interestRate">interestRate.</param>
+        /// <param name="interestRateSetBy">interestRateSetBy.</param>
         /// <param name="isClosed">isClosed.</param>
+        /// <param name="isClosedSetBy">isClosedSetBy.</param>
         /// <param name="isHidden">isHidden.</param>
         /// <param name="isManual">isManual.</param>
         /// <param name="lastPayment">lastPayment.</param>
+        /// <param name="lastPaymentSetBy">lastPaymentSetBy.</param>
         /// <param name="lastPaymentAt">lastPaymentAt.</param>
+        /// <param name="lastPaymentAtSetBy">lastPaymentAtSetBy.</param>
         /// <param name="loanAmount">loanAmount.</param>
+        /// <param name="loanAmountSetBy">loanAmountSetBy.</param>
         /// <param name="marginBalance">marginBalance.</param>
         /// <param name="maturesOn">maturesOn.</param>
+        /// <param name="maturesOnSetBy">maturesOnSetBy.</param>
         /// <param name="memberGuid">memberGuid.</param>
         /// <param name="memberId">memberId.</param>
         /// <param name="memberIsManagedByUser">memberIsManagedByUser.</param>
         /// <param name="metadata">metadata.</param>
         /// <param name="minimumBalance">minimumBalance.</param>
+        /// <param name="minimumBalanceSetBy">minimumBalanceSetBy.</param>
         /// <param name="minimumPayment">minimumPayment.</param>
+        /// <param name="minimumPaymentSetBy">minimumPaymentSetBy.</param>
         /// <param name="name">name.</param>
+        /// <param name="nameSetBy">nameSetBy.</param>
         /// <param name="nickname">nickname.</param>
+        /// <param name="nicknameSetBy">nicknameSetBy.</param>
         /// <param name="originalBalance">originalBalance.</param>
+        /// <param name="originalBalanceSetBy">originalBalanceSetBy.</param>
         /// <param name="payOutAmount">payOutAmount.</param>
         /// <param name="paymentDueAt">paymentDueAt.</param>
+        /// <param name="paymentDueAtSetBy">paymentDueAtSetBy.</param>
         /// <param name="payoffBalance">payoffBalance.</param>
+        /// <param name="payoffBalanceSetBy">payoffBalanceSetBy.</param>
         /// <param name="premiumAmount">premiumAmount.</param>
         /// <param name="propertyType">propertyType.</param>
         /// <param name="routingNumber">routingNumber.</param>
         /// <param name="startedOn">startedOn.</param>
+        /// <param name="startedOnSetBy">startedOnSetBy.</param>
         /// <param name="statementBalance">statementBalance.</param>
+        /// <param name="statementBalanceSetBy">statementBalanceSetBy.</param>
         /// <param name="subtype">subtype.</param>
+        /// <param name="subtypeSetBy">subtypeSetBy.</param>
         /// <param name="todayUglAmount">todayUglAmount.</param>
         /// <param name="todayUglPercentage">todayUglPercentage.</param>
         /// <param name="totalAccountValue">totalAccountValue.</param>
+        /// <param name="totalAccountValueSetBy">totalAccountValueSetBy.</param>
         /// <param name="totalAccountValueUgl">totalAccountValueUgl.</param>
         /// <param name="type">type.</param>
+        /// <param name="typeSetBy">typeSetBy.</param>
         /// <param name="updatedAt">updatedAt.</param>
         /// <param name="userGuid">userGuid.</param>
         /// <param name="userId">userId.</param>
-        public AccountResponse(string accountNumber = default(string), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), decimal? annuityTermYear = default(decimal?), decimal? apr = default(decimal?), decimal? apy = default(decimal?), decimal? availableBalance = default(decimal?), decimal? availableCredit = default(decimal?), decimal? balance = default(decimal?), decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), string createdAt = default(string), decimal? creditLimit = default(decimal?), string currencyCode = default(string), int? dayPaymentIsDue = default(int?), int? deathBenefit = default(int?), string federalInsuranceStatus = default(string), string guid = default(string), decimal? holdingsValue = default(decimal?), string id = default(string), string importedAt = default(string), string institutionCode = default(string), string insuredName = default(string), decimal? interestRate = default(decimal?), bool? isClosed = default(bool?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), string lastPaymentAt = default(string), decimal? loanAmount = default(decimal?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), decimal? minimumPayment = default(decimal?), string name = default(string), string nickname = default(string), decimal? originalBalance = default(decimal?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), decimal? payoffBalance = default(decimal?), decimal? premiumAmount = default(decimal?), string propertyType = default(string), string routingNumber = default(string), string startedOn = default(string), decimal? statementBalance = default(decimal?), string subtype = default(string), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), decimal? totalAccountValueUgl = default(decimal?), string type = default(string), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
+        public AccountResponse(string accountNumber = default(string), int? accountNumberSetBy = default(int?), string accountOwnership = default(string), string annuityPolicyToDate = default(string), string annuityProvider = default(string), int? annuityTermYear = default(int?), decimal? apr = default(decimal?), int? aprSetBy = default(int?), decimal? apy = default(decimal?), int? apySetBy = default(int?), decimal? availableBalance = default(decimal?), int? availableBalanceSetBy = default(int?), decimal? availableCredit = default(decimal?), int? availableCreditSetBy = default(int?), decimal? balance = default(decimal?), int? balanceSetBy = default(int?), decimal? calculatedApr = default(decimal?), decimal? cashBalance = default(decimal?), int? cashBalanceSetBy = default(int?), decimal? cashSurrenderValue = default(decimal?), int? cashSurrenderValueSetBy = default(int?), string createdAt = default(string), decimal? creditLimit = default(decimal?), int? creditLimitSetBy = default(int?), string currencyCode = default(string), int? currencyCodeSetBy = default(int?), int? dayPaymentIsDue = default(int?), int? dayPaymentIsDueSetBy = default(int?), int? deathBenefit = default(int?), int? deathBenefitSetBy = default(int?), string federalInsuranceStatus = default(string), string feedAccountNumber = default(string), int? feedAccountSubtype = default(int?), int? feedAccountType = default(int?), decimal? feedApr = default(decimal?), decimal? feedApy = default(decimal?), decimal? feedAvailableBalance = default(decimal?), decimal? feedBalance = default(decimal?), decimal? feedCashBalance = default(decimal?), decimal? feedCashSurrenderValue = default(decimal?), decimal? feedCreditLimit = default(decimal?), string feedCurrencyCode = default(string), int? feedDayPaymentIsDue = default(int?), int? feedDeathBenefit = default(int?), decimal? feedHoldingsValue = default(decimal?), decimal? feedInterestRate = default(decimal?), bool? feedIsClosed = default(bool?), decimal? feedLastPayment = default(decimal?), string feedLastPaymentAt = default(string), decimal? feedLoanAmount = default(decimal?), string feedMaturesOn = default(string), decimal? feedMinimumBalance = default(decimal?), decimal? feedMinimumPayment = default(decimal?), string feedName = default(string), string feedNickname = default(string), decimal? feedOriginalBalance = default(decimal?), string feedPaymentDueAt = default(string), decimal? feedPayoffBalance = default(decimal?), string feedRoutingNumber = default(string), string feedStartedOn = default(string), decimal? feedStatementBalance = default(decimal?), decimal? feedTotalAccountValue = default(decimal?), string guid = default(string), decimal? holdingsValue = default(decimal?), int? holdingsValueSetBy = default(int?), string id = default(string), string importedAt = default(string), string institutionCode = default(string), string institutionGuid = default(string), string insuredName = default(string), decimal? interestRate = default(decimal?), int? interestRateSetBy = default(int?), bool? isClosed = default(bool?), int? isClosedSetBy = default(int?), bool? isHidden = default(bool?), bool? isManual = default(bool?), decimal? lastPayment = default(decimal?), int? lastPaymentSetBy = default(int?), string lastPaymentAt = default(string), int? lastPaymentAtSetBy = default(int?), decimal? loanAmount = default(decimal?), int? loanAmountSetBy = default(int?), decimal? marginBalance = default(decimal?), string maturesOn = default(string), int? maturesOnSetBy = default(int?), string memberGuid = default(string), string memberId = default(string), bool? memberIsManagedByUser = default(bool?), string metadata = default(string), decimal? minimumBalance = default(decimal?), int? minimumBalanceSetBy = default(int?), decimal? minimumPayment = default(decimal?), int? minimumPaymentSetBy = default(int?), string name = default(string), int? nameSetBy = default(int?), string nickname = default(string), int? nicknameSetBy = default(int?), decimal? originalBalance = default(decimal?), int? originalBalanceSetBy = default(int?), decimal? payOutAmount = default(decimal?), string paymentDueAt = default(string), int? paymentDueAtSetBy = default(int?), decimal? payoffBalance = default(decimal?), int? payoffBalanceSetBy = default(int?), string premiumAmount = default(string), int? propertyType = default(int?), string routingNumber = default(string), string startedOn = default(string), int? startedOnSetBy = default(int?), decimal? statementBalance = default(decimal?), int? statementBalanceSetBy = default(int?), string subtype = default(string), int? subtypeSetBy = default(int?), decimal? todayUglAmount = default(decimal?), decimal? todayUglPercentage = default(decimal?), decimal? totalAccountValue = default(decimal?), int? totalAccountValueSetBy = default(int?), decimal? totalAccountValueUgl = default(decimal?), string type = default(string), int? typeSetBy = default(int?), string updatedAt = default(string), string userGuid = default(string), string userId = default(string))
         {
             this.AccountNumber = accountNumber;
+            this.AccountNumberSetBy = accountNumberSetBy;
             this.AccountOwnership = accountOwnership;
             this.AnnuityPolicyToDate = annuityPolicyToDate;
             this.AnnuityProvider = annuityProvider;
             this.AnnuityTermYear = annuityTermYear;
             this.Apr = apr;
+            this.AprSetBy = aprSetBy;
             this.Apy = apy;
+            this.ApySetBy = apySetBy;
             this.AvailableBalance = availableBalance;
+            this.AvailableBalanceSetBy = availableBalanceSetBy;
             this.AvailableCredit = availableCredit;
+            this.AvailableCreditSetBy = availableCreditSetBy;
             this.Balance = balance;
+            this.BalanceSetBy = balanceSetBy;
+            this.CalculatedApr = calculatedApr;
             this.CashBalance = cashBalance;
+            this.CashBalanceSetBy = cashBalanceSetBy;
             this.CashSurrenderValue = cashSurrenderValue;
+            this.CashSurrenderValueSetBy = cashSurrenderValueSetBy;
             this.CreatedAt = createdAt;
             this.CreditLimit = creditLimit;
+            this.CreditLimitSetBy = creditLimitSetBy;
             this.CurrencyCode = currencyCode;
+            this.CurrencyCodeSetBy = currencyCodeSetBy;
             this.DayPaymentIsDue = dayPaymentIsDue;
+            this.DayPaymentIsDueSetBy = dayPaymentIsDueSetBy;
             this.DeathBenefit = deathBenefit;
+            this.DeathBenefitSetBy = deathBenefitSetBy;
             this.FederalInsuranceStatus = federalInsuranceStatus;
+            this.FeedAccountNumber = feedAccountNumber;
+            this.FeedAccountSubtype = feedAccountSubtype;
+            this.FeedAccountType = feedAccountType;
+            this.FeedApr = feedApr;
+            this.FeedApy = feedApy;
+            this.FeedAvailableBalance = feedAvailableBalance;
+            this.FeedBalance = feedBalance;
+            this.FeedCashBalance = feedCashBalance;
+            this.FeedCashSurrenderValue = feedCashSurrenderValue;
+            this.FeedCreditLimit = feedCreditLimit;
+            this.FeedCurrencyCode = feedCurrencyCode;
+            this.FeedDayPaymentIsDue = feedDayPaymentIsDue;
+            this.FeedDeathBenefit = feedDeathBenefit;
+            this.FeedHoldingsValue = feedHoldingsValue;
+            this.FeedInterestRate = feedInterestRate;
+            this.FeedIsClosed = feedIsClosed;
+            this.FeedLastPayment = feedLastPayment;
+            this.FeedLastPaymentAt = feedLastPaymentAt;
+            this.FeedLoanAmount = feedLoanAmount;
+            this.FeedMaturesOn = feedMaturesOn;
+            this.FeedMinimumBalance = feedMinimumBalance;
+            this.FeedMinimumPayment = feedMinimumPayment;
+            this.FeedName = feedName;
+            this.FeedNickname = feedNickname;
+            this.FeedOriginalBalance = feedOriginalBalance;
+            this.FeedPaymentDueAt = feedPaymentDueAt;
+            this.FeedPayoffBalance = feedPayoffBalance;
+            this.FeedRoutingNumber = feedRoutingNumber;
+            this.FeedStartedOn = feedStartedOn;
+            this.FeedStatementBalance = feedStatementBalance;
+            this.FeedTotalAccountValue = feedTotalAccountValue;
             this.Guid = guid;
             this.HoldingsValue = holdingsValue;
+            this.HoldingsValueSetBy = holdingsValueSetBy;
             this.Id = id;
             this.ImportedAt = importedAt;
             this.InstitutionCode = institutionCode;
+            this.InstitutionGuid = institutionGuid;
             this.InsuredName = insuredName;
             this.InterestRate = interestRate;
+            this.InterestRateSetBy = interestRateSetBy;
             this.IsClosed = isClosed;
+            this.IsClosedSetBy = isClosedSetBy;
             this.IsHidden = isHidden;
             this.IsManual = isManual;
             this.LastPayment = lastPayment;
+            this.LastPaymentSetBy = lastPaymentSetBy;
             this.LastPaymentAt = lastPaymentAt;
+            this.LastPaymentAtSetBy = lastPaymentAtSetBy;
             this.LoanAmount = loanAmount;
+            this.LoanAmountSetBy = loanAmountSetBy;
             this.MarginBalance = marginBalance;
             this.MaturesOn = maturesOn;
+            this.MaturesOnSetBy = maturesOnSetBy;
             this.MemberGuid = memberGuid;
             this.MemberId = memberId;
             this.MemberIsManagedByUser = memberIsManagedByUser;
             this.Metadata = metadata;
             this.MinimumBalance = minimumBalance;
+            this.MinimumBalanceSetBy = minimumBalanceSetBy;
             this.MinimumPayment = minimumPayment;
+            this.MinimumPaymentSetBy = minimumPaymentSetBy;
             this.Name = name;
+            this.NameSetBy = nameSetBy;
             this.Nickname = nickname;
+            this.NicknameSetBy = nicknameSetBy;
             this.OriginalBalance = originalBalance;
+            this.OriginalBalanceSetBy = originalBalanceSetBy;
             this.PayOutAmount = payOutAmount;
             this.PaymentDueAt = paymentDueAt;
+            this.PaymentDueAtSetBy = paymentDueAtSetBy;
             this.PayoffBalance = payoffBalance;
+            this.PayoffBalanceSetBy = payoffBalanceSetBy;
             this.PremiumAmount = premiumAmount;
             this.PropertyType = propertyType;
             this.RoutingNumber = routingNumber;
             this.StartedOn = startedOn;
+            this.StartedOnSetBy = startedOnSetBy;
             this.StatementBalance = statementBalance;
+            this.StatementBalanceSetBy = statementBalanceSetBy;
             this.Subtype = subtype;
+            this.SubtypeSetBy = subtypeSetBy;
             this.TodayUglAmount = todayUglAmount;
             this.TodayUglPercentage = todayUglPercentage;
             this.TotalAccountValue = totalAccountValue;
+            this.TotalAccountValueSetBy = totalAccountValueSetBy;
             this.TotalAccountValueUgl = totalAccountValueUgl;
             this.Type = type;
+            this.TypeSetBy = typeSetBy;
             this.UpdatedAt = updatedAt;
             this.UserGuid = userGuid;
             this.UserId = userId;
@@ -162,6 +290,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>5366</example>
         [DataMember(Name = "account_number", EmitDefaultValue = true)]
         public string AccountNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AccountNumberSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "account_number_set_by", EmitDefaultValue = true)]
+        public int? AccountNumberSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets AccountOwnership
@@ -189,7 +324,7 @@ namespace MX.Platform.CSharp.Model
         /// </summary>
         /// <example>2048</example>
         [DataMember(Name = "annuity_term_year", EmitDefaultValue = true)]
-        public decimal? AnnuityTermYear { get; set; }
+        public int? AnnuityTermYear { get; set; }
 
         /// <summary>
         /// Gets or Sets Apr
@@ -199,11 +334,25 @@ namespace MX.Platform.CSharp.Model
         public decimal? Apr { get; set; }
 
         /// <summary>
+        /// Gets or Sets AprSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "apr_set_by", EmitDefaultValue = true)]
+        public int? AprSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets Apy
         /// </summary>
         /// <example>1.0</example>
         [DataMember(Name = "apy", EmitDefaultValue = true)]
         public decimal? Apy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ApySetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "apy_set_by", EmitDefaultValue = true)]
+        public int? ApySetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailableBalance
@@ -213,11 +362,25 @@ namespace MX.Platform.CSharp.Model
         public decimal? AvailableBalance { get; set; }
 
         /// <summary>
+        /// Gets or Sets AvailableBalanceSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "available_balance_set_by", EmitDefaultValue = true)]
+        public int? AvailableBalanceSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets AvailableCredit
         /// </summary>
         /// <example>1000.0</example>
         [DataMember(Name = "available_credit", EmitDefaultValue = true)]
         public decimal? AvailableCredit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AvailableCreditSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "available_credit_set_by", EmitDefaultValue = true)]
+        public int? AvailableCreditSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets Balance
@@ -227,6 +390,20 @@ namespace MX.Platform.CSharp.Model
         public decimal? Balance { get; set; }
 
         /// <summary>
+        /// Gets or Sets BalanceSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "balance_set_by", EmitDefaultValue = true)]
+        public int? BalanceSetBy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CalculatedApr
+        /// </summary>
+        /// <example>21.66409</example>
+        [DataMember(Name = "calculated_apr", EmitDefaultValue = true)]
+        public decimal? CalculatedApr { get; set; }
+
+        /// <summary>
         /// Gets or Sets CashBalance
         /// </summary>
         /// <example>1000.0</example>
@@ -234,11 +411,25 @@ namespace MX.Platform.CSharp.Model
         public decimal? CashBalance { get; set; }
 
         /// <summary>
+        /// Gets or Sets CashBalanceSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "cash_balance_set_by", EmitDefaultValue = true)]
+        public int? CashBalanceSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets CashSurrenderValue
         /// </summary>
         /// <example>1000.0</example>
         [DataMember(Name = "cash_surrender_value", EmitDefaultValue = true)]
         public decimal? CashSurrenderValue { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CashSurrenderValueSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "cash_surrender_value_set_by", EmitDefaultValue = true)]
+        public int? CashSurrenderValueSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets CreatedAt
@@ -255,11 +446,25 @@ namespace MX.Platform.CSharp.Model
         public decimal? CreditLimit { get; set; }
 
         /// <summary>
+        /// Gets or Sets CreditLimitSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "credit_limit_set_by", EmitDefaultValue = true)]
+        public int? CreditLimitSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets CurrencyCode
         /// </summary>
         /// <example>USD</example>
         [DataMember(Name = "currency_code", EmitDefaultValue = true)]
         public string CurrencyCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CurrencyCodeSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "currency_code_set_by", EmitDefaultValue = true)]
+        public int? CurrencyCodeSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets DayPaymentIsDue
@@ -269,6 +474,13 @@ namespace MX.Platform.CSharp.Model
         public int? DayPaymentIsDue { get; set; }
 
         /// <summary>
+        /// Gets or Sets DayPaymentIsDueSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "day_payment_is_due_set_by", EmitDefaultValue = true)]
+        public int? DayPaymentIsDueSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets DeathBenefit
         /// </summary>
         /// <example>1000</example>
@@ -276,11 +488,235 @@ namespace MX.Platform.CSharp.Model
         public int? DeathBenefit { get; set; }
 
         /// <summary>
+        /// Gets or Sets DeathBenefitSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "death_benefit_set_by", EmitDefaultValue = true)]
+        public int? DeathBenefitSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets FederalInsuranceStatus
         /// </summary>
         /// <example>INSURED</example>
         [DataMember(Name = "federal_insurance_status", EmitDefaultValue = true)]
         public string FederalInsuranceStatus { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedAccountNumber
+        /// </summary>
+        /// <example>5366</example>
+        [DataMember(Name = "feed_account_number", EmitDefaultValue = true)]
+        public string FeedAccountNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedAccountSubtype
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "feed_account_subtype", EmitDefaultValue = true)]
+        public int? FeedAccountSubtype { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedAccountType
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "feed_account_type", EmitDefaultValue = true)]
+        public int? FeedAccountType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedApr
+        /// </summary>
+        /// <example>1.0</example>
+        [DataMember(Name = "feed_apr", EmitDefaultValue = true)]
+        public decimal? FeedApr { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedApy
+        /// </summary>
+        /// <example>1.0</example>
+        [DataMember(Name = "feed_apy", EmitDefaultValue = true)]
+        public decimal? FeedApy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedAvailableBalance
+        /// </summary>
+        /// <example>1000.0</example>
+        [DataMember(Name = "feed_available_balance", EmitDefaultValue = true)]
+        public decimal? FeedAvailableBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedBalance
+        /// </summary>
+        /// <example>1000.0</example>
+        [DataMember(Name = "feed_balance", EmitDefaultValue = true)]
+        public decimal? FeedBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedCashBalance
+        /// </summary>
+        /// <example>1000.0</example>
+        [DataMember(Name = "feed_cash_balance", EmitDefaultValue = true)]
+        public decimal? FeedCashBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedCashSurrenderValue
+        /// </summary>
+        /// <example>1000.0</example>
+        [DataMember(Name = "feed_cash_surrender_value", EmitDefaultValue = true)]
+        public decimal? FeedCashSurrenderValue { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedCreditLimit
+        /// </summary>
+        /// <example>100.0</example>
+        [DataMember(Name = "feed_credit_limit", EmitDefaultValue = true)]
+        public decimal? FeedCreditLimit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedCurrencyCode
+        /// </summary>
+        /// <example>USD</example>
+        [DataMember(Name = "feed_currency_code", EmitDefaultValue = true)]
+        public string FeedCurrencyCode { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedDayPaymentIsDue
+        /// </summary>
+        /// <example>20</example>
+        [DataMember(Name = "feed_day_payment_is_due", EmitDefaultValue = true)]
+        public int? FeedDayPaymentIsDue { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedDeathBenefit
+        /// </summary>
+        /// <example>1000</example>
+        [DataMember(Name = "feed_death_benefit", EmitDefaultValue = true)]
+        public int? FeedDeathBenefit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedHoldingsValue
+        /// </summary>
+        /// <example>1000.0</example>
+        [DataMember(Name = "feed_holdings_value", EmitDefaultValue = true)]
+        public decimal? FeedHoldingsValue { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedInterestRate
+        /// </summary>
+        /// <example>1.0</example>
+        [DataMember(Name = "feed_interest_rate", EmitDefaultValue = true)]
+        public decimal? FeedInterestRate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedIsClosed
+        /// </summary>
+        /// <example>false</example>
+        [DataMember(Name = "feed_is_closed", EmitDefaultValue = true)]
+        public bool? FeedIsClosed { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedLastPayment
+        /// </summary>
+        /// <example>100.0</example>
+        [DataMember(Name = "feed_last_payment", EmitDefaultValue = true)]
+        public decimal? FeedLastPayment { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedLastPaymentAt
+        /// </summary>
+        /// <example>2023-07-25T17:14:46Z</example>
+        [DataMember(Name = "feed_last_payment_at", EmitDefaultValue = true)]
+        public string FeedLastPaymentAt { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedLoanAmount
+        /// </summary>
+        /// <example>1000.0</example>
+        [DataMember(Name = "feed_loan_amount", EmitDefaultValue = true)]
+        public decimal? FeedLoanAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedMaturesOn
+        /// </summary>
+        /// <example>2015-10-13T17:57:37.000Z</example>
+        [DataMember(Name = "feed_matures_on", EmitDefaultValue = true)]
+        public string FeedMaturesOn { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedMinimumBalance
+        /// </summary>
+        /// <example>100.0</example>
+        [DataMember(Name = "feed_minimum_balance", EmitDefaultValue = true)]
+        public decimal? FeedMinimumBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedMinimumPayment
+        /// </summary>
+        /// <example>10.0</example>
+        [DataMember(Name = "feed_minimum_payment", EmitDefaultValue = true)]
+        public decimal? FeedMinimumPayment { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedName
+        /// </summary>
+        /// <example>Test account 2</example>
+        [DataMember(Name = "feed_name", EmitDefaultValue = true)]
+        public string FeedName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedNickname
+        /// </summary>
+        /// <example>My Checking</example>
+        [DataMember(Name = "feed_nickname", EmitDefaultValue = true)]
+        public string FeedNickname { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedOriginalBalance
+        /// </summary>
+        /// <example>10.0</example>
+        [DataMember(Name = "feed_original_balance", EmitDefaultValue = true)]
+        public decimal? FeedOriginalBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedPaymentDueAt
+        /// </summary>
+        /// <example>2025-02-13T17:57:37.000Z</example>
+        [DataMember(Name = "feed_payment_due_at", EmitDefaultValue = true)]
+        public string FeedPaymentDueAt { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedPayoffBalance
+        /// </summary>
+        /// <example>10.0</example>
+        [DataMember(Name = "feed_payoff_balance", EmitDefaultValue = true)]
+        public decimal? FeedPayoffBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedRoutingNumber
+        /// </summary>
+        /// <example>68899990000000</example>
+        [DataMember(Name = "feed_routing_number", EmitDefaultValue = true)]
+        public string FeedRoutingNumber { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedStartedOn
+        /// </summary>
+        /// <example>2020-10-13T17:57:37.000Z</example>
+        [DataMember(Name = "feed_started_on", EmitDefaultValue = true)]
+        public string FeedStartedOn { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedStatementBalance
+        /// </summary>
+        /// <example>100.0</example>
+        [DataMember(Name = "feed_statement_balance", EmitDefaultValue = true)]
+        public decimal? FeedStatementBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets FeedTotalAccountValue
+        /// </summary>
+        /// <example>100.0</example>
+        [DataMember(Name = "feed_total_account_value", EmitDefaultValue = true)]
+        public decimal? FeedTotalAccountValue { get; set; }
 
         /// <summary>
         /// Gets or Sets Guid
@@ -295,6 +731,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>1000.0</example>
         [DataMember(Name = "holdings_value", EmitDefaultValue = true)]
         public decimal? HoldingsValue { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HoldingsValueSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "holdings_value_set_by", EmitDefaultValue = true)]
+        public int? HoldingsValueSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets Id
@@ -318,6 +761,13 @@ namespace MX.Platform.CSharp.Model
         public string InstitutionCode { get; set; }
 
         /// <summary>
+        /// Gets or Sets InstitutionGuid
+        /// </summary>
+        /// <example>INS-12a3b-4c5dd6-1349-008d0755e993</example>
+        [DataMember(Name = "institution_guid", EmitDefaultValue = true)]
+        public string InstitutionGuid { get; set; }
+
+        /// <summary>
         /// Gets or Sets InsuredName
         /// </summary>
         /// <example>Tommy Shelby</example>
@@ -332,11 +782,25 @@ namespace MX.Platform.CSharp.Model
         public decimal? InterestRate { get; set; }
 
         /// <summary>
+        /// Gets or Sets InterestRateSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "interest_rate_set_by", EmitDefaultValue = true)]
+        public int? InterestRateSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsClosed
         /// </summary>
         /// <example>false</example>
         [DataMember(Name = "is_closed", EmitDefaultValue = true)]
         public bool? IsClosed { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsClosedSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "is_closed_set_by", EmitDefaultValue = true)]
+        public int? IsClosedSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets IsHidden
@@ -360,6 +824,13 @@ namespace MX.Platform.CSharp.Model
         public decimal? LastPayment { get; set; }
 
         /// <summary>
+        /// Gets or Sets LastPaymentSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "last_payment_set_by", EmitDefaultValue = true)]
+        public int? LastPaymentSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets LastPaymentAt
         /// </summary>
         /// <example>2023-07-25T17:14:46Z</example>
@@ -367,11 +838,25 @@ namespace MX.Platform.CSharp.Model
         public string LastPaymentAt { get; set; }
 
         /// <summary>
+        /// Gets or Sets LastPaymentAtSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "last_payment_at_set_by", EmitDefaultValue = true)]
+        public int? LastPaymentAtSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets LoanAmount
         /// </summary>
         /// <example>1000.0</example>
         [DataMember(Name = "loan_amount", EmitDefaultValue = true)]
         public decimal? LoanAmount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LoanAmountSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "loan_amount_set_by", EmitDefaultValue = true)]
+        public int? LoanAmountSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets MarginBalance
@@ -386,6 +871,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>2015-10-13T17:57:37.000Z</example>
         [DataMember(Name = "matures_on", EmitDefaultValue = true)]
         public string MaturesOn { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MaturesOnSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "matures_on_set_by", EmitDefaultValue = true)]
+        public int? MaturesOnSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets MemberGuid
@@ -423,11 +915,25 @@ namespace MX.Platform.CSharp.Model
         public decimal? MinimumBalance { get; set; }
 
         /// <summary>
+        /// Gets or Sets MinimumBalanceSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "minimum_balance_set_by", EmitDefaultValue = true)]
+        public int? MinimumBalanceSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets MinimumPayment
         /// </summary>
         /// <example>10.0</example>
         [DataMember(Name = "minimum_payment", EmitDefaultValue = true)]
         public decimal? MinimumPayment { get; set; }
+
+        /// <summary>
+        /// Gets or Sets MinimumPaymentSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "minimum_payment_set_by", EmitDefaultValue = true)]
+        public int? MinimumPaymentSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -437,6 +943,13 @@ namespace MX.Platform.CSharp.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets NameSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "name_set_by", EmitDefaultValue = true)]
+        public int? NameSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets Nickname
         /// </summary>
         /// <example>My Checking</example>
@@ -444,11 +957,25 @@ namespace MX.Platform.CSharp.Model
         public string Nickname { get; set; }
 
         /// <summary>
+        /// Gets or Sets NicknameSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "nickname_set_by", EmitDefaultValue = true)]
+        public int? NicknameSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets OriginalBalance
         /// </summary>
         /// <example>10.0</example>
         [DataMember(Name = "original_balance", EmitDefaultValue = true)]
         public decimal? OriginalBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets OriginalBalanceSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "original_balance_set_by", EmitDefaultValue = true)]
+        public int? OriginalBalanceSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets PayOutAmount
@@ -465,6 +992,13 @@ namespace MX.Platform.CSharp.Model
         public string PaymentDueAt { get; set; }
 
         /// <summary>
+        /// Gets or Sets PaymentDueAtSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "payment_due_at_set_by", EmitDefaultValue = true)]
+        public int? PaymentDueAtSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets PayoffBalance
         /// </summary>
         /// <example>10.0</example>
@@ -472,18 +1006,25 @@ namespace MX.Platform.CSharp.Model
         public decimal? PayoffBalance { get; set; }
 
         /// <summary>
+        /// Gets or Sets PayoffBalanceSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "payoff_balance_set_by", EmitDefaultValue = true)]
+        public int? PayoffBalanceSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets PremiumAmount
         /// </summary>
-        /// <example>1.0</example>
+        /// <example>3900</example>
         [DataMember(Name = "premium_amount", EmitDefaultValue = true)]
-        public decimal? PremiumAmount { get; set; }
+        public string PremiumAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets PropertyType
         /// </summary>
-        /// <example>VEHICLE</example>
+        /// <example>1</example>
         [DataMember(Name = "property_type", EmitDefaultValue = true)]
-        public string PropertyType { get; set; }
+        public int? PropertyType { get; set; }
 
         /// <summary>
         /// Gets or Sets RoutingNumber
@@ -500,11 +1041,25 @@ namespace MX.Platform.CSharp.Model
         public string StartedOn { get; set; }
 
         /// <summary>
+        /// Gets or Sets StartedOnSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "started_on_set_by", EmitDefaultValue = true)]
+        public int? StartedOnSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets StatementBalance
         /// </summary>
-        /// <example>100.1</example>
+        /// <example>1000.5</example>
         [DataMember(Name = "statement_balance", EmitDefaultValue = true)]
         public decimal? StatementBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets StatementBalanceSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "statement_balance_set_by", EmitDefaultValue = true)]
+        public int? StatementBalanceSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets Subtype
@@ -512,6 +1067,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>NONE</example>
         [DataMember(Name = "subtype", EmitDefaultValue = true)]
         public string Subtype { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SubtypeSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "subtype_set_by", EmitDefaultValue = true)]
+        public int? SubtypeSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets TodayUglAmount
@@ -535,9 +1097,16 @@ namespace MX.Platform.CSharp.Model
         public decimal? TotalAccountValue { get; set; }
 
         /// <summary>
+        /// Gets or Sets TotalAccountValueSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "total_account_value_set_by", EmitDefaultValue = true)]
+        public int? TotalAccountValueSetBy { get; set; }
+
+        /// <summary>
         /// Gets or Sets TotalAccountValueUgl
         /// </summary>
-        /// <example>1.1</example>
+        /// <example>1.0</example>
         [DataMember(Name = "total_account_value_ugl", EmitDefaultValue = true)]
         public decimal? TotalAccountValueUgl { get; set; }
 
@@ -547,6 +1116,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>SAVINGS</example>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public string Type { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TypeSetBy
+        /// </summary>
+        /// <example>1</example>
+        [DataMember(Name = "type_set_by", EmitDefaultValue = true)]
+        public int? TypeSetBy { get; set; }
 
         /// <summary>
         /// Gets or Sets UpdatedAt
@@ -578,61 +1154,125 @@ namespace MX.Platform.CSharp.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class AccountResponse {\n");
             sb.Append("  AccountNumber: ").Append(AccountNumber).Append("\n");
+            sb.Append("  AccountNumberSetBy: ").Append(AccountNumberSetBy).Append("\n");
             sb.Append("  AccountOwnership: ").Append(AccountOwnership).Append("\n");
             sb.Append("  AnnuityPolicyToDate: ").Append(AnnuityPolicyToDate).Append("\n");
             sb.Append("  AnnuityProvider: ").Append(AnnuityProvider).Append("\n");
             sb.Append("  AnnuityTermYear: ").Append(AnnuityTermYear).Append("\n");
             sb.Append("  Apr: ").Append(Apr).Append("\n");
+            sb.Append("  AprSetBy: ").Append(AprSetBy).Append("\n");
             sb.Append("  Apy: ").Append(Apy).Append("\n");
+            sb.Append("  ApySetBy: ").Append(ApySetBy).Append("\n");
             sb.Append("  AvailableBalance: ").Append(AvailableBalance).Append("\n");
+            sb.Append("  AvailableBalanceSetBy: ").Append(AvailableBalanceSetBy).Append("\n");
             sb.Append("  AvailableCredit: ").Append(AvailableCredit).Append("\n");
+            sb.Append("  AvailableCreditSetBy: ").Append(AvailableCreditSetBy).Append("\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
+            sb.Append("  BalanceSetBy: ").Append(BalanceSetBy).Append("\n");
+            sb.Append("  CalculatedApr: ").Append(CalculatedApr).Append("\n");
             sb.Append("  CashBalance: ").Append(CashBalance).Append("\n");
+            sb.Append("  CashBalanceSetBy: ").Append(CashBalanceSetBy).Append("\n");
             sb.Append("  CashSurrenderValue: ").Append(CashSurrenderValue).Append("\n");
+            sb.Append("  CashSurrenderValueSetBy: ").Append(CashSurrenderValueSetBy).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  CreditLimit: ").Append(CreditLimit).Append("\n");
+            sb.Append("  CreditLimitSetBy: ").Append(CreditLimitSetBy).Append("\n");
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
+            sb.Append("  CurrencyCodeSetBy: ").Append(CurrencyCodeSetBy).Append("\n");
             sb.Append("  DayPaymentIsDue: ").Append(DayPaymentIsDue).Append("\n");
+            sb.Append("  DayPaymentIsDueSetBy: ").Append(DayPaymentIsDueSetBy).Append("\n");
             sb.Append("  DeathBenefit: ").Append(DeathBenefit).Append("\n");
+            sb.Append("  DeathBenefitSetBy: ").Append(DeathBenefitSetBy).Append("\n");
             sb.Append("  FederalInsuranceStatus: ").Append(FederalInsuranceStatus).Append("\n");
+            sb.Append("  FeedAccountNumber: ").Append(FeedAccountNumber).Append("\n");
+            sb.Append("  FeedAccountSubtype: ").Append(FeedAccountSubtype).Append("\n");
+            sb.Append("  FeedAccountType: ").Append(FeedAccountType).Append("\n");
+            sb.Append("  FeedApr: ").Append(FeedApr).Append("\n");
+            sb.Append("  FeedApy: ").Append(FeedApy).Append("\n");
+            sb.Append("  FeedAvailableBalance: ").Append(FeedAvailableBalance).Append("\n");
+            sb.Append("  FeedBalance: ").Append(FeedBalance).Append("\n");
+            sb.Append("  FeedCashBalance: ").Append(FeedCashBalance).Append("\n");
+            sb.Append("  FeedCashSurrenderValue: ").Append(FeedCashSurrenderValue).Append("\n");
+            sb.Append("  FeedCreditLimit: ").Append(FeedCreditLimit).Append("\n");
+            sb.Append("  FeedCurrencyCode: ").Append(FeedCurrencyCode).Append("\n");
+            sb.Append("  FeedDayPaymentIsDue: ").Append(FeedDayPaymentIsDue).Append("\n");
+            sb.Append("  FeedDeathBenefit: ").Append(FeedDeathBenefit).Append("\n");
+            sb.Append("  FeedHoldingsValue: ").Append(FeedHoldingsValue).Append("\n");
+            sb.Append("  FeedInterestRate: ").Append(FeedInterestRate).Append("\n");
+            sb.Append("  FeedIsClosed: ").Append(FeedIsClosed).Append("\n");
+            sb.Append("  FeedLastPayment: ").Append(FeedLastPayment).Append("\n");
+            sb.Append("  FeedLastPaymentAt: ").Append(FeedLastPaymentAt).Append("\n");
+            sb.Append("  FeedLoanAmount: ").Append(FeedLoanAmount).Append("\n");
+            sb.Append("  FeedMaturesOn: ").Append(FeedMaturesOn).Append("\n");
+            sb.Append("  FeedMinimumBalance: ").Append(FeedMinimumBalance).Append("\n");
+            sb.Append("  FeedMinimumPayment: ").Append(FeedMinimumPayment).Append("\n");
+            sb.Append("  FeedName: ").Append(FeedName).Append("\n");
+            sb.Append("  FeedNickname: ").Append(FeedNickname).Append("\n");
+            sb.Append("  FeedOriginalBalance: ").Append(FeedOriginalBalance).Append("\n");
+            sb.Append("  FeedPaymentDueAt: ").Append(FeedPaymentDueAt).Append("\n");
+            sb.Append("  FeedPayoffBalance: ").Append(FeedPayoffBalance).Append("\n");
+            sb.Append("  FeedRoutingNumber: ").Append(FeedRoutingNumber).Append("\n");
+            sb.Append("  FeedStartedOn: ").Append(FeedStartedOn).Append("\n");
+            sb.Append("  FeedStatementBalance: ").Append(FeedStatementBalance).Append("\n");
+            sb.Append("  FeedTotalAccountValue: ").Append(FeedTotalAccountValue).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  HoldingsValue: ").Append(HoldingsValue).Append("\n");
+            sb.Append("  HoldingsValueSetBy: ").Append(HoldingsValueSetBy).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ImportedAt: ").Append(ImportedAt).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
+            sb.Append("  InstitutionGuid: ").Append(InstitutionGuid).Append("\n");
             sb.Append("  InsuredName: ").Append(InsuredName).Append("\n");
             sb.Append("  InterestRate: ").Append(InterestRate).Append("\n");
+            sb.Append("  InterestRateSetBy: ").Append(InterestRateSetBy).Append("\n");
             sb.Append("  IsClosed: ").Append(IsClosed).Append("\n");
+            sb.Append("  IsClosedSetBy: ").Append(IsClosedSetBy).Append("\n");
             sb.Append("  IsHidden: ").Append(IsHidden).Append("\n");
             sb.Append("  IsManual: ").Append(IsManual).Append("\n");
             sb.Append("  LastPayment: ").Append(LastPayment).Append("\n");
+            sb.Append("  LastPaymentSetBy: ").Append(LastPaymentSetBy).Append("\n");
             sb.Append("  LastPaymentAt: ").Append(LastPaymentAt).Append("\n");
+            sb.Append("  LastPaymentAtSetBy: ").Append(LastPaymentAtSetBy).Append("\n");
             sb.Append("  LoanAmount: ").Append(LoanAmount).Append("\n");
+            sb.Append("  LoanAmountSetBy: ").Append(LoanAmountSetBy).Append("\n");
             sb.Append("  MarginBalance: ").Append(MarginBalance).Append("\n");
             sb.Append("  MaturesOn: ").Append(MaturesOn).Append("\n");
+            sb.Append("  MaturesOnSetBy: ").Append(MaturesOnSetBy).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  MemberId: ").Append(MemberId).Append("\n");
             sb.Append("  MemberIsManagedByUser: ").Append(MemberIsManagedByUser).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  MinimumBalance: ").Append(MinimumBalance).Append("\n");
+            sb.Append("  MinimumBalanceSetBy: ").Append(MinimumBalanceSetBy).Append("\n");
             sb.Append("  MinimumPayment: ").Append(MinimumPayment).Append("\n");
+            sb.Append("  MinimumPaymentSetBy: ").Append(MinimumPaymentSetBy).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  NameSetBy: ").Append(NameSetBy).Append("\n");
             sb.Append("  Nickname: ").Append(Nickname).Append("\n");
+            sb.Append("  NicknameSetBy: ").Append(NicknameSetBy).Append("\n");
             sb.Append("  OriginalBalance: ").Append(OriginalBalance).Append("\n");
+            sb.Append("  OriginalBalanceSetBy: ").Append(OriginalBalanceSetBy).Append("\n");
             sb.Append("  PayOutAmount: ").Append(PayOutAmount).Append("\n");
             sb.Append("  PaymentDueAt: ").Append(PaymentDueAt).Append("\n");
+            sb.Append("  PaymentDueAtSetBy: ").Append(PaymentDueAtSetBy).Append("\n");
             sb.Append("  PayoffBalance: ").Append(PayoffBalance).Append("\n");
+            sb.Append("  PayoffBalanceSetBy: ").Append(PayoffBalanceSetBy).Append("\n");
             sb.Append("  PremiumAmount: ").Append(PremiumAmount).Append("\n");
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
             sb.Append("  RoutingNumber: ").Append(RoutingNumber).Append("\n");
             sb.Append("  StartedOn: ").Append(StartedOn).Append("\n");
+            sb.Append("  StartedOnSetBy: ").Append(StartedOnSetBy).Append("\n");
             sb.Append("  StatementBalance: ").Append(StatementBalance).Append("\n");
+            sb.Append("  StatementBalanceSetBy: ").Append(StatementBalanceSetBy).Append("\n");
             sb.Append("  Subtype: ").Append(Subtype).Append("\n");
+            sb.Append("  SubtypeSetBy: ").Append(SubtypeSetBy).Append("\n");
             sb.Append("  TodayUglAmount: ").Append(TodayUglAmount).Append("\n");
             sb.Append("  TodayUglPercentage: ").Append(TodayUglPercentage).Append("\n");
             sb.Append("  TotalAccountValue: ").Append(TotalAccountValue).Append("\n");
+            sb.Append("  TotalAccountValueSetBy: ").Append(TotalAccountValueSetBy).Append("\n");
             sb.Append("  TotalAccountValueUgl: ").Append(TotalAccountValueUgl).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  TypeSetBy: ").Append(TypeSetBy).Append("\n");
             sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
@@ -677,6 +1317,11 @@ namespace MX.Platform.CSharp.Model
                     this.AccountNumber.Equals(input.AccountNumber))
                 ) && 
                 (
+                    this.AccountNumberSetBy == input.AccountNumberSetBy ||
+                    (this.AccountNumberSetBy != null &&
+                    this.AccountNumberSetBy.Equals(input.AccountNumberSetBy))
+                ) && 
+                (
                     this.AccountOwnership == input.AccountOwnership ||
                     (this.AccountOwnership != null &&
                     this.AccountOwnership.Equals(input.AccountOwnership))
@@ -702,9 +1347,19 @@ namespace MX.Platform.CSharp.Model
                     this.Apr.Equals(input.Apr))
                 ) && 
                 (
+                    this.AprSetBy == input.AprSetBy ||
+                    (this.AprSetBy != null &&
+                    this.AprSetBy.Equals(input.AprSetBy))
+                ) && 
+                (
                     this.Apy == input.Apy ||
                     (this.Apy != null &&
                     this.Apy.Equals(input.Apy))
+                ) && 
+                (
+                    this.ApySetBy == input.ApySetBy ||
+                    (this.ApySetBy != null &&
+                    this.ApySetBy.Equals(input.ApySetBy))
                 ) && 
                 (
                     this.AvailableBalance == input.AvailableBalance ||
@@ -712,9 +1367,19 @@ namespace MX.Platform.CSharp.Model
                     this.AvailableBalance.Equals(input.AvailableBalance))
                 ) && 
                 (
+                    this.AvailableBalanceSetBy == input.AvailableBalanceSetBy ||
+                    (this.AvailableBalanceSetBy != null &&
+                    this.AvailableBalanceSetBy.Equals(input.AvailableBalanceSetBy))
+                ) && 
+                (
                     this.AvailableCredit == input.AvailableCredit ||
                     (this.AvailableCredit != null &&
                     this.AvailableCredit.Equals(input.AvailableCredit))
+                ) && 
+                (
+                    this.AvailableCreditSetBy == input.AvailableCreditSetBy ||
+                    (this.AvailableCreditSetBy != null &&
+                    this.AvailableCreditSetBy.Equals(input.AvailableCreditSetBy))
                 ) && 
                 (
                     this.Balance == input.Balance ||
@@ -722,14 +1387,34 @@ namespace MX.Platform.CSharp.Model
                     this.Balance.Equals(input.Balance))
                 ) && 
                 (
+                    this.BalanceSetBy == input.BalanceSetBy ||
+                    (this.BalanceSetBy != null &&
+                    this.BalanceSetBy.Equals(input.BalanceSetBy))
+                ) && 
+                (
+                    this.CalculatedApr == input.CalculatedApr ||
+                    (this.CalculatedApr != null &&
+                    this.CalculatedApr.Equals(input.CalculatedApr))
+                ) && 
+                (
                     this.CashBalance == input.CashBalance ||
                     (this.CashBalance != null &&
                     this.CashBalance.Equals(input.CashBalance))
                 ) && 
                 (
+                    this.CashBalanceSetBy == input.CashBalanceSetBy ||
+                    (this.CashBalanceSetBy != null &&
+                    this.CashBalanceSetBy.Equals(input.CashBalanceSetBy))
+                ) && 
+                (
                     this.CashSurrenderValue == input.CashSurrenderValue ||
                     (this.CashSurrenderValue != null &&
                     this.CashSurrenderValue.Equals(input.CashSurrenderValue))
+                ) && 
+                (
+                    this.CashSurrenderValueSetBy == input.CashSurrenderValueSetBy ||
+                    (this.CashSurrenderValueSetBy != null &&
+                    this.CashSurrenderValueSetBy.Equals(input.CashSurrenderValueSetBy))
                 ) && 
                 (
                     this.CreatedAt == input.CreatedAt ||
@@ -742,9 +1427,19 @@ namespace MX.Platform.CSharp.Model
                     this.CreditLimit.Equals(input.CreditLimit))
                 ) && 
                 (
+                    this.CreditLimitSetBy == input.CreditLimitSetBy ||
+                    (this.CreditLimitSetBy != null &&
+                    this.CreditLimitSetBy.Equals(input.CreditLimitSetBy))
+                ) && 
+                (
                     this.CurrencyCode == input.CurrencyCode ||
                     (this.CurrencyCode != null &&
                     this.CurrencyCode.Equals(input.CurrencyCode))
+                ) && 
+                (
+                    this.CurrencyCodeSetBy == input.CurrencyCodeSetBy ||
+                    (this.CurrencyCodeSetBy != null &&
+                    this.CurrencyCodeSetBy.Equals(input.CurrencyCodeSetBy))
                 ) && 
                 (
                     this.DayPaymentIsDue == input.DayPaymentIsDue ||
@@ -752,14 +1447,179 @@ namespace MX.Platform.CSharp.Model
                     this.DayPaymentIsDue.Equals(input.DayPaymentIsDue))
                 ) && 
                 (
+                    this.DayPaymentIsDueSetBy == input.DayPaymentIsDueSetBy ||
+                    (this.DayPaymentIsDueSetBy != null &&
+                    this.DayPaymentIsDueSetBy.Equals(input.DayPaymentIsDueSetBy))
+                ) && 
+                (
                     this.DeathBenefit == input.DeathBenefit ||
                     (this.DeathBenefit != null &&
                     this.DeathBenefit.Equals(input.DeathBenefit))
                 ) && 
                 (
+                    this.DeathBenefitSetBy == input.DeathBenefitSetBy ||
+                    (this.DeathBenefitSetBy != null &&
+                    this.DeathBenefitSetBy.Equals(input.DeathBenefitSetBy))
+                ) && 
+                (
                     this.FederalInsuranceStatus == input.FederalInsuranceStatus ||
                     (this.FederalInsuranceStatus != null &&
                     this.FederalInsuranceStatus.Equals(input.FederalInsuranceStatus))
+                ) && 
+                (
+                    this.FeedAccountNumber == input.FeedAccountNumber ||
+                    (this.FeedAccountNumber != null &&
+                    this.FeedAccountNumber.Equals(input.FeedAccountNumber))
+                ) && 
+                (
+                    this.FeedAccountSubtype == input.FeedAccountSubtype ||
+                    (this.FeedAccountSubtype != null &&
+                    this.FeedAccountSubtype.Equals(input.FeedAccountSubtype))
+                ) && 
+                (
+                    this.FeedAccountType == input.FeedAccountType ||
+                    (this.FeedAccountType != null &&
+                    this.FeedAccountType.Equals(input.FeedAccountType))
+                ) && 
+                (
+                    this.FeedApr == input.FeedApr ||
+                    (this.FeedApr != null &&
+                    this.FeedApr.Equals(input.FeedApr))
+                ) && 
+                (
+                    this.FeedApy == input.FeedApy ||
+                    (this.FeedApy != null &&
+                    this.FeedApy.Equals(input.FeedApy))
+                ) && 
+                (
+                    this.FeedAvailableBalance == input.FeedAvailableBalance ||
+                    (this.FeedAvailableBalance != null &&
+                    this.FeedAvailableBalance.Equals(input.FeedAvailableBalance))
+                ) && 
+                (
+                    this.FeedBalance == input.FeedBalance ||
+                    (this.FeedBalance != null &&
+                    this.FeedBalance.Equals(input.FeedBalance))
+                ) && 
+                (
+                    this.FeedCashBalance == input.FeedCashBalance ||
+                    (this.FeedCashBalance != null &&
+                    this.FeedCashBalance.Equals(input.FeedCashBalance))
+                ) && 
+                (
+                    this.FeedCashSurrenderValue == input.FeedCashSurrenderValue ||
+                    (this.FeedCashSurrenderValue != null &&
+                    this.FeedCashSurrenderValue.Equals(input.FeedCashSurrenderValue))
+                ) && 
+                (
+                    this.FeedCreditLimit == input.FeedCreditLimit ||
+                    (this.FeedCreditLimit != null &&
+                    this.FeedCreditLimit.Equals(input.FeedCreditLimit))
+                ) && 
+                (
+                    this.FeedCurrencyCode == input.FeedCurrencyCode ||
+                    (this.FeedCurrencyCode != null &&
+                    this.FeedCurrencyCode.Equals(input.FeedCurrencyCode))
+                ) && 
+                (
+                    this.FeedDayPaymentIsDue == input.FeedDayPaymentIsDue ||
+                    (this.FeedDayPaymentIsDue != null &&
+                    this.FeedDayPaymentIsDue.Equals(input.FeedDayPaymentIsDue))
+                ) && 
+                (
+                    this.FeedDeathBenefit == input.FeedDeathBenefit ||
+                    (this.FeedDeathBenefit != null &&
+                    this.FeedDeathBenefit.Equals(input.FeedDeathBenefit))
+                ) && 
+                (
+                    this.FeedHoldingsValue == input.FeedHoldingsValue ||
+                    (this.FeedHoldingsValue != null &&
+                    this.FeedHoldingsValue.Equals(input.FeedHoldingsValue))
+                ) && 
+                (
+                    this.FeedInterestRate == input.FeedInterestRate ||
+                    (this.FeedInterestRate != null &&
+                    this.FeedInterestRate.Equals(input.FeedInterestRate))
+                ) && 
+                (
+                    this.FeedIsClosed == input.FeedIsClosed ||
+                    (this.FeedIsClosed != null &&
+                    this.FeedIsClosed.Equals(input.FeedIsClosed))
+                ) && 
+                (
+                    this.FeedLastPayment == input.FeedLastPayment ||
+                    (this.FeedLastPayment != null &&
+                    this.FeedLastPayment.Equals(input.FeedLastPayment))
+                ) && 
+                (
+                    this.FeedLastPaymentAt == input.FeedLastPaymentAt ||
+                    (this.FeedLastPaymentAt != null &&
+                    this.FeedLastPaymentAt.Equals(input.FeedLastPaymentAt))
+                ) && 
+                (
+                    this.FeedLoanAmount == input.FeedLoanAmount ||
+                    (this.FeedLoanAmount != null &&
+                    this.FeedLoanAmount.Equals(input.FeedLoanAmount))
+                ) && 
+                (
+                    this.FeedMaturesOn == input.FeedMaturesOn ||
+                    (this.FeedMaturesOn != null &&
+                    this.FeedMaturesOn.Equals(input.FeedMaturesOn))
+                ) && 
+                (
+                    this.FeedMinimumBalance == input.FeedMinimumBalance ||
+                    (this.FeedMinimumBalance != null &&
+                    this.FeedMinimumBalance.Equals(input.FeedMinimumBalance))
+                ) && 
+                (
+                    this.FeedMinimumPayment == input.FeedMinimumPayment ||
+                    (this.FeedMinimumPayment != null &&
+                    this.FeedMinimumPayment.Equals(input.FeedMinimumPayment))
+                ) && 
+                (
+                    this.FeedName == input.FeedName ||
+                    (this.FeedName != null &&
+                    this.FeedName.Equals(input.FeedName))
+                ) && 
+                (
+                    this.FeedNickname == input.FeedNickname ||
+                    (this.FeedNickname != null &&
+                    this.FeedNickname.Equals(input.FeedNickname))
+                ) && 
+                (
+                    this.FeedOriginalBalance == input.FeedOriginalBalance ||
+                    (this.FeedOriginalBalance != null &&
+                    this.FeedOriginalBalance.Equals(input.FeedOriginalBalance))
+                ) && 
+                (
+                    this.FeedPaymentDueAt == input.FeedPaymentDueAt ||
+                    (this.FeedPaymentDueAt != null &&
+                    this.FeedPaymentDueAt.Equals(input.FeedPaymentDueAt))
+                ) && 
+                (
+                    this.FeedPayoffBalance == input.FeedPayoffBalance ||
+                    (this.FeedPayoffBalance != null &&
+                    this.FeedPayoffBalance.Equals(input.FeedPayoffBalance))
+                ) && 
+                (
+                    this.FeedRoutingNumber == input.FeedRoutingNumber ||
+                    (this.FeedRoutingNumber != null &&
+                    this.FeedRoutingNumber.Equals(input.FeedRoutingNumber))
+                ) && 
+                (
+                    this.FeedStartedOn == input.FeedStartedOn ||
+                    (this.FeedStartedOn != null &&
+                    this.FeedStartedOn.Equals(input.FeedStartedOn))
+                ) && 
+                (
+                    this.FeedStatementBalance == input.FeedStatementBalance ||
+                    (this.FeedStatementBalance != null &&
+                    this.FeedStatementBalance.Equals(input.FeedStatementBalance))
+                ) && 
+                (
+                    this.FeedTotalAccountValue == input.FeedTotalAccountValue ||
+                    (this.FeedTotalAccountValue != null &&
+                    this.FeedTotalAccountValue.Equals(input.FeedTotalAccountValue))
                 ) && 
                 (
                     this.Guid == input.Guid ||
@@ -770,6 +1630,11 @@ namespace MX.Platform.CSharp.Model
                     this.HoldingsValue == input.HoldingsValue ||
                     (this.HoldingsValue != null &&
                     this.HoldingsValue.Equals(input.HoldingsValue))
+                ) && 
+                (
+                    this.HoldingsValueSetBy == input.HoldingsValueSetBy ||
+                    (this.HoldingsValueSetBy != null &&
+                    this.HoldingsValueSetBy.Equals(input.HoldingsValueSetBy))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -787,6 +1652,11 @@ namespace MX.Platform.CSharp.Model
                     this.InstitutionCode.Equals(input.InstitutionCode))
                 ) && 
                 (
+                    this.InstitutionGuid == input.InstitutionGuid ||
+                    (this.InstitutionGuid != null &&
+                    this.InstitutionGuid.Equals(input.InstitutionGuid))
+                ) && 
+                (
                     this.InsuredName == input.InsuredName ||
                     (this.InsuredName != null &&
                     this.InsuredName.Equals(input.InsuredName))
@@ -797,9 +1667,19 @@ namespace MX.Platform.CSharp.Model
                     this.InterestRate.Equals(input.InterestRate))
                 ) && 
                 (
+                    this.InterestRateSetBy == input.InterestRateSetBy ||
+                    (this.InterestRateSetBy != null &&
+                    this.InterestRateSetBy.Equals(input.InterestRateSetBy))
+                ) && 
+                (
                     this.IsClosed == input.IsClosed ||
                     (this.IsClosed != null &&
                     this.IsClosed.Equals(input.IsClosed))
+                ) && 
+                (
+                    this.IsClosedSetBy == input.IsClosedSetBy ||
+                    (this.IsClosedSetBy != null &&
+                    this.IsClosedSetBy.Equals(input.IsClosedSetBy))
                 ) && 
                 (
                     this.IsHidden == input.IsHidden ||
@@ -817,14 +1697,29 @@ namespace MX.Platform.CSharp.Model
                     this.LastPayment.Equals(input.LastPayment))
                 ) && 
                 (
+                    this.LastPaymentSetBy == input.LastPaymentSetBy ||
+                    (this.LastPaymentSetBy != null &&
+                    this.LastPaymentSetBy.Equals(input.LastPaymentSetBy))
+                ) && 
+                (
                     this.LastPaymentAt == input.LastPaymentAt ||
                     (this.LastPaymentAt != null &&
                     this.LastPaymentAt.Equals(input.LastPaymentAt))
                 ) && 
                 (
+                    this.LastPaymentAtSetBy == input.LastPaymentAtSetBy ||
+                    (this.LastPaymentAtSetBy != null &&
+                    this.LastPaymentAtSetBy.Equals(input.LastPaymentAtSetBy))
+                ) && 
+                (
                     this.LoanAmount == input.LoanAmount ||
                     (this.LoanAmount != null &&
                     this.LoanAmount.Equals(input.LoanAmount))
+                ) && 
+                (
+                    this.LoanAmountSetBy == input.LoanAmountSetBy ||
+                    (this.LoanAmountSetBy != null &&
+                    this.LoanAmountSetBy.Equals(input.LoanAmountSetBy))
                 ) && 
                 (
                     this.MarginBalance == input.MarginBalance ||
@@ -835,6 +1730,11 @@ namespace MX.Platform.CSharp.Model
                     this.MaturesOn == input.MaturesOn ||
                     (this.MaturesOn != null &&
                     this.MaturesOn.Equals(input.MaturesOn))
+                ) && 
+                (
+                    this.MaturesOnSetBy == input.MaturesOnSetBy ||
+                    (this.MaturesOnSetBy != null &&
+                    this.MaturesOnSetBy.Equals(input.MaturesOnSetBy))
                 ) && 
                 (
                     this.MemberGuid == input.MemberGuid ||
@@ -862,9 +1762,19 @@ namespace MX.Platform.CSharp.Model
                     this.MinimumBalance.Equals(input.MinimumBalance))
                 ) && 
                 (
+                    this.MinimumBalanceSetBy == input.MinimumBalanceSetBy ||
+                    (this.MinimumBalanceSetBy != null &&
+                    this.MinimumBalanceSetBy.Equals(input.MinimumBalanceSetBy))
+                ) && 
+                (
                     this.MinimumPayment == input.MinimumPayment ||
                     (this.MinimumPayment != null &&
                     this.MinimumPayment.Equals(input.MinimumPayment))
+                ) && 
+                (
+                    this.MinimumPaymentSetBy == input.MinimumPaymentSetBy ||
+                    (this.MinimumPaymentSetBy != null &&
+                    this.MinimumPaymentSetBy.Equals(input.MinimumPaymentSetBy))
                 ) && 
                 (
                     this.Name == input.Name ||
@@ -872,14 +1782,29 @@ namespace MX.Platform.CSharp.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.NameSetBy == input.NameSetBy ||
+                    (this.NameSetBy != null &&
+                    this.NameSetBy.Equals(input.NameSetBy))
+                ) && 
+                (
                     this.Nickname == input.Nickname ||
                     (this.Nickname != null &&
                     this.Nickname.Equals(input.Nickname))
                 ) && 
                 (
+                    this.NicknameSetBy == input.NicknameSetBy ||
+                    (this.NicknameSetBy != null &&
+                    this.NicknameSetBy.Equals(input.NicknameSetBy))
+                ) && 
+                (
                     this.OriginalBalance == input.OriginalBalance ||
                     (this.OriginalBalance != null &&
                     this.OriginalBalance.Equals(input.OriginalBalance))
+                ) && 
+                (
+                    this.OriginalBalanceSetBy == input.OriginalBalanceSetBy ||
+                    (this.OriginalBalanceSetBy != null &&
+                    this.OriginalBalanceSetBy.Equals(input.OriginalBalanceSetBy))
                 ) && 
                 (
                     this.PayOutAmount == input.PayOutAmount ||
@@ -892,9 +1817,19 @@ namespace MX.Platform.CSharp.Model
                     this.PaymentDueAt.Equals(input.PaymentDueAt))
                 ) && 
                 (
+                    this.PaymentDueAtSetBy == input.PaymentDueAtSetBy ||
+                    (this.PaymentDueAtSetBy != null &&
+                    this.PaymentDueAtSetBy.Equals(input.PaymentDueAtSetBy))
+                ) && 
+                (
                     this.PayoffBalance == input.PayoffBalance ||
                     (this.PayoffBalance != null &&
                     this.PayoffBalance.Equals(input.PayoffBalance))
+                ) && 
+                (
+                    this.PayoffBalanceSetBy == input.PayoffBalanceSetBy ||
+                    (this.PayoffBalanceSetBy != null &&
+                    this.PayoffBalanceSetBy.Equals(input.PayoffBalanceSetBy))
                 ) && 
                 (
                     this.PremiumAmount == input.PremiumAmount ||
@@ -917,14 +1852,29 @@ namespace MX.Platform.CSharp.Model
                     this.StartedOn.Equals(input.StartedOn))
                 ) && 
                 (
+                    this.StartedOnSetBy == input.StartedOnSetBy ||
+                    (this.StartedOnSetBy != null &&
+                    this.StartedOnSetBy.Equals(input.StartedOnSetBy))
+                ) && 
+                (
                     this.StatementBalance == input.StatementBalance ||
                     (this.StatementBalance != null &&
                     this.StatementBalance.Equals(input.StatementBalance))
                 ) && 
                 (
+                    this.StatementBalanceSetBy == input.StatementBalanceSetBy ||
+                    (this.StatementBalanceSetBy != null &&
+                    this.StatementBalanceSetBy.Equals(input.StatementBalanceSetBy))
+                ) && 
+                (
                     this.Subtype == input.Subtype ||
                     (this.Subtype != null &&
                     this.Subtype.Equals(input.Subtype))
+                ) && 
+                (
+                    this.SubtypeSetBy == input.SubtypeSetBy ||
+                    (this.SubtypeSetBy != null &&
+                    this.SubtypeSetBy.Equals(input.SubtypeSetBy))
                 ) && 
                 (
                     this.TodayUglAmount == input.TodayUglAmount ||
@@ -942,6 +1892,11 @@ namespace MX.Platform.CSharp.Model
                     this.TotalAccountValue.Equals(input.TotalAccountValue))
                 ) && 
                 (
+                    this.TotalAccountValueSetBy == input.TotalAccountValueSetBy ||
+                    (this.TotalAccountValueSetBy != null &&
+                    this.TotalAccountValueSetBy.Equals(input.TotalAccountValueSetBy))
+                ) && 
+                (
                     this.TotalAccountValueUgl == input.TotalAccountValueUgl ||
                     (this.TotalAccountValueUgl != null &&
                     this.TotalAccountValueUgl.Equals(input.TotalAccountValueUgl))
@@ -950,6 +1905,11 @@ namespace MX.Platform.CSharp.Model
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
+                ) && 
+                (
+                    this.TypeSetBy == input.TypeSetBy ||
+                    (this.TypeSetBy != null &&
+                    this.TypeSetBy.Equals(input.TypeSetBy))
                 ) && 
                 (
                     this.UpdatedAt == input.UpdatedAt ||
@@ -981,6 +1941,10 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.AccountNumber.GetHashCode();
                 }
+                if (this.AccountNumberSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.AccountNumberSetBy.GetHashCode();
+                }
                 if (this.AccountOwnership != null)
                 {
                     hashCode = (hashCode * 59) + this.AccountOwnership.GetHashCode();
@@ -1001,29 +1965,61 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.Apr.GetHashCode();
                 }
+                if (this.AprSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.AprSetBy.GetHashCode();
+                }
                 if (this.Apy != null)
                 {
                     hashCode = (hashCode * 59) + this.Apy.GetHashCode();
+                }
+                if (this.ApySetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.ApySetBy.GetHashCode();
                 }
                 if (this.AvailableBalance != null)
                 {
                     hashCode = (hashCode * 59) + this.AvailableBalance.GetHashCode();
                 }
+                if (this.AvailableBalanceSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.AvailableBalanceSetBy.GetHashCode();
+                }
                 if (this.AvailableCredit != null)
                 {
                     hashCode = (hashCode * 59) + this.AvailableCredit.GetHashCode();
+                }
+                if (this.AvailableCreditSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.AvailableCreditSetBy.GetHashCode();
                 }
                 if (this.Balance != null)
                 {
                     hashCode = (hashCode * 59) + this.Balance.GetHashCode();
                 }
+                if (this.BalanceSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.BalanceSetBy.GetHashCode();
+                }
+                if (this.CalculatedApr != null)
+                {
+                    hashCode = (hashCode * 59) + this.CalculatedApr.GetHashCode();
+                }
                 if (this.CashBalance != null)
                 {
                     hashCode = (hashCode * 59) + this.CashBalance.GetHashCode();
                 }
+                if (this.CashBalanceSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.CashBalanceSetBy.GetHashCode();
+                }
                 if (this.CashSurrenderValue != null)
                 {
                     hashCode = (hashCode * 59) + this.CashSurrenderValue.GetHashCode();
+                }
+                if (this.CashSurrenderValueSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.CashSurrenderValueSetBy.GetHashCode();
                 }
                 if (this.CreatedAt != null)
                 {
@@ -1033,21 +2029,161 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.CreditLimit.GetHashCode();
                 }
+                if (this.CreditLimitSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.CreditLimitSetBy.GetHashCode();
+                }
                 if (this.CurrencyCode != null)
                 {
                     hashCode = (hashCode * 59) + this.CurrencyCode.GetHashCode();
+                }
+                if (this.CurrencyCodeSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.CurrencyCodeSetBy.GetHashCode();
                 }
                 if (this.DayPaymentIsDue != null)
                 {
                     hashCode = (hashCode * 59) + this.DayPaymentIsDue.GetHashCode();
                 }
+                if (this.DayPaymentIsDueSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.DayPaymentIsDueSetBy.GetHashCode();
+                }
                 if (this.DeathBenefit != null)
                 {
                     hashCode = (hashCode * 59) + this.DeathBenefit.GetHashCode();
                 }
+                if (this.DeathBenefitSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.DeathBenefitSetBy.GetHashCode();
+                }
                 if (this.FederalInsuranceStatus != null)
                 {
                     hashCode = (hashCode * 59) + this.FederalInsuranceStatus.GetHashCode();
+                }
+                if (this.FeedAccountNumber != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedAccountNumber.GetHashCode();
+                }
+                if (this.FeedAccountSubtype != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedAccountSubtype.GetHashCode();
+                }
+                if (this.FeedAccountType != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedAccountType.GetHashCode();
+                }
+                if (this.FeedApr != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedApr.GetHashCode();
+                }
+                if (this.FeedApy != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedApy.GetHashCode();
+                }
+                if (this.FeedAvailableBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedAvailableBalance.GetHashCode();
+                }
+                if (this.FeedBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedBalance.GetHashCode();
+                }
+                if (this.FeedCashBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedCashBalance.GetHashCode();
+                }
+                if (this.FeedCashSurrenderValue != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedCashSurrenderValue.GetHashCode();
+                }
+                if (this.FeedCreditLimit != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedCreditLimit.GetHashCode();
+                }
+                if (this.FeedCurrencyCode != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedCurrencyCode.GetHashCode();
+                }
+                if (this.FeedDayPaymentIsDue != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedDayPaymentIsDue.GetHashCode();
+                }
+                if (this.FeedDeathBenefit != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedDeathBenefit.GetHashCode();
+                }
+                if (this.FeedHoldingsValue != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedHoldingsValue.GetHashCode();
+                }
+                if (this.FeedInterestRate != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedInterestRate.GetHashCode();
+                }
+                if (this.FeedIsClosed != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedIsClosed.GetHashCode();
+                }
+                if (this.FeedLastPayment != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedLastPayment.GetHashCode();
+                }
+                if (this.FeedLastPaymentAt != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedLastPaymentAt.GetHashCode();
+                }
+                if (this.FeedLoanAmount != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedLoanAmount.GetHashCode();
+                }
+                if (this.FeedMaturesOn != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedMaturesOn.GetHashCode();
+                }
+                if (this.FeedMinimumBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedMinimumBalance.GetHashCode();
+                }
+                if (this.FeedMinimumPayment != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedMinimumPayment.GetHashCode();
+                }
+                if (this.FeedName != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedName.GetHashCode();
+                }
+                if (this.FeedNickname != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedNickname.GetHashCode();
+                }
+                if (this.FeedOriginalBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedOriginalBalance.GetHashCode();
+                }
+                if (this.FeedPaymentDueAt != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedPaymentDueAt.GetHashCode();
+                }
+                if (this.FeedPayoffBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedPayoffBalance.GetHashCode();
+                }
+                if (this.FeedRoutingNumber != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedRoutingNumber.GetHashCode();
+                }
+                if (this.FeedStartedOn != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedStartedOn.GetHashCode();
+                }
+                if (this.FeedStatementBalance != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedStatementBalance.GetHashCode();
+                }
+                if (this.FeedTotalAccountValue != null)
+                {
+                    hashCode = (hashCode * 59) + this.FeedTotalAccountValue.GetHashCode();
                 }
                 if (this.Guid != null)
                 {
@@ -1056,6 +2192,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.HoldingsValue != null)
                 {
                     hashCode = (hashCode * 59) + this.HoldingsValue.GetHashCode();
+                }
+                if (this.HoldingsValueSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.HoldingsValueSetBy.GetHashCode();
                 }
                 if (this.Id != null)
                 {
@@ -1069,6 +2209,10 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.InstitutionCode.GetHashCode();
                 }
+                if (this.InstitutionGuid != null)
+                {
+                    hashCode = (hashCode * 59) + this.InstitutionGuid.GetHashCode();
+                }
                 if (this.InsuredName != null)
                 {
                     hashCode = (hashCode * 59) + this.InsuredName.GetHashCode();
@@ -1077,9 +2221,17 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.InterestRate.GetHashCode();
                 }
+                if (this.InterestRateSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.InterestRateSetBy.GetHashCode();
+                }
                 if (this.IsClosed != null)
                 {
                     hashCode = (hashCode * 59) + this.IsClosed.GetHashCode();
+                }
+                if (this.IsClosedSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.IsClosedSetBy.GetHashCode();
                 }
                 if (this.IsHidden != null)
                 {
@@ -1093,13 +2245,25 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.LastPayment.GetHashCode();
                 }
+                if (this.LastPaymentSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.LastPaymentSetBy.GetHashCode();
+                }
                 if (this.LastPaymentAt != null)
                 {
                     hashCode = (hashCode * 59) + this.LastPaymentAt.GetHashCode();
                 }
+                if (this.LastPaymentAtSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.LastPaymentAtSetBy.GetHashCode();
+                }
                 if (this.LoanAmount != null)
                 {
                     hashCode = (hashCode * 59) + this.LoanAmount.GetHashCode();
+                }
+                if (this.LoanAmountSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.LoanAmountSetBy.GetHashCode();
                 }
                 if (this.MarginBalance != null)
                 {
@@ -1108,6 +2272,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.MaturesOn != null)
                 {
                     hashCode = (hashCode * 59) + this.MaturesOn.GetHashCode();
+                }
+                if (this.MaturesOnSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.MaturesOnSetBy.GetHashCode();
                 }
                 if (this.MemberGuid != null)
                 {
@@ -1129,21 +2297,41 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.MinimumBalance.GetHashCode();
                 }
+                if (this.MinimumBalanceSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.MinimumBalanceSetBy.GetHashCode();
+                }
                 if (this.MinimumPayment != null)
                 {
                     hashCode = (hashCode * 59) + this.MinimumPayment.GetHashCode();
+                }
+                if (this.MinimumPaymentSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.MinimumPaymentSetBy.GetHashCode();
                 }
                 if (this.Name != null)
                 {
                     hashCode = (hashCode * 59) + this.Name.GetHashCode();
                 }
+                if (this.NameSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.NameSetBy.GetHashCode();
+                }
                 if (this.Nickname != null)
                 {
                     hashCode = (hashCode * 59) + this.Nickname.GetHashCode();
                 }
+                if (this.NicknameSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.NicknameSetBy.GetHashCode();
+                }
                 if (this.OriginalBalance != null)
                 {
                     hashCode = (hashCode * 59) + this.OriginalBalance.GetHashCode();
+                }
+                if (this.OriginalBalanceSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.OriginalBalanceSetBy.GetHashCode();
                 }
                 if (this.PayOutAmount != null)
                 {
@@ -1153,9 +2341,17 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.PaymentDueAt.GetHashCode();
                 }
+                if (this.PaymentDueAtSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.PaymentDueAtSetBy.GetHashCode();
+                }
                 if (this.PayoffBalance != null)
                 {
                     hashCode = (hashCode * 59) + this.PayoffBalance.GetHashCode();
+                }
+                if (this.PayoffBalanceSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.PayoffBalanceSetBy.GetHashCode();
                 }
                 if (this.PremiumAmount != null)
                 {
@@ -1173,13 +2369,25 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.StartedOn.GetHashCode();
                 }
+                if (this.StartedOnSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.StartedOnSetBy.GetHashCode();
+                }
                 if (this.StatementBalance != null)
                 {
                     hashCode = (hashCode * 59) + this.StatementBalance.GetHashCode();
                 }
+                if (this.StatementBalanceSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.StatementBalanceSetBy.GetHashCode();
+                }
                 if (this.Subtype != null)
                 {
                     hashCode = (hashCode * 59) + this.Subtype.GetHashCode();
+                }
+                if (this.SubtypeSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.SubtypeSetBy.GetHashCode();
                 }
                 if (this.TodayUglAmount != null)
                 {
@@ -1193,6 +2401,10 @@ namespace MX.Platform.CSharp.Model
                 {
                     hashCode = (hashCode * 59) + this.TotalAccountValue.GetHashCode();
                 }
+                if (this.TotalAccountValueSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.TotalAccountValueSetBy.GetHashCode();
+                }
                 if (this.TotalAccountValueUgl != null)
                 {
                     hashCode = (hashCode * 59) + this.TotalAccountValueUgl.GetHashCode();
@@ -1200,6 +2412,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.Type != null)
                 {
                     hashCode = (hashCode * 59) + this.Type.GetHashCode();
+                }
+                if (this.TypeSetBy != null)
+                {
+                    hashCode = (hashCode * 59) + this.TypeSetBy.GetHashCode();
                 }
                 if (this.UpdatedAt != null)
                 {

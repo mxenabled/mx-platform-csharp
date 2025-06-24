@@ -64,6 +64,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'AccountNumberSetBy'
+        /// </summary>
+        [Fact]
+        public void AccountNumberSetByTest()
+        {
+            // TODO unit test for the property 'AccountNumberSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'AccountOwnership'
         /// </summary>
         [Fact]
@@ -109,12 +118,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'AprSetBy'
+        /// </summary>
+        [Fact]
+        public void AprSetByTest()
+        {
+            // TODO unit test for the property 'AprSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'Apy'
         /// </summary>
         [Fact]
         public void ApyTest()
         {
             // TODO unit test for the property 'Apy'
+        }
+
+        /// <summary>
+        /// Test the property 'ApySetBy'
+        /// </summary>
+        [Fact]
+        public void ApySetByTest()
+        {
+            // TODO unit test for the property 'ApySetBy'
         }
 
         /// <summary>
@@ -127,12 +154,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'AvailableBalanceSetBy'
+        /// </summary>
+        [Fact]
+        public void AvailableBalanceSetByTest()
+        {
+            // TODO unit test for the property 'AvailableBalanceSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'AvailableCredit'
         /// </summary>
         [Fact]
         public void AvailableCreditTest()
         {
             // TODO unit test for the property 'AvailableCredit'
+        }
+
+        /// <summary>
+        /// Test the property 'AvailableCreditSetBy'
+        /// </summary>
+        [Fact]
+        public void AvailableCreditSetByTest()
+        {
+            // TODO unit test for the property 'AvailableCreditSetBy'
         }
 
         /// <summary>
@@ -145,6 +190,24 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'BalanceSetBy'
+        /// </summary>
+        [Fact]
+        public void BalanceSetByTest()
+        {
+            // TODO unit test for the property 'BalanceSetBy'
+        }
+
+        /// <summary>
+        /// Test the property 'CalculatedApr'
+        /// </summary>
+        [Fact]
+        public void CalculatedAprTest()
+        {
+            // TODO unit test for the property 'CalculatedApr'
+        }
+
+        /// <summary>
         /// Test the property 'CashBalance'
         /// </summary>
         [Fact]
@@ -154,12 +217,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'CashBalanceSetBy'
+        /// </summary>
+        [Fact]
+        public void CashBalanceSetByTest()
+        {
+            // TODO unit test for the property 'CashBalanceSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'CashSurrenderValue'
         /// </summary>
         [Fact]
         public void CashSurrenderValueTest()
         {
             // TODO unit test for the property 'CashSurrenderValue'
+        }
+
+        /// <summary>
+        /// Test the property 'CashSurrenderValueSetBy'
+        /// </summary>
+        [Fact]
+        public void CashSurrenderValueSetByTest()
+        {
+            // TODO unit test for the property 'CashSurrenderValueSetBy'
         }
 
         /// <summary>
@@ -181,12 +262,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'CreditLimitSetBy'
+        /// </summary>
+        [Fact]
+        public void CreditLimitSetByTest()
+        {
+            // TODO unit test for the property 'CreditLimitSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'CurrencyCode'
         /// </summary>
         [Fact]
         public void CurrencyCodeTest()
         {
             // TODO unit test for the property 'CurrencyCode'
+        }
+
+        /// <summary>
+        /// Test the property 'CurrencyCodeSetBy'
+        /// </summary>
+        [Fact]
+        public void CurrencyCodeSetByTest()
+        {
+            // TODO unit test for the property 'CurrencyCodeSetBy'
         }
 
         /// <summary>
@@ -199,6 +298,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'DayPaymentIsDueSetBy'
+        /// </summary>
+        [Fact]
+        public void DayPaymentIsDueSetByTest()
+        {
+            // TODO unit test for the property 'DayPaymentIsDueSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'DeathBenefit'
         /// </summary>
         [Fact]
@@ -208,12 +316,300 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'DeathBenefitSetBy'
+        /// </summary>
+        [Fact]
+        public void DeathBenefitSetByTest()
+        {
+            // TODO unit test for the property 'DeathBenefitSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'FederalInsuranceStatus'
         /// </summary>
         [Fact]
         public void FederalInsuranceStatusTest()
         {
             // TODO unit test for the property 'FederalInsuranceStatus'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedAccountNumber'
+        /// </summary>
+        [Fact]
+        public void FeedAccountNumberTest()
+        {
+            // TODO unit test for the property 'FeedAccountNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedAccountSubtype'
+        /// </summary>
+        [Fact]
+        public void FeedAccountSubtypeTest()
+        {
+            // TODO unit test for the property 'FeedAccountSubtype'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedAccountType'
+        /// </summary>
+        [Fact]
+        public void FeedAccountTypeTest()
+        {
+            // TODO unit test for the property 'FeedAccountType'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedApr'
+        /// </summary>
+        [Fact]
+        public void FeedAprTest()
+        {
+            // TODO unit test for the property 'FeedApr'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedApy'
+        /// </summary>
+        [Fact]
+        public void FeedApyTest()
+        {
+            // TODO unit test for the property 'FeedApy'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedAvailableBalance'
+        /// </summary>
+        [Fact]
+        public void FeedAvailableBalanceTest()
+        {
+            // TODO unit test for the property 'FeedAvailableBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedBalance'
+        /// </summary>
+        [Fact]
+        public void FeedBalanceTest()
+        {
+            // TODO unit test for the property 'FeedBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedCashBalance'
+        /// </summary>
+        [Fact]
+        public void FeedCashBalanceTest()
+        {
+            // TODO unit test for the property 'FeedCashBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedCashSurrenderValue'
+        /// </summary>
+        [Fact]
+        public void FeedCashSurrenderValueTest()
+        {
+            // TODO unit test for the property 'FeedCashSurrenderValue'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedCreditLimit'
+        /// </summary>
+        [Fact]
+        public void FeedCreditLimitTest()
+        {
+            // TODO unit test for the property 'FeedCreditLimit'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedCurrencyCode'
+        /// </summary>
+        [Fact]
+        public void FeedCurrencyCodeTest()
+        {
+            // TODO unit test for the property 'FeedCurrencyCode'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedDayPaymentIsDue'
+        /// </summary>
+        [Fact]
+        public void FeedDayPaymentIsDueTest()
+        {
+            // TODO unit test for the property 'FeedDayPaymentIsDue'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedDeathBenefit'
+        /// </summary>
+        [Fact]
+        public void FeedDeathBenefitTest()
+        {
+            // TODO unit test for the property 'FeedDeathBenefit'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedHoldingsValue'
+        /// </summary>
+        [Fact]
+        public void FeedHoldingsValueTest()
+        {
+            // TODO unit test for the property 'FeedHoldingsValue'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedInterestRate'
+        /// </summary>
+        [Fact]
+        public void FeedInterestRateTest()
+        {
+            // TODO unit test for the property 'FeedInterestRate'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedIsClosed'
+        /// </summary>
+        [Fact]
+        public void FeedIsClosedTest()
+        {
+            // TODO unit test for the property 'FeedIsClosed'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedLastPayment'
+        /// </summary>
+        [Fact]
+        public void FeedLastPaymentTest()
+        {
+            // TODO unit test for the property 'FeedLastPayment'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedLastPaymentAt'
+        /// </summary>
+        [Fact]
+        public void FeedLastPaymentAtTest()
+        {
+            // TODO unit test for the property 'FeedLastPaymentAt'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedLoanAmount'
+        /// </summary>
+        [Fact]
+        public void FeedLoanAmountTest()
+        {
+            // TODO unit test for the property 'FeedLoanAmount'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedMaturesOn'
+        /// </summary>
+        [Fact]
+        public void FeedMaturesOnTest()
+        {
+            // TODO unit test for the property 'FeedMaturesOn'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedMinimumBalance'
+        /// </summary>
+        [Fact]
+        public void FeedMinimumBalanceTest()
+        {
+            // TODO unit test for the property 'FeedMinimumBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedMinimumPayment'
+        /// </summary>
+        [Fact]
+        public void FeedMinimumPaymentTest()
+        {
+            // TODO unit test for the property 'FeedMinimumPayment'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedName'
+        /// </summary>
+        [Fact]
+        public void FeedNameTest()
+        {
+            // TODO unit test for the property 'FeedName'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedNickname'
+        /// </summary>
+        [Fact]
+        public void FeedNicknameTest()
+        {
+            // TODO unit test for the property 'FeedNickname'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedOriginalBalance'
+        /// </summary>
+        [Fact]
+        public void FeedOriginalBalanceTest()
+        {
+            // TODO unit test for the property 'FeedOriginalBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedPaymentDueAt'
+        /// </summary>
+        [Fact]
+        public void FeedPaymentDueAtTest()
+        {
+            // TODO unit test for the property 'FeedPaymentDueAt'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedPayoffBalance'
+        /// </summary>
+        [Fact]
+        public void FeedPayoffBalanceTest()
+        {
+            // TODO unit test for the property 'FeedPayoffBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedRoutingNumber'
+        /// </summary>
+        [Fact]
+        public void FeedRoutingNumberTest()
+        {
+            // TODO unit test for the property 'FeedRoutingNumber'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedStartedOn'
+        /// </summary>
+        [Fact]
+        public void FeedStartedOnTest()
+        {
+            // TODO unit test for the property 'FeedStartedOn'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedStatementBalance'
+        /// </summary>
+        [Fact]
+        public void FeedStatementBalanceTest()
+        {
+            // TODO unit test for the property 'FeedStatementBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'FeedTotalAccountValue'
+        /// </summary>
+        [Fact]
+        public void FeedTotalAccountValueTest()
+        {
+            // TODO unit test for the property 'FeedTotalAccountValue'
         }
 
         /// <summary>
@@ -232,6 +628,15 @@ namespace MX.Platform.CSharp.Test.Model
         public void HoldingsValueTest()
         {
             // TODO unit test for the property 'HoldingsValue'
+        }
+
+        /// <summary>
+        /// Test the property 'HoldingsValueSetBy'
+        /// </summary>
+        [Fact]
+        public void HoldingsValueSetByTest()
+        {
+            // TODO unit test for the property 'HoldingsValueSetBy'
         }
 
         /// <summary>
@@ -262,6 +667,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'InstitutionGuid'
+        /// </summary>
+        [Fact]
+        public void InstitutionGuidTest()
+        {
+            // TODO unit test for the property 'InstitutionGuid'
+        }
+
+        /// <summary>
         /// Test the property 'InsuredName'
         /// </summary>
         [Fact]
@@ -280,12 +694,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'InterestRateSetBy'
+        /// </summary>
+        [Fact]
+        public void InterestRateSetByTest()
+        {
+            // TODO unit test for the property 'InterestRateSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'IsClosed'
         /// </summary>
         [Fact]
         public void IsClosedTest()
         {
             // TODO unit test for the property 'IsClosed'
+        }
+
+        /// <summary>
+        /// Test the property 'IsClosedSetBy'
+        /// </summary>
+        [Fact]
+        public void IsClosedSetByTest()
+        {
+            // TODO unit test for the property 'IsClosedSetBy'
         }
 
         /// <summary>
@@ -316,6 +748,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'LastPaymentSetBy'
+        /// </summary>
+        [Fact]
+        public void LastPaymentSetByTest()
+        {
+            // TODO unit test for the property 'LastPaymentSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'LastPaymentAt'
         /// </summary>
         [Fact]
@@ -325,12 +766,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'LastPaymentAtSetBy'
+        /// </summary>
+        [Fact]
+        public void LastPaymentAtSetByTest()
+        {
+            // TODO unit test for the property 'LastPaymentAtSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'LoanAmount'
         /// </summary>
         [Fact]
         public void LoanAmountTest()
         {
             // TODO unit test for the property 'LoanAmount'
+        }
+
+        /// <summary>
+        /// Test the property 'LoanAmountSetBy'
+        /// </summary>
+        [Fact]
+        public void LoanAmountSetByTest()
+        {
+            // TODO unit test for the property 'LoanAmountSetBy'
         }
 
         /// <summary>
@@ -349,6 +808,15 @@ namespace MX.Platform.CSharp.Test.Model
         public void MaturesOnTest()
         {
             // TODO unit test for the property 'MaturesOn'
+        }
+
+        /// <summary>
+        /// Test the property 'MaturesOnSetBy'
+        /// </summary>
+        [Fact]
+        public void MaturesOnSetByTest()
+        {
+            // TODO unit test for the property 'MaturesOnSetBy'
         }
 
         /// <summary>
@@ -397,12 +865,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'MinimumBalanceSetBy'
+        /// </summary>
+        [Fact]
+        public void MinimumBalanceSetByTest()
+        {
+            // TODO unit test for the property 'MinimumBalanceSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'MinimumPayment'
         /// </summary>
         [Fact]
         public void MinimumPaymentTest()
         {
             // TODO unit test for the property 'MinimumPayment'
+        }
+
+        /// <summary>
+        /// Test the property 'MinimumPaymentSetBy'
+        /// </summary>
+        [Fact]
+        public void MinimumPaymentSetByTest()
+        {
+            // TODO unit test for the property 'MinimumPaymentSetBy'
         }
 
         /// <summary>
@@ -415,6 +901,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'NameSetBy'
+        /// </summary>
+        [Fact]
+        public void NameSetByTest()
+        {
+            // TODO unit test for the property 'NameSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'Nickname'
         /// </summary>
         [Fact]
@@ -424,12 +919,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'NicknameSetBy'
+        /// </summary>
+        [Fact]
+        public void NicknameSetByTest()
+        {
+            // TODO unit test for the property 'NicknameSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'OriginalBalance'
         /// </summary>
         [Fact]
         public void OriginalBalanceTest()
         {
             // TODO unit test for the property 'OriginalBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'OriginalBalanceSetBy'
+        /// </summary>
+        [Fact]
+        public void OriginalBalanceSetByTest()
+        {
+            // TODO unit test for the property 'OriginalBalanceSetBy'
         }
 
         /// <summary>
@@ -451,12 +964,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'PaymentDueAtSetBy'
+        /// </summary>
+        [Fact]
+        public void PaymentDueAtSetByTest()
+        {
+            // TODO unit test for the property 'PaymentDueAtSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'PayoffBalance'
         /// </summary>
         [Fact]
         public void PayoffBalanceTest()
         {
             // TODO unit test for the property 'PayoffBalance'
+        }
+
+        /// <summary>
+        /// Test the property 'PayoffBalanceSetBy'
+        /// </summary>
+        [Fact]
+        public void PayoffBalanceSetByTest()
+        {
+            // TODO unit test for the property 'PayoffBalanceSetBy'
         }
 
         /// <summary>
@@ -496,6 +1027,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'StartedOnSetBy'
+        /// </summary>
+        [Fact]
+        public void StartedOnSetByTest()
+        {
+            // TODO unit test for the property 'StartedOnSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'StatementBalance'
         /// </summary>
         [Fact]
@@ -505,12 +1045,30 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'StatementBalanceSetBy'
+        /// </summary>
+        [Fact]
+        public void StatementBalanceSetByTest()
+        {
+            // TODO unit test for the property 'StatementBalanceSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'Subtype'
         /// </summary>
         [Fact]
         public void SubtypeTest()
         {
             // TODO unit test for the property 'Subtype'
+        }
+
+        /// <summary>
+        /// Test the property 'SubtypeSetBy'
+        /// </summary>
+        [Fact]
+        public void SubtypeSetByTest()
+        {
+            // TODO unit test for the property 'SubtypeSetBy'
         }
 
         /// <summary>
@@ -541,6 +1099,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'TotalAccountValueSetBy'
+        /// </summary>
+        [Fact]
+        public void TotalAccountValueSetByTest()
+        {
+            // TODO unit test for the property 'TotalAccountValueSetBy'
+        }
+
+        /// <summary>
         /// Test the property 'TotalAccountValueUgl'
         /// </summary>
         [Fact]
@@ -556,6 +1123,15 @@ namespace MX.Platform.CSharp.Test.Model
         public void TypeTest()
         {
             // TODO unit test for the property 'Type'
+        }
+
+        /// <summary>
+        /// Test the property 'TypeSetBy'
+        /// </summary>
+        [Fact]
+        public void TypeSetByTest()
+        {
+            // TODO unit test for the property 'TypeSetBy'
         }
 
         /// <summary>
