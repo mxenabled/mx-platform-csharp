@@ -35,9 +35,11 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="includeHoldings">When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. (optional)</param>
+        /// <param name="includeTransactions">When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MemberResponseBody</returns>
-        MemberResponseBody AggregateMember(string memberGuid, string userGuid, int operationIndex = 0);
+        MemberResponseBody AggregateMember(string memberGuid, string userGuid, bool? includeHoldings = default(bool?), bool? includeTransactions = default(bool?), int operationIndex = 0);
 
         /// <summary>
         /// Aggregate member
@@ -48,9 +50,11 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="includeHoldings">When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. (optional)</param>
+        /// <param name="includeTransactions">When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MemberResponseBody</returns>
-        ApiResponse<MemberResponseBody> AggregateMemberWithHttpInfo(string memberGuid, string userGuid, int operationIndex = 0);
+        ApiResponse<MemberResponseBody> AggregateMemberWithHttpInfo(string memberGuid, string userGuid, bool? includeHoldings = default(bool?), bool? includeTransactions = default(bool?), int operationIndex = 0);
         /// <summary>
         /// Check balances
         /// </summary>
@@ -2900,10 +2904,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="includeHoldings">When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. (optional)</param>
+        /// <param name="includeTransactions">When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MemberResponseBody</returns>
-        System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync(string memberGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync(string memberGuid, string userGuid, bool? includeHoldings = default(bool?), bool? includeTransactions = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// Aggregate member
@@ -2914,10 +2920,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="includeHoldings">When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. (optional)</param>
+        /// <param name="includeTransactions">When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberWithHttpInfoAsync(string memberGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberWithHttpInfoAsync(string memberGuid, string userGuid, bool? includeHoldings = default(bool?), bool? includeTransactions = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Check balances
         /// </summary>
@@ -6090,11 +6098,13 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="includeHoldings">When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. (optional)</param>
+        /// <param name="includeTransactions">When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>MemberResponseBody</returns>
-        public MemberResponseBody AggregateMember(string memberGuid, string userGuid, int operationIndex = 0)
+        public MemberResponseBody AggregateMember(string memberGuid, string userGuid, bool? includeHoldings = default(bool?), bool? includeTransactions = default(bool?), int operationIndex = 0)
         {
-            MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> localVarResponse = AggregateMemberWithHttpInfo(memberGuid, userGuid);
+            MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> localVarResponse = AggregateMemberWithHttpInfo(memberGuid, userGuid, includeHoldings, includeTransactions);
             return localVarResponse.Data;
         }
 
@@ -6104,9 +6114,11 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="includeHoldings">When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. (optional)</param>
+        /// <param name="includeTransactions">When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of MemberResponseBody</returns>
-        public MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> AggregateMemberWithHttpInfo(string memberGuid, string userGuid, int operationIndex = 0)
+        public MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> AggregateMemberWithHttpInfo(string memberGuid, string userGuid, bool? includeHoldings = default(bool?), bool? includeTransactions = default(bool?), int operationIndex = 0)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -6144,6 +6156,14 @@ namespace MX.Platform.CSharp.Api
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (includeHoldings != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "include_holdings", includeHoldings));
+            }
+            if (includeTransactions != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "include_transactions", includeTransactions));
+            }
 
             localVarRequestOptions.Operation = "MxPlatformApi.AggregateMember";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -6175,12 +6195,14 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="includeHoldings">When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. (optional)</param>
+        /// <param name="includeTransactions">When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of MemberResponseBody</returns>
-        public async System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync(string memberGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync(string memberGuid, string userGuid, bool? includeHoldings = default(bool?), bool? includeTransactions = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> localVarResponse = await AggregateMemberWithHttpInfoAsync(memberGuid, userGuid, operationIndex, cancellationToken).ConfigureAwait(false);
+            MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody> localVarResponse = await AggregateMemberWithHttpInfoAsync(memberGuid, userGuid, includeHoldings, includeTransactions, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6190,10 +6212,12 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique id for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique id for a &#x60;user&#x60;.</param>
+        /// <param name="includeHoldings">When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. (optional)</param>
+        /// <param name="includeTransactions">When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
-        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody>> AggregateMemberWithHttpInfoAsync(string memberGuid, string userGuid, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<MX.Platform.CSharp.Client.ApiResponse<MemberResponseBody>> AggregateMemberWithHttpInfoAsync(string memberGuid, string userGuid, bool? includeHoldings = default(bool?), bool? includeTransactions = default(bool?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -6232,6 +6256,14 @@ namespace MX.Platform.CSharp.Api
 
             localVarRequestOptions.PathParameters.Add("member_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(memberGuid)); // path parameter
             localVarRequestOptions.PathParameters.Add("user_guid", MX.Platform.CSharp.Client.ClientUtils.ParameterToString(userGuid)); // path parameter
+            if (includeHoldings != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "include_holdings", includeHoldings));
+            }
+            if (includeTransactions != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(MX.Platform.CSharp.Client.ClientUtils.ParameterToMultiMap("", "include_transactions", includeTransactions));
+            }
 
             localVarRequestOptions.Operation = "MxPlatformApi.AggregateMember";
             localVarRequestOptions.OperationIndex = operationIndex;

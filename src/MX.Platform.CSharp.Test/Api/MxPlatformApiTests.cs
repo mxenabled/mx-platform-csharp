@@ -63,7 +63,9 @@ namespace MX.Platform.CSharp.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //string memberGuid = null;
             //string userGuid = null;
-            //var response = instance.AggregateMember(memberGuid, userGuid);
+            //bool? includeHoldings = null;
+            //bool? includeTransactions = null;
+            //var response = instance.AggregateMember(memberGuid, userGuid, includeHoldings, includeTransactions);
             //Assert.IsType<MemberResponseBody>(response);
         }
 

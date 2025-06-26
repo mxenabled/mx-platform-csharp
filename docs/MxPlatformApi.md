@@ -114,7 +114,7 @@ All URIs are relative to *https://api.mx.com*
 
 <a id="aggregatemember"></a>
 # **AggregateMember**
-> MemberResponseBody AggregateMember (string memberGuid, string userGuid)
+> MemberResponseBody AggregateMember (string memberGuid, string userGuid, bool? includeHoldings = null, bool? includeTransactions = null)
 
 Aggregate member
 
@@ -143,11 +143,13 @@ namespace Example
             var apiInstance = new MxPlatformApi(config);
             var memberGuid = MBR-7c6f361b-e582-15b6-60c0-358f12466b4b;  // string | The unique id for a `member`.
             var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var includeHoldings = false;  // bool? | When set to `false`, the aggregation will not gather holdings data. Defaults to `true`. (optional) 
+            var includeTransactions = false;  // bool? | When set to `false`, the aggregation will not gather transactions data. Defaults to `true`. (optional) 
 
             try
             {
                 // Aggregate member
-                MemberResponseBody result = apiInstance.AggregateMember(memberGuid, userGuid);
+                MemberResponseBody result = apiInstance.AggregateMember(memberGuid, userGuid, includeHoldings, includeTransactions);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -168,7 +170,7 @@ This returns an ApiResponse object which contains the response data, status code
 try
 {
     // Aggregate member
-    ApiResponse<MemberResponseBody> response = apiInstance.AggregateMemberWithHttpInfo(memberGuid, userGuid);
+    ApiResponse<MemberResponseBody> response = apiInstance.AggregateMemberWithHttpInfo(memberGuid, userGuid, includeHoldings, includeTransactions);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
@@ -187,6 +189,8 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **memberGuid** | **string** | The unique id for a &#x60;member&#x60;. |  |
 | **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **includeHoldings** | **bool?** | When set to &#x60;false&#x60;, the aggregation will not gather holdings data. Defaults to &#x60;true&#x60;. | [optional]  |
+| **includeTransactions** | **bool?** | When set to &#x60;false&#x60;, the aggregation will not gather transactions data. Defaults to &#x60;true&#x60;. | [optional]  |
 
 ### Return type
 
