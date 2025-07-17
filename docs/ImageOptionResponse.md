@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DataUri** | **string** |  | [optional] 
+**Guid** | **string** |  | [optional] 
 **Label** | **string** |  | [optional] 
 **Value** | **string** |  | [optional] 
 

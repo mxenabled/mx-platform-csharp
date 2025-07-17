@@ -8067,6 +8067,10 @@ components:
             \ ..."
           nullable: true
           type: string
+        guid:
+          example: CRO-e7ecc864-61fd-47a6-a122-3cbc9016660d
+          nullable: true
+          type: string
         label:
           example: IMAGE_1
           nullable: true
@@ -9584,6 +9588,10 @@ components:
       type: object
     OptionResponse:
       properties:
+        guid:
+          example: CRO-6d64cc9a-0998-461d-a072-78801143337e
+          nullable: true
+          type: string
         label:
           example: IMAGE_1
           nullable: true

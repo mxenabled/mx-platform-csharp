@@ -64,6 +64,15 @@ namespace MX.Platform.CSharp.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'Guid'
+        /// </summary>
+        [Fact]
+        public void GuidTest()
+        {
+            // TODO unit test for the property 'Guid'
+        }
+
+        /// <summary>
         /// Test the property 'Label'
         /// </summary>
         [Fact]

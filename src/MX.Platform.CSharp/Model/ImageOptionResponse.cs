@@ -35,11 +35,13 @@ namespace MX.Platform.CSharp.Model
         /// Initializes a new instance of the <see cref="ImageOptionResponse" /> class.
         /// </summary>
         /// <param name="dataUri">dataUri.</param>
+        /// <param name="guid">guid.</param>
         /// <param name="label">label.</param>
         /// <param name="value">value.</param>
-        public ImageOptionResponse(string dataUri = default(string), string label = default(string), string value = default(string))
+        public ImageOptionResponse(string dataUri = default(string), string guid = default(string), string label = default(string), string value = default(string))
         {
             this.DataUri = dataUri;
+            this.Guid = guid;
             this.Label = label;
             this.Value = value;
         }
@@ -50,6 +52,13 @@ namespace MX.Platform.CSharp.Model
         /// <example>data:image/png;base64,iVBORw0KGgoAAAANSUh ... more image data ...</example>
         [DataMember(Name = "data_uri", EmitDefaultValue = true)]
         public string DataUri { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Guid
+        /// </summary>
+        /// <example>CRO-e7ecc864-61fd-47a6-a122-3cbc9016660d</example>
+        [DataMember(Name = "guid", EmitDefaultValue = true)]
+        public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets Label
@@ -74,6 +83,7 @@ namespace MX.Platform.CSharp.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class ImageOptionResponse {\n");
             sb.Append("  DataUri: ").Append(DataUri).Append("\n");
+            sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -117,6 +127,11 @@ namespace MX.Platform.CSharp.Model
                     this.DataUri.Equals(input.DataUri))
                 ) && 
                 (
+                    this.Guid == input.Guid ||
+                    (this.Guid != null &&
+                    this.Guid.Equals(input.Guid))
+                ) && 
+                (
                     this.Label == input.Label ||
                     (this.Label != null &&
                     this.Label.Equals(input.Label))
@@ -140,6 +155,10 @@ namespace MX.Platform.CSharp.Model
                 if (this.DataUri != null)
                 {
                     hashCode = (hashCode * 59) + this.DataUri.GetHashCode();
+                }
+                if (this.Guid != null)
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
                 }
                 if (this.Label != null)
                 {
