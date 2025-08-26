@@ -190,7 +190,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        /// <example>Whole foods</example>
+        /// <example>Whole Foods</example>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 

@@ -10657,7 +10657,7 @@ components:
           nullable: true
           type: string
         description:
-          example: Whole foods
+          example: Whole Foods
           nullable: true
           type: string
         extended_transaction_type:
