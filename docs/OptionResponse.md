@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Guid** | **string** |  | [optional] 
 **Label** | **string** |  | [optional] 
 **Value** | **string** |  | [optional] 
 

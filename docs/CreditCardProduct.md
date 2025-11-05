@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AnnualFee** | **decimal** |  | [optional] 
-**DurationOfIntroductoryRateOnBalanceTransfer** | **int** |  | [optional] 
-**DurationOfIntroductoryRateOnPurchases** | **int** |  | [optional] 
+**DurationOfIntroductoryRateOnBalanceTransfer** | **int?** |  | [optional] 
+**DurationOfIntroductoryRateOnPurchases** | **int?** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **HasCashbackRewards** | **bool** |  | [optional] 
 **HasOtherRewards** | **bool** |  | [optional] 

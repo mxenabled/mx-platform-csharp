@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **BackgroundAggregationIsDisabled** | **bool** |  | [optional] 
 **ConnectionStatus** | **string** |  | [optional] 
 **ConnectionStatusMessage** | **string** |  | [optional] 
-**Error** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **Id** | **string** |  | [optional] 
 **InstitutionCode** | **string** |  | [optional] 
