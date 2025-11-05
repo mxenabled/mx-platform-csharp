@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Description** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **HasAssociatedAccounts** | **bool?** |  | [optional] 
+**HasAssociatedCategories** | **bool?** |  | [optional] 
 **HasAssociatedMerchants** | **bool?** |  | [optional] 
 **HasAssociatedScheduledPayments** | **bool?** |  | [optional] 
 **HasAssociatedTransactions** | **bool?** |  | [optional] 

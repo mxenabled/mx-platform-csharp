@@ -1,6 +1,6 @@
 # MX.Platform.CSharp.Api.SpendingPlanApi
 
-All URIs are relative to *https://api.mx.com*
+All URIs are relative to *https://int-api.mx.com*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mx.com*
 | [**ListSpendingPlanIterationItems**](SpendingPlanApi.md#listspendingplaniterationitems) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items | List spending plan iteration items |
 | [**ListSpendingPlanIterations**](SpendingPlanApi.md#listspendingplaniterations) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations | List spending plan iterations |
 | [**ListSpendingPlans**](SpendingPlanApi.md#listspendingplans) | **GET** /users/{user_guid}/spending_plans | List spending plans |
+| [**ReadCurrentSpendingPlanIteration**](SpendingPlanApi.md#readcurrentspendingplaniteration) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current | Read current spending plan iteration |
 | [**ReadSpendingPlanAccount**](SpendingPlanApi.md#readspendingplanaccount) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/spending_plan_accounts/{spending_plan_account_guid} | Read spending plan account |
 | [**ReadSpendingPlanIteration**](SpendingPlanApi.md#readspendingplaniteration) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/{iteration_number} | Read a spending plan iteration |
 | [**ReadSpendingPlanIterationItem**](SpendingPlanApi.md#readspendingplaniterationitem) | **GET** /users/{user_guid}/spending_plans/{spending_plan_guid}/iterations/current/iteration_items/{iteration_item_guid} | Read a spending plan iteration item |
@@ -42,13 +43,13 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
 
             try
             {
@@ -91,7 +92,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 
 ### Return type
 
@@ -137,14 +138,14 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanIterationItemCreateRequestBody = new SpendingPlanIterationItemCreateRequestBody(); // SpendingPlanIterationItemCreateRequestBody | Iteration item to be created with required parameter (planned_amount)
 
             try
@@ -189,7 +190,7 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md) | Iteration item to be created with required parameter (planned_amount) |  |
 
 ### Return type
@@ -236,13 +237,13 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique ID for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
 
             try
@@ -282,7 +283,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique ID for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 
 ### Return type
@@ -329,13 +330,13 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique ID for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
             var spendingPlanAccountGuid = ACT-e9f80fee-84da-7s7r-9a5e-0346g4279b4c;  // string | The unique ID for the specified account.
 
@@ -376,7 +377,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique ID for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 | **spendingPlanAccountGuid** | **string** | The unique ID for the specified account. |  |
 
@@ -424,13 +425,13 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique ID for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
             var iterationItemGuid = SII-a4dc1549-da28-1245-9c9c-53eee4cdfbe3;  // string | The unique ID for the `iteration_item`.
 
@@ -471,7 +472,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique ID for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 | **iterationItemGuid** | **string** | The unique ID for the &#x60;iteration_item&#x60;. |  |
 
@@ -519,16 +520,16 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -571,10 +572,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
-| **page** | **int?** | Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
@@ -620,16 +621,16 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -672,10 +673,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
-| **page** | **int?** | Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
@@ -721,16 +722,16 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -773,10 +774,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
-| **page** | **int?** | Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
@@ -822,15 +823,15 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -873,13 +874,114 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
-| **page** | **int?** | Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
 [**SpendingPlansResponseBody**](SpendingPlansResponseBody.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/vnd.mx.api.v1+json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="readcurrentspendingplaniteration"></a>
+# **ReadCurrentSpendingPlanIteration**
+> SpendingPlanIterationResponse ReadCurrentSpendingPlanIteration (string userGuid, string spendingPlanGuid, int? page = null, int? recordsPerPage = null)
+
+Read current spending plan iteration
+
+Use this endpoint to read the attributes of the current spending plan `iteration`.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using MX.Platform.CSharp.Api;
+using MX.Platform.CSharp.Client;
+using MX.Platform.CSharp.Model;
+
+namespace Example
+{
+    public class ReadCurrentSpendingPlanIterationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://int-api.mx.com";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            var apiInstance = new SpendingPlanApi(config);
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
+            var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
+
+            try
+            {
+                // Read current spending plan iteration
+                SpendingPlanIterationResponse result = apiInstance.ReadCurrentSpendingPlanIteration(userGuid, spendingPlanGuid, page, recordsPerPage);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling SpendingPlanApi.ReadCurrentSpendingPlanIteration: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the ReadCurrentSpendingPlanIterationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Read current spending plan iteration
+    ApiResponse<SpendingPlanIterationResponse> response = apiInstance.ReadCurrentSpendingPlanIterationWithHttpInfo(userGuid, spendingPlanGuid, page, recordsPerPage);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling SpendingPlanApi.ReadCurrentSpendingPlanIterationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
+| **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
+
+### Return type
+
+[**SpendingPlanIterationResponse**](SpendingPlanIterationResponse.md)
 
 ### Authorization
 
@@ -921,17 +1023,17 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
             var spendingPlanAccountGuid = ACT-e9f80fee-84da-7s7r-9a5e-0346g4279b4c;  // string | The unique ID for the specified account.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -974,11 +1076,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 | **spendingPlanAccountGuid** | **string** | The unique ID for the specified account. |  |
-| **page** | **int?** | Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
@@ -1024,17 +1126,17 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
-            var iterationNumber = 1;  // int | The current iteration number for the spending plan `iteration``.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var iterationNumber = 1;  // int | The current iteration number for the spending plan `iteration`.
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -1077,11 +1179,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
-| **iterationNumber** | **int** | The current iteration number for the spending plan &#x60;iteration&#x60;&#x60;. |  |
-| **page** | **int?** | Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **iterationNumber** | **int** | The current iteration number for the spending plan &#x60;iteration&#x60;. |  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
@@ -1127,17 +1229,17 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
             var iterationItemGuid = SII-a4dc1549-da28-1245-9c9c-53eee4cdfbe3;  // string | The unique ID for the `iteration_item`.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -1180,11 +1282,11 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 | **iterationItemGuid** | **string** | The unique ID for the &#x60;iteration_item&#x60;. |  |
-| **page** | **int?** | Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
@@ -1230,16 +1332,16 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | Specify records per page. (optional) 
+            var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -1282,10 +1384,10 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
-| **page** | **int?** | Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | Specify records per page. | [optional]  |
+| **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
@@ -1331,13 +1433,13 @@ namespace Example
         public static void Main()
         {
             Configuration config = new Configuration();
-            config.BasePath = "https://api.mx.com";
+            config.BasePath = "https://int-api.mx.com";
             // Configure HTTP basic authorization: basicAuth
             config.Username = "YOUR_USERNAME";
             config.Password = "YOUR_PASSWORD";
 
             var apiInstance = new SpendingPlanApi(config);
-            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique id for a `user`.
+            var userGuid = USR-fa7537f3-48aa-a683-a02a-b18940482f54;  // string | The unique identifier for a `user`, beginning with the prefix `USR-`.
             var spendingPlanGuid = SPL-e5f9a5bd-c5b3-4901-bdc0-62119b9db262;  // string | The unique ID for the `spending_plan`.
             var iterationItemGuid = SII-a4dc1549-da28-1245-9c9c-53eee4cdfbe3;  // string | The unique ID for the `iteration_item`.
             var spendingPlanIterationItemCreateRequestBody = new SpendingPlanIterationItemCreateRequestBody(); // SpendingPlanIterationItemCreateRequestBody | Iteration item to be updated with required parameter (planned_amount)
@@ -1383,7 +1485,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **userGuid** | **string** | The unique id for a &#x60;user&#x60;. |  |
+| **userGuid** | **string** | The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;. |  |
 | **spendingPlanGuid** | **string** | The unique ID for the &#x60;spending_plan&#x60;. |  |
 | **iterationItemGuid** | **string** | The unique ID for the &#x60;iteration_item&#x60;. |  |
 | **spendingPlanIterationItemCreateRequestBody** | [**SpendingPlanIterationItemCreateRequestBody**](SpendingPlanIterationItemCreateRequestBody.md) | Iteration item to be updated with required parameter (planned_amount) |  |

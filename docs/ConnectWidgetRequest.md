@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **CurrentMemberGuid** | **string** |  | [optional] 
 **DisableBackgroundAgg** | **bool** |  | [optional] 
 **DisableInstitutionSearch** | **bool** |  | [optional] 
+**EnableApp2app** | **bool** | This indicates whether OAuth app2app behavior is enabled for institutions that support it. Defaults to &#x60;true&#x60;. When set to &#x60;false&#x60;, the widget will **not** direct the end user to the institution&#39;s mobile application. This setting is not persistent. This setting currently only affects Chase institutions.  | [optional] 
 **IncludeIdentity** | **bool** |  | [optional] 
 **IncludeTransactions** | **bool** |  | [optional] 
 **IsMobileWebview** | **bool** |  | [optional] 

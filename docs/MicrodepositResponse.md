@@ -4,13 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountName** | **string** |  | [optional] 
-**AccountNumber** | **string** |  | [optional] 
-**AccountType** | **string** |  | [optional] 
-**Email** | **string** |  | [optional] 
-**FirstName** | **string** |  | [optional] 
-**LastName** | **string** |  | [optional] 
-**RoutingNumber** | **string** |  | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **InstitutionCode** | **string** |  | [optional] 

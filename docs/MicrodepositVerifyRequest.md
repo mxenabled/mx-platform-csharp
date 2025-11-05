@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DepositAmount1** | **int** |  | [optional] 
-**DepositAmount2** | **int** |  | [optional] 
+**DepositAmount1** | **decimal** |  | [optional] 
+**DepositAmount2** | **decimal** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

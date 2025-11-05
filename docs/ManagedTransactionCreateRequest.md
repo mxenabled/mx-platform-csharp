@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **MerchantGuid** | **string** |  | [optional] 
 **MerchantLocationGuid** | **string** |  | [optional] 
 **Metadata** | **string** |  | [optional] 
-**PostedAt** | **string** |  | [optional] 
+**PostedAt** | **string** |  | 
 **Status** | **string** |  | 
 **TransactedAt** | **string** |  | 
 **Type** | **string** |  | 
