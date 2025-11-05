@@ -33,7 +33,7 @@ namespace MX.Platform.CSharp.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.10.1";
+        public const string Version = "1.11.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -117,7 +117,7 @@ namespace MX.Platform.CSharp.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/1.10.1/csharp");
+            UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/1.11.0/csharp");
             BasePath = "https://int-api.mx.com";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -546,7 +546,7 @@ namespace MX.Platform.CSharp.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 20111101\n";
-            report += "    SDK Package Version: 1.10.1\n";
+            report += "    SDK Package Version: 1.11.0\n";
 
             return report;
         }

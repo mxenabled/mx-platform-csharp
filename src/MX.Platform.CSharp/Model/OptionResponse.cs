@@ -34,13 +34,22 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OptionResponse" /> class.
         /// </summary>
+        /// <param name="guid">guid.</param>
         /// <param name="label">label.</param>
         /// <param name="value">value.</param>
-        public OptionResponse(string label = default(string), string value = default(string))
+        public OptionResponse(string guid = default(string), string label = default(string), string value = default(string))
         {
+            this.Guid = guid;
             this.Label = label;
             this.Value = value;
         }
+
+        /// <summary>
+        /// Gets or Sets Guid
+        /// </summary>
+        /// <example>CRD-ce76d2e3-86bd-ec4a-ec52-eb53b5194bf5</example>
+        [DataMember(Name = "guid", EmitDefaultValue = true)]
+        public string Guid { get; set; }
 
         /// <summary>
         /// Gets or Sets Label
@@ -64,6 +73,7 @@ namespace MX.Platform.CSharp.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class OptionResponse {\n");
+            sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -102,6 +112,11 @@ namespace MX.Platform.CSharp.Model
             }
             return 
                 (
+                    this.Guid == input.Guid ||
+                    (this.Guid != null &&
+                    this.Guid.Equals(input.Guid))
+                ) && 
+                (
                     this.Label == input.Label ||
                     (this.Label != null &&
                     this.Label.Equals(input.Label))
@@ -122,6 +137,10 @@ namespace MX.Platform.CSharp.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Guid != null)
+                {
+                    hashCode = (hashCode * 59) + this.Guid.GetHashCode();
+                }
                 if (this.Label != null)
                 {
                     hashCode = (hashCode * 59) + this.Label.GetHashCode();
