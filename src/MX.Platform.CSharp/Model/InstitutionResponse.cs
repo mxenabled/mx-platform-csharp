@@ -98,9 +98,7 @@ namespace MX.Platform.CSharp.Model
         /// <summary>
         /// Gets or Sets InstructionalText
         /// </summary>
-        /// <example>Some instructional text &lt;a href&#x3D;&quot;https://example.url.mxbank.com/instructions&quot;
-id&#x3D;&quot;instructional_text&quot;&gt;for end users&lt;/a&gt;.
-</example>
+        /// <example>Some instructional text &lt;a href&#x3D;&quot;https://example.url.mxbank.com/instructions&quot; id&#x3D;&quot;instructional_text&quot;&gt;for end users&lt;/a&gt;.</example>
         [DataMember(Name = "instructional_text", EmitDefaultValue = true)]
         public string InstructionalText { get; set; }
 

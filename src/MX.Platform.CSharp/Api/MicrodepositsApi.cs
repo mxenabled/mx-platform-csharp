@@ -126,7 +126,7 @@ namespace MX.Platform.CSharp.Api
         /// Read a microdeposit for a user
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br&gt;&lt;/br&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint. 
+        /// Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br /&gt;&lt;br /&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="microDepositGuid">The unique identifier for the microdeposit. Defined by MX.</param>
@@ -139,7 +139,7 @@ namespace MX.Platform.CSharp.Api
         /// Read a microdeposit for a user
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br&gt;&lt;/br&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint. 
+        /// Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br /&gt;&lt;br /&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="microDepositGuid">The unique identifier for the microdeposit. Defined by MX.</param>
@@ -289,7 +289,7 @@ namespace MX.Platform.CSharp.Api
         /// Read a microdeposit for a user
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br&gt;&lt;/br&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint. 
+        /// Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br /&gt;&lt;br /&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="microDepositGuid">The unique identifier for the microdeposit. Defined by MX.</param>
@@ -303,7 +303,7 @@ namespace MX.Platform.CSharp.Api
         /// Read a microdeposit for a user
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br&gt;&lt;/br&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint. 
+        /// Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br /&gt;&lt;br /&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint.
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="microDepositGuid">The unique identifier for the microdeposit. Defined by MX.</param>
@@ -1118,7 +1118,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Read a microdeposit for a user Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br&gt;&lt;/br&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint. 
+        /// Read a microdeposit for a user Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br /&gt;&lt;br /&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="microDepositGuid">The unique identifier for the microdeposit. Defined by MX.</param>
@@ -1132,7 +1132,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Read a microdeposit for a user Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br&gt;&lt;/br&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint. 
+        /// Read a microdeposit for a user Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br /&gt;&lt;br /&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="microDepositGuid">The unique identifier for the microdeposit. Defined by MX.</param>
@@ -1203,7 +1203,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Read a microdeposit for a user Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br&gt;&lt;/br&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint. 
+        /// Read a microdeposit for a user Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br /&gt;&lt;br /&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="microDepositGuid">The unique identifier for the microdeposit. Defined by MX.</param>
@@ -1218,7 +1218,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Read a microdeposit for a user Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br&gt;&lt;/br&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint. 
+        /// Read a microdeposit for a user Use this endpoint to read the attributes of a specific microdeposit according to its unique GUID. &lt;br /&gt;&lt;br /&gt; Webhooks for microdeposit status changes are triggered when a status changes. The actual status of the microdeposit guid updates every minute. You may force a status update by calling the read microdeposit endpoint.
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="microDepositGuid">The unique identifier for the microdeposit. Defined by MX.</param>
