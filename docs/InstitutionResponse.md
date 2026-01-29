@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Code** | **string** |  | [optional] 
 **ForgotPasswordUrl** | **string** |  | [optional] 
 **ForgotUsernameUrl** | **string** |  | [optional] 
-**InstructionalText** | **string** |  | [optional] 
+**InstructionalText** | **string** | Render this text when end users are asked for their credentials, as it helps end users provide the correct credentials when creating a new member. May contain &#x60;&lt;a&gt;&lt;/a&gt;&#x60; tags to link to explanatory material. | [optional] 
 **InstructionalTextSteps** | **List&lt;string&gt;** | An array of instructional steps that may contain html elements. | [optional] 
 **IsDisabledByClient** | **bool?** |  | [optional] 
 **IsoCountryCode** | **string** |  | [optional] 

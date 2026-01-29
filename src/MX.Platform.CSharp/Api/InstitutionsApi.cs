@@ -35,7 +35,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>InstitutionsResponseBody</returns>
         InstitutionsResponseBody ListFavoriteInstitutions(List<string>? isoCountryCode = default(List<string>?), int? page = default(int?), int? recordsPerPage = default(int?), int operationIndex = 0);
@@ -49,7 +49,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InstitutionsResponseBody</returns>
         ApiResponse<InstitutionsResponseBody> ListFavoriteInstitutionsWithHttpInfo(List<string>? isoCountryCode = default(List<string>?), int? page = default(int?), int? recordsPerPage = default(int?), int operationIndex = 0);
@@ -90,7 +90,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
         /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
         /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
@@ -109,7 +109,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
         /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
         /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
@@ -158,7 +158,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InstitutionsResponseBody</returns>
@@ -173,7 +173,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InstitutionsResponseBody)</returns>
@@ -217,7 +217,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
         /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
         /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
@@ -237,7 +237,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
         /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
         /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
@@ -397,7 +397,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>InstitutionsResponseBody</returns>
         public InstitutionsResponseBody ListFavoriteInstitutions(List<string>? isoCountryCode = default(List<string>?), int? page = default(int?), int? recordsPerPage = default(int?), int operationIndex = 0)
@@ -412,7 +412,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of InstitutionsResponseBody</returns>
         public MX.Platform.CSharp.Client.ApiResponse<InstitutionsResponseBody> ListFavoriteInstitutionsWithHttpInfo(List<string>? isoCountryCode = default(List<string>?), int? page = default(int?), int? recordsPerPage = default(int?), int operationIndex = 0)
@@ -482,7 +482,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of InstitutionsResponseBody</returns>
@@ -498,7 +498,7 @@ namespace MX.Platform.CSharp.Api
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (InstitutionsResponseBody)</returns>
@@ -752,7 +752,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
         /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
         /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
@@ -772,7 +772,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
         /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
         /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
@@ -867,7 +867,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
         /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
         /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
@@ -888,7 +888,7 @@ namespace MX.Platform.CSharp.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="isoCountryCode">An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). (optional)</param>
         /// <param name="page">Results are paginated. Specify current page. (optional)</param>
-        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
+        /// <param name="recordsPerPage">This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. (optional)</param>
         /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
         /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
         /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>

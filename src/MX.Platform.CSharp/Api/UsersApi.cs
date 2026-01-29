@@ -53,7 +53,7 @@ namespace MX.Platform.CSharp.Api
         /// Delete user
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](https://docs.mx.com/api-reference/platform-api/overview/deleting-objects). ::: 
+        /// Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](/api-reference/platform-api/overview/deleting-objects). ::: 
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Specifies the media type expected in the response.</param>
@@ -66,7 +66,7 @@ namespace MX.Platform.CSharp.Api
         /// Delete user
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](https://docs.mx.com/api-reference/platform-api/overview/deleting-objects). ::: 
+        /// Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](/api-reference/platform-api/overview/deleting-objects). ::: 
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Specifies the media type expected in the response.</param>
@@ -191,7 +191,7 @@ namespace MX.Platform.CSharp.Api
         /// Delete user
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](https://docs.mx.com/api-reference/platform-api/overview/deleting-objects). ::: 
+        /// Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](/api-reference/platform-api/overview/deleting-objects). ::: 
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Specifies the media type expected in the response.</param>
@@ -205,7 +205,7 @@ namespace MX.Platform.CSharp.Api
         /// Delete user
         /// </summary>
         /// <remarks>
-        /// Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](https://docs.mx.com/api-reference/platform-api/overview/deleting-objects). ::: 
+        /// Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](/api-reference/platform-api/overview/deleting-objects). ::: 
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Specifies the media type expected in the response.</param>
@@ -578,7 +578,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Delete user Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](https://docs.mx.com/api-reference/platform-api/overview/deleting-objects). ::: 
+        /// Delete user Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](/api-reference/platform-api/overview/deleting-objects). ::: 
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Specifies the media type expected in the response.</param>
@@ -591,7 +591,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Delete user Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](https://docs.mx.com/api-reference/platform-api/overview/deleting-objects). ::: 
+        /// Delete user Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](/api-reference/platform-api/overview/deleting-objects). ::: 
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Specifies the media type expected in the response.</param>
@@ -661,7 +661,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Delete user Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](https://docs.mx.com/api-reference/platform-api/overview/deleting-objects). ::: 
+        /// Delete user Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](/api-reference/platform-api/overview/deleting-objects). ::: 
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Specifies the media type expected in the response.</param>
@@ -675,7 +675,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Delete user Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](https://docs.mx.com/api-reference/platform-api/overview/deleting-objects). ::: 
+        /// Delete user Use this endpoint to delete the specified &#x60;user&#x60;. The response will have a status of &#x60;204 No Content&#x60; without an object.  :::warning Deleting a user is permanent. Deleted users can never be restored. For more info, see [Deleting Objects](/api-reference/platform-api/overview/deleting-objects). ::: 
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accept">Specifies the media type expected in the response.</param>

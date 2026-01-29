@@ -200,7 +200,7 @@ namespace MX.Platform.CSharp.Api
         /// List accounts
         /// </summary>
         /// <remarks>
-        /// This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-member/), [List account numbers by account](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-account/), or the [Fetch Account and Routing Numbers](https://docs.mx.com/products/connectivity/instant-account-verification/fetch-account-routing-number-api/#4-read-the-account-numbers) guide. ::: 
+        /// This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](/api-reference/platform-api/reference/list-account-numbers-by-member/) or [List account numbers by account](/api-reference/platform-api/reference/list-account-numbers-by-account/). ::: 
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -217,7 +217,7 @@ namespace MX.Platform.CSharp.Api
         /// List accounts
         /// </summary>
         /// <remarks>
-        /// This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-member/), [List account numbers by account](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-account/), or the [Fetch Account and Routing Numbers](https://docs.mx.com/products/connectivity/instant-account-verification/fetch-account-routing-number-api/#4-read-the-account-numbers) guide. ::: 
+        /// This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](/api-reference/platform-api/reference/list-account-numbers-by-member/) or [List account numbers by account](/api-reference/platform-api/reference/list-account-numbers-by-account/). ::: 
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -505,7 +505,7 @@ namespace MX.Platform.CSharp.Api
         /// List accounts
         /// </summary>
         /// <remarks>
-        /// This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-member/), [List account numbers by account](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-account/), or the [Fetch Account and Routing Numbers](https://docs.mx.com/products/connectivity/instant-account-verification/fetch-account-routing-number-api/#4-read-the-account-numbers) guide. ::: 
+        /// This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](/api-reference/platform-api/reference/list-account-numbers-by-member/) or [List account numbers by account](/api-reference/platform-api/reference/list-account-numbers-by-account/). ::: 
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -523,7 +523,7 @@ namespace MX.Platform.CSharp.Api
         /// List accounts
         /// </summary>
         /// <remarks>
-        /// This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-member/), [List account numbers by account](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-account/), or the [Fetch Account and Routing Numbers](https://docs.mx.com/products/connectivity/instant-account-verification/fetch-account-routing-number-api/#4-read-the-account-numbers) guide. ::: 
+        /// This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](/api-reference/platform-api/reference/list-account-numbers-by-member/) or [List account numbers by account](/api-reference/platform-api/reference/list-account-numbers-by-account/). ::: 
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -1912,7 +1912,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List accounts This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-member/), [List account numbers by account](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-account/), or the [Fetch Account and Routing Numbers](https://docs.mx.com/products/connectivity/instant-account-verification/fetch-account-routing-number-api/#4-read-the-account-numbers) guide. ::: 
+        /// List accounts This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](/api-reference/platform-api/reference/list-account-numbers-by-member/) or [List account numbers by account](/api-reference/platform-api/reference/list-account-numbers-by-account/). ::: 
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -1930,7 +1930,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List accounts This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-member/), [List account numbers by account](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-account/), or the [Fetch Account and Routing Numbers](https://docs.mx.com/products/connectivity/instant-account-verification/fetch-account-routing-number-api/#4-read-the-account-numbers) guide. ::: 
+        /// List accounts This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](/api-reference/platform-api/reference/list-account-numbers-by-member/) or [List account numbers by account](/api-reference/platform-api/reference/list-account-numbers-by-account/). ::: 
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -2018,7 +2018,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List accounts This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-member/), [List account numbers by account](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-account/), or the [Fetch Account and Routing Numbers](https://docs.mx.com/products/connectivity/instant-account-verification/fetch-account-routing-number-api/#4-read-the-account-numbers) guide. ::: 
+        /// List accounts This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](/api-reference/platform-api/reference/list-account-numbers-by-member/) or [List account numbers by account](/api-reference/platform-api/reference/list-account-numbers-by-account/). ::: 
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -2037,7 +2037,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List accounts This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-member/), [List account numbers by account](https://docs.mx.com/api-reference/platform-api/reference/list-account-numbers-by-account/), or the [Fetch Account and Routing Numbers](https://docs.mx.com/products/connectivity/instant-account-verification/fetch-account-routing-number-api/#4-read-the-account-numbers) guide. ::: 
+        /// List accounts This endpoint returns a list of all the accounts associated with the specified &#x60;user&#x60;.  :::warning This request will not return the full account number. It may return the last four digits of the account number if that information has been provided during aggregation. If you need the full account number, please refer to [List account numbers by member](/api-reference/platform-api/reference/list-account-numbers-by-member/) or [List account numbers by account](/api-reference/platform-api/reference/list-account-numbers-by-account/). ::: 
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>

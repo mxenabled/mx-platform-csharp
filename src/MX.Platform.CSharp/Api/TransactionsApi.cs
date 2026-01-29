@@ -258,7 +258,7 @@ namespace MX.Platform.CSharp.Api
         /// List transactions by account
         /// </summary>
         /// <remarks>
-        /// Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
@@ -284,7 +284,7 @@ namespace MX.Platform.CSharp.Api
         /// List transactions by account
         /// </summary>
         /// <remarks>
-        /// Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
@@ -413,7 +413,7 @@ namespace MX.Platform.CSharp.Api
         /// Read transaction
         /// </summary>
         /// <remarks>
-        /// Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -427,7 +427,7 @@ namespace MX.Platform.CSharp.Api
         /// Read transaction
         /// </summary>
         /// <remarks>
-        /// Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -440,7 +440,7 @@ namespace MX.Platform.CSharp.Api
         /// List Repeating Transactions
         /// </summary>
         /// <remarks>
-        /// Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx).
+        /// Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -452,7 +452,7 @@ namespace MX.Platform.CSharp.Api
         /// List Repeating Transactions
         /// </summary>
         /// <remarks>
-        /// Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx).
+        /// Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -463,7 +463,7 @@ namespace MX.Platform.CSharp.Api
         /// Get a Repeating Transaction
         /// </summary>
         /// <remarks>
-        /// Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx)
+        /// Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the  [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions)
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -476,7 +476,7 @@ namespace MX.Platform.CSharp.Api
         /// Get a Repeating Transaction
         /// </summary>
         /// <remarks>
-        /// Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx)
+        /// Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the  [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions)
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -799,7 +799,7 @@ namespace MX.Platform.CSharp.Api
         /// List transactions by account
         /// </summary>
         /// <remarks>
-        /// Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
@@ -826,7 +826,7 @@ namespace MX.Platform.CSharp.Api
         /// List transactions by account
         /// </summary>
         /// <remarks>
-        /// Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
@@ -960,7 +960,7 @@ namespace MX.Platform.CSharp.Api
         /// Read transaction
         /// </summary>
         /// <remarks>
-        /// Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -975,7 +975,7 @@ namespace MX.Platform.CSharp.Api
         /// Read transaction
         /// </summary>
         /// <remarks>
-        /// Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -989,7 +989,7 @@ namespace MX.Platform.CSharp.Api
         /// List Repeating Transactions
         /// </summary>
         /// <remarks>
-        /// Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx).
+        /// Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -1002,7 +1002,7 @@ namespace MX.Platform.CSharp.Api
         /// List Repeating Transactions
         /// </summary>
         /// <remarks>
-        /// Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx).
+        /// Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions).
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -1014,7 +1014,7 @@ namespace MX.Platform.CSharp.Api
         /// Get a Repeating Transaction
         /// </summary>
         /// <remarks>
-        /// Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx)
+        /// Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the  [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions)
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -1028,7 +1028,7 @@ namespace MX.Platform.CSharp.Api
         /// Get a Repeating Transaction
         /// </summary>
         /// <remarks>
-        /// Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx)
+        /// Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the  [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions)
         /// </remarks>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -2762,7 +2762,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List transactions by account Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// List transactions by account Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
@@ -2789,7 +2789,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List transactions by account Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// List transactions by account Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
@@ -2925,7 +2925,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List transactions by account Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// List transactions by account Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
@@ -2953,7 +2953,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List transactions by account Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// List transactions by account Requests to this endpoint return a list of transactions associated with the specified account. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique id for an &#x60;account&#x60;.</param>
@@ -3764,7 +3764,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Read transaction Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Read transaction Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -3779,7 +3779,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Read transaction Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Read transaction Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -3855,7 +3855,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Read transaction Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Read transaction Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -3871,7 +3871,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Read transaction Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt;Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
+        /// Read transaction Requests to this endpoint will return the attributes of the specified &#x60;transaction&#x60;. To read a manual transaction, use the manual transaction guid in the path as the &#x60;transactionGuid&#x60;. &lt;br /&gt;&lt;br /&gt; Enhanced transaction data may be requested using the &#x60;includes&#x60; parameter. To use this optional parameter, the value should include the optional metadata requested such as &#x60;repeating_transactions&#x60;, &#x60;merchants&#x60;, &#x60;classifications&#x60;, &#x60;geolocations&#x60;. For more information, see the [Optional Enhancement Query Parameter guide](/api-reference/platform-api/reference/transactions-overview#enhanced-transactions#optional-enhancement-query-parameter).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -3950,7 +3950,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List Repeating Transactions Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx).
+        /// List Repeating Transactions Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -3963,7 +3963,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List Repeating Transactions Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx).
+        /// List Repeating Transactions Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -4026,7 +4026,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List Repeating Transactions Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx).
+        /// List Repeating Transactions Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -4040,7 +4040,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// List Repeating Transactions Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx).
+        /// List Repeating Transactions Retrieve a list of all recurring transactions for a user. &lt;br /&gt;&lt;br /&gt;For more see the [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions).
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -4106,7 +4106,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Get a Repeating Transaction Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx)
+        /// Get a Repeating Transaction Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the  [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions)
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -4120,7 +4120,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Get a Repeating Transaction Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx)
+        /// Get a Repeating Transaction Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the  [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions)
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -4191,7 +4191,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Get a Repeating Transaction Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx)
+        /// Get a Repeating Transaction Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the  [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions)
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>
@@ -4206,7 +4206,7 @@ namespace MX.Platform.CSharp.Api
         }
 
         /// <summary>
-        /// Get a Repeating Transaction Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the [Repeating Transactions guide](repeating-transactions-overview.mdx)
+        /// Get a Repeating Transaction Get a Specific Repeating Transaction. &lt;br /&gt;&lt;br /&gt;List For more see the  [Repeating Transactions guide](/api-reference/platform-api/v20111101/reference/transactions-overview#repeating-transactions)
         /// </summary>
         /// <exception cref="MX.Platform.CSharp.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;, beginning with the prefix &#x60;USR-&#x60;.</param>

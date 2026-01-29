@@ -40,7 +40,7 @@ namespace Example
             var apiInstance = new InstitutionsApi(config);
             var isoCountryCode = new List<string>?(); // List<string>? | An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include `US`, `CA`, and `MX` (Mexico). (optional) 
             var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `100`. If the value exceeds `100`, the default value of `25` will be used instead. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
 
             try
             {
@@ -85,7 +85,7 @@ catch (ApiException e)
 |------|------|-------------|-------|
 | **isoCountryCode** | [**List&lt;string&gt;?**](string.md) | An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). | [optional]  |
 | **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 
 ### Return type
 
@@ -239,7 +239,7 @@ namespace Example
             var name = mxbank;  // string? | This will list only institutions in which the appended string appears. (optional) 
             var isoCountryCode = new List<string>?(); // List<string>? | An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include `US`, `CA`, and `MX` (Mexico). (optional) 
             var page = 1;  // int? | Results are paginated. Specify current page. (optional) 
-            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `100`. If the value exceeds `100`, the default value of `25` will be used instead. (optional) 
+            var recordsPerPage = 10;  // int? | This specifies the number of records to be returned on each page. Defaults to `25`. The valid range is from `10` to `1000`. If the value exceeds `1000`, the default value of `25` will be used instead. (optional) 
             var supportsAccountIdentification = true;  // bool? | Filter only institutions which support account identification. (optional) 
             var supportsAccountStatement = true;  // bool? | Filter only institutions which support account statements. (optional) 
             var supportsAccountVerification = true;  // bool? | Filter only institutions which support account verification. (optional) 
@@ -289,7 +289,7 @@ catch (ApiException e)
 | **name** | **string?** | This will list only institutions in which the appended string appears. | [optional]  |
 | **isoCountryCode** | [**List&lt;string&gt;?**](string.md) | An array of strings that filters institutions in the widget by the specified country code. Acceptable codes include &#x60;US&#x60;, &#x60;CA&#x60;, and &#x60;MX&#x60; (Mexico). | [optional]  |
 | **page** | **int?** | Results are paginated. Specify current page. | [optional]  |
-| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;100&#x60;. If the value exceeds &#x60;100&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
+| **recordsPerPage** | **int?** | This specifies the number of records to be returned on each page. Defaults to &#x60;25&#x60;. The valid range is from &#x60;10&#x60; to &#x60;1000&#x60;. If the value exceeds &#x60;1000&#x60;, the default value of &#x60;25&#x60; will be used instead. | [optional]  |
 | **supportsAccountIdentification** | **bool?** | Filter only institutions which support account identification. | [optional]  |
 | **supportsAccountStatement** | **bool?** | Filter only institutions which support account statements. | [optional]  |
 | **supportsAccountVerification** | **bool?** | Filter only institutions which support account verification. | [optional]  |

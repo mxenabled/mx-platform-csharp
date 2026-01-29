@@ -37,7 +37,7 @@ namespace MX.Platform.CSharp.Model
         /// <param name="code">code.</param>
         /// <param name="forgotPasswordUrl">forgotPasswordUrl.</param>
         /// <param name="forgotUsernameUrl">forgotUsernameUrl.</param>
-        /// <param name="instructionalText">instructionalText.</param>
+        /// <param name="instructionalText">Render this text when end users are asked for their credentials, as it helps end users provide the correct credentials when creating a new member. May contain &#x60;&lt;a&gt;&lt;/a&gt;&#x60; tags to link to explanatory material..</param>
         /// <param name="instructionalTextSteps">An array of instructional steps that may contain html elements..</param>
         /// <param name="isDisabledByClient">isDisabledByClient.</param>
         /// <param name="isoCountryCode">isoCountryCode.</param>
@@ -96,8 +96,9 @@ namespace MX.Platform.CSharp.Model
         public string ForgotUsernameUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets InstructionalText
+        /// Render this text when end users are asked for their credentials, as it helps end users provide the correct credentials when creating a new member. May contain &#x60;&lt;a&gt;&lt;/a&gt;&#x60; tags to link to explanatory material.
         /// </summary>
+        /// <value>Render this text when end users are asked for their credentials, as it helps end users provide the correct credentials when creating a new member. May contain &#x60;&lt;a&gt;&lt;/a&gt;&#x60; tags to link to explanatory material.</value>
         /// <example>Some instructional text &lt;a href&#x3D;&quot;https://example.url.mxbank.com/instructions&quot; id&#x3D;&quot;instructional_text&quot;&gt;for end users&lt;/a&gt;.</example>
         [DataMember(Name = "instructional_text", EmitDefaultValue = true)]
         public string InstructionalText { get; set; }
